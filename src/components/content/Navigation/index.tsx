@@ -35,7 +35,7 @@ export const Navigation = ({
   active = '',
   unstyled = false,
   selectedItem,
-}: NavigationProps) => {
+}: NavigationProps): JSX.Element => {
   return (
     <Box component="nav" sx={{ display: 'flex', flexWrap: 'wrap' }}>
       {items?.map((link) => {
@@ -49,7 +49,7 @@ export const Navigation = ({
             unstyled={unstyled}
             key={uniqueId('Navigation')}
             onClick={() => {
-              selectedItem != null ? selectedItem(link.href ?? '') : ''
+              if (selectedItem != null) selectedItem(link.href ?? '')
             }}
           />
         )

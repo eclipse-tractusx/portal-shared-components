@@ -26,14 +26,14 @@ export const LogoGrayData =
 export const TransparentPixel =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
 
-const IMAGE_TYPES: any = {
+const IMAGE_TYPES: Record<string, string> = {
   '3c': 'image/svg+xml',
   ffd8ff: 'image/jpeg',
   '89504e': 'image/png',
   474946: 'image/gif',
 }
 
-const buf2hex = (buffer: ArrayBuffer) =>
+const buf2hex = (buffer: ArrayBuffer): string =>
   [...new Uint8Array(buffer)]
     .map((x) => x.toString(16).padStart(2, '0'))
     .join('')
@@ -46,11 +46,11 @@ const defaultFetchImage = async (url: string): Promise<ArrayBuffer> => {
 interface ImageProps {
   src: string
   alt?: string
-  style?: any
+  style?: Record<string, string>
   loader?: (src: string) => Promise<ArrayBuffer>
 }
 
-export const Image = ({ src, alt, style, loader }: ImageProps) => {
+export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
   const [data, setData] = useState(src)
   const [load, setLoad] = useState(false)
   const [error, setError] = useState(false)
@@ -62,7 +62,7 @@ export const Image = ({ src, alt, style, loader }: ImageProps) => {
       const firstByte = buf2hex(buffer.slice(0, 1))
       const first3Bytes = buf2hex(buffer.slice(0, 3))
       const imageType =
-        IMAGE_TYPES[firstByte] || IMAGE_TYPES[first3Bytes] || 'image/*'
+        IMAGE_TYPES[firstByte] ?? IMAGE_TYPES[first3Bytes] ?? 'image/*'
       setData(URL.createObjectURL(new Blob([buffer], { type: imageType })))
     } catch (e) {
       setError(true)
@@ -78,14 +78,14 @@ export const Image = ({ src, alt, style, loader }: ImageProps) => {
   return (
     <img
       src={!load && !error && src.startsWith('blob:') ? src : data}
-      alt={alt || 'Catena-X'}
+      alt={alt ?? 'Catena-X'}
       onError={() => {
         setData(LogoGrayData)
         if (load) {
           setError(true)
         } else {
           setLoad(true)
-          getData()
+          void getData()
         }
       }}
       style={{

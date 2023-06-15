@@ -370,7 +370,8 @@ class NF {
         code += '  };\n'
         code += '}'
       }
-      code += (_a = ns.textBeforeCodeAfter) !== null && _a !== void 0 ? _a : ''
+      code +=
+        (_a = ns.textBeforeCodeAfter) !== null && _a !== undefined ? _a : ''
       code += codeAfter
     }
     return code
@@ -757,7 +758,9 @@ function fixModifiers(code, node) {
     ts.isFunctionDeclaration(node) ||
     ts.isModuleDeclaration(node) ||
     ts.isVariableStatement(node)
-  for (const mod of (_a = node.modifiers) !== null && _a !== void 0 ? _a : []) {
+  for (const mod of (_a = node.modifiers) !== null && _a !== undefined
+    ? _a
+    : []) {
     switch (mod.kind) {
       case ts.SyntaxKind.ExportKeyword:
       case ts.SyntaxKind.DefaultKeyword:
@@ -847,11 +850,10 @@ class DeclarationScope {
   }
 
   pushTypeVariable(id) {
-    let _a
-    const name = id.getText()
-    ;(_a = this.scopes[this.scopes.length - 1]) === null || _a === void 0
-      ? void 0
-      : _a.add(name)
+    const scopes = this.scopes[this.scopes.length - 1]
+    if (scopes) {
+      scopes.add(id.getText())
+    }
   }
 
   pushRaw(expr) {
@@ -1109,7 +1111,7 @@ class DeclarationScope {
     if (!node.body || !ts.isModuleBlock(node.body)) {
       throw new UnsupportedSyntaxError(
         node,
-        'namespace must have a \'ModuleBlock\' body.'
+        'namespace must have a "ModuleBlock" body.'
       )
     }
     const { statements } = node.body

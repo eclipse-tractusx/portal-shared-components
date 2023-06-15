@@ -54,7 +54,7 @@ export interface CardProps
   topValue?: number
   subMenu?: boolean
   submenuOptions?: SubItems[]
-  submenuClick?: any
+  submenuClick?: (sortMenu: string, id: string | undefined) => void
   tooltipText?: string
   showStatus?: boolean
 }
@@ -91,13 +91,13 @@ export const Card = ({
   submenuClick,
   tooltipText = '',
   showStatus = true,
-}: CardProps) => {
+}: CardProps): JSX.Element => {
   const { shape, shadows } = useTheme()
-  const [variant, setVariant] = useState(variantProp as Variants)
-  const [content, setContent] = useState({
+  const [variant, setVariant] = useState<Variants>(variantProp)
+  const [content, setContent] = useState<CardContentProps>({
     title,
     subtitle,
-  } as CardContentProps)
+  })
   const boxRef = useRef<HTMLDivElement>(null)
   const [showButton, setShowButton] = useState(false)
   const [boxHeight, setBoxHeight] = useState<number | undefined>()
@@ -109,7 +109,9 @@ export const Card = ({
   }, [variantProp])
 
   useEffect(() => {
-    sortOption && submenuClick(sortOption, id)
+    sortOption !== '' &&
+      submenuClick !== undefined &&
+      submenuClick(sortOption, id)
   }, [sortOption, submenuClick, id])
 
   useEffect(() => {
@@ -142,10 +144,10 @@ export const Card = ({
     setBoxHeight(boxRef.current?.getBoundingClientRect().height)
   }, [])
 
-  const onMouseEnter = () => {
+  const onMouseEnter = (): void => {
     if (expandOnHover) setVariant('preview')
   }
-  const onMouseLeave = () => {
+  const onMouseLeave = (): void => {
     setVariant(variantProp)
   }
 
@@ -153,7 +155,7 @@ export const Card = ({
     return backgroundColor || 'background.background02'
   }
 
-  const styles = {
+  const styles: React.CSSProperties = {
     position: positionValue !== '' ? positionValue : 'relative',
     height: boxHeight ? `${boxHeight + 37}px` : '',
     top: `${topValue}px`,
@@ -163,7 +165,7 @@ export const Card = ({
     width: '290px',
     minWidth: '290px',
     marginBottom: '64px',
-  } as React.CSSProperties
+  }
 
   const handleSubmenuFn = (e: any) => {
     e.stopPropagation()
