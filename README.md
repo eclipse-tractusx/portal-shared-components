@@ -1,18 +1,16 @@
 # Catena-X Portal Shared UI Components
 
 Contains the Shared UI Components that are used to build the [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend).
-Get an overview about the available components here.
 
-https://<YOUR_PORTAL_URL>/_storybook/
+## User documentation
 
-Note: replace <YOUR_PORTAL_URL> with your installation host name.
 To use components in your own project follow this guide.
 First create a new react app and add dependencies for the library and Material UI.
 We are using yarn and TypeScript, if you prefer npm/npx or JavaScript use those.
 
     yarn create react-app sample-shared-components --template typescript
     cd sample-shared-components
-    yarn add cx-portal-shared-components @mui/icons-material @mui/material
+    yarn add @catena-x/portal-shared-components @mui/icons-material @mui/material
 
 Install dependencies and start the development server
 
@@ -32,28 +30,30 @@ Edit `src/index.tsx` and wrap the `App` with the CX `SharedThemeProvider` contex
 
 Edit `src/index.css` and add this stylings
 
+Note: replace <YOUR_PORTAL_HOSTNAME> with your installation host name.
+
     @font-face {
         font-family: "LibreFranklin-SemiBold";
         font-display: block;
-        src: url("https://<YOUR_PORTAL_URL>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
+        src: url("https://<YOUR_PORTAL_HOSTNAME>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
         font-weight: 600;
     }
     @font-face {
         font-family: "LibreFranklin-Medium";
         font-display: block;
-        src: url("https://<YOUR_PORTAL_URL>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
+        src: url("https://<YOUR_PORTAL_HOSTNAME>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
         font-weight: 500;
     }
     @font-face {
         font-family: "LibreFranklin";
         font-display: block;
-        src: url("https://<YOUR_PORTAL_URL>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
+        src: url("https://<YOUR_PORTAL_HOSTNAME>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
         font-weight: 400;
     }
     @font-face {
         font-family: "LibreFranklin-Light";
         font-display: block;
-        src: url("https://<YOUR_PORTAL_URL>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
+        src: url("https://<YOUR_PORTAL_HOSTNAME>/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
         font-weight: 300;
     }
 
@@ -69,6 +69,13 @@ Open `App.tsx` and replace the code with this example
     import { Button } from "cx-portal-shared-components";
     const App = () => <Button onClick={() => { alert('clicked') }}>Click me</Button>
     export default App;
+
+## Developer documentation
+
+### Steps to run local storybook
+
+    yarn
+    yarn start
 
 ## License
 
