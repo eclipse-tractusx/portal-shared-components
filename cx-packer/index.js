@@ -34,6 +34,7 @@ const formatHost = {
     ? (f) => f
     : (f) => f.toLowerCase(),
 }
+
 const DEFAULT_OPTIONS = {
   declaration: true,
   noEmit: false,
@@ -45,6 +46,7 @@ const DEFAULT_OPTIONS = {
   preserveSymlinks: true,
   target: ts.ScriptTarget.ESNext,
 }
+
 const gco = (input, overrideOptions) => {
   const compilerOptions = { ...DEFAULT_OPTIONS, ...overrideOptions }
   let dirName = path.dirname(input)
@@ -78,6 +80,7 @@ const gco = (input, overrideOptions) => {
     },
   }
 }
+
 const createProgram$1 = (fileName, overrideOptions) => {
   const { dtsFiles, compilerOptions } = gco(fileName, overrideOptions)
   return ts.createProgram(
@@ -90,7 +93,7 @@ const createProgram$1 = (fileName, overrideOptions) => {
 const createPrograms = (input, overrideOptions) => {
   const programs = []
   let inputs = []
-  let dtsFiles = new Set()
+  const dtsFiles = new Set()
   let dirName = ''
   let compilerOptions = {}
   for (let main of input) {
@@ -132,7 +135,7 @@ const createPrograms = (input, overrideOptions) => {
 }
 
 const getCodeFrame = () => {
-  let codeFrameColumns = undefined
+  let codeFrameColumns
   try {
     ;({ codeFrameColumns } = require('@babel/code-frame'))
     return codeFrameColumns
@@ -145,6 +148,7 @@ const getCodeFrame = () => {
   }
   return undefined
 }
+
 const getLocation = (node) => {
   const sourceFile = node.getSourceFile()
   const start = sourceFile.getLineAndCharacterOfPosition(node.getStart())
@@ -154,6 +158,7 @@ const getLocation = (node) => {
     end: { line: end.line + 1, column: end.character + 1 },
   }
 }
+
 const frameNode = (node) => {
   const codeFrame = getCodeFrame()
   const sourceFile = node.getSourceFile()
@@ -172,6 +177,7 @@ const frameNode = (node) => {
       .trim()}\``
   }
 }
+
 class UnsupportedSyntaxError extends Error {
   constructor(node, message = 'Syntax not yet supported') {
     super(`${message}\n${frameNode(node)}`)
@@ -182,6 +188,7 @@ class NF {
   constructor(sourceFile) {
     this.sourceFile = sourceFile
   }
+
   fn() {
     const namespaces = []
     const items = {}
@@ -203,15 +210,15 @@ class NF {
         node.moduleSpecifier &&
         ts.isStringLiteral(node.moduleSpecifier)
       ) {
-        let { text } = node.moduleSpecifier
+        const { text } = node.moduleSpecifier
         if (
           text.startsWith('.') &&
           (text.endsWith('.d.ts') ||
             text.endsWith('.d.cts') ||
             text.endsWith('.d.mts'))
         ) {
-          let start = node.moduleSpecifier.getStart() + 1
-          let end = node.moduleSpecifier.getEnd() - 1
+          const start = node.moduleSpecifier.getStart() + 1
+          const end = node.moduleSpecifier.getEnd() - 1
           namespaces.unshift({
             name: '',
             exports: [],
@@ -327,6 +334,7 @@ class NF {
     }
     return { namespaces, itemTypes: items }
   }
+
   fix() {
     let _a
     let code = this.sourceFile.getFullText()
@@ -351,7 +359,7 @@ class NF {
       }
       if (ns.name) {
         code += `declare namespace ${ns.name} {\n`
-        code += `  export {\n`
+        code += '  export {\n'
         for (const { exportedName, localName } of ns.exports) {
           if (exportedName === localName) {
             code += `    ${ns.name}_${exportedName} as ${exportedName},\n`
@@ -359,8 +367,8 @@ class NF {
             code += `    ${localName} as ${exportedName},\n`
           }
         }
-        code += `  };\n`
-        code += `}`
+        code += '  };\n'
+        code += '}'
       }
       code += (_a = ns.textBeforeCodeAfter) !== null && _a !== void 0 ? _a : ''
       code += codeAfter
@@ -368,6 +376,7 @@ class NF {
     return code
   }
 }
+
 function rtp(typeParameters) {
   if (!typeParameters || !typeParameters.length) {
     return { in: '', out: '' }
@@ -377,7 +386,9 @@ function rtp(typeParameters) {
     out: `<${typeParameters.map((param) => param.name.getText()).join(', ')}>`,
   }
 }
+
 let IDs = 1
+
 function createProgram(node) {
   return withStartEnd(
     {
@@ -388,6 +399,7 @@ function createProgram(node) {
     { start: node.getFullStart(), end: node.getEnd() }
   )
 }
+
 function createReference(id) {
   return {
     type: 'AssignmentPattern',
@@ -398,6 +410,7 @@ function createReference(id) {
     right: id,
   }
 }
+
 function createIdentifier(node) {
   return withStartEnd(
     {
@@ -407,6 +420,7 @@ function createIdentifier(node) {
     node
   )
 }
+
 function cIIFE(range) {
   const fn = withStartEnd(
     {
@@ -431,6 +445,7 @@ function cIIFE(range) {
   )
   return { fn, iife }
 }
+
 function cd(id, range) {
   return withStartEnd(
     {
@@ -448,6 +463,7 @@ function cd(id, range) {
     range
   )
 }
+
 function ce(node) {
   if (ts.isLiteralExpression(node)) {
     return { type: 'Literal', value: node.text }
@@ -478,17 +494,20 @@ function ce(node) {
     throw new UnsupportedSyntaxError(node)
   }
 }
+
 function withStartEnd(esNode, nodeOrRange) {
-  let range =
+  const range =
     'start' in nodeOrRange
       ? nodeOrRange
       : { start: nodeOrRange.getStart(), end: nodeOrRange.getEnd() }
   return Object.assign(esNode, range)
 }
+
 function matchesModifier(node, flags) {
   const nodeFlags = ts.getCombinedModifierFlags(node)
   return (nodeFlags & flags) === flags
 }
+
 function pp({ sourceFile }) {
   const code = new MagicString(sourceFile.getFullText())
   const declaredNames = new Set()
@@ -578,7 +597,7 @@ function pp({ sourceFile }) {
           code.appendLeft(commaPos, ';\n')
           const start = node.getFullStart()
           const slice = code.slice(start, node.getStart())
-          let whitespace = slice.length - slice.trimStart().length
+          const whitespace = slice.length - slice.trimStart().length
           if (whitespace) {
             code.overwrite(start, start + whitespace, prefix)
           } else {
@@ -664,6 +683,7 @@ function pp({ sourceFile }) {
     typeReferences,
     fileReferences,
   }
+
   function cii(node) {
     ts.forEachChild(node, cii)
     if (ts.isImportTypeNode(node)) {
@@ -694,6 +714,7 @@ function pp({ sourceFile }) {
       code.overwrite(start, end, importName)
     }
   }
+
   function cnsi(fileId) {
     let importName = inlineImports.get(fileId)
     if (!importName) {
@@ -702,6 +723,7 @@ function pp({ sourceFile }) {
     }
     return importName
   }
+
   function uniqName(hint) {
     let name = hint
     while (declaredNames.has(name)) {
@@ -710,6 +732,7 @@ function pp({ sourceFile }) {
     declaredNames.add(name)
     return name
   }
+
   function pushNamedNode(name, range) {
     let nodes = nameRanges.get(name)
     if (!nodes) {
@@ -725,6 +748,7 @@ function pp({ sourceFile }) {
     }
   }
 }
+
 function fixModifiers(code, node) {
   let _a
   let hasDeclare = false
@@ -749,6 +773,7 @@ function fixModifiers(code, node) {
     code.appendRight(node.getStart(), 'declare ')
   }
 }
+
 function duplicateExports(code, module) {
   if (!module.body || !ts.isModuleBlock(module.body)) {
     return
@@ -766,17 +791,21 @@ function duplicateExports(code, module) {
     }
   }
 }
+
 function getStart(node) {
   const start = node.getFullStart()
   return start + (newlineAt(node, start) ? 1 : 0)
 }
+
 function getEnd(node) {
   const end = node.getEnd()
   return end + (newlineAt(node, end) ? 1 : 0)
 }
+
 function newlineAt(node, idx) {
   return node.getSourceFile().getFullText()[idx] === '\n'
 }
+
 const IGNORE_TYPENODES = new Set([
   ts.SyntaxKind.LiteralType,
   ts.SyntaxKind.VoidKeyword,
@@ -794,6 +823,7 @@ const IGNORE_TYPENODES = new Set([
   ts.SyntaxKind.ThisType,
   ts.SyntaxKind.BigIntKeyword,
 ])
+
 class DeclarationScope {
   constructor({ id, range }) {
     this.scopes = []
@@ -805,14 +835,17 @@ class DeclarationScope {
       this.declaration = fn
     }
   }
+
   pushScope() {
     this.scopes.push(new Set())
   }
+
   popScope(n = 1) {
     for (let i = 0; i < n; i++) {
       this.scopes.pop()
     }
   }
+
   pushTypeVariable(id) {
     let _a
     const name = id.getText()
@@ -820,9 +853,11 @@ class DeclarationScope {
       ? void 0
       : _a.add(name)
   }
+
   pushRaw(expr) {
     this.declaration.params.push(expr)
   }
+
   pushReference(id) {
     let name
     if (id.type === 'Identifier') {
@@ -841,9 +876,11 @@ class DeclarationScope {
     }
     this.pushRaw(createReference(id))
   }
+
   pir(id) {
     this.pushReference(createIdentifier(id))
   }
+
   cen(node) {
     if (ts.isIdentifier(node)) {
       return createIdentifier(node)
@@ -859,6 +896,7 @@ class DeclarationScope {
       node
     )
   }
+
   cpa(node) {
     if (
       !ts.isIdentifier(node.expression) &&
@@ -869,7 +907,7 @@ class DeclarationScope {
     if (ts.isPrivateIdentifier(node.name)) {
       throw new UnsupportedSyntaxError(node.name)
     }
-    let object = ts.isIdentifier(node.expression)
+    const object = ts.isIdentifier(node.expression)
       ? createIdentifier(node.expression)
       : this.cpa(node.expression)
     return withStartEnd(
@@ -883,6 +921,7 @@ class DeclarationScope {
       node
     )
   }
+
   ccpn(node) {
     if (!node.name || !ts.isComputedPropertyName(node.name)) {
       return
@@ -899,6 +938,7 @@ class DeclarationScope {
     }
     throw new UnsupportedSyntaxError(expression)
   }
+
   cpat(node) {
     this.ccpn(node)
     const typeVariables = this.ctp(node.typeParameters)
@@ -908,6 +948,7 @@ class DeclarationScope {
     this.ctn(node.type)
     this.popScope(typeVariables)
   }
+
   chc(node) {
     for (const heritage of node.heritageClauses || []) {
       for (const type of heritage.types) {
@@ -916,6 +957,7 @@ class DeclarationScope {
       }
     }
   }
+
   cta(node) {
     if (!node.typeArguments) {
       return
@@ -924,6 +966,7 @@ class DeclarationScope {
       this.ctn(arg)
     }
   }
+
   cm(members) {
     for (const node of members) {
       if (
@@ -950,6 +993,7 @@ class DeclarationScope {
       }
     }
   }
+
   ctp(params) {
     if (!params) {
       return 0
@@ -962,6 +1006,7 @@ class DeclarationScope {
     }
     return params.length
   }
+
   ctn(node) {
     if (!node) {
       return
@@ -1050,11 +1095,11 @@ class DeclarationScope {
     }
     if (ts.isInferTypeNode(node)) {
       this.pushTypeVariable(node.typeParameter.name)
-      return
     } else {
       throw new UnsupportedSyntaxError(node)
     }
   }
+
   cn(node, relaxedModuleBlock = false) {
     this.pushScope()
     if (relaxedModuleBlock && node.body && ts.isModuleDeclaration(node.body)) {
@@ -1064,7 +1109,7 @@ class DeclarationScope {
     if (!node.body || !ts.isModuleBlock(node.body)) {
       throw new UnsupportedSyntaxError(
         node,
-        `namespace must have a 'ModuleBlock' body.`
+        'namespace must have a \'ModuleBlock\' body.'
       )
     }
     const { statements } = node.body
@@ -1083,7 +1128,7 @@ class DeclarationScope {
         } else {
           throw new UnsupportedSyntaxError(
             stmt,
-            `non-Identifier name not supported`
+            'non-Identifier name not supported'
           )
         }
         continue
@@ -1095,7 +1140,7 @@ class DeclarationScope {
           } else {
             throw new UnsupportedSyntaxError(
               decl,
-              `non-Identifier name not supported`
+              'non-Identifier name not supported'
             )
           }
         }
@@ -1105,7 +1150,7 @@ class DeclarationScope {
       else {
         throw new UnsupportedSyntaxError(
           stmt,
-          `namespace child (hoisting) not supported yet`
+          'namespace child (hoisting) not supported yet'
         )
       }
     }
@@ -1155,13 +1200,14 @@ class DeclarationScope {
       } else {
         throw new UnsupportedSyntaxError(
           stmt,
-          `namespace child (walking) not supported yet`
+          'namespace child (walking) not supported yet'
         )
       }
     }
     this.popScope()
   }
 }
+
 function convert({ sourceFile }) {
   const transformer = new Transformer(sourceFile)
   return transformer.transform()
@@ -1175,14 +1221,17 @@ class Transformer {
       this.cs(stmt)
     }
   }
+
   transform() {
     return {
       ast: this.ast,
     }
   }
+
   ps(node) {
     this.ast.body.push(node)
   }
+
   cd(node, id) {
     const range = { start: node.getFullStart(), end: node.getEnd() }
     if (!id) {
@@ -1190,13 +1239,14 @@ class Transformer {
       this.ps(scope.iife)
       return scope
     }
+
     const name = id.getText()
     const scope = new DeclarationScope({ id, range })
     const existingScope = this.declarations.get(name)
     if (existingScope) {
       existingScope.pir(id)
       existingScope.declaration.end = range.end
-      let selfIdx = this.ast.body.findIndex(
+      const selfIdx = this.ast.body.findIndex(
         (node) => node === existingScope.declaration
       )
       for (let i = selfIdx + 1; i < this.ast.body.length; i++) {
@@ -1209,6 +1259,7 @@ class Transformer {
     }
     return existingScope || scope
   }
+
   cs(node) {
     if (ts.isEnumDeclaration(node)) {
       return this.ced(node)
@@ -1240,6 +1291,7 @@ class Transformer {
       throw new UnsupportedSyntaxError(node)
     }
   }
+
   rs(node) {
     this.ps(
       withStartEnd(
@@ -1251,6 +1303,7 @@ class Transformer {
       )
     )
   }
+
   cnd(node) {
     const isGlobalAugmentation = node.flags & ts.NodeFlags.GlobalAugmentation
     if (isGlobalAugmentation || !ts.isIdentifier(node.name)) {
@@ -1262,26 +1315,29 @@ class Transformer {
     scope.pir(node.name)
     scope.cn(node)
   }
+
   ced(node) {
     const scope = this.cd(node, node.name)
     scope.pir(node.name)
   }
+
   cfd(node) {
     if (!node.name) {
       throw new UnsupportedSyntaxError(
         node,
-        `FunctionDeclaration should have a name`
+        'FunctionDeclaration should have a name'
       )
     }
     const scope = this.cd(node, node.name)
     scope.pir(node.name)
     scope.cpat(node)
   }
+
   ccoi(node) {
     if (!node.name) {
       throw new UnsupportedSyntaxError(
         node,
-        `ClassDeclaration / InterfaceDeclaration should have a name`
+        'ClassDeclaration / InterfaceDeclaration should have a name'
       )
     }
     const scope = this.cd(node, node.name)
@@ -1290,31 +1346,34 @@ class Transformer {
     scope.cm(node.members)
     scope.popScope(typeVariables)
   }
+
   ctad(node) {
     const scope = this.cd(node, node.name)
     const typeVariables = scope.ctp(node.typeParameters)
     scope.ctn(node.type)
     scope.popScope(typeVariables)
   }
+
   cvs(node) {
     const { declarations } = node.declarationList
     if (declarations.length !== 1) {
       throw new UnsupportedSyntaxError(
         node,
-        `VariableStatement with more than one declaration not yet supported`
+        'VariableStatement with more than one declaration not yet supported'
       )
     }
     for (const decl of declarations) {
       if (!ts.isIdentifier(decl.name)) {
         throw new UnsupportedSyntaxError(
           node,
-          `VariableDeclaration must have a name`
+          'VariableDeclaration must have a name'
         )
       }
       const scope = this.cd(node, decl.name)
       scope.ctn(decl.type)
     }
   }
+
   cexd(node) {
     if (ts.isExportAssignment(node)) {
       this.ps(
@@ -1369,6 +1428,7 @@ class Transformer {
       )
     }
   }
+
   cimd(node) {
     if (ts.isImportEqualsDeclaration(node)) {
       if (!ts.isExternalModuleReference(node.moduleReference)) {
@@ -1416,6 +1476,7 @@ class Transformer {
       )
     )
   }
+
   cnib(node) {
     if (ts.isNamedImports(node)) {
       return node.elements.map((el) => {
@@ -1437,11 +1498,12 @@ class Transformer {
       },
     ]
   }
+
   cexs(node) {
     const exported = createIdentifier(node.name)
     return {
       type: 'ExportSpecifier',
-      exported: exported,
+      exported,
       local: node.propertyName ? createIdentifier(node.propertyName) : exported,
     }
   }
@@ -1612,7 +1674,7 @@ const plugin = (options = {}) => {
       }
 
       module = getModule(id)
-      if (typeof module.source != 'object' || !module.program) {
+      if (typeof module.source !== 'object' || !module.program) {
         return null
       }
       let generated
