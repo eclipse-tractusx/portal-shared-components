@@ -1,6 +1,6 @@
 # Catena-X Portal Shared UI Components
 
-Contains the shared UI components that are used to build the Catena-X Portal Frontend.
+Contains the Shared UI Components that are used to build the [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend).
 Get an overview about the available components here.
 
 https://<YOUR_PORTAL_URL>/_storybook/
@@ -14,11 +14,9 @@ We are using yarn and TypeScript, if you prefer npm/npx or JavaScript use those.
     cd sample-shared-components
     yarn add cx-portal-shared-components @mui/icons-material @mui/material
 
-
 Install dependencies and start the development server
 
     yarn start
-
 
 Edit `src/index.tsx` and wrap the `App` with the CX `SharedThemeProvider` context
 
@@ -31,7 +29,6 @@ Edit `src/index.tsx` and wrap the `App` with the CX `SharedThemeProvider` contex
             </SharedThemeProvider>
         </React.StrictMode>
     )
-
 
 Edit `src/index.css` and add this stylings
 
@@ -67,9 +64,13 @@ Edit `src/index.css` and add this stylings
         font-weight: 300;
     }
 
-
 Open `App.tsx` and replace the code with this example
 
     import { Button } from "cx-portal-shared-components";
     const App = () => <Button onClick={() => { alert('clicked') }}>Click me</Button>
     export default App;
+
+## License
+
+Distributed under the Apache 2.0 License.
+See [LICENSE](./LICENSE) for more information.
