@@ -24,15 +24,17 @@ import { SearchInput } from '../../../SearchInput'
 import { IconButton } from '../../../IconButton'
 import { type ToolbarProps } from '.'
 import { ViewSelector } from '../../../ViewSelector'
+import type { view } from '../../../ViewSelector'
 import { Typography } from '../../../Typography'
+import type { SelectedFilter } from './UltimateToolbar'
 
 export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   placeholder?: string
   searchDebounce?: number
   searchExpr?: string
-  filterViews?: any
+  filterViews?: view[]
   defaultFilter?: string
-  onFilter?: any
+  onFilter?: (selectedFilter: SelectedFilter) => void
   descriptionText?: string
 }
 
@@ -57,7 +59,7 @@ export const SearchAndFilterButtonToolbar = ({
   const searchDeBounced = useMemo(
     () =>
       debounce((expr: string) => {
-        onSearch != null && onSearch(expr)
+        onSearch?.(expr)
       }, searchDebounce),
     [onSearch, searchDebounce]
   )
@@ -84,7 +86,7 @@ export const SearchAndFilterButtonToolbar = ({
   }
 
   const handleSearchClear = () => {
-    onClearSearch != null && onClearSearch()
+    onClearSearch?.()
     setSearchInputText('')
   }
 
@@ -127,13 +129,15 @@ export const SearchAndFilterButtonToolbar = ({
           }}
         />
       </Box>
-      <Box
-        sx={{
-          margin: '30px 0px 30px 0px',
-        }}
-      >
-        <ViewSelector activeView={defaultFilter} views={filterViews} />
-      </Box>
+      {filterViews && (
+        <Box
+          sx={{
+            margin: '30px 0px 30px 0px',
+          }}
+        >
+          <ViewSelector activeView={defaultFilter} views={filterViews} />
+        </Box>
+      )}
       <Box
         sx={{
           marginBottom: '40px',

@@ -93,7 +93,7 @@ export const Toolbar = ({
   const isSearchText = searchExpr && searchExpr !== ''
   const isSearchData = searchInputData != null ? searchInputData.open : false
   const [openSearch, setOpenSearch] = useState<boolean>(
-    isSearchText || isSearchData
+    !!isSearchText || !!isSearchData
   )
   const [openFilter, setOpenFilter] = useState<boolean>(false)
   const [searchInput, setSearchInput] = useState<string>(
@@ -104,7 +104,7 @@ export const Toolbar = ({
   const debouncedSearch = useMemo(
     () =>
       debounce((expr: string) => {
-        onSearch != null && onSearch(expr)
+        onSearch?.(expr)
       }, searchDebounce),
     [onSearch, searchDebounce]
   )
@@ -129,20 +129,19 @@ export const Toolbar = ({
   }
 
   const handleSearchClear = () => {
-    onClearSearch != null && onClearSearch()
+    onClearSearch?.()
   }
 
   const onFilterChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked } = target
-    onFilter != null &&
-      onFilter(
-        getSelectedFilterUpdate(
-          selectedFilter as SelectedFilter,
-          name,
-          value,
-          checked
-        )
+    onFilter?.(
+      getSelectedFilterUpdate(
+        selectedFilter as SelectedFilter,
+        name,
+        value,
+        checked
       )
+    )
   }
 
   useEffect(() => {
@@ -206,7 +205,9 @@ export const Toolbar = ({
               value={searchInput}
               onChange={onSearchInputChange}
               onKeyPress={onSearchInputKeyPress}
-              onBlur={() => {}}
+              onBlur={() => {
+                // empty
+              }}
               placeholder={searchPlaceholder}
               sx={{
                 '.MuiInputBase-input': {
@@ -234,7 +235,7 @@ export const Toolbar = ({
                 color: getIconColor(openFilter),
               }}
               onClick={() => {
-                onOpenFilterSection != null && onOpenFilterSection(!openFilter)
+                onOpenFilterSection?.(!openFilter)
               }}
             >
               <FilterIcon />
@@ -260,7 +261,7 @@ export const Toolbar = ({
                   id={`${name}${value}`}
                   name={name}
                   value={value}
-                  label={label || value}
+                  label={label ?? value}
                   checked={(selectedFilter as SelectedFilter)[name]?.includes(
                     value
                   )}

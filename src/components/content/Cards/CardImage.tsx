@@ -66,7 +66,7 @@ export const CardImage = ({
   return (
     <Box sx={sx.container[imageSize]}>
       <Image
-        src={image?.src || LogoGrayData}
+        src={image?.src ?? LogoGrayData}
         alt={image?.alt}
         loader={imageLoader}
         style={{

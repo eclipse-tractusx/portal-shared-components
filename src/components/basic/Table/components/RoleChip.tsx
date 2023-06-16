@@ -20,7 +20,7 @@
 
 import './RoleChip.scss'
 // Temporary component to visualise different table cell
-const RoleChip = ({ role }: any) => {
+const RoleChip = ({ role }: { role: string }) => {
   return <div className="role-chip-wrapper">{role}</div>
 }
 export default RoleChip

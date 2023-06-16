@@ -29,6 +29,7 @@ import { SearchAndFilterButtonToolbar } from './components/Toolbar/SearchAndFilt
 import { Typography } from '../Typography'
 import { Error500Overlay } from './components/Error/Error500Overlay'
 import { Error400Overlay } from './components/Error/Error400Overlay'
+import { view } from '../ViewSelector'
 
 export { StatusTag }
 export type toolbarType = 'basic' | 'premium' | 'ultimate' | 'searchAndFilter'
@@ -56,7 +57,7 @@ export interface TableProps extends DataGridProps {
   onSelection?: (value: GridRowId[]) => void
   descriptionText?: string
   defaultFilter?: string
-  filterViews?: any
+  filterViews?: view[]
   alignCell?: string
   error?: {
     status: number
@@ -112,6 +113,8 @@ export const Table = ({
     filterViews,
   }
 
+  // TODO: this method contains application specific row attributes and must therefore
+  // move out of the shared components. Pass handler functions like this as props.
   const handleOnCellClick = useCallback(
     (selectedIds: any) => {
       const idsArr: string[] = []
@@ -122,7 +125,7 @@ export const Table = ({
             idsArr.push(row.companyUserId)
         )
       })
-      onSelection != null && onSelection(idsArr)
+      onSelection?.(idsArr)
     },
     [rows, onSelection]
   )
@@ -151,7 +154,7 @@ export const Table = ({
         {error != null && error.status === 500 && (
           <Error500Overlay
             reload={() => {
-              reload != null && reload()
+              reload?.()
             }}
           />
         )}

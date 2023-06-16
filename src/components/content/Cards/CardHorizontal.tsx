@@ -63,7 +63,7 @@ export const CardHorizontal = ({
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-        backgroundColor: backgroundColor || 'common.white',
+        backgroundColor: backgroundColor ?? 'common.white',
         borderRadius: `${borderRadius}px`,
         overflow: 'hidden',
         ':hover': {

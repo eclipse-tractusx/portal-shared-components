@@ -96,11 +96,11 @@ const createPrograms = (input, overrideOptions) => {
   const dtsFiles = new Set()
   let dirName = ''
   let compilerOptions = {}
-  for (let main of input) {
-    if (main.endsWith(dts)) {
+  for (const mains of input) {
+    if (mains.endsWith(dts)) {
       continue
     }
-    main = path.resolve(main)
+    const main = path.resolve(mains)
     const options = gco(main, overrideOptions)
     options.dtsFiles.forEach(dtsFiles.add, dtsFiles)
     if (!inputs.length) {

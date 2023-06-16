@@ -48,11 +48,11 @@ interface CardsProps {
   addButtonClicked?: boolean
   showAddNewCard?: boolean
   newButtonText?: string
-  onNewCardButton?: any
-  onCardClick?: any
+  onNewCardButton?: React.MouseEventHandler | undefined
+  onCardClick?: (item: CardItems) => void
   subMenu?: boolean
   submenuOptions?: SubItems[]
-  submenuClick?: any
+  submenuClick?: () => void
   tooltipText?: string
   showStatus?: boolean
 }
@@ -73,10 +73,14 @@ export const Cards = ({
   showAddNewCard = false,
   newButtonText,
   onNewCardButton,
-  onCardClick = () => {},
+  onCardClick = () => {
+    // empty
+  },
   subMenu = false,
   submenuOptions = [],
-  submenuClick = () => {},
+  submenuClick = () => {
+    // empty
+  },
   tooltipText,
   showStatus = true,
 }: CardsProps) => {
@@ -108,7 +112,7 @@ export const Cards = ({
         marginLeft: '-10px',
       }}
     >
-      {showAddNewCard && (
+      {onNewCardButton !== undefined && (
         <CardAddService
           backgroundColor={'common.white'}
           onButtonClick={onNewCardButton}

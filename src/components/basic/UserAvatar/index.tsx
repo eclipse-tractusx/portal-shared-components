@@ -64,8 +64,8 @@ export const UserAvatar = ({
     >
       <PersonOutlineIcon
         sx={{
-          height: Number(userAvatarSize.replace(/px/g, '')) / 2 + 'px',
-          width: Number(userAvatarSize.replace(/px/g, '')) / 2 + 'px',
+          height: `${Number(userAvatarSize.replace(/px/g, '')) / 2}px`,
+          width: `${Number(userAvatarSize.replace(/px/g, '')) / 2}px`,
         }}
       />
     </Avatar>

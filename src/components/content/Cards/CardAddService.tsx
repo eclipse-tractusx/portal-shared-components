@@ -51,7 +51,7 @@ export const CardAddService = ({
           flexDirection: 'column',
           justifyContent: 'center',
           overflow: 'hidden',
-          backgroundColor: backgroundColor || 'common.white',
+          backgroundColor: backgroundColor ?? 'common.white',
           borderRadius: shape.borderRadius,
           border: '2px dashed',
           borderColor: 'border.border01',

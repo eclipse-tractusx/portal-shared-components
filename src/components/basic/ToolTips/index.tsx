@@ -19,9 +19,10 @@
  ********************************************************************************/
 
 import Tooltip from '@mui/material/Tooltip'
+import type { ReactElement } from 'react'
 
 interface TooltipsProps {
-  children: any
+  children: ReactElement
   tooltipText: string
   color?: 'light' | 'dark'
   tooltipPlacement?:
@@ -38,7 +39,7 @@ interface TooltipsProps {
     | 'top-end'
     | 'top-start'
   tooltipArrow?: boolean
-  additionalStyles?: any
+  additionalStyles?: React.CSSProperties
 }
 
 export const Tooltips = ({

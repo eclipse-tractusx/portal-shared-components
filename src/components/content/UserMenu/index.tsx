@@ -36,7 +36,9 @@ export const UserMenu = ({
   userRole,
   children,
   top = 0,
-  onClickAway = () => {},
+  onClickAway = () => {
+    // empty
+  },
   ...props
 }: UserMenuProps) => {
   const { spacing, shadows } = useTheme()

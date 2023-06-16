@@ -50,7 +50,16 @@ export interface CardProps
   readMoreLink?: string
   onClick?: React.MouseEventHandler
   addButtonClicked?: boolean
-  positionValue?: string
+  positionValue?:
+    | 'relative'
+    | 'initial'
+    | 'inherit'
+    | 'unset'
+    | 'static'
+    | 'absolute'
+    | 'fixed'
+    | 'sticky'
+    | undefined
   topValue?: number
   subMenu?: boolean
   submenuOptions?: SubItems[]
@@ -84,7 +93,7 @@ export const Card = ({
   addButtonClicked,
   status,
   statusText,
-  positionValue = '',
+  positionValue,
   topValue = 0,
   subMenu,
   submenuOptions,
@@ -151,12 +160,12 @@ export const Card = ({
     setVariant(variantProp)
   }
 
-  const customBackgroundColor = () => {
-    return backgroundColor || 'background.background02'
+  const customBackgroundColor = (): string => {
+    return backgroundColor ?? 'background.background02'
   }
 
   const styles: React.CSSProperties = {
-    position: positionValue !== '' ? positionValue : 'relative',
+    position: positionValue ?? 'relative',
     height: boxHeight ? `${boxHeight + 37}px` : '',
     top: `${topValue}px`,
     left: '0px',
@@ -167,7 +176,7 @@ export const Card = ({
     marginBottom: '64px',
   }
 
-  const handleSubmenuFn = (e: any) => {
+  const handleSubmenuFn = (e: React.MouseEvent) => {
     e.stopPropagation()
     if (status === 'active') {
       setShowModal(true)

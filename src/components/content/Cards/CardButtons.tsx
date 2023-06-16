@@ -33,7 +33,9 @@ export interface CardButtonsProps {
 
 export const CardButtons = ({
   buttonText,
-  onButtonClick = () => {},
+  onButtonClick = () => {
+    // empty
+  },
   onSecondaryButtonClick,
   addButtonClicked,
 }: CardButtonsProps) => {

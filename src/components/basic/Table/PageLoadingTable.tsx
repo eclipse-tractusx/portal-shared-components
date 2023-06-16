@@ -105,15 +105,13 @@ export const PageLoadingTable = function <T>({
       if (clear) {
         setItems([])
         setClear(false)
+      } else if (callbackToPage) {
+        callbackToPage(data)
       } else {
-        if (callbackToPage) {
-          callbackToPage(data)
-        } else {
-          setLoading(false)
-          data.content
-            ? setItems((i) => i.concat(data.content))
-            : setItems([data]) // Search for legal entity based on BPN responses with an object. No content or meta properties available
-        }
+        setLoading(false)
+        data.content
+          ? setItems((i) => i.concat(data.content))
+          : setItems([data]) // Search for legal entity based on BPN responses with an object. No content or meta properties available
       }
     }
     if (error) {

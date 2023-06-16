@@ -68,8 +68,8 @@ export const CardDecision = ({
       }}
     >
       {items.map((item) => {
-        const id = item.appId || item.id || ''
-        const name = item.title || item.name || ''
+        const id = item.appId ?? item.id ?? ''
+        const name = item.title ?? item.name ?? ''
         return (
           <Box
             key={id}

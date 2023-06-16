@@ -46,7 +46,7 @@ const defaultFetchImage = async (url: string): Promise<ArrayBuffer> => {
 interface ImageProps {
   src: string
   alt?: string
-  style?: Record<string, string>
+  style?: React.CSSProperties
   loader?: (src: string) => Promise<ArrayBuffer>
 }
 
@@ -85,7 +85,9 @@ export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
           setError(true)
         } else {
           setLoad(true)
-          void getData()
+          getData().catch((e) => {
+            setError(true)
+          })
         }
       }}
       style={{

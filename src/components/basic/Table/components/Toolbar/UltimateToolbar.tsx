@@ -53,7 +53,7 @@ export const UltimateToolbar = ({
   const debounceSearch = useMemo(
     () =>
       debounce((expr: string) => {
-        onSearch != null && onSearch(expr)
+        onSearch?.(expr)
       }, searchDebounce),
     [onSearch, searchDebounce]
   )
@@ -86,7 +86,7 @@ export const UltimateToolbar = ({
   }
 
   const handleSearchClear = () => {
-    onClearSearch != null && onClearSearch()
+    onClearSearch?.()
     setSearchInput('')
   }
 
@@ -155,7 +155,7 @@ export const UltimateToolbar = ({
                         : 'text'
                     }
                   >
-                    {label || value}
+                    {label ?? value}
                   </Button>
                 </Box>
               ))}
