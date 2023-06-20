@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Foo Bar",
+    "company": "ACME",
+    "email": "foo.bar@acme.com",
+    "note": "Lorep ipsum Dolores",
+    "role": "Admin"
+  },
+  {
+    "id": 2,
+    "name": "Test User",
+    "company": "Company",
+    "email": "test.user@company.de",
+    "note": "Lorep ipsum Dolores",
+    "role": "Admin"
+  },
+  {
+    "id": 3,
+    "name": "Button Radio",
+    "company": "SOUP",
+    "email": "radio.button@soup.de",
+    "note": "Lorep ipsum Dolores",
+    "role": "Editor"
+  },
+  {
+    "id": 4,
+    "name": "Brueller Ludolf",
+    "company": "Brosel",
+    "email": "brueller.ludi@brosel.de",
+    "note": "Lorep ipsum Dolores mia dela culpa",
+    "role": "Admin"
+  },
+  {
+    "id": 5,
+    "name": "Dampf Hans",
+    "company": "Senkel",
+    "email": "dampf.hans@senkel.de",
+    "note": "Lorep ipsum Dolores mia dela culpa",
+    "role": "Editor"
+  },
+  {
+    "id": 6,
+    "name": "Schwarz Weiß",
+    "company": "TMW",
+    "email": "schwarz.weiss@tmw.de",
+    "note": "Lorep ipsum Dolores mi gela dio",
+    "role": "Manager"
+  },
+  {
+    "id": 7,
+    "name": "Mueller Randolf",
+    "company": "Brosel",
+    "email": "mueller.randolf@brosel.de",
+    "note": "Lorep ipsum Dolores mia dela culpa",
+    "role": "Admin"
+  },
+  {
+    "id": 8,
+    "name": "Schlarb Hans",
+    "company": "Catena-X",
+    "email": "hans.schlarb@catena-x.com",
+    "note": "Lorep ipsum Dolores megari",
+    "role": "User"
+  }
+]
