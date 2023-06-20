@@ -68,7 +68,7 @@ export const DropPreviewFile: FunctionComponent<DropPreviewFileProps> = ({
   const [fakeProgressPercent, setFakeProgressPercent] = useState(0)
   const fakeProgressTimeRef = useRef(0)
 
-  const progressPercent = uploadFile.progressPercent || fakeProgressPercent
+  const progressPercent = uploadFile.progressPercent ?? fakeProgressPercent
 
   useEffect(() => {
     if (

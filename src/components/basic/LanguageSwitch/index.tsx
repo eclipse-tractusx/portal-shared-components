@@ -64,7 +64,7 @@ export const LanguageSwitch = ({
           }}
           key={key}
         >
-          {name || key.toUpperCase()}
+          {name ?? key.toUpperCase()}
         </Link>
       ))}
     </Box>

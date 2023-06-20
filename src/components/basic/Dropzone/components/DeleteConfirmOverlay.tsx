@@ -44,7 +44,7 @@ export const DeleteConfirmOverlay: FunctionComponent<
     >
       <DialogHeader
         {...{
-          title: deleteOverlayTranslation?.title || '',
+          title: deleteOverlayTranslation?.title ?? '',
           closeWithIcon: false,
         }}
       />

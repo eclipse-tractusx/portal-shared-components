@@ -124,7 +124,7 @@ export const PageLoadingTable = function <T>({
       <Table
         rowsCount={items.length}
         rowsCountMax={maxRows}
-        hideFooter={items.length < (props.rowCount || 100)}
+        hideFooter={items.length < (props.rowCount ?? 100)}
         loading={loading}
         error={error}
         rows={items}
