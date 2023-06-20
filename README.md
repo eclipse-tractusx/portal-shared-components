@@ -66,7 +66,7 @@ Note: replace <YOUR_PORTAL_HOSTNAME> with your installation host name.
 
 Open `App.tsx` and replace the code with this example
 
-    import { Button } from "cx-portal-shared-components";
+    import { Button } from "@catena-x/portal-shared-components";
     const App = () => <Button onClick={() => { alert('clicked') }}>Click me</Button>
     export default App;
 
