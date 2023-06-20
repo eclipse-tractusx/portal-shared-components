@@ -50,7 +50,7 @@ const drawing = ((): string => {
   ctx.strokeRect(0, 0, w, h)
   ctx.strokeStyle = 'white'
   ctx.lineWidth = 0.2
-  for (var x = 20; x < w2; x += 20) {
+  for (let x = 20; x < w2; x += 20) {
     ctx.beginPath()
     ctx.moveTo(w2 - x, 0)
     ctx.lineTo(w2 - x, h)
@@ -60,7 +60,7 @@ const drawing = ((): string => {
     ctx.lineTo(w2 + x, h)
     ctx.stroke()
   }
-  for (var y = 20; y < h2; y += 20) {
+  for (let y = 20; y < h2; y += 20) {
     ctx.beginPath()
     ctx.moveTo(0, h2 - y)
     ctx.lineTo(w, h2 - y)
@@ -82,8 +82,8 @@ const drawing = ((): string => {
   ctx.strokeStyle = '#48a'
   ctx.lineWidth = 2
   ctx.beginPath()
-  for (var a = 0; a < 360; a++) {
-    var p = (Math.PI * a) / 180,
+  for (let a = 0; a < 360; a++) {
+    let p = (Math.PI * a) / 180,
       r = h2 * (0.5 + 0.25 * Math.cos(5 * p)),
       x = r * Math.cos(p),
       y = r * Math.sin(p)
