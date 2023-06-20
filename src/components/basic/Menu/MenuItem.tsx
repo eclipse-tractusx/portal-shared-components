@@ -86,7 +86,7 @@ export const MenuItem = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onClick={(e) => {
-        (onClick == null || disable) ?? onClick(e)
+        ;(onClick == null || disable) ?? onClick(e)
       }}
     >
       <Link

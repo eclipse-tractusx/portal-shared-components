@@ -51,7 +51,7 @@ export const SearchInput = ({
         type={props.type ?? 'search'}
         InputProps={{
           startAdornment: <SearchIcon sx={{ color: icon01, marginRight: 2 }} />,
-          endAdornment: endAdornment != null ?? null,
+          endAdornment: endAdornment === undefined ? endAdornment : null,
         }}
         {...props}
       />
