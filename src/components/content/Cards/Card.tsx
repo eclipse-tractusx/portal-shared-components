@@ -63,7 +63,7 @@ export interface CardProps
   topValue?: number
   subMenu?: boolean
   submenuOptions?: SubItems[]
-  submenuClick?: (sortMenu: string, id: string | undefined) => void
+  submenuClick?: (sortMenu: string, id: string | undefined) => undefined
   tooltipText?: string
   showStatus?: boolean
 }
