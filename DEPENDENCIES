@@ -1290,7 +1290,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/eslint/eslintrc.git
 │  │  ├─ VendorName: Nicholas C. Zakas
 │  │  └─ VendorUrl: https://github.com/eslint/eslintrc#readme
-│  ├─ @eslint/js@8.42.0
+│  ├─ @eslint/js@8.37.0
 │  │  ├─ URL: https://github.com/eslint/eslint.git
 │  │  └─ VendorUrl: https://eslint.org/
 │  ├─ @fal-works/esbuild-plugin-global-externals@2.1.2
@@ -2653,7 +2653,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git+https://github.com/mysticatea/eslint-utils.git
 │  │  ├─ VendorName: Toru Nagashima
 │  │  └─ VendorUrl: https://github.com/mysticatea/eslint-utils#readme
-│  ├─ eslint@8.42.0
+│  ├─ eslint@8.37.0
 │  │  ├─ URL: https://github.com/eslint/eslint.git
 │  │  ├─ VendorName: Nicholas C. Zakas
 │  │  └─ VendorUrl: https://eslint.org/
@@ -2876,10 +2876,6 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/orling/grapheme-splitter.git
 │  │  ├─ VendorName: Orlin Georgiev
 │  │  └─ VendorUrl: https://github.com/orling/grapheme-splitter
-│  ├─ graphemer@1.4.0
-│  │  ├─ URL: https://github.com/flmnt/graphemer.git
-│  │  ├─ VendorName: Matt Davies
-│  │  └─ VendorUrl: https://github.com/flmnt/graphemer
 │  ├─ gunzip-maybe@1.4.2
 │  │  ├─ URL: https://github.com/mafintosh/gunzip-maybe
 │  │  ├─ VendorName: Mathias Buus
@@ -3311,6 +3307,10 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/jquery/jquery.git
 │  │  ├─ VendorName: OpenJS Foundation and other contributors
 │  │  └─ VendorUrl: https://jquery.com/
+│  ├─ js-sdsl@4.4.1
+│  │  ├─ URL: https://github.com/js-sdsl/js-sdsl.git
+│  │  ├─ VendorName: ZLY201
+│  │  └─ VendorUrl: https://js-sdsl.org/
 │  ├─ js-tokens@4.0.0
 │  │  ├─ URL: https://github.com/lydell/js-tokens.git
 │  │  └─ VendorName: Simon Lydell
@@ -4809,4 +4809,4 @@ yarn licenses v1.22.19
    │  └─ URL: https://github.com/streamich/fs-monkey.git
    └─ memfs@3.5.3
       └─ URL: https://github.com/streamich/memfs.git
-Done in 0.93s.
+Done in 1.81s.

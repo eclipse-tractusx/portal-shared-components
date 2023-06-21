@@ -52,9 +52,10 @@ interface CardsProps {
   onCardClick?: (item: CardItems) => void
   subMenu?: boolean
   submenuOptions?: SubItems[]
-  submenuClick?: () => void
+  submenuClick?: (sortMenu: string, id: string | undefined) => undefined
   tooltipText?: string
   showStatus?: boolean
+  status?: string
 }
 
 export const Cards = ({
@@ -78,7 +79,7 @@ export const Cards = ({
   },
   subMenu = false,
   submenuOptions = [],
-  submenuClick = () => {
+  submenuClick = (sortMenu: string, id: string | undefined) => {
     // empty
   },
   tooltipText,
