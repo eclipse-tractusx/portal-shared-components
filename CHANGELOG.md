@@ -3,7 +3,7 @@
 ## Unreleased
 
 - StaticTable
-    - Add edit and input field functionality to Vertical Table
+  - Add edit and input field functionality to Vertical Table
 
 Extracted shared components from existing monorepo (links below).
 

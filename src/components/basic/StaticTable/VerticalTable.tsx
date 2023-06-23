@@ -76,7 +76,7 @@ export const VerticalTable = ({
             onKeyPress={(event) => {
               if (event.key === 'Enter' && !URLErrorMsg) {
                 setInputField(null)
-                if(handleEditURL) handleEditURL(inputURL)
+                if (handleEditURL) handleEditURL(inputURL)
               }
             }}
             onClick={(e) => {
@@ -151,18 +151,17 @@ export const VerticalTable = ({
                         {isStringTypeProp ? CustomComp : <CustomComp />}
                       </Typography>
                     )}
-                    {data?.edit?.[r][c].editIcon &&
-                      !inputField && (
-                        <span style={{ marginLeft: 'auto' }}>
-                          <EditIcon
-                            onClick={(e) => handleEditFn(e, r, c)}
-                            sx={{
-                              fontSize: '18px',
-                              color: '#888888',
-                            }}
-                          />
-                        </span>
-                      )}
+                    {data?.edit?.[r][c].editIcon && !inputField && (
+                      <span style={{ marginLeft: 'auto' }}>
+                        <EditIcon
+                          onClick={(e) => handleEditFn(e, r, c)}
+                          sx={{
+                            fontSize: '18px',
+                            color: '#888888',
+                          }}
+                        />
+                      </span>
+                    )}
                   </div>
                 </td>
               )
