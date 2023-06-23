@@ -55,7 +55,7 @@ export const VerticalTable = ({
   ) => {
     e.stopPropagation()
     setURLErrorMessage('')
-    setInputURL(data.edit && data.edit[row] ? data.edit[row][column].url : '')
+    setInputURL(data?.edit?.[row][column].url ?? '')
     setInputField({ row: row, column: column })
   }
 
@@ -151,9 +151,7 @@ export const VerticalTable = ({
                         {isStringTypeProp ? CustomComp : <CustomComp />}
                       </Typography>
                     )}
-                    {data.edit &&
-                      data.edit[r] &&
-                      data.edit[r][c].editIcon &&
+                    {data?.edit?.[r][c].editIcon &&
                       !inputField && (
                         <span style={{ marginLeft: 'auto' }}>
                           <EditIcon
