@@ -141,7 +141,7 @@ export const VerticalTable = ({
                     width: '50%',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{display: 'flex', alignItems: 'center'}}>
                     {inputField &&
                     inputField.row === r &&
                     inputField.column === c ? (
