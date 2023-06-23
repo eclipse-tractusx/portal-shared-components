@@ -76,7 +76,7 @@ export const VerticalTable = ({
             onKeyPress={(event) => {
               if (event.key === 'Enter' && !URLErrorMsg) {
                 setInputField(null)
-                handleEditURL && handleEditURL(inputURL)
+                if(handleEditURL) handleEditURL(inputURL)
               }
             }}
             onClick={(e) => {
