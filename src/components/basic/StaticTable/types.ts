@@ -19,8 +19,8 @@
  ********************************************************************************/
 
 import React from 'react'
-export type TableType = {
+export interface TableType {
   head: string[]
   body: string[][] | React.FC[][]
-  edit?: { url: string; editIcon: boolean }[][]
+  edit?: Array<Array<{ url: string; editIcon: boolean }>>
 }

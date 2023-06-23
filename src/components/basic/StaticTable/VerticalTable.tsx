@@ -141,7 +141,7 @@ export const VerticalTable = ({
                     width: '50%',
                   }}
                 >
-                  <div style={{display: 'flex', alignItems: 'center'}}>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
                     inputField.row === r &&
                     inputField.column === c ? (
@@ -151,7 +151,7 @@ export const VerticalTable = ({
                         {isStringTypeProp ? CustomComp : <CustomComp />}
                       </Typography>
                     )}
-                    {data?.edit?.[r][c].editIcon && !inputField && (
+                    {data?.edit?.[r]?.[c].editIcon && !inputField && (
                       <span style={{ marginLeft: 'auto' }}>
                         <EditIcon
                           onClick={(e) => handleEditFn(e, r, c)}
