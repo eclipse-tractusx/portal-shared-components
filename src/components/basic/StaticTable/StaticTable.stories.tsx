@@ -42,5 +42,12 @@ Table.args = {
       ['row3 col1', 'row3 col2'],
       ['row4 col1', 'row4 col2'],
     ],
+    edit: [
+      [
+        { url: '', editIcon: false },
+        { url: 'https://test.com', editIcon: true },
+      ],
+    ],
   },
+  handleEditURL: () => console.log('CLICKED'),
 }

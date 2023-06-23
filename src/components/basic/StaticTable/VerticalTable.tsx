@@ -18,51 +18,160 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { useState } from 'react'
 import { Typography } from '@mui/material'
-import { type TableType } from './types'
+import EditIcon from '@mui/icons-material/Edit'
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import CloseIcon from '@mui/icons-material/Close'
+import { TableType } from './types'
+import { Input } from '../Input'
+import { Tooltips } from '../ToolTips'
 
-export const VerticalTable = ({ data }: { data: TableType }) => (
-  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-    <thead>
-      <tr>
-        {data.head.map((col, c) => (
-          <th
-            key={c}
-            style={{
-              backgroundColor: '#ecf0f4',
-              textAlign: 'left',
-              padding: '10px 15px',
+const DOMAIN =
+  /([a-z0-9]|[a-z0-9][a-z0-9-]{0,61}[a-z0-9])(\.([a-z0-9]|[a-z0-9][a-z0-9-]{0,61}[a-z0-9])){1,10}/i
+const URLPATH = /(\/[a-z0-9-._~:/?#[\]@!$&'()*+,;=%]{0,500}){0,20}/
+
+const isURL = (expr: string) =>
+  new RegExp(
+    `^(https)://(${DOMAIN.source})(:\\d{1,5})?(${URLPATH.source})?$`,
+    'i'
+  ).test(expr)
+
+export const VerticalTable = ({
+  data,
+  handleEditURL,
+}: {
+  data: TableType
+  handleEditURL?: (inputURL: string) => void
+}) => {
+  const [inputField, setInputField] = useState<any>(null)
+  const [inputURL, setInputURL] = useState('')
+  const [URLErrorMsg, setURLErrorMessage] = useState('')
+
+  const handleEditFn = (
+    e: React.SyntheticEvent,
+    row: number,
+    column: number
+  ) => {
+    e.stopPropagation()
+    setURLErrorMessage('')
+    setInputURL(data.edit && data.edit[row] ? data.edit[row][column].url : '')
+    setInputField({ row: row, column: column })
+  }
+
+  const addInputURL = (value: string) => {
+    setInputURL(value)
+    setURLErrorMessage(!isURL(value.trim()) ? 'Please enter valid URL' : '')
+  }
+
+  const renderInputField = () => {
+    return (
+      <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
+        <div style={{ width: '100%' }}>
+          <Input
+            name="tentant_url"
+            onChange={(e) => {
+              addInputURL(e.target.value)
             }}
+            onKeyPress={(event) => {
+              if (event.key === 'Enter' && !URLErrorMsg) {
+                setInputField(null)
+                handleEditURL && handleEditURL(inputURL)
+              }
+            }}
+            onClick={(e) => {
+              e.stopPropagation()
+            }}
+            value={inputURL}
+          />
+        </div>
+        {URLErrorMsg && (
+          <Tooltips
+            color="dark"
+            tooltipPlacement="bottom-start"
+            tooltipText={URLErrorMsg}
           >
-            <Typography variant="label3">{col}</Typography>
-          </th>
-        ))}
-      </tr>
-    </thead>
-    <tbody>
-      {data.body.map((row, r) => (
-        <tr key={r}>
-          {row.map((CustomComp, c) => {
-            const isStringTypeProp = typeof CustomComp === 'string'
-            return (
-              <td
-                key={c}
-                style={{
-                  padding: '10px 15px',
-                  borderBottom: '1px solid #f1f1f1',
-                  whiteSpace: 'normal',
-                  wordBreak: 'break-all',
-                  width: '50%',
-                }}
-              >
-                <Typography variant="body3">
-                  {isStringTypeProp ? CustomComp : <CustomComp />}
-                </Typography>
-              </td>
-            )
-          })}
+            <span>
+              <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
+            </span>
+          </Tooltips>
+        )}
+        <CloseIcon
+          onClick={() => setInputField(null)}
+          sx={{ marginTop: '25px' }}
+        />
+      </div>
+    )
+  }
+
+  return (
+    <table
+      style={{ width: '100%', borderCollapse: 'collapse' }}
+      onClick={() => setInputField(null)}
+    >
+      <thead>
+        <tr>
+          {data.head.map((col, c) => (
+            <th
+              key={c}
+              style={{
+                backgroundColor: '#ecf0f4',
+                textAlign: 'left',
+                padding: '10px 15px',
+              }}
+            >
+              <Typography variant="label3">{col}</Typography>
+            </th>
+          ))}
         </tr>
-      ))}
-    </tbody>
-  </table>
-)
+      </thead>
+      <tbody>
+        {data.body.map((row, r) => (
+          <tr key={r}>
+            {row.map((CustomComp, c) => {
+              const isStringTypeProp = typeof CustomComp === 'string'
+              return (
+                <td
+                  key={c}
+                  style={{
+                    padding: '10px 15px',
+                    borderBottom: '1px solid #f1f1f1',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-all',
+                    width: '50%',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    {inputField &&
+                    inputField.row === r &&
+                    inputField.column === c ? (
+                      renderInputField()
+                    ) : (
+                      <Typography variant="body3">
+                        {isStringTypeProp ? CustomComp : <CustomComp />}
+                      </Typography>
+                    )}
+                    {data.edit &&
+                      data.edit[r] &&
+                      data.edit[r][c].editIcon &&
+                      !inputField && (
+                        <span style={{ marginLeft: 'auto' }}>
+                          <EditIcon
+                            onClick={(e) => handleEditFn(e, r, c)}
+                            sx={{
+                              fontSize: '18px',
+                              color: '#888888',
+                            }}
+                          />
+                        </span>
+                      )}
+                  </div>
+                </td>
+              )
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
