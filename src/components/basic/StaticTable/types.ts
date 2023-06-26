@@ -22,5 +22,5 @@ import React from 'react'
 export interface TableType {
   head: string[]
   body: string[][] | React.FC[][]
-  edit?: Array<Array<{ editIcon: boolean; inputValue: string; isValidate?: (value: string) => {}, errorMessage?: string }>>
+  edit?: Array<Array<{ editIcon: boolean; inputValue?: string; isValidate?: (value: string) => {}, errorMessage?: string }>>
 }
