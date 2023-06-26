@@ -27,26 +27,16 @@ import { TableType } from './types'
 import { Input } from '../Input'
 import { Tooltips } from '../ToolTips'
 
-const DOMAIN =
-  /([a-z0-9]|[a-z0-9][a-z0-9-]{0,61}[a-z0-9])(\.([a-z0-9]|[a-z0-9][a-z0-9-]{0,61}[a-z0-9])){1,10}/i
-const URLPATH = /(\/[a-z0-9-._~:/?#[\]@!$&'()*+,;=%]{0,500}){0,20}/
-
-const isURL = (expr: string) =>
-  new RegExp(
-    `^(https)://(${DOMAIN.source})(:\\d{1,5})?(${URLPATH.source})?$`,
-    'i'
-  ).test(expr)
-
 export const VerticalTable = ({
   data,
-  handleEditURL,
+  handleEdit,
 }: {
   data: TableType
-  handleEditURL?: (inputURL: string) => void
+  handleEdit?: (inputValue: string) => void
 }) => {
   const [inputField, setInputField] = useState<any>(null)
-  const [inputURL, setInputURL] = useState('')
-  const [URLErrorMsg, setURLErrorMessage] = useState('')
+  const [inputValue, setInputValue] = useState('')
+  const [inputErrorMsg, setInputErrorMessage] = useState('')
 
   const handleEditFn = (
     e: React.SyntheticEvent,
@@ -54,42 +44,42 @@ export const VerticalTable = ({
     column: number
   ) => {
     e.stopPropagation()
-    setURLErrorMessage('')
-    setInputURL(data?.edit?.[row][column].url ?? '')
+    setInputErrorMessage('')
+    setInputValue(data?.edit?.[row][column].inputValue ?? '')
     setInputField({ row: row, column: column })
   }
 
-  const addInputURL = (value: string) => {
-    setInputURL(value)
-    setURLErrorMessage(!isURL(value.trim()) ? 'Please enter valid URL' : '')
+  const addInputValue = (value: string, row: number, column: number) => {
+    setInputValue(value)
+    const editField = data?.edit?.[row][column]
+    editField?.isValidate && setInputErrorMessage(!editField?.isValidate(value.trim()) ? (editField?.errorMessage ?? '') : '')
   }
 
-  const renderInputField = () => {
+  const renderInputField = (row: number, column: number) => {
     return (
       <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
           <Input
-            name="tentant_url"
             onChange={(e) => {
-              addInputURL(e.target.value)
+              addInputValue(e.target.value, row, column)
             }}
             onKeyPress={(event) => {
-              if (event.key === 'Enter' && !URLErrorMsg) {
+              if (event.key === 'Enter' && !inputErrorMsg) {
                 setInputField(null)
-                if (handleEditURL) handleEditURL(inputURL)
+                if (handleEdit) handleEdit(inputValue)
               }
             }}
             onClick={(e) => {
               e.stopPropagation()
             }}
-            value={inputURL}
+            value={inputValue}
           />
         </div>
-        {URLErrorMsg && (
+        {inputErrorMsg && (
           <Tooltips
             color="dark"
             tooltipPlacement="bottom-start"
-            tooltipText={URLErrorMsg}
+            tooltipText={inputErrorMsg}
           >
             <span>
               <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
@@ -145,7 +135,7 @@ export const VerticalTable = ({
                     {inputField &&
                     inputField.row === r &&
                     inputField.column === c ? (
-                      renderInputField()
+                      renderInputField(r,c)
                     ) : (
                       <Typography variant="body3">
                         {isStringTypeProp ? CustomComp : <CustomComp />}
