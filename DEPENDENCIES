@@ -1366,7 +1366,7 @@ npm/npmjs/@types/resolve/1.20.2, MIT, approved, clearlydefined
 npm/npmjs/@types/scheduler/0.16.3, MIT, approved, #7582
 npm/npmjs/@types/semver/7.5.0, MIT, approved, clearlydefined
 npm/npmjs/@types/send/0.17.1, MIT, approved, clearlydefined
-npm/npmjs/@types/serve-static/1.15.1, MIT, approved, clearlydefined
+npm/npmjs/@types/serve-static/1.15.1, MIT, approved, #9188
 npm/npmjs/@types/stack-utils/2.0.1, MIT, approved, clearlydefined
 npm/npmjs/@types/tough-cookie/4.0.2, MIT, approved, clearlydefined
 npm/npmjs/@types/unist/2.0.6, MIT, approved, clearlydefined
