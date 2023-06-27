@@ -54,7 +54,7 @@ export const HorizontalTable = ({ data }: { data: TableType }) => (
                 width: '50%',
               }}
             >
-              <Typography variant="body3">{row.toString()}</Typography>
+              <Typography variant="body3">{row?.toString()}</Typography>
             </td>
           ))}
         </tr>

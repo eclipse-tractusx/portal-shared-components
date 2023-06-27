@@ -49,7 +49,7 @@ const breakpoints = {
   xl: 1312,
 }
 
-const palette = createPalette({
+export const paletteDefinitions = {
   common: {
     white: '#fff',
     black: '#000',
@@ -195,9 +195,11 @@ const palette = createPalette({
     white: '#f9f9f9',
     yellow: '#f5f9ee',
   },
-})
+}
 
-const typography = createTypography(palette, {
+const palette = createPalette(paletteDefinitions)
+
+export const typographyDefinitions = {
   fontFamily: getFontFamily('LibreFranklin'),
   htmlFontSize: 16,
   allVariants: {
@@ -313,9 +315,10 @@ const typography = createTypography(palette, {
   button: {
     fontSize: 16,
     lineHeight: 24 / 16,
-    textTransform: 'none',
   },
-})
+}
+
+const typography = createTypography(palette, typographyDefinitions)
 
 export const theme = createTheme({
   breakpoints: {
