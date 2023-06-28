@@ -4,6 +4,8 @@
 
 - StaticTable
   - Add edit and input field functionality to Vertical Table
+- Card
+  - Added condition for card(sub-menu) to fix coloring issue
 
 Extracted shared components from existing monorepo (links below).
 
