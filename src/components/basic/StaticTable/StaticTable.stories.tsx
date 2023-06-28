@@ -44,14 +44,14 @@ Table.args = {
     ],
     edit: [
       [
-        { 
-          editIcon: false
+        {
+          editIcon: false,
         },
-        { 
+        {
           editIcon: true,
           inputValue: 'row1 col2',
           isValid: (value) => console.log('Checking Validation', value),
-          errorMessage: 'Please enter valid value.' 
+          errorMessage: 'Please enter valid value.',
         },
       ],
     ],
