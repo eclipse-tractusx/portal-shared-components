@@ -20,4 +20,4 @@
 
 export * from './@types'
 export * from './components'
-export { theme } from './theme'
+export { theme, paletteDefinitions, typographyDefinitions } from './theme'
