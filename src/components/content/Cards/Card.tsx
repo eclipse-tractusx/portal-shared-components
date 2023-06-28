@@ -330,7 +330,7 @@ export const Card = ({
                 setShowModal(false)
               }}
               sortOptions={submenuOptions}
-              singleMenu={true}
+              singleMenu={submenuOptions?.length === 1}
             />
           </div>
           {showButton && (
