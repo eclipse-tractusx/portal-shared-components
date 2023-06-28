@@ -18,8 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import type React from 'react'
+import React from 'react'
 export interface TableType {
   head: string[]
   body: string[][] | React.FC[][]
+  edit?: Array<Array<{ editIcon: boolean; inputValue?: string; isValid?: (value: string) => {}, errorMessage?: string }>>
 }

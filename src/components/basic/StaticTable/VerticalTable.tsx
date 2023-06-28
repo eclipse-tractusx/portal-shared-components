@@ -18,51 +18,147 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { useState } from 'react'
 import { Typography } from '@mui/material'
-import { type TableType } from './types'
+import EditIcon from '@mui/icons-material/Edit'
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import CloseIcon from '@mui/icons-material/Close'
+import { TableType } from './types'
+import { Input } from '../Input'
+import { Tooltips } from '../ToolTips'
 
-export const VerticalTable = ({ data }: { data: TableType }) => (
-  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-    <thead>
-      <tr>
-        {data.head.map((col, c) => (
-          <th
-            key={c}
-            style={{
-              backgroundColor: '#ecf0f4',
-              textAlign: 'left',
-              padding: '10px 15px',
+export const VerticalTable = ({
+  data,
+  handleEdit,
+}: {
+  data: TableType
+  handleEdit?: (inputValue: string) => void
+}) => {
+  const [inputField, setInputField] = useState<any>(null)
+  const [inputValue, setInputValue] = useState('')
+  const [inputErrorMsg, setInputErrorMessage] = useState('')
+
+  const handleEditFn = (
+    e: React.SyntheticEvent,
+    row: number,
+    column: number
+  ) => {
+    e.stopPropagation()
+    setInputErrorMessage('')
+    setInputValue(data?.edit?.[row][column].inputValue ?? '')
+    setInputField({ row: row, column: column })
+  }
+
+  const addInputValue = (value: string, row: number, column: number) => {
+    setInputValue(value)
+    const editField = data?.edit?.[row][column]
+    editField?.isValid && setInputErrorMessage(!editField?.isValid(value.trim()) ? (editField?.errorMessage ?? '') : '')
+  }
+
+  const renderInputField = (row: number, column: number) => {
+    return (
+      <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
+        <div style={{ width: '100%' }}>
+          <Input
+            onChange={(e) => {
+              addInputValue(e.target.value, row, column)
             }}
+            onKeyPress={(event) => {
+              if (event.key === 'Enter' && !inputErrorMsg) {
+                setInputField(null)
+                if (handleEdit) handleEdit(inputValue)
+              }
+            }}
+            onClick={(e) => {
+              e.stopPropagation()
+            }}
+            value={inputValue}
+          />
+        </div>
+        {inputErrorMsg && (
+          <Tooltips
+            color="dark"
+            tooltipPlacement="bottom-start"
+            tooltipText={inputErrorMsg}
           >
-            <Typography variant="label3">{col}</Typography>
-          </th>
-        ))}
-      </tr>
-    </thead>
-    <tbody>
-      {data.body.map((row, r) => (
-        <tr key={r}>
-          {row.map((CustomComp, c) => {
-            const isStringTypeProp = typeof CustomComp === 'string'
-            return (
-              <td
-                key={c}
-                style={{
-                  padding: '10px 15px',
-                  borderBottom: '1px solid #f1f1f1',
-                  whiteSpace: 'normal',
-                  wordBreak: 'break-all',
-                  width: '50%',
-                }}
-              >
-                <Typography variant="body3">
-                  {isStringTypeProp ? CustomComp : <CustomComp />}
-                </Typography>
-              </td>
-            )
-          })}
+            <span>
+              <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
+            </span>
+          </Tooltips>
+        )}
+        <CloseIcon
+          onClick={() => setInputField(null)}
+          sx={{ marginTop: '25px' }}
+        />
+      </div>
+    )
+  }
+
+  return (
+    <table
+      style={{ width: '100%', borderCollapse: 'collapse' }}
+      onClick={() => setInputField(null)}
+    >
+      <thead>
+        <tr>
+          {data.head.map((col, c) => (
+            <th
+              key={c}
+              style={{
+                backgroundColor: '#ecf0f4',
+                textAlign: 'left',
+                padding: '10px 15px',
+              }}
+            >
+              <Typography variant="label3">{col}</Typography>
+            </th>
+          ))}
         </tr>
-      ))}
-    </tbody>
-  </table>
-)
+      </thead>
+      <tbody>
+        {data.body.map((row, r) => (
+          <tr key={r}>
+            {row.map((CustomComp, c) => {
+              const isStringTypeProp = typeof CustomComp === 'string'
+              return (
+                <td
+                  key={c}
+                  style={{
+                    padding: '10px 15px',
+                    borderBottom: '1px solid #f1f1f1',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-all',
+                    width: '50%',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    {inputField &&
+                    inputField.row === r &&
+                    inputField.column === c ? (
+                      renderInputField(r,c)
+                    ) : (
+                      <Typography variant="body3">
+                        {isStringTypeProp ? CustomComp : <CustomComp />}
+                      </Typography>
+                    )}
+                    {data?.edit?.[r]?.[c].editIcon && !inputField && (
+                      <span style={{ marginLeft: 'auto' }}>
+                        <EditIcon
+                          onClick={(e) => handleEditFn(e, r, c)}
+                          sx={{
+                            fontSize: '18px',
+                            color: '#888888',
+                          }}
+                        />
+                      </span>
+                    )}
+                  </div>
+                </td>
+              )
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}

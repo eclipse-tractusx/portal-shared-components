@@ -42,5 +42,19 @@ Table.args = {
       ['row3 col1', 'row3 col2'],
       ['row4 col1', 'row4 col2'],
     ],
+    edit: [
+      [
+        { 
+          editIcon: false
+        },
+        { 
+          editIcon: true,
+          inputValue: 'row1 col2',
+          isValid: (value) => console.log('Checking Validation', value),
+          errorMessage: 'Please enter valid value.' 
+        },
+      ],
+    ],
   },
+  handleEdit: () => console.log('CLICKED'),
 }
