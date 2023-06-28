@@ -50,7 +50,7 @@ Table.args = {
         { 
           editIcon: true,
           inputValue: 'row1 col2',
-          isValidate: (value) => console.log('Checking Validation', value),
+          isValid: (value) => console.log('Checking Validation', value),
           errorMessage: 'Please enter valid value.' 
         },
       ],

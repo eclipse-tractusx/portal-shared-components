@@ -52,7 +52,7 @@ export const VerticalTable = ({
   const addInputValue = (value: string, row: number, column: number) => {
     setInputValue(value)
     const editField = data?.edit?.[row][column]
-    editField?.isValidate && setInputErrorMessage(!editField?.isValidate(value.trim()) ? (editField?.errorMessage ?? '') : '')
+    editField?.isValid && setInputErrorMessage(!editField?.isValid(value.trim()) ? (editField?.errorMessage ?? '') : '')
   }
 
   const renderInputField = (row: number, column: number) => {
