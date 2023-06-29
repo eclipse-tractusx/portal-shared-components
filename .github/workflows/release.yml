@@ -39,9 +39,9 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+#    environment:
+#      name: github-pages
+#      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -74,22 +74,24 @@ jobs:
       - name: Build Library
         run: yarn build
 
-      - name: Build Storybook
-        run: yarn build:storybook
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          enablement: true
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'storybook'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+#      Deactivated until GitHub Pages are ready
+#
+#      - name: Build Storybook
+#        run: yarn build:storybook
+#
+#      - name: Setup Pages
+#        uses: actions/configure-pages@v3
+#        with:
+#          enablement: true
+#
+#      - name: Upload artifact
+#        uses: actions/upload-pages-artifact@v1
+#        with:
+#          path: 'storybook'
+#
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v2
 
       - name: Publish Shared Components to npm
         run: npm publish
