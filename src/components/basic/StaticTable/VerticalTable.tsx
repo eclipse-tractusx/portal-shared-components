@@ -46,7 +46,7 @@ export const VerticalTable = ({
     e.stopPropagation()
     setInputErrorMessage('')
     setInputValue(data?.edit?.[row][column].inputValue ?? '')
-    setInputField({ row: row, column: column })
+    setInputField({ row, column })
   }
 
   const addInputValue = (value: string, row: number, column: number) => {
