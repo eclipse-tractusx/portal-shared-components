@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.6
+
+- Dependencies
+  - Upgrade dependencies to latest versions
+
 ## 2.0.5
 
 - Storybook
