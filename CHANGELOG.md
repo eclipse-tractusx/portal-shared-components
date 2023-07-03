@@ -1,5 +1,8 @@
 # Changelog
 
+- SortOption
+  - Fixed width for sort options
+
 ## 2.0.6
 
 - Dependencies
