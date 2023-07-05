@@ -27,7 +27,7 @@ import PendingOutlinedIcon from '@mui/icons-material/PendingOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { LogoGrayData } from '../../basic/Image'
 import { Typography } from '../../basic/Typography'
-import { Variants, type CardChipProps, StatusVariants } from './CardChip'
+import { Variants, StatusVariants } from './CardChip'
 import './Card3.scss'
 
 interface SSIDetailData {
@@ -73,7 +73,7 @@ export const Card3 = ({
     >
       {items.map((item) => {
         return (
-          <div className="itemList">
+          <div className="itemList" key={item.credentialType}>
             <Box
               className="itemBg"
               sx={{
