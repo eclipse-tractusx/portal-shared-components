@@ -24,9 +24,6 @@
 
 ## 2.0.1
 
-- StaticTable
-    - Add edit and input field functionality to Vertical Table
-
 Extracted shared components from existing monorepo (links below).
 
 ## History
