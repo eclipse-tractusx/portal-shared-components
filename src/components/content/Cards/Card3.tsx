@@ -111,7 +111,7 @@ export const Card3 = ({
                 variant="body3"
                 className="expiryDate"
               >
-                {'Valid until: [dd.mm.yyyy]'}
+                {'Valid until: '}{item.ssiDetailData[0].expiryDate.split('T')[0]}
               </Typography>
               <Typography
                 variant="body3"
