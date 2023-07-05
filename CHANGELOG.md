@@ -1,4 +1,6 @@
 # Changelog
+- Cards
+  - Add new Card with named 'Card 3'
 
 ## 2.0.6
 
