@@ -1,6 +1,26 @@
 # Changelog
 
-## Unreleased
+## 2.0.6
+
+- Dependencies
+  - Upgrade dependencies to latest versions
+
+## 2.0.5
+
+- Storybook
+  - Enable storybook build and publish in workflow
+
+## 2.0.4
+
+- Card
+  - Added condition for card(sub-menu) to fix coloring issue
+
+## 2.0.3
+
+- StaticTable
+  - Add edit and input field functionality to Vertical Table
+
+## 2.0.1
 
 - StaticTable
     - Add edit and input field functionality to Vertical Table

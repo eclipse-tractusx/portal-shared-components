@@ -25,14 +25,14 @@ import { TableType } from './types'
 export const StaticTable = ({
   data,
   horizontal,
-  handleEditURL,
+  handleEdit,
 }: {
   data: TableType
   horizontal?: boolean
-  handleEditURL?: (inputURL: string) => void
+  handleEdit?: (inputURL: string) => void
 }) =>
   horizontal ? (
     <HorizontalTable data={data} />
   ) : (
-    <VerticalTable data={data} handleEditURL={handleEditURL} />
+    <VerticalTable data={data} handleEdit={handleEdit} />
   )

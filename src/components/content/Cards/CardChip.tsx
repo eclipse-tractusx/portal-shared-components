@@ -28,6 +28,7 @@ export enum StatusVariants {
   inactive = 'inactive',
   created = 'created',
   inReview = 'in_review',
+  pending = 'pending'
 }
 
 export type Variants =
@@ -36,6 +37,7 @@ export type Variants =
   | StatusVariants.inactive
   | StatusVariants.created
   | StatusVariants.inReview
+  | StatusVariants.pending
 
 export interface CardChipProps {
   status?: Variants

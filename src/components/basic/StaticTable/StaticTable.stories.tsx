@@ -44,10 +44,17 @@ Table.args = {
     ],
     edit: [
       [
-        { url: '', editIcon: false },
-        { url: 'https://test.com', editIcon: true },
+        {
+          editIcon: false,
+        },
+        {
+          editIcon: true,
+          inputValue: 'row1 col2',
+          isValid: (value) => console.log('Checking Validation', value),
+          errorMessage: 'Please enter valid value.',
+        },
       ],
     ],
   },
-  handleEditURL: () => console.log('CLICKED'),
+  handleEdit: () => console.log('CLICKED'),
 }
