@@ -1,6 +1,7 @@
 # Catena-X Portal Shared UI Components
 
 Contains the Shared UI Components that are used to build the [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend).
+Detailed documentation: https://eclipse-tractusx.github.io/portal-shared-components/
 
 ## User documentation
 
