@@ -94,12 +94,12 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "build:storybook": "storybook build",
-    "build:sources": "zip -r portal-shared-components.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.css' -x '*.scss' -x '*.svg' -x '*.jpg' -x '*.png' -x '*.webp' -x '*.ttf'",
     "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
     "lint": "yarn run eslint \"**/*.{ts,tsx,js,jsx}\"",
     "test": "jest",
     "start": "storybook dev -p 3006",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "build:storybook": "storybook build -o ./storybook",
+    "build:sources": "zip -r portal-shared-components.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.css' -x '*.scss' -x '*.svg' -x '*.jpg' -x '*.png' -x '*.webp' -x '*.ttf'"
   }
 }
