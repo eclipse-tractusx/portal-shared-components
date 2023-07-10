@@ -39,9 +39,9 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
-#    environment:
-#      name: github-pages
-#      url: ${{ steps.deployment.outputs.page_url }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -57,11 +57,6 @@ jobs:
         id: npm-tag
         uses: martinbeentjes/npm-get-version-action@v1.3.1
 
-      - name: Create git tag
-        uses: rickstaa/action-create-tag@v1
-        with:
-          tag: v${{ steps.npm-tag.outputs.current-version }}
-
       - name: Install Dependencies
         run: yarn
 
@@ -74,26 +69,28 @@ jobs:
       - name: Build Library
         run: yarn build
 
-#      Deactivated until GitHub Pages are ready
-#
-#      - name: Build Storybook
-#        run: yarn build:storybook
-#
-#      - name: Setup Pages
-#        uses: actions/configure-pages@v3
-#        with:
-#          enablement: true
-#
-#      - name: Upload artifact
-#        uses: actions/upload-pages-artifact@v1
-#        with:
-#          path: 'storybook'
-#
-#      - name: Deploy to GitHub Pages
-#        id: deployment
-#        uses: actions/deploy-pages@v2
+      - name: Build Storybook
+        run: yarn build:storybook
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'storybook'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 
       - name: Publish Shared Components to npm
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
+
+      - name: Create git tag
+        uses: rickstaa/action-create-tag@v1
+        with:
+          tag: v${{ steps.npm-tag.outputs.current-version }}
+  

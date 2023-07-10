@@ -2,6 +2,11 @@
 
 - SortOption
   - Fixed width for sort options
+ 
+## 2.0.7
+
+- Storybook
+  - Re-enable storybook build after GitHub pages are active
 
 ## 2.0.6
 
