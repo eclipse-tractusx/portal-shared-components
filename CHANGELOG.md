@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.9
+
+- Dependencies
+  - Upgrade dependencies to latest versions
+
+## 2.0.8
 - SortOption
   - Fixed width for sort options
  
