@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.8
+## 2.0.9
 
 - Dependencies
   - Upgrade dependencies to latest versions
