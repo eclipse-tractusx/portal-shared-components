@@ -58,7 +58,8 @@ export const SortOption = ({
               }}
               sx={{
                 padding: '17px',
-                width: '152px',
+                minWidth: '152px',
+                maxWidth: '220px',
                 borderRadius: '10px',
                 cursor: 'pointer',
                 listStyleType: 'none',
