@@ -5,6 +5,10 @@
 - Dependencies
   - Upgrade dependencies to latest versions
 
+## 2.0.8
+- SortOption
+  - Fixed width for sort options
+ 
 ## 2.0.7
 
 - Storybook
