@@ -26,6 +26,7 @@ import { SelectInput } from '../MultiSelectList/Components/SelectInput'
 import { SelectOptions } from '../MultiSelectList/Components/SelectOptions'
 import uniqueId from 'lodash/uniqueId'
 import isEqual from 'lodash/isEqual'
+import { useState } from 'react'
 
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   items: any[]
@@ -60,6 +61,7 @@ export const SelectList = ({
   onChangeItem,
 }: SelectListProps) => {
   const selectHeight = popperHeight ? `${popperHeight}px` : 'auto'
+  const [selected, setSelected] = useState<any>({})
   return (
     <Autocomplete
       id="singleSelectList"
@@ -73,6 +75,7 @@ export const SelectList = ({
       options={items.map((item) => item)}
       getOptionLabel={(option) => option[keyTitle] || ''}
       onChange={(_, reason: any) => {
+        setSelected(reason)
         onChangeItem(reason)
       }}
       isOptionEqualToValue={(option, value) => isEqual(option, value)}
@@ -83,7 +86,7 @@ export const SelectList = ({
           key={uniqueId('select-list-option')}
         />
       )}
-      value={defaultValue}
+      value={selected}
       renderInput={(params) => {
         return (
           <SelectInput
