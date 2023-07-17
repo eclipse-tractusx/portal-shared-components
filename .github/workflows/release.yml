@@ -23,8 +23,11 @@ name: release
 
 on:
   push:
-    branches: 
+    branches:
       - main
+    paths:
+      - ./src
+      - ./yarn.lock
 
 permissions:
   contents: write
