@@ -26,8 +26,8 @@ on:
     branches:
       - main
     paths:
-      - ./src
-      - ./yarn.lock
+      - src/**
+      - yarn.lock
 
 permissions:
   contents: write

@@ -24,8 +24,8 @@ name: pr checks
 on: 
   pull_request:
     paths:
-      - ./src
-      - ./yarn.lock
+      - src/**
+      - yarn.lock
 
 jobs:
   pr-checks:
