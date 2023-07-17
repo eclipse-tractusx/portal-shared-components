@@ -27,7 +27,6 @@ on:
       - ./src
       - ./yarn.lock
 
-
 jobs:
   pr-checks:
     runs-on: ubuntu-latest
