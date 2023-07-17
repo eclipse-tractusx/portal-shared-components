@@ -1,14 +1,20 @@
 # Changelog
 
+## 2.0.10
+
+- SelectList
+  - Keep state of selected item
+
 ## 2.0.9
 
 - Dependencies
   - Upgrade dependencies to latest versions
 
 ## 2.0.8
+
 - SortOption
   - Fixed width for sort options
- 
+
 ## 2.0.7
 
 - Storybook
