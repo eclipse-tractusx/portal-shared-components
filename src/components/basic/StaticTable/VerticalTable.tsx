@@ -165,6 +165,10 @@ export const VerticalTable = ({
                           sx={{
                             fontSize: '18px',
                             color: '#888888',
+                            cursor: 'pointer',
+                            '&:hover': {
+                              color: '#0088CC',
+                            },
                           }}
                         />
                       </span>
