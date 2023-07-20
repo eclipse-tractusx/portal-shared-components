@@ -1,4 +1,6 @@
 # Changelog
+- StaticTable
+  - Add column clickable
 
 ## 2.0.10
 

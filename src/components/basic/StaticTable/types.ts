@@ -26,6 +26,7 @@ export interface TableType {
     Array<{
       editIcon: boolean
       inputValue?: string
+      clickableLink?: string
       isValid?: (value: string) => {}
       errorMessage?: string
     }>
