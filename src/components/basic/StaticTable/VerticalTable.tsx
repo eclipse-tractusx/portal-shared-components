@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { useState } from 'react'
-import { Typography } from '@mui/material'
+import { Typography, Link } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import CloseIcon from '@mui/icons-material/Close'
@@ -136,13 +136,27 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                    inputField.row === r &&
-                    inputField.column === c ? (
+                      inputField.row === r &&
+                      inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
-                      <Typography variant="body3">
-                        {isStringTypeProp ? CustomComp : <CustomComp />}
-                      </Typography>
+                      <Link
+                        target='_blank'
+                        href={data?.edit?.[r]?.[c]?.clickableLink}
+                        sx={{
+                          color: '#111111'
+                        }}
+                      >
+                        <Typography
+                          variant="body3"
+                          sx={{
+                            color: data?.edit?.[r]?.[c]?.clickableLink && '#0088CC',
+                            cursor: data?.edit?.[r]?.[c]?.clickableLink && 'pointer'
+                          }}
+                        >
+                          {isStringTypeProp ? CustomComp : <CustomComp />}
+                        </Typography>
+                      </Link>
                     )}
                     {data?.edit?.[r]?.[c].editIcon && !inputField && (
                       <span style={{ marginLeft: 'auto' }}>
@@ -151,6 +165,10 @@ export const VerticalTable = ({
                           sx={{
                             fontSize: '18px',
                             color: '#888888',
+                            cursor: 'pointer',
+                            '&:hover': {
+                              color: '#0088CC',
+                            },
                           }}
                         />
                       </span>

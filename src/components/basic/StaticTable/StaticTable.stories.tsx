@@ -52,8 +52,17 @@ Table.args = {
           inputValue: 'row1 col2',
           isValid: (value) => console.log('Checking Validation', value),
           errorMessage: 'Please enter valid value.',
-        },
+        }
       ],
+      [
+        {
+          editIcon: false,
+        },
+        {
+          editIcon: false,
+          clickableLink: 'https://google.com',
+        }
+      ]
     ],
   },
   handleEdit: () => console.log('CLICKED'),
