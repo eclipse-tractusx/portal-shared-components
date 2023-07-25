@@ -144,7 +144,7 @@ export const VerticalTable = ({
                         target='_blank'
                         href={data?.edit?.[r]?.[c]?.clickableLink}
                         sx={{
-                          color: '#111111'
+                          color: '#111111 !important',
                         }}
                       >
                         <Typography
