@@ -189,7 +189,7 @@ export const Card = ({
       style={styles}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={onClick}
+      onClick={onButtonClick}
     >
       <Box
         sx={{
@@ -245,23 +245,20 @@ export const Card = ({
           />
           {subscriptionStatus && (
             <Typography
-              variant="body2"
+              variant="label4"
               sx={{
-                top: '20px',
-                right: '-80px',
+                top: '-20px',
+                right: '-100px',
                 color: '#fff',
                 display: 'block',
                 position: 'absolute',
                 textAlign: 'center',
                 textDecoration: 'none',
                 letterSpacing: '.06em',
-                backgroundColor:
-                  subscriptionStatus?.toLowerCase() === 'pending'
-                    ? '#386cac'
-                    : '#597d39',
-                padding: '0.3em 5em 0.3em 5em',
+                padding: '45px 90px 10px 90px',
                 '-webkit-transform': 'rotate(45deg) scale(0.75,1)',
                 zIndex: 10,
+                background: subscriptionStatus?.toLowerCase() === 'pending' ? 'linear-gradient(239deg, rgba(255,120,44,1) 0%, rgba(255,179,38,1) 50%)' : '#B3CB2D'
               }}
             >
               {subscriptionStatus}
