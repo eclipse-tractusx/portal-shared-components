@@ -111,6 +111,7 @@ export const Cards = ({
         flexWrap: 'wrap',
         marginRight: '-10px',
         marginLeft: '-10px',
+        justifyContent: 'center'
       }}
     >
       {onNewCardButton !== undefined && (
