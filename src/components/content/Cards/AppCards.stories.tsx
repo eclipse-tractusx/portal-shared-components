@@ -56,4 +56,5 @@ AppCards.args = {
   buttonText: 'Details',
   columns: 6,
   filledBackground: false,
+  boxClickable: false
 }
