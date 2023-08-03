@@ -66,6 +66,7 @@ export interface CardProps
   submenuClick?: (sortMenu: string, id: string | undefined) => undefined
   tooltipText?: string
   showStatus?: boolean
+  boxClickable?: boolean
 }
 
 export const Card = ({
@@ -100,6 +101,7 @@ export const Card = ({
   submenuClick,
   tooltipText = '',
   showStatus = true,
+  boxClickable = false,
 }: CardProps): JSX.Element => {
   const { shape, shadows } = useTheme()
   const [variant, setVariant] = useState<Variants>(variantProp)
@@ -189,7 +191,7 @@ export const Card = ({
       style={styles}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={onButtonClick}
+      onClick={boxClickable ? onButtonClick : onClick}
     >
       <Box
         sx={{

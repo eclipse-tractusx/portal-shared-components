@@ -56,6 +56,7 @@ interface CardsProps {
   tooltipText?: string
   showStatus?: boolean
   status?: string
+  boxClickable?: boolean
 }
 
 export const Cards = ({
@@ -84,6 +85,7 @@ export const Cards = ({
   },
   tooltipText,
   showStatus = true,
+  boxClickable= false,
 }: CardsProps) => {
   const settings = {
     variant,
@@ -101,6 +103,7 @@ export const Cards = ({
     submenuClick,
     tooltipText,
     showStatus,
+    boxClickable
   }
 
   return (
