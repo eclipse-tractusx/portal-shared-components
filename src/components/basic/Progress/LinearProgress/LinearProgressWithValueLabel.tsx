@@ -63,7 +63,8 @@ export const LinearProgressWithValueLabel = ({
     if (progress === 100 && (!isFetching || !isLoading)) {
       setProgress(100)
       clearInterval(timer)
-      callback && callback()
+      if(callback)
+      callback()
     }
     return () => {
       clearInterval(timer)
