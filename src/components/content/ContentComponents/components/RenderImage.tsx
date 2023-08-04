@@ -23,9 +23,9 @@ import { ImageItem } from '../../../basic/ImageGallery/ImageItem'
 
 export const RenderImage = ({
   url,
-  height,
+  height = '331px',
   additionalStyles,
-  width,
+  width = 'auto',
 }: {
   url: string
   additionalStyles?: any
@@ -41,20 +41,20 @@ export const RenderImage = ({
           url={url}
           text={''}
           size="custom"
-          height={height ? height : '331px'}
-          width={width ? width : 'auto'}
+          height={height}
+          width={width}
           hover={true}
           borderRadius={true}
           shadow={false}
           modalWidth="1100"
-          additionalStyles={additionalStyles || {}}
+          additionalStyles={additionalStyles ?? {}}
         />
       ) : (
         <img
           className={'imageGallery'}
           src={url}
           alt="provider"
-          width={width ? width : 'auto'}
+          width={width}
         />
       )}
     </>

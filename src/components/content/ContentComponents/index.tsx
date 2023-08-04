@@ -260,8 +260,7 @@ export const ContentComponents = ({
   window.addEventListener('scroll', checkScrollTop)
   return (
     <div>
-      {sectionInfo &&
-        sectionInfo.map((provider: ProviderProps) => {
+      {sectionInfo?.map((provider: ProviderProps) => {
           return (
             <div
               className="sectionContainer"

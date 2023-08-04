@@ -38,8 +38,7 @@ export const GridImages = ({
         gridTemplateColumns: `repeat(${grid}, 1fr)`,
       }}
     >
-      {provider.images &&
-        provider.images.map((path) => (
+      {provider.images?.map((path) => (
           <RenderImage key={path} height="250px" url={baseUrl + path || ''} />
         ))}
     </Box>

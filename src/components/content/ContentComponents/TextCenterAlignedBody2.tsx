@@ -38,8 +38,8 @@ export const TextCenterAlignedBody2 = ({
     <Box
       className={'multiTextContainer'}
       sx={{
-        textAlign: provider.align || 'left',
-        backgroundColor: provider.backgroundColor || '#ffffff',
+        textAlign: provider.align ?? 'left',
+        backgroundColor: provider.backgroundColor ?? '#ffffff',
       }}
     >
       <Box>
@@ -53,8 +53,7 @@ export const TextCenterAlignedBody2 = ({
             )}
           </div>
         )}
-        {provider.subTitles &&
-          provider.subTitles.map((subtitle) => (
+        {provider.subTitles?.map((subtitle) => (
             <Trans
               key={subtitle}
               i18nKey={subtitle}
