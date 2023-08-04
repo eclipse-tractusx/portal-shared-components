@@ -42,7 +42,7 @@ export const CardWithImage = ({
       }}
     >
       <Image
-        src={baseUrl + detail.imagePath}
+        src={`${baseUrl}${detail.imagePath}`}
         style={{
           width: '100%',
           marginBottom: '24px',

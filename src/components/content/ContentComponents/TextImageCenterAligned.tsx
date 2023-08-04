@@ -42,7 +42,7 @@ export const TextImageCenterAligned = ({
       />
       <RenderImage
         height="472px"
-        url={baseUrl + provider.imagePath || ''}
+        url={`${baseUrl}${provider.imagePath}` ?? ''}
         additionalStyles={{
           marginTop: '84px',
           marginBottom: '84px',

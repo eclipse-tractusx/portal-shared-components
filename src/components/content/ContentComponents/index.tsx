@@ -46,7 +46,7 @@ const TemplateConfig = ({
   showScroll: boolean
 }) => {
   switch (provider.template) {
-    //Text in the left and video in the right side
+    // Text in the left and video in the right side
     case TemplateNames.TextVideoSideBySide:
       return (
         <TextVideoSideBySide
@@ -55,7 +55,7 @@ const TemplateConfig = ({
           showScroll={showScroll}
         />
       )
-    //video in the left and Text in the right side
+    // video in the left and Text in the right side
     case TemplateNames.VideoTextSideBySide:
       return (
         <VideoTextSideBySide
@@ -64,7 +64,7 @@ const TemplateConfig = ({
           showScroll={showScroll}
         />
       )
-    //Text and image component both center aligned
+    // Text and image component both center aligned
     case TemplateNames.TextImageCenterAligned:
       return (
         <TextImageCenterAligned
@@ -74,7 +74,7 @@ const TemplateConfig = ({
           showScroll={showScroll}
         />
       )
-    //Image and text component both center aligned
+    // Image and text component both center aligned
     case TemplateNames.ImageTextCenterAligned:
       return (
         <ImageTextCenterAligned
@@ -84,7 +84,7 @@ const TemplateConfig = ({
           showScroll={showScroll}
         />
       )
-    //Text component center aligned
+    // Text component center aligned
     case TemplateNames.TextCenterAligned:
       return (
         <TextCenterAligned
@@ -93,7 +93,7 @@ const TemplateConfig = ({
           showScroll={showScroll}
         />
       )
-    //Text component body2
+    // Text component body2
     case TemplateNames.TextCenterAlignedBody2:
       return (
         <TextCenterAlignedBody2
@@ -102,7 +102,7 @@ const TemplateConfig = ({
           showScroll={showScroll}
         />
       )
-    //Combination of Text and image component both center aligned with grid layout card component
+    // Combination of Text and image component both center aligned with grid layout card component
     case TemplateNames.TextImageCenterAlignedWithCardGrid:
       return (
         <>
@@ -120,7 +120,7 @@ const TemplateConfig = ({
           />
         </>
       )
-    //Combination of Text center aligned component with grid layout card component
+    // Combination of Text center aligned component with grid layout card component
     case TemplateNames.TextCenterAlignedWithCardGrid:
       return (
         <>
@@ -137,7 +137,7 @@ const TemplateConfig = ({
           />
         </>
       )
-    //Combination of Text and image side by side with grid layout card component
+    // Combination of Text and image side by side with grid layout card component
     case TemplateNames.TextImageSideBySideWithCardGrid:
       return (
         <>
@@ -154,7 +154,7 @@ const TemplateConfig = ({
           />
         </>
       )
-    //Combination of Text center aligned component with grid layout link component
+    // Combination of Text center aligned component with grid layout link component
     case TemplateNames.TextCenterAlignedWithLinkButtonGrid:
       return (
         <>
@@ -166,7 +166,7 @@ const TemplateConfig = ({
           <LinkButtonGrid provider={provider} grid={provider.grid} />
         </>
       )
-    //Combination of Text center aligned component with images in a row
+    // Combination of Text center aligned component with images in a row
     case TemplateNames.TextCenterAlignedWithImagesInFlex:
       return (
         <>
@@ -178,7 +178,7 @@ const TemplateConfig = ({
           <FlexImages provider={provider} baseUrl={baseUrl} />
         </>
       )
-    //Combination of Text center aligned component with images in grid fashion
+    // Combination of Text center aligned component with images in grid fashion
     case TemplateNames.TextCenterAlignedWithImagesInGrid:
       return (
         <>
@@ -194,14 +194,14 @@ const TemplateConfig = ({
           />
         </>
       )
-    //Grid layout link component
+    // Grid layout link component
     case TemplateNames.LinkButtonGrid:
       return (
         <>
           <LinkButtonGrid provider={provider} grid={provider.grid} />
         </>
       )
-    //Text in the left and image in the right side with sub sections
+    // Text in the left and image in the right side with sub sections
     case TemplateNames.TextImageSideBySideWithSections:
       return (
         <TextImageSideBySideWithSections
@@ -212,7 +212,7 @@ const TemplateConfig = ({
         />
       )
     default:
-      //Text in the left and image in the right side
+      // Text in the left and image in the right side
       return (
         <TextImageSideBySide
           baseUrl={baseUrl}

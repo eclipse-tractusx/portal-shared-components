@@ -37,16 +37,14 @@ export const TextImageSideBySide = ({
     <ImageVideoWrapper
       scrollTop={scrollTop}
       showScroll={showScroll}
-      provider={provider}
-      children={
+      provider={provider}>
         <RenderImage
-          url={baseUrl + provider.imagePath || ''}
+        url={`${baseUrl}${provider.imagePath}` ?? ''}
           additionalStyles={{
             textAlign: 'center',
           }}
           width="50%"
         />
-      }
-    />
+        </ImageVideoWrapper>
   )
 }
