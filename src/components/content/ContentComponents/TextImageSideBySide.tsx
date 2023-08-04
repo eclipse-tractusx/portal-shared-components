@@ -39,7 +39,7 @@ export const TextImageSideBySide = ({
       showScroll={showScroll}
       provider={provider}>
         <RenderImage
-        url={`${baseUrl}${provider.imagePath}` ?? ''}
+        url={`${baseUrl}${provider.imagePath}`}
           additionalStyles={{
             textAlign: 'center',
           }}

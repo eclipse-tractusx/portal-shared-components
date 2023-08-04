@@ -128,7 +128,7 @@ export const TextImageSideBySideWithSections = ({
         </div>
         {provider.imagePath !== '' && (
           <RenderImage
-            url={`${baseUrl}${provider.imagePath}` ?? ''}
+            url={`${baseUrl}${provider.imagePath}`}
             additionalStyles={{
               textAlign: 'center',
             }}

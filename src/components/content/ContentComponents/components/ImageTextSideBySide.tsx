@@ -38,7 +38,7 @@ export const ImageTextSideBySide = ({
   return (
     <div className={'imageVideoTextSideBySide'}>
       <RenderImage
-        url={`${baseUrl}${provider.imagePath}` ?? ''}
+        url={`${baseUrl}${provider.imagePath}`}
         additionalStyles={{
           textAlign: 'center',
         }}
