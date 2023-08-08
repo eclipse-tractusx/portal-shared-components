@@ -1,4 +1,5 @@
 # Changelog
+
 - StaticTable
   - Add column clickable
   - Add active on hover of edit icon

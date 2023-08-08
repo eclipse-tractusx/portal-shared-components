@@ -136,12 +136,12 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                      inputField.row === r &&
-                      inputField.column === c ? (
+                    inputField.row === r &&
+                    inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
-                        target='_blank'
+                        target="_blank"
                         href={data?.edit?.[r]?.[c]?.clickableLink}
                         sx={{
                           color: '#111111 !important',
@@ -150,8 +150,10 @@ export const VerticalTable = ({
                         <Typography
                           variant="body3"
                           sx={{
-                            color: data?.edit?.[r]?.[c]?.clickableLink && '#0088CC',
-                            cursor: data?.edit?.[r]?.[c]?.clickableLink && 'pointer'
+                            color:
+                              data?.edit?.[r]?.[c]?.clickableLink && '#0088CC',
+                            cursor:
+                              data?.edit?.[r]?.[c]?.clickableLink && 'pointer',
                           }}
                         >
                           {isStringTypeProp ? CustomComp : <CustomComp />}

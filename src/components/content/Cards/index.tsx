@@ -85,7 +85,7 @@ export const Cards = ({
   },
   tooltipText,
   showStatus = true,
-  boxClickable= false,
+  boxClickable = false,
 }: CardsProps) => {
   const settings = {
     variant,
@@ -103,7 +103,7 @@ export const Cards = ({
     submenuClick,
     tooltipText,
     showStatus,
-    boxClickable
+    boxClickable,
   }
 
   return (
@@ -114,7 +114,7 @@ export const Cards = ({
         flexWrap: 'wrap',
         marginRight: '-10px',
         marginLeft: '-10px',
-        justifyContent: 'center'
+        justifyContent: 'center',
       }}
     >
       {onNewCardButton !== undefined && (
