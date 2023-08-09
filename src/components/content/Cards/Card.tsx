@@ -249,16 +249,15 @@ export const Card = ({
             <Typography
               variant="label4"
               sx={{
-                top: '-20px',
-                right: '-100px',
+                top: '-22px',
+                right: '-90px',
                 color: '#fff',
                 display: 'block',
                 position: 'absolute',
                 textAlign: 'center',
                 textDecoration: 'none',
-                letterSpacing: '.06em',
-                padding: '45px 90px 10px 90px',
-                '-webkit-transform': 'rotate(45deg) scale(0.75,1)',
+                padding: '50px 90px 20px 90px',
+                '-webkit-transform': 'rotate(45deg)',
                 zIndex: 10,
                 background:
                   subscriptionStatus?.toLowerCase() === 'pending'
