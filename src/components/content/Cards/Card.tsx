@@ -259,7 +259,10 @@ export const Card = ({
                 padding: '50px 90px 20px 90px',
                 '-webkit-transform': 'rotate(45deg)',
                 zIndex: 10,
-                background: subscriptionStatus?.toLowerCase() === 'pending' ? 'linear-gradient(239deg, rgba(255,120,44,1) 0%, rgba(255,179,38,1) 50%)' : '#B3CB2D'
+                background:
+                  subscriptionStatus?.toLowerCase() === 'pending'
+                    ? 'linear-gradient(239deg, rgba(255,120,44,1) 0%, rgba(255,179,38,1) 50%)'
+                    : '#B3CB2D',
               }}
             >
               {subscriptionStatus}
