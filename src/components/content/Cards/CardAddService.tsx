@@ -58,7 +58,7 @@ export const CardAddService = ({
           ':hover': {
             boxShadow: shadows['20'],
           },
-          height: boxHeight ? `${boxHeight}px` : '89%',
+          height: boxHeight ? `${boxHeight - 63}px` : '89%',
           minWidth: '260px',
         }}
         className="card"
