@@ -21,6 +21,7 @@
 export interface ImageType {
   url: string
   text: string
+  loader?: (src: string) => Promise<ArrayBuffer>
   size?:
     | 'small-rectangle'
     | 'small-square'
