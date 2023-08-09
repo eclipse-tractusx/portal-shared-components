@@ -125,7 +125,6 @@ This will execute:
 
     yarn version --patch
     yarn upgrade
-    yarn licenses list | head -n -1 > DEPENDENCIES
     git checkout -b '$BRANCH'
     git add -A
     git commit -m '$CC'
@@ -140,7 +139,6 @@ EOM
     fi
     yarn version --patch
     yarn upgrade
-    yarn licenses list | head -n -1 > DEPENDENCIES
     yarn pretty
     git checkout -b $BRANCH
     git add -A
