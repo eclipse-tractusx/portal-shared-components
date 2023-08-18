@@ -54,6 +54,8 @@ export interface ToolbarProps {
   rowsCountMax?: number
   buttonLabel?: string
   onButtonClick?: React.MouseEventHandler
+  secondButtonLabel?: string
+  onSecondButtonClick?: React.MouseEventHandler
   onSearch?: (value: string) => void
   searchExpr?: string
   searchPlaceholder?: string
@@ -77,6 +79,8 @@ export const Toolbar = ({
   rowsCountMax = 0,
   buttonLabel,
   onButtonClick,
+  secondButtonLabel,
+  onSecondButtonClick,
   onSearch,
   searchExpr,
   searchPlaceholder,
@@ -193,6 +197,16 @@ export const Toolbar = ({
               sx={{ marginLeft: 15 }}
             >
               {buttonLabel}
+            </Button>
+          )}
+          {secondButtonLabel && onSecondButtonClick != null && (
+            <Button
+              startIcon={<AddCircleOutlineIcon />}
+              size="small"
+              onClick={onSecondButtonClick}
+              sx={{ marginLeft: 5 }}
+            >
+              {secondButtonLabel}
             </Button>
           )}
         </Box>
