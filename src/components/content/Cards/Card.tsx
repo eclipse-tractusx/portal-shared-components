@@ -249,18 +249,20 @@ export const Card = ({
             <Typography
               variant="label4"
               sx={{
-                top: '-20px',
-                right: '-100px',
+                top: '-22px',
+                right: '-90px',
                 color: '#fff',
                 display: 'block',
                 position: 'absolute',
                 textAlign: 'center',
                 textDecoration: 'none',
-                letterSpacing: '.06em',
-                padding: '45px 90px 10px 90px',
-                '-webkit-transform': 'rotate(45deg) scale(0.75,1)',
+                padding: '50px 90px 20px 90px',
+                '-webkit-transform': 'rotate(45deg)',
                 zIndex: 10,
-                background: subscriptionStatus?.toLowerCase() === 'pending' ? 'linear-gradient(239deg, rgba(255,120,44,1) 0%, rgba(255,179,38,1) 50%)' : '#B3CB2D'
+                background:
+                  subscriptionStatus?.toLowerCase() === 'pending'
+                    ? 'linear-gradient(239deg, rgba(255,120,44,1) 0%, rgba(255,179,38,1) 50%)'
+                    : '#B3CB2D',
               }}
             >
               {subscriptionStatus}

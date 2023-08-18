@@ -22,6 +22,7 @@ import { useState } from 'react'
 import { Carousel } from '../Carousel'
 import { type ImageType } from './types'
 import ImageItemOverlay from './ImageItemOverlay'
+import { Image } from '../Image'
 
 export const ImageGallery = ({
   gallery,
@@ -60,18 +61,21 @@ export const ImageGallery = ({
         slidesToShow={3}
       >
         {gallery.map((image) => (
-          <div key={image.url}>
-            <img
+          <div
+            key={image.url}
+            onClick={() => {
+              hoverImageFn(image)
+            }}
+          >
+            <Image
               src={image.url}
               alt={image.text}
+              loader={image.loader}
               style={{
                 height: '60%',
                 width: '100%',
                 objectFit: 'cover',
                 borderRadius: '10px',
-              }}
-              onClick={() => {
-                hoverImageFn(image)
               }}
             />
           </div>
