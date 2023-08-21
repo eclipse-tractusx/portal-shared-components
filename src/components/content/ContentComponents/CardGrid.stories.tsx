@@ -33,9 +33,9 @@ export const Default: StoryObj<typeof Component> = {
     provider: {
       "detailsWithImageRow1": [
         {
-          "title": "Subscription Authority",
+          "title": "Subscription",
           "imagePath": "/images/content/teaser.png",
-          "description": "This are the details which I will still add",
+          "description": "This is an example description",
           "readMore": "",
           "backgroundColor": "#FFFFFF",
           "imageShape": "circle",
@@ -51,7 +51,7 @@ export const Default: StoryObj<typeof Component> = {
           "id": "2"
         },
         {
-          "title": "Subscription Authority",
+          "title": "Authority",
           "imagePath": "/images/content/teaser.png",
           "description": "This are the details which I will still add",
           "readMore": "",
@@ -68,16 +68,16 @@ export const Default: StoryObj<typeof Component> = {
           "readMore": "",
           "backgroundColor": "#FFFFFF",
           "imageShape": "circle",
-          "id": "1"
+          "id": "11"
         },
         {
-          "title": "Subscription Flow",
+          "title": "Flow",
           "imagePath": "/images/content/teaser.png",
-          "description": "This are the details which I will still add",
+          "description": "This is an example description",
           "readMore": "",
           "backgroundColor": "#FFFFFF",
           "imageShape": "circle",
-          "id": "2"
+          "id": "12"
         }
       ],
       "detailsWithoutImageRow1": [
@@ -87,23 +87,23 @@ export const Default: StoryObj<typeof Component> = {
           "readMore": "/help",
           "readMoreTitle": "Details",
           "backgroundColor": "#FFFFFF",
-          "id": "1"
+          "id": "21"
         },
         {
           "title": "What happens after the subscription?",
           "description": "the details will get added asap",
           "readMore": "/help",
-          "readMoreTitle": "Details",
+          "readMoreTitle": "More",
           "backgroundColor": "#FFFFFF",
-          "id": "2"
+          "id": "22"
         },
         {
           "title": "How can I use the service?",
-          "description": "the details will get added asap",
+          "description": "This is an example description",
           "readMore": "/help",
-          "readMoreTitle": "Details",
+          "readMoreTitle": "Visit",
           "backgroundColor": "#FFFFFF",
-          "id": "3"
+          "id": "33"
         }
       ]
     },
