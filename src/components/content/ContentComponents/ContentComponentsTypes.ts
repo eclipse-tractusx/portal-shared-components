@@ -18,12 +18,12 @@
  ********************************************************************************/
 
 export type CardDetailsProps = {
-  title: string
-  description: string
+  title?: string
+  description?: string
   imagePath?: string
-  backgroundColor: string
-  readMore: string
-  readMoreTitle: string
+  backgroundColor?: string
+  readMore?: string
+  readMoreTitle?: string
   id: string
   imageShape?: string
 }
@@ -37,31 +37,31 @@ export type sectionLinkType = {
 }
 
 export type subSectionsType = {
-  title: string
-  description: string
-  imagePath: string
-  id: string
-  backgroundColor: string
-  template: string
-  align: string
-  sectionLink: sectionLinkType
+  title?: string
+  description?: string
+  imagePath?: string
+  id?: string
+  backgroundColor?: string
+  template?: string
+  align?: string
+  sectionLink?: sectionLinkType
 }
 
 export type ProviderProps = {
-  title: string
+  title?: string
   description?: string
   imagePath?: string
   videoUrl?: string
-  backgroundColor: string
-  id: string
-  detailsWithImageRow1: CardDetailsProps[]
-  detailsWithImageRow2: CardDetailsProps[]
-  detailsWithoutImageRow1: CardDetailsProps[]
-  detailsWithoutImageRow2: CardDetailsProps[]
-  grid: number
-  template: string
-  linksRow1: linkProps[]
-  linksRow2: linkProps[]
+  backgroundColor?: string
+  id?: string
+  detailsWithImageRow1?: CardDetailsProps[]
+  detailsWithImageRow2?: CardDetailsProps[]
+  detailsWithoutImageRow1?: CardDetailsProps[]
+  detailsWithoutImageRow2?: CardDetailsProps[]
+  grid?: number
+  template?: string
+  linksRow1?: linkProps[]
+  linksRow2?: linkProps[]
   subTitles?: string[]
   align?: 'left' | 'center' | 'right'
   images?: string[]
@@ -75,6 +75,7 @@ export type ProviderProps = {
     }[]
   }
   subsections?: subSectionsType[]
+  scrollTop?: void
 }
 
 export type linkProps = {

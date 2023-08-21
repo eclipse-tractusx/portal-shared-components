@@ -17,91 +17,95 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
-
 import { CardGrid as Component } from './CardGrid'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'Content Components',
+const meta: Meta<typeof Component> = {
   component: Component,
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+export default meta
 
-export const CardGrid = Template.bind({})
-CardGrid.args = {
-  baseUrl: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
-  align: "center",
-  provider: {
-    "detailsWithImageRow1": [
-      {
-        "title": "Subscription Authority",
-        "imagePath": "/images/content/teaser.png",
-        "description": "This are the details which I will still add",
-        "readMore": "",
-        "backgroundColor": "#FFFFFF",
-        "imageShape": "circle"
-      },
-      {
-        "title": "Subscription Flow",
-        "imagePath": "/images/content/teaser.png",
-        "description": "This are the details which I will still add",
-        "readMore": "",
-        "backgroundColor": "#FFFFFF",
-        "imageShape": "circle"
-      },
-      {
-        "title": "Subscription Authority",
-        "imagePath": "/images/content/teaser.png",
-        "description": "This are the details which I will still add",
-        "readMore": "",
-        "backgroundColor": "#FFFFFF",
-        "imageShape": "circle"
-      },
-    ],
-    "detailsWithImageRow2": [
-      {
-        "title": "Subscription Authority",
-        "imagePath": "/images/content/teaser.png",
-        "description": "This are the details which I will still add",
-        "readMore": "",
-        "backgroundColor": "#FFFFFF",
-        "imageShape": "circle"
-      },
-      {
-        "title": "Subscription Flow",
-        "imagePath": "/images/content/teaser.png",
-        "description": "This are the details which I will still add",
-        "readMore": "",
-        "backgroundColor": "#FFFFFF",
-        "imageShape": "circle"
-      }
-    ],
-    "detailsWithoutImageRow1": [
-      {
-        "title": "Who can subscribe?",
-        "description": "the details will get added asap",
-        "readMore": "/help",
-        "readMoreTitle": "Details",
-        "backgroundColor": "#FFFFFF"
-      },
-      {
-        "title": "What happens after the subscription?",
-        "description": "the details will get added asap",
-        "readMore": "/help",
-        "readMoreTitle": "Details",
-        "backgroundColor": "#FFFFFF"
-      },
-      {
-        "title": "How can I use the service?",
-        "description": "the details will get added asap",
-        "readMore": "/help",
-        "readMoreTitle": "Details",
-        "backgroundColor": "#FFFFFF"
-      }
-    ]
-  },
-  grid: 3
+export const Default: StoryObj<typeof Component> = {
+  args : {
+    baseUrl: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
+    align: "center",
+    provider: {
+      "detailsWithImageRow1": [
+        {
+          "title": "Subscription Authority",
+          "imagePath": "/images/content/teaser.png",
+          "description": "This are the details which I will still add",
+          "readMore": "",
+          "backgroundColor": "#FFFFFF",
+          "imageShape": "circle",
+          "id": "1"
+        },
+        {
+          "title": "Subscription Flow",
+          "imagePath": "/images/content/teaser.png",
+          "description": "This are the details which I will still add",
+          "readMore": "",
+          "backgroundColor": "#FFFFFF",
+          "imageShape": "circle",
+          "id": "2"
+        },
+        {
+          "title": "Subscription Authority",
+          "imagePath": "/images/content/teaser.png",
+          "description": "This are the details which I will still add",
+          "readMore": "",
+          "backgroundColor": "#FFFFFF",
+          "imageShape": "circle",
+          "id": "3"
+        }
+      ],
+      "detailsWithImageRow2": [
+        {
+          "title": "Subscription Authority",
+          "imagePath": "/images/content/teaser.png",
+          "description": "This are the details which I will still add",
+          "readMore": "",
+          "backgroundColor": "#FFFFFF",
+          "imageShape": "circle",
+          "id": "1"
+        },
+        {
+          "title": "Subscription Flow",
+          "imagePath": "/images/content/teaser.png",
+          "description": "This are the details which I will still add",
+          "readMore": "",
+          "backgroundColor": "#FFFFFF",
+          "imageShape": "circle",
+          "id": "2"
+        }
+      ],
+      "detailsWithoutImageRow1": [
+        {
+          "title": "Who can subscribe?",
+          "description": "the details will get added asap",
+          "readMore": "/help",
+          "readMoreTitle": "Details",
+          "backgroundColor": "#FFFFFF",
+          "id": "1"
+        },
+        {
+          "title": "What happens after the subscription?",
+          "description": "the details will get added asap",
+          "readMore": "/help",
+          "readMoreTitle": "Details",
+          "backgroundColor": "#FFFFFF",
+          "id": "2"
+        },
+        {
+          "title": "How can I use the service?",
+          "description": "the details will get added asap",
+          "readMore": "/help",
+          "readMoreTitle": "Details",
+          "backgroundColor": "#FFFFFF",
+          "id": "3"
+        }
+      ]
+    },
+  }
 }

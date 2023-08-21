@@ -116,7 +116,7 @@ const TemplateConfig = ({
             baseUrl={baseUrl}
             align="center"
             provider={provider}
-            grid={provider.grid}
+            grid={provider.grid ?? 2}
           />
         </>
       )
@@ -133,7 +133,7 @@ const TemplateConfig = ({
             align="center"
             baseUrl={baseUrl}
             provider={provider}
-            grid={provider.grid}
+            grid={provider.grid ?? 2}
           />
         </>
       )
@@ -150,7 +150,7 @@ const TemplateConfig = ({
           <CardGrid
             baseUrl={baseUrl}
             provider={provider}
-            grid={provider.grid}
+            grid={provider.grid ?? 2}
           />
         </>
       )
@@ -163,7 +163,7 @@ const TemplateConfig = ({
             scrollTop={scrollTop}
             showScroll={showScroll}
           />
-          <LinkButtonGrid provider={provider} grid={provider.grid} />
+          <LinkButtonGrid provider={provider} grid={provider.grid ?? 2} />
         </>
       )
     // Combination of Text center aligned component with images in a row
@@ -190,7 +190,7 @@ const TemplateConfig = ({
           <GridImages
             provider={provider}
             baseUrl={baseUrl}
-            grid={provider.grid}
+            grid={provider.grid ?? 2}
           />
         </>
       )
@@ -198,7 +198,7 @@ const TemplateConfig = ({
     case TemplateNames.LinkButtonGrid:
       return (
         <>
-          <LinkButtonGrid provider={provider} grid={provider.grid} />
+          <LinkButtonGrid provider={provider} grid={provider.grid ?? 2} />
         </>
       )
     // Text in the left and image in the right side with sub sections

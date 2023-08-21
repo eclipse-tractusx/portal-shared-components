@@ -17,25 +17,22 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
-
 import { TextCenterAligned as Component } from './TextCenterAligned'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'Content Components',
+const meta: Meta<typeof Component> = {
   component: Component,
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+export default meta
 
-export const TextCenterAligned = Template.bind({})
-TextCenterAligned.args = {
-  provider: {
-    title: "Example title",
-    description: "Example description for the component"
-  },
-  scrollTop: () => {},
-  showScroll: true
+export const Default: StoryObj<typeof Component> = {
+  args : {
+    provider: {
+      "title": "Example title",
+      "description": "Example description for the component"
+    },
+    scrollTop: () => {},
+    showScroll: true
+  }
 }

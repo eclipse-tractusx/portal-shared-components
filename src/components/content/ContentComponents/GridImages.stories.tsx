@@ -17,23 +17,21 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
-
 import { GridImages as Component } from './GridImages'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'Content Components',
+const meta: Meta<typeof Component> = {
   component: Component,
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+export default meta
 
-export const GridImages = Template.bind({})
-GridImages.args = {
-  baseUrl: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
-  provider: {
-    "images": ["/images/content/teaser.png", "/images/content/teaser.png", "/images/content/teaser.png"]
-  },
+export const Default: StoryObj<typeof Component> = {
+  args : {
+    baseUrl: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
+    provider: {
+      "images": ["/images/content/teaser.png", "/images/content/teaser.png", "/images/content/teaser.png", "/images/content/teaser.png", "/images/content/teaser.png", "/images/content/teaser.png"]
+    },
+    grid: 3
+  }
 }

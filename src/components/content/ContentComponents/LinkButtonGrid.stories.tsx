@@ -17,50 +17,47 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
-
 import { LinkButtonGrid as Component } from './LinkButtonGrid'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'Content Components',
+const meta: Meta<typeof Component> = {
   component: Component,
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+export default meta
 
-export const LinkButtonGrid = Template.bind({})
-LinkButtonGrid.args = {
-  provider: {
-    "linksRow1": [
-      {
-        "background": "#C498EF63",
-        "title": "Example",
-        "navigate": "/"
-      },
-      {
-        "background": "#C498EF63",
-        "title": "Example",
-        "navigate": "/certificate-credential"
-      },
-      {
-        "background": "#C498EF63",
-        "title": "Example",
-        "navigate": "/certificate-credential"
-      }
-    ],
-    "linksRow2": [
-      {
-        "background": "#C498EF63",
-        "title": "Example",
-        "navigate": "/"
-      },
-      {
-        "background": "#C498EF63",
-        "title": "Example",
-        "navigate": "/"
-      }
-    ]
-  },
+export const Default: StoryObj<typeof Component> = {
+  args : {
+    provider: {
+      "linksRow1": [
+        {
+          "background": "#C498EF63",
+          "title": "Example",
+          "navigate": "/"
+        },
+        {
+          "background": "#C498EF63",
+          "title": "Example",
+          "navigate": "/certificate-credential"
+        },
+        {
+          "background": "#C498EF63",
+          "title": "Example",
+          "navigate": "/certificate-credential"
+        }
+      ],
+      "linksRow2": [
+        {
+          "background": "#C498EF63",
+          "title": "Example",
+          "navigate": "/"
+        },
+        {
+          "background": "#C498EF63",
+          "title": "Example",
+          "navigate": "/"
+        }
+      ]
+    }
+  }
 }

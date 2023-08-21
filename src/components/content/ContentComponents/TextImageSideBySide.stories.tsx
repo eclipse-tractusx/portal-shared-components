@@ -17,50 +17,47 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
-
 import { TextImageSideBySide as Component } from './TextImageSideBySide'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'Content Components',
+const meta: Meta<typeof Component> = {
   component: Component,
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+export default meta
 
-export const TextImageSideBySide = Template.bind({})
-TextImageSideBySide.args = {
-  provider: {
-    title: "Example title",
-    description: "Example description for the component",
-    imagePath: "/images/content/teaser.png",
-    sectionLink: {
-      data: [
-        {
-          "title": ">> IdP Config",
-          "id": "idp-id",
-          "internal": true
-        },
-        {
-          "title": ">> User Management",
-          "id": "user-id",
-          "internal": true
-        },
-        {
-          "title": ">> Company Certificates",
-          "id": "company-id",
-          "internal": true
-        },
-        {
-          "title": ">> Use Case Frameworks",
-          "id": "usecase-id",
-          "internal": true
-        }
-      ]
+export const Default: StoryObj<typeof Component> = {
+  args : {
+    provider: {
+      title: "Example title",
+      description: "Example description for the component",
+      imagePath: "/images/content/teaser.png",
+      sectionLink: {
+        data: [
+          {
+            "title": ">> IdP Config",
+            "id": "idp-id",
+            "internal": true
+          },
+          {
+            "title": ">> User Management",
+            "id": "user-id",
+            "internal": true
+          },
+          {
+            "title": ">> Company Certificates",
+            "id": "company-id",
+            "internal": true
+          },
+          {
+            "title": ">> Use Case Frameworks",
+            "id": "usecase-id",
+            "internal": true
+          }
+        ]
+      },
     },
-  },
-  scrollTop: () => {},
-  showScroll: true
+    scrollTop: () => {},
+    showScroll: true
+  }
 }

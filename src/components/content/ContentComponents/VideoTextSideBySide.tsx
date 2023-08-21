@@ -27,8 +27,8 @@ import { IconButton } from '../../basic/IconButton'
 
 export const VideoTextSideBySide = ({
   provider,
-  scrollTop,
-  showScroll,
+  scrollTop = () => {},
+  showScroll = true,
 }: {
   provider: ProviderProps
   scrollTop: () => void
@@ -43,7 +43,7 @@ export const VideoTextSideBySide = ({
           controls={true}
         />
       </div>
-      <div className={'titleDescriptionBody'}>
+      <div className={'titleDescriptionBody'} style={{width: '50% !important'}}>
         <div className="titleWithIcon sideBySideTitle">
           <Typography variant="h2">{provider.title}</Typography>
           {showScroll && (

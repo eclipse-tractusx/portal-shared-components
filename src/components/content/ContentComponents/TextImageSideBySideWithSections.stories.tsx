@@ -17,115 +17,112 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
-
 import { TextImageSideBySideWithSections as Component } from './TextImageSideBySideWithSections'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'Content Components',
+const meta: Meta<typeof Component> = {
   component: Component,
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+export default meta
 
-export const TextImageSideBySideWithSections = Template.bind({})
-TextImageSideBySideWithSections.args = {
-  provider: {
-    title: "Example title",
-    description: "Example description for the component",
-    imagePath: "/images/content/teaser.png",
-    "subsections": [
-      {
-        "title": "User Management",
-        "description":
-          "To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>",
-        "id": "user-id",
-        "sectionLink": {
-          "data": [
-            {
-              "title": ">> Role Descriptions",
-              "id": "/",
-              "internal": false
-            },
-            {
-              "title": ">> User Management",
-              "id": "/",
-              "internal": false
-            }
-          ]
-        }
-      },
-      {
-        "title": "Configure Company IdP (optional)",
-        "description":
-          "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
-        "id": "idp-id",
-        "sectionLink": {
-          "data": [
-            {
-              "title": ">> Configure your IdP",
-              "id": "/",
-              "internal": false
-            }
-          ]
-        }
-      },
-      {
-        "title": "Company Certificates",
-        "description": "",
-        "id": "company-id",
-        "sectionLink": {
-          "data": [
-            {
-              "title": ">> Setup your company certificates",
-              "id": "/",
-              "internal": false
-            }
-          ]
-        }
-      },
-      {
-        "title": "Use Case Frameworks",
-        "description": "",
-        "id": "usecase-id",
-        "sectionLink": {
-          "data": [
-            {
-              "title": ">> Sign the relevant use case frameworks.",
-              "id": "/",
-              "internal": false
-            }
-          ]
-        }
-      }
-    ],
-    sectionLink: {
-      data: [
+export const Default: StoryObj<typeof Component> = {
+  args : {
+    provider: {
+      title: "Example title",
+      description: "Example description for the component",
+      imagePath: "/images/content/teaser.png",
+      subsections: [
         {
-          "title": ">> IdP Config",
-          "id": "idp-id",
-          "internal": true
-        },
-        {
-          "title": ">> User Management",
+          "title": "User Management",
+          "description":
+            "To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>",
           "id": "user-id",
-          "internal": true
+          "sectionLink": {
+            "data": [
+              {
+                "title": ">> Role Descriptions",
+                "id": "/",
+                "internal": false
+              },
+              {
+                "title": ">> User Management",
+                "id": "/",
+                "internal": false
+              }
+            ]
+          }
         },
         {
-          "title": ">> Company Certificates",
+          "title": "Configure Company IdP (optional)",
+          "description":
+            "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
+          "id": "idp-id",
+          "sectionLink": {
+            "data": [
+              {
+                "title": ">> Configure your IdP",
+                "id": "/",
+                "internal": false
+              }
+            ]
+          }
+        },
+        {
+          "title": "Company Certificates",
+          "description": "",
           "id": "company-id",
-          "internal": true
+          "sectionLink": {
+            "data": [
+              {
+                "title": ">> Setup your company certificates",
+                "id": "/",
+                "internal": false
+              }
+            ]
+          }
         },
         {
-          "title": ">> Use Case Frameworks",
+          "title": "Use Case Frameworks",
+          "description": "",
           "id": "usecase-id",
-          "internal": true
+          "sectionLink": {
+            "data": [
+              {
+                "title": ">> Sign the relevant use case frameworks.",
+                "id": "/",
+                "internal": false
+              }
+            ]
+          }
         }
-      ]
+      ],
+      sectionLink: {
+        data: [
+          {
+            "title": ">> IdP Config",
+            "id": "idp-id",
+            "internal": true
+          },
+          {
+            "title": ">> User Management",
+            "id": "user-id",
+            "internal": true
+          },
+          {
+            "title": ">> Company Certificates",
+            "id": "company-id",
+            "internal": true
+          },
+          {
+            "title": ">> Use Case Frameworks",
+            "id": "usecase-id",
+            "internal": true
+          }
+        ]
+      },
     },
-  },
-  scrollTop: () => {},
-  showScroll: true
+    scrollTop: () => {},
+    showScroll: true
+  }
 }
