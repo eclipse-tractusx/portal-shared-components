@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-export type CardDetailsProps = {
+export interface CardDetailsProps {
   title?: string
   description?: string
   imagePath?: string
@@ -28,15 +28,17 @@ export type CardDetailsProps = {
   imageShape?: string
 }
 
-export type sectionLinkType = {
-  data: {
-    title: string
-    id: string
-    internal: boolean
-  }[]
+interface SectionLinkTypeData {
+  title: string
+  id: string
+  internal: boolean
 }
 
-export type subSectionsType = {
+interface sectionLinkType {
+  data: SectionLinkTypeData[]
+}
+
+interface subSectionsType {
   title?: string
   description?: string
   imagePath?: string
@@ -47,7 +49,24 @@ export type subSectionsType = {
   sectionLink?: sectionLinkType
 }
 
-export type ProviderProps = {
+interface SubDescriptionSectionData {
+  title: string
+  link: string
+  value: string
+}
+
+interface SubDescriptionData {
+  title: string
+  sections: SubDescriptionSectionData[]
+}
+
+interface linkProps {
+  background: string
+  title: string
+  navigate: string
+}
+
+export interface ProviderProps {
   title?: string
   description?: string
   imagePath?: string
@@ -66,22 +85,9 @@ export type ProviderProps = {
   align?: 'left' | 'center' | 'right'
   images?: string[]
   sectionLink?: sectionLinkType
-  subDescriptions?: {
-    title: string
-    sections: {
-      title: string
-      link: string
-      value: string
-    }[]
-  }
+  subDescriptions?: SubDescriptionData[]
   subsections?: subSectionsType[]
-  scrollTop?: void
-}
-
-export type linkProps = {
-  background: string
-  title: string
-  navigate: string
+  scrollTop?: any
 }
 
 export enum TemplateNames {
