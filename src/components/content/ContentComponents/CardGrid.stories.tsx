@@ -53,7 +53,7 @@ export const Default: StoryObj<typeof Component> = {
         {
           "title": "Authority",
           "imagePath": "/images/content/teaser.png",
-          "description": "This are the details which I will still add",
+          "description": "Coming soon",
           "readMore": "",
           "backgroundColor": "#FFFFFF",
           "imageShape": "circle",
@@ -64,7 +64,7 @@ export const Default: StoryObj<typeof Component> = {
         {
           "title": "Subscription Authority",
           "imagePath": "/images/content/teaser.png",
-          "description": "This are the details which I will still add",
+          "description": "Add your own description here",
           "readMore": "",
           "backgroundColor": "#FFFFFF",
           "imageShape": "circle",
