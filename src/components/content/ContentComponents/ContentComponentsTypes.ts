@@ -34,11 +34,11 @@ interface SectionLinkTypeData {
   internal: boolean
 }
 
-interface sectionLinkType {
+interface SectionLinkType {
   data: SectionLinkTypeData[]
 }
 
-interface subSectionsType {
+interface SubSectionsType {
   title?: string
   description?: string
   imagePath?: string
@@ -46,7 +46,7 @@ interface subSectionsType {
   backgroundColor?: string
   template?: string
   align?: string
-  sectionLink?: sectionLinkType
+  sectionLink?: SectionLinkType
 }
 
 interface SubDescriptionSectionData {
@@ -60,7 +60,7 @@ interface SubDescriptionData {
   sections: SubDescriptionSectionData[]
 }
 
-interface linkProps {
+interface LinkProps {
   background: string
   title: string
   navigate: string
@@ -79,14 +79,14 @@ export interface ProviderProps {
   detailsWithoutImageRow2?: CardDetailsProps[]
   grid?: number
   template?: string
-  linksRow1?: linkProps[]
-  linksRow2?: linkProps[]
+  linksRow1?: LinkProps[]
+  linksRow2?: LinkProps[]
   subTitles?: string[]
   align?: 'left' | 'center' | 'right'
   images?: string[]
-  sectionLink?: sectionLinkType
+  sectionLink?: SectionLinkType
   subDescriptions?: SubDescriptionData[]
-  subsections?: subSectionsType[]
+  subsections?: SubSectionsType[]
   scrollTop?: any
 }
 
