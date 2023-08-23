@@ -21,7 +21,7 @@
 import { useState } from 'react'
 import { Typography, Link } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import CloseIcon from '@mui/icons-material/Close'
 import { TableType } from './types'
