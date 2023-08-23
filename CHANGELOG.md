@@ -1,13 +1,59 @@
 # Changelog
 
-- StaticTable
-  - Add column clickable
-  - Add active on hover of edit icon
+## 2.0.23
+
+- added missing file headers
+
+## 2.0.22
+
+- added export for error bar
+
+## 2.0.21
+
+- added new error bar component
+
+## 2.0.20
+
+- added second button in the table
+
+## 2.0.19
+
+- changed license notice for images
 
 ## 2.0.18
 
 - ImageGallery
   - Use Image type
+
+## 2.0.17
+
+- changed UI of card flag
+
+## 2.0.16
+
+n/a
+
+## 2.0.15
+
+- added component for linear progress with label and progress value
+
+## 2.0.14
+
+- make card clickable
+
+## 2.0.13
+
+- added center to card
+
+## 2.0.12
+
+- changed UI of card strip
+
+## 2.0.11
+
+- StaticTable
+  - Add column clickable
+  - Add active on hover of edit icon
 
 ## 2.0.10
 
