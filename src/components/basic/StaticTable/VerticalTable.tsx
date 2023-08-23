@@ -21,6 +21,7 @@
 import { useState } from 'react'
 import { Typography, Link } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import CloseIcon from '@mui/icons-material/Close'
 import { TableType } from './types'
@@ -136,8 +137,8 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                    inputField.row === r &&
-                    inputField.column === c ? (
+                      inputField.row === r &&
+                      inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
@@ -160,20 +161,43 @@ export const VerticalTable = ({
                         </Typography>
                       </Link>
                     )}
-                    {data?.edit?.[r]?.[c].editIcon && !inputField && (
-                      <span style={{ marginLeft: 'auto' }}>
-                        <EditIcon
-                          onClick={(e) => handleEditFn(e, r, c)}
-                          sx={{
-                            fontSize: '18px',
-                            color: '#888888',
-                            cursor: 'pointer',
-                            '&:hover': {
-                              color: '#0088CC',
-                            },
-                          }}
-                        />
-                      </span>
+                    {data?.edit?.[r]?.[c].icon && !inputField && (
+                      c === 0 ?
+                        (
+                            <Tooltips
+                              color="dark"
+                              tooltipPlacement="bottom-start"
+                              tooltipText={data?.edit?.[r][c].inputValue ?? ''}
+                            >
+                              <HelpOutlineIcon
+                                sx={{
+                                  fontSize: '18px',
+                                  color: '#888888',
+                                  cursor: 'pointer',
+                                  '&:hover': {
+                                    color: '#0088CC',
+                                  },
+                                }}
+                              />
+                            </Tooltips>
+
+                        )
+                        : (
+                          <span style={{ marginLeft: 'auto' }}>
+                            <EditIcon
+                              onClick={(e) => handleEditFn(e, r, c)}
+                              sx={{
+                                fontSize: '18px',
+                                color: '#888888',
+                                cursor: 'pointer',
+                                '&:hover': {
+                                  color: '#0088CC',
+                                },
+                              }}
+                            />
+                          </span>
+                        )
+
                     )}
                   </div>
                 </td>
