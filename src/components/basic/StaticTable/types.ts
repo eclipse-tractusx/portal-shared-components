@@ -24,7 +24,7 @@ export interface TableType {
   body: string[][] | React.FC[][]
   edit?: Array<
     Array<{
-      editIcon: boolean
+      icon: boolean
       inputValue?: string
       clickableLink?: string
       isValid?: (value: string) => {}

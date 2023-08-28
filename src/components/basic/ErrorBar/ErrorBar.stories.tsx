@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 BMW Group AG
+ * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -17,12 +17,24 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
-import { render } from '@testing-library/react'
-import { Button } from '.'
+import { ComponentStory } from '@storybook/react'
 
-describe('Button', () => {
-  test('renders the Button component', () => {
-    render(<Button>Hello world!</Button>)
-  })
-})
+import { ErrorBar as Component } from './ErrorBar'
+
+export default {
+  title: 'ErrorBar',
+  component: Component,
+  argTypes: {},
+}
+
+const Template: ComponentStory<typeof Component> = (args: any) => (
+  <Component {...args} />
+)
+
+export const ErrorBar = Template.bind({})
+ErrorBar.args = {
+  errorText: 'Something went wrong. Try again',
+  handleButton: () => {},
+  showButton: true,
+  buttonText: 'Try Again'
+}
