@@ -93,7 +93,7 @@ export const StepperItem = ({
           }}
         >
           {done && (
-            text ? text : <svg
+            text || <svg
               width="14"
               height="13"
               viewBox="0 0 14 13"
