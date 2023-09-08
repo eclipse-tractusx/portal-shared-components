@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.25
+
+- stepper color and text changes
+
+## 2.0.24
+
+- added icon in table with tooltip
+
 ## 2.0.23
 
 - added missing file headers
