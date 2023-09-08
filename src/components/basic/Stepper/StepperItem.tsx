@@ -26,6 +26,8 @@ import { useEffect, useState } from 'react'
 interface StepperItemProps {
   step: number
   headline: string
+  text: string
+  color: string
   activeStep: number
   index: number
   totalSteps?: number
@@ -34,24 +36,26 @@ interface StepperItemProps {
 export const StepperItem = ({
   step,
   headline,
+  text,
+  color,
   activeStep,
   index,
   totalSteps = 6,
 }: StepperItemProps) => {
   const [backgroundColor, setBackgroundColor] = useState(
-    theme.palette.stepper.stepUpcoming
+    color || theme.palette.stepper.stepUpcoming
   )
   const [done, setDone] = useState(false)
 
   useEffect(() => {
     if (index === activeStep) {
-      setBackgroundColor(theme.palette.stepper.stepCurrent)
+      setBackgroundColor(color || theme.palette.stepper.stepCurrent)
       setDone(false)
     } else if (index < activeStep) {
-      setBackgroundColor(theme.palette.stepper.stepDone)
+      setBackgroundColor(color || theme.palette.stepper.stepDone)
       setDone(true)
     } else {
-      setBackgroundColor(theme.palette.stepper.stepUpcoming)
+      setBackgroundColor(color || theme.palette.stepper.stepUpcoming)
       setDone(false)
     }
   }, [index, activeStep])
@@ -62,18 +66,21 @@ export const StepperItem = ({
         width: `${width}%`,
         margin: '0px',
         borderBottom: `2px solid ${backgroundColor}`,
+        textAlign: 'center'
       }}
     >
       <Box
         sx={{
           backgroundColor: `${backgroundColor}`,
-          borderRadius: '50%',
+          borderRadius: `${text ? '20px' : '50%'}`,
           margin: '12px auto 16px auto',
-          width: '28px',
-          height: '28px',
-          top: '15px',
-          left: '15px',
+          width: `${text ? 'auto' : '28px'}`,
+          height: `${text ? 'auto' : '28px'}`,
           color: '#fff',
+          display: `${text ? 'inline-block' : 'flex'}`,
+          padding: '3px 15px',
+          justifyContent: 'center',
+          alignItems: 'center'
         }}
       >
         <Typography
@@ -82,12 +89,11 @@ export const StepperItem = ({
           color="#fff"
           sx={{
             margin: 'auto',
-            paddingTop: '4px',
             width: 'fit-content',
           }}
         >
           {done && (
-            <svg
+            text ? text : <svg
               width="14"
               height="13"
               viewBox="0 0 14 13"
