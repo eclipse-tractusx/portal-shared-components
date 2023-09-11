@@ -1,9 +1,12 @@
 # Changelog
 
+## 2.0.25
+
+- Fixed status(active) condition in card
+
 ## 2.0.24
 
 - Fixed status(active) condition in card
-- Fixed blank page issue for Navigation 
 
 ## 2.0.23
 
