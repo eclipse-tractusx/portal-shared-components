@@ -30,7 +30,7 @@ export const ParentSubNavigation = ({
 }) => {
   return (
     <>
-      {navigationArray.map(
+      {navigationArray?.map(
         (link: { index: number; title: string; navigation: string }) => {
           return (
             <Button
