@@ -32,10 +32,13 @@ const stepperElements = [
   {
     step: 1,
     headline: 'App Market Card',
+    text: 'Created',
+    color: '#B3CB2D'
   },
   {
     step: 2,
     headline: 'Contract & Consent',
+    color: '#0F71CB'
   },
   {
     step: 3,
@@ -63,5 +66,5 @@ export const Stepper = Template.bind({})
 Stepper.args = {
   list: stepperElements,
   showSteps: 6,
-  activeStep: 2,
+  activeStep: 3,
 }

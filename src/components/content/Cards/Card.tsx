@@ -180,7 +180,7 @@ export const Card = ({
 
   const handleSubmenuFn = (e: React.MouseEvent) => {
     e.stopPropagation()
-    if (status === 'active') {
+    if (status?.toLowerCase() === 'active') {
       setShowModal(true)
     }
   }
@@ -284,7 +284,9 @@ export const Card = ({
             <Tooltips
               color="dark"
               tooltipPlacement="bottom-start"
-              tooltipText={status === 'active' ? '' : tooltipText}
+              tooltipText={
+                status?.toLowerCase() === 'active' ? '' : tooltipText
+              }
               additionalStyles={{ marginLeft: '210px' }}
             >
               <Box
@@ -297,10 +299,13 @@ export const Card = ({
               >
                 <MoreVertIcon
                   sx={{
-                    color: status === 'active' ? '#0F71CB' : '#999999',
+                    color:
+                      status?.toLowerCase() === 'active'
+                        ? '#0F71CB'
+                        : '#999999',
                     borderRadius: '15px',
                     cursor: 'pointer',
-                    ...(status === 'active' && {
+                    ...(status?.toLowerCase() === 'active' && {
                       ':hover': {
                         backgroundColor: 'rgb(176 206 235 / 40%)',
                       },
