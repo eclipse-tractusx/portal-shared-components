@@ -1,7 +1,12 @@
 # Changelog
 
+## 2.0.26
+
+- stepper color and text changes
+
 ## 2.0.25
 
+- added icon in table with tooltip
 - fixed status(active) condition in card
 
 ## 2.0.24
