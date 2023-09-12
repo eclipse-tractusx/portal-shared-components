@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.27
+
+- Dialog styles fix
+
 ## 2.0.26
 
 - stepper color and text changes
