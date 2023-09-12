@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ProviderProps, linkProps } from './ContentComponentsTypes'
+import { ProviderProps, LinkProps } from './ContentComponentsTypes'
 import { Box } from '@mui/material'
 import { Typography } from '../../basic/Typography'
 import './ContentComponents.scss'
@@ -38,7 +38,7 @@ export const LinkButtonGrid = ({
             gridTemplateColumns: `repeat(${grid}, 1fr)`,
           }}
         >
-          {provider.linksRow1.map((link: linkProps) => (
+          {provider.linksRow1.map((link: LinkProps) => (
             <Box
               key={link.title}
               className={'linkBox'}
@@ -63,7 +63,7 @@ export const LinkButtonGrid = ({
             marginTop: '30px',
           }}
         >
-          {provider.linksRow2.map((link: linkProps) => (
+          {provider.linksRow2.map((link: LinkProps) => (
             <Box
               key={link.title}
               className={'linkBox'}

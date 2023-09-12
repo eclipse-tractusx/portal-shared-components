@@ -20,7 +20,7 @@
 import '../ContentComponents.scss'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import { Trans } from 'react-i18next'
-import { ProviderProps, subSectionsType } from '../ContentComponentsTypes'
+import { ProviderProps, SubSectionsType } from '../ContentComponentsTypes'
 import { Typography } from '../../../basic/Typography'
 import { IconButton } from '../../../basic/IconButton'
 
@@ -32,7 +32,7 @@ export const TitleDescriptionAndSectionlink = ({
 }: {
   scrollTop?: () => void
   showScroll?: boolean
-  provider: ProviderProps | subSectionsType
+  provider: ProviderProps | SubSectionsType
   defaultTitleVariation?: boolean
 }) => {
   const navigateTo = (link: { internal: boolean; id: string }) => {
