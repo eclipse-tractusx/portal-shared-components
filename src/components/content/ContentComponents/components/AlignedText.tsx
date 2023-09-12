@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { subSectionsType } from '../ContentComponentsTypes'
+import { SubSectionsType } from '../ContentComponentsTypes'
 import '../ContentComponents.scss'
 import { TitleDescriptionAndSectionlink } from './TitleDescriptionAndSectionlink'
 
@@ -25,7 +25,7 @@ export const AlignedText = ({
   provider,
   align,
 }: {
-  provider: subSectionsType
+  provider: SubSectionsType
   align?: string
 }) => {
   return (

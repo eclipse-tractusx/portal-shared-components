@@ -38,7 +38,7 @@ interface SectionLinkType {
   data: SectionLinkTypeData[]
 }
 
-interface SubSectionsType {
+export interface SubSectionsType {
   title?: string
   description?: string
   imagePath?: string
@@ -49,18 +49,18 @@ interface SubSectionsType {
   sectionLink?: SectionLinkType
 }
 
-interface SubDescriptionSectionData {
+export interface SubDescriptionSectionData {
   title: string
   link: string
   value: string
 }
 
-interface SubDescriptionData {
+export interface SubDescriptionData {
   title: string
   sections: SubDescriptionSectionData[]
 }
 
-interface LinkProps {
+export interface LinkProps {
   background: string
   title: string
   navigate: string
@@ -85,7 +85,7 @@ export interface ProviderProps {
   align?: 'left' | 'center' | 'right'
   images?: string[]
   sectionLink?: SectionLinkType
-  subDescriptions?: SubDescriptionData[]
+  subDescriptions?: SubDescriptionData
   subsections?: SubSectionsType[]
   scrollTop?: any
 }
