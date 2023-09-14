@@ -172,9 +172,6 @@ export const Datepicker = ({
               margin: margin, disabled: disabled, focused: open, inputProps: { placeholder: placeholder }
             }
           }}
-        // PaperProps={{
-        //   sx: { marginLeft: '16px' },
-        // }}
         />
       </LocalizationProvider>
     </Box>
