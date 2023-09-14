@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.29
+
+- Add image element to cards
+
 ## 2.0.28
 
 - Enable JSX elements on cards
