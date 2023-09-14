@@ -18,32 +18,32 @@
  ********************************************************************************/
 
 .errorBar {
-    width: 100%;
-    border: 1px solid #D91E18;
+  width: 100%;
+  border: 1px solid #d91e18;
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+  height: 72px;
+  border-radius: 8px;
+  justify-content: space-between;
+
+  .iconWithText {
     display: flex;
     align-items: center;
-    padding: 0px 50px;
-    height: 72px;
-    border-radius: 8px;
-    justify-content: space-between;
 
-    .iconWithText {
-        display: flex;
-        align-items: center;
-
-        p {
-            font-size: 14px;
-        }
+    p {
+      font-size: 14px;
     }
+  }
 
-    .errorIcon {
-        color: #D91E18;
-        margin-right: 10px;
-    }
+  .errorIcon {
+    color: #d91e18;
+    margin-right: 10px;
+  }
 
-    .triggerButton {
-        text-transform: none;
-        height: 44px;
-        font-size: 14px;
-    }
+  .triggerButton {
+    text-transform: none;
+    height: 44px;
+    font-size: 14px;
+  }
 }
