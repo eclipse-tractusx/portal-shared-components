@@ -24,8 +24,6 @@ import { type TextFieldProps } from '@mui/material/TextField'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
-import { type PickersDayProps } from '@mui/x-date-pickers/PickersDay'
-import { Input } from '../Input'
 import deLocale from 'date-fns/locale/de'
 import enLocale from 'date-fns/locale/en-US'
 import uniqueId from 'lodash/uniqueId'
@@ -62,7 +60,7 @@ export const Datepicker = ({
   readOnly,
   daySelectedColor = '#0F71CB',
   todayColor = '#939393',
-  inputFormat = 'yyyy-MM-DD',
+  inputFormat = 'yyyy-MM-dd',
   onChangeItem,
 }: DatepickerProps) => {
   const [value, setValue] = useState<DateType>(null)
@@ -93,6 +91,48 @@ export const Datepicker = ({
   }
 
   const iconColor = open ? daySelectedColor : '#939393'
+
+  const ServerDay = (props: any) => {
+    const { selected, day, today } = props
+    const bgColor = today ? todayColor : '#ffffff'
+    const bgSelected = selected
+      ? daySelectedColor
+      : bgColor
+    const colorSelected = selected ? '#fff' : '#202020'
+    const isBold = today ? '500' : '400'
+
+    return (
+      <Box key={uniqueId('pickers-day')}>
+        {day ? (
+          <Button
+            sx={{
+              width: '36px !important',
+              minWidth: '36px !important',
+              height: '36px !important',
+              margin: '0 2px',
+              padding: '0',
+              borderRadius: '50%',
+              border: 'none',
+              backgroundColor: bgSelected,
+              fontSize: '14px',
+              color: colorSelected,
+              fontWeight: isBold,
+              ':hover': {
+                backgroundColor: '#f2f2f2',
+              },
+            }}
+            onClick={() => {
+              handleChange(day)
+            }}
+          >
+            {new Date(day).getDate()}
+          </Button>
+        ) : (
+          <div></div>
+        )}
+      </Box>
+    )
+  }
   return (
     <Box
       sx={{
@@ -116,79 +156,25 @@ export const Datepicker = ({
           readOnly={readOnly}
           disableHighlightToday={false}
           views={['year', 'month', 'day']}
-          inputFormat={inputFormat}
+          format={inputFormat}
           onChange={(newValue) => {
             handleChange(newValue)
           }}
           onClose={() => {
             handleClose()
           }}
-          renderInput={(params: any) => (
-            <Box>
-              <Input
-                {...params}
-                label={label}
-                variant={variant}
-                helperText={helperText}
-                error={error}
-                margin={margin}
-                focused={open}
-                disabled={disabled}
-                onClick={handleOpen}
-                inputProps={{
-                  ...params.inputProps,
-                  placeholder,
-                }}
-              />
-            </Box>
-          )}
-          renderDay={(
-            day: Date,
-            _selectedDays: Date[],
-            pickersDayProps: PickersDayProps<Date>
-          ) => {
-            const bgColor = pickersDayProps.today ? todayColor : '#fff'
-            const bgSelected = pickersDayProps.selected
-              ? daySelectedColor
-              : bgColor
-            const colorSelected = pickersDayProps.selected ? '#fff' : '#202020'
-            const isBold = pickersDayProps.today ? '500' : '400'
-
-            return (
-              <Box key={uniqueId('pickers-day')}>
-                {day ? (
-                  <Button
-                    sx={{
-                      width: '36px !important',
-                      minWidth: '36px !important',
-                      height: '36px !important',
-                      margin: '0 2px',
-                      padding: '0',
-                      borderRadius: '50%',
-                      border: 'none',
-                      backgroundColor: bgSelected,
-                      fontSize: '14px',
-                      color: colorSelected,
-                      fontWeight: isBold,
-                      ':hover': {
-                        backgroundColor: '#f2f2f2',
-                      },
-                    }}
-                    onClick={() => {
-                      handleChange(pickersDayProps.day)
-                    }}
-                  >
-                    {new Date(pickersDayProps.day).getDate()}
-                  </Button>
-                ) : (
-                  <div></div>
-                )}
-              </Box>
-            )
+          slots={{
+            day: ServerDay,
           }}
-          PaperProps={{
-            sx: { marginLeft: '16px' },
+          slotProps={{
+            textField: {
+              variant: variant, onClick: handleOpen, label: label, helperText: helperText, error: error,
+              margin: margin, disabled: disabled, focused: open, inputProps: { placeholder: placeholder }
+            }
           }}
+        // PaperProps={{
+        //   sx: { marginLeft: '16px' },
+        // }}
         />
       </LocalizationProvider>
     </Box>
