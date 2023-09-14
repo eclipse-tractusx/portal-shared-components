@@ -33,12 +33,12 @@ const stepperElements = [
     step: 1,
     headline: 'App Market Card',
     text: 'Created',
-    color: '#B3CB2D'
+    color: '#B3CB2D',
   },
   {
     step: 2,
     headline: 'Contract & Consent',
-    color: '#0F71CB'
+    color: '#0F71CB',
   },
   {
     step: 3,
