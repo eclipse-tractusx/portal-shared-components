@@ -1,12 +1,21 @@
 # Changelog
 
-## 2.0.25
+## 2.0.27
+
+- Dialog styles fix
+
+## 2.0.26
 
 - stepper color and text changes
 
-## 2.0.24
+## 2.0.25
 
 - added icon in table with tooltip
+- fixed status(active) condition in card
+
+## 2.0.24
+
+- fixed blank page issue for Navigation
 
 ## 2.0.23
 

@@ -27,7 +27,9 @@ on:
       - main
     paths:
       - src/**
+      - package.json
       - yarn.lock
+  workflow_dispatch:
 
 permissions:
   contents: write
