@@ -40,6 +40,7 @@ interface TooltipsProps {
     | 'top-start'
   tooltipArrow?: boolean
   additionalStyles?: React.CSSProperties
+  arrowStyles?: React.CSSProperties
 }
 
 export const Tooltips = ({
@@ -49,6 +50,7 @@ export const Tooltips = ({
   tooltipText, // Tooltip text
   color = 'dark',
   additionalStyles, // additionalStyles to the tooltip container. ex - height, width, align
+  arrowStyles, // arrowStyles to the arrow of tooltip
 }: TooltipsProps) => {
   const backgroundColor =
     color === 'dark' ? 'background.background14' : 'grey.100'
@@ -73,6 +75,7 @@ export const Tooltips = ({
         arrow: {
           sx: {
             color: backgroundColor,
+            ...arrowStyles
           },
         },
       }}
