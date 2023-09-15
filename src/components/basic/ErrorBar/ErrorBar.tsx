@@ -28,26 +28,30 @@ export const ErrorBar = ({
   errorText = '',
   handleButton,
   showButton,
-  buttonText
+  buttonText,
 }: {
   errorText?: string
   handleButton?: () => void
   showButton?: boolean
   buttonText?: string
 }) => {
-
   return (
     <Box className="errorBar">
       <Box className="iconWithText">
-        <ReportProblemIcon className='errorIcon' />
+        <ReportProblemIcon className="errorIcon" />
         <Typography variant="body2" color="#D91E18">
           {errorText}
         </Typography>
       </Box>
       {showButton && (
         <Box>
-          <Button endIcon={<ArrowForwardIcon />} variant='contained' color='primary'
-          onClick={handleButton} className='triggerButton'>
+          <Button
+            endIcon={<ArrowForwardIcon />}
+            variant="contained"
+            color="primary"
+            onClick={handleButton}
+            className="triggerButton"
+          >
             {buttonText}
           </Button>
         </Box>

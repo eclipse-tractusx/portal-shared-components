@@ -66,7 +66,7 @@ export const StepperItem = ({
         width: `${width}%`,
         margin: '0px',
         borderBottom: `2px solid ${backgroundColor}`,
-        textAlign: 'center'
+        textAlign: 'center',
       }}
     >
       <Box
@@ -80,7 +80,7 @@ export const StepperItem = ({
           display: `${text ? 'inline-block' : 'flex'}`,
           padding: '3px 15px',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
         }}
       >
         <Typography
@@ -92,22 +92,23 @@ export const StepperItem = ({
             width: 'fit-content',
           }}
         >
-          {done && (
-            text || <svg
-              width="14"
-              height="13"
-              viewBox="0 0 14 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M13.8078 1.24939L5.09535 12.1399L0.305542 7.15056L1.74832 5.7655L4.95851 9.10944L12.2461 0L13.8078 1.24939Z"
-                fill="white"
-              />
-            </svg>
-          )}
+          {done &&
+            (text || (
+              <svg
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M13.8078 1.24939L5.09535 12.1399L0.305542 7.15056L1.74832 5.7655L4.95851 9.10944L12.2461 0L13.8078 1.24939Z"
+                  fill="white"
+                />
+              </svg>
+            ))}
           {!done && step}
         </Typography>
       </Box>
