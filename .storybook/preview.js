@@ -40,7 +40,7 @@ import React from 'react'
 import { SharedThemeProvider } from '../src/components/basic/SharedThemeProvider'
 import { SharedCssBaseline } from '../src/components/basic/SharedCssBaseline'
 import { I18nextProvider } from 'react-i18next'
-import i18n from '../src/i18n'
+import i18n from '../src/i18next'
 
 const withI18next = (Story) => {
   return (
