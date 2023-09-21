@@ -27,6 +27,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import deLocale from 'date-fns/locale/de'
 import enLocale from 'date-fns/locale/en-US'
 import uniqueId from 'lodash/uniqueId'
+import { PickersDayProps } from '@mui/x-date-pickers'
 
 export type DateType = Date | null
 export interface DatepickerProps extends Omit<TextFieldProps, 'variant'> {
@@ -92,7 +93,7 @@ export const Datepicker = ({
 
   const iconColor = open ? daySelectedColor : '#939393'
 
-  const ServerDay = (props: any) => {
+  const ServerDay = (props: PickersDayProps<Date>) => {
     const { selected, day, today } = props
     const bgColor = today ? todayColor : '#ffffff'
     const bgSelected = selected
