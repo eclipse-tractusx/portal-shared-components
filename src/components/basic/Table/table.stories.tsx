@@ -71,7 +71,7 @@ const Template: ComponentStory<typeof Component> = (args: any) => (
 
 const basicArgs = {
   autoHeight: true,
-  headerHeight: 76,
+  columnHeaderHeight: 76,
   rowHeight: 76,
   hideFooter: true,
   disableColumnFilter: true,

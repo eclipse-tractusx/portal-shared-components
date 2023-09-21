@@ -71,7 +71,7 @@ export const Table = ({
   columns,
   rows,
   autoHeight = true,
-  headerHeight = 57, // Default header height from base design
+  columnHeaderHeight = 57, // Default header height from base design
   rowHeight = 57, // Default row height from base design
   rowsCount = 0,
   rowsCountMax = 0,
@@ -203,12 +203,12 @@ export const Table = ({
           Toolbar: () => toolbarView(),
           NoRowsOverlay,
         }}
-        onSelectionModelChange={handleOnCellClick}
+        onRowSelectionModelChange={handleOnCellClick}
         {...{
           rows,
           columns,
           autoHeight,
-          headerHeight,
+          columnHeaderHeight,
           rowHeight,
           checkboxSelection,
         }}
