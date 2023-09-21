@@ -23,6 +23,7 @@ import MuiDialogActions, {
   type DialogActionsProps as MuiDialogActionsProps,
 } from '@mui/material/DialogActions'
 import { CONTENT_SPACING_RIGHT_LEFT } from './index'
+import './Dialog.scss'
 
 export interface DialogActionProps extends MuiDialogActionsProps {
   helperText?: string
@@ -49,7 +50,9 @@ export const DialogActions = ({
           {helperText}
         </Box>
       )}
-      <MuiDialogActions {...props}>{children}</MuiDialogActions>
+      <MuiDialogActions {...props} className="dialog-action-button">
+        {children}
+      </MuiDialogActions>
     </Box>
   )
 }

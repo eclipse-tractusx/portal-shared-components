@@ -1,5 +1,30 @@
 # Changelog
 
+## 2.0.29
+
+- Add image element to cards
+
+## 2.0.28
+
+- Enable JSX elements on cards
+
+## 2.0.27
+
+- Dialog styles fix
+
+## 2.0.26
+
+- stepper color and text changes
+
+## 2.0.25
+
+- added icon in table with tooltip
+- fixed status(active) condition in card
+
+## 2.0.24
+
+- fixed blank page issue for Navigation
+
 ## 2.0.23
 
 - added missing file headers

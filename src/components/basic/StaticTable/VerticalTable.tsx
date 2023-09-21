@@ -137,8 +137,8 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                      inputField.row === r &&
-                      inputField.column === c ? (
+                    inputField.row === r &&
+                    inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
@@ -161,44 +161,40 @@ export const VerticalTable = ({
                         </Typography>
                       </Link>
                     )}
-                    {data?.edit?.[r]?.[c].icon && !inputField && (
-                      c === 0 ?
-                        (
-                            <Tooltips
-                              color="dark"
-                              tooltipPlacement="bottom-start"
-                              tooltipText={data?.edit?.[r][c].inputValue ?? ''}
-                            >
-                              <HelpOutlineIcon
-                                sx={{
-                                  fontSize: '18px',
-                                  color: '#888888',
-                                  cursor: 'pointer',
-                                  '&:hover': {
-                                    color: '#0088CC',
-                                  },
-                                }}
-                              />
-                            </Tooltips>
-
-                        )
-                        : (
-                          <span style={{ marginLeft: 'auto' }}>
-                            <EditIcon
-                              onClick={(e) => handleEditFn(e, r, c)}
-                              sx={{
-                                fontSize: '18px',
-                                color: '#888888',
-                                cursor: 'pointer',
-                                '&:hover': {
-                                  color: '#0088CC',
-                                },
-                              }}
-                            />
-                          </span>
-                        )
-
-                    )}
+                    {data?.edit?.[r]?.[c].icon &&
+                      !inputField &&
+                      (c === 0 ? (
+                        <Tooltips
+                          color="dark"
+                          tooltipPlacement="bottom-start"
+                          tooltipText={data?.edit?.[r][c].inputValue ?? ''}
+                        >
+                          <HelpOutlineIcon
+                            sx={{
+                              fontSize: '18px',
+                              color: '#888888',
+                              cursor: 'pointer',
+                              '&:hover': {
+                                color: '#0088CC',
+                              },
+                            }}
+                          />
+                        </Tooltips>
+                      ) : (
+                        <span style={{ marginLeft: 'auto' }}>
+                          <EditIcon
+                            onClick={(e) => handleEditFn(e, r, c)}
+                            sx={{
+                              fontSize: '18px',
+                              color: '#888888',
+                              cursor: 'pointer',
+                              '&:hover': {
+                                color: '#0088CC',
+                              },
+                            }}
+                          />
+                        </span>
+                      ))}
                   </div>
                 </td>
               )

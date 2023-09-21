@@ -82,7 +82,7 @@ export const DialogHeader = ({
         </MuiDialogTitle>
       )}
       {intro && (
-        <Typography variant="body2" sx={{ marginTop: 1 }}>
+        <Typography variant="h4" sx={{ marginTop: 1 }}>
           {intro}
         </Typography>
       )}

@@ -17,22 +17,6 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { TextCenterAligned as Component } from './TextCenterAligned'
-import type { Meta, StoryObj } from '@storybook/react'
-
-const meta: Meta<typeof Component> = {
-  component: Component,
-}
-
-export default meta
-
-export const Default: StoryObj<typeof Component> = {
-  args : {
-    provider: {
-      "title": "Example title",
-      "description": "Example description for the component"
-    },
-    scrollTop: () => {},
-    showScroll: true
-  }
+.dialog-action-button > button {
+  text-transform: none !important;
 }

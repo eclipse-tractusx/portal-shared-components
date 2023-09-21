@@ -36,5 +36,5 @@ ErrorBar.args = {
   errorText: 'Something went wrong. Try again',
   handleButton: () => {},
   showButton: true,
-  buttonText: 'Try Again'
+  buttonText: 'Try Again',
 }

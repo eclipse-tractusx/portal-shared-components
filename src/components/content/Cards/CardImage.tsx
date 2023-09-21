@@ -36,6 +36,7 @@ export interface CardImageProps {
   imageShape?: CardImageShape
   imageLoader?: (src: string) => Promise<ArrayBuffer>
   preview?: boolean
+  imageElement?: JSX.Element
 }
 
 export const CardImage = ({
@@ -44,6 +45,7 @@ export const CardImage = ({
   imageShape = 'round',
   imageLoader,
   preview = false,
+  imageElement,
 }: CardImageProps) => {
   const { transitions } = useTheme()
   const withPreview = (size: number) => (preview ? size + 18 : size)
@@ -63,22 +65,28 @@ export const CardImage = ({
     },
   }
 
+  const style: React.CSSProperties = {
+    objectFit: 'cover',
+    transition: transitions.create(['all'], {
+      duration: transitions.duration.shorter,
+    }),
+    ...sx.image[imageSize],
+    ...(imageSize === 'small' && sx.image[imageShape]),
+    ...(imageSize === 'medium' && sx.image[imageShape]),
+  }
+
   return (
     <Box sx={sx.container[imageSize]}>
-      <Image
-        src={image?.src ?? LogoGrayData}
-        alt={image?.alt}
-        loader={imageLoader}
-        style={{
-          objectFit: 'cover',
-          transition: transitions.create(['all'], {
-            duration: transitions.duration.shorter,
-          }),
-          ...sx.image[imageSize],
-          ...(imageSize === 'small' && sx.image[imageShape]),
-          ...(imageSize === 'medium' && sx.image[imageShape]),
-        }}
-      />
+      {imageElement ? (
+        <div style={style}>{imageElement}</div>
+      ) : (
+        <Image
+          src={image?.src ?? LogoGrayData}
+          alt={image?.alt}
+          loader={imageLoader}
+          style={style}
+        />
+      )}
     </Box>
   )
 }
