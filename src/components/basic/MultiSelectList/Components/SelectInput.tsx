@@ -56,7 +56,11 @@ export const SelectInput = ({
     }}
   >
     <Input
-      {...params}
+      fullWidth={params.fullWidth}
+      InputProps={params.InputProps}
+      inputProps={params.inputProps}
+      id={params.id}
+      size={params.size}
       label={label}
       placeholder={placeholder}
       variant={variant}
