@@ -42,6 +42,7 @@ interface CardsProps {
   imageSize?: CardProps['imageSize']
   imageShape?: CardProps['imageShape']
   imageLoader?: CardProps['imageLoader']
+  imageElement?: CardProps['imageElement']
   columns?: number
   readMoreText?: CardProps['readMoreText']
   readMoreLink?: CardProps['readMoreLink']
@@ -68,6 +69,7 @@ export const Cards = ({
   imageSize,
   imageShape,
   imageLoader,
+  imageElement,
   columns = 6,
   expandOnHover,
   filledBackground,
@@ -95,6 +97,7 @@ export const Cards = ({
     imageSize,
     imageShape,
     imageLoader,
+    imageElement,
     expandOnHover,
     filledBackground,
     addButtonClicked,
