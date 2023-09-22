@@ -20,7 +20,7 @@
 
 import { HorizontalTable } from './HorizontalTable'
 import { VerticalTable } from './VerticalTable'
-import { TableType } from './types'
+import type { TableType } from './types'
 
 export const StaticTable = ({
   data,

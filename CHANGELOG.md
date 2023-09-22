@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.31
+- Linter Findings
+  - Add type for imports
+
 ## 2.0.29
 
 - Add image element to cards
