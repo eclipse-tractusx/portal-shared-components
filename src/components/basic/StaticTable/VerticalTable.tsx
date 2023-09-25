@@ -171,10 +171,11 @@ export const VerticalTable = ({
                         >
                           <HelpOutlineIcon
                             sx={{
+                              width: '2em',
                               fontSize: '19px',
                               color: '#888888',
                               cursor: 'pointer',
-                              marginLeft: '5px',
+                              paddingTop: '2px',
                               '&:hover': {
                                 color: '#0088CC',
                               },
