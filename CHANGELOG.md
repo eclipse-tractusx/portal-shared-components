@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.31
+- Linter Findings
+  - Fix void no confusing lints
+
 ## 2.0.29
 
 - Add image element to cards
