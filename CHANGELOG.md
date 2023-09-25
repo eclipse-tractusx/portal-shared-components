@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.31
+## 2.0.32
 - Linter Findings
   - Add type for imports
 
