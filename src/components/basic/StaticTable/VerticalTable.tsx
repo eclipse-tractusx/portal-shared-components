@@ -137,8 +137,8 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                    inputField.row === r &&
-                    inputField.column === c ? (
+                      inputField.row === r &&
+                      inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
@@ -171,9 +171,11 @@ export const VerticalTable = ({
                         >
                           <HelpOutlineIcon
                             sx={{
-                              fontSize: '18px',
+                              width: '2em',
+                              fontSize: '19px',
                               color: '#888888',
                               cursor: 'pointer',
+                              paddingTop: '2px',
                               '&:hover': {
                                 color: '#0088CC',
                               },
