@@ -10,6 +10,14 @@
 - Update helper file with the data types
 - Remove content specific code. ex - bpnl
 
+## 2.0.31
+
+- Fix table alignment
+
+## 2.0.30
+
+- Change arrow style
+
 ## 2.0.29
 
 - Add image element to cards
