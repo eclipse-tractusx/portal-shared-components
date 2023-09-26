@@ -1,10 +1,22 @@
 # Changelog
 
+## 2.0.33
+
+- Linter Findings: add type for imports
+
 ## 2.0.32
 
 - Update PageLoadingTable component with fetchArgs type
 - Update helper file with the data types
 - Remove content specific code. ex - bpnl
+
+## 2.0.31
+
+- Fix table alignment
+
+## 2.0.30
+
+- Change arrow style
 
 ## 2.0.29
 

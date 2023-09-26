@@ -24,7 +24,7 @@ import EditIcon from '@mui/icons-material/Edit'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import CloseIcon from '@mui/icons-material/Close'
-import { TableType } from './types'
+import type { TableType } from './types'
 import { Input } from '../Input'
 import { Tooltips } from '../ToolTips'
 
