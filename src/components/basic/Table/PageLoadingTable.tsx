@@ -37,7 +37,7 @@ export interface PaginMeta {
 
 export interface PaginResult<Row> {
   meta: PaginMeta
-  content: Array<Row>
+  content: Row[]
 }
 
 export interface PageLoadingTableProps<Row, Args>
@@ -46,7 +46,7 @@ export interface PageLoadingTableProps<Row, Args>
   fetchHook: (paginArgs: PaginFetchArgs) => any
   fetchHookArgs?: Args
   fetchHookRefresh?: number
-  allItems?: Array<Row>
+  allItems?: Row[]
   callbackToPage?: (data: PaginResult<Row>) => void
 }
 
@@ -62,7 +62,7 @@ export const PageLoadingTable = function <Row, Args>({
   const [page, setPage] = useState(0)
   const [clear, setClear] = useState(true)
   const [loaded, setLoaded] = useState(0)
-  const [items, setItems] = useState<Array<Row>>([])
+  const [items, setItems] = useState<Row[]>([])
   const { data, isFetching, isSuccess, error, refetch } = fetchHook({
     page,
     args: {
