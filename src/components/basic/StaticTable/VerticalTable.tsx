@@ -24,7 +24,7 @@ import EditIcon from '@mui/icons-material/Edit'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import CloseIcon from '@mui/icons-material/Close'
-import { TableType } from './types'
+import type { TableType } from './types'
 import { Input } from '../Input'
 import { Tooltips } from '../ToolTips'
 
@@ -91,7 +91,7 @@ export const VerticalTable = ({
           </Tooltips>
         )}
         <CloseIcon
-          onClick={() => setInputField(null)}
+          onClick={() => { setInputField(null) }}
           sx={{ marginTop: '25px' }}
         />
       </div>
@@ -101,7 +101,7 @@ export const VerticalTable = ({
   return (
     <table
       style={{ width: '100%', borderCollapse: 'collapse' }}
-      onClick={() => setInputField(null)}
+      onClick={() => { setInputField(null) }}
     >
       <thead>
         <tr>
@@ -137,8 +137,8 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                    inputField.row === r &&
-                    inputField.column === c ? (
+                      inputField.row === r &&
+                      inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
@@ -171,9 +171,11 @@ export const VerticalTable = ({
                         >
                           <HelpOutlineIcon
                             sx={{
-                              fontSize: '18px',
+                              width: '2em',
+                              fontSize: '19px',
                               color: '#888888',
                               cursor: 'pointer',
+                              paddingTop: '2px',
                               '&:hover': {
                                 color: '#0088CC',
                               },
@@ -183,7 +185,7 @@ export const VerticalTable = ({
                       ) : (
                         <span style={{ marginLeft: 'auto' }}>
                           <EditIcon
-                            onClick={(e) => handleEditFn(e, r, c)}
+                            onClick={(e) => { handleEditFn(e, r, c) }}
                             sx={{
                               fontSize: '18px',
                               color: '#888888',
