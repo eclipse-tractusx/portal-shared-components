@@ -50,7 +50,7 @@ export const LoadingButton = ({
     fontSize: '18px',
   })
 
-  function handleClick(e: any) {
+  function handleClick(e: React.MouseEvent) {
     onButtonClick(e)
   }
 

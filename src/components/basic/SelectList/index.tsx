@@ -29,7 +29,7 @@ import isEqual from 'lodash/isEqual'
 import { useState } from 'react'
 
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
-  items: any[]
+  items: []
   label: string
   placeholder: string
   keyTitle: string
@@ -39,7 +39,7 @@ interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   noOptionsText?: string
   defaultValue?: {}
   disableClearable?: boolean
-  onChangeItem: (items: any) => void
+  onChangeItem: (items: {}) => void
 }
 
 export const SelectList = ({
@@ -74,7 +74,7 @@ export const SelectList = ({
       disabled={disabled}
       options={items.map((item) => item)}
       getOptionLabel={(option) => option[keyTitle] || ''}
-      onChange={(_, reason: any) => {
+      onChange={(_, reason: {}) => {
         setSelected(reason)
         onChangeItem(reason)
       }}

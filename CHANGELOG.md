@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.31
+- Linter Findings
+  - Remove any with particular interface or types
+
 ## 2.0.29
 
 - Add image element to cards

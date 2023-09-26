@@ -39,7 +39,7 @@ export interface PartsType {
 
 export interface MultiSelectListProps
   extends Omit<TextFieldProps, 'variant' | 'size'> {
-  items: any[]
+  items: []
   label: string
   placeholder: string
   keyTitle: string
@@ -51,7 +51,7 @@ export interface MultiSelectListProps
   notItemsText: string
   tagSize?: TagSizeType
   filterOptionsArgs?: {}
-  defaultValues?: any
+  defaultValues?: []
   onAddItem: (items: any[]) => void
 }
 

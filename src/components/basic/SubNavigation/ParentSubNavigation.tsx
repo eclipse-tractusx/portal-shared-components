@@ -21,17 +21,23 @@
 import { Button } from '../Button'
 import EastIcon from '@mui/icons-material/East'
 
+export interface NavigationItem { 
+  index: number
+  title: string
+  navigation: string 
+}
+
 export const ParentSubNavigation = ({
   navigationArray,
   onClick,
 }: {
-  navigationArray: any
-  onClick: any
+  navigationArray: NavigationItem[]
+  onClick: (navigation: string) => void
 }) => {
   return (
     <>
       {navigationArray?.map(
-        (link: { index: number; title: string; navigation: string }) => {
+        (link: NavigationItem) => {
           return (
             <Button
               key={link.index}

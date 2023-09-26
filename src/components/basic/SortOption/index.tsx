@@ -22,6 +22,11 @@ import { useState } from 'react'
 import { Typography } from '../Typography'
 import { Box } from '@mui/material'
 
+export interface SortOptionsType {
+  label: string
+  value: string
+}
+
 export const SortOption = ({
   sortOptions,
   setSortOption,
@@ -29,15 +34,15 @@ export const SortOption = ({
   show,
   singleMenu,
 }: {
-  sortOptions: any
-  setSortOption?: any
-  selectedOption: any
+  sortOptions: SortOptionsType[]
+  setSortOption?: (value: string) => void
+  selectedOption: string
   show: boolean
   singleMenu?: boolean
 }) => {
-  const handleSortSelection = (e: any, value: string) => {
+  const handleSortSelection = (e: React.SyntheticEvent, value: string) => {
     e.stopPropagation()
-    setSortOption(value)
+    setSortOption?.(value)
   }
 
   const [submenuHover, setSubmenuHover] = useState(false)
@@ -50,7 +55,7 @@ export const SortOption = ({
             padding: '8px',
           }}
         >
-          {sortOptions.map((entry: any) => (
+          {sortOptions.map((entry: SortOptionsType) => (
             <Box
               key={entry.value}
               onClick={(e) => {

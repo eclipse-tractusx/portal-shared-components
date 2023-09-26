@@ -22,6 +22,7 @@ import { Box, useTheme } from '@mui/material'
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined'
 import { Button, type ButtonProps } from '../Button'
 import { Typography } from '../Typography'
+import React from 'react'
 
 interface ButtonInputData {
   isIcon: boolean
@@ -47,7 +48,7 @@ export const OrderStatusButton = ({
 }: OrderStatusButtonProps) => {
   const theme = useTheme()
 
-  const handleClick = (e: any) => {
+  const handleClick = (e: React.MouseEvent) => {
     onButtonClick != null && onButtonClick(e)
   }
 
@@ -60,6 +61,7 @@ export const OrderStatusButton = ({
   ) => {
     return (
       <Button
+        key={numberLabel}
         sx={{
           width: '97%',
           position: 'relative',

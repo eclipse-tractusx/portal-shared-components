@@ -23,7 +23,7 @@ import { BackButton, type BackButtonProps } from '../Button/BackButton'
 
 interface BreadcrumbProps {
   onBackButtonClick?: React.MouseEventHandler
-  breadcrumbs: any[]
+  breadcrumbs: []
 }
 
 export const Breadcrumb = ({

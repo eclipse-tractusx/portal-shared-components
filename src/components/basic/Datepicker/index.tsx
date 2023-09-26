@@ -62,7 +62,7 @@ export const Datepicker = ({
   readOnly,
   daySelectedColor = '#0F71CB',
   todayColor = '#939393',
-  inputFormat = 'yyyy-MM-DD',
+  inputFormat = 'yyyy-MM-dd',
   onChangeItem,
 }: DatepickerProps) => {
   const [value, setValue] = useState<DateType>(null)
@@ -123,7 +123,7 @@ export const Datepicker = ({
           onClose={() => {
             handleClose()
           }}
-          renderInput={(params: any) => (
+          renderInput={params => (
             <Box>
               <Input
                 {...params}
