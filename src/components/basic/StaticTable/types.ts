@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
+import type React from 'react'
 export interface TableType {
   head: string[]
   body: string[][] | React.FC[][]

@@ -19,7 +19,7 @@
 
 import { useState, useEffect } from 'react'
 import LinearProgress, {
-  LinearProgressProps,
+  type LinearProgressProps,
 } from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
