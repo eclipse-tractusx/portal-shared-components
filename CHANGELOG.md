@@ -1,8 +1,12 @@
 # Changelog
 
-## 2.0.31
+## 2.0.32
+
+- Update PageLoadingTable component with fetchArgs type
+- Update helper file with the data types
+- Remove content specific code. ex - bpnl
 - Linter Findings
-  - Fix void no confusing lints
+  - Remove void no confusing lints
 
 ## 2.0.29
 
