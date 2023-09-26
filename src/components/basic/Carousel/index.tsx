@@ -73,8 +73,8 @@ export const Carousel = ({
   position = 'relative',
 }: CarouselProps) => {
   const [showArrows, setShowArrows] = useState(false)
-  const onMouseEnter = () => setShowArrows(true)
-  const onMouseLeave = () => setShowArrows(false)
+  const onMouseEnter = () => { setShowArrows(true) }
+  const onMouseLeave = () => { setShowArrows(false) }
   const arrayChildren = Children.toArray(children)
 
   useEffect(() => {

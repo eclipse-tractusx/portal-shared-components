@@ -29,7 +29,7 @@ import { SearchAndFilterButtonToolbar } from './components/Toolbar/SearchAndFilt
 import { Typography } from '../Typography'
 import { Error500Overlay } from './components/Error/Error500Overlay'
 import { Error400Overlay } from './components/Error/Error400Overlay'
-import { view } from '../ViewSelector'
+import type { view } from '../ViewSelector'
 
 export { StatusTag }
 export type toolbarType = 'basic' | 'premium' | 'ultimate' | 'searchAndFilter'
