@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.2
+
+- Migrate MUI data grid to v6
+
 ## 2.0.34
 
 - Linter Findings
