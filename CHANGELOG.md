@@ -1,8 +1,14 @@
 # Changelog
 
+## 2.0.34
+
+- Linter Findings
+  - Remove void no confusing lints
+
 ## 2.0.33
 
-- Linter Findings: add type for imports
+- Linter Findings
+  - Add type for imports
 
 ## 2.0.32
 
