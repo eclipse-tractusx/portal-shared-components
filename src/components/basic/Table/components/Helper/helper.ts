@@ -19,10 +19,7 @@
  ********************************************************************************/
 export const hasMorePages = (data: {
   meta: { page: number; totalPages: number }
-}) => {
-  return data?.meta?.page < data?.meta?.totalPages - 1
-}
+}) => data?.meta?.page < data?.meta?.totalPages - 1
 
-export const getMaxRows = (data: { meta: { totalElements: number } }) => {
-  return data?.meta?.totalElements ?? 0
-}
+export const getMaxRows = (data: { meta: { totalElements: number } }) => 
+  data?.meta?.totalElements ?? 0
