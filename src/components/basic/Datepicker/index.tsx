@@ -27,7 +27,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import deLocale from 'date-fns/locale/de'
 import enLocale from 'date-fns/locale/en-US'
 import uniqueId from 'lodash/uniqueId'
-import { PickersDayProps } from '@mui/x-date-pickers'
+import { type PickersDayProps } from '@mui/x-date-pickers'
 
 export type DateType = Date | null
 export interface DatepickerProps extends Omit<TextFieldProps, 'variant'> {
@@ -169,8 +169,8 @@ export const Datepicker = ({
           }}
           slotProps={{
             textField: {
-              variant: variant, onClick: handleOpen, label: label, helperText: helperText, error: error,
-              margin: margin, disabled: disabled, focused: open, inputProps: { placeholder: placeholder }
+              variant, onClick: handleOpen, label, helperText, error,
+              margin, disabled, focused: open, inputProps: { placeholder }
             }
           }}
         />
