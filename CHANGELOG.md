@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.32
+
+- Update PageLoadingTable component with fetchArgs type
+- Update helper file with the data types
+- Remove content specific code. ex - bpnl
+
 ## 2.0.29
 
 - Add image element to cards

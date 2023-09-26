@@ -35,21 +35,22 @@ export interface PaginMeta {
   contentSize: number
 }
 
-export interface PaginResult<T> {
+export interface PaginResult<Row> {
   meta: PaginMeta
-  content: T[]
+  content: Array<Row>
 }
 
-export interface PageLoadingTableProps extends Omit<TableProps, 'rows'> {
+export interface PageLoadingTableProps<Row, Args>
+  extends Omit<TableProps, 'rows'> {
   loadLabel: string
   fetchHook: (paginArgs: PaginFetchArgs) => any
-  fetchHookArgs?: any
+  fetchHookArgs?: Args
   fetchHookRefresh?: number
-  allItems?: any
-  callbackToPage?: any
+  allItems?: Array<Row>
+  callbackToPage?: (data: PaginResult<Row>) => void
 }
 
-export const PageLoadingTable = function <T>({
+export const PageLoadingTable = function <Row, Args>({
   loadLabel,
   fetchHook,
   fetchHookArgs,
@@ -57,11 +58,11 @@ export const PageLoadingTable = function <T>({
   allItems,
   callbackToPage,
   ...props
-}: PageLoadingTableProps) {
+}: PageLoadingTableProps<Row, Args>) {
   const [page, setPage] = useState(0)
   const [clear, setClear] = useState(true)
   const [loaded, setLoaded] = useState(0)
-  const [items, setItems] = useState<T[]>([])
+  const [items, setItems] = useState<Array<Row>>([])
   const { data, isFetching, isSuccess, error, refetch } = fetchHook({
     page,
     args: {
@@ -78,6 +79,9 @@ export const PageLoadingTable = function <T>({
   const maxRows = getMaxRows(data)
 
   useEffect(() => {
+    if (!allItems) {
+      return
+    }
     if (allItems?.length > 0) {
       setLoading(false)
       setItems((i) => i.concat(allItems))
@@ -95,13 +99,12 @@ export const PageLoadingTable = function <T>({
     }
   }, [fetchHookRefresh, loaded])
 
-  /* eslint react-hooks/exhaustive-deps: "off" */
   useEffect(() => {
     // reset loading
     if (isFetching && !loading) {
       setLoading(true)
     }
-    if (isSuccess && !isFetching && data && (data.content || data.bpn)) {
+    if (isSuccess && !isFetching && data && data.content) {
       if (clear) {
         setItems([])
         setClear(false)
