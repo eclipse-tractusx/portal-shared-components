@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.2
+
+- Image Carousal
+  - Update styles for width and height
+
 ## 2.1.1
 
 - Migrate MUI date picker to v6
