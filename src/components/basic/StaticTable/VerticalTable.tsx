@@ -35,7 +35,7 @@ export const VerticalTable = ({
   data: TableType
   handleEdit?: (inputValue: string) => void
 }) => {
-  const [inputField, setInputField] = useState<any>(null)
+  const [inputField, setInputField] = useState<{row: {}, column: {}} | null>()
   const [inputValue, setInputValue] = useState('')
   const [inputErrorMsg, setInputErrorMessage] = useState('')
 

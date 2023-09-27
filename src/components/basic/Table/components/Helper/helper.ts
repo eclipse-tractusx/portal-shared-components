@@ -36,7 +36,7 @@ export interface PageDataRows {
 
 export const hasMorePages = (data: PageDataProps) => {
   return (
-    (data.page && data.totalPages && data?.page < data?.totalPages - 1) ||
+    (data.page && data.totalPages && data?.page < data?.totalPages - 1) ??
     (data?.meta && data.meta.page < data.meta.totalPages - 1)
   )
 }
