@@ -18,7 +18,7 @@
  ********************************************************************************/
 
 import { IconButton } from '../../../basic/IconButton'
-import { ProviderProps } from '../ContentComponentsTypes'
+import { type ProviderProps } from '../ContentComponentsTypes'
 import '../ContentComponents.scss'
 import { RenderImage } from './RenderImage'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'

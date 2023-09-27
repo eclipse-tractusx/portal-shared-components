@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { CardDetailsProps } from '../ContentComponentsTypes'
+import { type CardDetailsProps } from '../ContentComponentsTypes'
 import '../ContentComponents.scss'
 import { Trans } from 'react-i18next'
 import { Typography } from '../../../basic/Typography'

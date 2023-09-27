@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ProviderProps } from '../ContentComponentsTypes'
+import { type ProviderProps } from '../ContentComponentsTypes'
 import { TextCenterAligned } from '../TextCenterAligned'
 import { RenderImage } from './RenderImage'
 import '../ContentComponents.scss'

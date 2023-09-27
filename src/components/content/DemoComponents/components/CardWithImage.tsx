@@ -21,7 +21,7 @@ import { CardWithText } from './CardWithText'
 import { Box } from '@mui/material'
 import '../ContentComponents.scss'
 import { Image } from '../../../basic/Image'
-import { CardDetailsProps } from '../ContentComponentsTypes'
+import { type CardDetailsProps } from '../ContentComponentsTypes'
 
 export const CardWithImage = ({
   detail,

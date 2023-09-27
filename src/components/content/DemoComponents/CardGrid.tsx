@@ -19,7 +19,7 @@
 
 import { CardWithImage } from './components/CardWithImage'
 import { CardWithoutImage } from './components/CardWithoutImage'
-import { ProviderProps, CardDetailsProps } from './ContentComponentsTypes'
+import { type ProviderProps, type CardDetailsProps } from './ContentComponentsTypes'
 import { Box } from '@mui/material'
 import './ContentComponents.scss'
 

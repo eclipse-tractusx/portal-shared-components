@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { SubSectionsType } from '../ContentComponentsTypes'
+import { type SubSectionsType } from '../ContentComponentsTypes'
 import '../ContentComponents.scss'
 import { TitleDescriptionAndSectionlink } from './TitleDescriptionAndSectionlink'
 

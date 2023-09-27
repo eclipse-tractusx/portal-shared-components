@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ReactElement } from 'react'
-import { ProviderProps } from '../ContentComponentsTypes'
+import { type ReactElement } from 'react'
+import { type ProviderProps } from '../ContentComponentsTypes'
 import '../ContentComponents.scss'
 import { TitleDescriptionAndSectionlink } from './TitleDescriptionAndSectionlink'
 

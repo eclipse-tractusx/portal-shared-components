@@ -19,7 +19,7 @@
 
 import { Typography } from '../../basic/Typography'
 import { IconButton } from '../../basic/IconButton'
-import { ProviderProps } from './ContentComponentsTypes'
+import { type ProviderProps } from './ContentComponentsTypes'
 import './ContentComponents.scss'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import { Trans } from 'react-i18next'

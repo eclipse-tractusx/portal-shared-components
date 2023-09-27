@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ProviderProps, TemplateNames } from './ContentComponentsTypes'
+import { type ProviderProps, TemplateNames } from './ContentComponentsTypes'
 import './ContentComponents.scss'
 import { useState } from 'react'
 import { useMediaQuery, useTheme } from '@mui/material'

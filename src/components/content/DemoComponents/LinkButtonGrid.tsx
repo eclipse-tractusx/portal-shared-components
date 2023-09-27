@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ProviderProps, LinkProps } from './ContentComponentsTypes'
+import { type ProviderProps, type LinkProps } from './ContentComponentsTypes'
 import { Box } from '@mui/material'
 import { Typography } from '../../basic/Typography'
 import './ContentComponents.scss'

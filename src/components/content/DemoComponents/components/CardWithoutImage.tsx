@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { CardDetailsProps } from '../ContentComponentsTypes'
+import { type CardDetailsProps } from '../ContentComponentsTypes'
 import { CardWithText } from './CardWithText'
 import { Box } from '@mui/material'
 import '../ContentComponents.scss'

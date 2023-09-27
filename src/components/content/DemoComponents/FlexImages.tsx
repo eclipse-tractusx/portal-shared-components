@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ProviderProps } from './ContentComponentsTypes'
+import { type ProviderProps } from './ContentComponentsTypes'
 import './ContentComponents.scss'
 import { RenderImage } from './components/RenderImage'
 
