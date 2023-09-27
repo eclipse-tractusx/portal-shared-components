@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.3
+
+- Demo content components
+
 ## 2.1.2
 
 - Image Carousal
