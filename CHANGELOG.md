@@ -4,6 +4,10 @@
 
 - Migrate MUI data grid to v6
 
+## 2.1.1
+
+- Migrate MUI date picker to v6
+  
 ## 2.0.34
 
 - Linter Findings
