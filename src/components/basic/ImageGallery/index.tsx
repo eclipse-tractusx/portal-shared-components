@@ -60,8 +60,8 @@ export const ImageGallery = ({
         gapCarouselTop={0}
         dots={false}
         infinite
-        itemHeight={maxHeight || 0}
-        itemWidth={maxWidth || 266}
+        itemHeight={maxHeight ?? 0}
+        itemWidth={maxWidth ?? 266}
         slidesToShow={3}
       >
         {gallery.map((image) => (
