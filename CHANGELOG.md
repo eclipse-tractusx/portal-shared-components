@@ -1,10 +1,14 @@
 # Changelog
 
-## 2.0.35
+## 2.1.2
 
 - Image Carousal
   - Update styles for width and height
 
+## 2.1.1
+
+- Migrate MUI date picker to v6
+  
 ## 2.0.34
 
 - Linter Findings
