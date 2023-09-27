@@ -27,9 +27,13 @@ import { Image } from '../Image'
 export const ImageGallery = ({
   gallery,
   modalWidth,
+  maxWidth,
+  maxHeight,
 }: {
   gallery: ImageType[]
   modalWidth?: string
+  maxWidth?: number
+  maxHeight?: number
 }) => {
   const [hovered, setHovered] = useState(false)
   const [hoveredImage, setHoveredImage] = useState<ImageType>()
@@ -56,8 +60,8 @@ export const ImageGallery = ({
         gapCarouselTop={0}
         dots={false}
         infinite
-        itemHeight={0}
-        itemWidth={266}
+        itemHeight={maxHeight ?? 0}
+        itemWidth={maxWidth ?? 266}
         slidesToShow={3}
       >
         {gallery.map((image) => (
