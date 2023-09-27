@@ -52,7 +52,7 @@ export interface MultiSelectListProps
   tagSize?: TagSizeType
   filterOptionsArgs?: {}
   defaultValues?: []
-  onAddItem: (items: any[]) => void
+  onAddItem: (items: []) => void
 }
 
 export const MultiSelectList = ({
@@ -78,9 +78,10 @@ export const MultiSelectList = ({
 }: MultiSelectListProps) => {
   const selectHeight = popperHeight ? `${popperHeight}px` : 'auto'
   const theme = useTheme()
-  const [selected, setSelected] = useState<any[]>([])
+  const [selected, setSelected] = useState<[]>([])
   const [showItems, setShowItems] = useState(false)
-  const handleChange = (selectedItems: any[]) => {
+  
+  const handleChange = (selectedItems: any) => {
     onAddItem(selectedItems)
     setSelected(selectedItems)
   }
@@ -196,7 +197,7 @@ export const MultiSelectList = ({
               />
             )
           }}
-          onChange={(_, selectedItems: any[]) => {
+          onChange={(_,selectedItems) => {
             handleChange(selectedItems)
           }}
           onBlur={() => {

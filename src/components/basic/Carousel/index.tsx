@@ -28,6 +28,7 @@ import { theme } from '../../../theme'
 import uniqueId from 'lodash/uniqueId'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { CarouselNavArrows } from './CarouselBox'
 export interface CarouselProps {
   children?: React.ReactNode
   dots?: boolean
@@ -43,7 +44,7 @@ export interface CarouselProps {
   position?: string
 }
 
-function NavArrows(props: any) {
+function NavArrows(props: CarouselNavArrows) {
   const { className, style, onClick } = props
   return (
     <div className={className} style={{ ...style }}>

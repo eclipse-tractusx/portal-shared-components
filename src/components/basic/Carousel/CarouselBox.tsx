@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useState, Children, useEffect } from 'react'
+import React, { useState, Children, useEffect } from 'react'
 import Slider from 'react-slick'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
@@ -41,15 +41,23 @@ export interface CarouselProps {
   borderRadius?: number
 }
 
-function NavArrows(props: any) {
-  const { className, style, onClick } = props
+export interface CarouselNavArrows {
+  className?: string,
+  style?: React.CSSProperties,
+  onClick?: React.MouseEventHandler,
+  show: boolean,
+  isNext: boolean
+}
+
+function NavArrows(props: CarouselNavArrows) {
+  const { className, style, onClick, show, isNext } = props
   return (
     <div className={className} style={{ ...style }}>
-      {props.show && (
+      {show && (
         <IconButton color="secondary" size="small" onClick={onClick}>
-          {props.isNext && <ArrowForwardIcon />}
+          {isNext && <ArrowForwardIcon />}
 
-          {!props.isNext && <ArrowBackIcon />}
+          {!isNext && <ArrowBackIcon />}
         </IconButton>
       )}
     </div>
