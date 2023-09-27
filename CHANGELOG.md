@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.35
+
+- Image Carousal
+  - Update styles for width and height
+
 ## 2.0.34
 
 - Linter Findings
