@@ -2,7 +2,7 @@
 
 ## 2.1.3
 
-- Demo content components
+- Showcase content components
 
 ## 2.1.2
 
