@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { useCallback } from 'react'
-import { DataGrid, GridSelectionModel, type DataGridProps, type GridRowId } from '@mui/x-data-grid'
+import { DataGrid, type GridSelectionModel, type DataGridProps, type GridRowId } from '@mui/x-data-grid'
 import { Box, Stack } from '@mui/material'
 import { StatusTag } from './components/StatusTag'
 import { Toolbar, type ToolbarProps } from './components/Toolbar'
@@ -29,7 +29,7 @@ import { SearchAndFilterButtonToolbar } from './components/Toolbar/SearchAndFilt
 import { Typography } from '../Typography'
 import { Error500Overlay } from './components/Error/Error500Overlay'
 import { Error400Overlay } from './components/Error/Error400Overlay'
-import { view } from '../ViewSelector'
+import type { view } from '../ViewSelector'
 
 export { StatusTag }
 export type toolbarType = 'basic' | 'premium' | 'ultimate' | 'searchAndFilter'

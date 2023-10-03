@@ -28,7 +28,7 @@ import { theme } from '../../../theme'
 import uniqueId from 'lodash/uniqueId'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { CarouselNavArrows } from './CarouselBox'
+import { type CarouselNavArrows } from './CarouselBox'
 export interface CarouselProps {
   children?: React.ReactNode
   dots?: boolean
@@ -74,8 +74,8 @@ export const Carousel = ({
   position = 'relative',
 }: CarouselProps) => {
   const [showArrows, setShowArrows] = useState(false)
-  const onMouseEnter = () => setShowArrows(true)
-  const onMouseLeave = () => setShowArrows(false)
+  const onMouseEnter = () => { setShowArrows(true) }
+  const onMouseLeave = () => { setShowArrows(false) }
   const arrayChildren = Children.toArray(children)
 
   useEffect(() => {

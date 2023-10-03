@@ -41,7 +41,7 @@ export const ParentSubNavigation = ({
           return (
             <Button
               key={link.index}
-              onClick={() => onClick(link.navigation)}
+              onClick={() => { onClick(link.navigation) }}
               color="secondary"
               variant="text"
               size="medium"

@@ -94,7 +94,7 @@ export const MultiSelectList = ({
       ? filterOptionsArgs
       : {
           matchFrom: 'any',
-          stringify: (option: any) => option[keyTitle],
+          stringify: (option: {keyTitle: string}) => option.keyTitle
         }
   )
 
@@ -137,7 +137,7 @@ export const MultiSelectList = ({
           multiple
           disabled={disabled}
           options={items.map((item) => item)}
-          getOptionLabel={(option) => option[keyTitle]}
+          getOptionLabel={(option: any) => option[keyTitle]}
           value={selected}
           filterOptions={filterOptions}
           renderTags={(selectedItems: any[], getTagProps) =>

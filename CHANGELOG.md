@@ -1,8 +1,38 @@
 # Changelog
 
-## 2.0.31
+## 2.1.2
+
+- Image Carousal
+  - Update styles for width and height
+
+## 2.1.1
+
+- Migrate MUI date picker to v6
+  
+## 2.0.34
+
 - Linter Findings
+  - Remove void no confusing lints
   - Remove any with particular interface or types
+
+## 2.0.33
+
+- Linter Findings
+  - Add type for imports
+
+## 2.0.32
+
+- Update PageLoadingTable component with fetchArgs type
+- Update helper file with the data types
+- Remove content specific code. ex - bpnl
+
+## 2.0.31
+
+- Fix table alignment
+
+## 2.0.30
+
+- Change arrow style
 
 ## 2.0.29
 

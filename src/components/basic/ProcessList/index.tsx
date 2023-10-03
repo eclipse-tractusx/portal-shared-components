@@ -20,7 +20,7 @@
 
 import { Box } from '@mui/material'
 import { ListItem } from './ListItem'
-import { StepList } from '../Stepper'
+import { type StepList } from '../Stepper'
 
 export interface ProcessListProps {
   list: StepList[]
