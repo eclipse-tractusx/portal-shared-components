@@ -17,31 +17,46 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
-import { SharedThemeProvider } from '../src/components/basic/SharedThemeProvider'
-import { SharedCssBaseline } from '../src/components/basic/SharedCssBaseline'
-import { I18nextProvider } from 'react-i18next'
-import i18n from '../src/i18next'
+import { useMediaQuery } from '@mui/material'
+import '../ContentComponents.scss'
+import { ImageItem } from '../../../basic/ImageGallery/ImageItem'
 
-const withI18next = (Story) => {
+export const RenderImage = ({
+  url,
+  height = '331px',
+  additionalStyles,
+  width = 'auto',
+}: {
+  url: string
+  additionalStyles?: any
+  height?: string
+  width?: string
+}) => {
+  const web = useMediaQuery('(min-width:1025px)')
+
   return (
-    <SharedThemeProvider>
-      <SharedCssBaseline />
-      <I18nextProvider i18n={i18n}>
-        <Story />
-      </I18nextProvider>
-    </SharedThemeProvider>
-  );
-};
-
-export const decorators = [withI18next];
-
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+    <>
+      {web ? (
+        <ImageItem
+          url={url}
+          text={''}
+          size="custom"
+          height={height}
+          width={width}
+          hover={true}
+          borderRadius={true}
+          shadow={false}
+          modalWidth="1100"
+          additionalStyles={additionalStyles ?? {}}
+        />
+      ) : (
+        <img
+          className={'imageGallery'}
+          src={url}
+          alt="provider"
+          width={width}
+        />
+      )}
+    </>
+  )
 }

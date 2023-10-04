@@ -138,16 +138,18 @@ export const SearchAndFilterButtonToolbar = ({
           <ViewSelector activeView={defaultFilter} views={filterViews} />
         </Box>
       )}
-      <Box
-        sx={{
-          marginBottom: '40px',
-          padding: '0px 80px',
-        }}
-      >
-        <Typography variant="body2" mt={3} align="center">
-          {descriptionText}
-        </Typography>
-      </Box>
+      {descriptionText && (
+        <Box
+          sx={{
+            marginBottom: '40px',
+            padding: '0px 80px',
+          }}
+        >
+          <Typography variant="body2" mt={3} align="center">
+            {descriptionText}
+          </Typography>
+        </Box>
+      )}
     </Box>
   )
 }

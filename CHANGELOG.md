@@ -1,8 +1,17 @@
 # Changelog
 
-## 2.1.2
+## 2.1.4
 
 - Migrate MUI data grid to v6
+
+## 2.1.3
+
+- Showcase content components
+
+## 2.1.2
+
+- Image Carousal
+  - Update styles for width and height
 
 ## 2.1.1
 

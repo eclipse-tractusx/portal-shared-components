@@ -17,31 +17,31 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
-import { SharedThemeProvider } from '../src/components/basic/SharedThemeProvider'
-import { SharedCssBaseline } from '../src/components/basic/SharedCssBaseline'
-import { I18nextProvider } from 'react-i18next'
-import i18n from '../src/i18next'
+import { type ProviderProps } from './ContentComponentsTypes'
+import './ContentComponents.scss'
+import ReactPlayer from 'react-player'
+import { ImageVideoWrapper } from './components/ImageVideoWrapper'
 
-const withI18next = (Story) => {
+export const TextVideoSideBySide = ({
+  provider,
+  scrollTop = () => {},
+  showScroll = true,
+}: {
+  provider: ProviderProps
+  scrollTop: () => void
+  showScroll: boolean
+}) => {
   return (
-    <SharedThemeProvider>
-      <SharedCssBaseline />
-      <I18nextProvider i18n={i18n}>
-        <Story />
-      </I18nextProvider>
-    </SharedThemeProvider>
-  );
-};
-
-export const decorators = [withI18next];
-
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+    <ImageVideoWrapper
+      scrollTop={scrollTop}
+      showScroll={showScroll}
+      provider={provider}
+      isImagePresent={true}>
+        <ReactPlayer
+          className="video"
+          url={provider.videoUrl}
+          controls={true}
+        />
+      </ImageVideoWrapper>
+  )
 }
