@@ -17,31 +17,38 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
-import { SharedThemeProvider } from '../src/components/basic/SharedThemeProvider'
-import { SharedCssBaseline } from '../src/components/basic/SharedCssBaseline'
-import { I18nextProvider } from 'react-i18next'
-import i18n from '../src/i18next'
+import { type ProviderProps } from './ContentComponentsTypes'
+import './ContentComponents.scss'
+import { RenderImage } from './components/RenderImage'
+import { TextCenterAligned } from './TextCenterAligned'
 
-const withI18next = (Story) => {
+export const TextImageCenterAligned = ({
+  provider,
+  baseUrl,
+  scrollTop,
+  showScroll,
+}: {
+  provider: ProviderProps
+  baseUrl: string
+  scrollTop: () => void
+  showScroll: boolean
+}) => {
   return (
-    <SharedThemeProvider>
-      <SharedCssBaseline />
-      <I18nextProvider i18n={i18n}>
-        <Story />
-      </I18nextProvider>
-    </SharedThemeProvider>
-  );
-};
-
-export const decorators = [withI18next];
-
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+    <div className="textCenterAligned">
+      <TextCenterAligned
+        provider={provider}
+        scrollTop={scrollTop}
+        showScroll={showScroll}
+      />
+      <RenderImage
+        height="472px"
+        url={`${baseUrl}${provider.imagePath}`}
+        additionalStyles={{
+          marginTop: '84px',
+          marginBottom: '84px',
+        }}
+        width="100%"
+      />
+    </div>
+  )
 }
