@@ -1295,7 +1295,7 @@
   resolved "https://registry.yarnpkg.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.12.0", "@babel/runtime@^7.20.6":
+"@babel/runtime@^7.12.0":
   version "7.23.1"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.1.tgz#72741dc4d413338a91dcb044a86f3c0bc402646d"
   integrity sha512-hC2v6p8ZSI/W0HUzh3V8C5g+NwSKzKPtJwSpTjwl0o297GP9+ZLQSkdvHz46CM3LqyoXxq+5G9komY+eSqSO0g==
@@ -9268,12 +9268,12 @@ react-fast-compare@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.2.tgz#929a97a532304ce9fee4bcae44234f1ce2c21d49"
   integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
 
-react-i18next@^12.3.1:
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-12.3.1.tgz#30134a41a2a71c61dc69c6383504929aed1c99e7"
-  integrity sha512-5v8E2XjZDFzK7K87eSwC7AJcAkcLt5xYZ4+yTPDAW1i7C93oOY1dnr4BaQM7un4Hm+GmghuiPvevWwlca5PwDA==
+react-i18next@^13.2.2:
+  version "13.2.2"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-13.2.2.tgz#b1e78ed66a54f4bc819616f68b98221e1b1a1936"
+  integrity sha512-+nFUkbRByFwnrfDcYqvzBuaeZb+nACHx+fAWN/pZMddWOCJH5hoc21+Sa/N/Lqi6ne6/9wC/qRGOoQhJa6IkEQ==
   dependencies:
-    "@babel/runtime" "^7.20.6"
+    "@babel/runtime" "^7.22.5"
     html-parse-stringify "^3.0.1"
 
 react-inspector@^6.0.0:
@@ -9301,7 +9301,7 @@ react-is@^18.0.0, react-is@^18.2.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
-react-player@^2.12.0:
+react-player@^2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/react-player/-/react-player-2.13.0.tgz#b6fb252bf70574608ac711f6c83d7057c8fb0c14"
   integrity sha512-gkY7ZdbVFztlKFFhCPcnDrFQm+L399b8fhWsKatZ+b2wpKJwfUHBXQFMRxqYQGT0ic1/wQ7D7EZEWy7ZBqk2pw==
