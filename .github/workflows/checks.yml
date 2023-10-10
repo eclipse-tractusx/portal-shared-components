@@ -37,6 +37,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+
       - name: Get latest git tag
         id: git-tag-latest
         uses: actions-ecosystem/action-get-latest-tag@v1
