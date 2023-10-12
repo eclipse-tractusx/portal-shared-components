@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.4
+
+- Add missing dependencies
+
 ## 2.1.3
 
 - Showcase content components
