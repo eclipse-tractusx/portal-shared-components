@@ -49,7 +49,7 @@ export interface CarouselNavArrows {
   isNext: boolean
 }
 
-function NavArrows(props: CarouselNavArrows) {
+function NavArrows(props: Readonly<CarouselNavArrows>) {
   const { className, style, onClick, show, isNext } = props
   return (
     <div className={className} style={{ ...style }}>

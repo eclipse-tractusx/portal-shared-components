@@ -44,7 +44,7 @@ export interface CarouselProps {
   position?: string
 }
 
-function NavArrows(props: CarouselNavArrows) {
+function NavArrows(props: Readonly<CarouselNavArrows>) {
   const { className, style, onClick } = props
   return (
     <div className={className} style={{ ...style }}>
