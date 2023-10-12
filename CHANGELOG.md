@@ -21,6 +21,7 @@
 
 - Linter Findings
   - Remove void no confusing lints
+  - Remove any with particular interface or types
 
 ## 2.0.33
 

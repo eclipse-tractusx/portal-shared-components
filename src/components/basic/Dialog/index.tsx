@@ -28,7 +28,7 @@ const MODAL_DEFAULT_WIDTH = '1000px'
 
 interface AddtionalDialogProps {
   modalBorderRadius?: number
-  additionalModalRootStyles?: any
+  additionalModalRootStyles?: React.CSSProperties
 }
 
 export type DialogProps = Pick<

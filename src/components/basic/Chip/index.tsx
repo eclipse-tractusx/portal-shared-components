@@ -23,12 +23,13 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff'
 import { theme } from '../../../theme'
 import AutorenewIcon from '@mui/icons-material/Autorenew'
+import React from 'react'
 
 interface ChipCustomProps extends ChipProps {
   type?: 'decline' | 'confirm' | 'plain' | 'delete' | 'progress'
   withIcon?: true | false
   onDelete?: () => void
-  handleDelete?: any
+  handleDelete?: React.MouseEventHandler
 }
 
 export const Chip = ({
