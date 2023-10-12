@@ -17,31 +17,22 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
-import { SharedThemeProvider } from '../src/components/basic/SharedThemeProvider'
-import { SharedCssBaseline } from '../src/components/basic/SharedCssBaseline'
-import { I18nextProvider } from 'react-i18next'
-import i18n from '../src/i18next'
+import { type ProviderProps } from './ContentComponentsTypes'
+import './ContentComponents.scss'
+import { RenderImage } from './components/RenderImage'
 
-const withI18next = (Story) => {
+export const FlexImages = ({
+  provider,
+  baseUrl,
+}: {
+  provider: ProviderProps
+  baseUrl: string
+}) => {
   return (
-    <SharedThemeProvider>
-      <SharedCssBaseline />
-      <I18nextProvider i18n={i18n}>
-        <Story />
-      </I18nextProvider>
-    </SharedThemeProvider>
-  );
-};
-
-export const decorators = [withI18next];
-
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+    <div className={'flex'}>
+      {provider.images?.map((path) => (
+          <RenderImage key={path} height="250px" url={baseUrl + path || ''} />
+        ))}
+    </div>
+  )
 }
