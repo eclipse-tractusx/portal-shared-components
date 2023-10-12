@@ -1318,7 +1318,7 @@ npm/npmjs/@testing-library/dom/9.3.1, MIT AND (MIT AND WTFPL), approved, #9038
 npm/npmjs/@testing-library/react/14.0.0, MIT AND (MIT AND WTFPL), approved, #9079
 npm/npmjs/@tootallnate/once/2.0.0, MIT, approved, clearlydefined
 npm/npmjs/@trysound/sax/0.2.0, ISC, approved, clearlydefined
-npm/npmjs/@types/aria-query/5.0.1, MIT, approved, clearlydefined
+npm/npmjs/@types/aria-query/5.0.1, MIT, approved, #10958
 npm/npmjs/@types/autosuggest-highlight/3.2.0, MIT, approved, clearlydefined
 npm/npmjs/@types/babel__core/7.20.1, MIT, approved, clearlydefined
 npm/npmjs/@types/babel__generator/7.6.4, MIT, approved, clearlydefined
@@ -1350,11 +1350,11 @@ npm/npmjs/@types/json-schema/7.0.12, MIT, approved, clearlydefined
 npm/npmjs/@types/json5/0.0.29, MIT, approved, clearlydefined
 npm/npmjs/@types/lodash/4.14.195, MIT, approved, #4131
 npm/npmjs/@types/mdx/2.0.5, MIT, approved, clearlydefined
-npm/npmjs/@types/mime-types/2.1.1, MIT, approved, clearlydefined
+npm/npmjs/@types/mime-types/2.1.1, MIT, approved, #11007
 npm/npmjs/@types/mime/1.3.2, MIT, approved, #10834
 npm/npmjs/@types/mime/3.0.1, MIT, approved, #10805
 npm/npmjs/@types/minimatch/5.1.2, MIT, approved, clearlydefined
-npm/npmjs/@types/node-fetch/2.6.4, MIT, approved, clearlydefined
+npm/npmjs/@types/node-fetch/2.6.4, MIT, approved, #11004
 npm/npmjs/@types/node/16.18.38, MIT, approved, #7082
 npm/npmjs/@types/node/20.4.0, MIT, approved, clearlydefined
 npm/npmjs/@types/normalize-package-data/2.4.1, MIT, approved, #10792
@@ -1379,7 +1379,7 @@ npm/npmjs/@types/stack-utils/2.0.1, MIT, approved, clearlydefined
 npm/npmjs/@types/tough-cookie/4.0.2, MIT, approved, #10798
 npm/npmjs/@types/unist/2.0.6, MIT, approved, clearlydefined
 npm/npmjs/@types/yargs-parser/21.0.0, MIT, approved, clearlydefined
-npm/npmjs/@types/yargs/16.0.5, MIT, approved, clearlydefined
+npm/npmjs/@types/yargs/16.0.5, MIT, approved, #10962
 npm/npmjs/@types/yargs/17.0.24, MIT, approved, #7054
 npm/npmjs/@typescript-eslint/eslint-plugin/5.61.0, BSD-2-Clause AND MIT, approved, #9313
 npm/npmjs/@typescript-eslint/parser/5.61.0, BSD-2-Clause, approved, clearlydefined
