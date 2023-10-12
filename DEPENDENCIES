@@ -1241,7 +1241,7 @@ npm/npmjs/@mui/system/5.13.7, MIT, approved, #9075
 npm/npmjs/@mui/types/7.2.4, MIT, approved, clearlydefined
 npm/npmjs/@mui/utils/5.13.7, MIT, approved, #8982
 npm/npmjs/@mui/utils/5.14.9, MIT AND CC-BY-3.0, approved, #9891
-npm/npmjs/@mui/x-data-grid/5.17.26, MIT, approved, #3248
+npm/npmjs/@mui/x-data-grid/6.13.0, MIT AND ISC, approved, #10688
 npm/npmjs/@mui/x-date-pickers/6.13.0, MIT, approved, #10522
 npm/npmjs/@ndelangen/get-tarball/3.0.9, MIT, approved, #8958
 npm/npmjs/@nicolo-ribaudo/semver-v6/6.3.3, ISC, approved, #9315
