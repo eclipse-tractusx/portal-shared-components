@@ -25,6 +25,8 @@ import { hasMorePages, getMaxRows } from './components/Helper/helper'
 
 export interface PaginFetchArgs {
   page: number
+  // Add an ESLint exception until there is a solution
+  // eslint-disable-next-line
   args?: any
 }
 
@@ -43,6 +45,8 @@ export interface PaginResult<Row> {
 export interface PageLoadingTableProps<Row, Args>
   extends Omit<TableProps, 'rows'> {
   loadLabel: string
+  // Add an ESLint exception until there is a solution
+  // eslint-disable-next-line
   fetchHook: (paginArgs: PaginFetchArgs) => any
   fetchHookArgs?: Args
   fetchHookRefresh?: number

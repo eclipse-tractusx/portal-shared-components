@@ -81,6 +81,8 @@ export const MultiSelectList = ({
   const [selected, setSelected] = useState<[]>([])
   const [showItems, setShowItems] = useState(false)
   
+  // Add an ESLint exception until there is a solution
+  // eslint-disable-next-line
   const handleChange = (selectedItems: any) => {
     onAddItem(selectedItems)
     setSelected(selectedItems)
@@ -137,10 +139,16 @@ export const MultiSelectList = ({
           multiple
           disabled={disabled}
           options={items.map((item) => item)}
+            // Add an ESLint exception until there is a solution
+            // eslint-disable-next-line
           getOptionLabel={(option: any) => option[keyTitle]}
           value={selected}
           filterOptions={filterOptions}
+            // Add an ESLint exception until there is a solution
+            // eslint-disable-next-line
           renderTags={(selectedItems: any[], getTagProps) =>
+              // Add an ESLint exception until there is a solution
+              // eslint-disable-next-line
             selectedItems.map((option: any, index: number) => (
               <Chip
                 {...getTagProps({ index })}

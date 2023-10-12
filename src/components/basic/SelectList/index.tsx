@@ -61,6 +61,8 @@ export const SelectList = ({
   onChangeItem,
 }: SelectListProps) => {
   const selectHeight = popperHeight ? `${popperHeight}px` : 'auto'
+  // Add an ESLint exception until there is a solution
+  // eslint-disable-next-line
   const [selected, setSelected] = useState<any>({})
   return (
     <Autocomplete
