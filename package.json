@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components",
-  "version": "2.1.4",
+  "version": "2.1.6",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -89,12 +89,12 @@
     "@mui/x-date-pickers": "^6.0.0",
     "autosuggest-highlight": "^3.3.4",
     "date-fns": "^2.30.0",
-    "jquery": "^3.7.0",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
     "i18next": "20.3.1",
-    "react-i18next": "^12.3.1",
-    "react-player": "^2.12.0"
+    "jquery": "^3.7.0",
+    "react-i18next": "^13.2.2",
+    "react-player": "^2.13.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",

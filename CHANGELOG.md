@@ -1,8 +1,17 @@
 # Changelog
 
-## 2.1.4
+
+## 2.1.6
 
 - Migrate MUI data grid to v6
+
+## 2.1.5
+
+- Linter fixes
+
+## 2.1.4
+
+- Add missing dependencies
 
 ## 2.1.3
 
@@ -21,6 +30,7 @@
 
 - Linter Findings
   - Remove void no confusing lints
+  - Remove any with particular interface or types
 
 ## 2.0.33
 

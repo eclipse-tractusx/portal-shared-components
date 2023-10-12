@@ -39,7 +39,7 @@ export interface PartsType {
 
 export interface MultiSelectListProps
   extends Omit<TextFieldProps, 'variant' | 'size'> {
-  items: any[]
+  items: []
   label: string
   placeholder: string
   keyTitle: string
@@ -51,8 +51,8 @@ export interface MultiSelectListProps
   notItemsText: string
   tagSize?: TagSizeType
   filterOptionsArgs?: {}
-  defaultValues?: any
-  onAddItem: (items: any[]) => void
+  defaultValues?: []
+  onAddItem: (items: []) => void
 }
 
 export const MultiSelectList = ({
@@ -78,9 +78,12 @@ export const MultiSelectList = ({
 }: MultiSelectListProps) => {
   const selectHeight = popperHeight ? `${popperHeight}px` : 'auto'
   const theme = useTheme()
-  const [selected, setSelected] = useState<any[]>([])
+  const [selected, setSelected] = useState<[]>([])
   const [showItems, setShowItems] = useState(false)
-  const handleChange = (selectedItems: any[]) => {
+  
+  // Add an ESLint exception until there is a solution
+  // eslint-disable-next-line
+  const handleChange = (selectedItems: any) => {
     onAddItem(selectedItems)
     setSelected(selectedItems)
   }
@@ -93,7 +96,7 @@ export const MultiSelectList = ({
       ? filterOptionsArgs
       : {
           matchFrom: 'any',
-          stringify: (option: any) => option[keyTitle],
+          stringify: (option: {keyTitle: string}) => option.keyTitle
         }
   )
 
@@ -136,10 +139,16 @@ export const MultiSelectList = ({
           multiple
           disabled={disabled}
           options={items.map((item) => item)}
-          getOptionLabel={(option) => option[keyTitle]}
+            // Add an ESLint exception until there is a solution
+            // eslint-disable-next-line
+          getOptionLabel={(option: any) => option[keyTitle]}
           value={selected}
           filterOptions={filterOptions}
+            // Add an ESLint exception until there is a solution
+            // eslint-disable-next-line
           renderTags={(selectedItems: any[], getTagProps) =>
+              // Add an ESLint exception until there is a solution
+              // eslint-disable-next-line
             selectedItems.map((option: any, index: number) => (
               <Chip
                 {...getTagProps({ index })}
@@ -196,7 +205,7 @@ export const MultiSelectList = ({
               />
             )
           }}
-          onChange={(_, selectedItems: any[]) => {
+          onChange={(_,selectedItems) => {
             handleChange(selectedItems)
           }}
           onBlur={() => {
