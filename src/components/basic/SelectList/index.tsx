@@ -37,7 +37,7 @@ interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   variant?: 'filled'
   clearText?: string
   noOptionsText?: string
-  defaultValue?: {}
+  defaultValue?: unknown
   disableClearable?: boolean
   onChangeItem: (items: any) => void
 }

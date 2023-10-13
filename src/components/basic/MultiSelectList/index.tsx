@@ -36,6 +36,9 @@ export interface PartsType {
   text: string
   highlight: boolean
 }
+export interface IHashMap<T> {
+  [item: string]: T
+}
 
 export interface MultiSelectListProps
   extends Omit<TextFieldProps, 'variant' | 'size'> {
@@ -50,7 +53,7 @@ export interface MultiSelectListProps
   buttonAddMore: string
   notItemsText: string
   tagSize?: TagSizeType
-  filterOptionsArgs?: {}
+  filterOptionsArgs?: IHashMap<string>
   defaultValues?: any
   onAddItem: (items: any[]) => void
 }
