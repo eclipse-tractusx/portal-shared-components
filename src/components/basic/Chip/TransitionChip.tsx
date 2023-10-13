@@ -27,7 +27,7 @@ import { theme } from '../../../theme'
 interface ChipCustomProps extends ChipProps {
   type?: 'decline' | 'confirm' | 'plain'
   withIcon?: true | false
-  onClick?: any
+  onClick?: () => void
   duration?: number
   disabled?: boolean
 }
@@ -42,7 +42,7 @@ export const TransitionChip = ({
   disabled = false,
   ...props
 }: ChipCustomProps) => {
-  let icon, hoverBgColor, hoverTextColor, timeout: any
+  let icon, hoverBgColor, hoverTextColor, timeout: ReturnType<typeof setTimeout>
 
   const [enableClick, setEnableClick] = useState(false)
 
@@ -70,7 +70,7 @@ export const TransitionChip = ({
   }
 
   const onButtonClick = () => {
-    if (enableClick) onClick()
+    if (enableClick && onClick) onClick()
   }
   return (
     <MuiChip

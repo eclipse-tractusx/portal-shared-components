@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { useCallback } from 'react'
-import { DataGrid, type DataGridProps, type GridRowId } from '@mui/x-data-grid'
+import { DataGrid, type GridSelectionModel, type DataGridProps, type GridRowId } from '@mui/x-data-grid'
 import { Box, Stack } from '@mui/material'
 import { StatusTag } from './components/StatusTag'
 import { Toolbar, type ToolbarProps } from './components/Toolbar'
@@ -71,7 +71,7 @@ export const Table = ({
   columns,
   rows,
   autoHeight = true,
-  headerHeight = 57, // Default header height from base design
+  columnHeaderHeight = 57, // Default header height from base design
   rowHeight = 57, // Default row height from base design
   rowsCount = 0,
   rowsCountMax = 0,
@@ -122,12 +122,12 @@ export const Table = ({
   // TODO: this method contains application specific row attributes and must therefore
   // move out of the shared components. Pass handler functions like this as props.
   const handleOnCellClick = useCallback(
-    (selectedIds: any) => {
+    (selectedIds: GridSelectionModel) => {
       const idsArr: string[] = []
       rows.map((row) => {
         return selectedIds.map(
-          (selectedId: string) =>
-            selectedId.includes(row.companyUserId) &&
+          (selectedId: GridRowId) =>
+            selectedId.toString().includes(row.companyUserId) &&
             idsArr.push(row.companyUserId)
         )
       })
@@ -203,12 +203,12 @@ export const Table = ({
           Toolbar: () => toolbarView(),
           NoRowsOverlay,
         }}
-        onSelectionModelChange={handleOnCellClick}
+        onRowSelectionModelChange={handleOnCellClick}
         {...{
           rows,
           columns,
           autoHeight,
-          headerHeight,
+          columnHeaderHeight,
           rowHeight,
           checkboxSelection,
         }}

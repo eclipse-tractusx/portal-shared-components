@@ -21,8 +21,16 @@
 import { Box } from '@mui/material'
 import { StepperItem } from './StepperItem'
 
+export interface StepList {
+  step: number,
+  headline: string,
+  description: string,
+  text?: string,
+  color?: string
+}
+
 export interface StepperProps {
-  list: any[]
+  list: StepList[]
   showSteps: number
   activeStep: number
 }
@@ -43,8 +51,8 @@ export const Stepper = ({ list, showSteps, activeStep }: StepperProps) => {
               key={i}
               step={item.step}
               headline={item.headline}
-              text={item.text || ''}
-              color={item.color || ''}
+              text={item.text ?? ''}
+              color={item.color ?? ''}
               activeStep={activeStep}
               index={i + 1}
               totalSteps={list.length}
