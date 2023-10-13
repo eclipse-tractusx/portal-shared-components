@@ -28,7 +28,7 @@ export const RenderImage = ({
   width = 'auto',
 }: {
   url: string
-  additionalStyles?: any
+  additionalStyles?: React.CSSProperties,
   height?: string
   width?: string
 }) => {

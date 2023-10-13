@@ -36,9 +36,7 @@ export interface PartsType {
   text: string
   highlight: boolean
 }
-export interface IHashMap<T> {
-  [item: string]: T
-}
+export type IHashMap<T> = Record<string, T>;
 
 export interface MultiSelectListProps
   extends Omit<TextFieldProps, 'variant' | 'size'> {
