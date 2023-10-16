@@ -27,7 +27,7 @@ export interface TableType {
       icon: boolean
       inputValue?: string
       clickableLink?: string
-      isValid?: (value: string) => {}
+      isValid?: (value: string) => unknown
       errorMessage?: string
     }>
   >

@@ -87,7 +87,7 @@ export interface ProviderProps {
   sectionLink?: SectionLinkType
   subDescriptions?: SubDescriptionData
   subsections?: SubSectionsType[]
-  scrollTop?: any
+  scrollTop?: () => void
 }
 
 export enum TemplateNames {

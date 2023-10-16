@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 2.1.7
+
+- Linter findings
+  - Fix ban-types
+
 ## 2.1.6
 
 - Migrate MUI data grid to v6
