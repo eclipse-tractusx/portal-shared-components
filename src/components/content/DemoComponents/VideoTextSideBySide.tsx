@@ -27,7 +27,9 @@ import { IconButton } from '../../basic/IconButton'
 
 export const VideoTextSideBySide = ({
   provider,
-  scrollTop = () => {},
+  scrollTop = () => {
+    // do nothing
+  },
   showScroll = true,
 }: {
   provider: ProviderProps
