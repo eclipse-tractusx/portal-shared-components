@@ -5,6 +5,7 @@
 
 - Linter findings
   - Fix ban-types
+  - Fix no empty functions
 
 ## 2.1.6
 
