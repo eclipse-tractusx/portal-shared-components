@@ -1,11 +1,13 @@
 # Changelog
 
 
+## 2.1.8
+
+- Fix more linter findings
+
 ## 2.1.7
 
-- Linter findings
-  - Fix ban-types
-  - Fix no empty functions
+- Fix linter findings
 
 ## 2.1.6
 
