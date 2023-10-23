@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -95,6 +95,9 @@
     "react-player": "^2.13.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
+  },
+  "resolutions": {
+    "@babel/traverse": "^7.23.2"
   },
   "scripts": {
     "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
