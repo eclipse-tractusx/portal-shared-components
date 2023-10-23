@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.9
+
+- fix(vulnerability): set resolution for @babel/traverse CVE-2023-45133
 
 ## 2.1.8
 
