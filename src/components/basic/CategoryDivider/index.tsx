@@ -35,7 +35,9 @@ export const CategoryDivider = ({
   categoryItemsLength,
   categoryName,
   disabled = false,
-  onButtonClick = () => {},
+  onButtonClick = () => {
+    // do nothing
+  },
 }: CategoryDividerProps) => {
   return (
     <Box

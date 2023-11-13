@@ -1,8 +1,28 @@
 # Changelog
 
-## 2.1.5
+## 2.1.10
 
 - Upgrade dependencies
+
+## 2.1.9
+
+- fix(vulnerability): set resolution for @babel/traverse CVE-2023-45133
+
+## 2.1.8
+
+- Fix more linter findings
+
+## 2.1.7
+
+- Fix linter findings
+
+## 2.1.6
+
+- Migrate MUI data grid to v6
+
+## 2.1.5
+
+- Linter fixes
 
 ## 2.1.4
 
@@ -25,6 +45,7 @@
 
 - Linter Findings
   - Remove void no confusing lints
+  - Remove any with particular interface or types
 
 ## 2.0.33
 

@@ -24,7 +24,9 @@ import { ImageVideoWrapper } from './components/ImageVideoWrapper'
 
 export const TextVideoSideBySide = ({
   provider,
-  scrollTop = () => {},
+  scrollTop = () => {
+    // do nothing
+  },
   showScroll = true,
 }: {
   provider: ProviderProps

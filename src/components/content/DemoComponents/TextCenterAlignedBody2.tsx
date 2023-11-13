@@ -27,7 +27,9 @@ import { IconButton } from '../../basic/IconButton'
 
 export const TextCenterAlignedBody2 = ({
   provider,
-  scrollTop = () => {},
+  scrollTop = () => {
+    // do nothing
+  },
   showScroll = true,
 }: {
   provider: ProviderProps

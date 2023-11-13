@@ -29,7 +29,7 @@ import isEqual from 'lodash/isEqual'
 import { useState } from 'react'
 
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
-  items: any[]
+  items: []
   label: string
   placeholder: string
   keyTitle: string
@@ -37,9 +37,9 @@ interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   variant?: 'filled'
   clearText?: string
   noOptionsText?: string
-  defaultValue?: {}
+  defaultValue?: unknown
   disableClearable?: boolean
-  onChangeItem: (items: any) => void
+  onChangeItem: (items: []) => void
 }
 
 export const SelectList = ({
@@ -61,6 +61,8 @@ export const SelectList = ({
   onChangeItem,
 }: SelectListProps) => {
   const selectHeight = popperHeight ? `${popperHeight}px` : 'auto'
+  // Add an ESLint exception until there is a solution
+  // eslint-disable-next-line
   const [selected, setSelected] = useState<any>({})
   return (
     <Autocomplete
@@ -74,7 +76,7 @@ export const SelectList = ({
       disabled={disabled}
       options={items.map((item) => item)}
       getOptionLabel={(option) => option[keyTitle] || ''}
-      onChange={(_, reason: any) => {
+      onChange={(_, reason) => {
         setSelected(reason)
         onChangeItem(reason)
       }}
