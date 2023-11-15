@@ -1009,7 +1009,7 @@ npm/npmjs/@babel/core/7.21.8, MIT AND (BSD-2-Clause AND MIT) AND BSD-2-Clause AN
 npm/npmjs/@babel/core/7.22.8, MIT, approved, #9057
 npm/npmjs/@babel/generator/7.21.9, MIT AND (BSD-2-Clause AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #7470
 npm/npmjs/@babel/generator/7.22.7, MIT, approved, #9002
-npm/npmjs/@babel/generator/7.23.0, MIT, approved, clearlydefined
+npm/npmjs/@babel/generator/7.23.0, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #11522
 npm/npmjs/@babel/helper-annotate-as-pure/7.22.5, MIT, approved, #9009
 npm/npmjs/@babel/helper-builder-binary-assignment-operator-visitor/7.22.5, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #8765
 npm/npmjs/@babel/helper-compilation-targets/7.22.6, MIT, approved, #9037
@@ -1150,10 +1150,10 @@ npm/npmjs/@babel/runtime/7.22.6, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-
 npm/npmjs/@babel/runtime/7.23.1, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #10718
 npm/npmjs/@babel/template/7.22.15, MIT, approved, #9017
 npm/npmjs/@babel/template/7.22.5, MIT, approved, #9017
-npm/npmjs/@babel/traverse/7.23.2, MIT, approved, clearlydefined
+npm/npmjs/@babel/traverse/7.23.2, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #11520
 npm/npmjs/@babel/types/7.21.5, MIT AND (BSD-2-Clause AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #7473
 npm/npmjs/@babel/types/7.22.5, MIT, approved, #8967
-npm/npmjs/@babel/types/7.23.0, MIT, approved, clearlydefined
+npm/npmjs/@babel/types/7.23.0, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #11521
 npm/npmjs/@base2/pretty-print-object/1.0.1, BSD-2-Clause, approved, clearlydefined
 npm/npmjs/@bcoe/v8-coverage/0.2.3, ISC AND MIT, approved, clearlydefined
 npm/npmjs/@colors/colors/1.5.0, MIT, approved, clearlydefined
