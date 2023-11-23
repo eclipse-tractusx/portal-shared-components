@@ -47,7 +47,7 @@ export const ProcessList = ({
               key={i}
               step={item.step}
               headline={item.headline}
-              description={item.description}
+              description={item.description ?? ''}
               stepsColor={stepsColor}
               stepsFontColor={stepsFontColor}
               lastItem={item.step === elementNumbers}

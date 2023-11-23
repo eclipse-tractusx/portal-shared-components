@@ -20,7 +20,10 @@
 import '../ContentComponents.scss'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import { Trans } from 'react-i18next'
-import { type ProviderProps, type SubSectionsType } from '../ContentComponentsTypes'
+import {
+  type ProviderProps,
+  type SubSectionsType,
+} from '../ContentComponentsTypes'
 import { Typography } from '../../../basic/Typography'
 import { IconButton } from '../../../basic/IconButton'
 
@@ -78,7 +81,9 @@ export const TitleDescriptionAndSectionlink = ({
           {provider.sectionLink.data.map((link) => (
             <Typography
               className={'highlightText'}
-              onClick={() => { navigateTo(link) }}
+              onClick={() => {
+                navigateTo(link)
+              }}
               key={link.title}
             >
               {link.title}

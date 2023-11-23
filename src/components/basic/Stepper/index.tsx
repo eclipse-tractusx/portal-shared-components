@@ -22,10 +22,10 @@ import { Box } from '@mui/material'
 import { StepperItem } from './StepperItem'
 
 export interface StepList {
-  step: number,
-  headline: string,
-  description: string,
-  text?: string,
+  step: number
+  headline: string
+  description?: string
+  text?: string
   color?: string
 }
 

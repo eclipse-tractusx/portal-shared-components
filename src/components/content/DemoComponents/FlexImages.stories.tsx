@@ -27,10 +27,15 @@ const meta: Meta<typeof Component> = {
 export default meta
 
 export const Default: StoryObj<typeof Component> = {
-  args : {
-    baseUrl: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
+  args: {
+    baseUrl:
+      'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
     provider: {
-      "images": ["/images/content/teaser.png", "/images/content/teaser.png", "/images/content/teaser.png"]
+      images: [
+        '/images/content/teaser.png',
+        '/images/content/teaser.png',
+        '/images/content/teaser.png',
+      ],
     },
-  }
+  },
 }

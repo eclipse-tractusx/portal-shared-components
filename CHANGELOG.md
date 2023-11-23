@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.11
+
+- Fix general issues
+
 ## 2.1.9
 
 - fix(vulnerability): set resolution for @babel/traverse CVE-2023-45133
@@ -36,7 +40,7 @@
 ## 2.1.1
 
 - Migrate MUI date picker to v6
-  
+
 ## 2.0.34
 
 - Linter Findings

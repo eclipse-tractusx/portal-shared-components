@@ -29,7 +29,8 @@ import isEqual from 'lodash/isEqual'
 import { useState } from 'react'
 
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
-  items: []
+  // eslint-disable-next-line
+  items: any
   label: string
   placeholder: string
   keyTitle: string
@@ -39,7 +40,8 @@ interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   noOptionsText?: string
   defaultValue?: unknown
   disableClearable?: boolean
-  onChangeItem: (items: []) => void
+  // eslint-disable-next-line
+  onChangeItem: (items: any) => void
 }
 
 export const SelectList = ({
@@ -74,7 +76,8 @@ export const SelectList = ({
       noOptionsText={noOptionsText}
       ListboxProps={{ style: { maxHeight: selectHeight } }}
       disabled={disabled}
-      options={items.map((item) => item)}
+      // eslint-disable-next-line
+      options={items.map((item: any) => item)}
       getOptionLabel={(option) => option[keyTitle] || ''}
       onChange={(_, reason) => {
         setSelected(reason)

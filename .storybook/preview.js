@@ -31,10 +31,10 @@ const withI18next = (Story) => {
         <Story />
       </I18nextProvider>
     </SharedThemeProvider>
-  );
-};
+  )
+}
 
-export const decorators = [withI18next];
+export const decorators = [withI18next]
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

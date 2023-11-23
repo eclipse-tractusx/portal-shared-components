@@ -36,7 +36,7 @@ export interface PartsType {
   text: string
   highlight: boolean
 }
-export type IHashMap<T> = Record<string, T>;
+export type IHashMap<T> = Record<string, T>
 
 export interface MultiSelectListProps
   extends Omit<TextFieldProps, 'variant' | 'size'> {
@@ -81,7 +81,7 @@ export const MultiSelectList = ({
   const theme = useTheme()
   const [selected, setSelected] = useState<[]>([])
   const [showItems, setShowItems] = useState(false)
-  
+
   // Add an ESLint exception until there is a solution
   // eslint-disable-next-line
   const handleChange = (selectedItems: any) => {
@@ -97,7 +97,7 @@ export const MultiSelectList = ({
       ? filterOptionsArgs
       : {
           matchFrom: 'any',
-          stringify: (option: {keyTitle: string}) => option.keyTitle
+          stringify: (option: { keyTitle: string }) => option.keyTitle,
         }
   )
 
@@ -140,16 +140,16 @@ export const MultiSelectList = ({
           multiple
           disabled={disabled}
           options={items.map((item) => item)}
-            // Add an ESLint exception until there is a solution
-            // eslint-disable-next-line
+          // Add an ESLint exception until there is a solution
+          // eslint-disable-next-line
           getOptionLabel={(option: any) => option[keyTitle]}
           value={selected}
           filterOptions={filterOptions}
+          // Add an ESLint exception until there is a solution
+          // eslint-disable-next-line
+          renderTags={(selectedItems: any[], getTagProps) =>
             // Add an ESLint exception until there is a solution
             // eslint-disable-next-line
-          renderTags={(selectedItems: any[], getTagProps) =>
-              // Add an ESLint exception until there is a solution
-              // eslint-disable-next-line
             selectedItems.map((option: any, index: number) => (
               <Chip
                 {...getTagProps({ index })}
@@ -206,7 +206,7 @@ export const MultiSelectList = ({
               />
             )
           }}
-          onChange={(_,selectedItems) => {
+          onChange={(_, selectedItems) => {
             handleChange(selectedItems)
           }}
           onBlur={() => {

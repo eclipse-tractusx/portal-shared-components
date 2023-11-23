@@ -19,7 +19,12 @@
  ********************************************************************************/
 
 import { useCallback } from 'react'
-import { DataGrid, type GridSelectionModel, type DataGridProps, type GridRowId } from '@mui/x-data-grid'
+import {
+  DataGrid,
+  type GridRowSelectionModel,
+  type DataGridProps,
+  type GridRowId,
+} from '@mui/x-data-grid'
 import { Box, Stack } from '@mui/material'
 import { StatusTag } from './components/StatusTag'
 import { Toolbar, type ToolbarProps } from './components/Toolbar'
@@ -122,7 +127,7 @@ export const Table = ({
   // TODO: this method contains application specific row attributes and must therefore
   // move out of the shared components. Pass handler functions like this as props.
   const handleOnCellClick = useCallback(
-    (selectedIds: GridSelectionModel) => {
+    (selectedIds: GridRowSelectionModel) => {
       const idsArr: string[] = []
       rows.map((row) => {
         return selectedIds.map(

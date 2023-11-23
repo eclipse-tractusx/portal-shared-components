@@ -27,11 +27,12 @@ const meta: Meta<typeof Component> = {
 export default meta
 
 export const Default: StoryObj<typeof Component> = {
-  args : {
-  provider: {
-    title: "Example title",
-    description: "Example description for the component",
-    videoUrl: "https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4", 
-    }
-  }
+  args: {
+    provider: {
+      title: 'Example title',
+      description: 'Example description for the component',
+      videoUrl:
+        'https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4',
+    },
+  },
 }

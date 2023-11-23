@@ -42,10 +42,10 @@ export interface CarouselProps {
 }
 
 export interface CarouselNavArrows {
-  className?: string,
-  style?: React.CSSProperties,
-  onClick?: React.MouseEventHandler,
-  show: boolean,
+  className?: string
+  style?: React.CSSProperties
+  onClick?: React.MouseEventHandler
+  show: boolean
   isNext: boolean
 }
 

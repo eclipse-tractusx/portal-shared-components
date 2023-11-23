@@ -28,7 +28,8 @@ const MODAL_DEFAULT_WIDTH = '1000px'
 
 interface AddtionalDialogProps {
   modalBorderRadius?: number
-  additionalModalRootStyles?: React.CSSProperties
+  // eslint-disable-next-line
+  additionalModalRootStyles?: any
 }
 
 export type DialogProps = Pick<

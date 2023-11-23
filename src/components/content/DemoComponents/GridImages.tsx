@@ -39,8 +39,8 @@ export const GridImages = ({
       }}
     >
       {provider.images?.map((path) => (
-          <RenderImage key={path} height="250px" url={baseUrl + path || ''} />
-        ))}
+        <RenderImage key={path} height="250px" url={baseUrl + path || ''} />
+      ))}
     </Box>
   )
 }
