@@ -38,12 +38,18 @@ export const ImageGallery = ({
 }) => {
   const [hovered, setHovered] = useState(false)
   const [hoveredImage, setHoveredImage] = useState<ImageType>()
-  const matchessm = useMediaQuery('(max-width:480px)');
-  const matchesmd = useMediaQuery('(max-width:1023px)');
+  const mobile = useMediaQuery('(max-width:480px)')
+  const web = useMediaQuery('(max-width:1023px)')
 
   const hoverImageFn = (image: ImageType) => {
     setHovered(true)
     setHoveredImage(image)
+  }
+
+  const getSlidesToShow = () => {
+    if (mobile) return 1
+    else if (web) return 2
+    else return 3
   }
 
   return (
@@ -65,7 +71,7 @@ export const ImageGallery = ({
         infinite
         itemHeight={maxHeight ?? 0}
         itemWidth={maxWidth ?? 266}
-        slidesToShow={matchessm ? 1 : matchesmd ? 2 : 3}
+        slidesToShow={getSlidesToShow()}
       >
         {gallery.map((image) => (
           <div
