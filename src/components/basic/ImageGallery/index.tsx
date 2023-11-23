@@ -23,6 +23,7 @@ import { Carousel } from '../Carousel'
 import { type ImageType } from './types'
 import ImageItemOverlay from './ImageItemOverlay'
 import { Image } from '../Image'
+import { useMediaQuery } from '@mui/material'
 
 export const ImageGallery = ({
   gallery,
@@ -37,10 +38,18 @@ export const ImageGallery = ({
 }) => {
   const [hovered, setHovered] = useState(false)
   const [hoveredImage, setHoveredImage] = useState<ImageType>()
+  const mobile = useMediaQuery('(max-width:480px)')
+  const tab = useMediaQuery('(max-width:1023px)')
 
   const hoverImageFn = (image: ImageType) => {
     setHovered(true)
     setHoveredImage(image)
+  }
+
+  const getSlidesToShow = () => {
+    if (mobile) return 1
+    else if (tab) return 2
+    else return 3
   }
 
   return (
@@ -62,7 +71,7 @@ export const ImageGallery = ({
         infinite
         itemHeight={maxHeight ?? 0}
         itemWidth={maxWidth ?? 266}
-        slidesToShow={3}
+        slidesToShow={getSlidesToShow()}
       >
         {gallery.map((image) => (
           <div

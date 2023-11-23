@@ -1327,7 +1327,7 @@ npm/npmjs/@testing-library/react/14.0.0, MIT AND (MIT AND WTFPL), approved, #907
 npm/npmjs/@tootallnate/once/2.0.0, MIT, approved, clearlydefined
 npm/npmjs/@trysound/sax/0.2.0, ISC, approved, clearlydefined
 npm/npmjs/@types/aria-query/5.0.1, MIT, approved, #10958
-npm/npmjs/@types/autosuggest-highlight/3.2.0, MIT, approved, clearlydefined
+npm/npmjs/@types/autosuggest-highlight/3.2.0, MIT, approved, #11672
 npm/npmjs/@types/babel__core/7.20.1, MIT, approved, clearlydefined
 npm/npmjs/@types/babel__generator/7.6.4, MIT, approved, clearlydefined
 npm/npmjs/@types/babel__template/7.4.1, MIT, approved, clearlydefined
@@ -1375,7 +1375,7 @@ npm/npmjs/@types/qs/6.9.7, MIT, approved, clearlydefined
 npm/npmjs/@types/range-parser/1.2.4, MIT, approved, #10795
 npm/npmjs/@types/react-dom/18.2.6, MIT, approved, #8256
 npm/npmjs/@types/react-is/18.2.1, MIT, approved, #9131
-npm/npmjs/@types/react-slick/0.23.10, MIT, approved, clearlydefined
+npm/npmjs/@types/react-slick/0.23.10, MIT, approved, #11666
 npm/npmjs/@types/react-transition-group/4.4.6, MIT, approved, #8416
 npm/npmjs/@types/react/18.2.14, MIT, approved, #8234
 npm/npmjs/@types/resolve/1.20.2, MIT, approved, clearlydefined
