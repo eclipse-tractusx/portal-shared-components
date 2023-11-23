@@ -39,7 +39,7 @@ export const ImageGallery = ({
   const [hovered, setHovered] = useState(false)
   const [hoveredImage, setHoveredImage] = useState<ImageType>()
   const mobile = useMediaQuery('(max-width:480px)')
-  const web = useMediaQuery('(max-width:1023px)')
+  const tab = useMediaQuery('(max-width:1023px)')
 
   const hoverImageFn = (image: ImageType) => {
     setHovered(true)
@@ -48,7 +48,7 @@ export const ImageGallery = ({
 
   const getSlidesToShow = () => {
     if (mobile) return 1
-    else if (web) return 2
+    else if (tab) return 2
     else return 3
   }
 
