@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.10
+
+- fix(image gallery): responsiveness fix for number of images to show
+
 ## 2.1.9
 
 - fix(vulnerability): set resolution for @babel/traverse CVE-2023-45133
