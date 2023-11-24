@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.12
+
+- fix(eslint): enable no-unsafe-return rule
+
 ## 2.1.10
 
 - fix(image gallery): responsiveness fix for number of images to show

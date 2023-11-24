@@ -75,9 +75,11 @@ export const SelectList = ({
       ListboxProps={{ style: { maxHeight: selectHeight } }}
       disabled={disabled}
       options={items.map((item) => item)}
+      // eslint-disable-next-line
       getOptionLabel={(option) => option[keyTitle] || ''}
       onChange={(_, reason) => {
         setSelected(reason)
+        // eslint-disable-next-line
         onChangeItem(reason)
       }}
       isOptionEqualToValue={(option, value) => isEqual(option, value)}
