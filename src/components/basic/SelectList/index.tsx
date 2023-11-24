@@ -78,7 +78,8 @@ export const SelectList = ({
       disabled={disabled}
       // eslint-disable-next-line
       options={items.map((item: any) => item)}
-      getOptionLabel={(option) => option[keyTitle] || '' as string}
+      // eslint-disable-next-line
+      getOptionLabel={(option) => option[keyTitle] || ''}
       onChange={(_, reason) => {
         setSelected(reason)
         // eslint-disable-next-line
