@@ -27,37 +27,37 @@ const meta: Meta<typeof Component> = {
 export default meta
 
 export const Default: StoryObj<typeof Component> = {
-  args : {
+  args: {
     provider: {
-      "linksRow1": [
+      linksRow1: [
         {
-          "background": "#C498EF63",
-          "title": "Example",
-          "navigate": "/"
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
         },
         {
-          "background": "#C498EF63",
-          "title": "Example",
-          "navigate": "/certificate-credential"
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/certificate-credential',
         },
         {
-          "background": "#C498EF63",
-          "title": "Example",
-          "navigate": "/certificate-credential"
-        }
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/certificate-credential',
+        },
       ],
-      "linksRow2": [
+      linksRow2: [
         {
-          "background": "#C498EF63",
-          "title": "Example",
-          "navigate": "/"
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
         },
         {
-          "background": "#C498EF63",
-          "title": "Example",
-          "navigate": "/"
-        }
-      ]
-    }
-  }
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
+        },
+      ],
+    },
+  },
 }

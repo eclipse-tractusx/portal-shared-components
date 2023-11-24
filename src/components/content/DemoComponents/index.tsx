@@ -261,26 +261,26 @@ export const ContentComponents = ({
   return (
     <div>
       {sectionInfo?.map((provider: ProviderProps) => {
-          return (
-            <div
-              className="sectionContainer"
-              style={{
-                backgroundColor: provider.backgroundColor,
-              }}
-              key={provider.id}
-              id={`${provider.id}`}
-            >
-              <div className="sectionSubContainer">
-                <TemplateConfig
-                  provider={provider}
-                  baseUrl={baseUrl}
-                  scrollTop={scrollTop}
-                  showScroll={showScroll}
-                />
-              </div>
+        return (
+          <div
+            className="sectionContainer"
+            style={{
+              backgroundColor: provider.backgroundColor,
+            }}
+            key={provider.id}
+            id={`${provider.id}`}
+          >
+            <div className="sectionSubContainer">
+              <TemplateConfig
+                provider={provider}
+                baseUrl={baseUrl}
+                scrollTop={scrollTop}
+                showScroll={showScroll}
+              />
             </div>
-          )
-        })}
+          </div>
+        )
+      })}
     </div>
   )
 }

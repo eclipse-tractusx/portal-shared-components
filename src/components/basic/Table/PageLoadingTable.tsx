@@ -79,8 +79,8 @@ export const PageLoadingTable = function <Row, Args>({
   function nextPage() {
     setPage(page + 1)
   }
-  const hasMore = hasMorePages(data)
-  const maxRows = getMaxRows(data)
+  const hasMore = data ? hasMorePages(data) : false
+  const maxRows = data ? getMaxRows(data) : 0
 
   useEffect(() => {
     if (!allItems) {

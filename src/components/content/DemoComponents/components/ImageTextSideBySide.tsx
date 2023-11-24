@@ -25,7 +25,6 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import { Trans } from 'react-i18next'
 import { Typography } from '../../../basic/Typography'
 
-
 export const ImageTextSideBySide = ({
   provider,
   baseUrl,

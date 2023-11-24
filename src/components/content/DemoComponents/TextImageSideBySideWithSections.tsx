@@ -17,7 +17,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type CardDetailsProps, type ProviderProps } from './ContentComponentsTypes'
+import {
+  type CardDetailsProps,
+  type ProviderProps,
+} from './ContentComponentsTypes'
 import './ContentComponents.scss'
 import { Trans } from 'react-i18next'
 import { Box, useMediaQuery, useTheme } from '@mui/material'

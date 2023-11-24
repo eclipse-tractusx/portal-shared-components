@@ -36,5 +36,6 @@ export interface ImageType {
   modalWidth?: string
   width?: string
   height?: string
-  additionalStyles?: React.CSSProperties
+  // eslint-disable-next-line
+  additionalStyles?: any
 }

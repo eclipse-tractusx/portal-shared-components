@@ -27,85 +27,86 @@ const meta: Meta<typeof Component> = {
 export default meta
 
 export const Default: StoryObj<typeof Component> = {
-  args : {
-    baseUrl: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
-    align: "center",
+  args: {
+    baseUrl:
+      'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
+    align: 'center',
     provider: {
-      "detailsWithImageRow1": [
+      detailsWithImageRow1: [
         {
-          "title": "Subscription",
-          "imagePath": "/images/content/teaser.png",
-          "description": "This is an example description",
-          "readMore": "",
-          "backgroundColor": "#FFFFFF",
-          "imageShape": "circle",
-          "id": "1"
+          title: 'Subscription',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '1',
         },
         {
-          "title": "Subscription Flow",
-          "imagePath": "/images/content/teaser.png",
-          "description": "This are the details which I will still add",
-          "readMore": "",
-          "backgroundColor": "#FFFFFF",
-          "imageShape": "circle",
-          "id": "2"
+          title: 'Subscription Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This are the details which I will still add',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '2',
         },
         {
-          "title": "Authority",
-          "imagePath": "/images/content/teaser.png",
-          "description": "Coming soon",
-          "readMore": "",
-          "backgroundColor": "#FFFFFF",
-          "imageShape": "circle",
-          "id": "3"
-        }
+          title: 'Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Coming soon',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '3',
+        },
       ],
-      "detailsWithImageRow2": [
+      detailsWithImageRow2: [
         {
-          "title": "Subscription Authority",
-          "imagePath": "/images/content/teaser.png",
-          "description": "Add your own description here",
-          "readMore": "",
-          "backgroundColor": "#FFFFFF",
-          "imageShape": "circle",
-          "id": "11"
+          title: 'Subscription Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Add your own description here',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '11',
         },
         {
-          "title": "Flow",
-          "imagePath": "/images/content/teaser.png",
-          "description": "This is an example description",
-          "readMore": "",
-          "backgroundColor": "#FFFFFF",
-          "imageShape": "circle",
-          "id": "12"
-        }
+          title: 'Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '12',
+        },
       ],
-      "detailsWithoutImageRow1": [
+      detailsWithoutImageRow1: [
         {
-          "title": "Who can subscribe?",
-          "description": "the details will get added asap",
-          "readMore": "/help",
-          "readMoreTitle": "Details",
-          "backgroundColor": "#FFFFFF",
-          "id": "21"
+          title: 'Who can subscribe?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'Details',
+          backgroundColor: '#FFFFFF',
+          id: '21',
         },
         {
-          "title": "What happens after the subscription?",
-          "description": "the details will get added asap",
-          "readMore": "/help",
-          "readMoreTitle": "More",
-          "backgroundColor": "#FFFFFF",
-          "id": "22"
+          title: 'What happens after the subscription?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'More',
+          backgroundColor: '#FFFFFF',
+          id: '22',
         },
         {
-          "title": "How can I use the service?",
-          "description": "This is an example description",
-          "readMore": "/help",
-          "readMoreTitle": "Visit",
-          "backgroundColor": "#FFFFFF",
-          "id": "33"
-        }
-      ]
+          title: 'How can I use the service?',
+          description: 'This is an example description',
+          readMore: '/help',
+          readMoreTitle: 'Visit',
+          backgroundColor: '#FFFFFF',
+          id: '33',
+        },
+      ],
     },
-  }
+  },
 }

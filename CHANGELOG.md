@@ -4,6 +4,10 @@
 
 - fix(eslint): enable no-unsafe-return rule
 
+## 2.1.11
+
+- Fix general issues
+  
 ## 2.1.10
 
 - fix(image gallery): responsiveness fix for number of images to show
@@ -44,7 +48,7 @@
 ## 2.1.1
 
 - Migrate MUI date picker to v6
-  
+
 ## 2.0.34
 
 - Linter Findings

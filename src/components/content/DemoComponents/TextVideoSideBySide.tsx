@@ -38,12 +38,9 @@ export const TextVideoSideBySide = ({
       scrollTop={scrollTop}
       showScroll={showScroll}
       provider={provider}
-      isImagePresent={true}>
-        <ReactPlayer
-          className="video"
-          url={provider.videoUrl}
-          controls={true}
-        />
-      </ImageVideoWrapper>
+      isImagePresent={true}
+    >
+      <ReactPlayer className="video" url={provider.videoUrl} controls={true} />
+    </ImageVideoWrapper>
   )
 }
