@@ -96,9 +96,7 @@ export const Datepicker = ({
   const ServerDay = (props: PickersDayProps<Date>) => {
     const { selected, day, today } = props
     const bgColor = today ? todayColor : '#ffffff'
-    const bgSelected = selected
-      ? daySelectedColor
-      : bgColor
+    const bgSelected = selected ? daySelectedColor : bgColor
     const colorSelected = selected ? '#fff' : '#202020'
     const isBold = today ? '500' : '400'
 
@@ -169,9 +167,16 @@ export const Datepicker = ({
           }}
           slotProps={{
             textField: {
-              variant, onClick: handleOpen, label, helperText, error,
-              margin, disabled, focused: open, inputProps: { placeholder }
-            }
+              variant,
+              onClick: handleOpen,
+              label,
+              helperText,
+              error,
+              margin,
+              disabled,
+              focused: open,
+              inputProps: { placeholder },
+            },
           }}
         />
       </LocalizationProvider>

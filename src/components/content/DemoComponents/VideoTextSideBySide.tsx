@@ -45,7 +45,10 @@ export const VideoTextSideBySide = ({
           controls={true}
         />
       </div>
-      <div className={'titleDescriptionBody'} style={{width: '50% !important'}}>
+      <div
+        className={'titleDescriptionBody'}
+        style={{ width: '50% !important' }}
+      >
         <div className="titleWithIcon sideBySideTitle">
           <Typography variant="h2">{provider.title}</Typography>
           {showScroll && (

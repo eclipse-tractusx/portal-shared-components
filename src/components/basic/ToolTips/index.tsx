@@ -75,7 +75,7 @@ export const Tooltips = ({
         arrow: {
           sx: {
             color: backgroundColor,
-            ...arrowStyles
+            ...arrowStyles,
           },
         },
       }}

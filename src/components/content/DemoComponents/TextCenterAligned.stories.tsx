@@ -27,12 +27,12 @@ const meta: Meta<typeof Component> = {
 export default meta
 
 export const Default: StoryObj<typeof Component> = {
-  args : {
+  args: {
     provider: {
-      "title": "Example title",
-      "description": "Example description for the component"
+      title: 'Example title',
+      description: 'Example description for the component',
     },
     scrollTop: () => {},
-    showScroll: true
-  }
+    showScroll: true,
+  },
 }

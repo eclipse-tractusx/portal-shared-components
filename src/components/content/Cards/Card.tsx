@@ -328,16 +328,18 @@ export const Card = ({
               margin: '-10px 80px',
             }}
           >
-            <SortOption
-              show={showModal}
-              selectedOption={sortOption}
-              setSortOption={(value: string) => {
-                setSortOption(value)
-                setShowModal(false)
-              }}
-              sortOptions={submenuOptions}
-              singleMenu={submenuOptions?.length === 1}
-            />
+            {submenuOptions && (
+              <SortOption
+                show={showModal}
+                selectedOption={sortOption}
+                setSortOption={(value: string) => {
+                  setSortOption(value)
+                  setShowModal(false)
+                }}
+                sortOptions={submenuOptions}
+                singleMenu={submenuOptions?.length === 1}
+              />
+            )}
           </div>
           {showButton && (
             <CardButtons

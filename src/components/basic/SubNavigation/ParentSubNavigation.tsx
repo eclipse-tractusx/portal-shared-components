@@ -21,10 +21,10 @@
 import { Button } from '../Button'
 import EastIcon from '@mui/icons-material/East'
 
-export interface NavigationItem { 
+export interface NavigationItem {
   index: number
   title: string
-  navigation: string 
+  navigation: string
 }
 
 export const ParentSubNavigation = ({
@@ -36,25 +36,25 @@ export const ParentSubNavigation = ({
 }) => {
   return (
     <>
-      {navigationArray?.map(
-        (link: NavigationItem) => {
-          return (
-            <Button
-              key={link.index}
-              onClick={() => { onClick(link.navigation) }}
-              color="secondary"
-              variant="text"
-              size="medium"
-              sx={{
-                fontSize: '16px',
-              }}
-            >
-              <EastIcon sx={{ marginRight: '16px', fontSize: '15px' }} />
-              {link.title}
-            </Button>
-          )
-        }
-      )}
+      {navigationArray?.map((link: NavigationItem) => {
+        return (
+          <Button
+            key={link.index}
+            onClick={() => {
+              onClick(link.navigation)
+            }}
+            color="secondary"
+            variant="text"
+            size="medium"
+            sx={{
+              fontSize: '16px',
+            }}
+          >
+            <EastIcon sx={{ marginRight: '16px', fontSize: '15px' }} />
+            {link.title}
+          </Button>
+        )
+      })}
     </>
   )
 }

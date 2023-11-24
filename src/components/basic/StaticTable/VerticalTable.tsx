@@ -35,7 +35,10 @@ export const VerticalTable = ({
   data: TableType
   handleEdit?: (inputValue: string) => void
 }) => {
-  const [inputField, setInputField] = useState<{row: unknown, column: unknown} | null>()
+  const [inputField, setInputField] = useState<{
+    row: unknown
+    column: unknown
+  } | null>()
   const [inputValue, setInputValue] = useState('')
   const [inputErrorMsg, setInputErrorMessage] = useState('')
 
@@ -91,7 +94,9 @@ export const VerticalTable = ({
           </Tooltips>
         )}
         <CloseIcon
-          onClick={() => { setInputField(null) }}
+          onClick={() => {
+            setInputField(null)
+          }}
           sx={{ marginTop: '25px' }}
         />
       </div>
@@ -101,7 +106,9 @@ export const VerticalTable = ({
   return (
     <table
       style={{ width: '100%', borderCollapse: 'collapse' }}
-      onClick={() => { setInputField(null) }}
+      onClick={() => {
+        setInputField(null)
+      }}
     >
       <thead>
         <tr>
@@ -137,8 +144,8 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                      inputField.row === r &&
-                      inputField.column === c ? (
+                    inputField.row === r &&
+                    inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
@@ -185,7 +192,9 @@ export const VerticalTable = ({
                       ) : (
                         <span style={{ marginLeft: 'auto' }}>
                           <EditIcon
-                            onClick={(e) => { handleEditFn(e, r, c) }}
+                            onClick={(e) => {
+                              handleEditFn(e, r, c)
+                            }}
                             sx={{
                               fontSize: '18px',
                               color: '#888888',

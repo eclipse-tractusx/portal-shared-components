@@ -27,37 +27,37 @@ const meta: Meta<typeof Component> = {
 export default meta
 
 export const Default: StoryObj<typeof Component> = {
-  args : {
+  args: {
     provider: {
-      title: "Example title",
-      description: "Example description for the component",
-      imagePath: "/images/content/teaser.png",
+      title: 'Example title',
+      description: 'Example description for the component',
+      imagePath: '/images/content/teaser.png',
       sectionLink: {
         data: [
           {
-            "title": ">> IdP Config",
-            "id": "idp-id",
-            "internal": true
+            title: '>> IdP Config',
+            id: 'idp-id',
+            internal: true,
           },
           {
-            "title": ">> User Management",
-            "id": "user-id",
-            "internal": true
+            title: '>> User Management',
+            id: 'user-id',
+            internal: true,
           },
           {
-            "title": ">> Company Certificates",
-            "id": "company-id",
-            "internal": true
+            title: '>> Company Certificates',
+            id: 'company-id',
+            internal: true,
           },
           {
-            "title": ">> Use Case Frameworks",
-            "id": "usecase-id",
-            "internal": true
-          }
-        ]
+            title: '>> Use Case Frameworks',
+            id: 'usecase-id',
+            internal: true,
+          },
+        ],
       },
     },
     scrollTop: () => {},
-    showScroll: true
-  }
+    showScroll: true,
+  },
 }
