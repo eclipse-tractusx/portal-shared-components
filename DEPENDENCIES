@@ -174,7 +174,7 @@ npm/npmjs/-/csso/4.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/cssom/0.3.8, MIT, approved, clearlydefined
 npm/npmjs/-/cssom/0.5.0, MIT, approved, clearlydefined
 npm/npmjs/-/cssstyle/2.3.0, MIT, approved, clearlydefined
-npm/npmjs/-/csstype/3.1.2, MIT, approved, clearlydefined
+npm/npmjs/-/csstype/3.1.2, MIT, approved, #11847
 npm/npmjs/-/data-urls/3.0.2, MIT, approved, clearlydefined
 npm/npmjs/-/date-fns/2.30.0, MIT, approved, clearlydefined
 npm/npmjs/-/debug/2.6.9, MIT, approved, clearlydefined
