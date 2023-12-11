@@ -51,7 +51,7 @@ export const NewSubNavigation = ({
 }): JSX.Element => {
   const [show, setShow] = useState(false)
   const [header, setHeader] = useState(title)
-  const [highLight, setHighlight] = useState('')
+  const [highlight, setHighlight] = useState('')
   return (
     <Box onMouseOver={() => { setShow(true) }}>
       {navigationArray?.length > 0 && (
@@ -92,7 +92,7 @@ export const NewSubNavigation = ({
                         }}
                         sx={{
                           backgroundColor:
-                            header === link.title || highLight === link.title
+                            header === link.title || highlight === link.title
                               ? 'rgba(15, 113, 203, 0.05)'
                               : 'transparent',
                         }}
@@ -102,7 +102,7 @@ export const NewSubNavigation = ({
                             marginRight: '16px',
                             fontSize: '18px',
                             color:
-                              header === link.title || highLight === link.title
+                              header === link.title || highlight === link.title
                                 ? '#0f71cb'
                                 : '#EAF1FE',
                           }}
@@ -111,7 +111,7 @@ export const NewSubNavigation = ({
                           variant="h4"
                           sx={{
                             color:
-                              header === link.title || highLight === link.title
+                              header === link.title || highlight === link.title
                                 ? '#111111'
                                 : '#888888',
                             fontSize: '14px',
