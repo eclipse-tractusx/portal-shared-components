@@ -1,9 +1,13 @@
 # Changelog
 
+## 2.1.13
+
+- New Sub Navigation Component which supportrs overlay of links and buttons
+
 ## 2.1.11
 
 - Fix general issues
-  
+
 ## 2.1.10
 
 - fix(image gallery): responsiveness fix for number of images to show
