@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box } from '@mui/material'
+import { Box, Link } from '@mui/material'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { StepperItem } from './StepperItem'
 
@@ -34,10 +34,11 @@ export interface StepperProps {
   list: StepList[]
   showSteps: number
   activeStep: number
-  tooltipText: string
+  tooltipText?: string
+  tooltipLink?: string
 }
 
-export const Stepper = ({ list, showSteps, activeStep, tooltipText }: StepperProps) => {
+export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink }: StepperProps) => {
   const width = 100 / list.length
 
   return (
@@ -81,6 +82,7 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText }: StepperPro
               list
                 .map((item, i) => (
                   <Box
+                    key={i}
                     sx={{
                       width: `${width}%`,
                       margin: '0px',
@@ -91,22 +93,31 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText }: StepperPro
                       i+1 === activeStep &&
                       <Box
                         sx={{
-                          fontSize: '13px',
+                          fontSize: '14px',
                           background: '#eaf1fe',
                           borderRadius: '6px',
                           padding: '6px',
-                          display: 'flex',
-                          flexDirection: 'column',
-                          alignItems: 'center',
-                          boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)'
+                          boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)',
+                          cursor: 'pointer'
                         }}
                       >
-                        <KeyboardArrowUpIcon 
+                        <Link 
+                          href={tooltipLink}
+                          target="_blank"
                           sx={{
-                            
+                            color: '#111111 !important',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
                           }}
-                        />
-                        { tooltipText }
+                        >
+                          <KeyboardArrowUpIcon 
+                            sx={{
+                              
+                            }}
+                          />
+                          { tooltipText }
+                        </Link>
                       </Box>
                     }
                   </Box>
