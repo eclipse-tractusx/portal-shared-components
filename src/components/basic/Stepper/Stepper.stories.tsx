@@ -67,4 +67,5 @@ Stepper.args = {
   list: stepperElements,
   showSteps: 6,
   activeStep: 3,
+  tooltipText: "Continue where you left"
 }

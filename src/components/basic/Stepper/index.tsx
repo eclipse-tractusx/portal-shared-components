@@ -19,6 +19,7 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { StepperItem } from './StepperItem'
 
 export interface StepList {
@@ -33,31 +34,88 @@ export interface StepperProps {
   list: StepList[]
   showSteps: number
   activeStep: number
+  tooltipText: string
 }
 
-export const Stepper = ({ list, showSteps, activeStep }: StepperProps) => {
+export const Stepper = ({ list, showSteps, activeStep, tooltipText }: StepperProps) => {
+  const width = 100 / list.length
+
   return (
     <Box
       sx={{
-        display: 'flex',
         margin: '0px auto',
       }}
     >
       {list &&
-        list
-          .filter((item) => item.step <= showSteps && item.step <= list.length)
-          .map((item, i) => (
-            <StepperItem
-              key={i}
-              step={item.step}
-              headline={item.headline}
-              text={item.text ?? ''}
-              color={item.color ?? ''}
-              activeStep={activeStep}
-              index={i + 1}
-              totalSteps={list.length}
-            />
-          ))}
+        <>
+          <Box
+            sx={{
+              display: 'flex'
+            }}
+          >
+            {
+              list
+                .filter((item) => item.step <= showSteps && item.step <= list.length)
+                .map((item, i) => (
+                  <StepperItem
+                    key={i}
+                    step={item.step}
+                    headline={item.headline}
+                    text={item.text ?? ''}
+                    color={item.color ?? ''}
+                    activeStep={activeStep}
+                    index={i + 1}
+                    totalSteps={list.length}
+                  />
+                ))
+            }
+          </Box>
+          <Box
+            sx={{
+              display: 'flex',
+              marginTop: '20px'
+            }}
+          >
+            {
+              tooltipText && 
+              list
+                .map((item, i) => (
+                  <Box
+                    sx={{
+                      width: `${width}%`,
+                      margin: '0px',
+                      textAlign: 'center'
+                    }}
+                  >
+                    {
+                      i+1 === activeStep &&
+                      <Box
+                        sx={{
+                          fontSize: '13px',
+                          background: '#eaf1fe',
+                          borderRadius: '6px',
+                          padding: '6px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center',
+                          boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)'
+                        }}
+                      >
+                        <KeyboardArrowUpIcon 
+                          sx={{
+                            
+                          }}
+                        />
+                        { tooltipText }
+                      </Box>
+                    }
+                  </Box>
+                ))
+            }
+          </Box>
+        </>
+      }
+
     </Box>
   )
 }

@@ -3,6 +3,7 @@
 ## 2.1.11
 
 - Fix general issues
+- Add tooltip in stepper
   
 ## 2.1.10
 
