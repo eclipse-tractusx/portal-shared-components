@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Box, Link } from '@mui/material'
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { StepperItem } from './StepperItem'
 
 export interface StepList {
@@ -41,6 +41,10 @@ export interface StepperProps {
 export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink }: StepperProps) => {
   const width = 100 / list.length
 
+  function uniqueId(i: number): import("react").Key | null | undefined {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <Box
       sx={{
@@ -59,7 +63,7 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
                 .filter((item) => item.step <= showSteps && item.step <= list.length)
                 .map((item, i) => (
                   <StepperItem
-                    key={i}
+                    key={uniqueId(item.step)}
                     step={item.step}
                     headline={item.headline}
                     text={item.text ?? ''}
