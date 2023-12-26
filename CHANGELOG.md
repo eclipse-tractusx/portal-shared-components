@@ -1,9 +1,12 @@
 # Changelog
 
+## 2.1.12
+
+- Order Status Button UI changes
+
 ## 2.1.11
 
 - Fix general issues
-- Order Status Button UI changes
 
 ## 2.1.10
 
