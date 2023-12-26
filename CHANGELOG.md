@@ -1,9 +1,12 @@
 # Changelog
 
+## 2.1.13
+
+- Technical Improvement: Search Element (active search & delete icon)
+
 ## 2.1.11
 
 - Fix general issues
-- Technical Improvement: Search Element (active search & delete icon)
   
 ## 2.1.10
 
