@@ -83,7 +83,9 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
                     className="hintStep"
                     sx={{
                       marginTop: '25px'
-                    }}>
+                    }}
+                    key={uniqueId(item.headline)}
+                  >
                     {
                       i + 1 === activeStep &&
                       <Box

@@ -63,7 +63,7 @@ export const StepperItem = ({
       setDone(false)
     }
   }, [index, activeStep])
-  const width = 100 / totalSteps
+  
   return (
     <Box className="stepperStep">
       <Box className="stepHead"
