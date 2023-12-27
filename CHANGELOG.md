@@ -1,9 +1,12 @@
 # Changelog
 
+## 2.1.14
+
+- Add tooltip hint in stepper and make stepper responsive
+
 ## 2.1.11
 
 - Fix general issues
-- Add tooltip in stepper
   
 ## 2.1.10
 

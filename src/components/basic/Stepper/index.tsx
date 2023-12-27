@@ -19,8 +19,11 @@
  ********************************************************************************/
 
 import { Box, Link } from '@mui/material'
+import uniqueId from 'lodash/uniqueId'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+import { Typography } from '../Typography'
 import { StepperItem } from './StepperItem'
+import './Stepper.scss'
 
 export interface StepList {
   step: number
@@ -39,11 +42,6 @@ export interface StepperProps {
 }
 
 export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink }: StepperProps) => {
-  const width = 100 / list.length
-
-  function uniqueId(i: number): import("react").Key | null | undefined {
-    throw new Error('Function not implemented.');
-  }
 
   return (
     <Box
@@ -54,16 +52,14 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
       {list &&
         <>
           <Box
-            sx={{
-              display: 'flex'
-            }}
+            className="stepperMain"
           >
             {
               list
                 .filter((item) => item.step <= showSteps && item.step <= list.length)
                 .map((item, i) => (
                   <StepperItem
-                    key={uniqueId(item.step)}
+                    key={uniqueId(item.headline)}
                     step={item.step}
                     headline={item.headline}
                     text={item.text ?? ''}
@@ -71,30 +67,25 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
                     activeStep={activeStep}
                     index={i + 1}
                     totalSteps={list.length}
+                    tooltipText={tooltipText}
+                    tooltipLink={tooltipLink}
                   />
                 ))
             }
           </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              marginTop: '20px'
-            }}
-          >
+          <Box className="stepperHint">
             {
-              tooltipText && 
+              tooltipText &&
               list
+                .filter((item) => item.step <= showSteps && item.step <= list.length)
                 .map((item, i) => (
                   <Box
-                    key={i}
+                    className="hintStep"
                     sx={{
-                      width: `${width}%`,
-                      margin: '0px',
-                      textAlign: 'center'
-                    }}
-                  >
+                      marginTop: '25px'
+                    }}>
                     {
-                      i+1 === activeStep &&
+                      i + 1 === activeStep &&
                       <Box
                         sx={{
                           fontSize: '14px',
@@ -105,7 +96,7 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
                           cursor: 'pointer'
                         }}
                       >
-                        <Link 
+                        <Link
                           href={tooltipLink}
                           target="_blank"
                           sx={{
@@ -115,12 +106,21 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
                             alignItems: 'center',
                           }}
                         >
-                          <KeyboardArrowUpIcon 
+                          <KeyboardArrowUpIcon
                             sx={{
-                              
+
                             }}
                           />
-                          { tooltipText }
+                          <Typography
+                            variant="label3"
+                            fontSize="12px"
+                            sx={{
+                              paddingBottom: '5px',
+                              textAlign: 'center'
+                            }}
+                          >
+                            {tooltipText}
+                          </Typography>
                         </Link>
                       </Box>
                     }
@@ -130,7 +130,6 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
           </Box>
         </>
       }
-
     </Box>
   )
 }
