@@ -63,7 +63,7 @@ export const StepperItem = ({
       setDone(false)
     }
   }, [index, activeStep])
-  
+
   return (
     <Box className="stepperStep">
       <Box className="stepHead"
@@ -90,7 +90,6 @@ export const StepperItem = ({
                 height: `${text ? 'auto' : '28px'}`,
                 color: '#fff',
                 display: `${text ? 'inline-block' : 'flex'}`,
-                //display: 'flex',
                 padding: `${text ? '3px 15px' : '0'}`,
                 justifyContent: 'center',
                 alignItems: 'center',
