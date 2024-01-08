@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.14
+
+- Technical Improvement: Search Element (active search & delete icon)
+
 ## 2.1.13
 
 - Order Status Button UI changes
