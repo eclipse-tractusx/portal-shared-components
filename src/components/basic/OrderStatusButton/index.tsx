@@ -63,7 +63,7 @@ export const OrderStatusButton = ({
       <Button
         key={numberLabel}
         sx={{
-          width: '97%',
+          width: '80%',
           position: 'relative',
           zIndex,
           paddingLeft: '74px',
@@ -73,6 +73,7 @@ export const OrderStatusButton = ({
           height: '55px',
           textAlign: 'left',
           cursor: 'default',
+          textTransform: 'capitalize',
           ':hover': {
             background,
           },
@@ -105,7 +106,7 @@ export const OrderStatusButton = ({
             {numberLabel}
           </Typography>
         )}
-        <Typography variant="label4">{buttonLabel}</Typography>
+        <Typography variant="label5">{buttonLabel}</Typography>
       </Button>
     )
   }
@@ -125,10 +126,12 @@ export const OrderStatusButton = ({
         color={color}
         onClick={handleClick}
         sx={{
+          fontSize: '16px',
           width: '100%',
           position: 'relative',
           zIndex: '5',
           cursor: selectable ? 'pointer' : 'default',
+          textTransform: 'capitalize',
           ':hover': {
             background: selectable ? color : color && theme.palette[color].main,
             boxShadow: selectable ? '' : 'none',
