@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.15
+
+- Add tooltip hint in stepper and make stepper responsive
+
 ## 2.1.14
 
 - Technical Improvement: Search Element (active search & delete icon)
