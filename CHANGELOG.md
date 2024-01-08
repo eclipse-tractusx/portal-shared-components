@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.13
+
+- Order Status Button UI changes
+
 ## 2.1.12
 
 - New Sub Navigation Component which supportrs overlay of links and buttons

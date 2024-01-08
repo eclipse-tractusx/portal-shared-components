@@ -263,6 +263,7 @@ export const Card = ({
                   subscriptionStatus?.toLowerCase() === 'pending'
                     ? 'linear-gradient(239deg, rgba(255,120,44,1) 0%, rgba(255,179,38,1) 50%)'
                     : '#B3CB2D',
+                textTransform: 'lowercase',
               }}
             >
               {subscriptionStatus}
