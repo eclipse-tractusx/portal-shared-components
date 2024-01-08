@@ -96,6 +96,7 @@ export { Expand } from './basic/Expand'
 export { AboutCard } from './content/Cards/AboutCard'
 export { LinearProgressWithValueLabel } from './basic/Progress/LinearProgress/LinearProgressWithValueLabel'
 export { ErrorBar } from './basic/ErrorBar/ErrorBar'
+export { NewSubNavigation } from './basic/NewSubNavigation'
 
 export type { TableProps } from './basic/Table'
 export type {

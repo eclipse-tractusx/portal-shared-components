@@ -115,8 +115,8 @@ export const SearchAndFilterButtonToolbar = ({
     <Box sx={styles}>
       <Box sx={{ display: 'flex', alignItems: 'center', height: '50px' }}>
         <SearchInput
+          autoFocus
           endAdornment={endAdornment}
-          type="text"
           value={searchInputText}
           onChange={onSearchChange}
           onKeyPress={onSearchInputKeyPress}

@@ -1,13 +1,25 @@
 # Changelog
 
-## 2.1.14
+## 2.1.15
 
 - Add tooltip hint in stepper and make stepper responsive
+
+## 2.1.14
+
+- Technical Improvement: Search Element (active search & delete icon)
+
+## 2.1.13
+
+- Order Status Button UI changes
+
+## 2.1.12
+
+- New Sub Navigation Component which supportrs overlay of links and buttons
 
 ## 2.1.11
 
 - Fix general issues
-  
+
 ## 2.1.10
 
 - fix(image gallery): responsiveness fix for number of images to show

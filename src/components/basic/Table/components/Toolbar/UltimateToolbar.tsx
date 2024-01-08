@@ -114,8 +114,8 @@ export const UltimateToolbar = ({
       {onSearch != null && (
         <Box sx={{ display: 'flex', alignItems: 'center', height: '50px' }}>
           <SearchInput
+            autoFocus
             endAdornment={endAdornment}
-            type="text"
             value={searchInput}
             onChange={onSearchChange}
             onKeyPress={onSearchInputKeyPress}
