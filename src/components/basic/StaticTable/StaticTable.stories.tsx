@@ -51,6 +51,7 @@ Table.args = {
         },
         {
           icon: true,
+          copyValue: 'nidhi',
           inputValue: 'row1 col2',
           isValid: (value) => console.log('Checking Validation', value),
           errorMessage: 'Please enter valid value.',

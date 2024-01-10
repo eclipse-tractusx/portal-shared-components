@@ -25,6 +25,7 @@ export interface TableType {
   edit?: Array<
     Array<{
       icon: boolean
+      copyValue?: string
       inputValue?: string
       clickableLink?: string
       isValid?: (value: string) => unknown
