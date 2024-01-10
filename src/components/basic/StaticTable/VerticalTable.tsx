@@ -105,9 +105,7 @@ export const VerticalTable = ({
     )
   }
 
-  const renderTextvalue = (text: string|undefined) => {
-    return text ?? ''
-  }
+  const renderTextvalue = (text: string | undefined) => text ?? ''
 
   return (
     <table
@@ -186,13 +184,15 @@ export const VerticalTable = ({
                               color: copied === data?.edit?.[r]?.[c].copyValue ? '#00cc00' : '#cccccc',
                             },
                           }}
-                          onClick={async () => {
-                            const value = renderTextvalue(data?.edit?.[r]?.[c].copyValue?.toString())
-                            await navigator.clipboard.writeText(value)
-                            setCopied(value)
-                            setTimeout(() => {
-                              setCopied('')
-                            }, 1000)
+                          onClick={() => {
+                            void (async () => {
+                              const value = renderTextvalue(data?.edit?.[r]?.[c].copyValue?.toString())
+                              await navigator.clipboard.writeText(value)
+                              setCopied(value)
+                              setTimeout(() => {
+                                setCopied('')
+                              }, 1000)
+                            })()
                           }}
                         >
                           <ContentCopyIcon
