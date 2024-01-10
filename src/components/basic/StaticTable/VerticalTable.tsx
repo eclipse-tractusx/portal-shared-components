@@ -105,6 +105,10 @@ export const VerticalTable = ({
     )
   }
 
+  const renderTextvalue = (text: string|undefined) => {
+    return text ?? ''
+  }
+
   return (
     <table
       style={{ width: '100%', borderCollapse: 'collapse' }}
@@ -183,7 +187,7 @@ export const VerticalTable = ({
                             },
                           }}
                           onClick={async () => {
-                            const value = data?.edit?.[r]?.[c].copyValue?.toString() ?? ''
+                            const value = renderTextvalue(data?.edit?.[r]?.[c].copyValue?.toString())
                             await navigator.clipboard.writeText(value)
                             setCopied(value)
                             setTimeout(() => {
@@ -206,7 +210,7 @@ export const VerticalTable = ({
                         <Tooltips
                           color="dark"
                           tooltipPlacement="bottom-start"
-                          tooltipText={data?.edit?.[r][c].inputValue ?? ''}
+                          tooltipText={renderTextvalue(data?.edit?.[r][c].inputValue)}
                         >
                           <HelpOutlineIcon
                             sx={{
