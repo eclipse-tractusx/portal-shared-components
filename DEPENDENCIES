@@ -876,7 +876,7 @@ npm/npmjs/-/strip-final-newline/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/strip-indent/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/strip-json-comments/3.1.1, MIT, approved, clearlydefined
 npm/npmjs/-/style-inject/0.3.0, MIT, approved, clearlydefined
-npm/npmjs/-/style-loader/3.3.3, MIT, approved, clearlydefined
+npm/npmjs/-/style-loader/3.3.3, MIT, approved, #12669
 npm/npmjs/-/stylehacks/5.1.1, MIT, approved, clearlydefined
 npm/npmjs/-/stylis/4.2.0, MIT, approved, #8409
 npm/npmjs/-/supports-color/5.5.0, MIT, approved, clearlydefined

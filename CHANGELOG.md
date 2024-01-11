@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.16
+
+- Add copy icon functionality in static table row
+
 ## 2.1.15
 
 - Add tooltip hint in stepper and make stepper responsive
