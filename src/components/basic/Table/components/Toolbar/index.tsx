@@ -215,7 +215,6 @@ export const Toolbar = ({
             <SearchInput
               autoFocus
               endAdornment={getEndAdornment()}
-              type="text"
               value={searchInput}
               onChange={onSearchInputChange}
               onKeyPress={onSearchInputKeyPress}

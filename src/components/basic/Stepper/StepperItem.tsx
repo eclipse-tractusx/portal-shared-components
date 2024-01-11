@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { Box, Link } from '@mui/material'
 import { Typography } from '../Typography'
 import { theme } from '../../../theme'
-import { useEffect, useState } from 'react'
 
 interface StepperItemProps {
   step: number
@@ -31,6 +31,8 @@ interface StepperItemProps {
   activeStep: number
   index: number
   totalSteps?: number
+  tooltipText?: string
+  tooltipLink?: string
 }
 
 export const StepperItem = ({
@@ -41,6 +43,8 @@ export const StepperItem = ({
   activeStep,
   index,
   totalSteps = 6,
+  tooltipText,
+  tooltipLink,
 }: StepperItemProps) => {
   const [backgroundColor, setBackgroundColor] = useState(
     color || theme.palette.stepper.stepUpcoming
@@ -59,77 +63,99 @@ export const StepperItem = ({
       setDone(false)
     }
   }, [index, activeStep])
-  const width = 100 / totalSteps
+
   return (
-    <Box
-      sx={{
-        width: `${width}%`,
-        margin: '0px',
-        borderBottom: `2px solid ${backgroundColor}`,
-        textAlign: 'center',
-      }}
-    >
-      <Box
+    <Box className="stepperStep">
+      <Box className="stepHead"
         sx={{
-          backgroundColor: `${backgroundColor}`,
-          borderRadius: `${text ? '20px' : '50%'}`,
-          margin: '12px auto 16px auto',
-          width: `${text ? 'auto' : '28px'}`,
-          height: `${text ? 'auto' : '28px'}`,
-          color: '#fff',
-          display: `${text ? 'inline-block' : 'flex'}`,
-          padding: '3px 15px',
-          justifyContent: 'center',
-          alignItems: 'center',
+          borderBottom: `2px solid ${backgroundColor}`,
         }}
       >
-        <Typography
-          variant="body1"
-          fontSize="14px"
-          color="#fff"
-          sx={{
-            margin: 'auto',
-            width: 'fit-content',
-          }}
-        >
-          {done &&
-            (text || (
-              <svg
-                width="14"
-                height="13"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+        <Box className="hintStepMain">
+          <Box
+            className="stepIcon"
+            sx={{
+              margin: '12px 0 16px 0',
+            }}
+          >
+            <Typography
+              variant="body1"
+              fontSize="14px"
+              color="#fff"
+              sx={{
+                backgroundColor: `${backgroundColor}`,
+                borderRadius: `${text ? '20px' : '50%'}`,
+                margin: '0 auto',
+                width: `${text ? 'auto' : '28px'}`,
+                height: `${text ? 'auto' : '28px'}`,
+                color: '#fff',
+                display: `${text ? 'inline-block' : 'flex'}`,
+                padding: `${text ? '3px 15px' : '0'}`,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              {done &&
+                (text || (
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M13.8078 1.24939L5.09535 12.1399L0.305542 7.15056L1.74832 5.7655L4.95851 9.10944L12.2461 0L13.8078 1.24939Z"
+                      fill="white"
+                    />
+                  </svg>
+                ))}
+              {!done && step}
+            </Typography>
+          </Box>
+          <Box className="hintStepMobile" >
+            {
+              index === activeStep &&
+              <Link
+                href={tooltipLink}
+                target="_blank"
+                sx={{
+                  color: '#111111 !important',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
               >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M13.8078 1.24939L5.09535 12.1399L0.305542 7.15056L1.74832 5.7655L4.95851 9.10944L12.2461 0L13.8078 1.24939Z"
-                  fill="white"
-                />
-              </svg>
-            ))}
-          {!done && step}
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          width: '95px',
-          margin: '0px auto 24px auto',
-          textAlign: 'center',
-        }}
-      >
-        <Typography
-          variant="label3"
-          fontSize="14px"
-          fontWeight="500"
-          sx={{
-            margin: 'auto',
-            height: 'fit-contetn',
-          }}
-        >
-          {headline}
-        </Typography>
+                <Typography
+                  variant="label3"
+                  fontSize="12px"
+                  sx={{
+                    paddingBottom: '5px',
+                    textAlign: 'center'
+                  }}
+                >
+                  {tooltipText}
+                </Typography>
+              </Link>
+            }
+          </Box>
+        </Box>
+
+        <Box className="stepHeadline">
+          <Typography
+            variant="label3"
+            fontSize="14px"
+            fontWeight="500"
+            sx={{
+              margin: 'auto',
+              height: 'fit-contetn',
+            }}
+          >
+            {headline}
+          </Typography>
+        </Box>
       </Box>
     </Box>
   )

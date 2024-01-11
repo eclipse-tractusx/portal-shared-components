@@ -19,10 +19,11 @@
  ********************************************************************************/
 
 import { useState } from 'react'
-import { Typography, Link } from '@mui/material'
+import { Typography, Link, Box } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 import CloseIcon from '@mui/icons-material/Close'
 import type { TableType } from './types'
 import { Input } from '../Input'
@@ -35,6 +36,7 @@ export const VerticalTable = ({
   data: TableType
   handleEdit?: (inputValue: string) => void
 }) => {
+  const [copied, setCopied] = useState<string>('')
   const [inputField, setInputField] = useState<{
     row: unknown
     column: unknown
@@ -103,6 +105,8 @@ export const VerticalTable = ({
     )
   }
 
+  const renderTextvalue = (text: string | undefined) => text ?? ''
+
   return (
     <table
       style={{ width: '100%', borderCollapse: 'collapse' }}
@@ -144,8 +148,8 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                    inputField.row === r &&
-                    inputField.column === c ? (
+                      inputField.row === r &&
+                      inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
@@ -168,13 +172,45 @@ export const VerticalTable = ({
                         </Typography>
                       </Link>
                     )}
+                    {data?.edit?.[r]?.[c].copyValue &&
+                      (
+                        c !== 0 &&
+                        <Box
+                          sx={{
+                            cursor: 'pointer',
+                            display: 'flex',
+                            color: copied === data?.edit?.[r]?.[c].copyValue ? '#00cc00' : '#eeeeee',
+                            ':hover': {
+                              color: copied === data?.edit?.[r]?.[c].copyValue ? '#00cc00' : '#cccccc',
+                            },
+                          }}
+                          onClick={() => {
+                            void (async () => {
+                              const value = renderTextvalue(data?.edit?.[r]?.[c].copyValue?.toString())
+                              await navigator.clipboard.writeText(value)
+                              setCopied(value)
+                              setTimeout(() => {
+                                setCopied('')
+                              }, 1000)
+                            })()
+                          }}
+                        >
+                          <ContentCopyIcon
+                            sx={{
+                              fontSize: '18px',
+                              marginLeft: '10px',
+                            }}
+                          />
+                        </Box>
+                      )
+                    }
                     {data?.edit?.[r]?.[c].icon &&
                       !inputField &&
                       (c === 0 ? (
                         <Tooltips
                           color="dark"
                           tooltipPlacement="bottom-start"
-                          tooltipText={data?.edit?.[r][c].inputValue ?? ''}
+                          tooltipText={renderTextvalue(data?.edit?.[r][c].inputValue)}
                         >
                           <HelpOutlineIcon
                             sx={{
