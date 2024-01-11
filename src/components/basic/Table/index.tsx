@@ -130,6 +130,7 @@ export const Table = ({
     (selectedIds: GridRowSelectionModel) => {
       const idsArr: string[] = []
       rows.map((row) => {
+        // eslint-disable-next-line
         return selectedIds.map(
           (selectedId: GridRowId) =>
             selectedId.toString().includes(row.companyUserId) &&
@@ -203,11 +204,13 @@ export const Table = ({
               outline: 'none',
             },
         }}
+        // eslint-disable-next-line
         getRowId={(row) => row.id}
         components={{
           Toolbar: () => toolbarView(),
           NoRowsOverlay,
         }}
+        // eslint-disable-next-line
         onRowSelectionModelChange={handleOnCellClick}
         {...{
           rows,
