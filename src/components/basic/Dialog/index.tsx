@@ -52,7 +52,7 @@ export const Dialog = ({
     modalBorderRadius && modalBorderRadius !== 0 ? modalBorderRadius : 20
 
   const fullScreenWidth = `calc(100vw - ${theme.spacing(8)})`
-
+  // eslint-disable-next-line
   const defaultWidth = maxWidth || notWeb ? 'auto' : MODAL_DEFAULT_WIDTH
   const width = fullWidth ? fullScreenWidth : defaultWidth
 
