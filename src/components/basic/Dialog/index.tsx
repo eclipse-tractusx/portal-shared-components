@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useTheme } from '@mui/material'
+import { useTheme, useMediaQuery } from '@mui/material'
 import MuiDialog, {
   type DialogProps as MuiDialogProps,
 } from '@mui/material/Dialog'
@@ -46,13 +46,14 @@ export const Dialog = ({
   ...props
 }: DialogProps & AddtionalDialogProps) => {
   const theme = useTheme()
+  const notWeb = useMediaQuery('(max-width:1023px)')
 
   const radius =
     modalBorderRadius && modalBorderRadius !== 0 ? modalBorderRadius : 20
 
   const fullScreenWidth = `calc(100vw - ${theme.spacing(8)})`
 
-  const defaultWidth = maxWidth ? 'auto' : MODAL_DEFAULT_WIDTH
+  const defaultWidth = maxWidth || notWeb ? 'auto' : MODAL_DEFAULT_WIDTH
   const width = fullWidth ? fullScreenWidth : defaultWidth
 
   return (
