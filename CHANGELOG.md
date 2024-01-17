@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.17
+
+- fix(eslint): enable no-unsafe-return rule
+
 ## 2.1.16
 
 - Add copy icon functionality in static table row
