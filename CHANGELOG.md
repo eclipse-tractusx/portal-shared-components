@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.18
+
+- Add Accordion actions functionality in Accordion
+
 ## 2.1.17
 
 - fix(eslint): enable no-unsafe-return rule
