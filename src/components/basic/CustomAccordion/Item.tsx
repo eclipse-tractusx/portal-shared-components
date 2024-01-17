@@ -22,7 +22,7 @@ import React from 'react'
 import Accordion, { type AccordionProps } from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
-import { Box, Typography } from '@mui/material'
+import { AccordionActions, Box, Button, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 export interface CustomAccordionProps extends AccordionProps {
@@ -32,6 +32,7 @@ export interface CustomAccordionProps extends AccordionProps {
   children: React.ReactElement
   color?: string
   icon?: React.ReactElement
+  buttonText?: string
   titleElement?: React.ReactElement
 }
 
@@ -42,9 +43,11 @@ export const CustomAccordionItem = ({
   children,
   color,
   icon,
+  buttonText,
   titleElement,
   ...props
 }: CustomAccordionProps) => {
+  const onChange = {...props}.onChange
   return (
     <Accordion
       expanded={expanded}
@@ -81,6 +84,14 @@ export const CustomAccordionItem = ({
       <AccordionDetails sx={{ mb: 5, bgcolor: color }}>
         {children}
       </AccordionDetails>
+      {
+        buttonText &&
+        <AccordionActions onClick={(e) => { onChange?.(e, false)} }>
+          <Button variant="contained" size="small">
+            {buttonText}
+          </Button>
+        </AccordionActions>
+      }
     </Accordion>
   )
 }

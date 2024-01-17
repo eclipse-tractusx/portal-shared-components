@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, Divider, Typography } from '@mui/material'
+import { Box, Button, Divider, Typography } from '@mui/material'
 import { ComponentStory } from '@storybook/react'
 import { CustomAccordion as Component } from '.'
 import { Table } from '../StaticTable/StaticTable.stories'
@@ -43,6 +43,7 @@ const item_1_open: CustomAccordionProps = {
   id: 'panel-1',
   title: 'First Item',
   icon: <HomeOutlinedIcon />,
+  buttonText: 'Close',
   children: <Typography>Content of the first item</Typography>,
 }
 
