@@ -26,7 +26,10 @@ interface UserMenuProps {
   userName: string
   userRole: string
   top?: number
+  width?: number
+  position?: string
   children?: React.ReactElement[]
+  shadow?: boolean
   onClickAway?: (event: MouseEvent | TouchEvent) => void
 }
 
@@ -36,6 +39,9 @@ export const UserMenu = ({
   userRole,
   children,
   top = 0,
+  width = 256,
+  position = 'absolute',
+  shadow = true,
   onClickAway = () => {
     // empty
   },
@@ -49,11 +55,11 @@ export const UserMenu = ({
         display={open ? 'block' : 'none'}
         sx={{
           borderRadius: 4,
-          backgroundColor: 'background.background01',
-          boxShadow: shadows['20'],
-          width: 256,
+          backgroundColor: shadow ? 'background.background01' : '#fff',
+          boxShadow: shadow ? shadows['20'] : 'none',
+          width: width,
           overflow: 'hidden',
-          position: 'absolute',
+          position: position,
           right: 0,
           top,
         }}
@@ -61,7 +67,7 @@ export const UserMenu = ({
       >
         <Box
           sx={{
-            backgroundColor: 'background.background02',
+            backgroundColor: shadow ? 'background.background02' : '#fff',
             borderBottom: '1px solid',
             borderColor: 'border.border01',
             padding: spacing(2, 3),
