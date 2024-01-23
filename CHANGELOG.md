@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.19
+
+- fix(dialog): multi device support
+
 ## 2.1.18
 
 - fix(usermenu): extend props - position and shadow
