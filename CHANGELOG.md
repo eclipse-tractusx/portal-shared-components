@@ -1,8 +1,8 @@
 # Changelog
 
-## 2.1.18
+## 2.1.20
 
-- Add Accordion actions functionality in Accordion
+- Add accordion actions functionality in accordions
 
 ## 2.1.17
 

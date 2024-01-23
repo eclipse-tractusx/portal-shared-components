@@ -86,7 +86,7 @@ export const CustomAccordionItem = ({
       </AccordionDetails>
       {
         buttonText &&
-        <AccordionActions onClick={(e) => { onChange?.(e, false)} }>
+        <AccordionActions onClick={(e) => { onChange?.(e, false)} } sx={{justifyContent: 'center'}}>
           <Button variant="contained" size="small">
             {buttonText}
           </Button>

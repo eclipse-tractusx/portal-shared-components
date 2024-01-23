@@ -22,11 +22,9 @@ import { useState } from 'react'
 import { CustomAccordionItem, type CustomAccordionProps } from './Item'
 
 export const CustomAccordion = ({
-  items,
-  buttonText,
+  items
 }: {
   items: CustomAccordionProps[],
-  buttonText: string
 }) => {
   const defaultExpanded = items.map((item) => (item.expanded ? item.id : ''))[0]
   const [expanded, setExpanded] = useState<string | false>(defaultExpanded)
@@ -41,7 +39,7 @@ export const CustomAccordion = ({
       {items.map((item) => {
         item.expanded = expanded === item.id
         item.onChange = handleChange(item.id)
-        return <CustomAccordionItem buttonText={buttonText} {...item} key={item.id} />
+        return <CustomAccordionItem {...item} key={item.id} />
       })}
     </>
   )
