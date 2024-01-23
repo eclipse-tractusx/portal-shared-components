@@ -4,6 +4,14 @@
 
 - Add accordion actions functionality in accordions
 
+## 2.1.19
+
+- fix(dialog): multi device support
+
+## 2.1.18
+
+- fix(usermenu): extend props - position and shadow
+
 ## 2.1.17
 
 - fix(eslint): enable no-unsafe-return rule
