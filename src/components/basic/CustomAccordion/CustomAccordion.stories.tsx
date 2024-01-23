@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, Button, Divider, Typography } from '@mui/material'
+import { Box, Divider, Typography } from '@mui/material'
 import { ComponentStory } from '@storybook/react'
 import { CustomAccordion as Component } from '.'
 import { Table } from '../StaticTable/StaticTable.stories'
