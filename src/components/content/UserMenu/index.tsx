@@ -20,17 +20,17 @@
 
 import { Box, ClickAwayListener, useTheme } from '@mui/material'
 import { Typography } from '../../basic/Typography'
+import { type Theme } from '@mui/material/styles'
+import { type SxProps } from '@mui/system'
 
 interface UserMenuProps {
   open: boolean
   userName: string
   userRole: string
-  top?: number
-  width?: number
-  position?: string
   children?: React.ReactElement[]
   shadow?: boolean
   onClickAway?: (event: MouseEvent | TouchEvent) => void
+  sx?: SxProps<Theme>
 }
 
 export const UserMenu = ({
@@ -38,9 +38,11 @@ export const UserMenu = ({
   userName,
   userRole,
   children,
-  top = 0,
-  width = 256,
-  position = 'absolute',
+  sx = {
+    top: '0px',
+    width: '256px',
+    position: 'absolute',
+  },
   shadow = true,
   onClickAway = () => {
     // empty
@@ -57,11 +59,9 @@ export const UserMenu = ({
           borderRadius: 4,
           backgroundColor: shadow ? 'background.background01' : '#fff',
           boxShadow: shadow ? shadows['20'] : 'none',
-          width: width,
           overflow: 'hidden',
-          position: position,
           right: 0,
-          top,
+          ...sx,
         }}
         {...props}
       >
