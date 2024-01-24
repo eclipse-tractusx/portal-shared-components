@@ -43,6 +43,7 @@ const item_1_open: CustomAccordionProps = {
   id: 'panel-1',
   title: 'First Item',
   icon: <HomeOutlinedIcon />,
+  buttonText: 'Close',
   children: <Typography>Content of the first item</Typography>,
 }
 

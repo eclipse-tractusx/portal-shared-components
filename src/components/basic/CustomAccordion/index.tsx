@@ -22,9 +22,9 @@ import { useState } from 'react'
 import { CustomAccordionItem, type CustomAccordionProps } from './Item'
 
 export const CustomAccordion = ({
-  items,
+  items
 }: {
-  items: CustomAccordionProps[]
+  items: CustomAccordionProps[],
 }) => {
   const defaultExpanded = items.map((item) => (item.expanded ? item.id : ''))[0]
   const [expanded, setExpanded] = useState<string | false>(defaultExpanded)

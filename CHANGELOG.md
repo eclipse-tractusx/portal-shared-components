@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.20
+
+- Add accordion actions functionality in accordions
+
 ## 2.1.19
 
 - fix(dialog): multi device support
