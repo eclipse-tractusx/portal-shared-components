@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.21
+
+- Add option to give an image element to Cards
+
 ## 2.1.20
 
 - Add accordion actions functionality in accordions
