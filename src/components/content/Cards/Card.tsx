@@ -85,6 +85,7 @@ export const Card = ({
   imageSize,
   imageShape,
   imageLoader,
+  imageElement,
   buttonText,
   onClick,
   onButtonClick,
@@ -243,6 +244,7 @@ export const Card = ({
             imageSize={imageSize}
             imageShape={imageShape}
             imageLoader={imageLoader}
+            imageElement={imageElement}
             preview={variant === 'preview'}
           />
           {subscriptionStatus && (

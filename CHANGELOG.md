@@ -1,8 +1,12 @@
 # Changelog
 
-## 2.1.21
+## 2.1.22
 
 - Update default value functionality to select list
+
+## 2.1.21
+
+- Add option to give an image element to Cards
 
 ## 2.1.20
 

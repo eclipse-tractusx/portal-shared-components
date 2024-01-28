@@ -35,8 +35,8 @@ export interface CardImageProps {
   imageSize?: CardImageSize
   imageShape?: CardImageShape
   imageLoader?: (src: string) => Promise<ArrayBuffer>
-  preview?: boolean
   imageElement?: JSX.Element
+  preview?: boolean
 }
 
 export const CardImage = ({
@@ -44,8 +44,8 @@ export const CardImage = ({
   imageSize = 'normal',
   imageShape = 'round',
   imageLoader,
-  preview = false,
   imageElement,
+  preview = false,
 }: CardImageProps) => {
   const { transitions } = useTheme()
   const withPreview = (size: number) => (preview ? size + 18 : size)
