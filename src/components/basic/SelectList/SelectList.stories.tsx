@@ -79,6 +79,7 @@ SelectList.args = {
   clearText: 'clear',
   noOptionsText: 'No Options',
   popperHeight: 0, // 0 = auto size
+  defaultValue: countries[0],
   onChangeItem: (item: any) => console.log('selected:', item),
   keyTitle: 'title',
 }

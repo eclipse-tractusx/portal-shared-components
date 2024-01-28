@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.21
+
+- Update default value functionality to select list
+
 ## 2.1.20
 
 - Add accordion actions functionality in accordions
