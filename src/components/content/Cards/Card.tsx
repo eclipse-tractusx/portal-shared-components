@@ -122,8 +122,7 @@ export const Card = ({
 
   useEffect(() => {
     sortOption !== '' &&
-      submenuClick !== undefined &&
-      submenuClick(sortOption, id)
+      submenuClick?.(sortOption, id)
   }, [sortOption, submenuClick, id])
 
   useEffect(() => {
