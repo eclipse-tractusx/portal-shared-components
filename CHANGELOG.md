@@ -2,7 +2,7 @@
 
 ## 2.1.22
 
-- Update default value functionality to select list
+- Select list default value functionality fix
 
 ## 2.1.21
 
