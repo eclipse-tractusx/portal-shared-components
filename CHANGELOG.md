@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.23
+
+- Render images directly with loader when specified
+
 ## 2.1.22
 
 - Select list default value functionality fix
