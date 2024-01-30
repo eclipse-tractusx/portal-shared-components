@@ -1,6 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 BMW Group AG
- * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2021, 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -69,13 +68,23 @@ export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
     }
   }, [src, loader])
 
+  const renderByLoader = () => {
+    setLoad(true)
+    getData().catch((e) => {
+      setError(true)
+    })
+    return <img src={LogoGrayData} alt={alt ?? 'Catena-X'} />
+  }
+
   useEffect(() => {
     setError(false)
     setLoad(false)
     setData(src)
   }, [src])
 
-  return (
+  return loader ? (
+    renderByLoader()
+  ) : (
     <img
       src={!load && !error && src.startsWith('blob:') ? src : data}
       alt={alt ?? 'Catena-X'}
