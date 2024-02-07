@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.24
+
+- Orderstatus button ui changes
+
 ## 2.1.23
 
 - Render images directly with loader when specified
