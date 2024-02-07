@@ -68,23 +68,13 @@ export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
     }
   }, [src, loader])
 
-  const renderByLoader = () => {
-    setLoad(true)
-    getData().catch((e) => {
-      setError(true)
-    })
-    return <img src={LogoGrayData} alt={alt ?? 'Catena-X'} />
-  }
-
   useEffect(() => {
     setError(false)
     setLoad(false)
     setData(src)
   }, [src])
 
-  return loader ? (
-    renderByLoader()
-  ) : (
+  return (
     <img
       src={!load && !error && src.startsWith('blob:') ? src : data}
       alt={alt ?? 'Catena-X'}
