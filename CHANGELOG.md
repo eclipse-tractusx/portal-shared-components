@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.25
+
+- Orderstatus button ui changes
+
 ## 2.1.24
 
 - Fix image rerender bug

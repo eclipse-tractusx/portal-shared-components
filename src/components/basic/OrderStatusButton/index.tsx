@@ -63,11 +63,11 @@ export const OrderStatusButton = ({
       <Button
         key={numberLabel}
         sx={{
-          width: '80%',
+          width: '28%',
           position: 'relative',
           zIndex,
-          paddingLeft: '74px',
-          marginLeft: '-50px',
+          paddingLeft: '50px',
+          marginLeft: '-40px',
           color: '#2a2a2a',
           background,
           height: '55px',
@@ -106,7 +106,12 @@ export const OrderStatusButton = ({
             {numberLabel}
           </Typography>
         )}
-        <Typography variant="label5">{buttonLabel}</Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: '11px'
+          }}
+        >{buttonLabel}</Typography>
       </Button>
     )
   }
@@ -114,7 +119,6 @@ export const OrderStatusButton = ({
   return (
     <Box
       sx={{
-        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
@@ -127,7 +131,6 @@ export const OrderStatusButton = ({
         onClick={handleClick}
         sx={{
           fontSize: '16px',
-          width: '100%',
           position: 'relative',
           zIndex: '5',
           cursor: selectable ? 'pointer' : 'default',
