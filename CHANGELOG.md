@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.24
+
+- Fix image rerender bug
+
 ## 2.1.23
 
 - Render images directly with loader when specified
