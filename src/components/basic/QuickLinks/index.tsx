@@ -23,14 +23,16 @@ import MuiButton, {
 } from '@mui/material/Button'
 import { Typography } from '../Typography'
 
+export interface QuickLinksItems {
+  backgroundColor: string
+  title: string
+  url: string
+}
+
 export interface QuickLinksProps
   extends Omit<MuiQuickLinksProps, 'color' | 'size'> {
   size: 'medium'
-  items: {
-    backgroundColor: string
-    title: string
-    url: string
-  }[]
+  items: QuickLinksItems[]
   color?: string
   headerTitle?: string
   alignButtons?: string
@@ -61,7 +63,7 @@ export const QuickLinks = ({
           margin: '10px',
         }}
       >
-        {items?.map((data: any) => {
+        {items.map((data: QuickLinksItems) => {
           return (
             <div key={data.title}>
               <MuiButton
@@ -70,7 +72,7 @@ export const QuickLinks = ({
                 sx={{
                   background: data.backgroundColor,
                   padding: '12px 22px',
-                  color: color,
+                  color,
                   margin: '0px 12px',
                   whiteSpace: 'nowrap',
                 }}
