@@ -57,7 +57,7 @@ export const QuickLinks = ({
       {headerTitle && <Typography variant="h4">{headerTitle}</Typography>}
       <Box
         sx={{
-          display: 'flex',
+          display: 'block',
           justifyContent: alignButtons,
           padding: '10px',
           margin: '10px',
@@ -65,21 +65,23 @@ export const QuickLinks = ({
       >
         {items.map((data: QuickLinksItems) => {
           return (
-            <div key={data.title}>
-              <MuiButton
-                {...props}
-                onClick={() => window.open(data.url, '_blank')}
-                sx={{
-                  background: data.backgroundColor,
-                  padding: '12px 22px',
-                  color,
-                  margin: '0px 12px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {data.title}
-              </MuiButton>
-            </div>
+            <MuiButton
+              {...props}
+              onClick={() => window.open(data.url, '_blank')}
+              sx={{
+                background: data.backgroundColor,
+                padding: '12px 22px',
+                color,
+                margin: '0px 12px',
+                whiteSpace: 'nowrap',
+                display: 'inline-flex',
+                position: 'relative',
+                marginBottom: '12px'
+              }}
+              key={data.title}
+            >
+              {data.title}
+            </MuiButton>
           )
         })}
       </Box>
