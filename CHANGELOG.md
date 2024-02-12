@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.26
+
+- added new quick links component
+
 ## 2.1.25
 
 - Orderstatus button ui changes
