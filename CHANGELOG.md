@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.27
+
+- fix quick links style
+
 ## 2.1.26
 
 - added new quick links component

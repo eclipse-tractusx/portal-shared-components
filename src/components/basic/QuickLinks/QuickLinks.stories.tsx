@@ -30,9 +30,8 @@ const Template = (args: any) => <Component {...args} />
 
 export const QuickLinks = Template.bind({})
 QuickLinks.args = {
-  size: 'medium',
   headerTitle: 'Quick Links',
-  alignButtons: 'center',
+  alignButtons: 'left',
   items: [
     {
       backgroundColor: '#e2e2e4',
