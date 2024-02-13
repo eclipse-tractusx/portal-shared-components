@@ -30,8 +30,7 @@ export interface QuickLinksItems {
 }
 
 export interface QuickLinksProps
-  extends Omit<MuiQuickLinksProps, 'color' | 'size'> {
-  size: 'medium'
+  extends Omit<MuiQuickLinksProps, 'color' > {
   items: QuickLinksItems[]
   color?: string
   headerTitle?: string
@@ -40,7 +39,6 @@ export interface QuickLinksProps
 }
 
 export const QuickLinks = ({
-  size = 'medium',
   items = [],
   color = 'black',
   headerTitle,
@@ -57,7 +55,7 @@ export const QuickLinks = ({
       {headerTitle && <Typography variant="h4">{headerTitle}</Typography>}
       <Box
         sx={{
-          display: 'block',
+          display: 'flex',
           justifyContent: alignButtons,
           padding: '10px',
           margin: '10px',
