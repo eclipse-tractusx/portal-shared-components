@@ -1,8 +1,12 @@
 # Changelog
 
-## 2.1.27
+## 2.1.28
 
 - fix more button issue in page loading component
+
+## 2.1.27
+
+- fix quick links style
 
 ## 2.1.26
 
