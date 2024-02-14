@@ -36,11 +36,10 @@ export interface PageDataRows {
 
 export const hasMorePages = (data: PageDataProps) => {
   return (
-    (data.page && data.totalPages && data?.page < data?.totalPages - 1) ??
-    (data?.meta && data.meta.page < data.meta.totalPages - 1)
+    data?.meta && data.meta.page < data.meta.totalPages - 1
   )
 }
 
 export const getMaxRows = (data: PageDataRows) => {
-  return data?.totalElements ?? data?.meta?.totalElements ?? 0
+  return data?.meta?.totalElements ?? 0
 }
