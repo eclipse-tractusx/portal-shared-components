@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.28
+
+- Fix quick links interface
+
 ## 2.1.27
 
 - fix quick links style

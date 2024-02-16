@@ -34,25 +34,24 @@ QuickLinks.args = {
   alignButtons: 'left',
   items: [
     {
-      backgroundColor: '#e2e2e4',
+      background: '#e2e2e4',
       title: 'Order Status',
-      url: 'https://portal.dev.demo.catena-x.net/documentation/',
+      navigate: '/',
     },
     {
-      backgroundColor: '#e2e2e4',
+      background: '#e2e2e4',
       title: 'shopping-help',
-      url: 'https://portal.dev.demo.catena-x.net/documentation/',
+      navigate: '/',
     },
     {
-      backgroundColor: '#e2e2e4',
+      background: '#e2e2e4',
       title: 'Returns',
-      url: 'https://portal.dev.demo.catena-x.net/documentation/',
+      navigate: '/',
     },
     {
-      backgroundColor: '#e2e2e4',
+      background: '#e2e2e4',
       title: 'Your Saves',
-      url: 'https://portal.dev.demo.catena-x.net/documentation/',
+      navigate: '/',
     },
   ],
 }
-
