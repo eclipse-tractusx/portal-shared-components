@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.29
+
+- fix more button issue in page loading component
+
 ## 2.1.28
 
 - upgrade node-ip package (transitive dependency over @storybook/core-server) to remove CVE-2023-42282
