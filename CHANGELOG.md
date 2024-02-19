@@ -3,6 +3,7 @@
 ## 2.1.28
 
 - upgrade node-ip package (transitive dependency over @storybook/core-server) to remove CVE-2023-42282
+- remove catenax-ng picture references
 
 ## 2.1.27
 
