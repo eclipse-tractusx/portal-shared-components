@@ -29,7 +29,7 @@ export default meta
 export const Default: StoryObj<typeof Component> = {
   args: {
     baseUrl:
-      'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/',
+      'https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/',
     align: 'center',
     provider: {
       detailsWithImageRow1: [

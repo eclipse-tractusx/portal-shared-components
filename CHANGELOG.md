@@ -4,6 +4,15 @@
 
 - Fix quick links interface
 
+## 2.1.29
+
+- fix more button issue in page loading component
+
+## 2.1.28
+
+- upgrade node-ip package (transitive dependency over @storybook/core-server) to remove CVE-2023-42282
+- remove catenax-ng picture references
+
 ## 2.1.27
 
 - fix quick links style

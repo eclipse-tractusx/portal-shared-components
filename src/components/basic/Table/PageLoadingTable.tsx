@@ -138,7 +138,7 @@ export const PageLoadingTable = function <Row, Args>({
         reload={refetch}
         {...props}
       />
-      {items.length > 0 && hasMore && (
+      {items.length > 0 && hasMore ? (
         <Box
           sx={{
             width: '100%',
@@ -150,6 +150,8 @@ export const PageLoadingTable = function <Row, Args>({
         >
           <LoadMoreButton label={loadLabel || 'load more'} onClick={nextPage} />
         </Box>
+      ) : (
+        <></>
       )}
     </>
   )
