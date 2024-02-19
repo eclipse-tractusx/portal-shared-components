@@ -406,7 +406,7 @@ npm/npmjs/-/inflight/1.0.6, ISC, approved, clearlydefined
 npm/npmjs/-/inherits/2.0.4, ISC, approved, clearlydefined
 npm/npmjs/-/internal-slot/1.0.5, MIT, approved, #7118
 npm/npmjs/-/interpret/1.4.0, MIT, approved, clearlydefined
-npm/npmjs/-/ip/2.0.0, MIT, approved, clearlydefined
+npm/npmjs/-/ip/2.0.1, MIT, approved, #13289
 npm/npmjs/-/ipaddr.js/1.9.1, MIT, approved, clearlydefined
 npm/npmjs/-/is-absolute-url/3.0.3, MIT, approved, clearlydefined
 npm/npmjs/-/is-arguments/1.1.1, MIT, approved, clearlydefined
