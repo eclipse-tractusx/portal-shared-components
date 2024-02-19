@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.28
+
+- upgrade node-ip package (transitive dependency over @storybook/core-server) to remove CVE-2023-42282
+
 ## 2.1.27
 
 - fix quick links style
