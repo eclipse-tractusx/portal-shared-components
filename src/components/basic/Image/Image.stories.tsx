@@ -101,7 +101,7 @@ const drawing = ((): string => {
 
 export const FromURL: StoryObj<typeof Component> = {
   args: {
-    src: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/images/logos/cx-short.svg',
+    src: 'https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/images/logos/cx-short.svg',
     style,
   },
 }
