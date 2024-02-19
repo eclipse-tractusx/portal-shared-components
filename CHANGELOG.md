@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.30
+
+- Fix quick links interface
+
 ## 2.1.29
 
 - fix more button issue in page loading component

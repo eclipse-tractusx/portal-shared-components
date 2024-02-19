@@ -24,13 +24,12 @@ import MuiButton, {
 import { Typography } from '../Typography'
 
 export interface QuickLinksItems {
-  backgroundColor: string
   title: string
-  url: string
+  background: string
+  navigate: string
 }
 
-export interface QuickLinksProps
-  extends Omit<MuiQuickLinksProps, 'color' > {
+export interface QuickLinksProps extends Omit<MuiQuickLinksProps, 'color'> {
   items: QuickLinksItems[]
   color?: string
   headerTitle?: string
@@ -55,7 +54,7 @@ export const QuickLinks = ({
       {headerTitle && <Typography variant="h4">{headerTitle}</Typography>}
       <Box
         sx={{
-          display: 'flex',
+          display: 'inline-block',
           justifyContent: alignButtons,
           padding: '10px',
           margin: '10px',
@@ -65,18 +64,18 @@ export const QuickLinks = ({
           return (
             <MuiButton
               {...props}
-              onClick={() => window.open(data.url, '_blank')}
+              key={data.title}
+              onClick={() => window.open(data.navigate, '_blank')}
               sx={{
-                background: data.backgroundColor,
+                background: data.background,
                 padding: '12px 22px',
                 color,
                 margin: '0px 12px',
                 whiteSpace: 'nowrap',
                 display: 'inline-flex',
                 position: 'relative',
-                marginBottom: '12px'
+                marginBottom: '12px',
               }}
-              key={data.title}
             >
               {data.title}
             </MuiButton>
@@ -86,4 +85,3 @@ export const QuickLinks = ({
     </Box>
   )
 }
-
