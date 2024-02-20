@@ -20,7 +20,6 @@
 
 import { Box, useMediaQuery, useTheme } from '@mui/material'
 import { Image } from '../../Image'
-import { mainNavigationHeight } from '../../MainNavigation'
 import { MainHeaderTitle } from './Components/MainHeaderTitle'
 
 export interface MainHeaderProps {
