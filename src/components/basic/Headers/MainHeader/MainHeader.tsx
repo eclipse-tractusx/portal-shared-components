@@ -127,7 +127,6 @@ export const MainHeader = ({
       sx={{
         width: '100%',
         height: `${headerHeight}px`,
-        marginTop: `${-mainNavigationHeight}px`,
         position: 'relative',
         background: `linear-gradient(${backgroundstyle().direction}deg, ${
           backgroundstyle().colorFrom
