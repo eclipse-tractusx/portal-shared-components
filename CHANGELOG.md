@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.31
+
+- Remove margintop from main header to avoid overriding
+
 ## 2.1.30
 
 - Fix quick links interface
