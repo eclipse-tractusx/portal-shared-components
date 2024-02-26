@@ -32,6 +32,7 @@ export interface UltimateToolbarProps extends ToolbarProps {
   selectedFilter?: SelectedFilter
   searchDebounce?: number
   searchExpr?: string
+  autoFocus?: boolean
 }
 
 export const UltimateToolbar = ({
@@ -44,6 +45,7 @@ export const UltimateToolbar = ({
   searchInputData,
   onClearSearch,
   searchDebounce = 500,
+  autoFocus,
 }: UltimateToolbarProps) => {
   const { spacing } = useTheme()
   const [searchInput, setSearchInput] = useState<string>(
@@ -114,7 +116,7 @@ export const UltimateToolbar = ({
       {onSearch != null && (
         <Box sx={{ display: 'flex', alignItems: 'center', height: '50px' }}>
           <SearchInput
-            autoFocus
+            autoFocus={autoFocus}
             endAdornment={endAdornment}
             value={searchInput}
             onChange={onSearchChange}

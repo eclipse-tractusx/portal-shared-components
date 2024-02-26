@@ -70,6 +70,7 @@ export interface TableProps extends DataGridProps {
     status: number
   }
   reload?: () => void
+  autoFocus?: boolean
 }
 
 export const Table = ({
@@ -103,6 +104,7 @@ export const Table = ({
   alignCell = 'center',
   error,
   reload,
+  autoFocus = true,
   ...props
 }: TableProps) => {
   const toolbarProps = {
@@ -122,6 +124,7 @@ export const Table = ({
     descriptionText,
     defaultFilter,
     filterViews,
+    autoFocus,
   }
 
   // TODO: this method contains application specific row attributes and must therefore

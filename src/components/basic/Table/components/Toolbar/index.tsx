@@ -67,6 +67,7 @@ export interface ToolbarProps {
   onOpenFilterSection?: (value: boolean) => void
   selectedFilter?: SelectedFilter
   onClearSearch?: () => void
+  autoFocus?: boolean
 }
 
 const getIconColor = (openFilter: boolean) => {
@@ -92,6 +93,7 @@ export const Toolbar = ({
   onOpenFilterSection,
   selectedFilter,
   onClearSearch,
+  autoFocus,
 }: ToolbarProps) => {
   const { spacing } = useTheme()
   const isSearchText = searchExpr && searchExpr !== ''
@@ -213,7 +215,7 @@ export const Toolbar = ({
         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           {openSearch ? (
             <SearchInput
-              autoFocus
+              autoFocus={autoFocus}
               endAdornment={getEndAdornment()}
               value={searchInput}
               onChange={onSearchInputChange}

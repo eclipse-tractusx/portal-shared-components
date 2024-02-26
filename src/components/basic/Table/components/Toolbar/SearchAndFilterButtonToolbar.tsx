@@ -36,6 +36,7 @@ export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   defaultFilter?: string
   onFilter?: (selectedFilter: SelectedFilter) => void
   descriptionText?: string
+  autoFocus?: boolean
 }
 
 export const SearchAndFilterButtonToolbar = ({
@@ -49,6 +50,7 @@ export const SearchAndFilterButtonToolbar = ({
   filterViews,
   defaultFilter = '',
   descriptionText,
+  autoFocus,
 }: SearchAndFilterButtonToolbarProps) => {
   const [searchInputText, setSearchInputText] = useState<string>(
     searchExpr ?? (searchInputData != null ? searchInputData.text : '')
@@ -115,7 +117,7 @@ export const SearchAndFilterButtonToolbar = ({
     <Box sx={styles}>
       <Box sx={{ display: 'flex', alignItems: 'center', height: '50px' }}>
         <SearchInput
-          autoFocus
+          autoFocus={autoFocus}
           endAdornment={endAdornment}
           value={searchInputText}
           onChange={onSearchChange}

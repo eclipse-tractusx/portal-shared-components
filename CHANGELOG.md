@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.32
+
+- Add autoFocus props to the table component
+
 ## 2.1.31
 
 - Remove margintop from main header to avoid overriding
