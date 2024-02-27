@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.33
+
+- Fix quick links styles
+
 ## 2.1.32
 
 - Add autoFocus props to the table component

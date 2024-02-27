@@ -54,8 +54,7 @@ export const QuickLinks = ({
       {headerTitle && <Typography variant="h4">{headerTitle}</Typography>}
       <Box
         sx={{
-          display: 'inline-block',
-          justifyContent: alignButtons,
+          textAlign: alignButtons,
           padding: '10px',
           margin: '10px',
         }}
@@ -72,9 +71,12 @@ export const QuickLinks = ({
                 color,
                 margin: '0px 12px',
                 whiteSpace: 'nowrap',
-                display: 'inline-flex',
-                position: 'relative',
                 marginBottom: '12px',
+                textTransform: 'none',
+                boxShadow: 'none !important',
+                '&:hover': {
+                  backgroundColor: data.background,
+                },
               }}
             >
               {data.title}
