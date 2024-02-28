@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.34
+
+- Fix incomplete string escaping and encoding in DropPreview
+
 ## 2.1.33
 
 - Fix quick links styles
