@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.34
+
+- Update sub savigation header title and button styles
+
 ## 2.1.33
 
 - Fix quick links styles
