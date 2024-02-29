@@ -84,8 +84,8 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
     numTotal: number
   }) => {
     const uploadProgress = translations.uploadProgess
-      .replace('%', numUploaded.toString())
-      .replace('%', numTotal.toString())
+      .replace(/%/g, encodeURIComponent(numUploaded.toString()))
+      .replace(/%/g, encodeURIComponent(numTotal.toString()))
 
     return (
       <Box sx={{ typography: 'label2' }}>
