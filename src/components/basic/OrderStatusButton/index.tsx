@@ -63,14 +63,14 @@ export const OrderStatusButton = ({
       <Button
         key={numberLabel}
         sx={{
-          width: '28%',
+          width: '32%',
           position: 'relative',
           zIndex,
           paddingLeft: '50px',
           marginLeft: '-40px',
           color: '#2a2a2a',
           background,
-          height: '55px',
+          height: '52px',
           textAlign: 'left',
           cursor: 'default',
           textTransform: 'capitalize',
