@@ -68,11 +68,11 @@ export const NewSubNavigation = ({
                   marginLeft: '10px',
                   fontSize: '14px',
                   color: '#0f71cb',
+                  textTransform: 'lowercase'
                 }}
               >
                 {header}
               </Typography>
-              {show && (
                 <Box className="navigationOverlay">
                   {navigationArray?.map((link: NavigationItem) => {
                     return (
@@ -115,6 +115,7 @@ export const NewSubNavigation = ({
                                 ? '#111111'
                                 : '#888888',
                             fontSize: '14px',
+                            textTransform: 'lowercase'
                           }}
                         >
                           {link.title}
@@ -145,6 +146,7 @@ export const NewSubNavigation = ({
                           size="small"
                           sx={{
                             marginTop: '10px',
+                            textTransform: 'lowercase'
                           }}
                         >
                           {btn.buttonLabel}
@@ -152,7 +154,6 @@ export const NewSubNavigation = ({
                       )
                     })}
                 </Box>
-              )}
             </Box>
             {buttonArray?.length === 1 && (
               <Button
@@ -165,6 +166,7 @@ export const NewSubNavigation = ({
                 size="small"
                 sx={{
                   marginTop: '10px',
+                  textTransform: 'lowercase'
                 }}
               >
                 {buttonArray[0].buttonLabel}

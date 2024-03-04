@@ -40,7 +40,7 @@ export const SubNavigationButton = ({
           color="secondary"
           variant="outlined"
           size="medium"
-          sx={{ float: 'right' }}
+          sx={{ float: 'right', textTransform: 'lowercase' }}
         >
           {buttonLabel}
         </Button>
