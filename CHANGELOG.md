@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.35
+
+- Update sub savigation header title and button styles
+
 ## 2.1.34
 
 - Fix incomplete string escaping and encoding in DropPreview
