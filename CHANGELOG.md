@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.36
+
+- Order status button ui changes
+
 ## 2.1.35
 
 - Update sub savigation header title and button styles
