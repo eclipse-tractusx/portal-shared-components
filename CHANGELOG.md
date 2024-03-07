@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.38
+
+- Moved the docs from assets to the docs/storybook directory
+
 ## 2.1.36
 
 - Order status button ui changes
