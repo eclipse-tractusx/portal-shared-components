@@ -97,9 +97,7 @@ export const MultiSelectList = ({
       ? filterOptionsArgs
       : {
           matchFrom: 'any',
-          // Add an ESLint exception until there is a solution
-          // eslint-disable-next-line
-          stringify: (option: any) => option[keyTitle],
+          stringify: (option: Record<string, string>) => option[keyTitle],
         }
   )
 
