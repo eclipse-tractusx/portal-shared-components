@@ -26,9 +26,7 @@ import { SelectedTag } from './SelectedTag'
 import { type TagSizeType } from '..'
 
 interface SelectAddMoreProps {
-  // Add an ESLint exception until there is a solution
-  // eslint-disable-next-line
-  selected: any[]
+  selected: Array<Record<string, string>>
   buttonAddMore: string
   notItemsText: string
   label: string
