@@ -4,6 +4,10 @@
 
 - Moved the docs from assets to the docs/storybook directory
 
+## 2.1.37
+
+- Fix multiselect search and selected items display issues
+
 ## 2.1.36
 
 - Order status button ui changes
