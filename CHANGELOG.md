@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.38
+
+- Fix warning about misspelled css property
+
 ## 2.1.37
 
 - Fix multiselect search and selected items display issues
