@@ -97,7 +97,7 @@ export const MultiSelectList = ({
       ? filterOptionsArgs
       : {
           matchFrom: 'any',
-          stringify: (option: { keyTitle: string }) => option.keyTitle,
+          stringify: (option: Record<string, string>) => option[keyTitle],
         }
   )
 

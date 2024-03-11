@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.38
+
+- UI updates in stepper and dialog
+
+## 2.1.37
+
+- Fix multiselect search and selected items display issues
+
 ## 2.1.36
 
 - Order status button ui changes

@@ -26,7 +26,7 @@ import { SelectedTag } from './SelectedTag'
 import { type TagSizeType } from '..'
 
 interface SelectAddMoreProps {
-  selected: Array<{ keyTitle: string }>
+  selected: Array<Record<string, string>>
   buttonAddMore: string
   notItemsText: string
   label: string
@@ -77,9 +77,9 @@ export const SelectAddMore = ({
           {selected.length > 0 ? (
             selected.map((item) => (
               <SelectedTag
-                title={item.keyTitle}
+                title={item[keyTitle]}
                 size={tagSize}
-                key={uniqueId(item.keyTitle)}
+                key={uniqueId(item[keyTitle])}
               />
             ))
           ) : (
