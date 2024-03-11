@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.39
+
+- Fix warning about misspelled css property
+
 ## 2.1.38
 
 - UI updates in stepper and dialog

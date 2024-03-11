@@ -258,7 +258,7 @@ export const Card = ({
                 textAlign: 'center',
                 textDecoration: 'none',
                 padding: '50px 90px 20px 90px',
-                '-webkit-transform': 'rotate(45deg)',
+                transform: 'rotate(45deg)',
                 zIndex: 10,
                 background:
                   subscriptionStatus?.toLowerCase() === 'pending'
