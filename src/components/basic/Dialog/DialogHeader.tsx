@@ -56,6 +56,7 @@ export const DialogHeader = ({
         padding: spacing(7, CONTENT_SPACING_RIGHT_LEFT),
         textAlign: 'center',
       }}
+      className="dialog-header-main"
     >
       {title && (
         <MuiDialogTitle
