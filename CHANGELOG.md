@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.38
+
+- UI updates in stepper and dialog
+
 ## 2.1.37
 
 - Fix multiselect search and selected items display issues
