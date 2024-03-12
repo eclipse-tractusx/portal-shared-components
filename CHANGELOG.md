@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.40
+
+- Moved the docs from assets to the docs/storybook directory
+
 ## 2.1.39
 
 - Fix warning about misspelled css property

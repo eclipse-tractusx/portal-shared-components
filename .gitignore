@@ -1,6 +1,6 @@
 dist
 node_modules
-storybook
+/storybook
 .vscode
 *.log
 *.zip
