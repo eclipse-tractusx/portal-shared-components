@@ -42,7 +42,7 @@ const stepperElements = [
   },
   {
     step: 3,
-    headline: 'Technical Integration',
+    headline: 'Responsibilities & admin account',
   },
   {
     step: 4,

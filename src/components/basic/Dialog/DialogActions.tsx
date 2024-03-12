@@ -24,9 +24,8 @@ import MuiDialogActions, {
 } from '@mui/material/DialogActions'
 import { CONTENT_SPACING_RIGHT_LEFT } from './index'
 import './Dialog.scss'
-
 export interface DialogActionProps extends MuiDialogActionsProps {
-  helperText?: string
+  helperText?: string | JSX.Element
 }
 
 export const DialogActions = ({
@@ -42,10 +41,12 @@ export const DialogActions = ({
         padding: spacing(4, CONTENT_SPACING_RIGHT_LEFT),
         backgroundColor: 'background.background09',
       }}
+      className="actions-main"
     >
       {helperText && (
         <Box
           sx={{ paddingBottom: 4, typography: 'body3', textAlign: 'center' }}
+          className="helper-text"
         >
           {helperText}
         </Box>

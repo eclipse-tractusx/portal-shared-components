@@ -60,7 +60,7 @@ export const CardDecision = ({
     <Box
       sx={{
         display: 'flex',
-        '-ms-flex-wrap': 'wrap',
+        msFlexWrap: 'wrap',
         flexWrap: 'wrap',
         justifyContent: 'center',
         marginRight: '-10px',

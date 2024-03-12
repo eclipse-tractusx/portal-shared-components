@@ -1,8 +1,16 @@
 # Changelog
 
-## 2.1.38
+## 2.1.40
 
 - Moved the docs from assets to the docs/storybook directory
+
+## 2.1.39
+
+- Fix warning about misspelled css property
+
+## 2.1.38
+
+- UI updates in stepper and dialog
 
 ## 2.1.37
 

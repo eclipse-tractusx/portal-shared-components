@@ -111,7 +111,7 @@ export const Cards = ({
     <Box
       sx={{
         display: 'flex',
-        '-ms-flex-wrap': 'wrap',
+        msFlexWrap: 'wrap',
         flexWrap: 'wrap',
         marginRight: '-10px',
         marginLeft: '-10px',
