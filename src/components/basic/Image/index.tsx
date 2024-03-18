@@ -50,44 +50,35 @@ interface ImageProps {
 }
 
 export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
-  const [data, setData] = useState(src)
-  const [load, setLoad] = useState(false)
+  const [data, setData] = useState(LogoGrayData)
   const [error, setError] = useState(false)
 
   const getData = useCallback(async () => {
     try {
-      const buffer =
-        loader != null ? await loader(src) : await defaultFetchImage(src)
+      const buffer = await (loader ? loader(src) : defaultFetchImage(src))
       const firstByte = buf2hex(buffer.slice(0, 1))
       const first3Bytes = buf2hex(buffer.slice(0, 3))
       const imageType =
         IMAGE_TYPES[firstByte] ?? IMAGE_TYPES[first3Bytes] ?? 'image/*'
       setData(URL.createObjectURL(new Blob([buffer], { type: imageType })))
     } catch (e) {
-      setError(true)
+      setData(LogoGrayData)
     }
   }, [src, loader])
 
   useEffect(() => {
-    setError(false)
-    setLoad(false)
-    setData(src)
-  }, [src])
+    getData().catch(
+      (e) => { console.error(e) }
+    )
+  }, [getData])
 
   return (
     <img
-      src={!load && !error && src.startsWith('blob:') ? src : data}
+      src={loader ?? error ? data : src}
       alt={alt ?? 'Catena-X'}
-      onError={() => {
+      onError={(e) => {
+        setError(true)
         setData(LogoGrayData)
-        if (load) {
-          setError(true)
-        } else {
-          setLoad(true)
-          getData().catch((e) => {
-            setError(true)
-          })
-        }
       }}
       style={{
         objectFit: 'cover',
