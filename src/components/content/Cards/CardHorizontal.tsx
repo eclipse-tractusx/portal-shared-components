@@ -152,6 +152,8 @@ export const CardHorizontal = ({
           <div
             style={{
               marginTop: 'auto',
+              display: 'flex',
+              justifyContent: 'flex-end'
             }}
           >
             <Typography
@@ -160,14 +162,19 @@ export const CardHorizontal = ({
               sx={{
                 color: '#0F71CB',
                 fontSize: '14px',
-                width: '100%',
                 textAlign: 'right',
-                marginTop: 'auto',
                 paddingTop: '20px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'flex-end',
                 cursor: 'pointer',
+                width: 'auto',
+                padding: '5px',
+                marginTop: '20px',
+                '&:hover': {
+                  backgroundColor: 'rgb(176 206 235 / 40%)',
+                  borderRadius: '20px',
+                }
               }}
             >
               <KeyboardArrowDownIcon sx={{ marginRight: '5px' }} />
