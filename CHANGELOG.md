@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.42
+
+- UI Improvements (CSS changes)
+
 ## 2.1.41
 
 - Use Image loader first if specified
