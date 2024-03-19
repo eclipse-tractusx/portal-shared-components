@@ -81,12 +81,12 @@ export const CustomAccordionItem = ({
         {titleElement}
         <Typography variant="label1">{title}</Typography>
       </AccordionSummary>
-      <AccordionDetails sx={{ mb: 5, bgcolor: color }}>
+      <AccordionDetails sx={{ mb: '20px', bgcolor: color }}>
         {children}
       </AccordionDetails>
       {
         buttonText &&
-        <AccordionActions onClick={(e) => { onChange?.(e, false)} } sx={{justifyContent: 'center'}}>
+        <AccordionActions onClick={(e) => { onChange?.(e, false)} } sx={{justifyContent: 'center', mb: '20px'}}>
           <Button variant="contained" size="small">
             {buttonText}
           </Button>

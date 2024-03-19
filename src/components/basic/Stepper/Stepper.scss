@@ -38,7 +38,7 @@
             }
 
             .stepHeadline {
-                margin: 0px auto 24px auto;
+                margin: 0 auto;
                 min-height: 56px;
             }
         }
@@ -67,7 +67,8 @@
 
         .stepperStep {
             margin-bottom: 12px;
-
+            width: 100%;
+            padding: 0 10px;
             .stepHead {
                 text-align: left;
                 height: auto;
