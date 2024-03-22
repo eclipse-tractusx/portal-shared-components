@@ -49,7 +49,7 @@ export const OrderStatusButton = ({
   const theme = useTheme()
 
   const handleClick = (e: React.MouseEvent) => {
-    onButtonClick != null && onButtonClick(e)
+    onButtonClick?.(e)
   }
 
   const fetchButton = (

@@ -23,7 +23,7 @@ import { type FunctionComponent, useState } from 'react'
 import {
   type DropZonePreviewTranslations,
   type UploadFile,
-  type deleteConfirmOverlayTranslation,
+  type DeleteConfirmOverlayTranslation,
   UploadStatus,
 } from '../types'
 import { DeleteConfirmOverlay } from './DeleteConfirmOverlay'
@@ -42,7 +42,7 @@ export interface DropPreviewProps {
   DropPreviewFile?: FunctionComponent<DropPreviewFileProps> | false
   enableDeleteIcon?: boolean
   enableDeleteOverlay?: boolean
-  deleteOverlayTranslation?: deleteConfirmOverlayTranslation
+  deleteOverlayTranslation?: DeleteConfirmOverlayTranslation
 }
 
 export interface DropStatusHeaderProps {
@@ -61,7 +61,7 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
   enableDeleteOverlay = false,
   deleteOverlayTranslation,
 }) => {
-  const [deletestatus, setDeleteStatus] = useState({ index: 0, state: false })
+  const [deleteStatus, setDeleteStatus] = useState({ index: 0, state: false })
 
   const isFinished = (file: UploadFile) =>
     file.status === UploadStatus.UPLOAD_SUCCESS ||
@@ -114,7 +114,7 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
 
   const onCallback = (closeOverlay: boolean) => {
     if (closeOverlay) {
-      onDelete?.(deletestatus.index, '')
+      onDelete?.(deleteStatus.index, '')
     }
     setDeleteStatus({ index: 0, state: false })
   }
@@ -125,7 +125,7 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
         onCallback={(closeOverlay) => {
           onCallback(closeOverlay)
         }}
-        deleteOverlay={deletestatus.state}
+        deleteOverlay={deleteStatus.state}
         deleteOverlayTranslation={deleteOverlayTranslation}
       />
       <Box sx={{ marginTop: 4 }}>
@@ -139,7 +139,7 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
               .filter((file) => isFinished(file))
               .map((file, index) => (
                 <DropPreviewFileComponent
-                  key={index}
+                  key={file.name}
                   uploadFile={file}
                   translations={translations}
                   onDelete={() => {
@@ -159,7 +159,7 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
               .filter((file) => !isFinished(file))
               .map((file, index) => (
                 <DropPreviewFileComponent
-                  key={index}
+                  key={file.name}
                   uploadFile={file}
                   translations={translations}
                   onDelete={() => {

@@ -47,7 +47,7 @@ interface CardsProps {
   readMoreLink?: CardProps['readMoreLink']
   addButtonClicked?: boolean
   newButtonText?: string
-  onNewCardButton?: React.MouseEventHandler | undefined
+  onNewCardButton?: React.MouseEventHandler
   onCardClick?: (item: CardItems) => void
   subMenu?: boolean
   submenuOptions?: SubItems[]

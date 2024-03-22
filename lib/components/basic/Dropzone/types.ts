@@ -51,7 +51,7 @@ export interface DropZonePreviewTranslations {
   uploadError: string | JSX.Element
 }
 
-export interface deleteConfirmOverlayTranslation {
+export interface DeleteConfirmOverlayTranslation {
   title: string
   content: string
   action_no: string

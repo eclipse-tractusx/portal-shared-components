@@ -44,9 +44,9 @@ export const SelectOptions = ({ props, parts }: SelectOptionsProps) => (
         paddingBottom: '10px',
       }}
     >
-      {parts.map((part: PartsType, index: number) => (
+      {parts.map((part: PartsType) => (
         <span
-          key={index}
+          key={part.text}
           style={{
             fontWeight: part.highlight ? 700 : 400,
             fontSize: 16,

@@ -96,6 +96,9 @@ export const ImageItem = ({
         onClick={() => {
           hover && setHovered(true)
         }}
+        onKeyDown={() => {
+          hover && setHovered(true)
+        }}
         style={{
           width: getWidth().width,
           height: getWidth().height,
