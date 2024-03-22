@@ -1,6 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 BMW Group AG
- * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2021, 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -18,6 +17,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-export * from './@types'
-export * from './components'
-export { theme, paletteDefinitions, typographyDefinitions } from './theme'
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'jest-environment-jsdom',
+  testMatch: ['**/*.test.{ts,tsx,js,jsx}'],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+}

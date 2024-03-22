@@ -18,14 +18,14 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Box, Button } from '@mui/material'
 import { type TextFieldProps } from '@mui/material/TextField'
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
-import deLocale from 'date-fns/locale/de'
-import enLocale from 'date-fns/locale/en-US'
+import { de } from 'date-fns/locale/de'
+import { enUS } from 'date-fns/locale/en-US'
 import uniqueId from 'lodash/uniqueId'
 import { type PickersDayProps } from '@mui/x-date-pickers'
 
@@ -44,8 +44,8 @@ export interface DatepickerProps extends Omit<TextFieldProps, 'variant'> {
 }
 
 const localeMap = {
-  en: enLocale,
-  de: deLocale,
+  en: enUS,
+  de,
 }
 
 export const Datepicker = ({

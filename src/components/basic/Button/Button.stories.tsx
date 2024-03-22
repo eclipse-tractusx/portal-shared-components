@@ -18,32 +18,24 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button as Component } from '.'
+import { Button } from '.'
 
-export default {
-  title: 'Buttons',
-  component: Component,
-  argTypes: {
-    children: {
-      name: 'label',
-    },
-    onClick: {
-      action: 'onClick',
-    },
-  },
+const meta: Meta<typeof Button> = {
+  title: 'MyButton',
+  component: Button,
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+export default meta
+type Story = StoryObj<typeof Button>
 
-export const Button = Template.bind({})
-Button.args = {
-  color: 'primary',
-  size: 'large',
-  disabled: false,
-  children: 'Button',
-  fullWidth: false,
+export const Primary: Story = {
+  args: {
+    color: 'primary',
+    size: 'large',
+    disabled: false,
+    children: 'Button',
+    fullWidth: false,
+  },
 }

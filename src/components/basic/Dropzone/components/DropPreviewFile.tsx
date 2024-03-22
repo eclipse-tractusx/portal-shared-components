@@ -19,12 +19,7 @@
  ********************************************************************************/
 
 import { Box, IconButton, useTheme } from '@mui/material'
-import React, {
-  type FunctionComponent,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { type FunctionComponent, useEffect, useRef, useState } from 'react'
 import {
   type DropZonePreviewTranslations,
   type UploadFile,

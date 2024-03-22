@@ -40,21 +40,19 @@ export const SubNavigationLink = ({
     >
       <Box sx={{ width: '50%' }}>
         {link1Label && onLink1Click != null && (
-          <>
-            <Button
-              onClick={onLink1Click}
-              color="secondary"
-              variant="text"
-              size="medium"
-              sx={{
-                fontSize: '16px',
-                textTransform: 'lowercase'
-              }}
-            >
-              <EastIcon sx={{ marginRight: '16px', fontSize: '15px' }} />
-              {link1Label}
-            </Button>
-          </>
+          <Button
+            onClick={onLink1Click}
+            color="secondary"
+            variant="text"
+            size="medium"
+            sx={{
+              fontSize: '16px',
+              textTransform: 'lowercase',
+            }}
+          >
+            <EastIcon sx={{ marginRight: '16px', fontSize: '15px' }} />
+            {link1Label}
+          </Button>
         )}
       </Box>
 
@@ -67,7 +65,7 @@ export const SubNavigationLink = ({
             size="medium"
             sx={{
               fontSize: '16px',
-              textTransform: 'lowercase'
+              textTransform: 'lowercase',
             }}
           >
             <EastIcon sx={{ marginRight: '16px', fontSize: '15px' }} />

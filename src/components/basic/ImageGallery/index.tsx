@@ -54,7 +54,7 @@ export const ImageGallery = ({
 
   return (
     <>
-      {hovered && hoveredImage != null && hoveredImage.url && (
+      {hovered && hoveredImage?.url && (
         <ImageItemOverlay
           onClose={() => {
             setHovered(false)
@@ -77,6 +77,9 @@ export const ImageGallery = ({
           <div
             key={image.url}
             onClick={() => {
+              hoverImageFn(image)
+            }}
+            onKeyDown={() => {
               hoverImageFn(image)
             }}
           >

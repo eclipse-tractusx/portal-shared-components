@@ -42,7 +42,7 @@ export const VerticalTable = ({
     column: unknown
   } | null>()
   const [inputValue, setInputValue] = useState('')
-  const [inputErrorMsg, setInputErrorMessage] = useState('')
+  const [inputErrorMessage, setInputErrorMessage] = useState('')
 
   const handleEditFn = (
     e: React.SyntheticEvent,
@@ -73,7 +73,7 @@ export const VerticalTable = ({
               addInputValue(e.target.value, row, column)
             }}
             onKeyPress={(event) => {
-              if (event.key === 'Enter' && !inputErrorMsg) {
+              if (event.key === 'Enter' && !inputErrorMessage) {
                 setInputField(null)
                 if (handleEdit) handleEdit(inputValue)
               }
@@ -84,11 +84,11 @@ export const VerticalTable = ({
             value={inputValue}
           />
         </div>
-        {inputErrorMsg && (
+        {inputErrorMessage && (
           <Tooltips
             color="dark"
             tooltipPlacement="bottom-start"
-            tooltipText={inputErrorMsg}
+            tooltipText={inputErrorMessage}
           >
             <span>
               <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
@@ -113,12 +113,15 @@ export const VerticalTable = ({
       onClick={() => {
         setInputField(null)
       }}
+      onKeyDown={() => {
+        setInputField(null)
+      }}
     >
       <thead>
         <tr>
           {data.head.map((col, c) => (
             <th
-              key={c}
+              key={JSON.stringify(c)}
               style={{
                 backgroundColor: '#ecf0f4',
                 textAlign: 'left',
@@ -132,12 +135,12 @@ export const VerticalTable = ({
       </thead>
       <tbody>
         {data.body.map((row, r) => (
-          <tr key={r}>
+          <tr key={JSON.stringify(r)}>
             {row.map((CustomComp, c) => {
               const isStringTypeProp = typeof CustomComp === 'string'
               return (
                 <td
-                  key={c}
+                  key={JSON.stringify(c)}
                   style={{
                     padding: '10px 15px',
                     borderBottom: '1px solid #f1f1f1',
@@ -148,8 +151,8 @@ export const VerticalTable = ({
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     {inputField &&
-                      inputField.row === r &&
-                      inputField.column === c ? (
+                    inputField.row === r &&
+                    inputField.column === c ? (
                       renderInputField(r, c)
                     ) : (
                       <Link
@@ -172,45 +175,52 @@ export const VerticalTable = ({
                         </Typography>
                       </Link>
                     )}
-                    {data?.edit?.[r]?.[c].copyValue &&
-                      (
-                        c !== 0 &&
-                        <Box
+                    {data?.edit?.[r]?.[c].copyValue && c !== 0 && (
+                      <Box
+                        sx={{
+                          cursor: 'pointer',
+                          display: 'flex',
+                          color:
+                            copied === data?.edit?.[r]?.[c].copyValue
+                              ? '#00cc00'
+                              : '#eeeeee',
+                          ':hover': {
+                            color:
+                              copied === data?.edit?.[r]?.[c].copyValue
+                                ? '#00cc00'
+                                : '#cccccc',
+                          },
+                        }}
+                        onClick={() => {
+                          void (async () => {
+                            const value = renderTextvalue(
+                              data?.edit?.[r]?.[c].copyValue?.toString()
+                            )
+                            await navigator.clipboard.writeText(value)
+                            setCopied(value)
+                            setTimeout(() => {
+                              setCopied('')
+                            }, 1000)
+                          })()
+                        }}
+                      >
+                        <ContentCopyIcon
                           sx={{
-                            cursor: 'pointer',
-                            display: 'flex',
-                            color: copied === data?.edit?.[r]?.[c].copyValue ? '#00cc00' : '#eeeeee',
-                            ':hover': {
-                              color: copied === data?.edit?.[r]?.[c].copyValue ? '#00cc00' : '#cccccc',
-                            },
+                            fontSize: '18px',
+                            marginLeft: '10px',
                           }}
-                          onClick={() => {
-                            void (async () => {
-                              const value = renderTextvalue(data?.edit?.[r]?.[c].copyValue?.toString())
-                              await navigator.clipboard.writeText(value)
-                              setCopied(value)
-                              setTimeout(() => {
-                                setCopied('')
-                              }, 1000)
-                            })()
-                          }}
-                        >
-                          <ContentCopyIcon
-                            sx={{
-                              fontSize: '18px',
-                              marginLeft: '10px',
-                            }}
-                          />
-                        </Box>
-                      )
-                    }
+                        />
+                      </Box>
+                    )}
                     {data?.edit?.[r]?.[c].icon &&
                       !inputField &&
                       (c === 0 ? (
                         <Tooltips
                           color="dark"
                           tooltipPlacement="bottom-start"
-                          tooltipText={renderTextvalue(data?.edit?.[r][c].inputValue)}
+                          tooltipText={renderTextvalue(
+                            data?.edit?.[r][c].inputValue
+                          )}
                         >
                           <HelpOutlineIcon
                             sx={{

@@ -27,7 +27,7 @@ import {
   GridRenderCellParams,
 } from '@mui/x-data-grid'
 import Link from '@mui/material/Link'
-import TestRows from '../../../assets/data/TableRows.json'
+import TestRows from '../../../../src/assets/data/TableRows.json'
 
 const rows: GridRowsProp = TestRows
 

@@ -24,7 +24,7 @@ import { SearchInput } from '../../../SearchInput'
 import { IconButton } from '../../../IconButton'
 import { type ToolbarProps } from '.'
 import { ViewSelector } from '../../../ViewSelector'
-import type { view } from '../../../ViewSelector'
+import type { View } from '../../../ViewSelector'
 import { Typography } from '../../../Typography'
 import type { SelectedFilter } from './UltimateToolbar'
 
@@ -32,7 +32,7 @@ export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   placeholder?: string
   searchDebounce?: number
   searchExpr?: string
-  filterViews?: view[]
+  filterViews?: View[]
   defaultFilter?: string
   onFilter?: (selectedFilter: SelectedFilter) => void
   descriptionText?: string

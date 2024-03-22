@@ -24,7 +24,6 @@ import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
 import { type Theme } from '@mui/material/styles'
 import { type SxProps } from '@mui/system'
-import * as React from 'react'
 import { type PropsWithChildren, useRef, useState } from 'react'
 
 export interface DropdownMenuProps {

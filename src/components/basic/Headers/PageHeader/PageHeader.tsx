@@ -50,11 +50,12 @@ export const PageHeader = ({
 }: PageHeaderProps) => {
   const { palette } = useTheme()
   const hasChildren = !!children
-  // TODO: to many magic numbers and the overall composition of this header needs to be thought through again
-  // ternary operator hell: topPage/hasChildren : topPage/!hasChildren : !topPage/hasChildren : !topPage/!hasChildren
-  const top = topPage ? (hasChildren ? 73 : 153) : hasChildren ? 0 : 68
+  const getTop = () => (hasChildren ? 73 : 153)
+  const getNotTop = () => (hasChildren ? 0 : 68)
+  const getSpacingTop = () => (hasChildren ? 0 : 12)
+  const top = topPage ? getTop() : getNotTop()
   const height = topPage ? headerHeight + mainNavigationHeight : headerHeight
-  const spacingTop = topPage ? -mainNavigationHeight : hasChildren ? 0 : 12
+  const spacingTop = topPage ? -mainNavigationHeight : getSpacingTop()
 
   const backgroundStyle = () => {
     if (background === 'LinearGradient1') {

@@ -152,7 +152,7 @@ export const UltimateToolbar = ({
                     size="small"
                     color="secondary"
                     variant={
-                      (selectedFilter as SelectedFilter)[name]?.includes(value)
+                      selectedFilter?.[name]?.includes(value)
                         ? 'contained'
                         : 'text'
                     }

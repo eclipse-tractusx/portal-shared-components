@@ -31,7 +31,7 @@ export const HorizontalTable = ({ data }: { data: TableType }) => (
   >
     <tbody>
       {data.head.map((col, c) => (
-        <tr key={c}>
+        <tr key={JSON.stringify(col)}>
           <th
             style={{
               backgroundColor: '#ecf0f4',
@@ -45,7 +45,7 @@ export const HorizontalTable = ({ data }: { data: TableType }) => (
           </th>
           {data.body[c].map((row, r) => (
             <td
-              key={r}
+              key={JSON.stringify(r)}
               style={{
                 borderBottom: '1px solid #e0e1e2',
                 padding: '10px 15px',

@@ -30,7 +30,6 @@ interface StepperItemProps {
   color: string
   activeStep: number
   index: number
-  totalSteps?: number
   tooltipText?: string
   tooltipLink?: string
 }
@@ -42,7 +41,6 @@ export const StepperItem = ({
   color,
   activeStep,
   index,
-  totalSteps = 6,
   tooltipText,
   tooltipLink,
 }: StepperItemProps) => {
@@ -66,7 +64,8 @@ export const StepperItem = ({
 
   return (
     <Box className="stepperStep">
-      <Box className="stepHead"
+      <Box
+        className="stepHead"
         sx={{
           borderBottom: `2px solid ${backgroundColor}`,
         }}
@@ -115,9 +114,8 @@ export const StepperItem = ({
               {!done && step}
             </Typography>
           </Box>
-          <Box className="hintStepMobile" >
-            {
-              index === activeStep &&
+          <Box className="hintStepMobile">
+            {index === activeStep && (
               <Link
                 href={tooltipLink}
                 target="_blank"
@@ -133,13 +131,13 @@ export const StepperItem = ({
                   fontSize="12px"
                   sx={{
                     paddingBottom: '5px',
-                    textAlign: 'center'
+                    textAlign: 'center',
                   }}
                 >
                   {tooltipText}
                 </Typography>
               </Link>
-            }
+            )}
           </Box>
         </Box>
 

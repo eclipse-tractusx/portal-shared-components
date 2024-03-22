@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0
+
+- Switch build framework from CRA to VITE
+
 ## 2.1.42
 
 - UI Improvements (CSS changes)

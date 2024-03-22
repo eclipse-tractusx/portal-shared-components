@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 BMW Group AG
+ * Copyright (c) 2021, 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -17,18 +17,23 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+import type { StorybookConfig } from '@storybook/react-vite'
+
+const config: StorybookConfig = {
+  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
+    '@storybook/addon-onboarding',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/preset-scss',
+    '@chromatic-com/storybook',
+    '@storybook/addon-interactions',
   ],
   framework: {
-    name: '@storybook/react-webpack5',
+    name: '@storybook/react-vite',
     options: {},
   },
   docs: {
-    autodocs: true,
+    autodocs: 'tag',
   },
 }
+export default config

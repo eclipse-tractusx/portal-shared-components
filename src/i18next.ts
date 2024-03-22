@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2021, 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -17,9 +17,20 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-module.exports = {
-  testEnvironment: 'jsdom',
-  moduleNameMapper: {
-    '.(css|less|scss)$': 'identity-obj-proxy',
-  },
-}
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+
+i18n
+  .use(initReactI18next)
+  .init({
+    fallbackLng: 'en',
+    debug: true,
+    interpolation: {
+      escapeValue: false,
+    },
+  })
+  .catch((e: unknown) => {
+    console.error('i18n error:', e)
+  })
+
+export default i18n

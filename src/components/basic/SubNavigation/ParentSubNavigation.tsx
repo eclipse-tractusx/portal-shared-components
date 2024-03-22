@@ -48,7 +48,7 @@ export const ParentSubNavigation = ({
             size="medium"
             sx={{
               fontSize: '16px',
-              textTransform: 'lowercase'
+              textTransform: 'lowercase',
             }}
           >
             <EastIcon sx={{ marginRight: '16px', fontSize: '15px' }} />

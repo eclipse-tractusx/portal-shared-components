@@ -24,12 +24,12 @@ import { Dialog } from '../../Dialog'
 import { DialogActions } from '../../Dialog/DialogActions'
 import { DialogContent } from '../../Dialog/DialogContent'
 import { DialogHeader } from '../../Dialog/DialogHeader'
-import { type deleteConfirmOverlayTranslation } from '../types'
+import { type DeleteConfirmOverlayTranslation } from '../types'
 
 export interface DeleteConfirmOverlayProps {
   deleteOverlay: boolean
   onCallback: (closeOverlay: boolean) => void
-  deleteOverlayTranslation?: deleteConfirmOverlayTranslation
+  deleteOverlayTranslation?: DeleteConfirmOverlayTranslation
 }
 
 export const DeleteConfirmOverlay: FunctionComponent<

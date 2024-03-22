@@ -20,7 +20,7 @@
 
 import { Children } from 'react'
 import { Box } from '@mui/material'
-import { type MenuProps } from '../../basic/Menu'
+import { type MenuProps } from '../Menu'
 import { Navigation } from '../../content/Navigation'
 
 export interface MainNavigationProps extends MenuProps {

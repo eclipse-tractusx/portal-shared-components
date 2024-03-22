@@ -82,7 +82,7 @@ export const SelectList = ({
       getOptionLabel={(option) => option[keyTitle] || ''}
       onChange={(_, reason) => {
         setSelected(reason)
-        // eslint-disable-next-line
+
         onChangeItem(reason)
       }}
       isOptionEqualToValue={(option, value) => isEqual(option, value)}

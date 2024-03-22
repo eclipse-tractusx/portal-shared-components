@@ -45,7 +45,7 @@ export const DropArea: FunctionComponent<DropAreaProps> = ({
 
   const { title, subTitle } = translations
 
-  const [isDragging, setDragging] = useState(false)
+  const [dragging, setDragging] = useState(false)
 
   let formattedSubtitle = subTitle
   if (typeof subTitle === 'string') {
@@ -66,7 +66,7 @@ export const DropArea: FunctionComponent<DropAreaProps> = ({
 
   const errorBackground = hasGenericError && 'declined.main'
   const disabledBackground = disabled && 'action.disabledBackground'
-  const draggingBackground = isDragging && 'selected.active'
+  const draggingBackground = dragging && 'selected.active'
 
   const borderRadius = 24
   const borderColor = hasGenericError

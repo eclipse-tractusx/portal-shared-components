@@ -59,7 +59,6 @@ export interface CardProps
     | 'absolute'
     | 'fixed'
     | 'sticky'
-    | undefined
   topValue?: number
   subMenu?: boolean
   submenuOptions?: SubItems[]
@@ -121,8 +120,7 @@ export const Card = ({
   }, [variantProp])
 
   useEffect(() => {
-    sortOption !== '' &&
-      submenuClick?.(sortOption, id)
+    sortOption !== '' && submenuClick?.(sortOption, id)
   }, [sortOption, submenuClick, id])
 
   useEffect(() => {
@@ -192,6 +190,9 @@ export const Card = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onClick={boxClickable ? onButtonClick : onClick}
+      onKeyDown={() => {
+        // do nothing
+      }}
     >
       <Box
         sx={{

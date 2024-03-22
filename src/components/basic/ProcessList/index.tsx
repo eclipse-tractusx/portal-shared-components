@@ -37,22 +37,22 @@ export const ProcessList = ({
 }: ProcessListProps) => {
   return (
     <Box>
-      {list &&
-        list
-          .filter(
-            (item) => item.step <= elementNumbers && item.step <= list.length
-          )
-          .map((item, i) => (
-            <ListItem
-              key={i}
-              step={item.step}
-              headline={item.headline}
-              description={item.description ?? ''}
-              stepsColor={stepsColor}
-              stepsFontColor={stepsFontColor}
-              lastItem={item.step === elementNumbers}
-            />
-          ))}
+      {list
+        .filter(
+          (item: StepList) =>
+            item.step <= elementNumbers && item.step <= list.length
+        )
+        .map((item: StepList) => (
+          <ListItem
+            key={item.step}
+            step={item.step}
+            headline={item.headline}
+            description={item.description ?? ''}
+            stepsColor={stepsColor}
+            stepsFontColor={stepsFontColor}
+            lastItem={item.step === elementNumbers}
+          />
+        ))}
     </Box>
   )
 }

@@ -29,9 +29,7 @@ export default {
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (
-  <>
-    <Component {...args} />
-  </>
+  <Component {...args} />
 )
 
 const item = {

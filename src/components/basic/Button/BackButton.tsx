@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Button } from '../Button'
+import { Button } from '.'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 export interface BackButtonProps {

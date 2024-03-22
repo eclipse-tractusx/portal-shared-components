@@ -129,7 +129,8 @@ export const CardDecision = ({
               <Box sx={{ marginBottom: '10px' }}>
                 <CardChip status={item.status} statusText={item.status} />
               </Box>
-              {item.status?.toLowerCase() !== StatusVariants.active && (
+              {(item.status?.toLowerCase() as StatusVariants) !==
+                StatusVariants.active && (
                 <Box
                   sx={{
                     display: 'flex',
