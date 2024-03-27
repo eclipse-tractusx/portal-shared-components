@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, Typography, IconButton, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import { CardChip, StatusVariants } from './CardChip'
 
 export interface ContentCardProps {
@@ -40,21 +40,21 @@ export const ContentCard = ({
         <Box
             key={title}
             sx={{
-                paddingRight: '10px',
-                paddingLeft: '10px',
                 width: '270px',
                 minWidth: '270px',
+                paddingRight: '10px',
+                paddingLeft: '10px',
                 marginBottom: '20px',
             }}
         >
             <Box
                 sx={{
+                    height: '200px',
+                    width: 'auto',
                     boxSizing: 'border-box',
                     display: 'flex',
                     flexDirection: 'column',
                     padding: '16px 28px',
-                    width: 'auto',
-                    height: '200px',
                     background: '#FFFFFF',
                     border: '1px solid #DCDCDC',
                     borderRadius: '20px',
