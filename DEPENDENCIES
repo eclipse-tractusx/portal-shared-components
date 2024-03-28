@@ -758,7 +758,7 @@ npm/npmjs/-/readable-stream/2.3.8, MIT, approved, #945
 npm/npmjs/-/readable-stream/3.6.2, MIT, approved, CQ22627
 npm/npmjs/-/readdirp/3.6.0, MIT, approved, #2977
 npm/npmjs/-/recast/0.21.5, MIT, approved, clearlydefined
-npm/npmjs/-/recast/0.23.2, MIT, approved, clearlydefined
+npm/npmjs/-/recast/0.23.2, MIT, approved, #14013
 npm/npmjs/-/rechoir/0.6.2, MIT, approved, #981
 npm/npmjs/-/regenerate-unicode-properties/10.1.0, MIT, approved, #10903
 npm/npmjs/-/regenerate/1.4.2, MIT, approved, clearlydefined
@@ -1371,7 +1371,7 @@ npm/npmjs/@types/parse-json/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/@types/prettier/2.7.3, MIT, approved, #9030
 npm/npmjs/@types/pretty-hrtime/1.0.1, MIT, approved, clearlydefined
 npm/npmjs/@types/prop-types/15.7.5, MIT, approved, clearlydefined
-npm/npmjs/@types/qs/6.9.7, MIT, approved, clearlydefined
+npm/npmjs/@types/qs/6.9.7, MIT, approved, #13990
 npm/npmjs/@types/range-parser/1.2.4, MIT, approved, #10795
 npm/npmjs/@types/react-dom/18.2.6, MIT, approved, #8256
 npm/npmjs/@types/react-is/18.2.1, MIT, approved, #9131
