@@ -110,8 +110,8 @@ const submenuOptions = [
   },
 ]
 
-export const ContentCards = Template.bind({})
-ContentCards.args = {
+export const MarketplaceCard = Template.bind({})
+MarketplaceCard.args = {
   columns: 6,
   items: items,
   variant: 'compact',

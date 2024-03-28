@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.43
+
+- Rename previous Content Cards with Marketplace Card
+- New Content Card created in the cards list
+
 ## 2.1.42
 
 - UI Improvements (CSS changes)
