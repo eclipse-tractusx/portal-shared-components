@@ -29,7 +29,6 @@ import { SortOption } from '../../basic/SortOption'
 import { type SubItems } from '.'
 import { Tooltips } from '../../basic/ToolTips'
 import FavoriteIcon from '@mui/icons-material/Favorite'
-import { Button } from '../../basic/Button'
 import { Chip } from '../../basic/Chip'
 
 type Variants =
