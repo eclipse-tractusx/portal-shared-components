@@ -23,15 +23,15 @@ import { CardChip, StatusVariants } from './CardChip'
 export interface ContentCardProps {
     title: string
     chipText: string
-    bpnHeading?: string
-    bpnDetails?: string
+    heading?: string
+    detail?: string
 }
 
 export const ContentCard = ({
     title,
     chipText,
-    bpnHeading,
-    bpnDetails
+    heading,
+    detail
 }: ContentCardProps) => {
     const theme = useTheme()
 
@@ -85,7 +85,7 @@ export const ContentCard = ({
                     {title}
                 </Typography>
                 {
-                    bpnDetails &&
+                    detail &&
                     <Box sx={{ lineHeight: 'normal' }}>
                         <Typography
                             variant="body3"
@@ -94,7 +94,7 @@ export const ContentCard = ({
                                 fontWeight: '600'
                             }}
                         >
-                            {bpnHeading}
+                            {heading}
                         </Typography>
                         <Typography
                             variant="body3"
@@ -102,7 +102,7 @@ export const ContentCard = ({
                                 fontSize: '12px'
                             }}
                         >
-                            {bpnDetails}
+                            {detail}
                         </Typography>
                     </Box>
                 }
