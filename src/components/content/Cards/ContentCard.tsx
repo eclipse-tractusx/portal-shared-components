@@ -75,8 +75,10 @@ export const ContentCard = ({
                     sx={{
                         height: '60px',
                         '-webkit-line-clamp': '2',
+                        'lineClamp': '2',
                         display: '-webkit-box',
                         '-webkit-box-orient': 'vertical',
+                        boxOrient: 'vertical',
                         wordBreak: 'break-all',
                         overflow: 'hidden',
                         marginBottom: '6px'
