@@ -1371,7 +1371,7 @@ npm/npmjs/@types/parse-json/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/@types/prettier/2.7.3, MIT, approved, #9030
 npm/npmjs/@types/pretty-hrtime/1.0.1, MIT, approved, clearlydefined
 npm/npmjs/@types/prop-types/15.7.5, MIT, approved, clearlydefined
-npm/npmjs/@types/qs/6.9.7, MIT, approved, #13990
+npm/npmjs/@types/qs/6.9.7, MIT, approved, #13991
 npm/npmjs/@types/range-parser/1.2.4, MIT, approved, #10795
 npm/npmjs/@types/react-dom/18.2.6, MIT, approved, #8256
 npm/npmjs/@types/react-is/18.2.1, MIT, approved, #9131
