@@ -1,8 +1,13 @@
 # Changelog
 
-## 2.1.43
+## 2.1.44
 
 - UI Improvements in Card component. Add favourite icon and full length button
+
+## 2.1.43
+
+- Rename previous Content Cards with Marketplace Card
+- New Content Card created in the cards list
 
 ## 2.1.42
 

@@ -121,12 +121,14 @@ declare module '@mui/material/styles' {
     inactive: string
     created: string
     inReview: string
+    enabled: string
     default: string
     bgRelease: string
     bgActive: string
     bgInactive: string
     bgCreated: string
     bgInReview: string
+    bgEnabled: string
     bgDefault: string
   }
   interface PaletteColor {
