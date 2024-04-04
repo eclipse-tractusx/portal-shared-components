@@ -28,6 +28,8 @@ import { CardImage, type CardImageProps } from './CardImage'
 import { SortOption } from '../../basic/SortOption'
 import { type SubItems } from '.'
 import { Tooltips } from '../../basic/ToolTips'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { Chip } from '../../basic/Chip'
 
 type Variants =
   | 'minimal'
@@ -67,6 +69,7 @@ export interface CardProps
   tooltipText?: string
   showStatus?: boolean
   boxClickable?: boolean
+  showFavIcon?: boolean
 }
 
 export const Card = ({
@@ -103,6 +106,7 @@ export const Card = ({
   tooltipText = '',
   showStatus = true,
   boxClickable = false,
+  showFavIcon = false,
 }: CardProps): JSX.Element => {
   const { shape, shadows } = useTheme()
   const [variant, setVariant] = useState<Variants>(variantProp)
@@ -121,8 +125,7 @@ export const Card = ({
   }, [variantProp])
 
   useEffect(() => {
-    sortOption !== '' &&
-      submenuClick?.(sortOption, id)
+    sortOption !== '' && submenuClick?.(sortOption, id)
   }, [sortOption, submenuClick, id])
 
   useEffect(() => {
@@ -225,6 +228,20 @@ export const Card = ({
           setShowModal(false)
         }}
       >
+        {showFavIcon && (
+          <Box
+            sx={{
+              padding: '10px',
+            }}
+            onClick={onSecondaryButtonClick}
+          >
+            <FavoriteIcon
+              sx={{
+                color: addButtonClicked ? '#0f71cb' : '#e3e3e3',
+              }}
+            />
+          </Box>
+        )}
         <Box>
           {statusText && imageSize !== 'small' && (
             <Box
@@ -343,13 +360,35 @@ export const Card = ({
               />
             )}
           </div>
-          {showButton && (
+          {showButton && !showFavIcon && (
             <CardButtons
               buttonText={buttonText}
               onButtonClick={onButtonClick}
               onSecondaryButtonClick={onSecondaryButtonClick}
               addButtonClicked={addButtonClicked}
             />
+          )}
+          {showButton && showFavIcon && (
+            <Box
+              sx={{
+                width: '100%',
+                paddingLeft: '20px',
+                paddingRight: '20px',
+              }}
+            >
+              <Chip
+                sx={{
+                  width: '100%',
+                  borderRadius: '16px',
+                }}
+                color={'secondary'}
+                label={buttonText}
+                type={'plain'}
+                variant={'filled'}
+                withIcon={false}
+                onClick={onButtonClick}
+              />
+            </Box>
           )}
           {variant === 'text-only' && readMoreLink && readMoreText && (
             <Link
