@@ -193,6 +193,16 @@ export const Card = ({
     }
   }
 
+  const renderTooltipText = () => {
+    if (
+      status?.toLowerCase() === 'active' ||
+      status?.toLowerCase() === 'inactive'
+    ) {
+      return ''
+    } else {
+      return tooltipText
+    }
+  }
   return (
     <div
       ref={boxRef}
@@ -308,12 +318,7 @@ export const Card = ({
             <Tooltips
               color="dark"
               tooltipPlacement="bottom-start"
-              tooltipText={
-                status?.toLowerCase() === 'active' ||
-                status?.toLowerCase() === 'inactive'
-                  ? ''
-                  : tooltipText
-              }
+              tooltipText={renderTooltipText()}
               additionalStyles={{ marginLeft: '210px' }}
             >
               <Box
