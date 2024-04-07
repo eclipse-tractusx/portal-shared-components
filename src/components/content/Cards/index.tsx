@@ -52,7 +52,8 @@ interface CardsProps {
   onNewCardButton?: React.MouseEventHandler | undefined
   onCardClick?: (item: CardItems) => void
   subMenu?: boolean
-  submenuOptions?: SubItems[]
+  activeSubmenuOptions?: SubItems[]
+  inactiveSubmenuOptions?: SubItems[]
   submenuClick?: (sortMenu: string, id: string | undefined) => undefined
   tooltipText?: string
   showStatus?: boolean
@@ -81,7 +82,8 @@ export const Cards = ({
     // empty
   },
   subMenu = false,
-  submenuOptions = [],
+  activeSubmenuOptions = [],
+  inactiveSubmenuOptions = [],
   submenuClick = (sortMenu: string, id: string | undefined) => {
     // empty
   },
@@ -102,7 +104,8 @@ export const Cards = ({
     filledBackground,
     addButtonClicked,
     subMenu,
-    submenuOptions,
+    activeSubmenuOptions,
+    inactiveSubmenuOptions,
     submenuClick,
     tooltipText,
     showStatus,
