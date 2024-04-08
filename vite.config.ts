@@ -29,7 +29,7 @@ export default defineConfig({
     react(),
     libInjectCss(),
     dts({
-      include: ['lib'],
+      include: ['src'],
       exclude: ['**/*.stories.tsx', '**/*.test.tsx'],
     }),
   ],

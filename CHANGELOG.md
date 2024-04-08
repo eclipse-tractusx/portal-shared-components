@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1
+
+- Generate typescript types to build
+
 ## 3.0.0
 
 - Switch build framework from CRA to VITE
