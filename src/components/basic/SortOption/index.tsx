@@ -25,6 +25,7 @@ import { Box } from '@mui/material'
 export interface SortOptionsType {
   label: string
   value: string
+  disabled?: boolean
 }
 
 export const SortOption = ({
@@ -66,8 +67,10 @@ export const SortOption = ({
                 minWidth: '152px',
                 maxWidth: '220px',
                 borderRadius: '10px',
-                cursor: 'pointer',
+                cursor: entry?.disabled ? 'auto !important' : 'pointer',
                 listStyleType: 'none',
+                pointerEvents: entry?.disabled ? 'none' : 'initial',
+                opacity: entry?.disabled ? '0.5' : '1',
                 '&:hover': {
                   backgroundColor: 'rgba(15, 113, 203, 0.05)',
                 },
