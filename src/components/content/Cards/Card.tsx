@@ -64,7 +64,8 @@ export interface CardProps
     | undefined
   topValue?: number
   subMenu?: boolean
-  submenuOptions?: SubItems[]
+  activeSubmenuOptions?: SubItems[]
+  inactiveSubmenuOptions?: SubItems[]
   submenuClick?: (sortMenu: string, id: string | undefined) => undefined
   tooltipText?: string
   showStatus?: boolean
@@ -101,7 +102,8 @@ export const Card = ({
   positionValue,
   topValue = 0,
   subMenu,
-  submenuOptions,
+  activeSubmenuOptions,
+  inactiveSubmenuOptions,
   submenuClick,
   tooltipText = '',
   showStatus = true,
@@ -183,11 +185,24 @@ export const Card = ({
 
   const handleSubmenuFn = (e: React.MouseEvent) => {
     e.stopPropagation()
-    if (status?.toLowerCase() === 'active') {
+    if (
+      status?.toLowerCase() === 'active' ||
+      status?.toLowerCase() === 'inactive'
+    ) {
       setShowModal(true)
     }
   }
 
+  const renderTooltipText = () => {
+    if (
+      status?.toLowerCase() === 'active' ||
+      status?.toLowerCase() === 'inactive'
+    ) {
+      return ''
+    } else {
+      return tooltipText
+    }
+  }
   return (
     <div
       ref={boxRef}
@@ -303,9 +318,7 @@ export const Card = ({
             <Tooltips
               color="dark"
               tooltipPlacement="bottom-start"
-              tooltipText={
-                status?.toLowerCase() === 'active' ? '' : tooltipText
-              }
+              tooltipText={renderTooltipText()}
               additionalStyles={{ marginLeft: '210px' }}
             >
               <Box
@@ -319,12 +332,14 @@ export const Card = ({
                 <MoreVertIcon
                   sx={{
                     color:
-                      status?.toLowerCase() === 'active'
+                      status?.toLowerCase() === 'active' ||
+                      status?.toLowerCase() === 'inactive'
                         ? '#0F71CB'
                         : '#999999',
                     borderRadius: '15px',
                     cursor: 'pointer',
-                    ...(status?.toLowerCase() === 'active' && {
+                    ...((status?.toLowerCase() === 'active' ||
+                      status?.toLowerCase() === 'inactive') && {
                       ':hover': {
                         backgroundColor: 'rgb(176 206 235 / 40%)',
                       },
@@ -347,7 +362,7 @@ export const Card = ({
               margin: '-10px 80px',
             }}
           >
-            {submenuOptions && (
+            {activeSubmenuOptions && status?.toLowerCase() === 'active' && (
               <SortOption
                 show={showModal}
                 selectedOption={sortOption}
@@ -355,8 +370,20 @@ export const Card = ({
                   setSortOption(value)
                   setShowModal(false)
                 }}
-                sortOptions={submenuOptions}
-                singleMenu={submenuOptions?.length === 1}
+                sortOptions={activeSubmenuOptions}
+                singleMenu={activeSubmenuOptions?.length === 1}
+              />
+            )}
+            {inactiveSubmenuOptions && status?.toLowerCase() === 'inactive' && (
+              <SortOption
+                show={showModal}
+                selectedOption={sortOption}
+                setSortOption={(value: string) => {
+                  setSortOption(value)
+                  setShowModal(false)
+                }}
+                sortOptions={inactiveSubmenuOptions}
+                singleMenu={inactiveSubmenuOptions?.length === 1}
               />
             )}
           </div>

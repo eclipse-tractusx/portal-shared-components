@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.45
+
+- Add submenu options for active and inactive cards
+
 ## 2.1.44
 
 - UI Improvements in Card component. Add favourite icon and full length button
