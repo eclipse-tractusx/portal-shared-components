@@ -83,7 +83,7 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
     numUploaded: number
     numTotal: number
   }) => {
-    const uploadProgress = translations.uploadProgess
+    const uploadProgress = translations.uploadProgress
       .replace(/%/g, encodeURIComponent(numUploaded.toString()))
       .replace(/%/g, encodeURIComponent(numTotal.toString()))
 

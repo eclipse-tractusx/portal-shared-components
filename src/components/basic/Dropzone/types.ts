@@ -46,7 +46,7 @@ export interface DropZoneDropAreaTranslations {
 
 export interface DropZonePreviewTranslations {
   placeholder: string | JSX.Element
-  uploadProgess: string
+  uploadProgress: string
   uploadSuccess: string | JSX.Element
   uploadError: string | JSX.Element
 }
