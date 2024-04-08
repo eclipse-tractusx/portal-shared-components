@@ -32,10 +32,10 @@ const Template: ComponentStory<typeof Component> = (args: any) => (
 )
 
 const item = {
-    title: 'ISO_14001_EMAS_or_national_certification',
-    chipText: 'ISO_14001_EMAS_or_national_certification',
-    heading: 'Business Partner Level: ',
-    detail: 'BPN1, BPN2, BPN3, BPN4',
+  title: 'ISO_14001_EMAS_or_national_certification',
+  chipText: 'ISO_14001_EMAS_or_national_certification',
+  heading: 'Business Partner Level: ',
+  detail: 'BPN1, BPN2, BPN3, BPN4',
 }
 
 export const ContentCard = Template.bind({})

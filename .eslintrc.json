@@ -1,15 +1,16 @@
 {
-  "ignorePatterns": ["*.test.tsx", "*.stories.tsx"],
+  "ignorePatterns": ["*.test.tsx", "*.stories.tsx", "*.config.ts"],
   "env": {
     "browser": true,
     "es2021": true
   },
   "extends": [
-    "standard-with-typescript",
+    "love",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["react", "react-hooks", "@typescript-eslint"],

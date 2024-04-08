@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0
+
+- Switch build framework from CRA to VITE
+
 ## 2.1.45
 
 - Add submenu options for active and inactive cards

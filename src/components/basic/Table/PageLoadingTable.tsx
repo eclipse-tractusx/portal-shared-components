@@ -108,7 +108,7 @@ export const PageLoadingTable = function <Row, Args>({
     if (isFetching && !loading) {
       setLoading(true)
     }
-    if (isSuccess && !isFetching && data && data.content) {
+    if (isSuccess && !isFetching && data?.content) {
       if (clear) {
         setItems([])
         setClear(false)

@@ -141,12 +141,7 @@ export const Toolbar = ({
   const onFilterChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked } = target
     onFilter?.(
-      getSelectedFilterUpdate(
-        selectedFilter as SelectedFilter,
-        name,
-        value,
-        checked
-      )
+      getSelectedFilterUpdate(selectedFilter ?? {}, name, value, checked)
     )
   }
 
@@ -277,9 +272,7 @@ export const Toolbar = ({
                   name={name}
                   value={value}
                   label={label ?? value}
-                  checked={(selectedFilter as SelectedFilter)[name]?.includes(
-                    value
-                  )}
+                  checked={selectedFilter?.[name]?.includes(value)}
                   onChange={onFilterChange}
                 />
               </Box>

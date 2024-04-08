@@ -61,7 +61,6 @@ export interface CardProps
     | 'absolute'
     | 'fixed'
     | 'sticky'
-    | undefined
   topValue?: number
   subMenu?: boolean
   activeSubmenuOptions?: SubItems[]
@@ -210,6 +209,9 @@ export const Card = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onClick={boxClickable ? onButtonClick : onClick}
+      onKeyDown={() => {
+        // do nothing
+      }}
     >
       <Box
         sx={{

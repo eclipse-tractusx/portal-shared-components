@@ -40,53 +40,55 @@ export interface StepperProps {
   tooltipLink?: string
 }
 
-export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink }: StepperProps) => {
-
+export const Stepper = ({
+  list,
+  showSteps,
+  activeStep,
+  tooltipText,
+  tooltipLink,
+}: StepperProps) => {
   return (
     <Box
       sx={{
         margin: '0px auto',
       }}
     >
-      {list &&
+      {list && (
         <>
-          <Box
-            className="stepperMain"
-          >
-            {
-              list
-                .filter((item) => item.step <= showSteps && item.step <= list.length)
-                .map((item, i) => (
-                  <StepperItem
-                    key={uniqueId(item.headline)}
-                    step={item.step}
-                    headline={item.headline}
-                    text={item.text ?? ''}
-                    color={item.color ?? ''}
-                    activeStep={activeStep}
-                    index={i + 1}
-                    totalSteps={list.length}
-                    tooltipText={tooltipText}
-                    tooltipLink={tooltipLink}
-                  />
-                ))
-            }
+          <Box className="stepperMain">
+            {list
+              .filter(
+                (item) => item.step <= showSteps && item.step <= list.length
+              )
+              .map((item, i) => (
+                <StepperItem
+                  key={uniqueId(item.headline)}
+                  step={item.step}
+                  headline={item.headline}
+                  text={item.text ?? ''}
+                  color={item.color ?? ''}
+                  activeStep={activeStep}
+                  index={i + 1}
+                  tooltipText={tooltipText}
+                  tooltipLink={tooltipLink}
+                />
+              ))}
           </Box>
           <Box className="stepperHint">
-            {
-              tooltipText &&
+            {tooltipText &&
               list
-                .filter((item) => item.step <= showSteps && item.step <= list.length)
+                .filter(
+                  (item) => item.step <= showSteps && item.step <= list.length
+                )
                 .map((item, i) => (
                   <Box
                     className="hintStep"
                     sx={{
-                      marginTop: '25px'
+                      marginTop: '25px',
                     }}
                     key={uniqueId(item.headline)}
                   >
-                    {
-                      i + 1 === activeStep &&
+                    {i + 1 === activeStep && (
                       <Box
                         sx={{
                           fontSize: '14px',
@@ -94,7 +96,7 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
                           borderRadius: '6px',
                           padding: '6px',
                           boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)',
-                          cursor: 'pointer'
+                          cursor: 'pointer',
                         }}
                       >
                         <Link
@@ -107,30 +109,25 @@ export const Stepper = ({ list, showSteps, activeStep, tooltipText, tooltipLink 
                             alignItems: 'center',
                           }}
                         >
-                          <KeyboardArrowUpIcon
-                            sx={{
-
-                            }}
-                          />
+                          <KeyboardArrowUpIcon sx={{}} />
                           <Typography
                             variant="label3"
                             fontSize="12px"
                             sx={{
                               paddingBottom: '5px',
-                              textAlign: 'center'
+                              textAlign: 'center',
                             }}
                           >
                             {tooltipText}
                           </Typography>
                         </Link>
                       </Box>
-                    }
+                    )}
                   </Box>
-                ))
-            }
+                ))}
           </Box>
         </>
-      }
+      )}
     </Box>
   )
 }
