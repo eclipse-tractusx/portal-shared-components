@@ -42,8 +42,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
+      - name: Download Eclipse Dash Tool
+        run: curl -L --output ./org.eclipse.dash.licenses.jar 'https://repo.eclipse.org/service/local/artifact/maven/redirect?r=dash-licenses&g=org.eclipse.dash&a=org.eclipse.dash.licenses&v=LATEST'
+
       - name: Generate Dependencies file
-        run: java -jar ./scripts/download/org.eclipse.dash.licenses-1.1.1.jar yarn.lock -project automotive.tractusx -summary DEPENDENCIES || true
+        run: java -jar ./org.eclipse.dash.licenses.jar yarn.lock -project automotive.tractusx -summary DEPENDENCIES || true
 
       - name: Check if dependencies were changed
         id: dependencies-changed
