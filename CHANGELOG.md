@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.3
+
+- Re-introduce some props for backward compatibility
+
 ## 3.0.2
 
 - Remove eclipse dash tool jar: add step to dependencies check to download eclipse dash tool instead
