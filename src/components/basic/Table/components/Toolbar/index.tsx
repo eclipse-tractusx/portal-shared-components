@@ -199,21 +199,18 @@ export const Toolbar = ({
               }}
               tooltipPlacement="top-end"
               tooltipText={buttonTooltip ?? ''}
-              children={
-                <div>
-                  <Button
-                    startIcon={<AddCircleOutlineIcon />}
-                    size="small"
-                    onClick={onButtonClick}
-                    sx={{ marginLeft: 15 }}
-                    disabled={buttonDisabled}
-                  >
-                    {buttonLabel}
-                  </Button>
-                </div>
-              }
             >
-
+              <span>
+                <Button
+                  startIcon={<AddCircleOutlineIcon />}
+                  size="small"
+                  onClick={onButtonClick}
+                  sx={{ marginLeft: 15 }}
+                  disabled={buttonDisabled}
+                >
+                  {buttonLabel}
+                </Button>
+              </span>
             </Tooltips>
           )}
           {secondButtonLabel && onSecondButtonClick != null && (
