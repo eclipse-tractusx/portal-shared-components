@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.3
+
+- Add button disabled and tooltip in table
+
 ## 3.0.2
 
 - Remove eclipse dash tool jar: add step to dependencies check to download eclipse dash tool instead

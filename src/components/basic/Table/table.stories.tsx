@@ -104,6 +104,8 @@ TableToolbar.args = {
   toolbar: {
     buttonLabel: 'Add user',
     onButtonClick: () => console.log('on button click'),
+    buttonDisabled: true,
+    buttonTooltip: 'Not able to add',
     secondButtonLabel: 'Add Multiple users',
     onSecondButtonClick: () => console.log('on multiple button click'),
     onSearch: (value) => console.log(`search: "${value}"`),
