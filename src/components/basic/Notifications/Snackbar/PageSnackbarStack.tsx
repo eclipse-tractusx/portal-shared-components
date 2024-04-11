@@ -20,7 +20,6 @@
 
 import { Box } from '@mui/material'
 import { type PropsWithChildren } from 'react'
-import * as React from 'react'
 
 export const PageSnackbarStack = ({ children }: PropsWithChildren<unknown>) => {
   return (

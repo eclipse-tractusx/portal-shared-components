@@ -43,16 +43,15 @@ interface CardsProps {
   imageShape?: CardProps['imageShape']
   imageLoader?: CardProps['imageLoader']
   imageElement?: CardProps['imageElement']
-  columns?: number
   readMoreText?: CardProps['readMoreText']
   readMoreLink?: CardProps['readMoreLink']
   addButtonClicked?: boolean
-  showAddNewCard?: boolean
   newButtonText?: string
-  onNewCardButton?: React.MouseEventHandler | undefined
+  onNewCardButton?: React.MouseEventHandler
   onCardClick?: (item: CardItems) => void
   subMenu?: boolean
-  submenuOptions?: SubItems[]
+  activeSubmenuOptions?: SubItems[]
+  inactiveSubmenuOptions?: SubItems[]
   submenuClick?: (sortMenu: string, id: string | undefined) => undefined
   tooltipText?: string
   showStatus?: boolean
@@ -70,19 +69,18 @@ export const Cards = ({
   imageSize,
   imageShape,
   imageLoader,
-  columns = 6,
   expandOnHover,
   filledBackground,
   addButtonClicked = false,
-  showAddNewCard = false,
   newButtonText,
   onNewCardButton,
   onCardClick = () => {
     // empty
   },
   subMenu = false,
-  submenuOptions = [],
-  submenuClick = (sortMenu: string, id: string | undefined) => {
+  activeSubmenuOptions = [],
+  inactiveSubmenuOptions = [],
+  submenuClick = () => {
     // empty
   },
   tooltipText,
@@ -102,7 +100,8 @@ export const Cards = ({
     filledBackground,
     addButtonClicked,
     subMenu,
-    submenuOptions,
+    activeSubmenuOptions,
+    inactiveSubmenuOptions,
     submenuClick,
     tooltipText,
     showStatus,

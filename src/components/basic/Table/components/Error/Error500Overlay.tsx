@@ -46,6 +46,7 @@ export const Error500Overlay = ({ reload }: { reload: () => void }) => (
     </Typography>
     <div
       onClick={reload}
+      onKeyDown={reload}
       style={{
         marginBottom: '20px',
         cursor: 'pointer',

@@ -53,7 +53,7 @@ export default {
     ],
     translations: {
       placeholder: 'Lorem Ipsum: Wieviele sachen willst du hochladen',
-      uploadProgess: 'Uploaded % of % files',
+      uploadProgress: 'Uploaded % of % files',
       uploadSuccess: 'Uploaded',
       uploadError: 'Not Uploaded',
     },

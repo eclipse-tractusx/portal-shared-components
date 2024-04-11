@@ -1,12 +1,28 @@
 # Changelog
 
-## 2.1.45
+## 3.0.3
 
 - Add button disabled and tooltip in table
 
+## 3.0.2
+
+- Remove eclipse dash tool jar: add step to dependencies check to download eclipse dash tool instead
+
+## 3.0.1
+
+- Generate typescript types to build
+
+## 3.0.0
+
+- Switch build framework from CRA to VITE
+
+## 2.1.45
+
+- Add submenu options for active and inactive cards
+
 ## 2.1.44
 
-- UI Improvements in Card component. Add favourite icon and full length button
+- UI Improvements in Card component. Add favorite icon and full length button
 
 ## 2.1.43
 

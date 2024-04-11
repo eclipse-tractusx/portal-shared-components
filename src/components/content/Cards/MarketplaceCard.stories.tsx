@@ -102,11 +102,26 @@ const items = [
   },
 ]
 
-const submenuOptions = [
+const activeSubmenuOptions = [
   {
     label: 'Tab 1',
     value: 'tab1',
-    url: '/tab1',
+  },
+  {
+    label: 'Tab 2',
+    value: 'tab2',
+  },
+]
+const inactiveSubmenuOptions = [
+  {
+    label: 'Tab 1',
+    value: 'tab1',
+    disabled: true,
+  },
+  {
+    label: 'Tab 2',
+    value: 'tab2',
+    disabled: true,
   },
 ]
 
@@ -120,6 +135,7 @@ MarketplaceCard.args = {
   imageShape: 'round',
   addButtonClicked: false,
   subMenu: true,
-  submenuOptions: submenuOptions,
+  activeSubmenuOptions: activeSubmenuOptions,
+  inactiveSubmenuOptions: inactiveSubmenuOptions,
   tooltipText: 'Action is pending',
 }

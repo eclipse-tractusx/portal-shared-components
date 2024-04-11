@@ -31,12 +31,10 @@ interface CardHorizontalProps extends CardChipProps {
   subTitle?: string
   borderRadius: number
   imagePath: string
-  imageAlt: string
   description?: string
   backgroundColor?: string
   buttonText?: string
   onBtnClick?: React.MouseEventHandler
-  expandOnHover?: boolean
 }
 
 export const CardHorizontal = ({
@@ -45,14 +43,10 @@ export const CardHorizontal = ({
   subTitle,
   borderRadius = 0,
   imagePath,
-  imageAlt,
   description,
-  status,
-  statusText,
   buttonText,
   onBtnClick,
   backgroundColor,
-  expandOnHover = false,
 }: CardHorizontalProps) => {
   const theme = useTheme()
   const boxRef = useRef<HTMLDivElement>(null)
@@ -153,7 +147,7 @@ export const CardHorizontal = ({
             style={{
               marginTop: 'auto',
               display: 'flex',
-              justifyContent: 'flex-end'
+              justifyContent: 'flex-end',
             }}
           >
             <Typography
@@ -174,7 +168,7 @@ export const CardHorizontal = ({
                 '&:hover': {
                   backgroundColor: 'rgb(176 206 235 / 40%)',
                   borderRadius: '20px',
-                }
+                },
               }}
             >
               <KeyboardArrowDownIcon sx={{ marginRight: '5px' }} />

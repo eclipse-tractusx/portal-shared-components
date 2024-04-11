@@ -22,14 +22,14 @@ import { Box } from '@mui/material'
 import { Button } from '../Button'
 import React from 'react'
 
-export interface view {
+export interface View {
   buttonText: string
   buttonValue: string
   onButtonClick?: React.MouseEventHandler
 }
 
 export interface ViewSelectorProps {
-  views: view[]
+  views: View[]
   activeView: string
   align?: string
 }

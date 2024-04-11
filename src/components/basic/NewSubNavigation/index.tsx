@@ -53,11 +53,17 @@ export const NewSubNavigation = ({
   const [header, setHeader] = useState(title)
   const [highlight, setHighlight] = useState('')
   return (
-    <Box onMouseOver={() => { setShow(true) }}>
+    <Box
+      onMouseOver={() => {
+        setShow(true)
+      }}
+    >
       {navigationArray?.length > 0 && (
         <Box
           className="navigationParentContainer"
-          onMouseLeave={() => { setShow(false) }}
+          onMouseLeave={() => {
+            setShow(false)
+          }}
         >
           <Box className="navigationContainer">
             <Box className="navigationOverlayContainer">
@@ -68,92 +74,94 @@ export const NewSubNavigation = ({
                   marginLeft: '10px',
                   fontSize: '14px',
                   color: '#0f71cb',
-                  textTransform: 'lowercase'
+                  textTransform: 'lowercase',
                 }}
               >
                 {header}
               </Typography>
-                <Box className="navigationOverlay">
-                  {navigationArray?.map((link: NavigationItem) => {
-                    return (
-                      <Box
-                        key={link.index}
-                        onClick={() => {
-                          onClick(link.navigation)
-                          setShow(!show)
-                          if (updateHeaderTitle) {
-                            setHeader(link.title)
-                          }
-                        }}
-                        className="navigationOverlayItem"
-                        onMouseOut={() => { setHighlight(link.title) }}
-                        onMouseOver={() => {
-                          // do nothing
-                        }}
+              <Box className="navigationOverlay">
+                {navigationArray?.map((link: NavigationItem) => {
+                  return (
+                    <Box
+                      key={link.index}
+                      onClick={() => {
+                        onClick(link.navigation)
+                        setShow(!show)
+                        if (updateHeaderTitle) {
+                          setHeader(link.title)
+                        }
+                      }}
+                      className="navigationOverlayItem"
+                      onMouseOut={() => {
+                        setHighlight(link.title)
+                      }}
+                      onMouseOver={() => {
+                        // do nothing
+                      }}
+                      sx={{
+                        backgroundColor:
+                          header === link.title || highlight === link.title
+                            ? 'rgba(15, 113, 203, 0.05)'
+                            : 'transparent',
+                      }}
+                    >
+                      <EastIcon
                         sx={{
-                          backgroundColor:
+                          marginRight: '16px',
+                          fontSize: '18px',
+                          color:
                             header === link.title || highlight === link.title
-                              ? 'rgba(15, 113, 203, 0.05)'
-                              : 'transparent',
+                              ? '#0f71cb'
+                              : '#EAF1FE',
+                        }}
+                      />
+                      <Typography
+                        variant="h4"
+                        sx={{
+                          color:
+                            header === link.title || highlight === link.title
+                              ? '#111111'
+                              : '#888888',
+                          fontSize: '14px',
+                          textTransform: 'lowercase',
                         }}
                       >
-                        <EastIcon
-                          sx={{
-                            marginRight: '16px',
-                            fontSize: '18px',
-                            color:
-                              header === link.title || highlight === link.title
-                                ? '#0f71cb'
-                                : '#EAF1FE',
-                          }}
-                        />
-                        <Typography
-                          variant="h4"
-                          sx={{
-                            color:
-                              header === link.title || highlight === link.title
-                                ? '#111111'
-                                : '#888888',
-                            fontSize: '14px',
-                            textTransform: 'lowercase'
-                          }}
-                        >
-                          {link.title}
-                        </Typography>
-                      </Box>
+                        {link.title}
+                      </Typography>
+                    </Box>
+                  )
+                })}
+                {buttonArray?.length > 1 && (
+                  <Divider
+                    sx={{
+                      margin: '10px 0px',
+                      borderWidth: '1px',
+                      width: '100%',
+                    }}
+                  />
+                )}
+                {buttonArray?.length > 1 &&
+                  buttonArray?.map((btn: NavigationButton) => {
+                    return (
+                      <Button
+                        key={btn.buttonLabel}
+                        onClick={(e) => {
+                          btn.onButtonClick(e)
+                          setShow(!show)
+                        }}
+                        color="secondary"
+                        variant="outlined"
+                        size="small"
+                        sx={{
+                          marginTop: '10px',
+                          textTransform: 'lowercase',
+                        }}
+                      >
+                        {btn.buttonLabel}
+                      </Button>
                     )
                   })}
-                  {buttonArray?.length > 1 && (
-                    <Divider
-                      sx={{
-                        margin: '10px 0px',
-                        borderWidth: '1px',
-                        width: '100%',
-                      }}
-                    />
-                  )}
-                  {buttonArray?.length > 1 &&
-                    buttonArray?.map((btn: NavigationButton) => {
-                      return (
-                        <Button
-                          key={btn.buttonLabel}
-                          onClick={(e) => {
-                            btn.onButtonClick(e)
-                            setShow(!show)
-                          }}
-                          color="secondary"
-                          variant="outlined"
-                          size="small"
-                          sx={{
-                            marginTop: '10px',
-                            textTransform: 'lowercase'
-                          }}
-                        >
-                          {btn.buttonLabel}
-                        </Button>
-                      )
-                    })}
-                </Box>
+              </Box>
             </Box>
             {buttonArray?.length === 1 && (
               <Button
@@ -166,7 +174,7 @@ export const NewSubNavigation = ({
                 size="small"
                 sx={{
                   marginTop: '10px',
-                  textTransform: 'lowercase'
+                  textTransform: 'lowercase',
                 }}
               >
                 {buttonArray[0].buttonLabel}

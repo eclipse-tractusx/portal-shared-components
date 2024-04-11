@@ -18,98 +18,95 @@
  ********************************************************************************/
 
 .stepperMain {
-    display: flex;
+  display: flex;
 
-    .stepperStep {
-        -webkit-flex: 1 0 0%;
-        -ms-flex: 1 0 0%;
-        flex: 1 0 0%;
-        width: 160px;
-        max-width: 100%;
+  .stepperStep {
+    -webkit-flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    width: 160px;
+    max-width: 100%;
 
-        .stepHead {
-            text-align: center;
-            height: 100%;
+    .stepHead {
+      text-align: center;
+      height: 100%;
 
-            .hintStepMain {
-                .hintStepMobile {
-                    display: none;
-                }
-            }
-
-            .stepHeadline {
-                margin: 0 auto;
-                min-height: 56px;
-            }
+      .hintStepMain {
+        .hintStepMobile {
+          display: none;
         }
+      }
+
+      .stepHeadline {
+        margin: 0 auto;
+        min-height: 56px;
+      }
     }
+  }
 }
 
 .stepperHint {
-    display: flex;
+  display: flex;
 
-    .hintStep {
-        -webkit-flex: 1 0 0%;
-        -ms-flex: 1 0 0%;
-        flex: 1 0 0%;
-        width: 100%;
-        max-width: 100%;
-    }
+  .hintStep {
+    -webkit-flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
-
-
 @media only screen and (max-width: 767px) {
+  .stepperMain {
+    display: inline-block;
+    width: 100%;
 
-    .stepperMain {
-        display: inline-block;
-        width: 100%;
+    .stepperStep {
+      margin-bottom: 12px;
+      width: 100%;
+      padding: 0 10px;
+      .stepHead {
+        text-align: left;
+        height: auto;
 
-        .stepperStep {
-            margin-bottom: 12px;
-            width: 100%;
-            padding: 0 10px;
-            .stepHead {
-                text-align: left;
-                height: auto;
+        .hintStepMain {
+          display: flex;
+          align-items: center;
 
-                .hintStepMain {
-                    display: flex;
-                    align-items: center;
+          .hintStepMobile {
+            display: inline-block;
 
-                    .hintStepMobile {
-                        display: inline-block;
+            a {
+              display: inline-flex;
+              border-radius: 12px;
+              padding: 6px 12px;
+              background: var(--Interactive-Secondary, #eaf1fe);
+              box-shadow: 0px 20px 40px 0px rgba(80, 80, 80, 0.3);
+              margin-left: 10px;
 
-                        a {
-                            display: inline-flex;
-                            border-radius: 12px;
-                            padding: 6px 12px;
-                            background: var(--Interactive-Secondary, #EAF1FE);
-                            box-shadow: 0px 20px 40px 0px rgba(80, 80, 80, 0.30);
-                            margin-left: 10px;
-
-                            span {
-                                padding-bottom: 0;
-                            }
-                        }
-                    }
-                }
-
-                .stepIcon {
-                    margin: 0;
-                }
-
-                .stepHeadline {
-                    width: 100%;
-                    margin: 10px auto 12px auto;
-                    min-height: auto;
-                    line-height: normal;
-                }
+              span {
+                padding-bottom: 0;
+              }
             }
+          }
         }
-    }
 
-    .stepperHint {
-        display: none;
+        .stepIcon {
+          margin: 0;
+        }
+
+        .stepHeadline {
+          width: 100%;
+          margin: 10px auto 12px auto;
+          min-height: auto;
+          line-height: normal;
+        }
+      }
     }
+  }
+
+  .stepperHint {
+    display: none;
+  }
 }

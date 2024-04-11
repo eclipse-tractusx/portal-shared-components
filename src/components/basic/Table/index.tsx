@@ -34,7 +34,7 @@ import { SearchAndFilterButtonToolbar } from './components/Toolbar/SearchAndFilt
 import { Typography } from '../Typography'
 import { Error500Overlay } from './components/Error/Error500Overlay'
 import { Error400Overlay } from './components/Error/Error400Overlay'
-import type { view } from '../ViewSelector'
+import type { View } from '../ViewSelector'
 
 export { StatusTag }
 export type toolbarType = 'basic' | 'premium' | 'ultimate' | 'searchAndFilter'
@@ -66,7 +66,7 @@ export interface TableProps extends DataGridProps {
   onSelection?: (value: GridRowId[]) => void
   descriptionText?: string
   defaultFilter?: string
-  filterViews?: view[]
+  filterViews?: View[]
   alignCell?: string
   error?: {
     status: number
@@ -139,7 +139,6 @@ export const Table = ({
     (selectedIds: GridRowSelectionModel) => {
       const idsArr: string[] = []
       rows.map((row) => {
-        // eslint-disable-next-line
         return selectedIds.map(
           (selectedId: GridRowId) =>
             selectedId.toString().includes(row.companyUserId) &&
@@ -219,7 +218,6 @@ export const Table = ({
           Toolbar: () => toolbarView(),
           NoRowsOverlay,
         }}
-        // eslint-disable-next-line
         onRowSelectionModelChange={handleOnCellClick}
         {...{
           rows,

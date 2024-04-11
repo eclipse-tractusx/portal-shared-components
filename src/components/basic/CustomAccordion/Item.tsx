@@ -47,7 +47,7 @@ export const CustomAccordionItem = ({
   titleElement,
   ...props
 }: CustomAccordionProps) => {
-  const onChange = {...props}.onChange
+  const onChange = { ...props }.onChange
   return (
     <Accordion
       expanded={expanded}
@@ -84,14 +84,18 @@ export const CustomAccordionItem = ({
       <AccordionDetails sx={{ mb: '20px', bgcolor: color }}>
         {children}
       </AccordionDetails>
-      {
-        buttonText &&
-        <AccordionActions onClick={(e) => { onChange?.(e, false)} } sx={{justifyContent: 'center', mb: '20px'}}>
+      {buttonText && (
+        <AccordionActions
+          onClick={(e) => {
+            onChange?.(e, false)
+          }}
+          sx={{ justifyContent: 'center', mb: '20px' }}
+        >
           <Button variant="contained" size="small">
             {buttonText}
           </Button>
         </AccordionActions>
-      }
+      )}
     </Accordion>
   )
 }

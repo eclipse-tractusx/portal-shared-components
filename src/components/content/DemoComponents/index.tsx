@@ -196,11 +196,7 @@ const TemplateConfig = ({
       )
     // Grid layout link component
     case TemplateNames.LinkButtonGrid:
-      return (
-        <>
-          <LinkButtonGrid provider={provider} grid={provider.grid ?? 2} />
-        </>
-      )
+      return <LinkButtonGrid provider={provider} grid={provider.grid ?? 2} />
     // Text in the left and image in the right side with sub sections
     case TemplateNames.TextImageSideBySideWithSections:
       return (
@@ -246,9 +242,9 @@ export const ContentComponents = ({
     isMobile ? PageOffsetValue.MOBILE : PageOffsetValue.DEFAULT
 
   const checkScrollTop = () => {
-    if (!showScroll && window.scrollY > getValue()) {
+    if (!showScroll && window.scrollY > (getValue() as number)) {
       setShowScroll(true)
-    } else if (showScroll && window.scrollY <= getValue()) {
+    } else if (showScroll && window.scrollY <= (getValue() as number)) {
       setShowScroll(false)
     }
   }

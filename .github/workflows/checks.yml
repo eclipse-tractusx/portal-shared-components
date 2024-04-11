@@ -70,3 +70,6 @@ jobs:
 
       - name: Unit Tests
         run: CI=true yarn test
+
+      - name: Build Library
+        run: yarn build

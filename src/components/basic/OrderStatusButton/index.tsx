@@ -49,7 +49,7 @@ export const OrderStatusButton = ({
   const theme = useTheme()
 
   const handleClick = (e: React.MouseEvent) => {
-    onButtonClick != null && onButtonClick(e)
+    onButtonClick?.(e)
   }
 
   const fetchButton = (
@@ -109,9 +109,11 @@ export const OrderStatusButton = ({
         <Typography
           variant="body2"
           sx={{
-            fontSize: '11px'
+            fontSize: '11px',
           }}
-        >{buttonLabel}</Typography>
+        >
+          {buttonLabel}
+        </Typography>
       </Button>
     )
   }
