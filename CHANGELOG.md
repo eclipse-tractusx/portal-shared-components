@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.45
+
+- Add button disabled and tooltip in table
+
 ## 2.1.44
 
 - UI Improvements in Card component. Add favourite icon and full length button

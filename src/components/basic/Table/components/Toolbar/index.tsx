@@ -30,6 +30,7 @@ import ClearIcon from '@mui/icons-material/Clear'
 import { Checkbox } from '../../../Checkbox'
 import { getSelectedFilterUpdate } from './helper'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
+import { Tooltips } from '../../../ToolTips'
 
 interface FilterValue {
   value: string
@@ -54,6 +55,8 @@ export interface ToolbarProps {
   rowsCountMax?: number
   buttonLabel?: string
   onButtonClick?: React.MouseEventHandler
+  buttonDisabled?: boolean
+  buttonTooltip?: string
   secondButtonLabel?: string
   onSecondButtonClick?: React.MouseEventHandler
   onSearch?: (value: string) => void
@@ -80,6 +83,8 @@ export const Toolbar = ({
   rowsCountMax = 0,
   buttonLabel,
   onButtonClick,
+  buttonDisabled,
+  buttonTooltip,
   secondButtonLabel,
   onSecondButtonClick,
   onSearch,
@@ -192,14 +197,29 @@ export const Toolbar = ({
             </Box>
           </Typography>
           {buttonLabel && onButtonClick != null && (
-            <Button
-              startIcon={<AddCircleOutlineIcon />}
-              size="small"
-              onClick={onButtonClick}
-              sx={{ marginLeft: 15 }}
+            <Tooltips
+              additionalStyles={{
+                marginLeft: '50px',
+                cursor: 'pointer',
+              }}
+              tooltipPlacement="top-end"
+              tooltipText={buttonTooltip ?? ''}
+              children={
+                <div>
+                  <Button
+                    startIcon={<AddCircleOutlineIcon />}
+                    size="small"
+                    onClick={onButtonClick}
+                    sx={{ marginLeft: 15 }}
+                    disabled={buttonDisabled}
+                  >
+                    {buttonLabel}
+                  </Button>
+                </div>
+              }
             >
-              {buttonLabel}
-            </Button>
+
+            </Tooltips>
           )}
           {secondButtonLabel && onSecondButtonClick != null && (
             <Button
