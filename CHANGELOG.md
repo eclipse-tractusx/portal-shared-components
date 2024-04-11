@@ -1,8 +1,12 @@
 # Changelog
 
-## 3.0.3
+## 3.0.4
 
 - Re-introduce some props for backward compatibility
+
+## 3.0.3
+
+- Add button disabled and tooltip in table
 
 ## 3.0.2
 

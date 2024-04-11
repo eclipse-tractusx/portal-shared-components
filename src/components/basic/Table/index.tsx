@@ -59,6 +59,8 @@ export interface TableProps extends DataGridProps {
   hasBorder?: boolean
   buttonLabel?: string
   onButtonClick?: React.MouseEventHandler
+  buttonDisabled?: boolean
+  buttonTooltip?: string
   secondButtonLabel?: string
   onSecondButtonClick?: React.MouseEventHandler
   onSelection?: (value: GridRowId[]) => void
@@ -95,6 +97,8 @@ export const Table = ({
   hasBorder = true,
   buttonLabel,
   onButtonClick,
+  buttonDisabled,
+  buttonTooltip,
   secondButtonLabel,
   onSecondButtonClick,
   onSelection,
@@ -117,6 +121,8 @@ export const Table = ({
     noRowsMsg,
     buttonLabel,
     onButtonClick,
+    buttonDisabled,
+    buttonTooltip,
     secondButtonLabel,
     onSecondButtonClick,
     onSelection,
