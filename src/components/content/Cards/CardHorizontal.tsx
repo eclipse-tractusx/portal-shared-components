@@ -31,10 +31,12 @@ interface CardHorizontalProps extends CardChipProps {
   subTitle?: string
   borderRadius: number
   imagePath: string
+  imageAlt?: string
   description?: string
   backgroundColor?: string
   buttonText?: string
   onBtnClick?: React.MouseEventHandler
+  expandOnHover?: boolean
 }
 
 export const CardHorizontal = ({
@@ -43,10 +45,18 @@ export const CardHorizontal = ({
   subTitle,
   borderRadius = 0,
   imagePath,
+  // @ts-expect-error keep for backward compatibility
+  imageAlt,
   description,
+  // @ts-expect-error keep for backward compatibility
+  status,
+  // @ts-expect-error keep for backward compatibility
+  statusText,
   buttonText,
   onBtnClick,
   backgroundColor,
+  // @ts-expect-error keep for backward compatibility
+  expandOnHover = false,
 }: CardHorizontalProps) => {
   const theme = useTheme()
   const boxRef = useRef<HTMLDivElement>(null)

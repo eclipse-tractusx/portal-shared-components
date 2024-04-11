@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -91,10 +91,10 @@
     "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
     "test": "jest",
     "test:ci": "CI=true jest",
+    "start": "yarn start:storybook",
     "start:dev": "vite",
     "start:storybook": "storybook dev -p 3006",
     "build:storybook": "storybook build -o ./storybook",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006"
   }
 }
