@@ -9,15 +9,19 @@ To use components in your own project follow this guide.
 First create a new react app and add dependencies for the library and Material UI.
 We are using yarn and TypeScript, if you prefer npm/npx or JavaScript use those.
 
-    yarn create react-app sample-shared-components --template typescript
+    yarn create vite sample-shared-components --template react-ts
     cd sample-shared-components
+    yarn
     yarn add @catena-x/portal-shared-components @mui/icons-material @mui/material
+    yarn dev
 
 Install dependencies and start the development server
 
     yarn start
 
-Edit `src/index.tsx` and wrap the `App` with the CX `SharedThemeProvider` context
+Edit `src/main.tsx` and wrap the `App` with the CX `SharedThemeProvider` context
+
+    import { SharedThemeProvider } from '@catena-x/portal-shared-components'
 
     ReactDOM.createRoot(
         document.getElementById('root') as HTMLElement
@@ -67,9 +71,13 @@ Note: replace <YOUR_PORTAL_HOSTNAME> with your installation host name.
 
 Open `App.tsx` and replace the code with this example
 
-    import { Button } from "@catena-x/portal-shared-components";
-    const App = () => <Button onClick={() => { alert('clicked') }}>Click me</Button>
-    export default App;
+    import { Button } from "@catena-x/portal-shared-components"
+
+    const App = () => <Button onClick={() => { alert('clicked') }}>
+      Click me
+    </Button>
+
+    export default App
 
 ## Developer documentation
 

@@ -18,26 +18,17 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
 import { BackButton as Component } from './BackButton'
 
+type Story = StoryObj<typeof Component>
+
 export default {
-  title: 'Buttons',
   component: Component,
-  argTypes: {
-    onBackButtonClick: {
-      action: 'onClick',
-    },
-  },
+  tags: ['autodocs'],
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
-
-export const BackButton = Template.bind({})
-BackButton.args = {
-  backButtonLabel: 'Back',
-  backButtonVariant: 'text',
+export const Primary: Story = {
+  render: () => <Component backButtonLabel="Back" />,
 }

@@ -18,22 +18,22 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
-import { LoadMoreButton as Component } from './LoadMoreButton'
+import { LoadMoreButton } from './LoadMoreButton'
 
 export default {
-  title: 'Buttons',
-  component: Component,
-  argTypes: {},
+  component: LoadMoreButton,
+  tags: ['autodocs'],
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+type Story = StoryObj<typeof LoadMoreButton>
 
-export const LoadMoreButton = Template.bind({})
-LoadMoreButton.args = {
-  label: 'load more',
-  color: 'primary',
+export const LoadMore: Story = {
+  args: {
+    color: 'primary',
+    disabled: false,
+    fullWidth: false,
+    label: 'Load More',
+  },
 }
