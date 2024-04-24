@@ -25,6 +25,7 @@ import { ErrorPage as Component } from '.'
 export default {
   title: 'ErrorPage',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

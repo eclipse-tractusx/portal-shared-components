@@ -26,6 +26,7 @@ import { CardDecision as Component } from './CardDecision'
 export default {
   title: 'Cards',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

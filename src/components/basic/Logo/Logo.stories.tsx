@@ -25,6 +25,7 @@ import { Logo as Component } from '.'
 export default {
   title: 'Logo',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (

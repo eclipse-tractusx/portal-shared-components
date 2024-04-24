@@ -25,6 +25,7 @@ import { CategoryDivider as Component } from '.'
 export default {
   title: 'CategoryDivider',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

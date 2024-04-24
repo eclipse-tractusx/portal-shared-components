@@ -62,6 +62,7 @@ const columns: GridColDef[] = [
 export default {
   title: 'Table',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

@@ -24,6 +24,7 @@ import { TabPanel as Component } from './TabPanel'
 export default {
   title: 'Tabs',
   component: Component,
+  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {

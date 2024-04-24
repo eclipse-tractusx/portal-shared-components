@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.5
+
+- Add storybook autodocs and fix README
+
 ## 3.0.4
 
 - Re-introduce some props for backward compatibility

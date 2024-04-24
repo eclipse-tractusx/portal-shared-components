@@ -25,6 +25,7 @@ import { DialogHeader as Component } from './DialogHeader'
 export default {
   title: 'Modal',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (

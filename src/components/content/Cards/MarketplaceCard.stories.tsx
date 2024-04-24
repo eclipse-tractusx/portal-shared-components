@@ -25,6 +25,7 @@ import { Cards as Component } from '.'
 export default {
   title: 'Cards',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

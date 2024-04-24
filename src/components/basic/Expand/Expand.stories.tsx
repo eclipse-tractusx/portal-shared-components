@@ -25,6 +25,7 @@ import { Expand as Component } from '.'
 export default {
   title: 'Expand',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     onClick: {
       action: 'onClick',

@@ -25,6 +25,7 @@ import { MainHeader as Component } from './MainHeader'
 export default {
   title: 'Headers',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

@@ -25,6 +25,7 @@ import { CardAddService as Component } from './CardAddService'
 export default {
   title: 'Cards',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

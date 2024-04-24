@@ -25,6 +25,7 @@ import { Stepper as Component } from '.'
 export default {
   title: 'Steppers',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

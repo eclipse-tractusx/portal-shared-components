@@ -29,6 +29,7 @@ import { DialogHeader } from './DialogHeader'
 export default {
   title: 'Modal',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     maxWidth: {
       control: 'inline-radio',

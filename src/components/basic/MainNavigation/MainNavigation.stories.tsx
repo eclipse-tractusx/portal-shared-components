@@ -30,6 +30,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline'
 export default {
   title: 'Navigation',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

@@ -29,6 +29,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 export default {
   title: 'CustomAccordion',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     children: {},
   },
