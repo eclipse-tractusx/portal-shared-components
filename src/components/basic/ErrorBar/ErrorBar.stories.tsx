@@ -24,6 +24,7 @@ import { ErrorBar as Component } from './ErrorBar'
 export default {
   title: 'ErrorBar',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

@@ -26,6 +26,7 @@ import { Button } from '../Button'
 export default {
   title: 'Modal',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (

@@ -25,6 +25,7 @@ import { ImageGallery as Component } from '.'
 export default {
   title: 'ImageGallery',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args) => (

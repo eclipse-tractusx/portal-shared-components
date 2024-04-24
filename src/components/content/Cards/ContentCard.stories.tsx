@@ -24,6 +24,7 @@ import { ContentCard as Component } from './ContentCard'
 export default {
   title: 'Cards',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

@@ -25,6 +25,7 @@ import { CircleProgress as Component } from '.'
 export default {
   title: 'Progress',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

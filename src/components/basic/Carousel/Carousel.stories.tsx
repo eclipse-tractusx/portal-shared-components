@@ -26,6 +26,7 @@ import uniqueId from 'lodash/uniqueId'
 export default {
   title: 'Carousel',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     children: {},
   },

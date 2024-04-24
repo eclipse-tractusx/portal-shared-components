@@ -25,6 +25,7 @@ import { OrderStatusButton as Component } from '.'
 export default {
   title: 'Buttons',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

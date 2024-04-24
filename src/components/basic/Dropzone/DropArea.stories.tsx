@@ -25,6 +25,7 @@ import { DropArea as Component } from './components/DropArea'
 export default {
   title: 'Dropzone',
   component: Component,
+  tags: ['autodocs'],
   args: {
     size: 'normal',
     disabled: false,

@@ -25,6 +25,7 @@ import { Alert as Component } from '.'
 export default {
   title: 'Alert',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     children: {},
   },

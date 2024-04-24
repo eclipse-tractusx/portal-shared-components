@@ -27,6 +27,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 export default {
   title: 'Buttons',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     onClick: {
       action: 'onClick',

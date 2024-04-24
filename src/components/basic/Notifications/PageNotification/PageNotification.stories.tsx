@@ -25,6 +25,7 @@ import { PageNotifications as Component } from '.'
 export default {
   title: 'Notifications',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 const Template: ComponentStory<typeof Component> = (args: any) => (

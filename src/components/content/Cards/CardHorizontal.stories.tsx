@@ -26,6 +26,7 @@ import { CardHorizontal as Component } from './CardHorizontal'
 export default {
   title: 'Cards',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

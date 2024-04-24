@@ -24,6 +24,7 @@ import { Chip as Component } from '.'
 export default {
   title: 'Chip',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
   parameters: {},
 }

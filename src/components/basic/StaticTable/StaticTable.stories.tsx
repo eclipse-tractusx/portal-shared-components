@@ -25,6 +25,7 @@ import { StaticTable as Component } from '.'
 export default {
   title: 'StaticTable',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args) => (

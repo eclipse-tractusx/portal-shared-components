@@ -28,6 +28,7 @@ import { DropdownMenu as Component } from '.'
 export default {
   title: 'Dropdown Menu',
   component: Component,
+  tags: ['autodocs'],
   args: {
     buttonText: 'Admin',
   },

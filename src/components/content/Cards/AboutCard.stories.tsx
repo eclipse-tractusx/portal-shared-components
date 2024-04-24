@@ -24,6 +24,7 @@ import { AboutCard as Component } from './AboutCard'
 export default {
   title: 'Cards',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (

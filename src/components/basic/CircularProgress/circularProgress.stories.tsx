@@ -25,6 +25,7 @@ import { CircularProgress as Component } from '.'
 export default {
   title: 'Loading',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (
