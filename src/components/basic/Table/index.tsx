@@ -65,6 +65,9 @@ export interface TableProps extends DataGridProps {
   descriptionText?: string
   defaultFilter?: string
   filterViews?: view[]
+  defaultSortOption?: string
+  sortOptions?: {label: string, value: string}[]
+  onSortClick?: (value: string) => void
   alignCell?: string
   error?: {
     status: number
@@ -101,6 +104,9 @@ export const Table = ({
   descriptionText,
   defaultFilter,
   filterViews,
+  defaultSortOption,
+  sortOptions,
+  onSortClick,
   alignCell = 'center',
   error,
   reload,
@@ -124,6 +130,9 @@ export const Table = ({
     descriptionText,
     defaultFilter,
     filterViews,
+    defaultSortOption,
+    sortOptions,
+    onSortClick,
     autoFocus,
   }
 

@@ -27,6 +27,8 @@ import { ViewSelector } from '../../../ViewSelector'
 import type { view } from '../../../ViewSelector'
 import { Typography } from '../../../Typography'
 import type { SelectedFilter } from './UltimateToolbar'
+import { SortOption } from '../../../SortOption'
+import SortImage from './SortImage'
 
 export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   placeholder?: string
@@ -35,6 +37,9 @@ export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   filterViews?: view[]
   defaultFilter?: string
   onFilter?: (selectedFilter: SelectedFilter) => void
+  defaultSortOption?: string
+  sortOptions?: { label: string, value: string }[]
+  onSortClick?: (value: string) => void
   descriptionText?: string
   autoFocus?: boolean
 }
@@ -49,12 +54,33 @@ export const SearchAndFilterButtonToolbar = ({
   searchDebounce = 500,
   filterViews,
   defaultFilter = '',
+  defaultSortOption,
+  sortOptions,
+  onSortClick,
   descriptionText,
   autoFocus,
 }: SearchAndFilterButtonToolbarProps) => {
+  // defaultSortOption = 'demo'
+  // sortOptions = [{
+  //   label: 'test',
+  //   value: 'test'
+  // },
+  // {
+  //   label: 'demo',
+  //   value: 'demo'
+  // }]
+
+  // onSortClick = (value: string) => {
+  //   console.log('value', value)
+  //   defaultSortOption = value
+  // }
+
+  // console.log('sortOption', defaultSortOption)
+
   const [searchInputText, setSearchInputText] = useState<string>(
     searchExpr ?? (searchInputData != null ? searchInputData.text : '')
   )
+  const [showModal, setShowModal] = useState<boolean>(false)
 
   const { spacing } = useTheme()
 
@@ -108,8 +134,8 @@ export const SearchAndFilterButtonToolbar = ({
     padding: spacing(2, 0, 6, 0),
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    flexDirection: 'column',
+    justifyContent: 'center',
+    flexDirection: 'row',
     marginTop: '40px',
   }
 
@@ -140,6 +166,37 @@ export const SearchAndFilterButtonToolbar = ({
           <ViewSelector activeView={defaultFilter} views={filterViews} />
         </Box>
       )}
+      {
+        sortOptions && defaultSortOption &&
+        <>
+          <SortImage
+            onClick={() => {
+              setShowModal(!showModal)
+            }}
+            selected={showModal}
+          />
+          <Box sx={{
+            position: 'absolute',
+            left: '73%',
+            marginTop: '6%',
+            background: '#f9f9f9',
+            boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)',
+            borderRadius: '16px',
+            zIndex: 9,
+          }}>
+            <SortOption
+              show={showModal}
+              sortOptions={sortOptions}
+              selectedOption={defaultSortOption}
+              setSortOption={(value: string) => {
+                onSortClick?.(value)
+                setShowModal(false)
+              }}
+            />
+          </Box>
+        </>
+      }
+
       {descriptionText && (
         <Box
           sx={{
