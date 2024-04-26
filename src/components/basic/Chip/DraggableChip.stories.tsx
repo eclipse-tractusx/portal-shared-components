@@ -25,6 +25,7 @@ import { DraggableChip as Component } from './DraggableChip'
 export default {
   title: 'Chip',
   component: Component,
+  tags: ['autodocs'],
   args: {
     children: 'name_use_case_4',
     isSelected: false,

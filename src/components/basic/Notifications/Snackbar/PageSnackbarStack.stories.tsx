@@ -26,6 +26,7 @@ import { PageSnackbarStack as Component } from './PageSnackbarStack'
 export default {
   title: 'Notifications',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
   args: {
     open: true,

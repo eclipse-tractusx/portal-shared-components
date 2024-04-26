@@ -23,6 +23,7 @@ import { QuickLinks as Component } from './index'
 export default {
   title: 'QuickLinks',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

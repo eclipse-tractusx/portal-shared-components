@@ -24,6 +24,7 @@ import { ViewSelector as Component, view } from '.'
 export default {
   title: 'ViewSelector',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

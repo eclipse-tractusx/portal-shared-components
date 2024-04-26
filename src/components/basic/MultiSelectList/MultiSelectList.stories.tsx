@@ -25,6 +25,7 @@ import { MultiSelectList as Component } from '.'
 export default {
   title: 'Form',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

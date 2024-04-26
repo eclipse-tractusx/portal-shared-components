@@ -25,6 +25,7 @@ import { Navigation as Component } from '.'
 export default {
   title: 'Navigation',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

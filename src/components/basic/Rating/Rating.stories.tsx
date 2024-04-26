@@ -25,6 +25,7 @@ import { Rating as Component } from '.'
 export default {
   title: 'Rating',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (

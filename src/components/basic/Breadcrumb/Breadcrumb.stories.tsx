@@ -26,6 +26,7 @@ import { Breadcrumb as Component } from '.'
 export default {
   title: 'Breadcrumb',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

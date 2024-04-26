@@ -25,6 +25,7 @@ import { LanguageSwitch as Component } from '.'
 export default {
   title: 'UserMenu',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     onChange: {
       action: 'onChange',

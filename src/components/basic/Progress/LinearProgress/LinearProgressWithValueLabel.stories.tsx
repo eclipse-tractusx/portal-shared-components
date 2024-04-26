@@ -24,6 +24,7 @@ import { LinearProgressWithValueLabel as Component } from './LinearProgressWithV
 export default {
   title: 'LinearProgressWithValueLabel',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

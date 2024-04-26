@@ -26,6 +26,7 @@ import { TabPanelType, VerticalTabs as Component } from '.'
 export default {
   title: 'Tabs',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

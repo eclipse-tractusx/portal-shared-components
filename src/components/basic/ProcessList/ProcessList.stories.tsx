@@ -25,6 +25,7 @@ import { ProcessList as Component } from '.'
 export default {
   title: 'ProcessList',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

@@ -24,6 +24,7 @@ import { StatusTag as Component } from '.'
 export default {
   title: 'StatusTag',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

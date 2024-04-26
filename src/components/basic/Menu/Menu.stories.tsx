@@ -25,6 +25,7 @@ import { Menu as Component } from '.'
 export default {
   title: 'Menus',
   component: Component,
+  tags: ['autodocs'],
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (

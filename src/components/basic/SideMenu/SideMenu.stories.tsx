@@ -27,6 +27,7 @@ import { DraggableChip } from '../Chip/DraggableChip'
 export default {
   title: 'Menus',
   component: Component,
+  tags: ['autodocs'],
   args: {
     header: 'Filter Semantic Models by assigned Use Cases',
     subHeader: 'Assign a Use Case by dragging it to a Semantic Model',

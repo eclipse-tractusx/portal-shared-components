@@ -25,6 +25,7 @@ import { PageHeader as Component } from './PageHeader'
 export default {
   title: 'Headers',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

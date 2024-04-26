@@ -25,6 +25,7 @@ import { BackButton as Component } from './BackButton'
 export default {
   title: 'Buttons',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {
     onBackButtonClick: {
       action: 'onClick',

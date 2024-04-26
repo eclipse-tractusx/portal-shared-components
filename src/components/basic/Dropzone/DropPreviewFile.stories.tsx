@@ -26,6 +26,7 @@ import { UploadStatus } from './types'
 export default {
   title: 'Dropzone',
   component: Component,
+  tags: ['autodocs'],
   args: {
     name: 'Document.pdf',
     size: 65402,

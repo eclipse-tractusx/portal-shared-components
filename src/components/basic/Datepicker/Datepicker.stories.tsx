@@ -26,6 +26,7 @@ import { Datepicker as Component } from '.'
 export default {
   title: 'Datepicker',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

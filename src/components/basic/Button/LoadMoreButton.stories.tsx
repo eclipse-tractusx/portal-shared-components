@@ -25,6 +25,7 @@ import { LoadMoreButton as Component } from './LoadMoreButton'
 export default {
   title: 'Buttons',
   component: Component,
+  tags: ['autodocs'],
   argTypes: {},
 }
 
