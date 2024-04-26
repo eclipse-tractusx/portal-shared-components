@@ -38,7 +38,7 @@ export const Rating = ({ defaultRating }: RatingContentProps) => {
         name="half-rating"
         precision={0.5}
         value={value}
-        onChange={(event, newValue) => {
+        onChange={(_event, newValue) => {
           setValue(newValue)
         }}
       />

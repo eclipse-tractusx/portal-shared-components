@@ -24,7 +24,7 @@ import { SearchInput } from '../../../SearchInput'
 import { IconButton } from '../../../IconButton'
 import { type ToolbarProps } from '.'
 import { ViewSelector } from '../../../ViewSelector'
-import type { view } from '../../../ViewSelector'
+import type { View } from '../../../ViewSelector'
 import { Typography } from '../../../Typography'
 import type { SelectedFilter } from './UltimateToolbar'
 import { SortOption } from '../../../SortOption'
@@ -34,7 +34,7 @@ export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   placeholder?: string
   searchDebounce?: number
   searchExpr?: string
-  filterViews?: view[]
+  filterViews?: View[]
   defaultFilter?: string
   onFilter?: (selectedFilter: SelectedFilter) => void
   defaultSortOption?: string
@@ -60,22 +60,6 @@ export const SearchAndFilterButtonToolbar = ({
   descriptionText,
   autoFocus,
 }: SearchAndFilterButtonToolbarProps) => {
-  // defaultSortOption = 'demo'
-  // sortOptions = [{
-  //   label: 'test',
-  //   value: 'test'
-  // },
-  // {
-  //   label: 'demo',
-  //   value: 'demo'
-  // }]
-
-  // onSortClick = (value: string) => {
-  //   console.log('value', value)
-  //   defaultSortOption = value
-  // }
-
-  // console.log('sortOption', defaultSortOption)
 
   const [searchInputText, setSearchInputText] = useState<string>(
     searchExpr ?? (searchInputData != null ? searchInputData.text : '')
@@ -135,7 +119,7 @@ export const SearchAndFilterButtonToolbar = ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'row',
+    flexDirection: 'column',
     marginTop: '40px',
   }
 
@@ -157,46 +141,52 @@ export const SearchAndFilterButtonToolbar = ({
           }}
         />
       </Box>
-      {filterViews && (
-        <Box
-          sx={{
-            margin: '30px 0px 30px 0px',
-          }}
-        >
-          <ViewSelector activeView={defaultFilter} views={filterViews} />
-        </Box>
-      )}
-      {
-        sortOptions && defaultSortOption &&
-        <>
-          <SortImage
-            onClick={() => {
-              setShowModal(!showModal)
+      <Box sx={{
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+        {filterViews && (
+          <Box
+            sx={{
+              margin: '30px 0px 30px 0px',
             }}
-            selected={showModal}
-          />
-          <Box sx={{
-            position: 'absolute',
-            left: '73%',
-            marginTop: '6%',
-            background: '#f9f9f9',
-            boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)',
-            borderRadius: '16px',
-            zIndex: 9,
-          }}>
-            <SortOption
-              show={showModal}
-              sortOptions={sortOptions}
-              selectedOption={defaultSortOption}
-              setSortOption={(value: string) => {
-                onSortClick?.(value)
-                setShowModal(false)
-              }}
-            />
+          >
+            <ViewSelector activeView={defaultFilter} views={filterViews} />
           </Box>
-        </>
-      }
-
+        )}
+        {
+          sortOptions && defaultSortOption &&
+          <Box sx={{
+            position: 'relative'
+          }}>
+            <SortImage
+              onClick={() => {
+                setShowModal(!showModal)
+              }}
+              selected={showModal}
+            />
+            <Box sx={{
+              position: 'absolute',
+              left: '30px',
+              top: '40px',
+              background: '#f9f9f9',
+              boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)',
+              borderRadius: '16px',
+              zIndex: 9,
+            }}>
+              <SortOption
+                show={showModal}
+                sortOptions={sortOptions}
+                selectedOption={defaultSortOption}
+                setSortOption={(value: string) => {
+                  onSortClick?.(value)
+                  setShowModal(false)
+                }}
+              />
+            </Box>
+          </Box>
+        }
+      </Box>
       {descriptionText && (
         <Box
           sx={{

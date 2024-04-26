@@ -67,16 +67,16 @@ export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
   }, [src, loader])
 
   useEffect(() => {
-    getData().catch(
-      (e) => { console.error(e) }
-    )
+    getData().catch((e) => {
+      console.error(e)
+    })
   }, [getData])
 
   return (
     <img
       src={loader ?? error ? data : src}
       alt={alt ?? 'Catena-X'}
-      onError={(e) => {
+      onError={() => {
         setError(true)
         setData(LogoGrayData)
       }}

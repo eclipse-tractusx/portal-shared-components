@@ -27,7 +27,7 @@ import {
   GridRenderCellParams,
 } from '@mui/x-data-grid'
 import Link from '@mui/material/Link'
-import TestRows from '../../../assets/data/TableRows.json'
+import TestRows from '../../../../src/assets/data/TableRows.json'
 
 const rows: GridRowsProp = TestRows
 
@@ -104,6 +104,8 @@ TableToolbar.args = {
   toolbar: {
     buttonLabel: 'Add user',
     onButtonClick: () => console.log('on button click'),
+    buttonDisabled: true,
+    buttonTooltip: 'Not able to add',
     secondButtonLabel: 'Add Multiple users',
     onSecondButtonClick: () => console.log('on multiple button click'),
     onSearch: (value) => console.log(`search: "${value}"`),

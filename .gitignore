@@ -7,3 +7,5 @@ node_modules
 *.tgz
 *.tar.gz
 *.ignore
+
+*storybook.log

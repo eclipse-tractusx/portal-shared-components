@@ -21,7 +21,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import { Box } from '@mui/material'
 import { Typography } from '../../basic/Typography'
 
-function LinkText(props: LinkType) {
+function LinkText(props: Readonly<LinkType>) {
   return (
     <Box
       sx={{
@@ -40,7 +40,7 @@ function LinkText(props: LinkType) {
   )
 }
 
-function TitleText(props: LinkType) {
+function TitleText(props: Readonly<LinkType>) {
   return (
     <Box
       sx={{

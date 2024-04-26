@@ -31,7 +31,7 @@ interface CardHorizontalProps extends CardChipProps {
   subTitle?: string
   borderRadius: number
   imagePath: string
-  imageAlt: string
+  imageAlt?: string
   description?: string
   backgroundColor?: string
   buttonText?: string
@@ -45,13 +45,17 @@ export const CardHorizontal = ({
   subTitle,
   borderRadius = 0,
   imagePath,
+  // @ts-expect-error keep for backward compatibility
   imageAlt,
   description,
+  // @ts-expect-error keep for backward compatibility
   status,
+  // @ts-expect-error keep for backward compatibility
   statusText,
   buttonText,
   onBtnClick,
   backgroundColor,
+  // @ts-expect-error keep for backward compatibility
   expandOnHover = false,
 }: CardHorizontalProps) => {
   const theme = useTheme()
@@ -153,7 +157,7 @@ export const CardHorizontal = ({
             style={{
               marginTop: 'auto',
               display: 'flex',
-              justifyContent: 'flex-end'
+              justifyContent: 'flex-end',
             }}
           >
             <Typography
@@ -174,7 +178,7 @@ export const CardHorizontal = ({
                 '&:hover': {
                   backgroundColor: 'rgb(176 206 235 / 40%)',
                   borderRadius: '20px',
-                }
+                },
               }}
             >
               <KeyboardArrowDownIcon sx={{ marginRight: '5px' }} />

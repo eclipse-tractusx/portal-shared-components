@@ -34,7 +34,7 @@ import { SearchAndFilterButtonToolbar } from './components/Toolbar/SearchAndFilt
 import { Typography } from '../Typography'
 import { Error500Overlay } from './components/Error/Error500Overlay'
 import { Error400Overlay } from './components/Error/Error400Overlay'
-import type { view } from '../ViewSelector'
+import type { View } from '../ViewSelector'
 
 export { StatusTag }
 export type toolbarType = 'basic' | 'premium' | 'ultimate' | 'searchAndFilter'
@@ -59,12 +59,14 @@ export interface TableProps extends DataGridProps {
   hasBorder?: boolean
   buttonLabel?: string
   onButtonClick?: React.MouseEventHandler
+  buttonDisabled?: boolean
+  buttonTooltip?: string
   secondButtonLabel?: string
   onSecondButtonClick?: React.MouseEventHandler
   onSelection?: (value: GridRowId[]) => void
   descriptionText?: string
   defaultFilter?: string
-  filterViews?: view[]
+  filterViews?: View[]
   defaultSortOption?: string
   sortOptions?: {label: string, value: string}[]
   onSortClick?: (value: string) => void
@@ -98,6 +100,8 @@ export const Table = ({
   hasBorder = true,
   buttonLabel,
   onButtonClick,
+  buttonDisabled,
+  buttonTooltip,
   secondButtonLabel,
   onSecondButtonClick,
   onSelection,
@@ -123,6 +127,8 @@ export const Table = ({
     noRowsMsg,
     buttonLabel,
     onButtonClick,
+    buttonDisabled,
+    buttonTooltip,
     secondButtonLabel,
     onSecondButtonClick,
     onSelection,
@@ -142,7 +148,6 @@ export const Table = ({
     (selectedIds: GridRowSelectionModel) => {
       const idsArr: string[] = []
       rows.map((row) => {
-        // eslint-disable-next-line
         return selectedIds.map(
           (selectedId: GridRowId) =>
             selectedId.toString().includes(row.companyUserId) &&
@@ -222,7 +227,6 @@ export const Table = ({
           Toolbar: () => toolbarView(),
           NoRowsOverlay,
         }}
-        // eslint-disable-next-line
         onRowSelectionModelChange={handleOnCellClick}
         {...{
           rows,

@@ -30,6 +30,7 @@ import ClearIcon from '@mui/icons-material/Clear'
 import { Checkbox } from '../../../Checkbox'
 import { getSelectedFilterUpdate } from './helper'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
+import { Tooltips } from '../../../ToolTips'
 
 interface FilterValue {
   value: string
@@ -54,6 +55,8 @@ export interface ToolbarProps {
   rowsCountMax?: number
   buttonLabel?: string
   onButtonClick?: React.MouseEventHandler
+  buttonDisabled?: boolean
+  buttonTooltip?: string
   secondButtonLabel?: string
   onSecondButtonClick?: React.MouseEventHandler
   onSearch?: (value: string) => void
@@ -80,6 +83,8 @@ export const Toolbar = ({
   rowsCountMax = 0,
   buttonLabel,
   onButtonClick,
+  buttonDisabled,
+  buttonTooltip,
   secondButtonLabel,
   onSecondButtonClick,
   onSearch,
@@ -141,12 +146,7 @@ export const Toolbar = ({
   const onFilterChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked } = target
     onFilter?.(
-      getSelectedFilterUpdate(
-        selectedFilter as SelectedFilter,
-        name,
-        value,
-        checked
-      )
+      getSelectedFilterUpdate(selectedFilter ?? {}, name, value, checked)
     )
   }
 
@@ -192,14 +192,26 @@ export const Toolbar = ({
             </Box>
           </Typography>
           {buttonLabel && onButtonClick != null && (
-            <Button
-              startIcon={<AddCircleOutlineIcon />}
-              size="small"
-              onClick={onButtonClick}
-              sx={{ marginLeft: 15 }}
+            <Tooltips
+              additionalStyles={{
+                marginLeft: '50px',
+                cursor: 'pointer',
+              }}
+              tooltipPlacement="top-end"
+              tooltipText={buttonTooltip ?? ''}
             >
-              {buttonLabel}
-            </Button>
+              <span>
+                <Button
+                  startIcon={<AddCircleOutlineIcon />}
+                  size="small"
+                  onClick={onButtonClick}
+                  sx={{ marginLeft: 15 }}
+                  disabled={buttonDisabled}
+                >
+                  {buttonLabel}
+                </Button>
+              </span>
+            </Tooltips>
           )}
           {secondButtonLabel && onSecondButtonClick != null && (
             <Button
@@ -277,9 +289,7 @@ export const Toolbar = ({
                   name={name}
                   value={value}
                   label={label ?? value}
-                  checked={(selectedFilter as SelectedFilter)[name]?.includes(
-                    value
-                  )}
+                  checked={selectedFilter?.[name]?.includes(value)}
                   onChange={onFilterChange}
                 />
               </Box>

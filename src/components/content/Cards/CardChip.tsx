@@ -28,7 +28,7 @@ export enum StatusVariants {
   inactive = 'inactive',
   created = 'created',
   inReview = 'in_review',
-  enabled = 'enabled'
+  enabled = 'enabled',
 }
 
 export type Variants =
