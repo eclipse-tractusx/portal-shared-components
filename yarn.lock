@@ -1106,11 +1106,11 @@
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@chromatic-com/storybook@^1.2.25":
-  version "1.2.25"
-  resolved "https://registry.yarnpkg.com/@chromatic-com/storybook/-/storybook-1.2.25.tgz#1bb3a42099d49e555c4a8ca811a2deef7c9f76f0"
-  integrity sha512-3ga2sWa39PeFZxV6gqJoFQh1c60v2rCh92TPE8KrBg+WwEdcrKijDIq+BILGCSg0oVUVplx8siQOrknBL5af6g==
+  version "1.2.26"
+  resolved "https://registry.yarnpkg.com/@chromatic-com/storybook/-/storybook-1.2.26.tgz#c9ad03f9fb865993ff07ce61252cc35f2476f0dc"
+  integrity sha512-uLZ0gURTkDTr545g35rq0jXbpg3MTjUB763Z5tWyGuQj3JO0j+t3vkwNUvD6Nas0YGl4MWgrkqqekM/2jpQ70w==
   dependencies:
-    chromatic "^11.0.0"
+    chromatic "^11.3.0"
     filesize "^10.0.12"
     jsonfile "^6.1.0"
     react-confetti "^6.1.0"
@@ -4136,10 +4136,10 @@ chownr@^2.0.0:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-chromatic@^11.0.0:
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-11.2.0.tgz#6c0166b4213132e3d1ea44f592e7e67e2ca22ad7"
-  integrity sha512-b7vzlMuy/68WnH0N6nXpo8FiFK5pEF0ClIyVVK9YfYYSbGLo5/6Lh/VEbjWMoRaShCUk59YSXA43Npa2NrXIsg==
+chromatic@^11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-11.3.0.tgz#d46b7aac1a0eaed29a765645eaf93c484220174c"
+  integrity sha512-q1ZtJDJrjLGnz60ivpC16gmd7KFzcaA4eTb7gcytCqbaKqlHhCFr1xQmcUDsm14CK7JsqdkFU6S+JQdOd2ZNJg==
 
 ci-info@^3.2.0:
   version "3.9.0"
