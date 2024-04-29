@@ -35,6 +35,7 @@ import { Typography } from '../Typography'
 import { Error500Overlay } from './components/Error/Error500Overlay'
 import { Error400Overlay } from './components/Error/Error400Overlay'
 import type { View } from '../ViewSelector'
+import { type SortOptionsType } from '../SortOption'
 
 export { StatusTag }
 export type toolbarType = 'basic' | 'premium' | 'ultimate' | 'searchAndFilter'
@@ -68,7 +69,7 @@ export interface TableProps extends DataGridProps {
   defaultFilter?: string
   filterViews?: View[]
   defaultSortOption?: string
-  sortOptions?: {label: string, value: string}[]
+  sortOptions?: SortOptionsType[]
   onSortClick?: (value: string) => void
   alignCell?: string
   error?: {

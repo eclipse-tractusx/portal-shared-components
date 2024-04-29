@@ -26,7 +26,7 @@ interface SortIconProps {
   selected?: boolean
 }
 
-export default function SortImage({ onClick, selected }: SortIconProps) {
+export default function SortImage({ onClick, selected }: Readonly<SortIconProps>) {
   return (
     <Box
       sx={{

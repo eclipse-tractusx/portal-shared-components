@@ -27,7 +27,7 @@ import { ViewSelector } from '../../../ViewSelector'
 import type { View } from '../../../ViewSelector'
 import { Typography } from '../../../Typography'
 import type { SelectedFilter } from './UltimateToolbar'
-import { SortOption } from '../../../SortOption'
+import { SortOption, type SortOptionsType } from '../../../SortOption'
 import SortImage from './SortImage'
 
 export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
@@ -38,7 +38,7 @@ export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   defaultFilter?: string
   onFilter?: (selectedFilter: SelectedFilter) => void
   defaultSortOption?: string
-  sortOptions?: { label: string, value: string }[]
+  sortOptions?: SortOptionsType[]
   onSortClick?: (value: string) => void
   descriptionText?: string
   autoFocus?: boolean
