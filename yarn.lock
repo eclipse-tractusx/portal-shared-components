@@ -2159,11 +2159,11 @@
     ts-dedent "^2.2.0"
 
 "@storybook/addon-links@^8.0.2":
-  version "8.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-8.0.4.tgz#34c4a3818a52023b09c98fcfe4c00e9ac08a0d10"
-  integrity sha512-SzE+JPZ4mxjprZqbLHf8Hx7UA2fXfMajFjeY9c3JREKQrDoOF1e4r28nAoVsZYF+frWxQB51U4+hOqjlx06wEA==
+  version "8.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-8.0.9.tgz#1f7375896c8e2ffd28eec24edc0e938bc16525cd"
+  integrity sha512-FVt+AdW3JFSqbJzkKiqKsMRWqHXqEvCBqFs7lNfk3OW0w0jfv1iREtrxE0dVdJoUFQC9V/2Im/EpJ7UB3C2bNQ==
   dependencies:
-    "@storybook/csf" "^0.1.2"
+    "@storybook/csf" "^0.1.4"
     "@storybook/global" "^5.0.0"
     ts-dedent "^2.0.0"
 
@@ -2176,9 +2176,9 @@
     tiny-invariant "^1.3.1"
 
 "@storybook/addon-onboarding@^8.0.2":
-  version "8.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-onboarding/-/addon-onboarding-8.0.4.tgz#27882c11234d0c69f6b6bcbc6092eecbaf1e9ccf"
-  integrity sha512-Av5Nbjzr98acDwcy+MOJTw9S/zq7eLHIK1rYIciARN1q02Nhty6a17Og6/ZsqqkwrhM/0RE8PwxVo4EG9LpVSw==
+  version "8.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-onboarding/-/addon-onboarding-8.0.9.tgz#d3af0d4ec909c5bc60b0cb060d86fde1c7f1e21d"
+  integrity sha512-gRPn8ooxTmdamfJgdkQR48pza67S83l2DDlZ3C1kuus19UO+eIFUEVZJbud9qQojq7jc8ztaYXiNObWdxKu29A==
 
 "@storybook/addon-outline@8.0.4":
   version "8.0.4"
@@ -2489,10 +2489,10 @@
   dependencies:
     lodash "^4.17.15"
 
-"@storybook/csf@^0.1.2":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/csf/-/csf-0.1.3.tgz#79047a4dece94ba7c8e78003723e9bd9e071379a"
-  integrity sha512-IPZvXXo4b3G+gpmgBSBqVM81jbp2ePOKsvhgJdhyZJtkYQCII7rg9KKLQhvBQM5sLaF1eU6r0iuwmyynC9d9SA==
+"@storybook/csf@^0.1.2", "@storybook/csf@^0.1.4":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@storybook/csf/-/csf-0.1.5.tgz#58c489f443ad8642957565dac0c7cd860a85162f"
+  integrity sha512-pW7Dtk/bE2JGrAe/KuBY4Io02NBe/2CLP2DkgVgWlSwvEVdm/rbQyiwy8RaL0lQlJCv9CsGBY+n9HQG8d4bZjQ==
   dependencies:
     type-fest "^2.19.0"
 
@@ -7803,7 +7803,7 @@ possible-typed-array-names@^1.0.0:
   resolved "https://registry.yarnpkg.com/possible-typed-array-names/-/possible-typed-array-names-1.0.0.tgz#89bb63c6fada2c3e90adc4a647beeeb39cc7bf8f"
   integrity sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==
 
-postcss@^8.4.36:
+postcss@^8.4.38:
   version "8.4.38"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.38.tgz#b387d533baf2054288e337066d81c6bee9db9e0e"
   integrity sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==
@@ -9429,12 +9429,12 @@ vite-plugin-lib-inject-css@^2.0.0:
     picocolors "^1.0.0"
 
 vite@^5.1.6:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-5.2.2.tgz#b98f8de352d22e21d99508274ddd053ef82bf238"
-  integrity sha512-FWZbz0oSdLq5snUI0b6sULbz58iXFXdvkZfZWR/F0ZJuKTSPO7v72QPXt6KqYeMFb0yytNp6kZosxJ96Nr/wDQ==
+  version "5.2.10"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-5.2.10.tgz#2ac927c91e99d51b376a5c73c0e4b059705f5bd7"
+  integrity sha512-PAzgUZbP7msvQvqdSD+ErD5qGnSFiGOoWmV5yAKUEI0kdhjbH6nMWVyZQC/hSc4aXwc0oJ9aEdIiF9Oje0JFCw==
   dependencies:
     esbuild "^0.20.1"
-    postcss "^8.4.36"
+    postcss "^8.4.38"
     rollup "^4.13.0"
   optionalDependencies:
     fsevents "~2.3.3"
