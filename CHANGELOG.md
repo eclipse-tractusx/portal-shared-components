@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.6
+
+- Add sorting in PageloadingTable
+
 ## 3.0.5
 
 - Add storybook autodocs and fix README
