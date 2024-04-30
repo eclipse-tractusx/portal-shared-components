@@ -1,8 +1,12 @@
 # Changelog
 
-## 3.0.6
+## 3.0.7
 
 - Upgrade dependencies
+
+## 3.0.6
+
+- Add sorting in PageloadingTable
 
 ## 3.0.5
 
