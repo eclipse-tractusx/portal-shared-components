@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.8
+
+- Show sub navigation contents to the user on mouse hover
+
 ## 3.0.7
 
 - Upgrade dependencies
