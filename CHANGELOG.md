@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.9
+
+- Add a local test app for convenient component testing
+
 ## 3.0.8
 
 - Show sub navigation contents to the user on mouse hover
