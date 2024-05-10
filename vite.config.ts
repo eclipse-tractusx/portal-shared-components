@@ -40,7 +40,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime'],
+      external: ['src/dev', 'react', 'react/jsx-runtime'],
     },
   },
 })
