@@ -27,13 +27,38 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
   const [copied, setCopied] = useState<string>('')
   const renderTextvalue = (text: string | undefined) => text ?? ''
 
-  const handleCopy = async (copyValue: string | undefined) => {
-    const value = renderTextvalue(copyValue?.toString())
-    await navigator.clipboard.writeText(value)
-    setCopied(value)
-    setTimeout(() => {
-      setCopied('')
-    }, 1000)
+  const renderCopy = (copyValue: string | undefined) => {
+    return (
+      <Box
+        sx={{
+          cursor: 'pointer',
+          display: 'inline-flex',
+          float: 'right',
+          color: copied === copyValue ? '#00cc00' : '#eeeeee',
+          ':hover': {
+            color: copied === copyValue ? '#00cc00' : '#cccccc',
+          },
+          width: 'max-width',
+        }}
+        onClick={() => {
+          void (async () => {
+            const value = renderTextvalue(copyValue?.toString())
+            await navigator.clipboard.writeText(value)
+            setCopied(value)
+            setTimeout(() => {
+              setCopied('')
+            }, 1000)
+          })()
+        }}
+      >
+        <ContentCopyIcon
+          sx={{
+            fontSize: '18px',
+            marginLeft: '10px',
+          }}
+        />
+      </Box>
+    )
   }
 
   return (
@@ -72,36 +97,8 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
                 <Typography variant="body3">{row?.toString()}</Typography>
                 {data?.copy?.[c].map((_row, r) => {
                   return (
-                    data?.copy?.[c]?.[r].icon && (
-                      <Box
-                        sx={{
-                          cursor: 'pointer',
-                          display: 'inline-flex',
-                          float: 'right',
-                          color:
-                            copied === data?.copy?.[c]?.[r]?.copyValue
-                              ? '#00cc00'
-                              : '#eeeeee',
-                          ':hover': {
-                            color:
-                              copied === data?.copy?.[c]?.[r].copyValue
-                                ? '#00cc00'
-                                : '#cccccc',
-                          },
-                          width: 'max-width',
-                        }}
-                        onClick={() =>
-                          handleCopy(data?.copy?.[c]?.[r]?.copyValue)
-                        }
-                      >
-                        <ContentCopyIcon
-                          sx={{
-                            fontSize: '18px',
-                            marginLeft: '10px',
-                          }}
-                        />
-                      </Box>
-                    )
+                    data?.copy?.[c]?.[r].icon &&
+                    renderCopy(data?.copy?.[c]?.[r]?.copyValue)
                   )
                 })}
               </td>
