@@ -27,6 +27,17 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
   const [copied, setCopied] = useState<string>('')
   const renderTextvalue = (text: string | undefined) => text ?? ''
 
+  const handlecopy = (copyValue: string | undefined) => {
+    void (async () => {
+      const value = renderTextvalue(copyValue?.toString())
+      await navigator.clipboard.writeText(value)
+      setCopied(value)
+      setTimeout(() => {
+        setCopied('')
+      }, 1000)
+    })()
+  }
+
   return (
     <table
       style={{
@@ -65,7 +76,7 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
                   (_row, r) =>
                     data?.copy?.[c]?.[r].icon && (
                       <Box
-                        key={r}
+                        key={JSON.stringify(r)}
                         sx={{
                           cursor: 'pointer',
                           display: 'inline-flex',
@@ -83,16 +94,7 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
                           width: 'max-width',
                         }}
                         onClick={() => {
-                          void (async () => {
-                            const value = renderTextvalue(
-                              data?.copy?.[c]?.[r]?.copyValue?.toString()
-                            )
-                            await navigator.clipboard.writeText(value)
-                            setCopied(value)
-                            setTimeout(() => {
-                              setCopied('')
-                            }, 1000)
-                          })()
+                          handlecopy(data?.copy?.[c]?.[r]?.copyValue)
                         }}
                       >
                         <ContentCopyIcon
