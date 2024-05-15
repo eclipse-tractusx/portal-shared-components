@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.9
+
+- Add copy icon and functionality to horizontal table
+
 ## 3.0.8
 
 - Show sub navigation contents to the user on mouse hover
