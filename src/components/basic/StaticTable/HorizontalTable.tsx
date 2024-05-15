@@ -27,6 +27,15 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
   const [copied, setCopied] = useState<string>('')
   const renderTextvalue = (text: string | undefined) => text ?? ''
 
+  const handleCopy = async (copyValue: string | undefined) => {
+    const value = renderTextvalue(copyValue?.toString())
+    await navigator.clipboard.writeText(value)
+    setCopied(value)
+    setTimeout(() => {
+      setCopied('')
+    }, 1000)
+  }
+
   return (
     <table
       style={{
@@ -81,18 +90,9 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
                           },
                           width: 'max-width',
                         }}
-                        onClick={() => {
-                          void (async () => {
-                            const value = renderTextvalue(
-                              data?.copy?.[c]?.[r]?.copyValue?.toString()
-                            )
-                            await navigator.clipboard.writeText(value)
-                            setCopied(value)
-                            setTimeout(() => {
-                              setCopied('')
-                            }, 1000)
-                          })()
-                        }}
+                        onClick={() =>
+                          handleCopy(data?.copy?.[c]?.[r]?.copyValue)
+                        }
                       >
                         <ContentCopyIcon
                           sx={{
