@@ -60,7 +60,6 @@ export const SearchAndFilterButtonToolbar = ({
   descriptionText,
   autoFocus,
 }: SearchAndFilterButtonToolbarProps) => {
-
   const [searchInputText, setSearchInputText] = useState<string>(
     searchExpr ?? (searchInputData != null ? searchInputData.text : '')
   )
@@ -141,10 +140,12 @@ export const SearchAndFilterButtonToolbar = ({
           }}
         />
       </Box>
-      <Box sx={{
-        display: 'flex',
-        alignItems: 'center'
-      }}>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
         {filterViews && (
           <Box
             sx={{
@@ -154,26 +155,29 @@ export const SearchAndFilterButtonToolbar = ({
             <ViewSelector activeView={defaultFilter} views={filterViews} />
           </Box>
         )}
-        {
-          sortOptions && defaultSortOption &&
-          <Box sx={{
-            position: 'relative'
-          }}>
+        {sortOptions && defaultSortOption && (
+          <Box
+            sx={{
+              position: 'relative',
+            }}
+          >
             <SortImage
               onClick={() => {
                 setShowModal(!showModal)
               }}
               selected={showModal}
             />
-            <Box sx={{
-              position: 'absolute',
-              left: '30px',
-              top: '40px',
-              background: '#f9f9f9',
-              boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)',
-              borderRadius: '16px',
-              zIndex: 9,
-            }}>
+            <Box
+              sx={{
+                position: 'absolute',
+                left: '30px',
+                top: '40px',
+                background: '#f9f9f9',
+                boxShadow: '0px 10px 20px rgba(80, 80, 80, 0.3)',
+                borderRadius: '16px',
+                zIndex: 9,
+              }}
+            >
               <SortOption
                 show={showModal}
                 sortOptions={sortOptions}
@@ -185,7 +189,7 @@ export const SearchAndFilterButtonToolbar = ({
               />
             </Box>
           </Box>
-        }
+        )}
       </Box>
       {descriptionText && (
         <Box

@@ -32,4 +32,10 @@ export interface TableType {
       errorMessage?: string
     }>
   >
+  copy?: Array<
+    Array<{
+      icon: boolean
+      copyValue?: string
+    }>
+  >
 }
