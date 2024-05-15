@@ -1,8 +1,12 @@
 # Changelog
 
+## 3.0.10
+
+- Add a local test app for convenient component testing and fix sonar findings
+
 ## 3.0.9
 
-- Add a local test app for convenient component testing
+- Add copy icon and functionality to horizontal table
 
 ## 3.0.8
 
