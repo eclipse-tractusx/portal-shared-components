@@ -72,7 +72,7 @@ export const VerticalTable = ({
             onChange={(e) => {
               addInputValue(e.target.value, row, column)
             }}
-            onKeyPress={(event) => {
+            onKeyDown={(event) => {
               if (event.key === 'Enter' && !inputErrorMessage) {
                 setInputField(null)
                 if (handleEdit) handleEdit(inputValue)
@@ -111,9 +111,6 @@ export const VerticalTable = ({
     <table
       style={{ width: '100%', borderCollapse: 'collapse' }}
       onClick={() => {
-        setInputField(null)
-      }}
-      onKeyDown={() => {
         setInputField(null)
       }}
     >
