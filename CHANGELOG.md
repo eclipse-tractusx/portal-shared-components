@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.10
+
+- Change background color on hover and focus in custom accordion
+
 ## 3.0.9
 
 - Add copy icon and functionality to horizontal table
