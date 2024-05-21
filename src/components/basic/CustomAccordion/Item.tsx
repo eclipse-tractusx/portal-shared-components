@@ -67,11 +67,11 @@ export const CustomAccordionItem = ({
         sx={{
           bgcolor: color,
           ':hover': {
-            bgcolor: 'background.background12',
+            bgcolor: color ?? 'background.background12',
           },
           ':focus': {
             boxShadow: 'none !important',
-            bgcolor: 'background.background12',
+            bgcolor: color ?? 'background.background12',
           },
         }}
       >
