@@ -21,13 +21,19 @@
 // Note: The global.scss import must be the first in this file for the library to be build correctly!
 import '../../../scss/global.scss'
 import { ThemeProvider } from '@mui/material/styles'
-import { theme } from '../../../theme'
 import '../../../scss/fonts.scss'
+import { theme } from '../../../theme'
+import { DefaultTheme } from '@mui/system'
 
-interface SharedThemeProviderProps {
+interface SharedThemeProviderProps<Theme = DefaultTheme> {
   children: React.ReactNode
+  themeDesign?: Partial<Theme> | ((outerTheme: Theme) => Theme)
 }
-
-export const SharedThemeProvider = ({ children }: SharedThemeProviderProps) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+export const SharedThemeProvider = ({
+  children,
+  themeDesign,
+}: SharedThemeProviderProps) => (
+  <ThemeProvider theme={themeDesign ? themeDesign : theme}>
+    {children}
+  </ThemeProvider>
 )
