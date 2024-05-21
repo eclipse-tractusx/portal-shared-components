@@ -114,7 +114,7 @@ export const VerticalTable = ({
         setInputField(null)
       }}
       onKeyDown={() => {
-        setInputField(null)
+        // do nothing
       }}
     >
       <thead>

@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.10
+
+- Fixed editing input field in vertical table
+
 ## 3.0.9
 
 - Add copy icon and functionality to horizontal table
