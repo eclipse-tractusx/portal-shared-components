@@ -1,8 +1,12 @@
 # Changelog
 
-## 3.0.10
+## 3.0.11
 
 - Change background color on hover and focus in custom accordion
+
+## 3.0.10
+
+- Fixed editing input field in vertical table
 
 ## 3.0.9
 
