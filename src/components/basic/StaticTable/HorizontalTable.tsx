@@ -45,9 +45,9 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
           cursor: 'pointer',
           display: 'inline-flex',
           float: 'right',
-          color: copied === copyData?.copyValue ? '#00cc00' : '#eeeeee',
+          color: copied === copyData?.copyValue ? '#00cc00' : '#888888',
           ':hover': {
-            color: copied === copyData?.copyValue ? '#00cc00' : '#cccccc',
+            color: copied === copyData?.copyValue ? '#00cc00' : '#0088CC',
           },
           width: 'max-width',
         }}
