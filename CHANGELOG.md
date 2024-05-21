@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.12
+
+- Change default color and on hover color of copy icon in static table
+
 ## 3.0.11
 
 - Change background color on hover and focus in custom accordion
