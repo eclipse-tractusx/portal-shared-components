@@ -46,7 +46,5 @@ Less popular or less important actions may be visually styled as links.
 This work is licensed under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
 
 - SPDX-License-Identifier: CC-BY-4.0
-- SPDX-FileCopyrightText: Copyright (c) 2021, 2024 Contributors to the Eclipse Foundation
+- SPDX-FileCopyrightText: Copyright (c) 2024 Contributors to the Eclipse Foundation
 - Source URL: https://github.com/eclipse-tractusx/portal-shared-components
-
-
