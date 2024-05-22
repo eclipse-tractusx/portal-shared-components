@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.14
+
+- Rework year in file header
+
 ## 3.0.13
 
 - Add a local test app for convenient component testing and fix sonar findings
