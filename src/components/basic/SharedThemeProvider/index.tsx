@@ -27,13 +27,13 @@ import { DefaultTheme } from '@mui/system'
 
 interface SharedThemeProviderProps<Theme = DefaultTheme> {
   children: React.ReactNode
-  themeDesign?: Partial<Theme> | ((outerTheme: Theme) => Theme)
+  themeDesign?: Partial<Theme>
 }
 export const SharedThemeProvider = ({
   children,
   themeDesign,
 }: SharedThemeProviderProps) => (
-  <ThemeProvider theme={themeDesign ? themeDesign : theme}>
+  <ThemeProvider theme={themeDesign !== undefined ? themeDesign : theme}>
     {children}
   </ThemeProvider>
 )
