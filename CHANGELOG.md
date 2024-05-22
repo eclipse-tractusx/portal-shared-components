@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.13
+
+- Add a local test app for convenient component testing and fix sonar findings
+
 ## 3.0.12
 
 - Change default color and on hover color of copy icon in static table

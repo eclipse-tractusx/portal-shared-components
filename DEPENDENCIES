@@ -62,7 +62,7 @@ npm/npmjs/-/body-parser/1.20.2, MIT, approved, clearlydefined
 npm/npmjs/-/bplist-parser/0.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/brace-expansion/1.1.11, MIT, approved, clearlydefined
 npm/npmjs/-/brace-expansion/2.0.1, MIT, approved, clearlydefined
-npm/npmjs/-/braces/3.0.2, MIT, approved, clearlydefined
+npm/npmjs/-/braces/3.0.2, MIT, approved, #14866
 npm/npmjs/-/browser-assert/1.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/browserify-zlib/0.1.4, MIT, approved, clearlydefined
 npm/npmjs/-/browserslist/4.23.0, MIT, approved, clearlydefined

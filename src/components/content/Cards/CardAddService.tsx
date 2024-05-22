@@ -43,7 +43,14 @@ export const CardAddService = ({
   }, [])
 
   return (
-    <div ref={boxRef} style={{}} onClick={onButtonClick}>
+    <div
+      ref={boxRef}
+      style={{}}
+      onClick={onButtonClick}
+      onKeyUp={() => {
+        // do nothing
+      }}
+    >
       <Box
         sx={{
           cursor: 'pointer',
