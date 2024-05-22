@@ -183,12 +183,12 @@ export const VerticalTable = ({
                           color:
                             copied === data?.edit?.[r]?.[c].copyValue
                               ? '#00cc00'
-                              : '#eeeeee',
+                              : '#888888',
                           ':hover': {
                             color:
                               copied === data?.edit?.[r]?.[c].copyValue
                                 ? '#00cc00'
-                                : '#cccccc',
+                                : '#0088CC',
                           },
                         }}
                         onClick={() => {
