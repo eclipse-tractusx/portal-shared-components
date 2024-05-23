@@ -1,6 +1,6 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 BMW Group AG
- * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2023 BMW Group AG
+ * Copyright (c) 2023 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -30,6 +30,12 @@ export interface TableType {
       clickableLink?: string
       isValid?: (value: string) => unknown
       errorMessage?: string
+    }>
+  >
+  copy?: Array<
+    Array<{
+      icon: boolean
+      copyValue?: string
     }>
   >
 }

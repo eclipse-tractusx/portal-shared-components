@@ -92,9 +92,8 @@
     "test": "jest",
     "test:ci": "CI=true jest",
     "start": "yarn start:storybook",
-    "start:dev": "vite",
+    "start:dev": "vite --port 3007",
     "start:storybook": "storybook dev -p 3006",
-    "build:storybook": "storybook build -o ./storybook",
-    "storybook": "storybook dev -p 6006"
+    "build:storybook": "storybook build -o ./storybook"
   }
 }

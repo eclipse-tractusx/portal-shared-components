@@ -1,6 +1,6 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 BMW Group AG
- * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2023 BMW Group AG
+ * Copyright (c) 2023 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -114,7 +114,7 @@ export const VerticalTable = ({
         setInputField(null)
       }}
       onKeyDown={() => {
-        setInputField(null)
+        // do nothing
       }}
     >
       <thead>
@@ -183,12 +183,12 @@ export const VerticalTable = ({
                           color:
                             copied === data?.edit?.[r]?.[c].copyValue
                               ? '#00cc00'
-                              : '#eeeeee',
+                              : '#888888',
                           ':hover': {
                             color:
                               copied === data?.edit?.[r]?.[c].copyValue
                                 ? '#00cc00'
-                                : '#cccccc',
+                                : '#0088CC',
                           },
                         }}
                         onClick={() => {

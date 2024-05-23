@@ -1,6 +1,6 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 Mercedes-Benz Group AG and BMW Group AG
- * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2024 Mercedes-Benz Group AG and BMW Group AG
+ * Copyright (c) 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -26,7 +26,10 @@ interface SortIconProps {
   selected?: boolean
 }
 
-export default function SortImage({ onClick, selected }: Readonly<SortIconProps>) {
+export default function SortImage({
+  onClick,
+  selected,
+}: Readonly<SortIconProps>) {
   return (
     <Box
       sx={{
