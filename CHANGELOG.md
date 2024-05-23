@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.15
+
+- Add support for customization and custom themes
+
 ## 3.0.14
 
 - Rework year in file header
