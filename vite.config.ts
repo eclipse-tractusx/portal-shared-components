@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021, 2024 Contributors to the Eclipse Foundation
+ * Copyright (c) 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -40,7 +40,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime'],
+      external: ['src/dev', 'react', 'react/jsx-runtime'],
     },
   },
 })

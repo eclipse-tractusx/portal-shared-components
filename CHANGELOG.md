@@ -4,6 +4,30 @@
 
 - Add support for customization and custom themes
 
+## 3.0.14
+
+- Rework year in file header
+
+## 3.0.13
+
+- Add a local test app for convenient component testing and fix sonar findings
+
+## 3.0.12
+
+- Change default color and on hover color of copy icon in static table
+
+## 3.0.11
+
+- Change background color on hover and focus in custom accordion
+
+## 3.0.10
+
+- Fixed editing input field in vertical table
+
+## 3.0.9
+
+- Add copy icon and functionality to horizontal table
+
 ## 3.0.8
 
 - Show sub navigation contents to the user on mouse hover

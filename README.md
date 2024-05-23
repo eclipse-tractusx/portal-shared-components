@@ -120,7 +120,7 @@ const cardsArgs = {
     buttonText: 'View',
 }
 
-function App() {
+export default function App() {
     const [count, setCount] = useState<number>(1)
     const [view, setView] = useState<ViewType>(ViewType.ALL)
 
@@ -149,8 +149,6 @@ function App() {
         </>
     )
 }
-
-export default App
 ```
 
 This example shows several components working together. Every button click
@@ -158,10 +156,11 @@ adds a new card for that number and you can filter the cards by various criteria
 
 ## Developer documentation
 
-### Steps to run local storybook
+### Steps to run local storybook and dev server
 
     yarn
-    yarn start
+    yarn start:storybook
+    yarn start:dev
 
 ## License
 
