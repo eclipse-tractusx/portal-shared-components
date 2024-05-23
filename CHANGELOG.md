@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.15
+
+- Add support for customization and custom themes
+
 ## 3.0.8
 
 - Show sub navigation contents to the user on mouse hover
