@@ -23,7 +23,7 @@ import '../../../scss/global.scss'
 import { ThemeProvider } from '@mui/material/styles'
 import '../../../scss/fonts.scss'
 import { theme } from '../../../theme'
-import { DefaultTheme } from '@mui/system'
+import type { DefaultTheme } from '@mui/system'
 
 interface SharedThemeProviderProps<Theme = DefaultTheme> {
   children: React.ReactNode
@@ -33,7 +33,5 @@ export const SharedThemeProvider = ({
   children,
   themeDesign,
 }: SharedThemeProviderProps) => (
-  <ThemeProvider theme={themeDesign !== undefined ? themeDesign : theme}>
-    {children}
-  </ThemeProvider>
+  <ThemeProvider theme={themeDesign ?? theme}>{children}</ThemeProvider>
 )
