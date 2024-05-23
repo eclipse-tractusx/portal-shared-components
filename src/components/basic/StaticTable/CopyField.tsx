@@ -1,6 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2023 BMW Group AG
- * Copyright (c) 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -18,24 +17,24 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-export type TableCellType = string | number | boolean | JSX.Element
-export interface TableType {
-  head: TableCellType[]
-  body: TableCellType[][]
-  edit?: Array<
-    Array<{
-      icon: boolean
-      copyValue?: string
-      inputValue?: string
-      clickableLink?: string
-      isValid?: (value: string) => unknown
-      errorMessage?: string
-    }>
-  >
-  copy?: Array<
-    Array<{
-      icon: boolean
-      copyValue?: string
-    }>
-  >
+import { Typography } from '@mui/material'
+import ContentCopyIcon from '@mui/icons-material/ContentCopy'
+
+export type CopyFieldType = string | number | boolean
+
+export const CopyField = ({ value }: { value: CopyFieldType }) => {
+  const copyValue = () => {
+    console.log('copy ', value.toString())
+  }
+
+  return (
+    <div onClick={() => copyValue}>
+      <span
+        style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row' }}
+      >
+        <Typography variant="body1">{value}</Typography>
+        <ContentCopyIcon />
+      </span>
+    </div>
+  )
 }
