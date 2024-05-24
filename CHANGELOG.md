@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.15
+
+- Add new Vertical Table for code optimization
+
 ## 3.0.14
 
 - Rework year in file header

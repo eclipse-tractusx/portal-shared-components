@@ -19,42 +19,109 @@
 
 import { Typography } from '@mui/material'
 import { useState } from 'react'
-import { Input } from '../../../main'
 import EditIcon from '@mui/icons-material/Edit'
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import CloseIcon from '@mui/icons-material/Close'
+import { Input } from '../../../main'
+import { Tooltips } from '../ToolTips'
 
 export type EditFieldType = string | number | boolean
 
 export const EditField = ({
   value,
-  onEdit,
+  handleEdit,
+  isValid,
+  errorMessage
 }: {
   value: EditFieldType
-  onEdit: (value: EditFieldType) => void
+  handleEdit: (value: EditFieldType) => void | Promise<void>
+  isValid?: (value: string) => unknown
+  errorMessage?: string
 }) => {
-  const [edit, setEdit] = useState<boolean>(false)
-  const [editValue, setEditValue] = useState<EditFieldType>('')
 
-  const toggleEdit = () => {
-    setEdit(!edit)
+  const [inputField, setInputField] = useState(false)
+  const [inputValue, setInputValue] = useState('')
+  const [inputErrorMessage, setInputErrorMessage] = useState('')
+
+  const handleEditFn = (value: string) => {
+    setInputErrorMessage('')
+    setInputValue(value ?? '')
+    setInputField(true)
   }
 
-  console.log(editValue)
+  const addInputValue = (value: string) => {
+    setInputValue(value)
+    isValid &&
+      setInputErrorMessage(
+        !isValid(value.trim()) ? errorMessage ?? '' : ''
+      )
+  }
+
+  const renderInputField = () => {
+    return (
+      <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
+        <div style={{ width: '100%' }}>
+          <Input
+            onChange={(e) => {
+              addInputValue(e.target.value)
+            }}
+            onKeyPress={(event) => {
+              if (event.key === 'Enter' && !inputErrorMessage) {
+                setInputField(false)
+                if (handleEdit) handleEdit(inputValue)
+              }
+            }}
+            onClick={(e) => {
+              e.stopPropagation()
+            }}
+            value={inputValue}
+          />
+        </div>
+        {inputErrorMessage && (
+          <Tooltips
+            color="dark"
+            tooltipPlacement="bottom-start"
+            tooltipText={inputErrorMessage}
+          >
+            <span>
+              <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
+            </span>
+          </Tooltips>
+        )}
+        <CloseIcon
+          onClick={() => {
+            setInputField(false)
+          }}
+          sx={{ marginTop: '25px' }}
+        />
+      </div>
+    )
+  }
 
   return (
-    <div onClick={toggleEdit}>
-      {edit ? (
-        <Input
-          onKeyUp={(event: React.KeyboardEvent) => {
-            setEditValue((event.target as HTMLInputElement).value)
-          }}
-          value={value}
-        />
+    <div>
+      {inputField ? (
+        renderInputField()
       ) : (
         <span
           style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row' }}
         >
-          <Typography variant="body1">{value}</Typography>
-          <EditIcon />
+          <Typography variant="body3">{value}</Typography>
+          <span style={{ marginLeft: 'auto' }}>
+            <EditIcon
+              onClick={() => {
+                handleEditFn(value as string)
+              }}
+              sx={{
+                fontSize: '18px',
+                color: '#888888',
+                cursor: 'pointer',
+                '&:hover': {
+                  color: '#0088CC',
+                },
+              }}
+            />
+          </span>
         </span>
       )}
     </div>

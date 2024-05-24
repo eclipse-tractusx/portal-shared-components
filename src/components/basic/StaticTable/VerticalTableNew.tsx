@@ -18,9 +18,31 @@
  ********************************************************************************/
 
 import { Typography } from '@mui/material'
-import type { TableType } from './types'
 
-export const VerticalTableNew = ({ data }: { data: TableType }) => {
+export type TableCellType = string | number | boolean | JSX.Element
+export interface VerticalTableType {
+  head: TableCellType[]
+  body: TableCellType[][]
+  edit?: Array<
+    Array<{
+      icon: boolean
+      copyValue?: string
+      inputValue?: string
+      clickableLink?: string
+      isValid?: (value: string) => unknown
+      errorMessage?: string
+    }>
+  >
+  copy?: Array<
+    Array<{
+      icon: boolean
+      copyValue?: string
+    }>
+  >
+}
+
+
+export const VerticalTableNew = ({ data }: { data: VerticalTableType }) => {
   return (
     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
       <thead>
@@ -54,7 +76,7 @@ export const VerticalTableNew = ({ data }: { data: TableType }) => {
                 }}
               >
                 {typeof col === 'string' ? (
-                  <Typography variant="body1">{col}</Typography>
+                  <Typography variant="body3">{col}</Typography>
                 ) : (
                   col
                 )}

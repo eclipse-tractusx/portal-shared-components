@@ -18,44 +18,73 @@
  ********************************************************************************/
 
 import {
-  CopyField,
-  Datepicker,
   EditField,
   Typography,
   VerticalTableNew,
+  Tooltips
 } from '../components'
+import { Link } from '@mui/material'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 
 const links = ['/somepage', 'somelink']
 
 const createLinkList = (links: string[]) => (
-  <ul>
-    {links.map((link, i) => (
-      <li key={i}>
-        <Typography>
-          <a href={link}>{link}</a>
+  <>
+    {links.map((link) => (
+      <Link
+        target="_blank"
+        href={link}
+      >
+        <Typography
+          variant="body3"
+          sx={{
+            color: '#0088CC',
+            cursor: 'pointer',
+          }}
+        >
+          {link}
         </Typography>
-      </li>
+      </Link>
     ))}
-  </ul>
+  </>
 )
+
+const renderTooltipText = (value: string, tooltipText: string) => {
+  return (
+    <span style={{ display: 'flex', flexDirection: 'row' }}>
+      <Typography variant="body3">{value}</Typography>
+      <Tooltips
+        color="dark"
+        tooltipPlacement="bottom-start"
+        tooltipText={tooltipText}
+      >
+        <HelpOutlineIcon
+          sx={{
+            width: '2em',
+            fontSize: '19px',
+            color: '#888888',
+            cursor: 'pointer',
+            paddingTop: '2px',
+            '&:hover': {
+              color: '#0088CC',
+            },
+          }}
+        />
+      </Tooltips>
+    </span>
+  )
+}
 
 const data = {
   head: ['heading 1', 'heading 2'],
   body: [
     ['row1 col1', 'row1 col2'],
     [
-      <Datepicker
-        key="1"
-        label=""
-        placeholder=""
-        locale="en"
-        readOnly={false}
-        onChangeItem={(value) => {}}
-      />,
+      'row1 col1',
       createLinkList(links),
     ],
-    ['row3 col1', <EditField key="2" value="row3 col2" onEdit={() => {}} />],
-    [<CopyField key="3" value="row4 col2" />, 'row4 col1'],
+    [renderTooltipText('row1 col1', 'help tooltiptext'), <EditField key="2" value="row3 col2" isValid={() => { console.log('isvalid') }} handleEdit={() => { console.log('edit fn') }} />],
+    ['row4 col2', 'row4 col1'],
   ],
 }
 

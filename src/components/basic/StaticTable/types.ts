@@ -18,10 +18,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-export type TableCellType = string | number | boolean | JSX.Element
+import React from "react"
+
 export interface TableType {
-  head: TableCellType[]
-  body: TableCellType[][]
+  head: string[]
+  body: string[][] | React.FC[][]
   edit?: Array<
     Array<{
       icon: boolean
