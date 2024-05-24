@@ -65,12 +65,12 @@ export const EditField = ({
             onChange={(e) => {
               addInputValue(e.target.value)
             }}
-            onKeyPress={(event) => {
+            onKeyPress={(event) => {void (async() => {
               if (event.key === 'Enter' && !inputErrorMessage) {
                 setInputField(false)
-                if (handleEdit) handleEdit(inputValue)
+                await handleEdit(inputValue)
               }
-            }}
+            })()}}
             onClick={(e) => {
               e.stopPropagation()
             }}
