@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.16
+
+- Add new Vertical Table for code optimization
+
 ## 3.0.15
 
 - Add support for customization and custom themes

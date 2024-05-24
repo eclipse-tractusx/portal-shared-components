@@ -19,6 +19,7 @@
  ********************************************************************************/
 
 import type React from 'react'
+
 export interface TableType {
   head: string[]
   body: string[][] | React.FC[][]
