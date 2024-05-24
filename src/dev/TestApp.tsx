@@ -32,6 +32,7 @@ const createLinkList = (links: string[]) => (
   <>
     {links.map((link) => (
       <Link
+        key={link}
         target="_blank"
         href={link}
       >

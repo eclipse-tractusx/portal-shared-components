@@ -19,14 +19,14 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import TestApp from './dev/TestApp.tsx'
+import App from './dev/App.tsx'
 import { SharedThemeProvider } from './main.ts'
 
 // eslint-disable-next-line
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <SharedThemeProvider>
-      <TestApp />
+      <App />
     </SharedThemeProvider>
   </React.StrictMode>
 )

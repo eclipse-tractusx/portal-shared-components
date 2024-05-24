@@ -44,17 +44,17 @@ export interface VerticalTableType {
 
 export const VerticalTableNew = ({ data }: { data: VerticalTableType }) => {
   return (
-    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <table style={{borderCollapse: 'collapse',  width: '100%'}}>
       <thead>
         <tr>
           {data.head.map((col, c) => (
             <th
-              key={JSON.stringify(c)}
               style={{
                 backgroundColor: '#ecf0f4',
-                textAlign: 'left',
                 padding: '10px 15px',
+                textAlign: 'left',
               }}
+              key={JSON.stringify(c)}
             >
               <Typography variant="label3">{col}</Typography>
             </th>
@@ -62,17 +62,17 @@ export const VerticalTableNew = ({ data }: { data: VerticalTableType }) => {
         </tr>
       </thead>
       <tbody>
-        {data.body.map((row, r) => (
-          <tr key={JSON.stringify(r)}>
-            {row.map((col, c) => (
+        {data.body.map((row, rIndex) => (
+          <tr key={JSON.stringify(rIndex)}>
+            {row.map((col, cindex) => (
               <td
-                key={JSON.stringify(c)}
+                key={JSON.stringify(cindex)}
                 style={{
+                  width: '50%',
                   padding: '10px 15px',
                   borderBottom: '1px solid #f1f1f1',
                   whiteSpace: 'normal',
                   wordBreak: 'break-all',
-                  width: '50%',
                 }}
               >
                 {typeof col === 'string' ? (
