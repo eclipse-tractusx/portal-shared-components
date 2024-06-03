@@ -21,22 +21,19 @@ import { IconButton } from '../IconButton'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 export interface ScrollToTopButtonProps {
-    onButtonClick: React.MouseEventHandler
+  onButtonClick: React.MouseEventHandler
 }
 
 export const ScrollToTopButton = ({
-    onButtonClick,
+  onButtonClick,
 }: ScrollToTopButtonProps) => {
-    return (
-        <>
-
-            <IconButton
-                color="secondary"
-                onClick={onButtonClick}
-                sx={{ position: 'fixed', right: '40px', bottom: '20px' }}
-            >
-                <ArrowUpwardIcon />
-            </IconButton>
-        </>
-    )
+  return (
+    <IconButton
+      color="secondary"
+      onClick={onButtonClick}
+      sx={{ position: 'fixed', right: '40px', bottom: '20px' }}
+    >
+      <ArrowUpwardIcon />
+    </IconButton>
+  )
 }
