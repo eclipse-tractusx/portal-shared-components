@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.18
+
+- Add new Scroll to top button component
+
 ## 3.0.16
 
 - Add new Vertical Table for code optimization
