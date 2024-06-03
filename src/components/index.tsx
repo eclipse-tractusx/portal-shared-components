@@ -114,7 +114,10 @@ export type { CardItems } from './content/Cards'
 export type { NavigationProps } from './content/Navigation'
 export type { PageNotificationsProps } from './basic/Notifications/PageNotification'
 export type { TableType } from './basic/StaticTable/types'
-export type { VerticalTableType, TableCellType } from './basic/StaticTable/VerticalTableNew'
+export type {
+  VerticalTableType,
+  TableCellType,
+} from './basic/StaticTable/VerticalTableNew'
 export type { ImageType } from './basic/ImageGallery/types'
 export type { DateType } from './basic/Datepicker'
 export { StatusVariants } from './content/Cards/CardChip'

@@ -4,6 +4,10 @@
 
 - Add new Scroll to top button component
 
+## 3.0.17
+
+- Expose size property in circular progress component
+
 ## 3.0.16
 
 - Add new Vertical Table for code optimization

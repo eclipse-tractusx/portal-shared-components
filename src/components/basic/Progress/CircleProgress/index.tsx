@@ -25,6 +25,7 @@ import { useState, useEffect } from 'react'
 
 interface CircleProgressProps extends Omit<CircularProgressProps, 'variant'> {
   step?: number
+  size?: number
   interval?: number
   iteration?: boolean
   variant: 'determinate' | 'indeterminate'

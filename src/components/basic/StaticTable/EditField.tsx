@@ -31,14 +31,13 @@ export const EditField = ({
   value,
   handleEdit,
   isValid,
-  errorMessage
+  errorMessage,
 }: {
   value: EditFieldType
   handleEdit: (value: EditFieldType) => void | Promise<void>
   isValid?: (value: string) => unknown
   errorMessage?: string
 }) => {
-
   const [inputField, setInputField] = useState(false)
   const [inputValue, setInputValue] = useState('')
   const [inputErrorMessage, setInputErrorMessage] = useState('')
@@ -52,9 +51,7 @@ export const EditField = ({
   const addInputValue = (value: string) => {
     setInputValue(value)
     isValid &&
-      setInputErrorMessage(
-        !isValid(value.trim()) ? errorMessage ?? '' : ''
-      )
+      setInputErrorMessage(!isValid(value.trim()) ? errorMessage ?? '' : '')
   }
 
   const renderInputField = () => {
@@ -65,12 +62,14 @@ export const EditField = ({
             onChange={(e) => {
               addInputValue(e.target.value)
             }}
-            onKeyPress={(event) => {void (async() => {
-              if (event.key === 'Enter' && !inputErrorMessage) {
-                setInputField(false)
-                await handleEdit(inputValue)
-              }
-            })()}}
+            onKeyPress={(event) => {
+              void (async () => {
+                if (event.key === 'Enter' && !inputErrorMessage) {
+                  setInputField(false)
+                  await handleEdit(inputValue)
+                }
+              })()
+            }}
             onClick={(e) => {
               e.stopPropagation()
             }}

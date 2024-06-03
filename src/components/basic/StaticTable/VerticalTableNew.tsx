@@ -41,10 +41,9 @@ export interface VerticalTableType {
   >
 }
 
-
 export const VerticalTableNew = ({ data }: { data: VerticalTableType }) => {
   return (
-    <table style={{borderCollapse: 'collapse',  width: '100%'}}>
+    <table style={{ borderCollapse: 'collapse', width: '100%' }}>
       <thead>
         <tr>
           {data.head.map((col, c) => (
