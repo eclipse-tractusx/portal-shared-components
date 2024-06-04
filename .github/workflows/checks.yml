@@ -21,7 +21,7 @@
 
 name: pr checks
 
-on: 
+on:
   pull_request:
     paths:
       - src/**
@@ -41,9 +41,9 @@ jobs:
         id: git-tag-latest
         uses: actions-ecosystem/action-get-latest-tag@v1
 
-      - name: Remove tag 'v' prefix 
+      - name: Remove tag 'v' prefix
         run: echo "GIT_VERSION=$(echo ${{ steps.git-tag-latest.outputs.tag }} | cut -c2-)" >> $GITHUB_ENV
-        
+
       - name: Get npm version
         id: npm-version
         uses: martinbeentjes/npm-get-version-action@3cf273023a0dda27efcd3164bdfb51908dd46a5b # v1.3.1
@@ -64,6 +64,9 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+
+      - name: Prettier Checks
+        run: yarn pretty:check
 
       - name: Linter Checks
         run: yarn lint
