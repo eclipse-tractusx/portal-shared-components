@@ -101,6 +101,7 @@
     "lint": "eslint . --ext ts,tsx,js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint:staged": "lint-staged",
     "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
+    "pretty:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
     "test": "jest",
     "test:ci": "CI=true jest",
     "start": "yarn start:storybook",
