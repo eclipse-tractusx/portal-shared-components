@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.20
+
+- Update Font Size for Table Contents
+
 ## 3.0.19
 
 - Add pre-commit hook with lint-staged and prettier
