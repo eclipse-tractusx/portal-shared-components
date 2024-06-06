@@ -69,7 +69,7 @@ Add two more libraries
 
     yarn add amount-to-words @javascript-packages/roman-numerals
 
-Then open `src/App.tsx` again and overwrite the content with this example.
+Then edit `src/App.tsx` again and overwrite the content with this example.
 
 ```diff
 import { useState } from 'react'

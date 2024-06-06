@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.0.19
+
+- Add pre-commit hook with lint-staged and prettier
+
+## 3.0.18
+
+- Add new Scroll to top button component
+
 ## 3.0.17
 
 - Expose size property in circular progress component
