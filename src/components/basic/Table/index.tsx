@@ -218,7 +218,7 @@ export const Table = ({
         sx={{
           '&.MuiDataGrid-root .MuiDataGrid-cell': {
             alignItems: alignCell,
-            fontSize: fontSizeCell
+            fontSize: fontSizeCell,
           },
           '&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus-within':
             {
