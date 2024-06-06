@@ -72,6 +72,7 @@ export interface TableProps extends DataGridProps {
   sortOptions?: SortOptionsType[]
   onSortClick?: (value: string) => void
   alignCell?: string
+  fontSizeCell?: string
   error?: {
     status: number
   }
@@ -113,6 +114,7 @@ export const Table = ({
   sortOptions,
   onSortClick,
   alignCell = 'center',
+  fontSizeCell = '14px',
   error,
   reload,
   autoFocus = true,
@@ -216,6 +218,7 @@ export const Table = ({
         sx={{
           '&.MuiDataGrid-root .MuiDataGrid-cell': {
             alignItems: alignCell,
+            fontSize: fontSizeCell
           },
           '&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus-within':
             {
