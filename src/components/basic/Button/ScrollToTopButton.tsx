@@ -28,12 +28,23 @@ export const ScrollToTopButton = ({
   onButtonClick,
 }: ScrollToTopButtonProps) => {
   return (
-    <IconButton
-      color="secondary"
-      onClick={onButtonClick}
-      sx={{ position: 'fixed', right: '40px', bottom: '20px' }}
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+      }}
     >
-      <ArrowUpwardIcon />
-    </IconButton>
+      <div
+        style={{
+          position: 'fixed',
+          marginRight: '10px',
+          bottom: '20px',
+        }}
+      >
+        <IconButton color="secondary" onClick={onButtonClick}>
+          <ArrowUpwardIcon />
+        </IconButton>
+      </div>
+    </div>
   )
 }
