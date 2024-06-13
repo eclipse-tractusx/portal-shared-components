@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.22
+
+- Support mdx file
+
 ## 3.0.21
 
 - Add scroll to top button specific css
