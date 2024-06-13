@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.21
+
+- Add scroll to top button specific css
+
 ## 3.0.20
 
 - Update Font Size for Table Contents
