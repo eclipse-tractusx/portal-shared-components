@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.22
+
+- Improve pre-commit hook reduce dependencies and add unit tests
+
 ## 3.0.21
 
 - Add scroll to top button specific css
