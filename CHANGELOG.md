@@ -1,8 +1,12 @@
 # Changelog
 
-## 3.0.22
+## 3.0.23
 
 - Support mdx file
+
+## 3.0.22
+
+- Improve pre-commit hook reduce dependencies and add unit tests
 
 ## 3.0.21
 
