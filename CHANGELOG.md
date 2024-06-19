@@ -2,7 +2,7 @@
 
 ## 3.0.23
 
-- Support mdx file
+- Improve visibility of scroll to top button
 
 ## 3.0.22
 
