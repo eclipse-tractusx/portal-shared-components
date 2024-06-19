@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.24
+
+- Integrate style-guide documentation into shared components and enable MDX support
+
 ## 3.0.23
 
 - Improve visibility of scroll to top button
