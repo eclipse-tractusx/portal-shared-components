@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.23
+
+- Improve visibility of scroll to top button
+
 ## 3.0.22
 
 - Improve pre-commit hook reduce dependencies and add unit tests

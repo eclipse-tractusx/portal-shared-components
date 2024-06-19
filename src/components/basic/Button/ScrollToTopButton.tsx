@@ -19,6 +19,7 @@
 
 import { IconButton } from '../IconButton'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
+import { useMediaQuery } from '@mui/material'
 
 export interface ScrollToTopButtonProps {
   onButtonClick: React.MouseEventHandler
@@ -27,6 +28,7 @@ export interface ScrollToTopButtonProps {
 export const ScrollToTopButton = ({
   onButtonClick,
 }: ScrollToTopButtonProps) => {
+  const tab = useMediaQuery('(max-width:1023px)')
   return (
     <div
       style={{
@@ -37,12 +39,16 @@ export const ScrollToTopButton = ({
       <div
         style={{
           position: 'fixed',
-          marginRight: '10px',
-          bottom: '20px',
+          marginRight: tab ? '20px' : '40px',
+          bottom: tab ? '20px' : '40px',
         }}
       >
         <IconButton color="secondary" onClick={onButtonClick}>
-          <ArrowUpwardIcon />
+          <ArrowUpwardIcon
+            sx={{
+              fontSize: tab ? '1.2em' : '2em',
+            }}
+          />
         </IconButton>
       </div>
     </div>
