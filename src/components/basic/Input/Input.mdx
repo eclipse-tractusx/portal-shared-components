@@ -1,4 +1,4 @@
-{/******************\*\*\*\*******************\*******************\*\*\*\*******************
+{/**\*\*\*\***\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\***\*\*\*\***\***\*\*\*\***\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\***\*\*\*\***
 
 - Copyright (c) 2024 Contributors to the Eclipse Foundation
 -
@@ -16,24 +16,56 @@
 - under the License.
 -
 - SPDX-License-Identifier: Apache-2.0
-  ******************\*\*\*\*******************\*******************\*\*\*\*******************/}
+  **\*\*\*\***\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\***\*\*\*\***\***\*\*\*\***\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\***\*\*\*\***/}
 
 import { Story, Meta } from '@storybook/blocks'
 import { SharedThemeProvider } from '../SharedThemeProvider'
 import { SharedCssBaseline } from '../SharedCssBaseline'
+import { Input } from '.'
 
 <Meta title="Design Guidelines/Input" />
 
 ## Input
 
-### Input Field
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  ### Filled
 
-<img
-  width="600"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/input-field-example.png"
+{' '}
+
+<Input
+  label="Label"
+  placeholder="Placeholder"
+  helperText="Helper"
+  disabled={false}
+  error={false}
+  value={'filled data'}
 />
 
+### Error
+
+{' '}
+
+<Input
+  label="Label"
+  placeholder="Placeholder"
+  helperText="Error"
+  disabled={false}
+  error={true}
+/>
+
+{' '}
+
+<br />
+### Disabled
+
+  <Input label="Label"
+    placeholder="Placeholder"
+    helperText="Helper"
+    disabled={true}
+    error={false}
+  />
+</SharedThemeProvider>
 <br />
 <br />
 
