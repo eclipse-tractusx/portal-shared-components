@@ -1,4 +1,4 @@
-### Date Picker
+### Design
 
 <img width="560" alt="image" src="../static/datepicker.png">
 

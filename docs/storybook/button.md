@@ -1,4 +1,4 @@
-### Buttons
+### Design
 
 <img width='100%' alt="image"  src="../static/button-variations.png">
 

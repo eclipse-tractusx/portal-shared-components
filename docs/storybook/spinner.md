@@ -1,4 +1,3 @@
-
 ### Spinner
 
 For page elements with a database connection or backend content requests with potential loading delays (latency), a loading spinner should be used. 
