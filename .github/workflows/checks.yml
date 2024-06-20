@@ -37,6 +37,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
 
       - name: Get latest git tag
         id: git-tag-latest
