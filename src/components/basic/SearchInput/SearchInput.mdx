@@ -21,18 +21,34 @@
 import { Story, Meta } from '@storybook/blocks'
 import { SharedThemeProvider } from '../SharedThemeProvider'
 import { SharedCssBaseline } from '../SharedCssBaseline'
+import { SearchInput } from '.'
+import ClearIcon from '@mui/icons-material/Clear'
+import { IconButton } from '../IconButton'
 
 <Meta title="Design Guidelines/SearchInput" />
 
 ## SearchInput
 
-### Searchbar
+<SharedThemeProvider>
+<SharedCssBaseline />
+### Outlined
+<br />
+<SearchInput />
 
-<img
-  width="453"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/searchbar-example.png"
-/>
+### Standard
+
+<br />
+<SearchInput variant='standard' />
+<br />
+### Filled
+<br />
+<SearchInput size="small" variant='filled' 
+  endAdornment={
+      <IconButton onClick={() => {}}>
+        <ClearIcon />
+      </IconButton>
+  } />
+</SharedThemeProvider>
 
 <br />
 

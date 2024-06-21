@@ -19,8 +19,17 @@
   **\*\*\*\***\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\***\*\*\*\***\***\*\*\*\***\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\***\*\*\*\***/}
 
 import { Story, Meta } from '@storybook/blocks'
-import { SharedThemeProvider } from '../SharedThemeProvider'
-import { SharedCssBaseline } from '../SharedCssBaseline'
+import { SharedThemeProvider } from '../../basic/SharedThemeProvider'
+import { SharedCssBaseline } from '../../basic/SharedCssBaseline'
+import { TextCenterAligned } from './TextCenterAligned'
+import { CardGrid } from './CardGrid'
+import { LinkButtonGrid } from './LinkButtonGrid'
+import { TextImageSideBySide } from './TextImageSideBySide'
+import { TextVideoSideBySide } from './TextVideoSideBySide'
+import { VideoTextSideBySide } from './VideoTextSideBySide'
+import { TextImageCenterAligned } from './TextImageCenterAligned'
+import { TextCenterAlignedBody2 } from './TextCenterAlignedBody2'
+import { TextImageSideBySideWithSections } from './TextImageSideBySideWithSections'
 
 <Meta title="Design Guidelines/Static Page Template" />
 
@@ -36,14 +45,98 @@ Below you can find an overview of all supported templates as well as the templat
 Template Name: "TextCenterAlignedWithCardGrid"
 
 <br />
-
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextCenterAlignedWithCardGrid.png"
-/>
-
-<br />
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <TextCenterAligned
+    provider={{
+      title: 'Example title',
+      description: 'Example description for the component',
+    }}
+    scrollTop={() => {}}
+    showScroll={true}
+  />
+  <CardGrid
+    baseUrl="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/"
+    align="center"
+    provider={{
+      detailsWithImageRow1: [
+        {
+          title: 'Subscription',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '1',
+        },
+        {
+          title: 'Subscription Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This are the details which I will still add',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '2',
+        },
+        {
+          title: 'Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Coming soon',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '3',
+        },
+      ],
+      detailsWithImageRow2: [
+        {
+          title: 'Subscription Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Add your own description here',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '11',
+        },
+        {
+          title: 'Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '12',
+        },
+      ],
+      detailsWithoutImageRow1: [
+        {
+          title: 'Who can subscribe?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'Details',
+          backgroundColor: '#FFFFFF',
+          id: '21',
+        },
+        {
+          title: 'What happens after the subscription?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'More',
+          backgroundColor: '#FFFFFF',
+          id: '22',
+        },
+        {
+          title: 'How can I use the service?',
+          description: 'This is an example description',
+          readMore: '/help',
+          readMoreTitle: 'Visit',
+          backgroundColor: '#FFFFFF',
+          id: '33',
+        },
+      ],
+    }}
+  />
+</SharedThemeProvider>
 
 #### Structure Details
 
@@ -115,11 +208,50 @@ Template Name: "TextCenterAlignedWithLinkButtonGrid"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextCenterAlignedWithLinkButtonGrid.png"
-/>
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <TextCenterAligned
+    provider={{
+      title: 'Example title',
+      description: 'Example description for the component',
+    }}
+    scrollTop={() => {}}
+    showScroll={true}
+  />
+  <LinkButtonGrid
+    provider={{
+      linksRow1: [
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
+        },
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/certificate-credential',
+        },
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/certificate-credential',
+        },
+      ],
+      linksRow2: [
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
+        },
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
+        },
+      ],
+    }}
+  />
+</SharedThemeProvider>
 
 #### Structure Details
 
@@ -165,11 +297,98 @@ Template Name: "TextImageSideBySideWithCardGrid"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextImageSideBySideWithCardGrid.png"
-/>
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <TextImageSideBySide
+    provider={{
+      title: 'Example title',
+      description: 'Example description for the component',
+    }}
+    scrollTop={() => {}}
+    showScroll={true}
+  />
+  <CardGrid
+    baseUrl="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/"
+    align="center"
+    provider={{
+      detailsWithImageRow1: [
+        {
+          title: 'Subscription',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '1',
+        },
+        {
+          title: 'Subscription Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This are the details which I will still add',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '2',
+        },
+        {
+          title: 'Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Coming soon',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '3',
+        },
+      ],
+      detailsWithImageRow2: [
+        {
+          title: 'Subscription Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Add your own description here',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '11',
+        },
+        {
+          title: 'Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '12',
+        },
+      ],
+      detailsWithoutImageRow1: [
+        {
+          title: 'Who can subscribe?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'Details',
+          backgroundColor: '#FFFFFF',
+          id: '21',
+        },
+        {
+          title: 'What happens after the subscription?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'More',
+          backgroundColor: '#FFFFFF',
+          id: '22',
+        },
+        {
+          title: 'How can I use the service?',
+          description: 'This is an example description',
+          readMore: '/help',
+          readMoreTitle: 'Visit',
+          backgroundColor: '#FFFFFF',
+          id: '33',
+        },
+      ],
+    }}
+  />
+</SharedThemeProvider>
 
 #### Structure Details
 
@@ -249,10 +468,14 @@ Template Name: "TextVideoSideBySide"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextVideoSideBySide.png"
+{' '}
+
+<TextVideoSideBySide
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    videoUrl: 'https://www.youtube.com/embed/g-NVjP2srw4',
+  }}
 />
 
 #### Structure Details
@@ -278,10 +501,12 @@ Template Name: "VideoTextSideBySide"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/VideoTextSideBySide.png"
+<VideoTextSideBySide
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    videoUrl: 'https://www.youtube.com/embed/g-NVjP2srw4',
+  }}
 />
 
 #### Structure Details
@@ -306,10 +531,14 @@ Template Name: "TextImageCenterAligned"
 
 <br />
 
-<img
-  width="1055"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextImageCenterAligned.png"
+<TextImageCenterAligned
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    imagePath: '/images/content/teaser.png',
+  }}
+  scrollTop={() => {}}
+  showScroll={true}
 />
 
 #### Structure Details
@@ -336,10 +565,13 @@ Template Name: "TextCenterAligned"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextCenterAligned.png"
+<TextCenterAligned
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+  }}
+  scrollTop={() => {}}
+  showScroll={true}
 />
 
 #### Structure Details
@@ -364,10 +596,13 @@ Template Name: "TextImageSideBySide"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextImageSideBySide.png"
+<TextImageSideBySide
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+  }}
+  scrollTop={() => {}}
+  showScroll={true}
 />
 
 #### Structure Details
@@ -394,10 +629,15 @@ Template Name: "TextCenterAlignedBody2"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/static/TextCenterAlignedBody2.png"
+<TextCenterAlignedBody2
+  provider={{
+    title: 'Example',
+    subTitles: [
+      "In this example, an SME produces a batch of gears with batch number XX1235509 and part number 5A52625. After the parts have been manufactured, the SME creates a digital twin for this batch in the <strong class='tooltip'>Digital Twin Registry<0>Each traceable object is mapped via a digital twin and registered in the Digital Twin Registry</0></strong> using the <strong class='tooltip'>Batch<0>Represents the master data of a batch after the assembly process. Relevant for manufacturers of components with large batches, which are produced under the same manufacturing conditions and bundled in a batch number.</0></strong> data model in accordance with the Catena-X standards. In addition, a <strong class='tooltip'>Catena-X Unique ID<0>Catena-X ID - Universally Unique Identifier (UUID): Each object (raw material, component or vehicle) receives a unique Catena-X ID for an unequivocally identification in the Catena-X data room.</0></strong> is generated for the batch so that it can be clearly identified in the Catena-X ecosystem. The <strong class='tooltip'>EDC<0>The Eclipse Dataspace Connector (EDC) is the standard connector within the Catena-X network that ensures secure and sovereign data exchange.</0></strong> provides the customer with a data offer to retrieve this data from the digital twin. The physical components (gears) are then sent to the customer.<1></1><1></1><1></1>",
+      "The customer receives the SME's batch of gears and scans them when the transmission is manufactured. He also creates a digital twin and a Catena-X unique ID for the transmission (serial number 21B294301258, part number 5A52479). He uses the <strong class='tooltip'>SerialPartTypization<0>Represents the master data of a component with its own serial number after the assembly process. Relevant for manufacturers of serialized individual parts or vehicle manufacturers.</0></strong> data model to register his digital twin. He makes the information from the digital twin available to his customer, in this case to the OEM, via a corresponding data offer in the EDC. To logically link the two digital twins (batch of gears to transmissions), the Catena-X Unique ID of the batch is determined via a look-up in the Digital Twin Registry and stored in the digital twin of the transmission using the <strong class='tooltip'>AssemblyPartRelation<0>Represents the relationship between the components after the assembly process. For example, which batch (gear wheel, raw material) is installed in which serialized part (transmission) in which vehicle.</0></strong> data model. This logical link creates the Catena-X data chain.<1></1><1></1><1></1>",
+      'The same process happens at all levels, as in the example above, between the customer and the OEM.<1></1><1></1><1></1>',
+    ],
+  }}
 />
 
 <br />
@@ -423,72 +663,107 @@ Template Name: "TextCenterAlignedBody2"
 <br />
 <br />
 
-#### #10 TextImageSideBySideWithLinks
-
-Template Name: "TextImageSideBySideWithLinks"
-
-<br />
-
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/static/TextImageSideBySideWithLinks.png"
-/>
-
-<br />
-
-#### Structure Details
-
-```
-      {
-        title:"Policy Intro",
-        description:"Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can view data offers. Usage defines the data access itself - means contract negotiations and data consumption. E.g. Company A can see that Company B has a Data Offer of last week produced vehicle data - however due to missing usage rights the company can not accept the agreement/data offer and can't access those data.<1></1><1></1>The following page provides details about the respective available access/usage policies<1></1><1></1>",
-        imagePath:"/images/frame/AccessVsUsage.png",
-        backgroundColor:"#FFFFFFF",
-        id:"core-id",
-        template:"TextImageSideBySide",
-        sectionLink: {
-          data: [
-            {
-              title: "* Membership",
-              id:"membership-id",
-              internal: true
-            },
-            {
-              title: "* BPN",
-              id:"bpn-id",
-              internal: true
-            },
-            {
-              title: "* Use Case",
-              id:"usecase-id",
-              internal: true
-            },
-            {
-              title: "* Roles",
-              id:"roles-id",
-              internal: true
-            }
-          ]
-        }
-      }
-```
-
-{' '}
-
-<br />
-<br />
-
-#### #11 TextImageSideBySideWithSections
+#### #10 TextImageSideBySideWithSections
 
 Template Name: "TextImageSideBySideWithSections"
 
 <br />
 
-<img
-  width="1080"
-  alt="image"
-  src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/static/TextImageSideBySideWithSections.png"
+<TextImageSideBySideWithSections
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    imagePath: '/images/content/teaser.png',
+    subsections: [
+      {
+        title: 'User Management',
+        description:
+          'To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>',
+        id: 'user-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Role Descriptions',
+              id: '/',
+              internal: false,
+            },
+            {
+              title: '>> User Management',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+      {
+        title: 'Configure Company IdP (optional)',
+        description:
+          'If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>',
+        id: 'idp-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Configure your IdP',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+      {
+        title: 'Company Certificates',
+        description: '',
+        id: 'company-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Setup your company certificates',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+      {
+        title: 'Use Case Frameworks',
+        description: '',
+        id: 'usecase-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Sign the relevant use case frameworks.',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+    ],
+    sectionLink: {
+      data: [
+        {
+          title: '>> IdP Config',
+          id: 'idp-id',
+          internal: true,
+        },
+        {
+          title: '>> User Management',
+          id: 'user-id',
+          internal: true,
+        },
+        {
+          title: '>> Company Certificates',
+          id: 'company-id',
+          internal: true,
+        },
+        {
+          title: '>> Use Case Frameworks',
+          id: 'usecase-id',
+          internal: true,
+        },
+      ],
+    },
+  }}
 />
 
 <br />
