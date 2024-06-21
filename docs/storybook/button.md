@@ -1,6 +1,6 @@
 ### Design
 
-<img width='100%' alt="image"  src="../static/button-variations.png">
+<img width='100%' alt="button variations" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-shared-components/main/docs/static/button-variations.png">
 
 <br>
 <br>

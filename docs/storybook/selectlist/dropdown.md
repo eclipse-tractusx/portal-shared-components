@@ -1,7 +1,6 @@
 ### Design
 
-<img width="740" alt="image" src="../../static/dropdown.png">
-
+<img width="740" alt="dropdown" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-shared-components/main/docs/static/dropdown.png">
 <br>
 
 #### Description

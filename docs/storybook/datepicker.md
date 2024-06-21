@@ -1,6 +1,6 @@
 ### Design
 
-<img width="560" alt="image" src="../static/datepicker.png">
+<img width="560" alt="datepicker" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-shared-components/main/docs/static/datepicker.png">
 
 #### Principles
 
