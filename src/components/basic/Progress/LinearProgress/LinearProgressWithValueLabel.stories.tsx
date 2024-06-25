@@ -20,18 +20,12 @@
 import { ComponentStory } from '@storybook/react'
 
 import { LinearProgressWithValueLabel as Component } from './LinearProgressWithValueLabel'
-import spinner from '../../../../../docs/storybook/spinner.md?raw'
 
 export default {
   title: 'LinearProgressWithValueLabel',
   component: Component,
   tags: ['autodocs'],
   argTypes: {},
-  parameters: {
-    docs: {
-      description: { component: spinner },
-    },
-  },
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (
