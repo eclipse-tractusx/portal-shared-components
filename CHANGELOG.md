@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.26
+## 3.1.0
 
 - Integrate style-guide documentation into shared components and enable MDX support
 -
