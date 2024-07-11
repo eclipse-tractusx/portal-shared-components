@@ -53,8 +53,9 @@ export const DropdownMenu = ({
   }
 
   return (
-    <div>
+    <div className={'cx-dropdown'}>
       <Button
+        className={'cx-dropdown__button'}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         variant="outlined"
@@ -86,6 +87,7 @@ export const DropdownMenu = ({
         {buttonText}
       </Button>
       <Menu
+        className={'cx-dropdown__menu'}
         anchorEl={anchorElRef.current}
         open={open}
         onClose={handleClose}

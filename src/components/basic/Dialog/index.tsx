@@ -60,6 +60,7 @@ export const Dialog = ({
 
   return (
     <MuiDialog
+      className={'cx-dialog'}
       {...props}
       scroll={scroll}
       maxWidth={fullWidth ? 'xl' : maxWidth}

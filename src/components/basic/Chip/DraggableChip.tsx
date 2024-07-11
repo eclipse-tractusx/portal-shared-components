@@ -42,6 +42,7 @@ export const DraggableChip = ({
 
   return (
     <Box
+      className={'cx-chip__draggable'}
       draggable="true"
       {...props}
       sx={{
@@ -67,8 +68,10 @@ export const DraggableChip = ({
         ...props.sx,
       }}
     >
-      <Box sx={{ flex: '1 1 auto' }}>{children}</Box>
-      <Box sx={{ flex: '0 0 auto' }}>
+      <Box sx={{ flex: '1 1 auto' }} className={'cx-chip__draggable-label'}>
+        {children}
+      </Box>
+      <Box sx={{ flex: '0 0 auto' }} className={'cx-chip__draggable-icon'}>
         <OpenWithIcon sx={{ marginLeft: 1, display: 'block' }} />
       </Box>
     </Box>

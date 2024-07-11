@@ -62,6 +62,7 @@ export const Chip = ({
 
   return (
     <MuiChip
+      className={`cx-chip cx-variant-${variant && variant.toLocaleLowerCase()} cx-color-${color && color.toLocaleLowerCase()} cx-type-${type && type.toLocaleLowerCase()}`}
       variant={variant}
       color={color}
       icon={withIcon ? icon : undefined}

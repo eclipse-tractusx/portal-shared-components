@@ -33,5 +33,12 @@ export const Button = ({
 }: ButtonProps) => {
   const color = ['outlined', 'text'].includes(variant) ? 'primary' : colorProp
 
-  return <MuiButton variant={variant} color={color} {...props} />
+  return (
+    <MuiButton
+      className={`cx-button cx-variant-${variant && variant.toLocaleLowerCase()} cx-color-${color && color.toLocaleLowerCase()}`}
+      variant={variant}
+      color={color}
+      {...props}
+    />
+  )
 }

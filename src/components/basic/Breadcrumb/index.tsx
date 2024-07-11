@@ -33,7 +33,7 @@ export const Breadcrumb = ({
   breadcrumbs,
 }: BreadcrumbProps & BackButtonProps) => {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} className={'cx-breadcrumbs'}>
       <BackButton
         backButtonLabel={backButtonLabel}
         backButtonVariant={backButtonVariant}
@@ -41,6 +41,7 @@ export const Breadcrumb = ({
       />
 
       <Breadcrumbs
+        className={'cx-breadcrumbs__links'}
         separator=" "
         aria-label="breadcrumb"
         sx={{ margin: 'auto 0px', hight: 'fit-content' }}
