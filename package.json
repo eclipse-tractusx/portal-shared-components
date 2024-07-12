@@ -22,7 +22,7 @@
       "eslint --quiet --fix",
       "prettier --write --ignore-unknown"
     ],
-    "*.{json,css,sass,scss,xml,yml,yaml,md}": [
+    "*.{json,css,sass,scss,xml,yml,yaml,md,mdx}": [
       "prettier --write --ignore-unknown"
     ],
     "*.test.{js,jsx,ts,tsx}": [
