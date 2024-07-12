@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.26
+
+added classNames and variants names where possible for adding customization support
+
 ## 3.0.25
 
 - Updated images for markdown files
