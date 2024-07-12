@@ -179,7 +179,7 @@ export const Table = ({
   const renderErrorMessage = () => {
     if (error == null) {
       return <Typography variant="body2">{noRowsMsg ?? 'No rows'}</Typography>
-    } else if (error != null) {
+    } else {
       if (error.status >= 400 && error.status < 500) {
         return <Error400Overlay errorMessage4xx={error.message} />
       } else {
