@@ -41,8 +41,9 @@ export const SearchInput = ({
   const { icon01 } = theme.palette.icon
 
   return (
-    <Box>
+    <Box className="cx-search-input">
       <TextField
+        className="cx-search-input__text-field"
         sx={{
           borderColor: theme.palette.primary.main,
           width: '100%',

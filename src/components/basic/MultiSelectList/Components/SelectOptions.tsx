@@ -29,6 +29,7 @@ interface SelectOptionsProps {
 
 export const SelectOptions = ({ props, parts }: SelectOptionsProps) => (
   <li
+    className="cx-multi-select__select-option"
     {...props}
     style={{
       paddingBottom: '0px',
@@ -38,6 +39,7 @@ export const SelectOptions = ({ props, parts }: SelectOptionsProps) => (
     }}
   >
     <Box
+      className="cx-multi-select__select-option--parts"
       sx={{
         borderBottom: '1px solid #f2f2f2 !important',
         width: '100%',
@@ -46,6 +48,7 @@ export const SelectOptions = ({ props, parts }: SelectOptionsProps) => (
     >
       {parts.map((part: PartsType) => (
         <span
+          className="cx-multi-select__select-option--part"
           key={part.text}
           style={{
             fontWeight: part.highlight ? 700 : 400,

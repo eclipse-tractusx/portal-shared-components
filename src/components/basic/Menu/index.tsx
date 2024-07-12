@@ -45,8 +45,8 @@ export const Menu = ({
   const { spacing } = useTheme()
 
   return (
-    <Box {...props}>
-      <List sx={{ padding: 0 }}>
+    <Box {...props} className="cx-menu">
+      <List sx={{ padding: 0 }} className="cx-menu__list">
         {items?.map((item) => (
           <MenuItem
             {...item}
@@ -60,7 +60,9 @@ export const Menu = ({
           />
         ))}
       </List>
-      {divider && <Divider sx={{ margin: spacing(0, 1) }} />}
+      {divider && (
+        <Divider className="cx-menu__divider" sx={{ margin: spacing(0, 1) }} />
+      )}
     </Box>
   )
 }

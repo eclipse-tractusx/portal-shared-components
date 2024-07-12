@@ -36,7 +36,7 @@ export const ProcessList = ({
   elementNumbers,
 }: ProcessListProps) => {
   return (
-    <Box>
+    <Box className="cx-process-list">
       {list
         .filter(
           (item: StepList) =>

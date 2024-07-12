@@ -49,13 +49,14 @@ export const Stepper = ({
 }: StepperProps) => {
   return (
     <Box
+      className="cx-stepper__wrapper"
       sx={{
         margin: '0px auto',
       }}
     >
       {list && (
         <>
-          <Box className="stepperMain">
+          <Box className="stepperMain cx-stepper">
             {list
               .filter(
                 (item) => item.step <= showSteps && item.step <= list.length

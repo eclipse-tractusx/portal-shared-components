@@ -112,6 +112,7 @@ export const DropPreviewFile: FunctionComponent<DropPreviewFileProps> = ({
 
   return (
     <Box
+      className={'cx-drop__preview-file'}
       sx={{
         marginBottom: 1,
         borderRadius: '8px',

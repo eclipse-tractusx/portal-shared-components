@@ -53,7 +53,7 @@ export const ImageGallery = ({
   }
 
   return (
-    <>
+    <div className="cx-image-gallery">
       {hovered && hoveredImage?.url && (
         <ImageItemOverlay
           onClose={() => {
@@ -75,6 +75,7 @@ export const ImageGallery = ({
       >
         {gallery.map((image) => (
           <div
+            className="cx-image-gallery__btn"
             key={image.url}
             onClick={() => {
               hoverImageFn(image)
@@ -97,6 +98,6 @@ export const ImageGallery = ({
           </div>
         ))}
       </Carousel>
-    </>
+    </div>
   )
 }

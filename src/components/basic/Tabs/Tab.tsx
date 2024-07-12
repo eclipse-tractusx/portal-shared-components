@@ -21,5 +21,5 @@
 import MuiTab, { type TabProps as MuiTabProps } from '@mui/material/Tab'
 
 export const Tab = ({ ...props }: MuiTabProps) => {
-  return <MuiTab {...props} />
+  return <MuiTab className="cx-tab" {...props} />
 }

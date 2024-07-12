@@ -203,6 +203,7 @@ export const Table = ({
 
   return (
     <Box
+      className="cx-table"
       sx={{
         '.MuiDataGrid-columnHeaders': {
           backgroundColor: columnHeadersBackgroundColor,

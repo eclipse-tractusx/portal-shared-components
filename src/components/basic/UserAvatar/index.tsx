@@ -45,6 +45,7 @@ export const UserAvatar = ({
     : theme.palette.brand.brand02
   const userAvatarImage = userImage ? (
     <Avatar
+      className="cx-avatar"
       alt={altText}
       src={userImage}
       sx={{
@@ -55,6 +56,7 @@ export const UserAvatar = ({
     />
   ) : (
     <Avatar
+      className="cx-avatar"
       sx={{
         backgroundColor: theme.palette.primary.main,
         height: userAvatarSize,
@@ -63,6 +65,7 @@ export const UserAvatar = ({
       {...props}
     >
       <PersonOutlineIcon
+        className="cx-avatar__icon"
         sx={{
           height: `${Number(userAvatarSize.replace(/px/g, '')) / 2}px`,
           width: `${Number(userAvatarSize.replace(/px/g, '')) / 2}px`,
@@ -73,6 +76,7 @@ export const UserAvatar = ({
 
   return (
     <Badge
+      className="cx-avatar__badge"
       overlap="circular"
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       badgeContent={notificationCount}

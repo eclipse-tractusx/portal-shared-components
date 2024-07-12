@@ -63,6 +63,7 @@ export const CardHorizontal = ({
 
   return (
     <Box
+      className="cx-card__horizontal"
       ref={boxRef}
       sx={{
         display: 'flex',
@@ -76,6 +77,7 @@ export const CardHorizontal = ({
       }}
     >
       <Box
+        className="cx-card__horizontal--left"
         sx={{
           flex: '0 0 33.333333%',
           maxWidth: '33.333333%',
@@ -88,6 +90,7 @@ export const CardHorizontal = ({
         }}
       />
       <Box
+        className="cx-card__horizontal--right"
         sx={{
           flex: 1,
           padding: '25px',
@@ -96,6 +99,7 @@ export const CardHorizontal = ({
         }}
       >
         <Typography
+          className="cx-card__horizontal--label"
           variant="caption3"
           sx={{
             fontWeight: '600',
@@ -108,6 +112,7 @@ export const CardHorizontal = ({
         </Typography>
 
         <Typography
+          className="cx-card__horizontal--heading"
           variant="h4"
           sx={{
             margin: '5px 0 0 0',
@@ -124,6 +129,7 @@ export const CardHorizontal = ({
           {title}
         </Typography>
         <Typography
+          className="cx-card__horizontal--subheading"
           variant="caption3"
           sx={{
             fontWeight: '600',
@@ -136,6 +142,7 @@ export const CardHorizontal = ({
         </Typography>
         {description && (
           <Typography
+            className="cx-card__horizontal--description"
             variant="label4"
             sx={{
               color: '#888888',
@@ -154,6 +161,7 @@ export const CardHorizontal = ({
 
         {buttonText && (
           <div
+            className="cx-card__horizontal--button"
             style={{
               marginTop: 'auto',
               display: 'flex',
@@ -161,6 +169,7 @@ export const CardHorizontal = ({
             }}
           >
             <Typography
+              className="cx-card__horizontal--button--text"
               variant="label4"
               onClick={onBtnClick}
               sx={{
@@ -181,7 +190,10 @@ export const CardHorizontal = ({
                 },
               }}
             >
-              <KeyboardArrowDownIcon sx={{ marginRight: '5px' }} />
+              <KeyboardArrowDownIcon
+                className="cx-card__horizontal--button--icon"
+                sx={{ marginRight: '5px' }}
+              />
               {buttonText}
             </Typography>
           </div>

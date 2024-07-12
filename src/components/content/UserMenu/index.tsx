@@ -52,8 +52,9 @@ export const UserMenu = ({
   const { spacing, shadows } = useTheme()
 
   return (
-    <ClickAwayListener onClickAway={onClickAway}>
+    <ClickAwayListener onClickAway={onClickAway} className="cx-click-listener">
       <Box
+        className="cx-user-menu"
         display={open ? 'block' : 'none'}
         sx={{
           borderRadius: 4,
@@ -66,6 +67,7 @@ export const UserMenu = ({
         {...props}
       >
         <Box
+          className="cx-user-menu__top"
           sx={{
             backgroundColor: shadow ? 'background.background02' : '#fff',
             borderBottom: '1px solid',
@@ -74,12 +76,17 @@ export const UserMenu = ({
           }}
         >
           <Typography
+            className="cx-user-menu__top--username"
             variant="label3"
             sx={{ color: 'text.secondary', display: 'block' }}
           >
             {userName}
           </Typography>
-          <Typography variant="label4" sx={{ color: 'text.tertiary' }}>
+          <Typography
+            variant="label4"
+            sx={{ color: 'text.tertiary' }}
+            className="cx-user-menu__top--role"
+          >
             {userRole}
           </Typography>
         </Box>
