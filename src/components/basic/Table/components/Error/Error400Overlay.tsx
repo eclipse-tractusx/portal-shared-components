@@ -36,7 +36,11 @@ const flexColumn = {
   alignItems: 'center',
 }
 
-export const Error400Overlay = () => (
+export const Error400Overlay = ({
+  errorMessage4xx,
+}: {
+  errorMessage4xx?: string
+}) => (
   <Box
     sx={{
       ...flexRow,
@@ -49,13 +53,18 @@ export const Error400Overlay = () => (
     <Box
       sx={{
         ...flexColumn,
-        paddingTop: '20px',
       }}
     >
-      <Typography variant="body2">
-        Something went wrong. Please contact
-      </Typography>
-      <Typography variant="body2">your administrator</Typography>
+      {errorMessage4xx ? (
+        <Typography variant="body2">{errorMessage4xx}</Typography>
+      ) : (
+        <>
+          <Typography variant="body2">
+            Something went wrong. Please contact
+          </Typography>
+          <Typography variant="body2">your administrator</Typography>
+        </>
+      )}
     </Box>
   </Box>
 )
