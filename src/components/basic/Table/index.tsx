@@ -179,20 +179,18 @@ export const Table = ({
   const renderErrorMessage = () => {
     if (error == null) {
       return <Typography variant="body2">{noRowsMsg ?? 'No rows'}</Typography>
-    } else {
-      if (error.status >= 400 && error.status < 500) {
-        return <Error400Overlay errorMessage4xx={error.message} />
-      } else {
-        return (
-          <Error500Overlay
-            reload={() => {
-              reload?.()
-            }}
-            errorMessage5xx={error.message}
-          />
-        )
-      }
     }
+    if (error.status >= 400 && error.status < 500) {
+      return <Error400Overlay errorMessage4xx={error.message} />
+    }
+    return (
+      <Error500Overlay
+        reload={() => {
+          reload?.()
+        }}
+        errorMessage5xx={error.message}
+      />
+    )
   }
 
   const NoRowsOverlay = () => {
