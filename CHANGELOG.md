@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.26
+
+- Updated table component to support error messages
+
 ## 3.0.25
 
 - Updated images for markdown files
