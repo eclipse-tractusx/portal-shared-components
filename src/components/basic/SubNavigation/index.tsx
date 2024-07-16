@@ -41,6 +41,7 @@ export const SubNavigation = ({
 }: SubNavigationProps) => {
   return (
     <Box
+      className="cx-subnavigation"
       sx={{
         height: '116px',
         backgroundColor: theme.palette.accent.accent02,

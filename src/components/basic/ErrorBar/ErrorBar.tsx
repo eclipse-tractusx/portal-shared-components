@@ -36,15 +36,19 @@ export const ErrorBar = ({
   buttonText?: string
 }) => {
   return (
-    <Box className="errorBar">
-      <Box className="iconWithText">
-        <ReportProblemIcon className="errorIcon" />
-        <Typography variant="body2" color="#D91E18">
+    <Box className="errorBar cx-error-bar">
+      <Box className="iconWithText cx-error-bar__icon-text">
+        <ReportProblemIcon className="errorIcon cx-error-bar__icon" />
+        <Typography
+          variant="body2"
+          color="#D91E18"
+          className={'cx-error-bar__text'}
+        >
           {errorText}
         </Typography>
       </Box>
       {showButton && (
-        <Box>
+        <Box className={'cx-error-bar__button'}>
           <Button
             endIcon={<ArrowForwardIcon />}
             variant="contained"

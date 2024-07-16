@@ -75,6 +75,7 @@ export interface TableProps extends DataGridProps {
   fontSizeCell?: string
   error?: {
     status: number
+    message?: string
   }
   reload?: () => void
   autoFocus?: boolean
@@ -175,6 +176,23 @@ export const Table = ({
     }
   }
 
+  const renderErrorMessage = () => {
+    if (error == null) {
+      return <Typography variant="body2">{noRowsMsg ?? 'No rows'}</Typography>
+    }
+    if (error.status >= 400 && error.status < 500) {
+      return <Error400Overlay errorMessage4xx={error.message} />
+    }
+    return (
+      <Error500Overlay
+        reload={() => {
+          reload?.()
+        }}
+        errorMessage5xx={error.message}
+      />
+    )
+  }
+
   const NoRowsOverlay = () => {
     return (
       <Stack
@@ -183,26 +201,14 @@ export const Table = ({
         justifyContent="center"
         sx={{ backgroundColor: '#fff', pointerEvents: 'auto' }}
       >
-        {error != null && error.status === 500 && (
-          <Error500Overlay
-            reload={() => {
-              reload?.()
-            }}
-          />
-        )}
-        {error != null &&
-          (error.status === 400 ||
-            error.status === 404 ||
-            error.status === 401) && <Error400Overlay />}
-        {error == null && (
-          <Typography variant="body2">{noRowsMsg ?? 'No rows'}</Typography>
-        )}
+        {renderErrorMessage()}
       </Stack>
     )
   }
 
   return (
     <Box
+      className="cx-table"
       sx={{
         '.MuiDataGrid-columnHeaders': {
           backgroundColor: columnHeadersBackgroundColor,

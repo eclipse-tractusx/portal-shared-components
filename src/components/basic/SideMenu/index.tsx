@@ -57,6 +57,7 @@ export const SideMenu = ({
 
   return (
     <Box
+      className="cx-side-menu"
       {...props}
       sx={{
         width: '300px',
@@ -70,12 +71,16 @@ export const SideMenu = ({
       }}
     >
       {header && (
-        <Box sx={{ typography: 'label3', fontWeight: 600, marginBottom: 1.5 }}>
+        <Box
+          className="cx-side-menu__header"
+          sx={{ typography: 'label3', fontWeight: 600, marginBottom: 1.5 }}
+        >
           {header}
         </Box>
       )}
       {subHeader && (
         <Box
+          className="cx-side-menu--subheader"
           sx={{
             typography: 'label3',
             color: 'text.tertiary',
@@ -86,11 +91,16 @@ export const SideMenu = ({
           {subHeader}
         </Box>
       )}
-      <Box>
+      <Box className="cx-side-menu__instance">
         <Fade in={expanded}>
-          <Box>
-            <Collapse in={expanded} collapsedSize={0}>
+          <Box className="cx-side-menu__instance--expand">
+            <Collapse
+              in={expanded}
+              collapsedSize={0}
+              className="cx-side-menu__instance--collapse"
+            >
               <Box
+                className="cx-side-menu__instance--children"
                 sx={{
                   paddingTop: 2,
                   paddingBottom: 4,

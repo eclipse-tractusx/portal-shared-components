@@ -3,7 +3,14 @@
 ## 3.1.0
 
 - Integrate style-guide documentation into shared components and enable MDX support
--
+
+## 3.0.27
+
+- added classNames and variants names where possible for adding customization support
+
+## 3.0.26
+
+- Updated table component to support error messages
 
 ## 3.0.25
 

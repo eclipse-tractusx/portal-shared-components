@@ -27,6 +27,7 @@ interface FileIconProps {
 export const FileIcon = ({ fillColor, strokeColor, size }: FileIconProps) => {
   return (
     <svg
+      className={'cx-icon cx-icon__file'}
       stroke={strokeColor}
       fill={fillColor}
       width={size}

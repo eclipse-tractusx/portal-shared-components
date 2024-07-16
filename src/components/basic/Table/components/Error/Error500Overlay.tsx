@@ -29,7 +29,13 @@ const flexColumn = {
   alignItems: 'center',
 }
 
-export const Error500Overlay = ({ reload }: { reload: () => void }) => (
+export const Error500Overlay = ({
+  reload,
+  errorMessage5xx,
+}: {
+  reload: () => void
+  errorMessage5xx?: string
+}) => (
   <Box
     sx={{
       ...flexColumn,
@@ -42,7 +48,7 @@ export const Error500Overlay = ({ reload }: { reload: () => void }) => (
       }}
       variant="body2"
     >
-      Load Failed. Reload
+      {errorMessage5xx ?? 'Load Failed. Reload'}
     </Typography>
     <div
       onClick={reload}

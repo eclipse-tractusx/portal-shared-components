@@ -21,5 +21,5 @@
 import './CircularProgress.scss'
 
 export const CircularProgress = () => {
-  return <div className={'circularProgress'} />
+  return <div className={'cx-circular-progress circularProgress'} />
 }

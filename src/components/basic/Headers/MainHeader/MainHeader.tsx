@@ -123,6 +123,7 @@ export const MainHeader = ({
 
   return (
     <Box
+      className={'cx-main-header'}
       sx={{
         width: '100%',
         height: `${headerHeight}px`,
@@ -134,6 +135,7 @@ export const MainHeader = ({
     >
       {imagePath && (
         <Box
+          className={'cx-main-header__image'}
           sx={{
             height: '100%',
             width: '100%',
@@ -159,6 +161,7 @@ export const MainHeader = ({
       )}
 
       <Box
+        className={'cx-main-header__content'}
         sx={{
           width: '100%',
           margin: '0px',
@@ -176,7 +179,9 @@ export const MainHeader = ({
           subTitleTextVariant={subTitleTextVariant}
         />
 
-        <div className="children-header">{children}</div>
+        <div className="children-header cx-main-header__children">
+          {children}
+        </div>
       </Box>
     </Box>
   )

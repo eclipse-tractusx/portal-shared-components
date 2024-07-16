@@ -39,6 +39,7 @@ export const BaseImage = ({
 
   return (
     <Box
+      className={'cx-base-image'}
       component="img"
       sx={{
         maxWidth: '100%',

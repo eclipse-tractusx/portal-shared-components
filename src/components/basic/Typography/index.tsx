@@ -25,5 +25,9 @@ const variantMapping = {
 }
 
 export const Typography = (props: TypographyProps) => (
-  <MuiTypography variantMapping={variantMapping} {...props} />
+  <MuiTypography
+    className={'cx-typography'}
+    variantMapping={variantMapping}
+    {...props}
+  />
 )

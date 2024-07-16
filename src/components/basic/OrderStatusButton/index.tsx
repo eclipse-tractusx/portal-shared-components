@@ -61,6 +61,7 @@ export const OrderStatusButton = ({
   ) => {
     return (
       <Button
+        className="cx-order-status__button"
         key={numberLabel}
         sx={{
           width: '32%',
@@ -89,6 +90,7 @@ export const OrderStatusButton = ({
           />
         ) : (
           <Typography
+            className="cx-order-status__button-number"
             variant="label5"
             sx={{
               background: '#a2a2a2',
@@ -107,6 +109,7 @@ export const OrderStatusButton = ({
           </Typography>
         )}
         <Typography
+          className="cx-order-status__button-label"
           variant="body2"
           sx={{
             fontSize: '11px',

@@ -39,7 +39,13 @@ export const CustomAccordion = ({
       {items.map((item) => {
         item.expanded = expanded === item.id
         item.onChange = handleChange(item.id)
-        return <CustomAccordionItem {...item} key={item.id} />
+        return (
+          <CustomAccordionItem
+            className={'cx-accordion__item'}
+            {...item}
+            key={item.id}
+          />
+        )
       })}
     </>
   )

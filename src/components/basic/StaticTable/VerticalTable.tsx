@@ -60,14 +60,20 @@ export const VerticalTable = ({
     const editField = data?.edit?.[row][column]
     editField?.isValid &&
       setInputErrorMessage(
-        !editField?.isValid(value.trim()) ? editField?.errorMessage ?? '' : ''
+        !editField?.isValid(value.trim()) ? (editField?.errorMessage ?? '') : ''
       )
   }
 
   const renderInputField = (row: number, column: number) => {
     return (
-      <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-        <div style={{ width: '100%' }}>
+      <div
+        style={{ width: '100%', display: 'flex', alignItems: 'center' }}
+        className="cx-static-table__vertical--input"
+      >
+        <div
+          style={{ width: '100%' }}
+          className="cx-static-table__vertical--input-field"
+        >
           <Input
             onChange={(e) => {
               addInputValue(e.target.value, row, column)
@@ -90,12 +96,13 @@ export const VerticalTable = ({
             tooltipPlacement="bottom-start"
             tooltipText={inputErrorMessage}
           >
-            <span>
+            <span className="cx-static-table__vertical--input-tooltip">
               <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
             </span>
           </Tooltips>
         )}
         <CloseIcon
+          className="cx-static-table__vertical--input-icon"
           onClick={() => {
             setInputField(null)
           }}
@@ -109,6 +116,7 @@ export const VerticalTable = ({
 
   return (
     <table
+      className="cx-static-table__vertical"
       style={{ width: '100%', borderCollapse: 'collapse' }}
       onClick={() => {
         setInputField(null)

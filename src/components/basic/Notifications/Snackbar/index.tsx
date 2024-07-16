@@ -92,6 +92,7 @@ export const PageSnackbar = ({
 
   return (
     <Snackbar
+      className="cx-snackbar__wrapper"
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isOpen}
       key={'bottom right'}
@@ -100,7 +101,10 @@ export const PageSnackbar = ({
       onMouseEnter={cancelAutoClose}
       onMouseLeave={handleAutoClose}
       message={
-        <Box sx={{ display: 'flex', width: '100%', alignItems: 'flex-start' }}>
+        <Box
+          sx={{ display: 'flex', width: '100%', alignItems: 'flex-start' }}
+          className="cx-snackbar"
+        >
           {showIcon && (
             <Box
               sx={{
@@ -113,7 +117,10 @@ export const PageSnackbar = ({
               {renderIcon()}
             </Box>
           )}
-          <Box sx={{ flex: '1 1 auto', alignSelf: 'center' }}>
+          <Box
+            sx={{ flex: '1 1 auto', alignSelf: 'center' }}
+            className="cx-snackbar__title"
+          >
             {title && (
               <Box
                 component="span"
@@ -125,6 +132,7 @@ export const PageSnackbar = ({
             {description}
           </Box>
           <Box
+            className="cx-snackbar__icon"
             sx={{
               flex: '0 0 auto',
               marginLeft: 1.5,

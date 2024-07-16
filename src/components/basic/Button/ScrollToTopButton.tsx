@@ -31,6 +31,7 @@ export const ScrollToTopButton = ({
   const tab = useMediaQuery('(max-width:1023px)')
   return (
     <div
+      className={'cx-button cx-button__scroll-top'}
       style={{
         display: 'flex',
         justifyContent: 'flex-end',

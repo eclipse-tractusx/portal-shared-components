@@ -129,6 +129,7 @@ export const PageLoadingTable = function <Row, Args>({
   return (
     <>
       <Table
+        className="cx-table__page-loading"
         rowsCount={items.length}
         rowsCountMax={maxRows}
         hideFooter={items.length < (props.rowCount ?? 100)}
@@ -140,6 +141,7 @@ export const PageLoadingTable = function <Row, Args>({
       />
       {items.length > 0 && hasMore ? (
         <Box
+          className="cx-table__page-loading--loader"
           sx={{
             width: '100%',
             height: '100px',

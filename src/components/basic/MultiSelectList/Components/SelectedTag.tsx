@@ -49,8 +49,9 @@ export const SelectedTag = ({ title, size }: SelectedTagProps) => {
   }, [size])
 
   return (
-    <Box>
+    <Box className="cx-multi-select__selected-tags">
       <Typography
+        className="cx-multi-select__selected-tags--title"
         sx={{
           width: 'fit-content',
           padding: tagStyle.padding,

@@ -204,6 +204,7 @@ export const Card = ({
   }
   return (
     <div
+      className="cx-card__instance"
       ref={boxRef}
       style={styles}
       onMouseEnter={onMouseEnter}
@@ -240,13 +241,14 @@ export const Card = ({
           }),
           ...(onClick != null && { cursor: 'pointer' }),
         }}
-        className="card"
+        className="card cx-card"
         onMouseLeave={() => {
           setShowModal(false)
         }}
       >
         {showFavIcon && (
           <Box
+            className="cx-card__icon"
             sx={{
               padding: '10px',
             }}
@@ -259,9 +261,10 @@ export const Card = ({
             />
           </Box>
         )}
-        <Box>
+        <Box className="cx-card__top">
           {statusText && imageSize !== 'small' && (
             <Box
+              className="cx-card__top--chip"
               sx={{
                 position: 'absolute',
                 right: '0',
@@ -282,6 +285,7 @@ export const Card = ({
           />
           {subscriptionStatus && (
             <Typography
+              className="cx-card__top--status"
               variant="label4"
               sx={{
                 top: '-22px',
@@ -305,9 +309,13 @@ export const Card = ({
             </Typography>
           )}
         </Box>
-        <Box sx={{ marginBottom: '20px' }}>
+        <Box
+          sx={{ marginBottom: '20px' }}
+          className="cx-card__content--wrapper"
+        >
           {statusText && imageSize === 'small' && showStatus && (
             <Box
+              className="cx-card__content--chip"
               sx={{
                 padding: '15px',
               }}
@@ -324,6 +332,7 @@ export const Card = ({
               additionalStyles={{ marginLeft: '210px' }}
             >
               <Box
+                className="cx-card__content-icon"
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
@@ -355,6 +364,7 @@ export const Card = ({
             </Tooltips>
           )}
           <div
+            className="cx-card__content--sort-option"
             style={{
               background: '#f9f9f9',
               borderRadius: '16px',
@@ -399,6 +409,7 @@ export const Card = ({
           )}
           {showButton && showFavIcon && (
             <Box
+              className="cx-card__content--buttons"
               sx={{
                 width: '100%',
                 paddingLeft: '20px',
@@ -421,6 +432,7 @@ export const Card = ({
           )}
           {variant === 'text-only' && readMoreLink && readMoreText && (
             <Link
+              className="cx-card__content-icon"
               sx={{
                 display: 'block',
                 marginTop: '10px',

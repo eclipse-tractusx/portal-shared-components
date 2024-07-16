@@ -69,6 +69,7 @@ export const LoadMoreButton = ({
 
   return (
     <Button
+      className={`cx-button cx-button__load-more cx-color-${color && color.toLocaleLowerCase()}`}
       {...props}
       onClick={onClick}
       color="primary"

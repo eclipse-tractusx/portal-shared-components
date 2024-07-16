@@ -132,6 +132,7 @@ export const CarouselBox = ({
 
   return (
     <Box
+      className={'cx-carousel cx-carousel__box'}
       sx={{
         backgroundColor,
         border: hasBorder ? `1px solid ${theme.palette.border.border02}` : '',
