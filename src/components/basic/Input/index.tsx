@@ -46,8 +46,9 @@ export const Input = ({
   ...props
 }: InputProps) => {
   return (
-    <Box>
+    <Box className="cx-input">
       <FormControl
+        className="cx-form-control"
         sx={{
           width: '100%',
         }}
@@ -61,6 +62,7 @@ export const Input = ({
           }}
         >
           <InputLabel
+            className="cx-form-control__label"
             sx={{
               marginRight: '10px',
             }}
@@ -76,13 +78,14 @@ export const Input = ({
               tooltipPlacement="top-start"
               tooltipText={tooltipMessage}
             >
-              <span>
+              <span className="cx-form-control__tooltip">
                 <HelpOutlineIcon sx={{ color: '#B6B6B6' }} fontSize={'small'} />
               </span>
             </Tooltips>
           )}
         </Box>
         <TextField
+          className="cx-form-control__textfield"
           variant={variant}
           placeholder={placeholder}
           error={error}
@@ -90,8 +93,14 @@ export const Input = ({
             error
               ? {
                   endAdornment: (
-                    <InputAdornment position="end">
-                      <ErrorOutline color="error" />
+                    <InputAdornment
+                      position="end"
+                      className="cx-form-control__input-adornment"
+                    >
+                      <ErrorOutline
+                        color="error"
+                        className="cx-form-control__input-adornment--error"
+                      />
                     </InputAdornment>
                   ),
                 }
@@ -100,7 +109,10 @@ export const Input = ({
           {...props}
         />
         {error && helperText && (
-          <FormHelperText sx={{ marginLeft: 0, marginBottom: '-23px' }}>
+          <FormHelperText
+            sx={{ marginLeft: 0, marginBottom: '-23px' }}
+            className="cx-form-control__helper-text"
+          >
             {helperText}
           </FormHelperText>
         )}

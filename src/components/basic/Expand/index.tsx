@@ -38,11 +38,13 @@ export const Expand = ({
   return (
     <>
       <Typography
+        className={'cx-expand__text'}
         variant="caption3"
         sx={{ display: 'flex', color: open ? '#0F71CB' : '' }}
       >
         {open ? (
           <KeyboardArrowUpIcon
+            className={'cx-expand__arrow-up'}
             onClick={() => {
               setOpen(!open)
             }}
@@ -50,6 +52,7 @@ export const Expand = ({
           />
         ) : (
           <KeyboardArrowDownIcon
+            className={'cx-expand__arrow-down'}
             onClick={() => {
               setOpen(!open)
             }}
@@ -58,7 +61,7 @@ export const Expand = ({
         )}
         {open ? expandedLabel : label}
       </Typography>
-      <div style={{ width: '100%' }}>
+      <div style={{ width: '100%' }} className={'cx-expand__text'}>
         <Collapse in={open}>
           <Typography variant="caption3">{text}</Typography>
         </Collapse>

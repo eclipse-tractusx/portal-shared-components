@@ -101,7 +101,10 @@ export const Datepicker = ({
     const isBold = today ? '500' : '400'
 
     return (
-      <Box key={uniqueId('pickers-day')}>
+      <Box
+        key={uniqueId('pickers-day')}
+        className={'cx-date-picker__picker-day'}
+      >
         {day ? (
           <Button
             sx={{
@@ -134,6 +137,7 @@ export const Datepicker = ({
   }
   return (
     <Box
+      className={'cx-date-picker__wrapper'}
       sx={{
         button: {
           color: iconColor,
@@ -148,7 +152,7 @@ export const Datepicker = ({
         adapterLocale={localeMap[locale]}
       >
         <DatePicker
-          className="date-picker"
+          className="date-picker cx-date-picker"
           value={value}
           open={open}
           disabled={disabled}

@@ -63,21 +63,22 @@ export const StepperItem = ({
   }, [index, activeStep])
 
   return (
-    <Box className="stepperStep">
+    <Box className="stepperStep cx-stepper__item">
       <Box
-        className="stepHead"
+        className="stepHead cx-stepper__item--head"
         sx={{
           borderBottom: `2px solid ${backgroundColor}`,
         }}
       >
-        <Box className="hintStepMain">
+        <Box className="hintStepMain cx-stepper__item--hint">
           <Box
-            className="stepIcon"
+            className="stepIcon cx-stepper__item--hint-icon"
             sx={{
               margin: '12px 0 16px 0',
             }}
           >
             <Typography
+              className="cx-stepper__item--hint-text"
               variant="body1"
               fontSize="14px"
               color="#fff"
@@ -97,6 +98,7 @@ export const StepperItem = ({
               {done &&
                 (text || (
                   <svg
+                    className="stepIcon cx-stepper__item--hint-icon done"
                     width="14"
                     height="13"
                     viewBox="0 0 14 13"
@@ -114,9 +116,10 @@ export const StepperItem = ({
               {!done && step}
             </Typography>
           </Box>
-          <Box className="hintStepMobile">
+          <Box className="hintStepMobile cx-stepper__item-mobile">
             {index === activeStep && (
               <Link
+                className="cx-stepper__item-mobile--hint"
                 href={tooltipLink}
                 target="_blank"
                 sx={{
@@ -127,6 +130,7 @@ export const StepperItem = ({
                 }}
               >
                 <Typography
+                  className="cx-stepper__item-mobile--hint-helptext"
                   variant="label3"
                   fontSize="12px"
                   sx={{
@@ -141,8 +145,9 @@ export const StepperItem = ({
           </Box>
         </Box>
 
-        <Box className="stepHeadline">
+        <Box className="stepHeadline cx-stepper__item--headline">
           <Typography
+            className="stepHeadline cx-stepper__item--headline--text"
             variant="label3"
             fontSize="14px"
             fontWeight="500"

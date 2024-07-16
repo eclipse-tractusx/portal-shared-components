@@ -58,6 +58,7 @@ export const CardDecision = ({
 
   return (
     <Box
+      className="cx-card__decision"
       sx={{
         display: 'flex',
         msFlexWrap: 'wrap',
@@ -72,6 +73,7 @@ export const CardDecision = ({
         const name = item.title ?? item.name ?? ''
         return (
           <Box
+            className="cx-card__decision--item"
             key={id}
             sx={{
               paddingRight: '10px',
@@ -82,6 +84,7 @@ export const CardDecision = ({
             }}
           >
             <Box
+              className="cx-card__decision--button"
               sx={{
                 boxSizing: 'border-box',
                 display: 'flex',
@@ -106,6 +109,7 @@ export const CardDecision = ({
               }}
             >
               <Typography
+                className="cx-card__decision--title"
                 variant="h5"
                 sx={{
                   height: '48px',
@@ -118,6 +122,7 @@ export const CardDecision = ({
                 {name}
               </Typography>
               <Typography
+                className="cx-card__decision--provider"
                 variant="label2"
                 sx={{
                   color: '#999999',
@@ -126,12 +131,16 @@ export const CardDecision = ({
               >
                 {item.provider}
               </Typography>
-              <Box sx={{ marginBottom: '10px' }}>
+              <Box
+                sx={{ marginBottom: '10px' }}
+                className="cx-card__decision--chip"
+              >
                 <CardChip status={item.status} statusText={item.status} />
               </Box>
               {(item.status?.toLowerCase() as StatusVariants) !==
                 StatusVariants.active && (
                 <Box
+                  className="cx-card__decision--status"
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -139,6 +148,7 @@ export const CardDecision = ({
                   }}
                 >
                   <IconButton
+                    className="cx-card__decision--icon"
                     sx={{
                       padding: '5px',
                       border: '1px solid #00AA55',
@@ -155,6 +165,7 @@ export const CardDecision = ({
                     <ApprovalIcon sx={{ color: '#00AA55' }} />
                   </IconButton>
                   <IconButton
+                    className="cx-card__decision--icon-button"
                     sx={{
                       padding: '5px',
                       border: '1px solid #D91E18',

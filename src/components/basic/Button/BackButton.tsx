@@ -36,6 +36,7 @@ export const BackButton = ({
     <>
       {backButtonLabel && (
         <Button
+          className={`cx-button cx-button__back cx-variant-${backButtonVariant && backButtonVariant?.toLocaleLowerCase()}`}
           onClick={onBackButtonClick}
           color="secondary"
           variant={backButtonVariant}

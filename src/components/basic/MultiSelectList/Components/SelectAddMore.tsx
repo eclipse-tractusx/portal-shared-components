@@ -48,7 +48,7 @@ export const SelectAddMore = ({
 }: SelectAddMoreProps) => {
   const marginTop = margin === 'normal' ? '16px' : '8px'
   return (
-    <Box>
+    <Box className="cx-multi-select__add-more">
       <Typography
         variant="label3"
         fontSize="14px"
@@ -56,6 +56,7 @@ export const SelectAddMore = ({
         sx={{
           marginBottom: '10px',
         }}
+        className="cx-multi-select__label"
       >
         {label}
       </Typography>
@@ -67,6 +68,7 @@ export const SelectAddMore = ({
         }}
       >
         <Box
+          className="cx-multi-select__tags"
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -84,6 +86,7 @@ export const SelectAddMore = ({
             ))
           ) : (
             <Typography
+              className="cx-multi-select__no-item"
               variant="body1"
               fontSize="18px"
               sx={{
@@ -96,8 +99,12 @@ export const SelectAddMore = ({
             </Typography>
           )}
         </Box>
-        <Box sx={{ height: '40px', width: '20%' }}>
+        <Box
+          sx={{ height: '40px', width: '20%' }}
+          className="cx-multi-select__buttons"
+        >
           <Button
+            className="cx-multi-select__button"
             sx={{ width: 'fit-content', float: 'right' }}
             size={tagSize}
             color="secondary"

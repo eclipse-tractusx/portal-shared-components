@@ -41,6 +41,7 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
   const renderCopy = (copyData: { icon: boolean; copyValue?: string }) => {
     return (
       <Box
+        className="cx-static-table__horizontal"
         sx={{
           cursor: 'pointer',
           display: 'inline-flex',
@@ -56,6 +57,7 @@ export const HorizontalTable = ({ data }: { data: TableType }) => {
         }}
       >
         <ContentCopyIcon
+          className="cx-static-table__horizontal--icon"
           sx={{
             fontSize: '18px',
             marginLeft: '10px',

@@ -51,6 +51,7 @@ export const ErrorPage = ({
   const height = hasNavigation ? 'calc(100vh - 85px)' : '100vh'
   return (
     <Box
+      className={'cx-error-page'}
       sx={{
         width: '100%',
         height,
@@ -58,6 +59,7 @@ export const ErrorPage = ({
       }}
     >
       <Box
+        className={'cx-error-page__image-wrap'}
         sx={{
           position: 'absolute',
           top: '50%',
@@ -73,10 +75,11 @@ export const ErrorPage = ({
           sx={{
             minWidth: '400px',
           }}
+          className={'cx-error-page__image'}
         >
           <ErrorImage variant={color} />
         </Box>
-        <Box>
+        <Box className={'cx-error-page__content'}>
           <ErrorDescription
             header={header}
             title={title}

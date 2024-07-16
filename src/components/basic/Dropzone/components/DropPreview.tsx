@@ -128,13 +128,13 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
         deleteOverlay={deleteStatus.state}
         deleteOverlayTranslation={deleteOverlayTranslation}
       />
-      <Box sx={{ marginTop: 4 }}>
+      <Box sx={{ marginTop: 4 }} className={'cx-drop__preview'}>
         <DropStatusHeaderComponent
           numUploaded={uploadedFilesCount}
           numTotal={filesCount}
         />
         {finishedFilesCount > 0 && (
-          <Box sx={{ marginTop: 4 }}>
+          <Box sx={{ marginTop: 4 }} className={'cx-drop__count'}>
             {uploadFiles
               .filter((file) => isFinished(file))
               .map((file, index) => (
@@ -154,7 +154,7 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
           </Box>
         )}
         {filesCount - finishedFilesCount > 0 && (
-          <Box sx={{ marginTop: 4 }}>
+          <Box sx={{ marginTop: 4 }} className={'cx-drop__count-finished'}>
             {uploadFiles
               .filter((file) => !isFinished(file))
               .map((file, index) => (

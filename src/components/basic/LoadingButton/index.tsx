@@ -68,10 +68,11 @@ export const LoadingButton = ({
   }, [size])
 
   return (
-    <Box>
+    <Box className="cx-loading-button__wrapper">
       {!loading ? (
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <Button
+            className="cx-loading-button"
             size={size}
             color={color}
             onClick={handleClick}
@@ -82,6 +83,7 @@ export const LoadingButton = ({
           </Button>
           {helperText && (
             <Typography
+              className="cx-loading-button__text"
               variant="label2"
               sx={{
                 padding: tagStyle.padding,
@@ -98,6 +100,7 @@ export const LoadingButton = ({
         </Box>
       ) : (
         <Button
+          className="cx-loading-button"
           size={size}
           color={color}
           startIcon={

@@ -37,10 +37,16 @@ export const Checkbox = ({
 }: CheckboxProps) => {
   return label ? (
     <FormControlLabel
+      className={'cx-form-control__label'}
       control={<MuiCheckbox size={size} {...props} {...ariaLabel} />}
       label={label}
     />
   ) : (
-    <MuiCheckbox size={size} {...props} {...ariaLabel} />
+    <MuiCheckbox
+      size={size}
+      {...props}
+      {...ariaLabel}
+      className={'cx-checkbox'}
+    />
   )
 }

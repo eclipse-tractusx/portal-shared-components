@@ -44,9 +44,10 @@ export const LanguageSwitch = ({
   }
 
   return (
-    <Box sx={{ padding: spacing(2, 3) }}>
+    <Box sx={{ padding: spacing(2, 3) }} className="cx-language-switcher">
       {languages?.map(({ key, name }) => (
         <Link
+          className="cx-language-switcher--link"
           href={`?language=${key}`}
           onClick={(e) => {
             onClick(e, key)

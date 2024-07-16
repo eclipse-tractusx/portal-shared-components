@@ -41,6 +41,7 @@ export const CategoryDivider = ({
 }: CategoryDividerProps) => {
   return (
     <Box
+      className={'cx-category-divider'}
       sx={{
         alignItems: 'center',
         display: 'flex',
@@ -52,16 +53,25 @@ export const CategoryDivider = ({
       }}
     >
       <Box
+        className={'cx-category-divider__content'}
         sx={{
           paddingRight: '15px',
           whiteSpace: 'nowrap',
         }}
       >
-        <Typography sx={{ color: 'text.tertiary' }} variant="body2">
-          {categoryName} ({categoryItemsLength})
+        <Typography
+          className={'cx-category-divider__text'}
+          sx={{ color: 'text.tertiary' }}
+          variant="body2"
+        >
+          {categoryName}{' '}
+          <span className={'cx-category-divider__count'}>
+            ({categoryItemsLength})
+          </span>
         </Typography>
       </Box>
       <Divider
+        className={'cx-category-divider__border'}
         sx={{
           borderColor: 'border.border01',
           flexShrink: 'unset',
@@ -70,6 +80,7 @@ export const CategoryDivider = ({
       />
       <Box sx={{ paddingLeft: '15px' }}>
         <Button
+          className={'cx-button cx-category-divider__button'}
           color="secondary"
           disabled={disabled}
           variant="contained"

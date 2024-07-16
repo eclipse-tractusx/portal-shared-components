@@ -165,6 +165,7 @@ export const Carousel = ({
 
   return (
     <Box
+      className={'cx-carousel'}
       sx={{
         width: 'max-content',
         maxWidth: `${responsiveWidth}px`,
@@ -224,13 +225,20 @@ export const Carousel = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <Slider {...settings}>
+      <Slider {...settings} className={'cx-carousel__slider'}>
         {Children.map(arrayChildren, (child) => {
           return (
-            <div key={uniqueId('cax-carousel')}>
-              <Box sx={{ display: 'flex' }}>
-                <Box sx={{ width: slidsInnerGap }}></Box>
+            <div
+              key={uniqueId('cax-carousel')}
+              className={`cx-carousel__slider ${uniqueId('cax-carousel')}`}
+            >
+              <Box sx={{ display: 'flex' }} className={'cx-carousel__wrapper'}>
                 <Box
+                  className={'cx-carousel__gap'}
+                  sx={{ width: slidsInnerGap }}
+                ></Box>
+                <Box
+                  className={'cx-carousel__item'}
                   sx={{
                     width: `${itemWidth}px`,
                     height: itemHeight ? `${itemHeight}px` : '100%',
@@ -240,7 +248,10 @@ export const Carousel = ({
                 >
                   {child}
                 </Box>
-                <Box sx={{ width: slidsInnerGap }}></Box>
+                <Box
+                  className={'cx-carousel__gap'}
+                  sx={{ width: slidsInnerGap }}
+                ></Box>
               </Box>
             </div>
           )

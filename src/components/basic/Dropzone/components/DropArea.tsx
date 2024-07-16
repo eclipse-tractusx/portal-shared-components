@@ -77,6 +77,7 @@ export const DropArea: FunctionComponent<DropAreaProps> = ({
   return (
     <Fragment>
       <Box
+        className={'cx-drop__area'}
         onDragEnter={() => {
           !disabled && setDragging(true)
         }}

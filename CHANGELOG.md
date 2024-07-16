@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.27
+
+- added classNames and variants names where possible for adding customization support
+
 ## 3.0.26
 
 - Updated table component to support error messages

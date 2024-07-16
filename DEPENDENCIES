@@ -196,6 +196,7 @@ npm/npmjs/-/es-errors/1.3.0, MIT, approved, #13162
 npm/npmjs/-/es-get-iterator/1.1.3, MIT, approved, clearlydefined
 npm/npmjs/-/es-iterator-helpers/1.0.18, MIT, approved, #13907
 npm/npmjs/-/es-module-lexer/0.9.3, MIT, approved, #1206
+npm/npmjs/-/es-module-lexer/1.5.4, MIT, approved, clearlydefined
 npm/npmjs/-/es-object-atoms/1.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/es-set-tostringtag/2.0.3, MIT, approved, #6218
 npm/npmjs/-/es-shim-unscopables/1.0.2, MIT, approved, clearlydefined
@@ -242,6 +243,7 @@ npm/npmjs/-/execa/8.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/exit/0.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/expect/29.7.0, MIT, approved, clearlydefined
 npm/npmjs/-/express/4.19.1, MIT, approved, clearlydefined
+npm/npmjs/-/express/4.19.2, MIT, approved, clearlydefined
 npm/npmjs/-/fast-deep-equal/3.1.3, MIT, approved, clearlydefined
 npm/npmjs/-/fast-glob/3.3.2, MIT, approved, #9307
 npm/npmjs/-/fast-json-stable-stringify/2.1.0, MIT, approved, clearlydefined
@@ -1112,6 +1114,7 @@ npm/npmjs/@storybook/addon-viewport/8.0.4, MIT, approved, #14040
 npm/npmjs/@storybook/blocks/8.0.4, MIT, approved, #14039
 npm/npmjs/@storybook/builder-manager/8.0.4, MIT, approved, #14042
 npm/npmjs/@storybook/builder-vite/8.0.4, MIT, approved, #14038
+npm/npmjs/@storybook/builder-vite/8.2.2, MIT, approved, clearlydefined
 npm/npmjs/@storybook/channels/8.0.4, MIT, approved, #14041
 npm/npmjs/@storybook/cli/8.0.4, MIT, approved, #14045
 npm/npmjs/@storybook/client-logger/8.0.4, MIT, approved, #14046
@@ -1121,6 +1124,7 @@ npm/npmjs/@storybook/core-common/8.0.4, MIT, approved, #14044
 npm/npmjs/@storybook/core-events/8.0.4, MIT, approved, #14050
 npm/npmjs/@storybook/core-server/8.0.4, MIT, approved, #14052
 npm/npmjs/@storybook/csf-plugin/8.0.4, MIT, approved, #14049
+npm/npmjs/@storybook/csf-plugin/8.2.2, MIT, approved, clearlydefined
 npm/npmjs/@storybook/csf-tools/8.0.4, MIT, approved, #14048
 npm/npmjs/@storybook/csf/0.0.1, MIT, approved, clearlydefined
 npm/npmjs/@storybook/csf/0.1.5, MIT, approved, #8941

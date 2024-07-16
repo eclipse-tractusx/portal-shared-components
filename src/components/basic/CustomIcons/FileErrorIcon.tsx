@@ -26,6 +26,7 @@ interface FileIconProps {
 export const FileErrorIcon = ({ fillColor, size }: FileIconProps) => {
   return (
     <svg
+      className={'cx-icon cx-icon__file-error'}
       width={size}
       height={size}
       viewBox="0 0 58 60"

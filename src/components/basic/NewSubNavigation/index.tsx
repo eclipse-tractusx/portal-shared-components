@@ -54,21 +54,23 @@ export const NewSubNavigation = ({
   const [highlight, setHighlight] = useState('')
   return (
     <Box
+      className="cx-new-subnavigation"
       onMouseOver={() => {
         setShow(true)
       }}
     >
       {navigationArray?.length > 0 && (
         <Box
-          className="navigationParentContainer"
+          className="cx-new-subnavigation__parent navigationParentContainer"
           onMouseLeave={() => {
             setShow(false)
           }}
         >
-          <Box className="navigationContainer">
-            <Box className="navigationOverlayContainer">
+          <Box className="cx-new-subnavigation__instance navigationContainer">
+            <Box className="cx-new-subnavigation__instance--container navigationOverlayContainer">
               <MoreVertIcon />
               <Typography
+                className="cx-new-subnavigation__instance--header"
                 variant="h4"
                 sx={{
                   marginLeft: '10px',
@@ -80,7 +82,7 @@ export const NewSubNavigation = ({
                 {header}
               </Typography>
               {show && (
-                <Box className="navigationOverlay">
+                <Box className="navigationOverlay cx-new-subnavigation__overlay">
                   {navigationArray?.map((link: NavigationItem) => {
                     return (
                       <Box
@@ -92,7 +94,7 @@ export const NewSubNavigation = ({
                             setHeader(link.title)
                           }
                         }}
-                        className="navigationOverlayItem"
+                        className="navigationOverlayItem cx-new-subnavigation__overlay-item"
                         onMouseOut={() => {
                           setHighlight(link.title)
                         }}
@@ -117,6 +119,7 @@ export const NewSubNavigation = ({
                           }}
                         />
                         <Typography
+                          className="cx-new-subnavigation__overlay--link-title"
                           variant="h4"
                           sx={{
                             color:
@@ -167,6 +170,7 @@ export const NewSubNavigation = ({
             </Box>
             {buttonArray?.length === 1 && (
               <Button
+                className="cx-new-subnavigation__instance--btn"
                 onClick={(e) => {
                   buttonArray[0].onButtonClick(e)
                   setShow(!show)

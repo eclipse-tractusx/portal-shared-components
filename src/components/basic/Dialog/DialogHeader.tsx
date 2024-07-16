@@ -56,18 +56,20 @@ export const DialogHeader = ({
         padding: spacing(7, CONTENT_SPACING_RIGHT_LEFT),
         textAlign: 'center',
       }}
-      className="dialog-header-main"
+      className="dialog-header-main cx-dialog__header"
     >
       {title && (
         <MuiDialogTitle
+          className={'cx-dialog__title'}
           sx={{
             fontSize: '24px',
           }}
         >
-          {icon && <Box>{iconComponent}</Box>}
+          {icon && <Box className={'cx-dialog__icon'}>{iconComponent}</Box>}
           {title}
           {closeWithIcon && (
             <IconButton
+              className={'cx-dialog__icon-close'}
               aria-label="close"
               onClick={onCloseWithIcon}
               sx={{
@@ -83,11 +85,15 @@ export const DialogHeader = ({
         </MuiDialogTitle>
       )}
       {intro && (
-        <Typography variant="h4" sx={{ marginTop: 1 }}>
+        <Typography
+          variant="h4"
+          sx={{ marginTop: 1 }}
+          className={'cx-dialog__intro'}
+        >
           {intro}
         </Typography>
       )}
-      {children}
+      <div className={'cx-dialog__children'}>{children}</div>
     </Box>
   )
 }

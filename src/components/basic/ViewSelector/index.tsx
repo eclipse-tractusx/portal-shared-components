@@ -40,9 +40,10 @@ export const ViewSelector = ({
   align = 'right',
 }: ViewSelectorProps) => {
   return (
-    <Box sx={{ textAlign: align }}>
+    <Box sx={{ textAlign: align }} className="cx-view-selector">
       {views?.map(({ buttonText, buttonValue, onButtonClick }) => (
         <Button
+          className="cx-view-selector__button"
           color={'secondary'}
           variant={
             activeView &&

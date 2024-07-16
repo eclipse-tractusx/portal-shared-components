@@ -31,6 +31,7 @@ export const SubNavigationLink = ({
 }: SubNavigationProps) => {
   return (
     <Box
+      className="cx-subnavigation__link"
       sx={{
         display: 'flex',
         height: 'fit-content',
@@ -38,7 +39,10 @@ export const SubNavigationLink = ({
         margin: '32px 0px',
       }}
     >
-      <Box sx={{ width: '50%' }}>
+      <Box
+        sx={{ width: '50%' }}
+        className="cx-subnavigation__link--button cx-subnavigation__link--button-1"
+      >
         {link1Label && onLink1Click != null && (
           <Button
             onClick={onLink1Click}
@@ -56,7 +60,10 @@ export const SubNavigationLink = ({
         )}
       </Box>
 
-      <Box sx={{ width: '50%' }}>
+      <Box
+        sx={{ width: '50%' }}
+        className="cx-subnavigation__link--button cx-subnavigation__link--button-2"
+      >
         {link2Label && onLink2Click != null && (
           <Button
             onClick={onLink2Click}

@@ -41,6 +41,7 @@ export const CardButtons = ({
 }: CardButtonsProps) => {
   return (
     <Box
+      className="cx-card__content--buttons"
       sx={{
         display: 'flex',
         justifyContent: 'space-between',

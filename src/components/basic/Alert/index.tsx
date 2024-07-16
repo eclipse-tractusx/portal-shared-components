@@ -28,6 +28,7 @@ interface AlertProps {
 
 export const Alert = ({ severity = 'info', children, width }: AlertProps) => (
   <MuiAlert
+    className={`cx-mui-alert cx-${severity.toLocaleLowerCase()}`}
     sx={{
       width: width ? `${width}!important` : '45%',
     }}

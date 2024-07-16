@@ -41,17 +41,20 @@ export const DialogActions = ({
         padding: spacing(4, CONTENT_SPACING_RIGHT_LEFT),
         backgroundColor: 'background.background09',
       }}
-      className="actions-main"
+      className="actions-main cx-dialog__actions"
     >
       {helperText && (
         <Box
           sx={{ paddingBottom: 4, typography: 'body3', textAlign: 'center' }}
-          className="helper-text"
+          className="helper-text cx-helper-text"
         >
           {helperText}
         </Box>
       )}
-      <MuiDialogActions {...props} className="dialog-action-button">
+      <MuiDialogActions
+        {...props}
+        className="dialog-action-button cx-dialog__actions-buttons"
+      >
         {children}
       </MuiDialogActions>
     </Box>

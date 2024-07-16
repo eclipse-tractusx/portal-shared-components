@@ -50,12 +50,13 @@ export const NavItem = ({
 
   return (
     <Box
+      className="cx-navigation-item"
       sx={{ position: 'relative' }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <Link
-        className={classNames({ active: isActive })}
+        className={`cx-navigation-item__link ${classNames({ active: isActive })}`}
         component={component}
         sx={{
           display: 'block',
@@ -82,6 +83,7 @@ export const NavItem = ({
       </Link>
       {children != null && open && (
         <Menu
+          className="cx-navigation-item__menu"
           items={children}
           component={component}
           sx={{

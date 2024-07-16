@@ -50,6 +50,7 @@ export const CustomAccordionItem = ({
   const onChange = { ...props }.onChange
   return (
     <Accordion
+      className={'cx-accordion'}
       expanded={expanded}
       {...props}
       elevation={0}
@@ -61,6 +62,7 @@ export const CustomAccordionItem = ({
       }}
     >
       <AccordionSummary
+        className={'cx-accordion__summary'}
         aria-controls={`${id}-content`}
         id={`${id}-header`}
         expandIcon={<ExpandMoreIcon />}
@@ -79,19 +81,29 @@ export const CustomAccordionItem = ({
           <Box sx={{ marginRight: '10px', color: 'action.active' }}>{icon}</Box>
         )}
         {titleElement}
-        <Typography variant="label1">{title}</Typography>
+        <Typography variant="label1" className={'cx-accordion__title'}>
+          {title}
+        </Typography>
       </AccordionSummary>
-      <AccordionDetails sx={{ mb: '20px', bgcolor: color }}>
+      <AccordionDetails
+        className={'cx-accordion__details'}
+        sx={{ mb: '20px', bgcolor: color }}
+      >
         {children}
       </AccordionDetails>
       {buttonText && (
         <AccordionActions
+          className={'cx-accordion__actions'}
           onClick={(e) => {
             onChange?.(e, false)
           }}
           sx={{ justifyContent: 'center', mb: '20px' }}
         >
-          <Button variant="contained" size="small">
+          <Button
+            variant="contained"
+            size="small"
+            className={'cx-button cx-accordion__button'}
+          >
             {buttonText}
           </Button>
         </AccordionActions>

@@ -31,6 +31,7 @@ export const DialogContent = (props: DialogContentProps) => {
 
   return (
     <MuiDialogContent
+      className={'cx-dialog__content'}
       sx={{
         fontFamily: 'fontFamily',
         padding: spacing(0, CONTENT_SPACING_RIGHT_LEFT, 4),

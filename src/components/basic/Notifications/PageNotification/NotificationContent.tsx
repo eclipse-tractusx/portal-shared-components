@@ -35,7 +35,7 @@ export const NotificationContent = ({
   titleColor,
 }: NotificationContentProps) => {
   return (
-    <Box>
+    <Box className="cx-page-notification__content">
       {title && (
         <span
           style={{
