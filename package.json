@@ -22,7 +22,7 @@
       "eslint --quiet --fix",
       "prettier --write --ignore-unknown"
     ],
-    "*.{json,css,sass,scss,xml,yml,yaml,md,mdx}": [
+    "*.{json,css,sass,scss,xml,yml,yaml,md}": [
       "prettier --write --ignore-unknown"
     ],
     "*.test.{js,jsx,ts,tsx}": [
@@ -102,8 +102,8 @@
   "scripts": {
     "build": "tsc --p ./tsconfig-build.json && vite build",
     "lint": "eslint . --ext ts,tsx,js,jsx --report-unused-disable-directives --max-warnings 0",
-    "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,yml,yaml,md,mdx}\"",
-    "pretty:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,yml,yaml,md,mdx}\"",
+    "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,yml,yaml,md}\"",
+    "pretty:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,yml,yaml,md}\"",
     "test": "jest",
     "test:ci": "CI=true jest",
     "start": "yarn start:storybook",
