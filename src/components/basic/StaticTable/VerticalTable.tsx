@@ -60,7 +60,7 @@ export const VerticalTable = ({
     const editField = data?.edit?.[row][column]
     editField?.isValid &&
       setInputErrorMessage(
-        !editField?.isValid(value.trim()) ? editField?.errorMessage ?? '' : ''
+        !editField?.isValid(value.trim()) ? (editField?.errorMessage ?? '') : ''
       )
   }
 

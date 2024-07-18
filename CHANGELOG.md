@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.0
+
+- Integrate style-guide documentation into shared components and enable MDX support
+
 ## 3.0.27
 
 - added classNames and variants names where possible for adding customization support

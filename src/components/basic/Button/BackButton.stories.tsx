@@ -21,7 +21,6 @@
 import { ComponentStory } from '@storybook/react'
 
 import { BackButton as Component } from './BackButton'
-import button from '../../../../docs/storybook/button.md?raw'
 
 export default {
   title: 'Buttons',
@@ -30,11 +29,6 @@ export default {
   argTypes: {
     onBackButtonClick: {
       action: 'onClick',
-    },
-  },
-  parameters: {
-    docs: {
-      description: { component: button },
     },
   },
 }

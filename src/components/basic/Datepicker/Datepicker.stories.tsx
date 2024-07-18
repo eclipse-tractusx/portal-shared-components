@@ -22,18 +22,12 @@ import { ComponentStory } from '@storybook/react'
 import { Box } from '@mui/material'
 
 import { Datepicker as Component } from '.'
-import datepicker from '../../../../docs/storybook/datepicker.md?raw'
 
 export default {
   title: 'Datepicker',
   component: Component,
   tags: ['autodocs'],
   argTypes: {},
-  parameters: {
-    docs: {
-      description: { component: datepicker },
-    },
-  },
 }
 
 const Template: ComponentStory<typeof Component> = (args: any) => (
