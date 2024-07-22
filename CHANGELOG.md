@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.28
+
+- updated unrestricted packages suggested by dependabot
+
 ## 3.0.27
 
 - added classNames and variants names where possible for adding customization support
