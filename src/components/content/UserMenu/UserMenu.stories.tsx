@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { UserMenu as Component } from '.'
 import { LanguageSwitch } from '../../basic/LanguageSwitch'
@@ -30,7 +30,9 @@ export default {
   tags: ['autodocs'],
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => (
   <Component {...args}>
     <UserNav
       divider

@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { LinearProgressWithValueLabel as Component } from './LinearProgressWithValueLabel'
 import spinner from '../../../../../docs/storybook/spinner.md?raw'
@@ -34,9 +34,9 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const LinearProgressWithValueLabel = Template.bind({})
 LinearProgressWithValueLabel.args = {

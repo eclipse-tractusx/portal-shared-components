@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { Chip as Component } from '.'
 
 export default {
@@ -29,9 +29,9 @@ export default {
   parameters: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const Chip = Template.bind({})
 Chip.args = {
@@ -39,7 +39,11 @@ Chip.args = {
   variant: 'filled',
   label: 'decline',
   type: 'decline',
-  onClick: () => console.log('Decline clicked'),
+  onClick: () => {
+    console.log('Decline clicked')
+  },
   withIcon: true,
-  handleDelete: () => console.log('onDelete clicked'),
+  handleDelete: () => {
+    console.log('onDelete clicked')
+  },
 }

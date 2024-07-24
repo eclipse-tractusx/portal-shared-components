@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { SelectList as Component } from '.'
 
@@ -62,9 +62,9 @@ const countries = [
   },
 ]
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const SelectList = Template.bind({})
 SelectList.args = {
@@ -81,6 +81,8 @@ SelectList.args = {
   noOptionsText: 'No Options',
   popperHeight: 0, // 0 = auto size
   defaultValue: countries[0],
-  onChangeItem: (item: any) => console.log('selected:', item),
+  onChangeItem: (item) => {
+    console.log('selected:', item)
+  },
   keyTitle: 'title',
 }

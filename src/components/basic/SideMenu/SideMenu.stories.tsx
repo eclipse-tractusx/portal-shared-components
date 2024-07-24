@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { SideMenu as Component } from '.'
 import { DraggableChip } from '../Chip/DraggableChip'
@@ -37,9 +37,9 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const SideMenu = Template.bind({})
 SideMenu.args = {

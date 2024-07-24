@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { Cards as Component } from '.'
 
@@ -29,9 +29,9 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 const items = [
   {
@@ -129,14 +129,14 @@ const inactiveSubmenuOptions = [
 export const MarketplaceCard = Template.bind({})
 MarketplaceCard.args = {
   columns: 6,
-  items: items,
   variant: 'compact',
   buttonText: 'Details',
   imageSize: 'medium',
   imageShape: 'round',
   addButtonClicked: false,
   subMenu: true,
-  activeSubmenuOptions: activeSubmenuOptions,
-  inactiveSubmenuOptions: inactiveSubmenuOptions,
   tooltipText: 'Action is pending',
+  activeSubmenuOptions,
+  inactiveSubmenuOptions,
+  items,
 }

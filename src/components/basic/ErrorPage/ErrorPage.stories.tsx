@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { ErrorPage as Component } from '.'
 
@@ -29,9 +29,9 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const ErrorPage = Template.bind({})
 ErrorPage.args = {
@@ -43,7 +43,11 @@ ErrorPage.args = {
   additionalDescription: 'Please contact your admin.',
   reloadButtonTitle: 'Reload Page',
   homeButtonTitle: 'Homepage',
-  onReloadClick: () => console.log('reload'),
-  onHomeClick: () => console.log('home page'),
+  onReloadClick: () => {
+    console.log('reload')
+  },
+  onHomeClick: () => {
+    console.log('home page')
+  },
   color: 'gray',
 }

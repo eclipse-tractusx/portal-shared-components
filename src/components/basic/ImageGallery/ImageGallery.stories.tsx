@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { ImageGallery as Component } from '.'
 
@@ -28,9 +28,9 @@ export default {
   tags: ['autodocs'],
 }
 
-const Template: ComponentStory<typeof Component> = (args) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const GridMediumSquareGallery = Template.bind({})
 GridMediumSquareGallery.args = {
