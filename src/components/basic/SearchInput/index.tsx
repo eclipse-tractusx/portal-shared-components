@@ -18,10 +18,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { useCallback, useEffect, useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search'
 import {
   Box,
-  type IconProps,
+  debounce,
   TextField,
   type TextFieldProps,
   useTheme,
@@ -29,16 +30,53 @@ import {
 
 interface SearchProps extends Omit<TextFieldProps, 'variant'> {
   variant?: 'outlined'
-  endAdornment?: IconProps
+  endAdornment?: React.ReactNode
+  debounceTimeout?: number
+  onDebouncedChange?: (value: string) => void
 }
 
 export const SearchInput = ({
+  debounceTimeout = 0,
+  onDebouncedChange,
   variant,
   endAdornment,
   ...props
 }: SearchProps) => {
   const theme = useTheme()
   const { icon01 } = theme.palette.icon
+  const { value, onChange } = props
+
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  // Memoize the debounced function
+  const debouncedSearch = useCallback(
+    debounce((query: string) => {
+      console.log({ value, query })
+      onDebouncedChange?.(query)
+    }, debounceTimeout),
+    []
+  )
+
+  // Handle debounce when input is controlled
+  useEffect(() => {
+    if (isMounted && value !== undefined) {
+      debouncedSearch(value as string)
+    }
+  }, [value])
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value
+
+    // Handle debounce when input is uncontrolled
+    if (value === undefined && onDebouncedChange) {
+      debouncedSearch(newValue)
+    }
+    onChange?.(e)
+  }
 
   return (
     <Box className="cx-search-input">
@@ -52,9 +90,10 @@ export const SearchInput = ({
         type={props.type ?? 'search'}
         InputProps={{
           startAdornment: <SearchIcon sx={{ color: icon01, marginRight: 2 }} />,
-          endAdornment: endAdornment === undefined ? endAdornment : null,
+          endAdornment: endAdornment ?? null,
         }}
         {...props}
+        onChange={handleChange}
       />
     </Box>
   )

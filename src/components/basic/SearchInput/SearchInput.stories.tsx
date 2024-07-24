@@ -18,6 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { useState } from 'react'
 import { ComponentStory } from '@storybook/react'
 
 import { SearchInput as Component } from '.'
@@ -35,3 +36,24 @@ const Template: ComponentStory<typeof Component> = (args: any) => (
 
 export const SearchInput = Template.bind({})
 SearchInput.args = {}
+
+export const ControlledSearchInputWithDebounce = () => {
+  const [term, setTerm] = useState('')
+
+  return (
+    <Component
+      debounceTimeout={500}
+      value={term}
+      onDebouncedChange={(v) => console.log('onDebouncedChange', v)}
+      onChange={(e) => setTerm(e.target.value)}
+    />
+  )
+}
+export const UncontrolledSearchInputWithDebounce = () => {
+  return (
+    <Component
+      debounceTimeout={500}
+      onDebouncedChange={(v) => console.log('onDebouncedChange', v)}
+    />
+  )
+}
