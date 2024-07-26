@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { SearchInput } from '.'
-import { render } from '../../../test/test-utils'
+import { render } from '../../../test/testUtils'
 
 jest.useFakeTimers()
 
