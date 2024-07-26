@@ -32,12 +32,12 @@ interface SearchProps extends Omit<TextFieldProps, 'variant'> {
   variant?: 'outlined'
   endAdornment?: React.ReactNode
   debounceTimeout?: number
-  onDebouncedChange?: (value: string) => void
+  onSearch?: (value: string) => void
 }
 
 export const SearchInput = ({
   debounceTimeout = 0,
-  onDebouncedChange,
+  onSearch,
   variant,
   endAdornment,
   ...props
@@ -55,8 +55,7 @@ export const SearchInput = ({
   // Memoize the debounced function
   const debouncedSearch = useCallback(
     debounce((query: string) => {
-      console.log({ value, query })
-      onDebouncedChange?.(query)
+      onSearch?.(query)
     }, debounceTimeout),
     []
   )
@@ -72,7 +71,7 @@ export const SearchInput = ({
     const newValue = e.target.value
 
     // Handle debounce when input is uncontrolled
-    if (value === undefined && onDebouncedChange) {
+    if (value === undefined) {
       debouncedSearch(newValue)
     }
     onChange?.(e)

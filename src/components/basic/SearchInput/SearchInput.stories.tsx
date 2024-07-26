@@ -37,23 +37,15 @@ const Template: ComponentStory<typeof Component> = (args: any) => (
 export const SearchInput = Template.bind({})
 SearchInput.args = {}
 
-export const ControlledSearchInputWithDebounce = () => {
+export const SearchInputWithDebounce = () => {
   const [term, setTerm] = useState('')
 
   return (
     <Component
       debounceTimeout={500}
       value={term}
-      onDebouncedChange={(v) => console.log('onDebouncedChange', v)}
+      onSearch={(v) => console.log('onSearch', v)}
       onChange={(e) => setTerm(e.target.value)}
-    />
-  )
-}
-export const UncontrolledSearchInputWithDebounce = () => {
-  return (
-    <Component
-      debounceTimeout={500}
-      onDebouncedChange={(v) => console.log('onDebouncedChange', v)}
     />
   )
 }
