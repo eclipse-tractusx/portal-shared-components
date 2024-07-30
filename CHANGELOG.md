@@ -1,8 +1,12 @@
 # Changelog
 
-## 3.0.30
+## 3.0.31
 
 - Updated SearchInput component with debounce functionality
+
+## 3.0.30
+
+- Fix linting error and warnings
 
 ## 3.0.29
 
