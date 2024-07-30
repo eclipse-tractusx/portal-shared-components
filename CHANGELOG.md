@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.30
+
+- Fix linting error and warnings
+
 ## 3.0.29
 
 - updated status tag color and also updated theme and chip with 'deleted' property
