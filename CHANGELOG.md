@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.29
+
+- updated status tag color and also updated theme and chip with 'deleted' property
+
 ## 3.0.28
 
 - updated unrestricted packages suggested by dependabot

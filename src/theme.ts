@@ -182,6 +182,10 @@ export const paletteDefinitions = {
     main: '#F2F3FB',
     contrastText: '#676BC6',
   },
+  deleted: {
+    main: '#eaeaea',
+    contrastText: '#adadad',
+  },
   info: {
     main: '#F2F3FB',
     contrastText: '#676BC6',
