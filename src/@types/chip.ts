@@ -26,5 +26,6 @@ declare module '@mui/material/Chip' {
     confirmed: true
     declined: true
     label: true
+    deleted: true
   }
 }
