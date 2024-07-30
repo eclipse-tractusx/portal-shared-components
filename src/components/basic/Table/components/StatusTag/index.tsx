@@ -23,7 +23,7 @@ import MuiChip, {
 } from '@mui/material/Chip'
 
 interface StatusChipProps extends Omit<MuiStatusChipProps, 'color'> {
-  color?: 'pending' | 'confirmed' | 'declined' | 'label'
+  color?: 'pending' | 'confirmed' | 'declined' | 'label' | 'deleted'
 }
 
 export const StatusTag = ({
