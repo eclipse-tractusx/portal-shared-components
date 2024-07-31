@@ -32,3 +32,11 @@ The SearchInput component supports both controlled and uncontrolled modes:
 - The `onChange` handler functions the same as in a standard input field.
 - All props related to the MUI TextField component are supported.
 - New props added for managing the debounce feature: `debounceTimeout` and `onSearch`.
+
+## NOTICE
+
+This work is licensed under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
+
+- SPDX-License-Identifier: CC-BY-4.0
+- SPDX-FileCopyrightText: Copyright (c) 2024 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-shared-components
