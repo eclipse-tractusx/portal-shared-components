@@ -94,8 +94,8 @@ export const SelectList = ({
       options={items.map((item: any) => item)}
       // eslint-disable-next-line
       getOptionLabel={(option) => option[keyTitle] || ''}
-      onChange={(_event, _nextValue) => {
-        handleChange(_nextValue)
+      onChange={(_event, nextValue) => {
+        handleChange(nextValue)
       }}
       isOptionEqualToValue={(option, value) => isEqual(option, value)}
       renderOption={(props, option, { inputValue }) => (
