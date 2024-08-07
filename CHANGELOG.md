@@ -1,5 +1,7 @@
 # Changelog
 
+## 3.0.31
+
 ## 3.0.30
 
 - updated the default value logic of SelectList component to handle onChange function
