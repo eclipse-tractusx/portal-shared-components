@@ -18,13 +18,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
 import React from 'react'
 import { Box } from '@mui/material'
-import { ReactComponent } from '*.svg'
+import { type ReactComponent } from '*.svg'
 import { Tab } from './Tab'
 import { TabPanel } from './TabPanel'
 import { Tabs } from './Tabs'
@@ -44,7 +44,7 @@ export default {
 const Template: ComponentStory<typeof ReactComponent> = () => {
   const [activeTab, setActiveTab] = React.useState(0)
 
-  const handleChange = (event: any, newValue: number) => {
+  const handleChange = (_: unknown, newValue: number) => {
     setActiveTab(newValue)
   }
 

@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Link, Typography } from '@mui/material'
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { Breadcrumb as Component } from '.'
 
@@ -36,7 +36,9 @@ const breadcrumbs = [
     key="1"
     color="inherit"
     sx={{ cursor: 'pointer' }}
-    onClick={() => console.log('navigate to home')}
+    onClick={() => {
+      console.log('navigate to home')
+    }}
   >
     Home
   </Link>,
@@ -45,7 +47,9 @@ const breadcrumbs = [
     key="2"
     color="inherit"
     sx={{ cursor: 'pointer' }}
-    onClick={() => console.log('navigate to Breackcrumb 1')}
+    onClick={() => {
+      console.log('navigate to Breackcrumb 1')
+    }}
   >
     Breadcrumb 1
   </Link>,
@@ -54,14 +58,16 @@ const breadcrumbs = [
   </Typography>,
 ]
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const Breadcrumb = Template.bind({})
 Breadcrumb.args = {
   backButtonLabel: 'Back',
   backButtonVariant: 'outlined',
-  onBackButtonClick: () => console.log('Back button clicked!'),
-  breadcrumbs: breadcrumbs,
+  onBackButtonClick: () => {
+    console.log('Back button clicked!')
+  },
+  breadcrumbs,
 }

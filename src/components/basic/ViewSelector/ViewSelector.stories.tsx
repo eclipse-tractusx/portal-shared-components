@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
-import { ViewSelector as Component, view } from '.'
+import { type ComponentStory } from '@storybook/react'
+import { ViewSelector as Component, type View } from '.'
 
 export default {
   title: 'ViewSelector',
@@ -28,11 +28,11 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
-const views: view[] = [
+const views: View[] = [
   {
     buttonText: 'All',
     buttonValue: '',
@@ -51,6 +51,6 @@ const views: view[] = [
 
 export const ViewSelector = Template.bind({})
 ViewSelector.args = {
-  views: views,
   activeView: 'usecases',
+  views,
 }

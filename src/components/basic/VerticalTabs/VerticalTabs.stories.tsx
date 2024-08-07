@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { Box, Typography } from '@mui/material'
 
-import { TabPanelType, VerticalTabs as Component } from '.'
+import { type TabPanelType, VerticalTabs as Component } from '.'
 
 export default {
   title: 'Tabs',
@@ -84,11 +84,11 @@ const items: TabPanelType[] = [
     description: <Typography variant="h5">User Account</Typography>,
   },
 ]
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const VerticalTab = Template.bind({})
 VerticalTab.args = {
-  items: items,
+  items,
 }
