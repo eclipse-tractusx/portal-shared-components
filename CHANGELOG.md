@@ -2,6 +2,8 @@
 
 ## 3.0.31
 
+- updated the condition in handleChange in selectList component
+
 ## 3.0.30
 
 - updated the default value logic of SelectList component to handle onChange function
