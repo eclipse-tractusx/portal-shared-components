@@ -73,7 +73,7 @@ export const SelectList = ({
 
   // eslint-disable-next-line
   const handleChange = (newValue: any) => {
-    if (newValue.target.value) {
+    if (newValue) {
       setSelected(newValue)
       onChangeItem(newValue)
     }

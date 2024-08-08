@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.32
+
+- updated the condition in handleChange in selectList component
+
 ## 3.0.31
 
 - Fix linting error and warnings
