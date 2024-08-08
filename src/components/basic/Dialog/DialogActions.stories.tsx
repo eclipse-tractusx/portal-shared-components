@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { DialogActions as Component } from './DialogActions'
 import { Button } from '../Button'
@@ -29,7 +29,9 @@ export default {
   tags: ['autodocs'],
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => (
   <Component {...args}>
     <Button variant="outlined">Cancel</Button>
     <Button variant="contained">Confirm</Button>

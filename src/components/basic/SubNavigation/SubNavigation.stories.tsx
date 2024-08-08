@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { SubNavigation as Component } from '.'
 
 export default {
@@ -28,16 +28,22 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const SubNavigation = Template.bind({})
 SubNavigation.args = {
   buttonLabel: 'Technical User Management',
-  onButtonClick: () => console.log('on button click'),
+  onButtonClick: () => {
+    console.log('on button click')
+  },
   link1Label: 'Access Management',
-  onLink1Click: () => console.log('on link1 click'),
+  onLink1Click: () => {
+    console.log('on link1 click')
+  },
   link2Label: 'Identity User Management',
-  onLink2Click: () => console.log('on link2 click'),
+  onLink2Click: () => {
+    console.log('on link2 click')
+  },
 }

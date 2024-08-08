@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { useState } from 'react'
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { SearchInput as Component } from '.'
 import searchInputDoc from '../../../../docs/storybook/SearchInput.md?raw'
@@ -36,9 +36,9 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const SearchInput = Template.bind({})
 SearchInput.args = {}
@@ -50,8 +50,12 @@ export const SearchInputWithDebounce = () => {
     <Component
       debounceTimeout={500}
       value={term}
-      onSearch={(v) => console.log('onSearch', v)}
-      onChange={(e) => setTerm(e.target.value)}
+      onSearch={(v) => {
+        console.log('onSearch', v)
+      }}
+      onChange={(e) => {
+        setTerm(e.target.value)
+      }}
     />
   )
 }

@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { StatusVariants } from './CardChip'
 
 import { CardDecision as Component } from './CardDecision'
@@ -30,9 +30,9 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 const items = [
   {
@@ -51,5 +51,5 @@ const items = [
 
 export const CardDecision = Template.bind({})
 CardDecision.args = {
-  items: items,
+  items,
 }
