@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { StaticTable as Component } from '.'
 
@@ -28,9 +28,9 @@ export default {
   tags: ['autodocs'],
 }
 
-const Template: ComponentStory<typeof Component> = (args) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const Table = Template.bind({})
 Table.args = {
@@ -54,7 +54,9 @@ Table.args = {
           icon: true,
           copyValue: 'test',
           inputValue: 'row1 col2',
-          isValid: (value) => console.log('Checking Validation', value),
+          isValid: (value) => {
+            console.log('Checking Validation', value)
+          },
           errorMessage: 'Please enter valid value.',
         },
       ],
@@ -69,5 +71,7 @@ Table.args = {
       ],
     ],
   },
-  handleEdit: () => console.log('CLICKED'),
+  handleEdit: () => {
+    console.log('CLICKED')
+  },
 }

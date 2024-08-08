@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 
 import { BackButton as Component } from './BackButton'
 import button from '../../../../docs/storybook/button.md?raw'
@@ -39,9 +39,9 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const BackButton = Template.bind({})
 BackButton.args = {

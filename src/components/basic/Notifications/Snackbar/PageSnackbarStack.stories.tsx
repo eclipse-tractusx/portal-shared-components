@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { PageSnackbar } from './index'
 
 import { PageSnackbarStack as Component } from './PageSnackbarStack'
@@ -36,7 +36,9 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => {
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => {
   return (
     <Component>
       <PageSnackbar {...args} />
