@@ -2,7 +2,7 @@
 
 ## 3.0.32
 
-- updated the condition in handleChange in selectList component
+- Updated SearchInput component with debounce functionality
 
 ## 3.0.31
 

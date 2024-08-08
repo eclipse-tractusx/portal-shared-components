@@ -18,15 +18,22 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { useState } from 'react'
 import { type ComponentStory } from '@storybook/react'
 
 import { SearchInput as Component } from '.'
+import searchInputDoc from '../../../../docs/storybook/SearchInput.md?raw'
 
 export default {
-  title: 'Form',
+  title: 'Form/SearchInput',
   component: Component,
   tags: ['autodocs'],
   argTypes: {},
+  parameters: {
+    docs: {
+      description: { component: searchInputDoc },
+    },
+  },
 }
 
 const Template: ComponentStory<typeof Component> = (
@@ -35,3 +42,20 @@ const Template: ComponentStory<typeof Component> = (
 
 export const SearchInput = Template.bind({})
 SearchInput.args = {}
+
+export const SearchInputWithDebounce = () => {
+  const [term, setTerm] = useState('')
+
+  return (
+    <Component
+      debounceTimeout={500}
+      value={term}
+      onSearch={(v) => {
+        console.log('onSearch', v)
+      }}
+      onChange={(e) => {
+        setTerm(e.target.value)
+      }}
+    />
+  )
+}
