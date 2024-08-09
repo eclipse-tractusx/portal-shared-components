@@ -19,10 +19,10 @@
  ********************************************************************************/
 
 import { Box, Divider, Typography } from '@mui/material'
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { CustomAccordion as Component } from '.'
 import { Table } from '../StaticTable/StaticTable.stories'
-import { CustomAccordionProps } from './Item'
+import { type CustomAccordionProps } from './Item'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 
@@ -35,11 +35,11 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
-const item_1_open: CustomAccordionProps = {
+const item1Open: CustomAccordionProps = {
   expanded: true,
   id: 'panel-1',
   title: 'First Item',
@@ -48,7 +48,7 @@ const item_1_open: CustomAccordionProps = {
   children: <Typography>Content of the first item</Typography>,
 }
 
-const item_1_open_colored: CustomAccordionProps = {
+const item1OpenColored: CustomAccordionProps = {
   expanded: false,
   id: 'panel-1',
   title: 'First Item',
@@ -75,14 +75,14 @@ const item_1_open_colored: CustomAccordionProps = {
     </Box>
   ),
 }
-const item_2_closed: CustomAccordionProps = {
+const item2Closed: CustomAccordionProps = {
   expanded: false,
   id: 'panel-2',
   icon: <SettingsOutlinedIcon />,
   title: 'Second Item',
   children: <Typography>Content of the second item</Typography>,
 }
-const item_3_closed: CustomAccordionProps = {
+const item3Closed: CustomAccordionProps = {
   expanded: false,
   id: 'panel-3',
   title: 'Third Item',
@@ -91,10 +91,10 @@ const item_3_closed: CustomAccordionProps = {
 
 export const BasicAccordion = Template.bind({})
 BasicAccordion.args = {
-  items: [item_1_open, item_2_closed, item_3_closed],
+  items: [item1Open, item2Closed, item3Closed],
 }
 
 export const ColoredAccordion = Template.bind({})
 ColoredAccordion.args = {
-  items: [item_1_open_colored, item_2_closed, item_3_closed],
+  items: [item1OpenColored, item2Closed, item3Closed],
 }

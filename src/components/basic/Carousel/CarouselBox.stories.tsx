@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { CarouselBox as Component } from './CarouselBox'
 import { theme } from '../../../theme'
 import uniqueId from 'lodash/uniqueId'
@@ -40,7 +40,9 @@ const itemsArray = [
   'Element 5',
 ]
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => (
   <Component {...args}>
     {itemsArray.map((item: string) => {
       return (

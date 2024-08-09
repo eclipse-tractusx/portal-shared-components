@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { Box } from '@mui/material'
 import CXLogoText from '../../../assets/logo/cx-logo-text.svg'
 
@@ -41,7 +41,9 @@ const items = [
   { href: '/partnernetwork', title: 'Partner Network' },
 ]
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => (
   <Component {...args}>
     <Box
       component="img"
@@ -70,5 +72,5 @@ const Template: ComponentStory<typeof Component> = (args: any) => (
 
 export const MainNavigation = Template.bind({})
 MainNavigation.args = {
-  items: items,
+  items,
 }

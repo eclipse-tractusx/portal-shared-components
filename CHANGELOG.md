@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.0.32
+
+- Updated SearchInput component with debounce functionality
+
+## 3.0.31
+
+- Fix linting error and warnings
+
 ## 3.0.30
 
 - updated the default value logic of SelectList component to handle onChange function
