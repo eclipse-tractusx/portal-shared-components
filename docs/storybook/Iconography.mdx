@@ -1,0 +1,41 @@
+{/* Iconography.mdx */}
+
+import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks'
+
+import { Icon as IconExample } from '../../src/components'
+
+<Meta title="Iconography" />
+
+# Iconography
+
+<IconGallery>
+{
+  [
+    {label: 'Home', value: 'Home'},
+    {label: 'Menu', value: 'Menu'},
+    {label: 'Search', value: 'Search'},
+    {label: 'Account', value: 'AccountCircle'},
+    {label: 'Settings', value: 'Settings'},
+    {label: 'Notifications', value: 'Notifications'},
+    {label: 'Favorite', value: 'Favorite'},
+    {label: 'Close', value: 'Close'},
+    {label: 'Check', value: 'Check'},
+    {label: 'Error', value: 'Error'},
+    {label: 'Help', value: 'HelpOutline'},
+    {label: 'Logout', value: 'Logout'},
+    {label: 'Add', value: 'Add'},
+    {label: 'Edit', value: 'Edit'},
+    {label: 'Delete', value: 'Delete'},
+    {label: 'Arrow Forward', value: 'ArrowForward'},
+    {label: 'Arrow Back', value: 'ArrowBack'},
+    {label: 'Download', value: 'FileDownload'},
+    {label: 'Upload', value: 'FileUpload'},
+    {label: 'Refresh', value: 'Refresh'},
+    {label: 'Print', value: 'Print'},
+    {label: 'Exit To App', value: 'ExitToApp'},
+
+  ].map(icon => 
+  <IconItem name={icon.label}>
+    <IconExample iconName={icon.value} />
+  </IconItem>)}
+</IconGallery>

@@ -18,7 +18,7 @@ declare module '@mui/material/SvgIcon' {
     '20': true
   }
 }
-interface CustomIconProps extends SvgIconProps {
+export interface IconProps extends SvgIconProps {
   iconName: keyof typeof MUIIcons
 }
 
@@ -29,7 +29,7 @@ const getIconComponent = (iconName: string) => {
   ] as React.ComponentType<SvgIconProps>
 }
 
-const CustomIcon: React.FC<CustomIconProps> = ({ iconName, ...props }) => {
+export const Icon: React.FC<IconProps> = ({ iconName, ...props }) => {
   const IconComponent = iconName ? getIconComponent(iconName) : null
 
   if (!IconComponent) {
@@ -39,5 +39,3 @@ const CustomIcon: React.FC<CustomIconProps> = ({ iconName, ...props }) => {
 
   return <IconComponent {...props} />
 }
-
-export default CustomIcon

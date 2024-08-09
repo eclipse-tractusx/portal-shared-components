@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { StoryFn } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 
-import Component from '.'
+import { Icon as Component, type IconProps } from '.'
 import { Box } from '@mui/material'
 
 export default {
@@ -33,14 +33,16 @@ export default {
   },
 }
 
-const Template: StoryFn<typeof Component> = (args: any) => (
+const Template: StoryFn<typeof Component> = (args: IconProps) => (
   <Component {...args} />
 )
 export const IconPreview = Template.bind({})
 IconPreview.args = {
   iconName: 'Mood',
   fontSize: '16',
-  onClick: () => console.log('icon clicked'),
+  onClick: () => {
+    console.log('icon clicked')
+  },
 }
 
 export const IconSizeVariation = () => {
