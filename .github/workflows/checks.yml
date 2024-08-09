@@ -26,6 +26,8 @@ on:
     paths:
       - src/**
       - yarn.lock
+      - package.json
+
   workflow_dispatch:
 
 jobs:
@@ -54,14 +56,31 @@ jobs:
           echo git ${{ env.GIT_VERSION }}
           echo npm ${{ steps.npm-version.outputs.current-version }}
 
-      - name: Check if tag already exists
-        if: env.GIT_VERSION == steps.npm-version.outputs.current-version
+      - name: Get release commit messages
+        id: release-commit
         run: |
-          echo git tag for npm versions exists - please run `yarn version --patch` and update PR
-          exit 1
+          RELEASE_COMMIT_MESSAGE=$(git log --grep="Release-As: " -1 --pretty=format:"%s")
+          echo "RELEASE_COMMIT_MESSAGE=$RELEASE_COMMIT_MESSAGE" >> $GITHUB_ENV
 
-      - name: Tag available
-        run: echo versions not equal - running checks
+      - name: Check if tag already exists and not then check release commit is as expected
+        run: |
+          if [[ "${{ env.GIT_VERSION }}" == "${{ steps.npm-version.outputs.current-version }}" ]]; then
+            echo "Versions match. Proceed to next step"
+          else
+            echo "Versions do not match. Checking if tag exists."
+            tag_exists=$(git tag -l "v${{ steps.npm-version.outputs.current-version }}")
+            if [[ -n "$tag_exists" ]]; then
+              echo "Package with ${{steps.npm-version.outputs.current-version}} version already exist. "
+              exit 1
+            else
+              echo "Tag does not exist. Checking release commit message."
+              if [[ "${{ env.RELEASE_COMMIT_MESSAGE }}" != *"chore: release ${{ steps.npm-version.outputs.current-version }}"* ]]; then
+                echo "Expected commit message not found. Please run below command: "
+                echo 'git commit --allow-empty -m "chore: release ${{ steps.npm-version.outputs.current-version }}" -m "Release-As: ${{ steps.npm-version.outputs.current-version }}"'
+                exit 1
+              fi
+            fi        
+          fi
 
       - name: Install Dependencies
         run: yarn
