@@ -84,10 +84,10 @@ const drawing = ((): string => {
   ctx.lineWidth = 2
   ctx.beginPath()
   for (let a = 0; a < 360; a++) {
-    let p = (Math.PI * a) / 180,
-      r = h2 * (0.5 + 0.25 * Math.cos(5 * p)),
-      x = r * Math.cos(p),
-      y = r * Math.sin(p)
+    const p = (Math.PI * a) / 180
+    const r = h2 * (0.5 + 0.25 * Math.cos(5 * p))
+    const x = r * Math.cos(p)
+    const y = r * Math.sin(p)
     ctx.lineTo(x + w2, y + h2)
   }
   ctx.stroke()

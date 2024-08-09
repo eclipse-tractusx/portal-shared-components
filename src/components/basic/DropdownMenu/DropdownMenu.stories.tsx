@@ -21,7 +21,7 @@
 import EditIcon from '@mui/icons-material/Edit'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import MenuItem from '@mui/material/MenuItem'
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { DropdownMenu as Component } from '.'
 import dropdown from '../../../../docs/storybook/selectlist/dropdown.md?raw'
@@ -40,9 +40,15 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => (
   <Component {...args}>
-    <MenuItem onClick={() => console.log('edit!')}>
+    <MenuItem
+      onClick={() => {
+        console.log('edit!')
+      }}
+    >
       <EditIcon />
       Edit
     </MenuItem>

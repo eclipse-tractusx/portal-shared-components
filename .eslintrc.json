@@ -1,5 +1,5 @@
 {
-  "ignorePatterns": ["*.test.tsx", "*.stories.tsx", "*.config.ts"],
+  "ignorePatterns": ["*.test.tsx", "*.config.ts"],
   "env": {
     "browser": true,
     "es2021": true

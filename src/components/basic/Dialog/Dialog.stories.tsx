@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { Dialog as Component } from '.'
 import { Button } from '../Button'
@@ -48,7 +48,9 @@ export default {
   },
 }
 
-const DialogTemplate: ComponentStory<typeof Component> = (args: any) => {
+const DialogTemplate: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => {
   const { title, intro, content, helperText, ...componentArgs } = args
 
   return (
