@@ -17,20 +17,12 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jest-environment-jsdom',
-  testMatch: ['**/*.test.{ts,tsx,js,jsx}'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
-  moduleNameMapper: {
-    '\\.(css|scss)$': '<rootDir>/src/test/__mocks__/styleMock.ts',
-    '\\.svg$': '<rootDir>/src/test/__mocks__/fileMock.ts',
-    '@mui/material/styles/createPalette':
-      '<rootDir>/src/test/__mocks__/createPalette.ts',
-    '@mui/material/styles/createTypography':
-      '<rootDir>/src/test/__mocks__/createTypography.ts',
-  },
-  setupFiles: ['<rootDir>/src/test/setupTests.ts'],
-}
+window.matchMedia =
+  window.matchMedia ||
+  function () {
+    return {
+      matches: false,
+      addListener: function () {},
+      removeListener: function () {},
+    }
+  }
