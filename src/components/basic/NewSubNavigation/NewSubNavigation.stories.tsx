@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { NewSubNavigation as Component } from '.'
 
 export default {
@@ -27,9 +27,9 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const NewSubNavigation = Template.bind({})
 NewSubNavigation.args = {
@@ -79,12 +79,18 @@ NewSubNavigation.args = {
   buttonArray: [
     {
       buttonLabel: 'Button1',
-      onButtonClick: () => console.log('Button1'),
+      onButtonClick: () => {
+        console.log('Button1')
+      },
     },
     {
       buttonLabel: 'Button1',
-      onButtonClick: () => console.log('Button1'),
+      onButtonClick: () => {
+        console.log('Button1')
+      },
     },
   ],
-  onClick: () => console.log('on navigation link click'),
+  onClick: () => {
+    console.log('on navigation link click')
+  },
 }

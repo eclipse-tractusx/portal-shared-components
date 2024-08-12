@@ -1,6 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2023 BMW Group AG
- * Copyright (c) 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -18,28 +17,15 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
+import React, { type ReactElement } from 'react'
+import { SharedThemeProvider } from '../components'
+import { render as rtlRender, type RenderOptions } from '@testing-library/react'
 
-import { LoadingButton as Component } from '.'
-
-export default {
-  title: 'Buttons',
-  component: Component,
-  tags: ['autodocs'],
-  argTypes: {},
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+  return <SharedThemeProvider>{children}</SharedThemeProvider>
 }
 
-const Template: ComponentStory<typeof Component> = (
-  args: React.ComponentProps<typeof Component>
-) => <Component {...args} />
-
-export const LoadingButton = Template.bind({})
-LoadingButton.args = {
-  label: 'Load Data',
-  loadIndicator: 'Loading ...',
-  loading: true,
-  size: 'medium',
-  color: 'primary',
-  helperTextColor: 'success',
-  helperText: 'helperText',
-}
+export const render = (
+  ui: ReactElement,
+  options?: Omit<RenderOptions, 'wrapper'>
+) => rtlRender(ui, { wrapper: AllTheProviders, ...options })

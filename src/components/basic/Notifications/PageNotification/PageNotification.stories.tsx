@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { PageNotifications as Component } from '.'
 
@@ -28,15 +28,17 @@ export default {
   tags: ['autodocs'],
   argTypes: {},
 }
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args}>{args.children}</Component>
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args}>{args.children}</Component>
 
 export const PageNotifications = Template.bind({})
 PageNotifications.args = {
   severity: 'success',
   open: true,
-  onCloseNotification: () => console.log('close alert'),
+  onCloseNotification: () => {
+    console.log('close alert')
+  },
   title: 'Notification title',
   description: 'This is some notification text and can be replaced later.',
   contactText: 'Contact',

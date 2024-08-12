@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { Table as Component } from '.'
-import {
+import type {
   GridColDef,
   GridRowsProp,
   GridRenderCellParams,
@@ -66,9 +66,9 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 const basicArgs = {
   autoHeight: false,
@@ -104,13 +104,21 @@ TableToolbar.args = {
   toolbarVariant: 'premium',
   toolbar: {
     buttonLabel: 'Add user',
-    onButtonClick: () => console.log('on button click'),
+    onButtonClick: () => {
+      console.log('on button click')
+    },
     buttonDisabled: true,
     buttonTooltip: 'Not able to add',
     secondButtonLabel: 'Add Multiple users',
-    onSecondButtonClick: () => console.log('on multiple button click'),
-    onSearch: (value) => console.log(`search: "${value}"`),
-    onFilter: (selectedFilter) => console.log('filter:', selectedFilter),
+    onSecondButtonClick: () => {
+      console.log('on multiple button click')
+    },
+    onSearch: (value) => {
+      console.log(`search: "${value}"`)
+    },
+    onFilter: (selectedFilter) => {
+      console.log('filter:', selectedFilter)
+    },
     filter: [
       {
         name: 'role',

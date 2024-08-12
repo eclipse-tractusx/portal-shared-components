@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { IconButton as Component } from '.'
 import AddIcon from '@mui/icons-material/Add'
@@ -35,9 +35,9 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const IconButton = Template.bind({})
 IconButton.args = {

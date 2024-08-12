@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { Alert as Component } from '.'
 
@@ -30,9 +30,10 @@ export default {
     children: {},
   },
 }
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args}>{args.children}</Component>
-)
+
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args}>{args.children}</Component>
 
 export const Alert = Template.bind({})
 Alert.args = {

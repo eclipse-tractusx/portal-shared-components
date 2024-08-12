@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 
 import { MultiSelectList as Component } from '.'
 
@@ -29,7 +29,7 @@ export default {
   argTypes: {},
 }
 
-const items: any[] = [
+const items = [
   {
     id: 1,
     title: 'Dismantler App',
@@ -77,13 +77,13 @@ const items: any[] = [
   },
 ]
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
-  <Component {...args} />
-)
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
 
 export const MultiSelectList = Template.bind({})
 MultiSelectList.args = {
-  items: items,
+  items,
   label: 'Label Name',
   placeholder: 'Enter label name (type min 2 character)',
   helperText: 'Helper',
@@ -99,6 +99,8 @@ MultiSelectList.args = {
   notItemsText: 'not items selected',
   keyTitle: 'title',
   tagSize: 'medium',
-  onAddItem: (item: any) => console.log('items:', item),
+  onAddItem: (item) => {
+    console.log('items:', item)
+  },
   filterOptionsArgs: {},
 }

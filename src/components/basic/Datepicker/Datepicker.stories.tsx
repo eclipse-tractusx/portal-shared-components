@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { ComponentStory } from '@storybook/react'
+import { type ComponentStory } from '@storybook/react'
 import { Box } from '@mui/material'
 
-import { Datepicker as Component } from '.'
+import { Datepicker as Component, type DateType } from '.'
 
 export default {
   title: 'Datepicker',
@@ -30,7 +30,9 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (args: any) => (
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => (
   <Box sx={{ width: '320px' }}>
     <Component {...args} />
   </Box>
@@ -50,5 +52,7 @@ DatePicker.args = {
   readOnly: false,
   daySelectedColor: '#0F71CB',
   todayColor: '#939393',
-  onChangeItem: (date: any) => console.log('date:', date),
+  onChangeItem: (date: DateType) => {
+    console.log('date:', date)
+  },
 }

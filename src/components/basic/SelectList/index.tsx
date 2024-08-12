@@ -26,7 +26,7 @@ import { SelectInput } from '../MultiSelectList/Components/SelectInput'
 import { SelectOptions } from '../MultiSelectList/Components/SelectOptions'
 import uniqueId from 'lodash/uniqueId'
 import isEqual from 'lodash/isEqual'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   // eslint-disable-next-line
@@ -66,6 +66,19 @@ export const SelectList = ({
   // Add an ESLint exception until there is a solution
   // eslint-disable-next-line
   const [selected, setSelected] = useState<any>(defaultValue || {})
+
+  useEffect(() => {
+    setSelected(defaultValue)
+  }, [defaultValue])
+
+  // eslint-disable-next-line
+  const handleChange = (newValue: any) => {
+    if (newValue) {
+      setSelected(newValue)
+      onChangeItem(newValue)
+    }
+  }
+
   return (
     <Autocomplete
       className="cx-select-list"
@@ -81,10 +94,8 @@ export const SelectList = ({
       options={items.map((item: any) => item)}
       // eslint-disable-next-line
       getOptionLabel={(option) => option[keyTitle] || ''}
-      onChange={(_, reason) => {
-        setSelected(reason)
-
-        onChangeItem(reason)
+      onChange={(_event, nextValue) => {
+        handleChange(nextValue)
       }}
       isOptionEqualToValue={(option, value) => isEqual(option, value)}
       renderOption={(props, option, { inputValue }) => (

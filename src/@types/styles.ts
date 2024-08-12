@@ -161,6 +161,7 @@ declare module '@mui/material/styles' {
     confirmed: TypeChipColor
     declined: TypeChipColor
     label: TypeChipColor
+    deleted: TypeChipColor
     chip: TypeChipCardColor
     stepper: TypeStepper
     buttons: ButtonColor
@@ -180,6 +181,7 @@ declare module '@mui/material/styles' {
     confirmed?: Partial<TypeChipColor>
     declined?: Partial<TypeChipColor>
     label?: Partial<TypeChipColor>
+    deleted?: Partial<TypeChipColor>
     chip?: Partial<TypeChipCardColor>
     stepper?: Partial<TypeStepper>
     buttons?: Partial<ButtonColor>
