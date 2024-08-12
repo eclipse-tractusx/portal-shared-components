@@ -71,7 +71,7 @@ const Template: ComponentStory<typeof Component> = (
 ) => <Component {...args} />
 
 const basicArgs = {
-  autoHeight: true,
+  autoHeight: false,
   columnHeaderHeight: 76,
   rowHeight: 76,
   hideFooter: true,
