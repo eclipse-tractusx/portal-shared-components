@@ -17,139 +17,121 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type StoryFn } from '@storybook/react'
+import { type Meta, type StoryFn } from '@storybook/react'
 
-import { Icon as Component, type IconProps } from '.'
+import { Icon, type IconProps } from '.'
 import { Box } from '@mui/material'
-
-export default {
+import CustomDoc from '../../../../docs/storybook/icon.mdx'
+import { IconButton } from '../IconButton'
+import { Typography } from '../Typography'
+import { type ReactNode } from 'react'
+const meta: Meta<typeof Icon> = {
   title: 'Icon',
-  component: Component,
+  component: Icon,
   tags: ['autodocs'],
   argTypes: {
     onClick: {
       action: 'onClick',
     },
   },
+  parameters: {
+    docs: {
+      page: CustomDoc,
+    },
+  },
 }
+export default meta
 
-const Template: StoryFn<typeof Component> = (args: IconProps) => (
-  <Component {...args} />
-)
+const Template: StoryFn<typeof Icon> = (args: IconProps) => <Icon {...args} />
 export const IconPreview = Template.bind({})
 IconPreview.args = {
-  iconName: 'Mood',
+  iconName: 'Home',
   fontSize: '16',
   onClick: () => {
     console.log('icon clicked')
   },
 }
-
+const IconPreviewBlock = ({
+  helperText,
+  children,
+}: {
+  helperText: string
+  children: ReactNode
+}) => (
+  <Box
+    display={'flex'}
+    alignItems={'center'}
+    justifyContent={'flex-start'}
+    flex={'0 1 calc(20% - 10px)'}
+    gap={'0.5rem'}
+  >
+    <Box
+      padding={0.5}
+      height={'40px'}
+      width={'40px'}
+      display={'flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      boxShadow={'rgba(0, 0, 0, 0.10) 0 1px 3px 0'}
+    >
+      {children}
+    </Box>
+    <Typography variant="helper">{helperText}</Typography>
+  </Box>
+)
 export const IconSizeVariation = () => {
   return (
-    <Box display={'flex'} flexDirection={'column'} gap={'1.6rem'} width={200}>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>8px</div>
-        <Component iconName="Mood" fontSize={'8'} />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>10px</div>
-        <Component iconName="Mood" fontSize={'10'} />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>12px</div>
-        <Component iconName="Mood" fontSize={'12'} />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>14px</div>
-        <Component iconName="Mood" fontSize={'14'} />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>16px</div>
-        <Component iconName="Mood" fontSize={'16'} />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>18px</div>
-        <Component iconName="Mood" fontSize={'18'} />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>20px</div>
-        <Component iconName="Mood" fontSize={'20'} />
-      </Box>
+    <Box display={'flex'} flexDirection={'row'} gap={'1.6rem'} width={200}>
+      <IconPreviewBlock helperText="8px">
+        <Icon iconName="Home" fontSize={'8'} />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="10px">
+        <Icon iconName="Home" fontSize={'10'} />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="12px">
+        <Icon iconName="Home" fontSize={'12'} />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="14px">
+        <Icon iconName="Home" fontSize={'14'} />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="16px">
+        <Icon iconName="Home" fontSize={'16'} />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="18px">
+        <Icon iconName="Home" fontSize={'18'} />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="20px">
+        <Icon iconName="Home" fontSize={'20'} />
+      </IconPreviewBlock>
     </Box>
   )
 }
 export const IconStateVariation = () => {
   return (
-    <Box display={'flex'} flexDirection={'column'} gap={'1.6rem'} width={200}>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>default</div>
-        <Component iconName="Menu" />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>primary</div>
-        <Component iconName="SentimentNeutral" color="primary" />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>success</div>
-        <Component iconName="Mood" color="success" />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>warning</div>
-        <Component iconName="Warning" color="warning" />
-      </Box>
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-      >
-        <div>error</div>
-        <Component iconName="Error" color="error" />
-      </Box>
+    <Box display={'flex'} flexDirection={'row'} gap={'1.6rem'} width={200}>
+      <IconPreviewBlock helperText="default">
+        <Icon iconName="Home" />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="primary">
+        <Icon iconName="Home" color="primary" />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="success">
+        <Icon iconName="Home" color="success" />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="warning">
+        <Icon iconName="Home" color="warning" />
+      </IconPreviewBlock>
+      <IconPreviewBlock helperText="error">
+        <Icon iconName="Home" color="error" />
+      </IconPreviewBlock>
     </Box>
+  )
+}
+
+export const IconWithinButton = () => {
+  return (
+    <IconButton color="secondary" size="medium" disabled={false}>
+      <Icon iconName="Add" />
+    </IconButton>
   )
 }

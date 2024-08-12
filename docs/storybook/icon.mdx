@@ -1,12 +1,12 @@
-{/* Iconography.mdx */}
-
-import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks'
-
+import { Meta, Title, IconGallery, IconItem, 
+  Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks'
 import { Icon as IconExample } from '../../src/components'
 
-<Meta title="Iconography" />
+import * as ButtonStories from  '../../src/components/basic/Icon/Icon.stories'
 
-# Iconography
+<Meta of={ButtonStories} />
+
+# Most used
 
 <IconGallery>
 {
@@ -33,9 +33,16 @@ import { Icon as IconExample } from '../../src/components'
     {label: 'Refresh', value: 'Refresh'},
     {label: 'Print', value: 'Print'},
     {label: 'Exit To App', value: 'ExitToApp'},
-
   ].map(icon => 
-  <IconItem name={icon.label}>
+  <IconItem name={icon.label} key={icon.label}>
     <IconExample iconName={icon.value} />
   </IconItem>)}
 </IconGallery>
+
+/* Default configuration for autodocs */
+<Title />
+<Subtitle />
+<Description />
+<Primary />
+<Controls />
+<Stories />

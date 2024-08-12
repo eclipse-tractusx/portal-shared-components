@@ -712,12 +712,12 @@ export const theme = createTheme({
     MuiSvgIcon: {
       variants: [
         {
-          props: { color: 'primary' },
-          style: { color: palette.primary.main },
+          props: { color: 'default' },
+          style: { color: palette.text.primary },
         },
         {
           props: { color: 'error' },
-          style: { color: palette.error.main },
+          style: { color: palette.danger.danger },
         },
         {
           props: { color: 'success' },
@@ -741,7 +741,7 @@ export const theme = createTheme({
         },
         {
           props: { fontSize: '14' },
-          style: { fontSize: typography.pxToRem(14) },
+          style: { fontSize: '14px' },
         },
         {
           props: { fontSize: '16' },

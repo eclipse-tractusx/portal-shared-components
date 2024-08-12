@@ -4,11 +4,14 @@ import { type SvgIconProps } from '@mui/material/SvgIcon'
 
 // Extend the Mui SvgIcon size props
 declare module '@mui/material/SvgIcon' {
+  interface SvgIconPropsColorOverrides {
+    default: true
+  }
   interface SvgIconPropsSizeOverrides {
-    small: false
-    medium: false
-    large: false
-    inherit: false
+    // small: false
+    // medium: false
+    // large: false
+    // inherit: false
     '8': true
     '10': true
     '12': true
@@ -37,5 +40,7 @@ export const Icon: React.FC<IconProps> = ({ iconName, ...props }) => {
     return null
   }
 
-  return <IconComponent {...props} />
+  const { fontSize = 'inherit', color = 'default' } = props
+
+  return <IconComponent fontSize={fontSize} color={color} {...props} />
 }
