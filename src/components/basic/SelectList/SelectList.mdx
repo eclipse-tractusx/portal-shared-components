@@ -1,0 +1,79 @@
+{/*
+* Copyright (c) 2024 Contributors to the Eclipse Foundation
+*
+* See the NOTICE file(s) distributed with this work for additional
+* information regarding copyright ownership.
+*
+* This program and the accompanying materials are made available under the
+* terms of the Apache License, Version 2.0 which is available at
+* https://www.apache.org/licenses/LICENSE-2.0.
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+* License for the specific language governing permissions and limitations
+* under the License.
+*
+* SPDX-License-Identifier: Apache-2.0
+*/}
+
+import { Story, Meta } from '@storybook/blocks'
+import { SharedThemeProvider } from '../SharedThemeProvider'
+import { SharedCssBaseline } from '../SharedCssBaseline'
+import { SelectList } from '.'
+import { theme } from '../../../theme'
+
+<Meta title="Design Guidelines/SelectList" />
+
+<SharedThemeProvider>
+<SharedCssBaseline />
+<SelectList items={[{
+    id: 1,
+    title: 'Germany',
+    value: 'DE',
+  },
+  {
+    id: 2,
+    title: 'France',
+    value: 'FR',
+  },
+  {
+    id: 3,
+    title: 'Sweden',
+    value: 'SW',
+  },
+  {
+    id: 4,
+    title: 'Swaziland',
+    value: 'SZ',
+  },
+  {
+    id: 5,
+    title: 'Argentina',
+    value: 'AR',
+  },
+  {
+    id: 6,
+    title: 'Brazil',
+    value: 'BR',
+  },
+]} label='Select country' placeholder='Enter country name (type min 2 character)' helperText='Helper' margin='dense' variant='filled' clearText='clear' noOptionsText='No Options' defaultValue={{
+    id: 1,
+    title: 'Germany',
+    value: 'DE',
+  }} onChangeItem={() => {}} keyTitle='title' />
+
+</SharedThemeProvider>
+
+<br />
+
+#### SelectList
+
+A drop down list is a graphical control element, similar to a list box, that allows the user to choose one value from a list. When a drop-down list is inactive, it displays a single value. When activated, it displays (drops down) a list of values, from which the user may select one. When the user selects a new value, the control reverts to its inactive state, displaying the selected value.
+
+#### Guidance
+
+- Gray out any unavailable options
+- Avoid very long dropdowns
+- Avoid dropdown boxes when typing may be faster
+- support keyboard input

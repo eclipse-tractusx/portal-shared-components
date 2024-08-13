@@ -24,7 +24,6 @@ import MenuItem from '@mui/material/MenuItem'
 import { type ComponentStory } from '@storybook/react'
 
 import { DropdownMenu as Component } from '.'
-import dropdown from '../../../../docs/storybook/selectlist/dropdown.md?raw'
 
 export default {
   title: 'Dropdown Menu',
@@ -32,11 +31,6 @@ export default {
   tags: ['autodocs'],
   args: {
     buttonText: 'Admin',
-  },
-  parameters: {
-    docs: {
-      description: { component: dropdown },
-    },
   },
 }
 

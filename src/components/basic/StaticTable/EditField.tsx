@@ -51,7 +51,7 @@ export const EditField = ({
   const addInputValue = (value: string) => {
     setInputValue(value)
     isValid &&
-      setInputErrorMessage(!isValid(value.trim()) ? errorMessage ?? '' : '')
+      setInputErrorMessage(!isValid(value.trim()) ? (errorMessage ?? '') : '')
   }
 
   const renderInputField = () => {

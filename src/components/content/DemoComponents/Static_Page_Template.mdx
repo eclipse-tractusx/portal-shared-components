@@ -1,0 +1,896 @@
+{/*
+* Copyright (c) 2024 Contributors to the Eclipse Foundation
+*
+* See the NOTICE file(s) distributed with this work for additional
+* information regarding copyright ownership.
+*
+* This program and the accompanying materials are made available under the
+* terms of the Apache License, Version 2.0 which is available at
+* https://www.apache.org/licenses/LICENSE-2.0.
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+* License for the specific language governing permissions and limitations
+* under the License.
+*
+* SPDX-License-Identifier: Apache-2.0
+*/}
+
+import { Story, Meta } from '@storybook/blocks'
+import { SharedThemeProvider } from '../../basic/SharedThemeProvider'
+import { SharedCssBaseline } from '../../basic/SharedCssBaseline'
+import { TextCenterAligned } from './TextCenterAligned'
+import { CardGrid } from './CardGrid'
+import { LinkButtonGrid } from './LinkButtonGrid'
+import { TextImageSideBySide } from './TextImageSideBySide'
+import { TextVideoSideBySide } from './TextVideoSideBySide'
+import { VideoTextSideBySide } from './VideoTextSideBySide'
+import { TextImageCenterAligned } from './TextImageCenterAligned'
+import { TextCenterAlignedBody2 } from './TextCenterAlignedBody2'
+import { TextImageSideBySideWithSections } from './TextImageSideBySideWithSections'
+
+<Meta title="Design Guidelines/Static Page Template" />
+
+## Static Page Template(s)
+
+The static page templates enable the users to build responsive static sites within extremely short time and in line with the CX styling guidelines.
+Below you can find an overview of all supported templates as well as the template structure.
+
+### Templates
+
+#### #1 TextCenterAlignedWithCardGrid
+
+Template Name: "TextCenterAlignedWithCardGrid"
+
+<br />
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <TextCenterAligned
+    provider={{
+      title: 'Example title',
+      description: 'Example description for the component',
+    }}
+    scrollTop={() => {}}
+    showScroll={true}
+  />
+  <CardGrid
+    baseUrl="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/"
+    align="center"
+    provider={{
+      detailsWithImageRow1: [
+        {
+          title: 'Subscription',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '1',
+        },
+        {
+          title: 'Subscription Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This are the details which I will still add',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '2',
+        },
+        {
+          title: 'Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Coming soon',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '3',
+        },
+      ],
+      detailsWithImageRow2: [
+        {
+          title: 'Subscription Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Add your own description here',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '11',
+        },
+        {
+          title: 'Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '12',
+        },
+      ],
+      detailsWithoutImageRow1: [
+        {
+          title: 'Who can subscribe?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'Details',
+          backgroundColor: '#FFFFFF',
+          id: '21',
+        },
+        {
+          title: 'What happens after the subscription?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'More',
+          backgroundColor: '#FFFFFF',
+          id: '22',
+        },
+        {
+          title: 'How can I use the service?',
+          description: 'This is an example description',
+          readMore: '/help',
+          readMoreTitle: 'Visit',
+          backgroundColor: '#FFFFFF',
+          id: '33',
+        },
+      ],
+    }}
+  />
+</SharedThemeProvider>
+
+#### Structure Details
+
+```
+    {
+        title: 'Section Title',
+        description:
+          'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+        backgroundColor: '#FFFFFF',
+        id: 'business-id',
+        imageUrl:
+          'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+        grid: 4,
+        template: 'TextCenterAlignedWithCardGrid',
+        detailsWithImageRow1: [
+          {
+            title: 'Card Title 1',
+            imageUrl:
+              'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+            description:
+              'Card element description, with limited size.',
+            readMore: '/appmarketplace',
+            readMoreTitle: 'Details',
+            backgroundColor: '#f9f9f9',
+            align: 'center',
+          },
+          {
+            title: 'Card Title 2',
+            imageUrl:
+              'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+            description:
+              'Card element description, with limited size.',
+            readMore: '',
+            backgroundColor: '#f9f9f9',
+            align: 'center',
+          },
+          {
+            title: 'Card Title 3',
+            imageUrl:
+              'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+            description:
+              'Card element description, with limited size.',
+            readMore: '',
+            backgroundColor: '#f9f9f9',
+            align: 'center',
+          },
+          {
+            title: 'Card Title 4',
+            imageUrl:
+              'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+            description:
+              'Card element description, with limited size.',
+            readMore: '',
+            backgroundColor: '#f9f9f9',
+            align: 'center',
+          },
+        ],
+      }
+```
+
+{' '}
+
+<br />
+<br />
+
+#### #2 TextCenterAlignedWithLinkButtonGrid
+
+Template Name: "TextCenterAlignedWithLinkButtonGrid"
+
+<br />
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <TextCenterAligned
+    provider={{
+      title: 'Example title',
+      description: 'Example description for the component',
+    }}
+    scrollTop={() => {}}
+    showScroll={true}
+  />
+  <LinkButtonGrid
+    provider={{
+      linksRow1: [
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
+        },
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/certificate-credential',
+        },
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/certificate-credential',
+        },
+      ],
+      linksRow2: [
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
+        },
+        {
+          background: '#C498EF63',
+          title: 'Example',
+          navigate: '/',
+        },
+      ],
+    }}
+  />
+</SharedThemeProvider>
+
+#### Structure Details
+
+```
+        {
+        title: 'Direct Links / What Else Do You Need To Know',
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
+        imageUrl:
+          'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+        backgroundColor: '#FFFFFF',
+        grid: 2,
+        id: 'section-one',
+        template: 'TextCenterAlignedWithLinkButtonGrid',
+        linksRow1: [
+          {
+            background: '#C498EF63',
+            title: 'Sample Name',
+            navigate: '/appmanagement',
+          },
+          {
+            background: '#C498EF63',
+            title: 'Sample Name',
+            navigate: '/appmanagement',
+          },
+          ],
+        linksRow2: [
+          {
+            background: '#C498EF63',
+            title: 'Sample Name',
+            navigate: '/appmanagement',
+          },
+         ],
+        }
+```
+
+<br />
+<br />
+
+#### #3 TextImageSideBySideWithCardGrid
+
+Template Name: "TextImageSideBySideWithCardGrid"
+
+<br />
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <TextImageSideBySide
+    provider={{
+      title: 'Example title',
+      description: 'Example description for the component',
+    }}
+    scrollTop={() => {}}
+    showScroll={true}
+  />
+  <CardGrid
+    baseUrl="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/"
+    align="center"
+    provider={{
+      detailsWithImageRow1: [
+        {
+          title: 'Subscription',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '1',
+        },
+        {
+          title: 'Subscription Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This are the details which I will still add',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '2',
+        },
+        {
+          title: 'Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Coming soon',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '3',
+        },
+      ],
+      detailsWithImageRow2: [
+        {
+          title: 'Subscription Authority',
+          imagePath: '/images/content/teaser.png',
+          description: 'Add your own description here',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '11',
+        },
+        {
+          title: 'Flow',
+          imagePath: '/images/content/teaser.png',
+          description: 'This is an example description',
+          readMore: '',
+          backgroundColor: '#FFFFFF',
+          imageShape: 'circle',
+          id: '12',
+        },
+      ],
+      detailsWithoutImageRow1: [
+        {
+          title: 'Who can subscribe?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'Details',
+          backgroundColor: '#FFFFFF',
+          id: '21',
+        },
+        {
+          title: 'What happens after the subscription?',
+          description: 'the details will get added asap',
+          readMore: '/help',
+          readMoreTitle: 'More',
+          backgroundColor: '#FFFFFF',
+          id: '22',
+        },
+        {
+          title: 'How can I use the service?',
+          description: 'This is an example description',
+          readMore: '/help',
+          readMoreTitle: 'Visit',
+          backgroundColor: '#FFFFFF',
+          id: '33',
+        },
+      ],
+    }}
+  />
+</SharedThemeProvider>
+
+#### Structure Details
+
+```
+       {
+    title: 'Section Title',
+    description:
+      'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+    imageUrl:
+      'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+    backgroundColor: '#FFFFFF',
+    id: 'provider-id',
+    template: 'TextImageSideBySideWithCardGrid',
+    detailsWithImageRow1: [
+      {
+        title: 'Card Title 1',
+        imageUrl:
+          'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+        description:
+          'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+        readMore: '/help',
+        readMoreTitle: 'Details',
+        backgroundColor: '#F9F9F9',
+      },
+      {
+        title: 'Card Title 2',
+        imageUrl:
+          'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+        description:
+          'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+        readMore: '/help',
+        backgroundColor: '#F9F9F9',
+      },
+      {
+        title: 'Card Title 3',
+        imageUrl:
+          'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+        description:
+          'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+        readMore: '/help',
+        readMoreTitle: 'Details',
+        backgroundColor: '#F9F9F9',
+      },
+    ],
+    detailsWithoutImageRow1: [
+      {
+        title: 'Card Title 1',
+        description: 'Card element description, with limited size.',
+        readMore: '',
+        readMoreTitle: 'Details',
+        backgroundColor: '#FFFFFF',
+      },
+      {
+        title: 'Card Title 2',
+        description: 'Card element description, with limited size.',
+        readMore: '',
+        readMoreTitle: 'Details',
+        backgroundColor: '#FFFFFF',
+      },
+      {
+        title: 'Card Title 3',
+        description: 'Card element description, with limited size.',
+        readMore: '',
+        readMoreTitle: 'Details',
+        backgroundColor: '#FFFFFF',
+      },
+     ],
+    }
+```
+
+<br />
+<br />
+
+#### #4 TextVideoSideBySide
+
+Template Name: "TextVideoSideBySide"
+
+<br />
+
+{' '}
+
+<TextVideoSideBySide
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    videoUrl: 'https://www.youtube.com/embed/g-NVjP2srw4',
+  }}
+/>
+
+#### Structure Details
+
+```
+  {
+    title: 'Intro headline',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
+    videoUrl: 'https://www.youtube.com/embed/g-NVjP2srw4',
+    id: 'intro-id',
+    backgroundColor: '#FFFFFF',
+    template: 'TextVideoSideBySide',
+  },
+```
+
+<br />
+<br />
+
+#### #5 Video-Text-Side-By-Side
+
+Template Name: "VideoTextSideBySide"
+
+<br />
+
+<VideoTextSideBySide
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    videoUrl: 'https://www.youtube.com/embed/g-NVjP2srw4',
+  }}
+/>
+
+#### Structure Details
+
+```
+  {
+    title: 'Intro headline',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
+    videoUrl: 'https://www.youtube.com/embed/g-NVjP2srw4',
+    id: 'intro-id',
+    backgroundColor: '#FFFFFF',
+    template: 'VideoTextSideBySide',
+  },
+```
+
+<br />
+<br />
+#### #6 Text-Image-Center-Aligned
+
+Template Name: "TextImageCenterAligned"
+
+<br />
+
+<TextImageCenterAligned
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    imagePath: '/images/content/teaser.png',
+  }}
+  scrollTop={() => {}}
+  showScroll={true}
+/>
+
+#### Structure Details
+
+```
+  {
+    title: 'How to contribute to traceability and why?',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
+    imageUrl:
+      'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+    backgroundColor: '#F9F9F9',
+    id: 'data-id',
+    template: 'TextImageCenterAligned',
+  },
+```
+
+<br />
+<br />
+
+#### #7 Text-Center-Aligned
+
+Template Name: "TextCenterAligned"
+
+<br />
+
+<TextCenterAligned
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+  }}
+  scrollTop={() => {}}
+  showScroll={true}
+/>
+
+#### Structure Details
+
+```
+  {
+    title: 'How to contribute to traceability and why?',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
+    backgroundColor: '#F9F9F9',
+    id: 'data1-id',
+    template: 'TextCenterAligned',
+  },
+```
+
+<br />
+<br />
+
+#### #8 Text-Image-Side-By-Side
+
+Template Name: "TextImageSideBySide"
+
+<br />
+
+<TextImageSideBySide
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+  }}
+  scrollTop={() => {}}
+  showScroll={true}
+/>
+
+#### Structure Details
+
+```
+  {
+    title: 'How to contribute to traceability and why?',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
+    imageUrl:
+      'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
+    backgroundColor: '#F9F9F9',
+    id: 'data2-id',
+    template: 'TextImageSideBySide',
+  },
+```
+
+<br />
+<br />
+
+#### #9 TextCenterAlignedBody2
+
+Template Name: "TextCenterAlignedBody2"
+
+<br />
+
+<TextCenterAlignedBody2
+  provider={{
+    title: 'Example',
+    subTitles: [
+      "In this example, an SME produces a batch of gears with batch number XX1235509 and part number 5A52625. After the parts have been manufactured, the SME creates a digital twin for this batch in the <strong class='tooltip'>Digital Twin Registry<0>Each traceable object is mapped via a digital twin and registered in the Digital Twin Registry</0></strong> using the <strong class='tooltip'>Batch<0>Represents the master data of a batch after the assembly process. Relevant for manufacturers of components with large batches, which are produced under the same manufacturing conditions and bundled in a batch number.</0></strong> data model in accordance with the Catena-X standards. In addition, a <strong class='tooltip'>Catena-X Unique ID<0>Catena-X ID - Universally Unique Identifier (UUID): Each object (raw material, component or vehicle) receives a unique Catena-X ID for an unequivocally identification in the Catena-X data room.</0></strong> is generated for the batch so that it can be clearly identified in the Catena-X ecosystem. The <strong class='tooltip'>EDC<0>The Eclipse Dataspace Connector (EDC) is the standard connector within the Catena-X network that ensures secure and sovereign data exchange.</0></strong> provides the customer with a data offer to retrieve this data from the digital twin. The physical components (gears) are then sent to the customer.<1></1><1></1><1></1>",
+      "The customer receives the SME's batch of gears and scans them when the transmission is manufactured. He also creates a digital twin and a Catena-X unique ID for the transmission (serial number 21B294301258, part number 5A52479). He uses the <strong class='tooltip'>SerialPartTypization<0>Represents the master data of a component with its own serial number after the assembly process. Relevant for manufacturers of serialized individual parts or vehicle manufacturers.</0></strong> data model to register his digital twin. He makes the information from the digital twin available to his customer, in this case to the OEM, via a corresponding data offer in the EDC. To logically link the two digital twins (batch of gears to transmissions), the Catena-X Unique ID of the batch is determined via a look-up in the Digital Twin Registry and stored in the digital twin of the transmission using the <strong class='tooltip'>AssemblyPartRelation<0>Represents the relationship between the components after the assembly process. For example, which batch (gear wheel, raw material) is installed in which serialized part (transmission) in which vehicle.</0></strong> data model. This logical link creates the Catena-X data chain.<1></1><1></1><1></1>",
+      'The same process happens at all levels, as in the example above, between the customer and the OEM.<1></1><1></1><1></1>',
+    ],
+  }}
+/>
+
+<br />
+
+#### Structure Details
+
+```
+      {
+        title '',
+        subTitles [
+          'In this example, an SME produces a batch of gears with batch number XX1235509 and part number 5A52625. After the parts have been manufactured, the SME creates a digital twin for this batch in the <strong class='tooltip'>Digital Twin Registry<0>Each traceable object is mapped via a digital twin and registered in the Digital Twin Registry</0></strong> using the <strong class='tooltip'>Batch<0>Represents the master data of a batch after the assembly process. Relevant for manufacturers of components with large batches, which are produced under the same manufacturing conditions and bundled in a batch number.</0></strong> data model in accordance with the Catena-X standards. In addition, a <strong class='tooltip'>Catena-X Unique ID<0>Catena-X ID - Universally Unique Identifier (UUID): Each object (raw material, component or vehicle) receives a unique Catena-X ID for an unequivocally identification in the Catena-X data room.</0></strong> is generated for the batch so that it can be clearly identified in the Catena-X ecosystem. The <strong class='tooltip'>EDC<0>The Eclipse Dataspace Connector (EDC) is the standard connector within the Catena-X network that ensures secure and sovereign data exchange.</0></strong> provides the customer with a data offer to retrieve this data from the digital twin. The physical components (gears) are then sent to the customer.<1></1><1></1><1></1>',
+          'The customer receives the SME's batch of gears and scans them when the transmission is manufactured. He also creates a digital twin and a Catena-X unique ID for the transmission (serial number 21B294301258, part number 5A52479). He uses the <strong class='tooltip'>SerialPartTypization<0>Represents the master data of a component with its own serial number after the assembly process. Relevant for manufacturers of serialized individual parts or vehicle manufacturers.</0></strong> data model to register his digital twin. He makes the information from the digital twin available to his customer, in this case to the OEM, via a corresponding data offer in the EDC. To logically link the two digital twins (batch of gears to transmissions), the Catena-X Unique ID of the batch is determined via a look-up in the Digital Twin Registry and stored in the digital twin of the transmission using the <strong class='tooltip'>AssemblyPartRelation<0>Represents the relationship between the components after the assembly process. For example, which batch (gear wheel, raw material) is installed in which serialized part (transmission) in which vehicle.</0></strong> data model. This logical link creates the Catena-X data chain.<1></1><1></1><1></1>',
+          'The same process happens at all levels, as in the example above, between the customer and the OEM.<1></1><1></1><1></1>'
+          ],
+        id 'details3-id',
+        backgroundColor '#f9f9f9',
+        template 'TextCenterAlignedBody2'
+      }
+```
+
+{' '}
+
+<br />
+<br />
+
+#### #10 TextImageSideBySideWithSections
+
+Template Name: "TextImageSideBySideWithSections"
+
+<br />
+
+<TextImageSideBySideWithSections
+  provider={{
+    title: 'Example title',
+    description: 'Example description for the component',
+    imagePath: '/images/content/teaser.png',
+    subsections: [
+      {
+        title: 'User Management',
+        description:
+          'To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>',
+        id: 'user-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Role Descriptions',
+              id: '/',
+              internal: false,
+            },
+            {
+              title: '>> User Management',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+      {
+        title: 'Configure Company IdP (optional)',
+        description:
+          'If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>',
+        id: 'idp-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Configure your IdP',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+      {
+        title: 'Company Certificates',
+        description: '',
+        id: 'company-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Setup your company certificates',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+      {
+        title: 'Use Case Frameworks',
+        description: '',
+        id: 'usecase-id',
+        sectionLink: {
+          data: [
+            {
+              title: '>> Sign the relevant use case frameworks.',
+              id: '/',
+              internal: false,
+            },
+          ],
+        },
+      },
+    ],
+    sectionLink: {
+      data: [
+        {
+          title: '>> IdP Config',
+          id: 'idp-id',
+          internal: true,
+        },
+        {
+          title: '>> User Management',
+          id: 'user-id',
+          internal: true,
+        },
+        {
+          title: '>> Company Certificates',
+          id: 'company-id',
+          internal: true,
+        },
+        {
+          title: '>> Use Case Frameworks',
+          id: 'usecase-id',
+          internal: true,
+        },
+      ],
+    },
+  }}
+/>
+
+<br />
+
+#### Structure Details
+
+```
+      {
+        title: "Configure your company",
+        description: "Configure your company before participating fully inside the network<1></1><1></1>",
+        imagePath: "/images/logos/cx-text.svg",
+        backgroundColor: "#F9F9F9",
+        id: "company-setting-id",
+        template: "TextImageSideBySideWithSections",
+        sectionLink: {
+          data: [
+            {
+              title: ">> IdP Config",
+              id: idp-id",
+              internal: true
+            },
+            {
+              title: ">> User Management",
+              id: "user-id",
+              internal: true
+            },
+            {
+              title: ">> Company Certificates",
+              id: "company-id",
+              internal: true
+            },
+            {
+              title: ">> Use Case Frameworks",
+              id: "usecase-id",
+              internal: true
+            }
+          ]
+        },
+        subsections: [
+          {
+            title: "User Management",
+            description:
+              "To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>",
+            id: "user-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Role Descriptions",
+                  id: "/role-details",
+                  internal: false
+                },
+                {
+                  title: ">> User Management",
+                  id: "/usermanagement",
+                  internal: false
+                }
+              ]
+            }
+          },
+          {
+            title: "Configure Company IdP (optional)",
+            description:
+              "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
+            id: idp-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Configure your IdP",
+                  id: "/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  internal: false
+                }
+              ]
+            }
+          },
+          {
+            title: "Company Certificates",
+            description: "",
+            id: "company-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Setup your company certificates",
+                  id: "/documentation/?path=docs%2F06.+Certificates%2F02.+Other+Certificates.md",
+                  internal: false
+                }
+              ]
+            }
+          },
+          {
+            title: "Use Case Frameworks",
+            description: "",
+            id: "usecase-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Sign the relevant use case frameworks.",
+                  id: "/documentation/?path=docs%2F06.+Certificates%2F01.+UseCase+Participation.md",
+                  internal: false
+                }
+              ]
+            }
+          }
+        ]
+      }
+```
+
+{' '}
+
+<br />
+<br />
+
+### Implementation
+
+To create a new page or enhance an existing page, the following steps need to get performed
+
+<br />
+
+#### New Page creation
+
+If a complete new page with the usage static data templates is planned, the page need to get introduced inside the portal frontend repo as well as inside the asset repo.
+The frontend repo is needed to introduce the page, permissions to the page as well as the navigation.
+
+<br />
+<br />
+
+#### Enhancing an existing page
+
+For enhancing an existing page, the asset files inside the assets repo => /public/assets/content/de/.... need to get enhanced.
+Please ensure that you extend all language files and not only one.
+
+By adding a new template (as mentioned above) inside the content files, the portal page will get automatically extended by the new content.

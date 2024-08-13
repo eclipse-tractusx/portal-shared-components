@@ -1,24 +1,8 @@
 # Changelog
 
-## 3.0.32
+## 3.1.0
 
-- Updated SearchInput component with debounce functionality
-
-## 3.0.31
-
-- Fix linting error and warnings
-
-## 3.0.30
-
-- updated the default value logic of SelectList component to handle onChange function
-
-## 3.0.29
-
-- updated status tag color and also updated theme and chip with 'deleted' property
-
-## 3.0.28
-
-- updated unrestricted packages suggested by dependabot
+- Integrate style-guide documentation into shared components and enable MDX support
 
 ## 3.0.27
 
