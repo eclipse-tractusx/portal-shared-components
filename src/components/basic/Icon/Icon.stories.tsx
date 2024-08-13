@@ -21,7 +21,6 @@ import { type Meta, type StoryFn } from '@storybook/react'
 
 import { Icon, type IconProps } from '.'
 import { Box } from '@mui/material'
-import CustomDoc from '../../../../docs/storybook/icon.mdx'
 import { IconButton } from '../IconButton'
 import { Typography } from '../Typography'
 import { type ReactNode } from 'react'
@@ -32,11 +31,6 @@ const meta: Meta<typeof Icon> = {
   argTypes: {
     onClick: {
       action: 'onClick',
-    },
-  },
-  parameters: {
-    docs: {
-      page: CustomDoc,
     },
   },
 }
