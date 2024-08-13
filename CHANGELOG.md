@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.1
+
+- Add Hyperlink component with enhanced features
+
 ## 3.1.0
 
 - Integrate style-guide documentation into shared components and enable MDX support

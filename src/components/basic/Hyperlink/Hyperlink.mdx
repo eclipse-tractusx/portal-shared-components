@@ -1,0 +1,155 @@
+{/*
+* Copyright (c) 2024 Contributors to the Eclipse Foundation
+*
+* See the NOTICE file(s) distributed with this work for additional
+* information regarding copyright ownership.
+*
+* This program and the accompanying materials are made available under the
+* terms of the Apache License, Version 2.0 which is available at
+* https://www.apache.org/licenses/LICENSE-2.0.
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+* License for the specific language governing permissions and limitations
+* under the License.
+*
+* SPDX-License-Identifier: Apache-2.0
+*/}
+
+import { Story, Meta } from '@storybook/blocks'
+import { Info as InfoIcon } from '@mui/icons-material'
+import { SharedThemeProvider } from '../SharedThemeProvider'
+import { SharedCssBaseline } from '../SharedCssBaseline'
+import { Hyperlink } from '.'
+
+<Meta title="Design Guidelines/Hyperlink" />
+
+## Enhanced Hyperlink Component
+
+### Overview
+
+The Enhanced Hyperlink Component is a versatile UI element designed for web applications to navigate users to different resources or pages both internally and externally. This component is an extension of the traditional hyperlink with added visual and functional features such as leading and trailing visuals, optional underlining, and a small size variant.
+
+### Hyperlink Component
+
+The `Hyperlink` component is used for creating styled links with options for icons, text size, and underline style.
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <Hyperlink
+    href="/?path=/docs/design-guidelines-hyperlink--docs"
+    text="Visit Home"
+  />
+</SharedThemeProvider>
+
+<br />
+
+The `Hyperlink` component allows for extensive customization:
+
+- **Text**: The text to be displayed for the hyperlink.
+- **Leading Icon**: Optional icon displayed before the text.
+- **Trailing Icon**: Optional icon displayed after the text.
+- **Underline**: Toggle the underline style for the hyperlink.
+- **Size**: Adjust the text size between normal and small.
+- **Heading**: Style the text to appear as a headline.
+
+<br />
+
+### Usage
+
+#### Basic Hyperlink
+
+- The basic version of the hyperlink appears with the default styling as defined in the design system, which includes the font, color, and size. 
+- It can be used to link to internal or external pages, documents, or trigger actions like opening modals.
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <Hyperlink
+    href="/?path=/docs/design-guidelines-hyperlink--docs"
+    text="Visit Home"
+  />
+</SharedThemeProvider>
+
+```jsx
+<Hyperlink
+    href="/?path=/docs/design-guidelines-hyperlink--docs"
+    text="Visit Home"
+/>
+```
+
+#### Leading and Trailing Visuals
+
+- Optional visuals/icons can be added to the left (leading) or right (trailing) of the hyperlink text. 
+- These visuals should provide additional context to the hyperlink or represent the type of action or destination.
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <Hyperlink
+    href="/?path=/docs/design-guidelines-hyperlink--docs"
+    text="Visit Home"
+    leadingIcon={<InfoIcon />}
+    trailingIcon={<InfoIcon />}
+  />
+</SharedThemeProvider>
+
+#### Underline
+
+- The component can be rendered with or without an underline to denote it as a clickable link. 
+- Underline behavior can be toggled and is typically shown on hover to highlight interactivity.
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <Hyperlink
+    href="/?path=/docs/design-guidelines-hyperlink--docs"
+    text="Visit Home"
+    underline
+  />
+</SharedThemeProvider>
+
+#### Small Size Variant
+
+- A smaller version of the hyperlink is available for use in contexts where space is limited or when the design calls for a more subtle hyperlink presence. 
+- Despite its smaller size, the component must remain legible and accessible.
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <Hyperlink
+    href="/?path=/docs/design-guidelines-hyperlink--docs"
+    text="Visit Home"
+    size="small"
+  />
+</SharedThemeProvider>
+
+#### Headline Text Variant
+
+- The heading text variant styles the hyperlink to look like a headline. This variant uses larger font sizes and potentially increased font weights to make the hyperlink stand out as a prominent piece of text.
+- It is particularly useful for section titles or important links that need to draw attention within the content.
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+  <Hyperlink
+    href="/?path=/docs/design-guidelines-hyperlink--docs"
+    text="Visit Home"
+    isHeading
+  />
+</SharedThemeProvider>
+
+### Do's
+
+- **Use the hyperlink component** to navigate to other pages or resources or to trigger actions within the application.
+- **Utilize leading or trailing visuals** when they add context or value to the hyperlink.
+- **Ensure that the hyperlink text is descriptive** and provides a clear understanding of the linked content or action.
+- **Maintain consistent usage of underlining** across the application for clarity and design cohesion.
+
+### Don'ts
+
+- **Avoid using non-descriptive text** like "click here" or "link" as these do not provide context or meaning.
+- **Do not clutter the hyperlink with multiple visuals**; choose either a leading or trailing visual.
+- **Refrain from using the small size variant** when the hyperlink is a primary call to action or needs to stand out.
+- **Do not compromise accessibility** by disabling focus states or not providing adequate contrast between the hyperlink and its background.
+
+### Implementation Notes
+
+- **When using visuals**, make sure they are of high quality and do not pixelate on scaling.
+
