@@ -8,10 +8,6 @@ declare module '@mui/material/SvgIcon' {
     default: true
   }
   interface SvgIconPropsSizeOverrides {
-    // small: false
-    // medium: false
-    // large: false
-    // inherit: false
     '8': true
     '10': true
     '12': true

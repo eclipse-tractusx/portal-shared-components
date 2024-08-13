@@ -741,7 +741,7 @@ export const theme = createTheme({
         },
         {
           props: { fontSize: '14' },
-          style: { fontSize: '14px' },
+          style: { fontSize: typography.pxToRem(14) },
         },
         {
           props: { fontSize: '16' },
