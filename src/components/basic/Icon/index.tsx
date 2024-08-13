@@ -40,7 +40,5 @@ export const Icon: React.FC<IconProps> = ({ iconName, ...props }) => {
     return null
   }
 
-  const { fontSize = 'inherit', color = 'default' } = props
-
-  return <IconComponent fontSize={fontSize} color={color} {...props} />
+  return <IconComponent {...props} />
 }

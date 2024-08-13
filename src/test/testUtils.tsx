@@ -19,7 +19,11 @@
 
 import React, { type ReactElement } from 'react'
 import { SharedThemeProvider } from '../components'
-import { render as rtlRender, type RenderOptions } from '@testing-library/react'
+import {
+  render as rtlRender,
+  type RenderOptions,
+  type RenderResult,
+} from '@testing-library/react'
 
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return <SharedThemeProvider>{children}</SharedThemeProvider>
@@ -28,4 +32,4 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
 export const render = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
-) => rtlRender(ui, { wrapper: AllTheProviders, ...options })
+): RenderResult => rtlRender(ui, { wrapper: AllTheProviders, ...options })

@@ -60,7 +60,7 @@ describe('Icon Component props validation: ', () => {
   })
 
   it('renders with state - default, success, warning, error', () => {
-    const { container } = render(<Icon iconName={iconName} />)
+    const { container } = render(<Icon iconName={iconName} color="default" />)
     const { container: container2 } = render(
       <Icon iconName={iconName} color="success" />
     )
@@ -99,8 +99,5 @@ describe('Icon Component props validation: ', () => {
 
     const icon = getByTestId('icon')
     expect(icon).toBeInTheDocument()
-    expect(icon).toHaveClass(
-      'MuiSvgIcon-colorDefault MuiSvgIcon-fontSizeInherit'
-    )
   })
 })

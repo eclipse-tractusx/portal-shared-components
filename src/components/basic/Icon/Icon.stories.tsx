@@ -19,14 +19,15 @@
 
 import { type Meta, type StoryFn } from '@storybook/react'
 
-import { Icon, type IconProps } from '.'
+import { Icon as Component, type IconProps } from '.'
 import { Box } from '@mui/material'
 import { IconButton } from '../IconButton'
 import { Typography } from '../Typography'
 import { type ReactNode } from 'react'
-const meta: Meta<typeof Icon> = {
+import { Button } from '../Button'
+const meta: Meta<typeof Component> = {
   title: 'Icon',
-  component: Icon,
+  component: Component,
   tags: ['autodocs'],
   argTypes: {
     onClick: {
@@ -36,7 +37,9 @@ const meta: Meta<typeof Icon> = {
 }
 export default meta
 
-const Template: StoryFn<typeof Icon> = (args: IconProps) => <Icon {...args} />
+const Template: StoryFn<typeof Component> = (args: IconProps) => (
+  <Component {...args} />
+)
 export const IconPreview = Template.bind({})
 IconPreview.args = {
   iconName: 'Home',
@@ -77,25 +80,25 @@ export const IconSizeVariation = () => {
   return (
     <Box display={'flex'} flexDirection={'row'} gap={'1.6rem'} width={200}>
       <IconPreviewBlock helperText="8px">
-        <Icon iconName="Home" fontSize={'8'} />
+        <Component iconName="Home" fontSize={'8'} />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="10px">
-        <Icon iconName="Home" fontSize={'10'} />
+        <Component iconName="Home" fontSize={'10'} />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="12px">
-        <Icon iconName="Home" fontSize={'12'} />
+        <Component iconName="Home" fontSize={'12'} />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="14px">
-        <Icon iconName="Home" fontSize={'14'} />
+        <Component iconName="Home" fontSize={'14'} />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="16px">
-        <Icon iconName="Home" fontSize={'16'} />
+        <Component iconName="Home" fontSize={'16'} />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="18px">
-        <Icon iconName="Home" fontSize={'18'} />
+        <Component iconName="Home" fontSize={'18'} />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="20px">
-        <Icon iconName="Home" fontSize={'20'} />
+        <Component iconName="Home" fontSize={'20'} />
       </IconPreviewBlock>
     </Box>
   )
@@ -104,19 +107,16 @@ export const IconStateVariation = () => {
   return (
     <Box display={'flex'} flexDirection={'row'} gap={'1.6rem'} width={200}>
       <IconPreviewBlock helperText="default">
-        <Icon iconName="Home" />
-      </IconPreviewBlock>
-      <IconPreviewBlock helperText="primary">
-        <Icon iconName="Home" color="primary" />
+        <Component iconName="Home" />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="success">
-        <Icon iconName="Home" color="success" />
+        <Component iconName="Home" color="success" />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="warning">
-        <Icon iconName="Home" color="warning" />
+        <Component iconName="Home" color="warning" />
       </IconPreviewBlock>
       <IconPreviewBlock helperText="error">
-        <Icon iconName="Home" color="error" />
+        <Component iconName="Home" color="error" />
       </IconPreviewBlock>
     </Box>
   )
@@ -124,8 +124,20 @@ export const IconStateVariation = () => {
 
 export const IconWithinButton = () => {
   return (
-    <IconButton color="secondary" size="medium" disabled={false}>
-      <Icon iconName="Add" />
-    </IconButton>
+    <>
+      <IconButton color="secondary" size="medium" disabled={false}>
+        <Component iconName="Add" fontSize="20" />
+      </IconButton>
+
+      <Button
+        startIcon={<Component iconName="AddCircleOutline" />}
+        size="small"
+        sx={{ margin: '0 0.5rem' }}
+      >
+        Add New
+      </Button>
+
+      <Button startIcon={<Component iconName="People" />}>New User</Button>
+    </>
   )
 }
