@@ -97,7 +97,8 @@ Use the `Icon` component to render MUI icons that are scalable and customizable.
 #### Guidance
 
 - **Size Variants**: The `Icon` component supports several size variants (`8`, `10`, `12`, `14`, `16`, `18`, `20`). Use these sizes according to the design specifications to maintain visual hierarchy.
-- **Color Customization**: Icons can be colored using the `color` prop, which supports standard MUI color schemes (`error`, `default`, `success`, `warning`). Ensure the color chosen aligns with the overall design theme.
+- **Color Customization**: Icons can be colored using the `color` prop, which supports standard MUI color schemes ( `inherit`, `error`, `default`, `success`, `warning`). Ensure the color chosen aligns with the overall design theme.  
+By default, if no color is specified, the icon will `inherit` the color from its parent.
 - **Accessibility**: Always provide a descriptive `aria-label` for screen readers, especially when the icon conveys an important action or meaning.
 - **Scalability**: The `Icon` component is designed to be easily extendable with additional icon libraries (currently configured with MUI icons only). Use the `iconName` prop to switch between different icon sets without altering the component's implementation.
 - **Error Handling**: If an invalid `iconName` is provided, the component will log a warning and render nothing. This behavior ensures that the application fails gracefully without breaking the UI.
@@ -112,6 +113,3 @@ Use the `Icon` component to render MUI icons that are scalable and customizable.
   aria-label="Search icon"
 />
 ```
-
-- **Use in Buttons**: When used within buttons, ensure the icon size is appropriate for the button's height and does not overshadow the text content.
-- **Responsive Design**: The icon sizes should be chosen carefully to adapt well to different screen sizes. Avoid using very large icons on smaller devices unless it enhances the user experience.

@@ -106,6 +106,11 @@ export const IconSizeVariation = () => {
 export const IconStateVariation = () => {
   return (
     <Box display={'flex'} flexDirection={'row'} gap={'1.6rem'} width={200}>
+      <IconPreviewBlock helperText="inherit">
+        <IconButton color="primary" size="small">
+          <Component iconName="Home" />
+        </IconButton>
+      </IconPreviewBlock>
       <IconPreviewBlock helperText="default">
         <Component iconName="Home" />
       </IconPreviewBlock>
@@ -122,22 +127,19 @@ export const IconStateVariation = () => {
   )
 }
 
-export const IconWithinButton = () => {
+export const IconUsageWithinButton = () => {
   return (
     <>
-      <IconButton color="secondary" size="medium" disabled={false}>
+      <IconButton color="secondary" size="medium">
         <Component iconName="Add" fontSize="20" />
       </IconButton>
-
       <Button
         startIcon={<Component iconName="AddCircleOutline" />}
         size="small"
-        sx={{ margin: '0 0.5rem' }}
+        sx={{ marginLeft: '0.5rem' }}
       >
         Add New
       </Button>
-
-      <Button startIcon={<Component iconName="People" />}>New User</Button>
     </>
   )
 }
