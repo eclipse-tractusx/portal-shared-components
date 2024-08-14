@@ -29,6 +29,9 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return <SharedThemeProvider>{children}</SharedThemeProvider>
 }
 
+/**
+ * @internal
+ */
 export const render = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>

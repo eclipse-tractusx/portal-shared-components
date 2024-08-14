@@ -8,6 +8,10 @@
 
 - Integrate style-guide documentation into shared components and enable MDX support
 
+## 3.0.33
+
+- updated the condition in handleChange in selectList component
+
 ## 3.0.32
 
 - Updated SearchInput component with debounce functionality
