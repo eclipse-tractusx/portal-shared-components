@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.1
+
+- Extend pagination support to table component
+
 ## 3.1.0
 
 - Integrate style-guide documentation into shared components and enable MDX support
