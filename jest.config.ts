@@ -32,5 +32,5 @@ module.exports = {
     '@mui/material/styles/createTypography':
       '<rootDir>/src/test/__mocks__/createTypography.ts',
   },
-  setupFiles: ['<rootDir>/src/test/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/test/setupTests.ts'],
 }

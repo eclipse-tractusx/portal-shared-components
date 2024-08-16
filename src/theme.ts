@@ -709,6 +709,54 @@ export const theme = createTheme({
         },
       },
     },
+    MuiSvgIcon: {
+      variants: [
+        {
+          props: { color: 'default' },
+          style: { color: palette.text.primary },
+        },
+        {
+          props: { color: 'error' },
+          style: { color: palette.danger.danger },
+        },
+        {
+          props: { color: 'success' },
+          style: { color: palette.success.main },
+        },
+        {
+          props: { color: 'warning' },
+          style: { color: palette.warning.main },
+        },
+        {
+          props: { fontSize: '8' },
+          style: { fontSize: typography.pxToRem(8) },
+        },
+        {
+          props: { fontSize: '10' },
+          style: { fontSize: typography.pxToRem(10) },
+        },
+        {
+          props: { fontSize: '12' },
+          style: { fontSize: typography.pxToRem(12) },
+        },
+        {
+          props: { fontSize: '14' },
+          style: { fontSize: typography.pxToRem(14) },
+        },
+        {
+          props: { fontSize: '16' },
+          style: { fontSize: typography.pxToRem(16) },
+        },
+        {
+          props: { fontSize: '18' },
+          style: { fontSize: typography.pxToRem(18) },
+        },
+        {
+          props: { fontSize: '20' },
+          style: { fontSize: typography.pxToRem(20) },
+        },
+      ],
+    },
     MuiTabs: {
       styleOverrides: {
         root: {

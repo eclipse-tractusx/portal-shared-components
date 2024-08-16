@@ -26,5 +26,6 @@ const createTypography: (
 ) => TypographyOptions = (palette, typography) => ({
   ...palette,
   ...typography,
+  pxToRem: jest.fn,
 })
 export default createTypography
