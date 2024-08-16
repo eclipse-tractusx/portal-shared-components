@@ -103,6 +103,7 @@ export { LinearProgressWithValueLabel } from './basic/Progress/LinearProgress/Li
 export { ErrorBar } from './basic/ErrorBar/ErrorBar'
 export { NewSubNavigation } from './basic/NewSubNavigation'
 export { QuickLinks } from './basic/QuickLinks'
+export { Hyperlink } from './basic/Hyperlink'
 
 export type { TableProps } from './basic/Table'
 export type {
