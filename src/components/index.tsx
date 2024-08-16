@@ -31,6 +31,7 @@ export { FileIcon } from './basic/CustomIcons/FileIcon'
 export { Image, TransparentPixel, LogoGrayData } from './basic/Image'
 export { ImageGallery } from './basic/ImageGallery'
 export { ImageItem } from './basic/ImageGallery/ImageItem'
+export { Icon } from './basic/Icon'
 export { IconButton } from './basic/IconButton'
 export { Input } from './basic/Input'
 export { LanguageSwitch } from './basic/LanguageSwitch'
@@ -102,6 +103,7 @@ export { LinearProgressWithValueLabel } from './basic/Progress/LinearProgress/Li
 export { ErrorBar } from './basic/ErrorBar/ErrorBar'
 export { NewSubNavigation } from './basic/NewSubNavigation'
 export { QuickLinks } from './basic/QuickLinks'
+export { Hyperlink } from './basic/Hyperlink'
 
 export type { TableProps } from './basic/Table'
 export type {

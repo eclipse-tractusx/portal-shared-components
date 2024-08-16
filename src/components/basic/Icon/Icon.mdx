@@ -1,0 +1,115 @@
+{/*
+* Copyright (c) 2024 Contributors to the Eclipse Foundation
+*
+* See the NOTICE file(s) distributed with this work for additional
+* information regarding copyright ownership.
+*
+* This program and the accompanying materials are made available under the
+* terms of the Apache License, Version 2.0 which is available at
+* https://www.apache.org/licenses/LICENSE-2.0.
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+* License for the specific language governing permissions and limitations
+* under the License.
+*
+* SPDX-License-Identifier: Apache-2.0
+*/}
+
+import { Canvas, IconGallery, IconItem, Meta, Story } from '@storybook/blocks'
+import { Icon } from '.'
+import * as IconStories from './Icon.stories'
+
+<Meta title="Design Guidelines/Icon" />
+
+## Icon
+
+### Sizes Variations
+
+<Canvas of={IconStories.IconSizeVariation} />
+
+### State Variations
+
+<Canvas of={IconStories.IconStateVariation} />
+
+<br />
+#### Most Used Icons in the Application
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon Name</th>
+      <th>Purpose</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    {[
+      { label: 'Navigate home', value: 'Home' },
+      { label: 'Open menu', value: 'Menu' },
+      { label: 'Search items', value: 'Search' },
+      { label: 'User account', value: 'AccountCircle' },
+      { label: 'Settings', value: 'Settings' },
+      { label: 'Notifications', value: 'Notifications' },
+      { label: 'Mark as favorite', value: 'Favorite' },
+      { label: 'Close or exit', value: 'Close' },
+      { label: 'Confirm action', value: 'Check' },
+      { label: 'Indicate error', value: 'Error' },
+      { label: 'Help or info', value: 'HelpOutline' },
+      { label: 'Log out', value: 'Logout' },
+      { label: 'Add new item', value: 'Add' },
+      { label: 'Edit item', value: 'Edit' },
+      { label: 'Delete item', value: 'Delete' },
+      { label: 'Navigate forward', value: 'ArrowForward' },
+      { label: 'Navigate back', value: 'ArrowBack' },
+      { label: 'Download', value: 'FileDownload' },
+      { label: 'Upload', value: 'FileUpload' },
+      { label: 'Refresh content', value: 'Refresh' },
+      { label: 'Print document', value: 'Print' },
+      { label: 'External link', value: 'ExitToApp' },
+    ].map((d, i) => (
+      <tr align="left" key={d.label}>
+        <td>{d.value}</td>
+        <td>{d.label}</td>
+        <td align="center">
+          <Icon iconName={d.value} />
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+> **Note** MUI icons are exported in PascalCase. <a href="https://mui.com/material-ui/icons/#usage" target="_blank">Reference</a>
+
+#### Details
+
+The `Icon` component provides a flexible and scalable way to integrate icons into your application. It leverages Material-UI's `SvgIcon` while extending support for custom sizes.
+
+#### Interaction
+
+Icons can be used standalone or as part of other components, such as buttons or lists. They serve as visual indicators and should be recognizable and consistent across the application.
+
+#### Context and Usage
+
+Use the `Icon` component to render MUI icons that are scalable and customizable. Icons can represent actions, objects, or navigation elements. Ensure icons are used consistently and are intuitive for the user.
+
+#### Guidance
+
+- **Size Variants**: The `Icon` component supports several size variants (`8`, `10`, `12`, `14`, `16`, `18`, `20`). Use these sizes according to the design specifications to maintain visual hierarchy.
+- **Color Customization**: Icons can be colored using the `color` prop, which supports standard MUI color schemes ( `inherit`, `error`, `default`, `success`, `warning`). Ensure the color chosen aligns with the overall design theme.  
+By default, if no color is specified, the icon will `inherit` the color from its parent.
+- **Accessibility**: Always provide a descriptive `aria-label` for screen readers, especially when the icon conveys an important action or meaning.
+- **Scalability**: The `Icon` component is designed to be easily extendable with additional icon libraries (currently configured with MUI icons only). Use the `iconName` prop to switch between different icon sets without altering the component's implementation.
+- **Error Handling**: If an invalid `iconName` is provided, the component will log a warning and render nothing. This behavior ensures that the application fails gracefully without breaking the UI.
+
+#### Example Usage
+
+```jsx
+<Icon
+  iconName="Search"
+  fontSize="16"
+  color="success"
+  aria-label="Search icon"
+/>
+```
