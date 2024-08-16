@@ -26,6 +26,8 @@ on:
     paths:
       - src/**
       - yarn.lock
+      - package.json
+
   workflow_dispatch:
 
 jobs:
@@ -38,31 +40,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
-      - name: Get latest git tag
-        id: git-tag-latest
-        uses: actions-ecosystem/action-get-latest-tag@v1
-
-      - name: Remove tag 'v' prefix
-        run: echo "GIT_VERSION=$(echo ${{ steps.git-tag-latest.outputs.tag }} | cut -c2-)" >> $GITHUB_ENV
-
-      - name: Get npm version
-        id: npm-version
-        uses: martinbeentjes/npm-get-version-action@3cf273023a0dda27efcd3164bdfb51908dd46a5b # v1.3.1
-
-      - name: Output versions
-        run: |
-          echo git ${{ env.GIT_VERSION }}
-          echo npm ${{ steps.npm-version.outputs.current-version }}
-
-      - name: Check if tag already exists
-        if: env.GIT_VERSION == steps.npm-version.outputs.current-version
-        run: |
-          echo git tag for npm versions exists - please run `yarn version --patch` and update PR
-          exit 1
-
-      - name: Tag available
-        run: echo versions not equal - running checks
-
       - name: Install Dependencies
         run: yarn
 
@@ -74,6 +51,9 @@ jobs:
 
       - name: Unit Tests
         run: CI=true yarn test
+
+      - name: Build Storybook
+        run: yarn build:storybook
 
       - name: Build Library
         run: yarn build
