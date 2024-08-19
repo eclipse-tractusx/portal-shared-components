@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.2.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.1.2...v3.2.0) (2024-08-19)
+
+
+### Features
+
+* simplify and automate release versioning ([3824c8c](https://github.com/eclipse-tractusx/portal-shared-components/commit/3824c8ccec94cbc5856c7094d92d7db21058f304))
+* **table:** support pagination in table component ([fc362a0](https://github.com/eclipse-tractusx/portal-shared-components/commit/fc362a08d2c881273f1cc3f9dd07cf26ad099547))
+* **table:** support pagination in table component ([0cf4419](https://github.com/eclipse-tractusx/portal-shared-components/commit/0cf44195d0769171da640e28a90d84f7f66452fa))
+
 ## 3.1.3
 
 - Extend pagination support to table component
