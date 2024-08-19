@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.3
+
+- Extend pagination support to table component
+
 ## 3.1.2
 
 - Add Hyperlink component with enhanced features

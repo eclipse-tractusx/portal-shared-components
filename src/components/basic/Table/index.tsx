@@ -36,6 +36,7 @@ import { Error500Overlay } from './components/Error/Error500Overlay'
 import { Error400Overlay } from './components/Error/Error400Overlay'
 import type { View } from '../ViewSelector'
 import { type SortOptionsType } from '../SortOption'
+import { LoadMoreButton } from '../Button/LoadMoreButton'
 
 export { StatusTag }
 export type toolbarType = 'basic' | 'premium' | 'ultimate' | 'searchAndFilter'
@@ -79,6 +80,9 @@ export interface TableProps extends DataGridProps {
   }
   reload?: () => void
   autoFocus?: boolean
+  hasMore?: boolean
+  loadLabel?: string
+  nextPage?: () => void
 }
 
 export const Table = ({
@@ -119,6 +123,9 @@ export const Table = ({
   error,
   reload,
   autoFocus = true,
+  hasMore = false,
+  loadLabel = 'load more',
+  nextPage,
   ...props
 }: TableProps) => {
   const toolbarProps = {
@@ -207,47 +214,65 @@ export const Table = ({
   }
 
   return (
-    <Box
-      className="cx-table"
-      sx={{
-        '.MuiDataGrid-columnHeaders': {
-          backgroundColor: columnHeadersBackgroundColor,
-        },
-        '.MuiDataGrid-root': {
-          border: hasBorder
-            ? `1px solid ${theme.palette.border.border01}`
-            : 'none',
-        },
-      }}
-    >
-      <DataGrid
+    <>
+      <Box
+        className="cx-table"
         sx={{
-          '&.MuiDataGrid-root .MuiDataGrid-cell': {
-            alignItems: alignCell,
-            fontSize: fontSizeCell,
+          '.MuiDataGrid-columnHeaders': {
+            backgroundColor: columnHeadersBackgroundColor,
           },
-          '&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus-within':
-            {
-              outline: 'none',
+          '.MuiDataGrid-root': {
+            border: hasBorder
+              ? `1px solid ${theme.palette.border.border01}`
+              : 'none',
+          },
+        }}
+      >
+        <DataGrid
+          sx={{
+            '&.MuiDataGrid-root .MuiDataGrid-cell': {
+              alignItems: alignCell,
+              fontSize: fontSizeCell,
             },
-        }}
-        // eslint-disable-next-line
-        getRowId={(row) => row.id}
-        components={{
-          Toolbar: () => toolbarView(),
-          NoRowsOverlay,
-        }}
-        onRowSelectionModelChange={handleOnCellClick}
-        {...{
-          rows,
-          columns,
-          autoHeight,
-          columnHeaderHeight,
-          rowHeight,
-          checkboxSelection,
-        }}
-        {...props}
-      />
-    </Box>
+            '&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus-within':
+              {
+                outline: 'none',
+              },
+          }}
+          // eslint-disable-next-line
+          getRowId={(row) => row.id}
+          components={{
+            Toolbar: () => toolbarView(),
+            NoRowsOverlay,
+          }}
+          onRowSelectionModelChange={handleOnCellClick}
+          {...{
+            rows,
+            columns,
+            autoHeight,
+            columnHeaderHeight,
+            rowHeight,
+            checkboxSelection,
+          }}
+          {...props}
+        />
+      </Box>
+      {rows.length > 0 && hasMore ? (
+        <Box
+          className="cx-table__page-loading--loader"
+          sx={{
+            width: '100%',
+            height: '100px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <LoadMoreButton label={loadLabel} onClick={nextPage} />
+        </Box>
+      ) : (
+        <></>
+      )}
+    </>
   )
 }
