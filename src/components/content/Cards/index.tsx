@@ -43,7 +43,6 @@ interface CardsProps {
   imageShape?: CardProps['imageShape']
   imageLoader?: CardProps['imageLoader']
   imageElement?: CardProps['imageElement']
-  columns?: number
   readMoreText?: CardProps['readMoreText']
   readMoreLink?: CardProps['readMoreLink']
   addButtonClicked?: boolean
@@ -60,6 +59,7 @@ interface CardsProps {
   status?: string
   boxClickable?: boolean
   showFavIcon?: boolean
+  showCardViewOfAddServiceCard?: boolean
 }
 
 export const Cards = ({
@@ -71,8 +71,6 @@ export const Cards = ({
   imageSize,
   imageShape,
   imageLoader,
-  // @ts-expect-error keep for backward compatibility
-  columns = 6,
   expandOnHover,
   filledBackground,
   addButtonClicked = false,
@@ -93,6 +91,7 @@ export const Cards = ({
   showStatus = true,
   boxClickable = false,
   showFavIcon = false,
+  showCardViewOfAddServiceCard = true,
 }: CardsProps) => {
   const settings = {
     variant,
@@ -132,6 +131,7 @@ export const Cards = ({
           backgroundColor={'common.white'}
           onButtonClick={onNewCardButton}
           title={newButtonText}
+          showCardView={showCardViewOfAddServiceCard}
         />
       )}
       {items?.map((item) => (

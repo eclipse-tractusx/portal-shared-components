@@ -18,25 +18,45 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
-
+import type { Meta, StoryObj } from '@storybook/react'
 import { CardAddService as Component } from './CardAddService'
 
-export default {
-  title: 'Cards',
+const meta: Meta<typeof Component> = {
+  title: 'Cards / Add Service Card',
   component: Component,
   tags: ['autodocs'],
-  argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (
-  args: React.ComponentProps<typeof Component>
-) => <Component {...args} />
+export default meta
 
-export const AddServiceCard = Template.bind({})
-AddServiceCard.args = {
-  title: 'Create new App',
-  onButtonClick: () => {
-    console.log('Add new app')
+type Story = StoryObj<typeof Component>
+
+export const FullScreenVersion: Story = {
+  args: {
+    title: 'Create new App',
+    onButtonClick: () => {
+      console.log('Add new app')
+    },
+    showCardView: false,
+  },
+}
+
+export const CardElementVersion: Story = {
+  args: {
+    title: 'Create new App',
+    onButtonClick: () => {
+      console.log('Add new app')
+    },
+    showCardView: true,
+  },
+}
+
+export const CardWithLongTitle: Story = {
+  args: {
+    title: 'Create new Service or Create new App or Create new User Testing',
+    onButtonClick: () => {
+      console.log('Add new app')
+    },
+    showCardView: true,
   },
 }
