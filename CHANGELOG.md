@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.1
+
+- Rounded circle stepper component
+
 ## [3.2.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.1.2...v3.2.0) (2024-08-19)
 
 ### Features
