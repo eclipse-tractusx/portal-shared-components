@@ -58,7 +58,7 @@ export const RoundedStepper = ({
             )
             .map((item, i) => (
               <RoundedStepperItem
-                key={i}
+                key={item.step}
                 color={item.color ?? ''}
                 activeStep={activeStep}
                 index={i + 1}
