@@ -17,7 +17,6 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useEffect, useState } from 'react'
 import { Box } from '@mui/material'
 import { Typography } from '../Typography'
 import { theme } from '../../../theme'
@@ -33,19 +32,15 @@ export const RoundedStepperItem = ({
   activeStep,
   index,
 }: StepperItemProps) => {
-  const [backgroundColor, setBackgroundColor] = useState(
-    color || theme.palette.stepper.stepUpcoming
-  )
-
-  useEffect(() => {
+  const getBackgroundColor = () => {
     if (index === activeStep) {
-      setBackgroundColor(color || theme.palette.stepper.stepCurrent)
+      return color || theme.palette.stepper.stepCurrent
     } else if (index < activeStep) {
-      setBackgroundColor(color || theme.palette.stepper.stepDone)
+      return color || theme.palette.stepper.stepDone
     } else {
-      setBackgroundColor(color || theme.palette.stepper.stepUpcoming)
+      return color || theme.palette.stepper.stepUpcoming
     }
-  }, [index, activeStep])
+  }
 
   return (
     <Box className="stepperRoundedStep">
@@ -55,7 +50,7 @@ export const RoundedStepperItem = ({
           fontSize="14px"
           color="#fff"
           sx={{
-            backgroundColor: `${backgroundColor}`,
+            backgroundColor: getBackgroundColor(),
           }}
         ></Typography>
       </Box>
