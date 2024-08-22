@@ -43,6 +43,7 @@ interface CardsProps {
   imageShape?: CardProps['imageShape']
   imageLoader?: CardProps['imageLoader']
   imageElement?: CardProps['imageElement']
+  columns?: number
   readMoreText?: CardProps['readMoreText']
   readMoreLink?: CardProps['readMoreLink']
   addButtonClicked?: boolean
@@ -71,6 +72,8 @@ export const Cards = ({
   imageSize,
   imageShape,
   imageLoader,
+  // @ts-expect-error keep for backward compatibility
+  columns = 6,
   expandOnHover,
   filledBackground,
   addButtonClicked = false,
