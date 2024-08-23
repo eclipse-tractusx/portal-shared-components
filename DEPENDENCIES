@@ -529,7 +529,6 @@ npm/npmjs/-/polished/4.3.1, MIT AND (BSD-2-Clause AND BSD-3-Clause AND ISC AND M
 npm/npmjs/-/possible-typed-array-names/1.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/postcss/8.4.41, MIT, approved, #3545
 npm/npmjs/-/prelude-ls/1.2.1, MIT, approved, clearlydefined
-npm/npmjs/-/prettier/3.2.5, MIT AND ISC AND BSD-2-Clause AND BSD-3-Clause AND Apache-2.0, approved, #13320
 npm/npmjs/-/prettier/3.3.3, MIT AND BSD-2-Clause AND ISC AND MPL-1.0, approved, #15480
 npm/npmjs/-/pretty-format/27.5.1, 0BSD AND Apache-2.0 AND BSD-2-Clause AND MIT, approved, #1948
 npm/npmjs/-/pretty-format/29.7.0, MIT, approved, clearlydefined
@@ -606,7 +605,6 @@ npm/npmjs/-/scheduler/0.23.0, MIT, approved, #14589
 npm/npmjs/-/semver/5.7.2, ISC, approved, #5900
 npm/npmjs/-/semver/6.3.1, ISC, approved, clearlydefined
 npm/npmjs/-/semver/7.5.4, ISC, approved, clearlydefined
-npm/npmjs/-/semver/7.6.0, ISC, approved, #14659
 npm/npmjs/-/semver/7.6.3, ISC, approved, #14659
 npm/npmjs/-/send/0.18.0, MIT, approved, clearlydefined
 npm/npmjs/-/serve-static/1.15.0, MIT, approved, clearlydefined
@@ -633,7 +631,7 @@ npm/npmjs/-/sprintf-js/1.0.3, BSD-3-Clause, approved, #949
 npm/npmjs/-/stack-utils/2.0.6, MIT, approved, clearlydefined
 npm/npmjs/-/statuses/2.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/stop-iteration-iterator/1.0.0, MIT, approved, clearlydefined
-npm/npmjs/-/storybook/8.2.8, MIT, approved, clearlydefined
+npm/npmjs/-/storybook/8.2.9, MIT, approved, clearlydefined
 npm/npmjs/-/string-argv/0.3.2, MIT, approved, clearlydefined
 npm/npmjs/-/string-convert/0.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/string-length/4.0.2, MIT, approved, clearlydefined
@@ -728,7 +726,7 @@ npm/npmjs/-/validator/13.11.0, MIT, approved, clearlydefined
 npm/npmjs/-/vary/1.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/vite-plugin-dts/3.7.3, MIT, approved, #14014
 npm/npmjs/-/vite-plugin-lib-inject-css/2.0.1, MIT, approved, #14016
-npm/npmjs/-/vite/5.4.0, MIT AND (ISC AND MIT) AND (Apache-2.0 AND BSD-2-Clause AND BlueOak-1.0.0 AND CC0-1.0 AND ISC AND MIT) AND (BSD-3-Clause AND MIT) AND ISC AND (BSD-2-Clause AND BSD-3-Clause), approved, #15844
+npm/npmjs/-/vite/5.4.1, MIT AND (ISC AND MIT) AND (Apache-2.0 AND BSD-2-Clause AND BlueOak-1.0.0 AND CC0-1.0 AND ISC AND MIT) AND (BSD-3-Clause AND MIT) AND ISC AND (BSD-2-Clause AND BSD-3-Clause), approved, #15844
 npm/npmjs/-/void-elements/3.1.0, MIT, approved, clearlydefined
 npm/npmjs/-/vue-template-compiler/2.7.16, 0BSD AND MIT AND MIT, approved, #3476
 npm/npmjs/-/vue-tsc/1.8.27, MIT, approved, clearlydefined
@@ -770,7 +768,6 @@ npm/npmjs/@babel/code-frame/7.24.7, MIT AND (BSD-2-Clause AND ISC AND MIT) AND B
 npm/npmjs/@babel/compat-data/7.24.1, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13915
 npm/npmjs/@babel/compat-data/7.24.9, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13915
 npm/npmjs/@babel/compat-data/7.25.2, MIT, approved, clearlydefined
-npm/npmjs/@babel/core/7.24.9, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13942
 npm/npmjs/@babel/core/7.25.2, MIT, approved, clearlydefined
 npm/npmjs/@babel/generator/7.24.9, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13919
 npm/npmjs/@babel/generator/7.25.0, MIT, approved, clearlydefined
@@ -811,7 +808,6 @@ npm/npmjs/@babel/helper-string-parser/7.24.8, MIT AND (BSD-2-Clause AND ISC AND 
 npm/npmjs/@babel/helper-validator-identifier/7.24.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/helper-validator-option/7.24.8, MIT, approved, clearlydefined
 npm/npmjs/@babel/helper-wrap-function/7.25.0, MIT, approved, clearlydefined
-npm/npmjs/@babel/helpers/7.24.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13922
 npm/npmjs/@babel/helpers/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/highlight/7.24.7, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13941
 npm/npmjs/@babel/parser/7.24.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13492
@@ -919,7 +915,6 @@ npm/npmjs/@babel/template/7.24.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/template/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/traverse/7.24.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13926
 npm/npmjs/@babel/traverse/7.25.3, MIT, approved, clearlydefined
-npm/npmjs/@babel/types/7.24.9, MIT, approved, clearlydefined
 npm/npmjs/@babel/types/7.25.2, MIT, approved, clearlydefined
 npm/npmjs/@base2/pretty-print-object/1.0.1, BSD-2-Clause, approved, clearlydefined
 npm/npmjs/@bcoe/v8-coverage/0.2.3, ISC AND MIT, approved, clearlydefined
@@ -1039,39 +1034,37 @@ npm/npmjs/@sinclair/typebox/0.27.8, MIT, approved, clearlydefined
 npm/npmjs/@sindresorhus/merge-streams/2.3.0, MIT, approved, clearlydefined
 npm/npmjs/@sinonjs/commons/3.0.1, BSD-3-Clause, approved, #12905
 npm/npmjs/@sinonjs/fake-timers/10.3.0, BSD-3-Clause, approved, #9214
-npm/npmjs/@storybook/addon-actions/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-backgrounds/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-controls/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-docs/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-essentials/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-highlight/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-interactions/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-links/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-measure/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-onboarding/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-outline/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-toolbars/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/addon-viewport/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/blocks/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/builder-vite/8.2.4, MIT, approved, clearlydefined
-npm/npmjs/@storybook/builder-vite/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/codemod/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/components/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/core/8.2.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND OFL-1.1 AND ISC, approved, #15721
-npm/npmjs/@storybook/csf-plugin/8.2.4, MIT, approved, clearlydefined
-npm/npmjs/@storybook/csf-plugin/8.2.8, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-actions/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-backgrounds/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-controls/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-docs/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-essentials/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-highlight/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-interactions/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-links/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-measure/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-onboarding/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-outline/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-toolbars/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/addon-viewport/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/blocks/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/builder-vite/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/codemod/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/components/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/core/8.2.9, MIT AND (BSD-2-Clause AND ISC AND MIT) AND OFL-1.1 AND ISC, approved, #15721
+npm/npmjs/@storybook/csf-plugin/8.2.9, MIT, approved, clearlydefined
 npm/npmjs/@storybook/csf/0.0.1, MIT, approved, clearlydefined
 npm/npmjs/@storybook/csf/0.1.11, MIT, approved, #8941
 npm/npmjs/@storybook/global/5.0.0, MIT, approved, clearlydefined
 npm/npmjs/@storybook/icons/1.2.9, MIT, approved, #14056
-npm/npmjs/@storybook/instrumenter/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/manager-api/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/preview-api/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/react-dom-shim/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/react-vite/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/react/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/test/8.2.8, MIT, approved, clearlydefined
-npm/npmjs/@storybook/theming/8.2.8, MIT, approved, clearlydefined
+npm/npmjs/@storybook/instrumenter/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/manager-api/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/preview-api/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/react-dom-shim/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/react-vite/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/react/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/test/8.2.9, MIT, approved, clearlydefined
+npm/npmjs/@storybook/theming/8.2.9, MIT, approved, clearlydefined
 npm/npmjs/@testing-library/dom/10.1.0, MIT, approved, #15719
 npm/npmjs/@testing-library/dom/9.3.4, MIT AND (MIT AND WTFPL), approved, #9038
 npm/npmjs/@testing-library/jest-dom/6.4.5, MIT, approved, clearlydefined
