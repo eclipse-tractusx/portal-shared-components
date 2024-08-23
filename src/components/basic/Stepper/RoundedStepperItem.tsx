@@ -33,10 +33,12 @@ export const RoundedStepperItem = ({
   index,
 }: StepperItemProps) => {
   const getBackgroundColor = () => {
-    if (index === activeStep)
+    if (index === activeStep) {
       return color || theme.palette.stepper.stepCurrent
-    if (index < activeStep)
+    }
+    if (index < activeStep) {
       return color || theme.palette.stepper.stepDone
+    }
     return color || theme.palette.stepper.stepUpcoming
   }
 
