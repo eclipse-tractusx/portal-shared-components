@@ -16,14 +16,31 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
-import '@testing-library/jest-dom'
 
-window.matchMedia =
-  window.matchMedia ||
-  function () {
-    return {
-      matches: false,
-      addListener: function () {},
-      removeListener: function () {},
-    }
-  }
+import { type TypographyOwnProps } from '@mui/material'
+
+export const variantMapping: Record<string, TypographyOwnProps['variant']> = {
+  normal: 'body2',
+  small: 'body3',
+  normalHeading: 'h4',
+  smallHeading: 'h5',
+}
+
+export const iconSize: Record<string, Record<'height' | 'width', number>> = {
+  normal: {
+    height: 20,
+    width: 20,
+  },
+  small: {
+    height: 18,
+    width: 18,
+  },
+  normalHeading: {
+    height: 20,
+    width: 20,
+  },
+  smallHeading: {
+    height: 18,
+    width: 18,
+  },
+}

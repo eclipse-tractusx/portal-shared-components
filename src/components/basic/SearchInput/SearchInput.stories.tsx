@@ -22,18 +22,12 @@ import { useState } from 'react'
 import { type ComponentStory } from '@storybook/react'
 
 import { SearchInput as Component } from '.'
-import searchInputDoc from '../../../../docs/storybook/SearchInput.md?raw'
 
 export default {
   title: 'Form/SearchInput',
   component: Component,
   tags: ['autodocs'],
   argTypes: {},
-  parameters: {
-    docs: {
-      description: { component: searchInputDoc },
-    },
-  },
 }
 
 const Template: ComponentStory<typeof Component> = (

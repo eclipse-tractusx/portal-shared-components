@@ -5,6 +5,25 @@
 - updated the condition in handleChange in selectList component when clicked on 'x'
 - updated the dependency in useEffectHook
 
+## [3.2.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.1.2...v3.2.0) (2024-08-19)
+
+### Features
+
+- simplify and automate release versioning ([3824c8c](https://github.com/eclipse-tractusx/portal-shared-components/commit/3824c8ccec94cbc5856c7094d92d7db21058f304))
+- **table:** support pagination in table component ([fc362a0](https://github.com/eclipse-tractusx/portal-shared-components/commit/fc362a08d2c881273f1cc3f9dd07cf26ad099547))
+
+## 3.1.2
+
+- Add Hyperlink component with enhanced features
+
+## 3.1.1
+
+- Added Icon component
+
+## 3.1.0
+
+- Integrate style-guide documentation into shared components and enable MDX support
+
 ## 3.0.33
 
 - updated the condition in handleChange in selectList component

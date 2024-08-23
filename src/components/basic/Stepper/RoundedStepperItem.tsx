@@ -16,14 +16,44 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
-import '@testing-library/jest-dom'
 
-window.matchMedia =
-  window.matchMedia ||
-  function () {
-    return {
-      matches: false,
-      addListener: function () {},
-      removeListener: function () {},
+import { Box } from '@mui/material'
+import { Typography } from '../Typography'
+import { theme } from '../../../theme'
+
+interface StepperItemProps {
+  color: string
+  activeStep: number
+  index: number
+}
+
+export const RoundedStepperItem = ({
+  color,
+  activeStep,
+  index,
+}: StepperItemProps) => {
+  const getBackgroundColor = () => {
+    if (index === activeStep) {
+      return color || theme.palette.stepper.stepCurrent
     }
+    if (index < activeStep) {
+      return color || theme.palette.stepper.stepDone
+    }
+    return color || theme.palette.stepper.stepUpcoming
   }
+
+  return (
+    <Box className="stepperRoundedStep">
+      <Box className="stepperRound">
+        <Typography
+          variant="body1"
+          fontSize="14px"
+          color="#fff"
+          sx={{
+            backgroundColor: getBackgroundColor(),
+          }}
+        ></Typography>
+      </Box>
+    </Box>
+  )
+}

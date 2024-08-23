@@ -16,14 +16,40 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
-import '@testing-library/jest-dom'
 
-window.matchMedia =
-  window.matchMedia ||
-  function () {
-    return {
-      matches: false,
-      addListener: function () {},
-      removeListener: function () {},
-    }
-  }
+import { type ComponentStory } from '@storybook/react'
+
+import { RoundedStepper as Component } from './RoundedStepper'
+
+export default {
+  title: 'Steppers/RoundedStepper',
+  component: Component,
+  tags: ['autodocs'],
+  argTypes: {},
+}
+
+const stepperElements = [
+  {
+    step: 1,
+  },
+  {
+    step: 2,
+  },
+  {
+    step: 3,
+  },
+  {
+    step: 4,
+  },
+]
+
+const Template: ComponentStory<typeof Component> = (
+  args: React.ComponentProps<typeof Component>
+) => <Component {...args} />
+
+export const Stepper = Template.bind({})
+Stepper.args = {
+  list: stepperElements,
+  showSteps: 4,
+  activeStep: 2,
+}
