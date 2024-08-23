@@ -23,7 +23,7 @@
 
 ### Miscellaneous Chores
 
-* release 3.3.0 ([4f89cd5](https://github.com/eclipse-tractusx/portal-shared-components/commit/4f89cd5738033581929ea1b56ba8c71bdb972f08))
+- release 3.3.0 ([4f89cd5](https://github.com/eclipse-tractusx/portal-shared-components/commit/4f89cd5738033581929ea1b56ba8c71bdb972f08))
 
 ## [3.2.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.1.2...v3.2.0) (2024-08-19)
 
