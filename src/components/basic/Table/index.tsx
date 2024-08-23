@@ -77,7 +77,7 @@ export interface TableProps extends DataGridProps {
   error?: {
     status: number
     message?: string
-  }
+  } | null
   reload?: () => void
   autoFocus?: boolean
   hasMore?: boolean
