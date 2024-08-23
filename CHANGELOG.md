@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.34
+
+- updated the condition in handleChange in selectList component when clicked on 'x'
+- updated the dependency in useEffectHook
+
 ## 3.0.33
 
 - updated the condition in handleChange in selectList component
