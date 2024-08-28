@@ -2,26 +2,25 @@
 
 ## [3.3.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.2.0...v3.3.0) (2024-08-23)
 
-
 ### Features
 
-* **stepper:** new rounded stepper component ([89fb4a0](https://github.com/eclipse-tractusx/portal-shared-components/commit/89fb4a0a5781e4800401ea4aedf09c9706e6b2e0))
-* **stepper:** new rounded stepper component ([befe2c6](https://github.com/eclipse-tractusx/portal-shared-components/commit/befe2c6b9a09501bc1d16734fe04560de61a4e78))
-
+- **stepper:** new rounded stepper component ([89fb4a0](https://github.com/eclipse-tractusx/portal-shared-components/commit/89fb4a0a5781e4800401ea4aedf09c9706e6b2e0))
+- **stepper:** new rounded stepper component ([befe2c6](https://github.com/eclipse-tractusx/portal-shared-components/commit/befe2c6b9a09501bc1d16734fe04560de61a4e78))
 
 ### Bug Fixes
 
-* pretty file format ([70a4708](https://github.com/eclipse-tractusx/portal-shared-components/commit/70a470802f10de2d1fc381a0ee535676e377562b))
-* **stepper:** fix sonal cloud issue ([3c41a43](https://github.com/eclipse-tractusx/portal-shared-components/commit/3c41a43fd447fea8485a4445cf8ad877e8b3f286))
-* **stepper:** remove package.json and changelog content updates. update bg color logic ([868e43c](https://github.com/eclipse-tractusx/portal-shared-components/commit/868e43cb89ad5e99a095bb0aefe79822c6e4f311))
-* **table:** extend table error property to support null value ([290535f](https://github.com/eclipse-tractusx/portal-shared-components/commit/290535f7e01e11e558049a5a22edf9e6d0d8d902))
-* **table:** extend table error property to support null value ([e97fa5d](https://github.com/eclipse-tractusx/portal-shared-components/commit/e97fa5d1e24d8e29d18c07ab1b964b1922242c72))
-* **table:** remove package and changelog updates ([953df75](https://github.com/eclipse-tractusx/portal-shared-components/commit/953df7541b416a5d1cb1a9f97f05c58dca28731b))
+- pretty file format ([70a4708](https://github.com/eclipse-tractusx/portal-shared-components/commit/70a470802f10de2d1fc381a0ee535676e377562b))
+- **stepper:** fix sonal cloud issue ([3c41a43](https://github.com/eclipse-tractusx/portal-shared-components/commit/3c41a43fd447fea8485a4445cf8ad877e8b3f286))
+- **stepper:** remove package.json and changelog content updates. update bg color logic ([868e43c](https://github.com/eclipse-tractusx/portal-shared-components/commit/868e43cb89ad5e99a095bb0aefe79822c6e4f311))
+- **table:** extend table error property to support null value ([290535f](https://github.com/eclipse-tractusx/portal-shared-components/commit/290535f7e01e11e558049a5a22edf9e6d0d8d902))
+- **table:** extend table error property to support null value ([e97fa5d](https://github.com/eclipse-tractusx/portal-shared-components/commit/e97fa5d1e24d8e29d18c07ab1b964b1922242c72))
+- **table:** remove package and changelog updates ([953df75](https://github.com/eclipse-tractusx/portal-shared-components/commit/953df7541b416a5d1cb1a9f97f05c58dca28731b))
 
+* **ImageGallery:** Resolve duplicates image issue ([#288](https://github.com/eclipse-tractusx/portal-shared-components/issues/288))
 
 ### Miscellaneous Chores
 
-* release 3.3.0 ([4f89cd5](https://github.com/eclipse-tractusx/portal-shared-components/commit/4f89cd5738033581929ea1b56ba8c71bdb972f08))
+- release 3.3.0 ([4f89cd5](https://github.com/eclipse-tractusx/portal-shared-components/commit/4f89cd5738033581929ea1b56ba8c71bdb972f08))
 
 ## [3.2.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.1.2...v3.2.0) (2024-08-19)
 
