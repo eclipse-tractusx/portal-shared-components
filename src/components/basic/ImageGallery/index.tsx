@@ -52,6 +52,12 @@ export const ImageGallery = ({
     else return 3
   }
 
+  const getIsInfinite = () => {
+    if (mobile) return gallery?.length > 1
+    else if (tab) return gallery?.length > 2
+    else return gallery?.length > 3
+  }
+
   return (
     <div className="cx-image-gallery">
       {hovered && hoveredImage?.url && (
@@ -68,7 +74,7 @@ export const ImageGallery = ({
         gapBetweenSlides={32}
         gapCarouselTop={0}
         dots={false}
-        infinite
+        infinite={getIsInfinite()}
         itemHeight={maxHeight ?? 0}
         itemWidth={maxWidth ?? 266}
         slidesToShow={getSlidesToShow()}
