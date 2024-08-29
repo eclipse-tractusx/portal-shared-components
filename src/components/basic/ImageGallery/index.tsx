@@ -61,6 +61,7 @@ export const ImageGallery = ({
           }}
           url={hoveredImage.url}
           text={hoveredImage.text}
+          loader={hoveredImage.loader}
           modalWidth={modalWidth}
         />
       )}

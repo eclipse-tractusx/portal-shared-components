@@ -36,6 +36,7 @@ export default function ImageItemOverlay({
   text,
   modalWidth = '600',
   onClose,
+  loader,
 }: ImageType & ImageItemOverlayProps) {
   const { palette } = useTheme()
   return (
@@ -75,6 +76,7 @@ export default function ImageItemOverlay({
             <Image
               src={url}
               alt={text}
+              loader={loader}
               style={{
                 width: '100%',
                 height: '100%',
