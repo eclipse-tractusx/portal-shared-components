@@ -72,10 +72,6 @@ export { LoadMoreButton } from './basic/Button/LoadMoreButton'
 export { PageNotifications } from './basic/Notifications/PageNotification'
 export { PageSnackbar } from './basic/Notifications/Snackbar'
 export { PageSnackbarStack } from './basic/Notifications/Snackbar/PageSnackbarStack'
-export {
-  GlobalSnackbarContainer,
-  useSnackbar,
-} from './basic/Notifications/SnackbarManager'
 export { ErrorPage } from './basic/ErrorPage'
 export { MultiSelectList } from './basic/MultiSelectList'
 export { ProcessList } from './basic/ProcessList'
