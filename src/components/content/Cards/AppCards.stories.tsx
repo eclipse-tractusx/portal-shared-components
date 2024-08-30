@@ -18,20 +18,24 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
-
+import type { Meta, StoryObj } from '@storybook/react'
 import { Cards as Component } from '.'
 
-export default {
-  title: 'Cards',
+const meta: Meta<typeof Component> = {
+  title: 'Cards/App Card',
   component: Component,
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    variant: {
+      options: ['minimal', 'expanded', 'compact', 'text-only', 'text-details'],
+      control: { type: 'radio' },
+    },
+  },
 }
 
-const Template: ComponentStory<typeof Component> = (
-  args: React.ComponentProps<typeof Component>
-) => <Component {...args} />
+export default meta
+
+type Story = StoryObj<typeof Component>
 
 const item = {
   title: 'Digital Twin Aspect Debugger',
@@ -47,13 +51,35 @@ const item = {
   onSecondaryButtonClick: () => {},
 }
 
-export const AppCards = Template.bind({})
-AppCards.args = {
-  items: [item, item],
-  variant: 'minimal',
-  expandOnHover: false,
-  buttonText: 'Details',
-  columns: 6,
-  filledBackground: false,
-  boxClickable: false,
+export const DefaultAppCard: Story = {
+  args: {
+    items: [item, item],
+    variant: 'minimal',
+    expandOnHover: false,
+    buttonText: 'Details',
+    filledBackground: false,
+    boxClickable: false,
+  },
+}
+
+export const MinimalAppCard: Story = {
+  args: {
+    items: [item, item],
+    variant: 'minimal',
+    expandOnHover: true,
+    buttonText: 'Details',
+    filledBackground: false,
+    boxClickable: false,
+  },
+}
+
+export const DetailedAppCard: Story = {
+  args: {
+    items: [item, item],
+    variant: 'expanded',
+    expandOnHover: false,
+    buttonText: 'Details',
+    filledBackground: false,
+    boxClickable: false,
+  },
 }

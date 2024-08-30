@@ -42,7 +42,10 @@ export const CardContent = ({
     <Box sx={{ padding: '20px' }} className="cx-card__content">
       <Box sx={{ height: '35px' }}>
         {subtitle && (
-          <Typography variant="label3" sx={{ color: 'text.tertiary' }}>
+          <Typography
+            variant="label3"
+            sx={{ color: 'text.tertiary', display: 'inline-block' }}
+          >
             {subtitle}
           </Typography>
         )}

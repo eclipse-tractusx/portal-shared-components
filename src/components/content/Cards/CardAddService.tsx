@@ -22,15 +22,17 @@ import { Box, useTheme } from '@mui/material'
 import { Typography } from '../../basic/Typography'
 import { useState, useEffect, useRef } from 'react'
 
-interface CardAddServiceProps {
+export interface CardAddServiceProps {
   title?: string
   backgroundColor?: string
   onButtonClick: React.MouseEventHandler
+  showCardView?: boolean
 }
 
 export const CardAddService = ({
   title,
   backgroundColor,
+  showCardView = true,
   onButtonClick,
 }: CardAddServiceProps) => {
   const theme = useTheme()
@@ -46,7 +48,11 @@ export const CardAddService = ({
     <div
       className="cx-card__instance"
       ref={boxRef}
-      style={{}}
+      style={{
+        padding: '0 10px',
+        minWidth: '290px',
+        width: showCardView ? '290px' : '100%',
+      }}
       onClick={onButtonClick}
       onKeyUp={() => {
         // do nothing
@@ -59,65 +65,60 @@ export const CardAddService = ({
           flexDirection: 'column',
           justifyContent: 'center',
           overflow: 'hidden',
+          alignItems: 'center',
+          gap: '20px',
           backgroundColor: backgroundColor ?? 'common.white',
           borderRadius: shape.borderRadius,
           border: '2px dashed',
           borderColor: 'border.border01',
+          padding: '10px',
           ':hover': {
             boxShadow: shadows['20'],
           },
+          minHeight: '200px',
           height: boxHeight ? `${boxHeight - 63}px` : '89%',
-          minWidth: '260px',
         }}
         className="card cx-card__add-service"
       >
         <Box
-          sx={{ textAlign: 'center' }}
-          className="cx-card__add-service--wrapper"
+          className="cx-card__add-service--icon"
+          sx={{
+            height: '120px',
+            width: '120px',
+            backgroundColor: theme.palette.accent.accent02,
+            borderRadius: '100px',
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
         >
-          <Box
-            className="cx-card__add-service--icon"
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25 0C11.2 0 0 11.2 0 25C0 38.8 11.2 50 25 50C38.8 50 50 38.8 50 25C50 11.2 38.8 0 25 0ZM37.5 27.5H27.5V37.5H22.5V27.5H12.5V22.5H22.5V12.5H27.5V22.5H37.5V27.5Z"
+              fill="#0F71CB"
+            />
+          </svg>
+        </Box>
+        <Box className="cx-card__add-service--title">
+          <Typography
+            variant="h5"
             sx={{
-              height: '120px',
-              width: '120px',
-              backgroundColor: theme.palette.accent.accent02,
-              borderRadius: '100px',
-              margin: 'auto',
-              display: 'flex',
-              justifyContent: 'center',
-              flexDirection: 'column',
-              alignItems: 'center',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              display: '-webkit-box',
+              WebkitLineClamp: '2',
+              WebkitBoxOrient: 'vertical',
             }}
           >
-            <svg
-              width="35"
-              height="35"
-              viewBox="0 0 50 50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M25 0C11.2 0 0 11.2 0 25C0 38.8 11.2 50 25 50C38.8 50 50 38.8 50 25C50 11.2 38.8 0 25 0ZM37.5 27.5H27.5V37.5H22.5V27.5H12.5V22.5H22.5V12.5H27.5V22.5H37.5V27.5Z"
-                fill="#0F71CB"
-              />
-            </svg>
-          </Box>
-          <Box className="cx-card__add-service--title">
-            <Typography
-              variant="h5"
-              sx={{
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'normal',
-                display: 'box',
-                lineClamp: '2',
-                boxOrient: 'vertical',
-                paddingTop: '20px',
-              }}
-            >
-              {title}
-            </Typography>
-          </Box>
+            {title}
+          </Typography>
         </Box>
       </Box>
     </div>
