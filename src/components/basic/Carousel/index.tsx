@@ -75,7 +75,7 @@ export const Carousel = ({
 }: CarouselProps) => {
   const [showArrows, setShowArrows] = useState(false)
   const onMouseEnter = () => {
-    setShowArrows(true && arrayChildren.length > 1)
+    setShowArrows(arrayChildren.length > 1)
   }
   const onMouseLeave = () => {
     setShowArrows(false)
