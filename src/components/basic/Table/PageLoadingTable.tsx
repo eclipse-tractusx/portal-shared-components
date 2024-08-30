@@ -55,7 +55,7 @@ export interface PageLoadingTableProps<Row, Args>
   allItemsLoadedHint?: string
 }
 
-const SCROLL_OFFSET = 350 // Adjust this value for earlier load
+const scrollOffset = 350 // Adjust this value for earlier load
 
 export const PageLoadingTable = function <Row, Args>({
   loadLabel,
@@ -134,7 +134,7 @@ export const PageLoadingTable = function <Row, Args>({
     const scrollableElement = document.documentElement
     if (
       scrollableElement.scrollHeight - scrollableElement.scrollTop <=
-      scrollableElement.clientHeight + SCROLL_OFFSET
+      scrollableElement.clientHeight + scrollOffset
     ) {
       if (hasMore && !isFetching) {
         nextPage()
