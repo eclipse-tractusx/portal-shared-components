@@ -52,7 +52,7 @@ export interface PageLoadingTableProps<Row, Args>
   fetchHookRefresh?: number
   allItems?: Row[]
   callbackToPage?: (data: PaginResult<Row>) => void
-  allItemsLoadedHint: string
+  allItemsLoadedHint?: string
 }
 
 const SCROLL_OFFSET = 350 // Adjust this value for earlier load
@@ -132,11 +132,6 @@ export const PageLoadingTable = function <Row, Args>({
 
   const handleScroll = useCallback(() => {
     const scrollableElement = document.documentElement
-    console.log(
-      scrollableElement.scrollHeight,
-      scrollableElement.scrollTop,
-      scrollableElement.clientHeight
-    )
     if (
       scrollableElement.scrollHeight - scrollableElement.scrollTop <=
       scrollableElement.clientHeight + SCROLL_OFFSET
