@@ -1007,7 +1007,7 @@ npm/npmjs/@mui/material/5.15.21, MIT AND CC-BY-3.0, approved, #13175
 npm/npmjs/@mui/private-theming/5.16.6, MIT, approved, #15717
 npm/npmjs/@mui/styled-engine/5.16.6, MIT, approved, #15718
 npm/npmjs/@mui/system/5.16.7, MIT, approved, #15715
-npm/npmjs/@mui/types/7.2.15, MIT, approved, clearlydefined
+npm/npmjs/@mui/types/7.2.15, MIT, approved, #16017
 npm/npmjs/@mui/utils/5.16.6, MIT, approved, #15716
 npm/npmjs/@mui/x-data-grid/6.19.11, MIT, approved, #14027
 npm/npmjs/@mui/x-date-pickers/6.19.12, MIT, approved, #14025

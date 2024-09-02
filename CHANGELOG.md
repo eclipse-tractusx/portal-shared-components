@@ -1,9 +1,22 @@
 # Changelog
 
-## 3.3.1
+## 3.4.1
 
 - updated the condition in handleChange in selectList component when clicked on 'x'
 - updated the dependency in useEffectHook
+
+## [3.4.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.3.0...v3.4.0) (2024-08-28)
+
+### Features
+
+- **select:** export components ([6c071d1](https://github.com/eclipse-tractusx/portal-shared-components/commit/6c071d17c4524812fb3fd060c4873288d33b89d8))
+- **select:** export select input and sort option component ([e3bf7b6](https://github.com/eclipse-tractusx/portal-shared-components/commit/e3bf7b685fa2ce276c8f982e6fe8f78d06b58e1c))
+
+### Bug Fixes
+
+- **chor:** run pretty explicitly ([702a9dc](https://github.com/eclipse-tractusx/portal-shared-components/commit/702a9dc7ca0ef003593ec5ad0ddf8459d92320f2))
+- **chor:** update deoendency file ([bb45f76](https://github.com/eclipse-tractusx/portal-shared-components/commit/bb45f761102e442fd727b10f5a1d0362a0f124cf))
+- **chro:** update the package version ([506dc70](https://github.com/eclipse-tractusx/portal-shared-components/commit/506dc709a28e19cbfc2dd6ea38f3af60ed3ef74c))
 
 ## [3.3.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.2.0...v3.3.0) (2024-08-23)
 
