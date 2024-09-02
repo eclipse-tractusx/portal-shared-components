@@ -1,0 +1,82 @@
+{/*
+* Copyright (c) 2024 Contributors to the Eclipse Foundation
+*
+* See the NOTICE file(s) distributed with this work for additional
+* information regarding copyright ownership.
+*
+* This program and the accompanying materials are made available under the
+* terms of the Apache License, Version 2.0 which is available at
+* https://www.apache.org/licenses/LICENSE-2.0.
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+* License for the specific language governing permissions and limitations
+* under the License.
+*
+* SPDX-License-Identifier: Apache-2.0
+*/}
+
+import { Story, Meta } from '@storybook/blocks'
+import { SharedThemeProvider } from '../SharedThemeProvider'
+import { SharedCssBaseline } from '../SharedCssBaseline'
+import { DialogHeader } from './DialogHeader'
+import { DialogContent } from './DialogContent'
+import { DialogActions } from './DialogActions'
+import { Button } from '../Button'
+import { Dialog } from '.'
+
+
+<Meta title="Design Guidelines/Modal" />
+
+
+#### Modal Description:
+A modal is a dialog window that is displayed on top of the main application content. It is used to capture user attention and prompt them to perform an action or provide additional information without leaving the current context. Our modals are designed to be flexible and can include a variety of content, such as text, tables, input fields, buttons, and expandable components.
+<br /> <br />
+#### Do's:
+* **Use modals for critical user interactions** that require immediate attention, such as confirming a delete action or completing a multi-step process.
+* **Keep the content simple and focused**. A modal should contain only what is necessary to complete the task at hand.
+* **Include a clear and visible way to close the modal**, such as a close button or an 'X' in the top corner.
+* **Trap focus within the modal** when it is open to maintain accessibility standards.
+* **Implement keyboard navigation** within the modal, allowing users to tab through inputs and select options.
+* **Use modals sparingly** to avoid disrupting the user's workflow.
+* **Test modals for responsiveness** to ensure they are usable on all devices and screen sizes.
+* **Document all variations** of modals in Storybook, providing clear examples of use cases.
+<br /> <br />
+#### Don'ts:
+* **Don't overuse modals**, as they can become disruptive and annoying if they are too frequent.
+* **Don't include too much information** that can overwhelm the user. Modals are meant to be focused and to-the-point.
+* **Don't make modals too complex**. If a process is too long, consider breaking it up into smaller steps or using a different UI pattern.
+* **Don't forget to test for accessibility**. All users should be able to interact with the modal content.
+* **Don't use modals for non-essential information** that can be displayed within the main content of the page.
+* **Don't neglect mobile users**. Ensure modals are just as functional and aesthetically pleasing on mobile devices.
+<br /> <br />
+
+#### Modal Header
+<br /> 
+
+<SharedThemeProvider>
+  <SharedCssBaseline />
+    <DialogHeader title={'title'} intro={'introduction description goes her'} />
+</SharedThemeProvider>
+<br /> <br />
+
+#### Modal content
+<br /> 
+
+<SharedThemeProvider>
+    <SharedCssBaseline />
+    <DialogContent>Content goes here</DialogContent>
+</SharedThemeProvider>
+<br /> <br />
+
+#### Modal Actions
+<br />
+
+<SharedThemeProvider>
+    <SharedCssBaseline />
+    <DialogActions>
+        <Button variant="outlined">Cancel</Button>
+        <Button variant="contained">Confirm</Button>
+    </DialogActions>
+</SharedThemeProvider>
