@@ -198,7 +198,7 @@ npm/npmjs/-/eslint-plugin-import/2.29.1, MIT, approved, #11187
 npm/npmjs/-/eslint-plugin-n/16.6.2, MIT, approved, #12657
 npm/npmjs/-/eslint-plugin-promise/6.1.1, ISC, approved, clearlydefined
 npm/npmjs/-/eslint-plugin-react-hooks/4.6.2, MIT, approved, clearlydefined
-npm/npmjs/-/eslint-plugin-react-refresh/0.4.9, MIT, approved, clearlydefined
+npm/npmjs/-/eslint-plugin-react-refresh/0.4.11, MIT, approved, clearlydefined
 npm/npmjs/-/eslint-plugin-react/7.34.4, MIT, approved, #13825
 npm/npmjs/-/eslint-plugin-storybook/0.8.0, MIT, approved, clearlydefined
 npm/npmjs/-/eslint-scope/5.1.1, BSD-2-Clause, approved, clearlydefined
@@ -593,7 +593,7 @@ npm/npmjs/-/restore-cursor/3.1.0, MIT, approved, clearlydefined
 npm/npmjs/-/reusify/1.0.4, MIT, approved, clearlydefined
 npm/npmjs/-/rimraf/2.6.3, ISC, approved, clearlydefined
 npm/npmjs/-/rimraf/3.0.2, ISC, approved, clearlydefined
-npm/npmjs/-/rollup/4.13.0, MIT, approved, clearlydefined
+npm/npmjs/-/rollup/4.21.2, MIT, approved, clearlydefined
 npm/npmjs/-/run-parallel/1.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/safe-array-concat/1.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/safe-buffer/5.2.1, MIT, approved, clearlydefined
@@ -726,7 +726,7 @@ npm/npmjs/-/validator/13.11.0, MIT, approved, clearlydefined
 npm/npmjs/-/vary/1.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/vite-plugin-dts/3.7.3, MIT, approved, #14014
 npm/npmjs/-/vite-plugin-lib-inject-css/2.0.1, MIT, approved, #14016
-npm/npmjs/-/vite/5.4.1, MIT AND (ISC AND MIT) AND (Apache-2.0 AND BSD-2-Clause AND BlueOak-1.0.0 AND CC0-1.0 AND ISC AND MIT) AND (BSD-3-Clause AND MIT) AND ISC AND (BSD-2-Clause AND BSD-3-Clause), approved, #15844
+npm/npmjs/-/vite/5.4.2, MIT AND (ISC AND MIT) AND (Apache-2.0 AND BSD-2-Clause AND BlueOak-1.0.0 AND CC0-1.0 AND ISC AND MIT) AND (BSD-3-Clause AND MIT) AND ISC AND (BSD-2-Clause AND BSD-3-Clause), approved, #15844
 npm/npmjs/-/void-elements/3.1.0, MIT, approved, clearlydefined
 npm/npmjs/-/vue-template-compiler/2.7.16, 0BSD AND MIT AND MIT, approved, #3476
 npm/npmjs/-/vue-tsc/1.8.27, MIT, approved, clearlydefined
@@ -811,7 +811,7 @@ npm/npmjs/@babel/helper-wrap-function/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/helpers/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/highlight/7.24.7, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13941
 npm/npmjs/@babel/parser/7.24.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13492
-npm/npmjs/@babel/parser/7.25.3, MIT, approved, clearlydefined
+npm/npmjs/@babel/parser/7.25.3, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #16041
 npm/npmjs/@babel/plugin-bugfix-firefox-class-in-computed-class-key/7.25.3, MIT, approved, clearlydefined
 npm/npmjs/@babel/plugin-bugfix-safari-class-field-initializer-scope/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/7.25.0, MIT, approved, clearlydefined
@@ -915,7 +915,7 @@ npm/npmjs/@babel/template/7.24.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/template/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/traverse/7.24.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13926
 npm/npmjs/@babel/traverse/7.25.3, MIT, approved, clearlydefined
-npm/npmjs/@babel/types/7.25.2, MIT, approved, clearlydefined
+npm/npmjs/@babel/types/7.25.2, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #16040
 npm/npmjs/@base2/pretty-print-object/1.0.1, BSD-2-Clause, approved, clearlydefined
 npm/npmjs/@bcoe/v8-coverage/0.2.3, ISC AND MIT, approved, clearlydefined
 npm/npmjs/@chromatic-com/storybook/1.6.1, MIT AND (BSD-2-Clause AND ISC AND MIT), approved, #15710
@@ -1016,19 +1016,22 @@ npm/npmjs/@nodelib/fs.stat/2.0.5, MIT, approved, clearlydefined
 npm/npmjs/@nodelib/fs.walk/1.2.8, MIT, approved, clearlydefined
 npm/npmjs/@popperjs/core/2.11.8, MIT, approved, clearlydefined
 npm/npmjs/@rollup/pluginutils/5.1.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-android-arm-eabi/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-android-arm64/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-darwin-arm64/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-darwin-x64/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm-gnueabihf/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm64-gnu/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm64-musl/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-riscv64-gnu/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-x64-gnu/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-x64-musl/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-arm64-msvc/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-ia32-msvc/4.13.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-x64-msvc/4.13.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-android-arm-eabi/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-android-arm64/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-darwin-arm64/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-darwin-x64/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm-gnueabihf/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm-musleabihf/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm64-gnu/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm64-musl/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-powerpc64le-gnu/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-riscv64-gnu/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-s390x-gnu/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-x64-gnu/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-x64-musl/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-win32-arm64-msvc/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-win32-ia32-msvc/4.21.2, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-win32-x64-msvc/4.21.2, MIT, approved, clearlydefined
 npm/npmjs/@rushstack/node-core-library/3.62.0, MIT, approved, clearlydefined
 npm/npmjs/@rushstack/rig-package/0.5.1, MIT, approved, clearlydefined
 npm/npmjs/@rushstack/ts-command-line/4.17.1, MIT, approved, clearlydefined
