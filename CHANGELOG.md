@@ -1,9 +1,5 @@
 # Changelog
 
-## 3.4.1
-
-- Implement new Toggle Switch design component
-
 ## [3.4.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.3.0...v3.4.0) (2024-08-28)
 
 ### Features
