@@ -811,7 +811,7 @@ npm/npmjs/@babel/helper-wrap-function/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/helpers/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/highlight/7.24.7, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13941
 npm/npmjs/@babel/parser/7.24.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13492
-npm/npmjs/@babel/parser/7.25.3, MIT, approved, clearlydefined
+npm/npmjs/@babel/parser/7.25.3, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #16041
 npm/npmjs/@babel/plugin-bugfix-firefox-class-in-computed-class-key/7.25.3, MIT, approved, clearlydefined
 npm/npmjs/@babel/plugin-bugfix-safari-class-field-initializer-scope/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/7.25.0, MIT, approved, clearlydefined
@@ -915,7 +915,7 @@ npm/npmjs/@babel/template/7.24.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/template/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/traverse/7.24.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13926
 npm/npmjs/@babel/traverse/7.25.3, MIT, approved, clearlydefined
-npm/npmjs/@babel/types/7.25.2, MIT, approved, clearlydefined
+npm/npmjs/@babel/types/7.25.2, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #16040
 npm/npmjs/@base2/pretty-print-object/1.0.1, BSD-2-Clause, approved, clearlydefined
 npm/npmjs/@bcoe/v8-coverage/0.2.3, ISC AND MIT, approved, clearlydefined
 npm/npmjs/@chromatic-com/storybook/1.6.1, MIT AND (BSD-2-Clause AND ISC AND MIT), approved, #15710
