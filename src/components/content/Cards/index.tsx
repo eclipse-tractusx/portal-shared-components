@@ -60,6 +60,7 @@ interface CardsProps {
   status?: string
   boxClickable?: boolean
   showFavIcon?: boolean
+  showCardViewOfAddServiceCard?: boolean
 }
 
 export const Cards = ({
@@ -93,6 +94,7 @@ export const Cards = ({
   showStatus = true,
   boxClickable = false,
   showFavIcon = false,
+  showCardViewOfAddServiceCard = true,
 }: CardsProps) => {
   const settings = {
     variant,
@@ -132,6 +134,7 @@ export const Cards = ({
           backgroundColor={'common.white'}
           onButtonClick={onNewCardButton}
           title={newButtonText}
+          showCardView={showCardViewOfAddServiceCard}
         />
       )}
       {items?.map((item) => (
