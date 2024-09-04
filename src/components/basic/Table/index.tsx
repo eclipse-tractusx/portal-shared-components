@@ -27,7 +27,11 @@ import {
 } from '@mui/x-data-grid'
 import { Box, Stack } from '@mui/material'
 import { StatusTag } from './components/StatusTag'
-import { Toolbar, type ToolbarProps } from './components/Toolbar'
+import {
+  type AdditionalButtonsType,
+  Toolbar,
+  type ToolbarProps,
+} from './components/Toolbar'
 import { UltimateToolbar } from './components/Toolbar/UltimateToolbar'
 import { theme } from '../../../theme'
 import { SearchAndFilterButtonToolbar } from './components/Toolbar/SearchAndFilterButtonToolbar'
@@ -83,6 +87,7 @@ export interface TableProps extends DataGridProps {
   hasMore?: boolean
   loadLabel?: string
   nextPage?: () => void
+  buttons?: AdditionalButtonsType[]
 }
 
 export const Table = ({
@@ -126,6 +131,7 @@ export const Table = ({
   hasMore = false,
   loadLabel = 'load more',
   nextPage,
+  buttons,
   ...props
 }: TableProps) => {
   const toolbarProps = {
@@ -151,6 +157,7 @@ export const Table = ({
     sortOptions,
     onSortClick,
     autoFocus,
+    buttons,
   }
 
   // TODO: this method contains application specific row attributes and must therefore
