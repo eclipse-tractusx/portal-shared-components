@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.5.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.5.0...v3.5.1) (2024-09-05)
+
+
+### Bug Fixes
+
+* **chor:** pretty ([b8c5264](https://github.com/eclipse-tractusx/portal-shared-components/commit/b8c5264ec5d442bd8d06459b7347e5591c1d8c7b))
+* **chor:** update version number ([3f03f0e](https://github.com/eclipse-tractusx/portal-shared-components/commit/3f03f0e8a01dcce597e6916fd8c882f630d5a490))
+* **table:** add new props to support multiple buttons in table component ([e0e7271](https://github.com/eclipse-tractusx/portal-shared-components/commit/e0e72713bc00523dcb11e0810c97ab702c6b87af))
+* **table:** support buttons props ([9ea1295](https://github.com/eclipse-tractusx/portal-shared-components/commit/9ea12951b17a737332b25018e10d78517cba499f))
+
 ## [3.5.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.4.0...v3.5.0) (2024-09-03)
 
 ### Features
