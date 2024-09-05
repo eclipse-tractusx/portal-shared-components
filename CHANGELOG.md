@@ -2,21 +2,19 @@
 
 ## [3.5.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.4.0...v3.5.0) (2024-09-03)
 
-
 ### Features
 
-* **new toggle switch:** dependencies check failed issue fixed ([8546941](https://github.com/eclipse-tractusx/portal-shared-components/commit/8546941870a4591316201ae2c35a89f58b84e3f4))
-* **new toggle switch:** implement new toggle switch design ([c5b5481](https://github.com/eclipse-tractusx/portal-shared-components/commit/c5b5481ccba9fb60d3134fbbc08890377a92266a))
-* **new toggle switch:** version change and revert changelog changes ([6bf9c9a](https://github.com/eclipse-tractusx/portal-shared-components/commit/6bf9c9a1130539d626a31739470640e4e0a1f8a7))
-* **toggle switch:** implement new toggle switch design ([2a4c87c](https://github.com/eclipse-tractusx/portal-shared-components/commit/2a4c87ce8ab9a1cf6c67f3b5bbd2972c3675c282))
-
+- **new toggle switch:** dependencies check failed issue fixed ([8546941](https://github.com/eclipse-tractusx/portal-shared-components/commit/8546941870a4591316201ae2c35a89f58b84e3f4))
+- **new toggle switch:** implement new toggle switch design ([c5b5481](https://github.com/eclipse-tractusx/portal-shared-components/commit/c5b5481ccba9fb60d3134fbbc08890377a92266a))
+- **new toggle switch:** version change and revert changelog changes ([6bf9c9a](https://github.com/eclipse-tractusx/portal-shared-components/commit/6bf9c9a1130539d626a31739470640e4e0a1f8a7))
+- **toggle switch:** implement new toggle switch design ([2a4c87c](https://github.com/eclipse-tractusx/portal-shared-components/commit/2a4c87ce8ab9a1cf6c67f3b5bbd2972c3675c282))
 
 ### Bug Fixes
 
-* **chor:** update dependency file ([ffd77bc](https://github.com/eclipse-tractusx/portal-shared-components/commit/ffd77bc5753af35b8167e385a90b2da126259b7e))
-* **dailog:** add mdx file to the dailog component ([df0db55](https://github.com/eclipse-tractusx/portal-shared-components/commit/df0db55da522344c489e236760ca3dc7286b86f8))
-* **dialog:** add mdx file to the dialog component ([c2cfd75](https://github.com/eclipse-tractusx/portal-shared-components/commit/c2cfd75bd74850eece1ccdec33858d4d67c26851))
-* update 'add service card' design & add app card variant in storybook ([8c72d7a](https://github.com/eclipse-tractusx/portal-shared-components/commit/8c72d7a2de005cc546169446359d0f0faf85314c))
+- **chor:** update dependency file ([ffd77bc](https://github.com/eclipse-tractusx/portal-shared-components/commit/ffd77bc5753af35b8167e385a90b2da126259b7e))
+- **dailog:** add mdx file to the dailog component ([df0db55](https://github.com/eclipse-tractusx/portal-shared-components/commit/df0db55da522344c489e236760ca3dc7286b86f8))
+- **dialog:** add mdx file to the dialog component ([c2cfd75](https://github.com/eclipse-tractusx/portal-shared-components/commit/c2cfd75bd74850eece1ccdec33858d4d67c26851))
+- update 'add service card' design & add app card variant in storybook ([8c72d7a](https://github.com/eclipse-tractusx/portal-shared-components/commit/8c72d7a2de005cc546169446359d0f0faf85314c))
 
 ## [3.4.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.3.0...v3.4.0) (2024-08-28)
 

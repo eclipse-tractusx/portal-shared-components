@@ -49,6 +49,12 @@ interface SearchInputState {
   text: string
 }
 
+export interface AdditionalButtonsType {
+  title?: string
+  click?: React.MouseEventHandler
+  icon?: JSX.Element
+}
+
 export interface ToolbarProps {
   title?: string
   rowsCount?: number
@@ -71,6 +77,7 @@ export interface ToolbarProps {
   selectedFilter?: SelectedFilter
   onClearSearch?: () => void
   autoFocus?: boolean
+  buttons?: AdditionalButtonsType[]
 }
 
 const getIconColor = (openFilter: boolean) => {
@@ -99,6 +106,7 @@ export const Toolbar = ({
   selectedFilter,
   onClearSearch,
   autoFocus,
+  buttons,
 }: ToolbarProps) => {
   const { spacing } = useTheme()
   const isSearchText = searchExpr && searchExpr !== ''
@@ -223,6 +231,17 @@ export const Toolbar = ({
               {secondButtonLabel}
             </Button>
           )}
+          {buttons?.map((button) => (
+            <Button
+              key={button.title}
+              startIcon={button.icon}
+              size="small"
+              onClick={button.click}
+              sx={{ marginLeft: 5 }}
+            >
+              {button.title}
+            </Button>
+          ))}
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           {openSearch ? (
