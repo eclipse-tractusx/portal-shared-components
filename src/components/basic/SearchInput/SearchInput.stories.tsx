@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { useState } from 'react'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 
 import { SearchInput as Component } from '.'
 
@@ -30,7 +30,7 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 

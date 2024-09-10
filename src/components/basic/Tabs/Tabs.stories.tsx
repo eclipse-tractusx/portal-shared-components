@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
@@ -41,7 +41,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof ReactComponent> = () => {
+const Template: StoryFn<typeof ReactComponent> = () => {
   const [activeTab, setActiveTab] = React.useState(0)
 
   const handleChange = (_: unknown, newValue: number) => {

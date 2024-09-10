@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Link, Typography } from '@mui/material'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 
 import { Breadcrumb as Component } from '.'
 
@@ -58,7 +58,7 @@ const breadcrumbs = [
   </Typography>,
 ]
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 

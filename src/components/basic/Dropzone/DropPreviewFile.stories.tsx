@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 
 import { DropPreviewFile as Component } from './components/DropPreviewFile'
 import { UploadStatus } from './types'
@@ -53,7 +53,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => {
   const { name, size, status, progressPercent, ...props } = args

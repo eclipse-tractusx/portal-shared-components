@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import { ToggleSwitch as Component } from '.'
 import { useState } from 'react'
 
@@ -27,7 +27,7 @@ export default {
   tags: ['autodocs'],
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => {
   const [checked, setChecked] = useState(false)

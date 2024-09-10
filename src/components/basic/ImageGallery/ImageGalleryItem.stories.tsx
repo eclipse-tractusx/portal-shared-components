@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import { ImageItem } from './ImageItem'
 
 export default {
@@ -25,7 +25,7 @@ export default {
   component: ImageItem,
 }
 
-const Template: ComponentStory<typeof ImageItem> = (
+const Template: StoryFn<typeof ImageItem> = (
   args: React.ComponentProps<typeof ImageItem>
 ) => <ImageItem {...args} />
 

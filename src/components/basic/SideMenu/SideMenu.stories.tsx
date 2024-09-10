@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 
 import { SideMenu as Component } from '.'
 import { DraggableChip } from '../Chip/DraggableChip'
@@ -37,7 +37,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 

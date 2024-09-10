@@ -18,7 +18,7 @@
  ********************************************************************************/
 
 import React from 'react'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import { QuickLinks as Component } from './index'
 
 export default {
@@ -28,7 +28,7 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 

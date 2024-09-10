@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import { Box } from '@mui/material'
 
 import { Datepicker as Component, type DateType } from '.'
@@ -30,7 +30,7 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => (
   <Box sx={{ width: '320px' }}>
