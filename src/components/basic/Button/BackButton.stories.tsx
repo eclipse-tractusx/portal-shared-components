@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import type { ComponentStory } from '@storybook/react'
-
 import { BackButton as Component } from './BackButton'
 
 export default {

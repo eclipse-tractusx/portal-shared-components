@@ -18,11 +18,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 import ClearIcon from '@mui/icons-material/Clear'
-import React, { useState, useMemo, useCallback } from 'react'
 import { Box, useTheme, debounce } from '@mui/material'
+import React, { useState, useMemo, useCallback } from 'react'
 import { Button } from '../../../Button'
-import { SearchInput } from '../../../SearchInput'
 import { IconButton } from '../../../IconButton'
+import { SearchInput } from '../../../SearchInput'
 import { type ToolbarProps } from '.'
 
 export type SelectedFilter = Record<string, string[]>

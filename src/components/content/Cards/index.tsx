@@ -19,8 +19,8 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { Card, type CardProps } from './Card'
 import uniqueId from 'lodash/uniqueId'
+import { Card, type CardProps } from './Card'
 import { CardAddService } from './CardAddService'
 
 export type CardItems = Omit<

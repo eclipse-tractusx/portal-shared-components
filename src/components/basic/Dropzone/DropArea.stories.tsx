@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { DropArea as Component } from './components/DropArea'
 
 export default {

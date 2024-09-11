@@ -17,15 +17,15 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import '../ContentComponents.scss'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import { Trans } from 'react-i18next'
+import { IconButton } from '../../../basic/IconButton'
+import { Typography } from '../../../basic/Typography'
 import {
   type ProviderProps,
   type SubSectionsType,
 } from '../ContentComponentsTypes'
-import { Typography } from '../../../basic/Typography'
-import { IconButton } from '../../../basic/IconButton'
+import '../ContentComponents.scss'
 
 export const TitleDescriptionAndSectionlink = ({
   scrollTop,

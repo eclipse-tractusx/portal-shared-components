@@ -18,16 +18,15 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
-
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
-import React from 'react'
 import { Box } from '@mui/material'
-import { type ReactComponent } from '*.svg'
+import { type ComponentStory } from '@storybook/react'
+import React from 'react'
 import { Tab } from './Tab'
 import { TabPanel } from './TabPanel'
 import { Tabs } from './Tabs'
+import { type ReactComponent } from '*.svg'
 
 export default {
   title: 'Tabs',

@@ -28,8 +28,8 @@ import {
   useTheme,
 } from '@mui/material'
 import { useState } from 'react'
-import { type MenuType, type NotificationBadgeType } from '.'
 import { Typography } from '../Typography'
+import { type MenuType, type NotificationBadgeType } from '.'
 
 type LinkItem = Partial<Record<'href' | 'to', string>>
 

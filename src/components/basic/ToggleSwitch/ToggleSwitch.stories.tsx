@@ -18,8 +18,8 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-import { ToggleSwitch as Component } from '.'
 import { useState } from 'react'
+import { ToggleSwitch as Component } from '.'
 
 export default {
   title: 'ToggleSwitch',

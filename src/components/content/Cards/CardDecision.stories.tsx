@@ -20,7 +20,6 @@
 
 import { type ComponentStory } from '@storybook/react'
 import { StatusVariants } from './CardChip'
-
 import { CardDecision as Component } from './CardDecision'
 
 export default {

@@ -18,13 +18,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, Divider, Typography } from '@mui/material'
-import { type ComponentStory } from '@storybook/react'
-import { CustomAccordion as Component } from '.'
-import { Table } from '../StaticTable/StaticTable.stories'
-import { type CustomAccordionProps } from './Item'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
+import { Box, Divider, Typography } from '@mui/material'
+import { type ComponentStory } from '@storybook/react'
+import { Table } from '../StaticTable/StaticTable.stories'
+import { type CustomAccordionProps } from './Item'
+import { CustomAccordion as Component } from '.'
 
 export default {
   title: 'CustomAccordion',

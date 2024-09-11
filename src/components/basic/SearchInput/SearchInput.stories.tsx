@@ -18,9 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useState } from 'react'
 import { type ComponentStory } from '@storybook/react'
-
+import { useState } from 'react'
 import { SearchInput as Component } from '.'
 
 export default {

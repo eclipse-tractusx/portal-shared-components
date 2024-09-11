@@ -18,14 +18,14 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import { Box } from '@mui/material'
+import uniqueId from 'lodash/uniqueId'
 import { useState, Children, useEffect, useCallback } from 'react'
 import Slider from 'react-slick'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import { IconButton } from '../IconButton'
-import { Box } from '@mui/material'
 import { theme } from '../../../theme'
-import uniqueId from 'lodash/uniqueId'
+import { IconButton } from '../IconButton'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { type CarouselNavArrows } from './CarouselBox'

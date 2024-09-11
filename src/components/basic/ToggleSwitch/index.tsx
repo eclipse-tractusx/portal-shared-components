@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { Switch, Tooltip } from '@mui/material'
 import React from 'react'
 import './ToggleSwitch.scss'
-import { Switch, Tooltip } from '@mui/material'
 
 export interface ToggleSwitchProps {
   checked: boolean

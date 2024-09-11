@@ -19,9 +19,8 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-import { PageSnackbar } from './index'
-
 import { PageSnackbarStack as Component } from './PageSnackbarStack'
+import { PageSnackbar } from './index'
 
 export default {
   title: 'Notifications',

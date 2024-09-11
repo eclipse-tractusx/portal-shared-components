@@ -18,12 +18,12 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, useTheme } from '@mui/material'
-import Tabs from '@mui/material/Tabs'
-import Tab from '@mui/material/Tab'
-import { useState } from 'react'
-import uniqueId from 'lodash/uniqueId'
 import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos'
+import { Box, useTheme } from '@mui/material'
+import Tab from '@mui/material/Tab'
+import Tabs from '@mui/material/Tabs'
+import uniqueId from 'lodash/uniqueId'
+import { useState } from 'react'
 
 export interface TabPanelType {
   id: number

@@ -18,12 +18,12 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
-import Accordion, { type AccordionProps } from '@mui/material/Accordion'
-import AccordionSummary from '@mui/material/AccordionSummary'
-import AccordionDetails from '@mui/material/AccordionDetails'
-import { AccordionActions, Box, Button, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { AccordionActions, Box, Button, Typography } from '@mui/material'
+import Accordion, { type AccordionProps } from '@mui/material/Accordion'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
+import React from 'react'
 
 export interface CustomAccordionProps extends AccordionProps {
   expanded: boolean | undefined

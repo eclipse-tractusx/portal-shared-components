@@ -17,10 +17,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ProviderProps } from './ContentComponentsTypes'
-import './ContentComponents.scss'
 import { ImageVideoWrapper } from './components/ImageVideoWrapper'
 import { RenderImage } from './components/RenderImage'
+import { type ProviderProps } from './ContentComponentsTypes'
+import './ContentComponents.scss'
 
 export const TextImageSideBySide = ({
   provider,

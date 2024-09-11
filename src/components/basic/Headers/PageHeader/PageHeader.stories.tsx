@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { PageHeader as Component } from './PageHeader'
 
 export default {

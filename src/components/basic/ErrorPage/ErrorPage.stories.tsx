@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { ErrorPage as Component } from '.'
 
 export default {

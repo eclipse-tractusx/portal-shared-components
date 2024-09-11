@@ -18,8 +18,8 @@
  ********************************************************************************/
 
 import { useMediaQuery } from '@mui/material'
-import '../ContentComponents.scss'
 import { ImageItem } from '../../../basic/ImageGallery/ImageItem'
+import '../ContentComponents.scss'
 
 export const RenderImage = ({
   url,

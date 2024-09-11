@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { CardGrid as Component } from './CardGrid'
 import type { Meta, StoryObj } from '@storybook/react'
+import { CardGrid as Component } from './CardGrid'
 
 const meta: Meta<typeof Component> = {
   component: Component,
