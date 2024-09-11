@@ -18,9 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useTheme } from '@mui/material'
+import { type Palette, useTheme } from '@mui/material'
 import MuiChip from '@mui/material/Chip'
-import { useEffect, useState } from 'react'
 
 export enum StatusVariants {
   release = 'release',
@@ -30,56 +29,48 @@ export enum StatusVariants {
   inReview = 'in_review',
   enabled = 'enabled',
 }
-
-export type Variants =
-  | StatusVariants.release
-  | StatusVariants.active
-  | StatusVariants.inactive
-  | StatusVariants.created
-  | StatusVariants.inReview
-  | StatusVariants.enabled
-
 export interface CardChipProps {
-  status?: Variants
+  status?: StatusVariants
   statusText?: string
+}
+
+interface ChipStyle {
+  color: keyof Palette['chip']
+  backgroundColor: keyof Palette['chip']
+}
+
+const statusStyles: Record<StatusVariants, ChipStyle> = {
+  [StatusVariants.release]: {
+    color: 'release',
+    backgroundColor: 'bgRelease',
+  },
+  [StatusVariants.active]: {
+    color: 'active',
+    backgroundColor: 'bgActive',
+  },
+  [StatusVariants.inactive]: {
+    color: 'inactive',
+    backgroundColor: 'bgInactive',
+  },
+  [StatusVariants.created]: {
+    color: 'created',
+    backgroundColor: 'bgCreated',
+  },
+  [StatusVariants.inReview]: {
+    color: 'inReview',
+    backgroundColor: 'bgInReview',
+  },
+  [StatusVariants.enabled]: {
+    color: 'enabled',
+    backgroundColor: 'bgEnabled',
+  },
 }
 
 export const CardChip = ({ status, statusText }: CardChipProps) => {
   const theme = useTheme()
-  const [chipColor, setChipColor] = useState('')
-  const [chipBackground, setChipBackground] = useState('')
-
-  useEffect(() => {
-    switch (status?.toLowerCase()) {
-      case StatusVariants.release:
-        setChipColor(theme.palette.chip.release)
-        setChipBackground(theme.palette.chip.bgRelease)
-        break
-      case StatusVariants.active:
-        setChipColor(theme.palette.chip.active)
-        setChipBackground(theme.palette.chip.bgActive)
-        break
-      case StatusVariants.inactive:
-        setChipColor(theme.palette.chip.inactive)
-        setChipBackground(theme.palette.chip.bgInactive)
-        break
-      case StatusVariants.created:
-        setChipColor(theme.palette.chip.created)
-        setChipBackground(theme.palette.chip.bgCreated)
-        break
-      case StatusVariants.inReview:
-        setChipColor(theme.palette.chip.inReview)
-        setChipBackground(theme.palette.chip.bgInReview)
-        break
-      case StatusVariants.enabled:
-        setChipColor(theme.palette.chip.enabled)
-        setChipBackground(theme.palette.chip.bgEnabled)
-        break
-      default:
-        setChipColor(theme.palette.chip.default)
-        setChipBackground(theme.palette.chip.bgDefault)
-    }
-  }, [status, theme])
+  const { color, backgroundColor }: ChipStyle = status
+    ? statusStyles[status]
+    : { color: 'default', backgroundColor: 'bgDefault' }
 
   return (
     <MuiChip
@@ -87,8 +78,8 @@ export const CardChip = ({ status, statusText }: CardChipProps) => {
       label={statusText}
       variant="outlined"
       sx={{
-        color: chipColor,
-        backgroundColor: chipBackground,
+        color: theme.palette.chip[color],
+        backgroundColor: theme.palette.chip[backgroundColor],
         borderRadius: '200px',
         border: 'none',
         height: '28px',
