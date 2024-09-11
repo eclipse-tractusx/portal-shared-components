@@ -69,7 +69,7 @@ export const SelectList = ({
 
   useEffect(() => {
     setSelected(defaultValue)
-  }, [defaultValue])
+  }, [JSON.stringify(defaultValue)])
 
   // eslint-disable-next-line
   const handleChange = (newValue: any) => {
@@ -95,7 +95,7 @@ export const SelectList = ({
       // eslint-disable-next-line
       getOptionLabel={(option) => option[keyTitle] || ''}
       onChange={(_event, nextValue) => {
-        handleChange(nextValue)
+        handleChange(nextValue ?? {})
       }}
       isOptionEqualToValue={(option, value) => isEqual(option, value)}
       renderOption={(props, option, { inputValue }) => (
