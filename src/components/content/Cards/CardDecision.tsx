@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Box, Typography, IconButton, useTheme } from '@mui/material'
-import { CardChip, StatusVariants, type Variants } from './CardChip'
+import { CardChip, StatusVariants } from './CardChip'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import ApprovalIcon from '@mui/icons-material/Approval'
 
@@ -27,7 +27,7 @@ export interface AppContent {
   appId?: string
   name?: string
   provider: string
-  status: Variants
+  status: StatusVariants
   id?: string
   title?: string
 }

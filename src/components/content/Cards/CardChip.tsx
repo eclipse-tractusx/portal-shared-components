@@ -66,11 +66,15 @@ const statusStyles: Record<StatusVariants, ChipStyle> = {
   },
 }
 
+const defaultStyle: ChipStyle = {
+  color: 'default',
+  backgroundColor: 'bgDefault',
+}
+
 export const CardChip = ({ status, statusText }: CardChipProps) => {
   const theme = useTheme()
-  const { color, backgroundColor }: ChipStyle = status
-    ? statusStyles[status]
-    : { color: 'default', backgroundColor: 'bgDefault' }
+  const chipStyle = status ? statusStyles[status] : defaultStyle
+  const { color, backgroundColor }: ChipStyle = chipStyle || defaultStyle
 
   return (
     <MuiChip
