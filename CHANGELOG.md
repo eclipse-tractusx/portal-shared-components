@@ -1,10 +1,5 @@
 # Changelog
 
-## 3.4.1
-
-- updated the condition in handleChange in selectList component when clicked on 'x'
-- updated the dependency in useEffectHook
-
 ## [3.4.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.3.0...v3.4.0) (2024-08-28)
 
 ### Features
