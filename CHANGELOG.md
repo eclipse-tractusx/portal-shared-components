@@ -39,6 +39,8 @@
 - **chor:** update deoendency file ([bb45f76](https://github.com/eclipse-tractusx/portal-shared-components/commit/bb45f761102e442fd727b10f5a1d0362a0f124cf))
 - **chro:** update the package version ([506dc70](https://github.com/eclipse-tractusx/portal-shared-components/commit/506dc709a28e19cbfc2dd6ea38f3af60ed3ef74c))
 
+- **ImageGallery:** Fix 401 Unauthorized error when clicking on App Images ([#291](https://github.com/eclipse-tractusx/portal-shared-components/issues/291))
+
 ## [3.3.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.2.0...v3.3.0) (2024-08-23)
 
 ### Features
