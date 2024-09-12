@@ -28,9 +28,9 @@ import uniqueId from 'lodash/uniqueId'
 import isEqual from 'lodash/isEqual'
 import { useEffect, useState } from 'react'
 
+type Option = Record<string, string | number | null>
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
-  // eslint-disable-next-line
-  items: any
+  items: Option[]
   label: string
   placeholder: string
   keyTitle: string
@@ -38,10 +38,9 @@ interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   variant?: 'filled'
   clearText?: string
   noOptionsText?: string
-  defaultValue?: unknown
+  defaultValue?: Option
   disableClearable?: boolean
-  // eslint-disable-next-line
-  onChangeItem: (items: any) => void
+  onChangeItem: (items: Option) => void
 }
 
 export const SelectList = ({
@@ -63,16 +62,13 @@ export const SelectList = ({
   onChangeItem,
 }: SelectListProps) => {
   const selectHeight = popperHeight ? `${popperHeight}px` : 'auto'
-  // Add an ESLint exception until there is a solution
-  // eslint-disable-next-line
-  const [selected, setSelected] = useState<any>(defaultValue || {})
+  const [selected, setSelected] = useState<Option>(defaultValue ?? {})
 
   useEffect(() => {
-    setSelected(defaultValue)
+    setSelected(defaultValue ?? {})
   }, [JSON.stringify(defaultValue)])
 
-  // eslint-disable-next-line
-  const handleChange = (newValue: any) => {
+  const handleChange = (newValue: Option) => {
     if (newValue) {
       setSelected(newValue)
       onChangeItem(newValue)
@@ -90,10 +86,8 @@ export const SelectList = ({
       noOptionsText={noOptionsText}
       ListboxProps={{ style: { maxHeight: selectHeight } }}
       disabled={disabled}
-      // eslint-disable-next-line
-      options={items.map((item: any) => item)}
-      // eslint-disable-next-line
-      getOptionLabel={(option) => option[keyTitle] || ''}
+      options={items.map((item) => item)}
+      getOptionLabel={(option: Option) => (option[keyTitle] as string) || ''}
       onChange={(_event, nextValue) => {
         handleChange(nextValue ?? {})
       }}
@@ -101,7 +95,10 @@ export const SelectList = ({
       renderOption={(props, option, { inputValue }) => (
         <SelectOptions
           props={props}
-          parts={parse(option[keyTitle], match(option[keyTitle], inputValue))}
+          parts={parse(
+            option[keyTitle] as string,
+            match(option[keyTitle] as string, inputValue)
+          )}
           key={uniqueId('select-list-option')}
         />
       )}

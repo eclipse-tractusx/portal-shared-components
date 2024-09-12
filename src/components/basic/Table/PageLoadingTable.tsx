@@ -23,11 +23,15 @@ import { Table, type TableProps } from '.'
 import { LoadMoreButton } from '../Button/LoadMoreButton'
 import { hasMorePages, getMaxRows } from './components/Helper/helper'
 
-export interface PaginFetchArgs {
+export interface PaginFetchArgs<T> {
   page: number
-  // Add an ESLint exception until there is a solution
-  // eslint-disable-next-line
-  args?: any
+  args?:
+    | (T & {
+        v: number
+      })
+    | {
+        v: number
+      }
 }
 
 export interface PaginMeta {
@@ -47,7 +51,7 @@ export interface PageLoadingTableProps<Row, Args>
   loadLabel: string
   // Add an ESLint exception until there is a solution
   // eslint-disable-next-line
-  fetchHook: (paginArgs: PaginFetchArgs) => any
+  fetchHook: (paginArgs: PaginFetchArgs<Args>) => any
   fetchHookArgs?: Args
   fetchHookRefresh?: number
   allItems?: Row[]

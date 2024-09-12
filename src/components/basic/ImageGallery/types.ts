@@ -18,6 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { type CSSProperties } from 'react'
+
 export interface ImageType {
   url: string
   text: string
@@ -36,6 +38,5 @@ export interface ImageType {
   modalWidth?: string
   width?: string
   height?: string
-  // eslint-disable-next-line
-  additionalStyles?: any
+  additionalStyles?: CSSProperties
 }

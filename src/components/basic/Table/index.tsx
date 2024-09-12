@@ -246,8 +246,7 @@ export const Table = ({
                 outline: 'none',
               },
           }}
-          // eslint-disable-next-line
-          getRowId={(row) => row.id}
+          getRowId={(row) => row.id as GridRowId}
           components={{
             Toolbar: () => toolbarView(),
             NoRowsOverlay,
