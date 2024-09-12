@@ -12,7 +12,6 @@
 - **chor:** run pretty explicitly ([702a9dc](https://github.com/eclipse-tractusx/portal-shared-components/commit/702a9dc7ca0ef003593ec5ad0ddf8459d92320f2))
 - **chor:** update deoendency file ([bb45f76](https://github.com/eclipse-tractusx/portal-shared-components/commit/bb45f761102e442fd727b10f5a1d0362a0f124cf))
 - **chro:** update the package version ([506dc70](https://github.com/eclipse-tractusx/portal-shared-components/commit/506dc709a28e19cbfc2dd6ea38f3af60ed3ef74c))
-- **ImageGallery:** Resolve duplicates image issue ([#288](https://github.com/eclipse-tractusx/portal-shared-components/issues/288))
 
 ## [3.3.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.2.0...v3.3.0) (2024-08-23)
 

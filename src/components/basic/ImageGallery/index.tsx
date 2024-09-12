@@ -54,8 +54,8 @@ export const ImageGallery = ({
 
   const getIsInfinite = () => {
     if (mobile) return gallery?.length > 1
-    else if (tab) return gallery?.length > 2
-    else return gallery?.length > 3
+    if (tab) return gallery?.length > 2
+    return gallery?.length > 3
   }
 
   return (
