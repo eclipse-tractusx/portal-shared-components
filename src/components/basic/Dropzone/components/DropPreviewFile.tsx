@@ -125,16 +125,14 @@ export const DropPreviewFile: FunctionComponent<DropPreviewFileProps> = ({
         position: 'relative',
         '&:before': {
           zIndex: -2,
-          // eslint-disable-next-line quotes
-          content: "''",
+          content: '""',
           position: 'absolute',
           inset: 0,
           backgroundColor: 'selected.hover',
         },
         '&:after': {
           zIndex: -1,
-          // eslint-disable-next-line quotes
-          content: "''",
+          content: '""',
           pointerEvents: 'none',
           position: 'absolute',
           inset: 0,
