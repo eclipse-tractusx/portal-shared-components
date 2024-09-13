@@ -18,7 +18,6 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useCallback, useEffect, useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search'
 import {
   Box,
@@ -27,6 +26,7 @@ import {
   type TextFieldProps,
   useTheme,
 } from '@mui/material'
+import { useCallback, useEffect, useState } from 'react'
 
 interface SearchProps extends Omit<TextFieldProps, 'variant'> {
   variant?: 'outlined'

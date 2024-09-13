@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { Checkbox as Component } from '.'
 
 export default {

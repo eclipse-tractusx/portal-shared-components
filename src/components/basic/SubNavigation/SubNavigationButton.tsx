@@ -19,8 +19,8 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { type SubNavigationProps } from '.'
 import { Button } from '../Button'
+import { type SubNavigationProps } from '.'
 
 export const SubNavigationButton = ({
   buttonLabel,

@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import RefreshIcon from '@mui/icons-material/Refresh'
 import { Box } from '@mui/material'
 import { Typography } from '../../../Typography'
-import RefreshIcon from '@mui/icons-material/Refresh'
 
 const flexColumn = {
   display: 'flex',

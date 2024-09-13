@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { StaticTable as Component } from '.'
 
 export default {

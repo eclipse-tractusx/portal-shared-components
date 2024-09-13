@@ -18,16 +18,16 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useState } from 'react'
-import { Typography, Link, Box } from '@mui/material'
-import EditIcon from '@mui/icons-material/Edit'
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
-import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 import CloseIcon from '@mui/icons-material/Close'
-import type { TableType } from './types'
+import ContentCopyIcon from '@mui/icons-material/ContentCopy'
+import EditIcon from '@mui/icons-material/Edit'
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
+import { Typography, Link, Box } from '@mui/material'
+import { useState } from 'react'
 import { Input } from '../Input'
 import { Tooltips } from '../ToolTips'
+import type { TableType } from './types'
 
 export const VerticalTable = ({
   data,

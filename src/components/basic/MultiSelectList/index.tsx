@@ -23,13 +23,13 @@ import Autocomplete, {
   type AutocompleteRenderInputParams,
   createFilterOptions,
 } from '@mui/material/Autocomplete'
-import parse from 'autosuggest-highlight/parse'
 import match from 'autosuggest-highlight/match'
-import { SelectInput } from './Components/SelectInput'
-import { SelectOptions } from './Components/SelectOptions'
-import { SelectAddMore } from './Components/SelectAddMore'
+import parse from 'autosuggest-highlight/parse'
 import uniqueId from 'lodash/uniqueId'
 import { useEffect, useState } from 'react'
+import { SelectAddMore } from './Components/SelectAddMore'
+import { SelectInput } from './Components/SelectInput'
+import { SelectOptions } from './Components/SelectOptions'
 
 export type TagSizeType = 'small' | 'medium' | 'large'
 export interface PartsType {

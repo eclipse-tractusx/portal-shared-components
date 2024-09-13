@@ -17,13 +17,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React, { type ReactElement } from 'react'
-import { SharedThemeProvider } from '../components'
 import {
   render as rtlRender,
   type RenderOptions,
   type RenderResult,
 } from '@testing-library/react'
+import React, { type ReactElement } from 'react'
+import { SharedThemeProvider } from '../components'
 
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return <SharedThemeProvider>{children}</SharedThemeProvider>

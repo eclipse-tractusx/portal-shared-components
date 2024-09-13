@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import * as React from 'react'
 import Box from '@mui/material/Box'
 import RatingUI from '@mui/material/Rating'
+import * as React from 'react'
 
 interface RatingContentProps {
   defaultRating: number

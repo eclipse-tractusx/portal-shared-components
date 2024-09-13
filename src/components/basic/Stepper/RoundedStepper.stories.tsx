@@ -18,7 +18,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { RoundedStepper as Component } from './RoundedStepper'
 
 export default {

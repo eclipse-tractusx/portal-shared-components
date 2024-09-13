@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { Info } from '@mui/icons-material'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Hyperlink } from '.'
-import { Info } from '@mui/icons-material'
 
 const meta: Meta<typeof Hyperlink> = {
   title: 'Hyperlink',

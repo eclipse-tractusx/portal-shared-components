@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, type BoxProps, useTheme } from '@mui/material'
 import OpenWithIcon from '@mui/icons-material/OpenWith'
+import { Box, type BoxProps, useTheme } from '@mui/material'
 
 interface DraggableChipProps extends BoxProps {
   isSelected?: boolean

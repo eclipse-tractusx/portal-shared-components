@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Badge, Avatar, type AvatarProps, useTheme } from '@mui/material'
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline'
+import { Badge, Avatar, type AvatarProps, useTheme } from '@mui/material'
 
 interface AllAvatarProps extends Omit<AvatarProps, 'ImageComponent'> {
   altText?: string

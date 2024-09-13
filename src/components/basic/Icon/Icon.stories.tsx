@@ -17,14 +17,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type Meta, type StoryFn } from '@storybook/react'
-
-import { Icon as Component, type IconProps } from '.'
 import { Box } from '@mui/material'
-import { IconButton } from '../IconButton'
-import { Typography } from '../Typography'
+import { type Meta, type StoryFn } from '@storybook/react'
 import { type ReactNode } from 'react'
 import { Button } from '../Button'
+import { IconButton } from '../IconButton'
+import { Typography } from '../Typography'
+import { Icon as Component, type IconProps } from '.'
 const meta: Meta<typeof Component> = {
   title: 'Icon',
   component: Component,

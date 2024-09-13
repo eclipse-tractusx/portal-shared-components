@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { OrderStatusButton as Component } from '.'
 
 export default {

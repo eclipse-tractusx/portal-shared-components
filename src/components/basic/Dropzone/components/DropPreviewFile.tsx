@@ -18,15 +18,15 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import { Box, IconButton, useTheme } from '@mui/material'
 import { type FunctionComponent, useEffect, useRef, useState } from 'react'
+import { FileIcon } from '../../CustomIcons/FileIcon'
 import {
   type DropZonePreviewTranslations,
   type UploadFile,
   UploadStatus,
 } from '../types'
-import { FileIcon } from '../../CustomIcons/FileIcon'
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 
 const FAKE_UPLOAD_DURATION = 6000
 

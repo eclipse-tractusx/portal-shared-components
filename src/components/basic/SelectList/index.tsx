@@ -20,13 +20,13 @@
 
 import { type TextFieldProps } from '@mui/material'
 import Autocomplete from '@mui/material/Autocomplete'
-import parse from 'autosuggest-highlight/parse'
 import match from 'autosuggest-highlight/match'
+import parse from 'autosuggest-highlight/parse'
+import isEqual from 'lodash/isEqual'
+import uniqueId from 'lodash/uniqueId'
+import { useEffect, useState } from 'react'
 import { SelectInput } from '../MultiSelectList/Components/SelectInput'
 import { SelectOptions } from '../MultiSelectList/Components/SelectOptions'
-import uniqueId from 'lodash/uniqueId'
-import isEqual from 'lodash/isEqual'
-import { useEffect, useState } from 'react'
 
 type Option = Record<string, string | number | null>
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {

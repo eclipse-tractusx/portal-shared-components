@@ -18,14 +18,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline'
 import { Box } from '@mui/material'
+import { type ComponentStory } from '@storybook/react'
 import CXLogoText from '../../../assets/logo/cx-logo-text.svg'
-
-import { MainNavigation as Component } from '.'
 import { Button } from '../Button'
 import { IconButton } from '../IconButton'
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline'
+import { MainNavigation as Component } from '.'
 
 export default {
   title: 'Navigation',

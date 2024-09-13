@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { Box, Link } from '@mui/material'
 import uniqueId from 'lodash/uniqueId'
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { Typography } from '../Typography'
 import { StepperItem } from './StepperItem'
 import './Stepper.scss'

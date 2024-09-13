@@ -17,11 +17,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Typography } from '@mui/material'
-import { useState } from 'react'
+import CloseIcon from '@mui/icons-material/Close'
 import EditIcon from '@mui/icons-material/Edit'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
-import CloseIcon from '@mui/icons-material/Close'
+import { Typography } from '@mui/material'
+import { useState } from 'react'
 import { Input } from '../../../main'
 import { Tooltips } from '../ToolTips'
 

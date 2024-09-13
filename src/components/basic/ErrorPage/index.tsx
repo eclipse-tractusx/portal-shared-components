@@ -19,8 +19,8 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { ErrorDescription } from './components/ErrorDescription'
 import { ErrorActions } from './components/ErrorActions'
+import { ErrorDescription } from './components/ErrorDescription'
 import { ErrorImage } from './components/ErrorImage'
 
 export interface ErrorPageProps {
