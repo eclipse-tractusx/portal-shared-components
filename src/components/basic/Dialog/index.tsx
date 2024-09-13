@@ -19,10 +19,10 @@
  ********************************************************************************/
 
 import { useTheme, useMediaQuery, type Theme } from '@mui/material'
-import { type SystemStyleObject } from '@mui/system'
 import MuiDialog, {
   type DialogProps as MuiDialogProps,
 } from '@mui/material/Dialog'
+import { type SystemStyleObject } from '@mui/system'
 
 export const CONTENT_SPACING_RIGHT_LEFT = 10
 const MODAL_DEFAULT_WIDTH = '1000px'
