@@ -18,17 +18,17 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 import ClearIcon from '@mui/icons-material/Clear'
-import React, { useState, useMemo, useCallback } from 'react'
 import { Box, useTheme, debounce } from '@mui/material'
-import { SearchInput } from '../../../SearchInput'
+import React, { useState, useMemo, useCallback } from 'react'
 import { IconButton } from '../../../IconButton'
-import { type ToolbarProps } from '.'
+import { SearchInput } from '../../../SearchInput'
+import { SortOption, type SortOptionsType } from '../../../SortOption'
+import { Typography } from '../../../Typography'
 import { ViewSelector } from '../../../ViewSelector'
 import type { View } from '../../../ViewSelector'
-import { Typography } from '../../../Typography'
-import type { SelectedFilter } from './UltimateToolbar'
-import { SortOption, type SortOptionsType } from '../../../SortOption'
 import SortImage from './SortImage'
+import type { SelectedFilter } from './UltimateToolbar'
+import { type ToolbarProps } from '.'
 
 export interface SearchAndFilterButtonToolbarProps extends ToolbarProps {
   placeholder?: string

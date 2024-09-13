@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { FlexImages as Component } from './FlexImages'
 import type { Meta, StoryObj } from '@storybook/react'
+import { FlexImages as Component } from './FlexImages'
 
 const meta: Meta<typeof Component> = {
   component: Component,

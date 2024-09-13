@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { TextImageSideBySide as Component } from './TextImageSideBySide'
 import type { Meta, StoryObj } from '@storybook/react'
+import { TextImageSideBySide as Component } from './TextImageSideBySide'
 
 const meta: Meta<typeof Component> = {
   component: Component,

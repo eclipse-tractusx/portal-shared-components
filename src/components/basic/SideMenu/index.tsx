@@ -18,11 +18,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import { Box, type BoxProps, Collapse, Fade } from '@mui/material'
 import { useCallback, useEffect, useState } from 'react'
 import { Button } from '../Button'
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 export interface SideMenuProps extends Omit<BoxProps, 'onChange'> {
   header?: string | JSX.Element

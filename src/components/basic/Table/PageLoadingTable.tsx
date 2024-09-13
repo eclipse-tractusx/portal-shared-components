@@ -19,9 +19,9 @@
  ********************************************************************************/
 import { Box, CircularProgress } from '@mui/material'
 import { useState, useEffect, useCallback } from 'react'
-import { Table, type TableProps } from '.'
-import { hasMorePages, getMaxRows } from './components/Helper/helper'
 import { Typography } from '../Typography'
+import { hasMorePages, getMaxRows } from './components/Helper/helper'
+import { Table, type TableProps } from '.'
 
 export interface PaginFetchArgs {
   page: number

@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { MainHeader as Component } from './MainHeader'
 
 export default {

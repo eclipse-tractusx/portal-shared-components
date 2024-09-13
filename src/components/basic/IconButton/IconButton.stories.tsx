@@ -18,11 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
-
-import { IconButton as Component } from '.'
 import AddIcon from '@mui/icons-material/Add'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import { type ComponentStory } from '@storybook/react'
+import { IconButton as Component } from '.'
 
 export default {
   title: 'Buttons',

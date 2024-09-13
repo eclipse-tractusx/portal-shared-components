@@ -20,10 +20,10 @@
 
 import { Box } from '@mui/material'
 import uniqueId from 'lodash/uniqueId'
+import { type TagSizeType } from '..'
 import { Button } from '../../Button'
 import { Typography } from '../../Typography'
 import { SelectedTag } from './SelectedTag'
-import { type TagSizeType } from '..'
 
 interface SelectAddMoreProps {
   selected: Array<Record<string, string>>

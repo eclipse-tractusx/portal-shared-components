@@ -18,55 +18,13 @@
  ********************************************************************************/
 
 .toggle-switch {
-  width: 60px;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
-
-  & .MuiSwitch-switchBase {
-    top: 6px;
-    left: 7px;
-    color: #fff;
-
+  .MuiSwitch-switchBase {
     &.Mui-checked {
       transform: translateX(28px);
     }
 
     &.Mui-disabled {
       color: #d9d9d9;
-    }
-  }
-
-  & .MuiSwitch-thumb {
-    width: 26px;
-    height: 26px;
-    background-color: #fff;
-    position: absolute;
-  }
-
-  & .MuiSwitch-track {
-    border-radius: 15px;
-    background-color: #ff0000;
-    height: 30px;
-    opacity: 1;
-
-    &::before {
-      position: absolute;
-      content: 'ON';
-      font-size: 12px;
-      left: 5px;
-      top: 6px;
-      color: #000;
-    }
-
-    &::after {
-      position: absolute;
-      content: 'OFF';
-      font-size: 12px;
-      right: 5px;
-      top: 6px;
-      color: #000;
     }
   }
 

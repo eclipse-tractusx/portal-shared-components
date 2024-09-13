@@ -17,11 +17,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ProviderProps, TemplateNames } from './ContentComponentsTypes'
-import './ContentComponents.scss'
-import { useState } from 'react'
 import { useMediaQuery, useTheme } from '@mui/material'
+import { useState } from 'react'
 import { CardGrid } from './CardGrid'
+import { ImageTextCenterAligned } from './components/ImageTextCenterAligned'
+import { type ProviderProps, TemplateNames } from './ContentComponentsTypes'
 import { FlexImages } from './FlexImages'
 import { GridImages } from './GridImages'
 import { LinkButtonGrid } from './LinkButtonGrid'
@@ -32,7 +32,7 @@ import { TextImageSideBySide } from './TextImageSideBySide'
 import { TextImageSideBySideWithSections } from './TextImageSideBySideWithSections'
 import { TextVideoSideBySide } from './TextVideoSideBySide'
 import { VideoTextSideBySide } from './VideoTextSideBySide'
-import { ImageTextCenterAligned } from './components/ImageTextCenterAligned'
+import './ContentComponents.scss'
 
 const TemplateConfig = ({
   provider,

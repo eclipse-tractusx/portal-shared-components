@@ -18,14 +18,14 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import MuiDialog from '@mui/material/Dialog'
-import { type ImageType } from './types'
-import { IconButton } from '../IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import { useTheme } from '@mui/material'
+import MuiDialog from '@mui/material/Dialog'
 import MuiDialogContent from '@mui/material/DialogContent'
-import { Typography } from '../Typography'
+import { IconButton } from '../IconButton'
 import { Image } from '../Image'
+import { Typography } from '../Typography'
+import { type ImageType } from './types'
 
 interface ImageItemOverlayProps {
   onClose: () => void
@@ -36,6 +36,7 @@ export default function ImageItemOverlay({
   text,
   modalWidth = '600',
   onClose,
+  loader,
 }: ImageType & ImageItemOverlayProps) {
   const { palette } = useTheme()
   return (
@@ -75,6 +76,7 @@ export default function ImageItemOverlay({
             <Image
               src={url}
               alt={text}
+              loader={loader}
               style={{
                 width: '100%',
                 height: '100%',

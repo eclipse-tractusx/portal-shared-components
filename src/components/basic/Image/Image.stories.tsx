@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Image as Component } from '.'
 import type { Meta, StoryObj } from '@storybook/react'
+import { Image as Component } from '.'
 
 const meta: Meta<typeof Component> = {
   component: Component,

@@ -18,7 +18,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { ErrorBar as Component } from './ErrorBar'
 
 export default {

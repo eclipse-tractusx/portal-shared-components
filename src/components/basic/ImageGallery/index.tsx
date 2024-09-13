@@ -18,12 +18,12 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { useMediaQuery } from '@mui/material'
 import { useState } from 'react'
 import { Carousel } from '../Carousel'
-import { type ImageType } from './types'
-import ImageItemOverlay from './ImageItemOverlay'
 import { Image } from '../Image'
-import { useMediaQuery } from '@mui/material'
+import ImageItemOverlay from './ImageItemOverlay'
+import { type ImageType } from './types'
 
 export const ImageGallery = ({
   gallery,
@@ -52,6 +52,12 @@ export const ImageGallery = ({
     else return 3
   }
 
+  const getIsInfinite = () => {
+    if (mobile) return gallery?.length > 1
+    if (tab) return gallery?.length > 2
+    return gallery?.length > 3
+  }
+
   return (
     <div className="cx-image-gallery">
       {hovered && hoveredImage?.url && (
@@ -61,6 +67,7 @@ export const ImageGallery = ({
           }}
           url={hoveredImage.url}
           text={hoveredImage.text}
+          loader={hoveredImage.loader}
           modalWidth={modalWidth}
         />
       )}
@@ -68,7 +75,7 @@ export const ImageGallery = ({
         gapBetweenSlides={32}
         gapCarouselTop={0}
         dots={false}
-        infinite
+        infinite={getIsInfinite()}
         itemHeight={maxHeight ?? 0}
         itemWidth={maxWidth ?? 266}
         slidesToShow={getSlidesToShow()}

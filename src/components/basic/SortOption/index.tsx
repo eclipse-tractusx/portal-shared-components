@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { Box } from '@mui/material'
 import { useState } from 'react'
 import { Typography } from '../Typography'
-import { Box } from '@mui/material'
 
 export interface SortOptionsType {
   label: string

@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { DraggableChip as Component } from './DraggableChip'
 
 export default {

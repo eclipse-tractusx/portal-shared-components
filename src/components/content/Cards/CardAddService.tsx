@@ -19,8 +19,8 @@
  ********************************************************************************/
 
 import { Box, useTheme } from '@mui/material'
-import { Typography } from '../../basic/Typography'
 import { useState, useEffect, useRef } from 'react'
+import { Typography } from '../../basic/Typography'
 
 export interface CardAddServiceProps {
   title?: string

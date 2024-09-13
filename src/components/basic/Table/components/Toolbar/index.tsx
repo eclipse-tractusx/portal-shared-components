@@ -18,19 +18,19 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
+import ClearIcon from '@mui/icons-material/Clear'
+import FilterIcon from '@mui/icons-material/FilterAltOutlined'
+import SearchIcon from '@mui/icons-material/Search'
 import { Box, debounce, useTheme } from '@mui/material'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { Button } from '../../../Button'
+import { Checkbox } from '../../../Checkbox'
 import { IconButton } from '../../../IconButton'
 import { SearchInput } from '../../../SearchInput'
-import { Typography } from '../../../Typography'
-import SearchIcon from '@mui/icons-material/Search'
-import FilterIcon from '@mui/icons-material/FilterAltOutlined'
-import ClearIcon from '@mui/icons-material/Clear'
-import { Checkbox } from '../../../Checkbox'
-import { getSelectedFilterUpdate } from './helper'
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 import { Tooltips } from '../../../ToolTips'
+import { Typography } from '../../../Typography'
+import { getSelectedFilterUpdate } from './helper'
 
 interface FilterValue {
   value: string

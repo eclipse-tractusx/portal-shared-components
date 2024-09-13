@@ -19,9 +19,8 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
-import { DialogActions as Component } from './DialogActions'
 import { Button } from '../Button'
+import { DialogActions as Component } from './DialogActions'
 
 export default {
   title: 'Modal',
