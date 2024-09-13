@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 import { type ButtonProps as MuiButtonProps } from '@mui/material/Button/Button'
 import { Button } from '.'
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 
 export interface LoadMoreButtonProps
   extends Omit<MuiButtonProps, 'color' | 'variant' | 'size'> {

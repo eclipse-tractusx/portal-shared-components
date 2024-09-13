@@ -17,13 +17,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useState, useEffect } from 'react'
+import { CircularProgress } from '@mui/material'
+import Box from '@mui/material/Box'
 import LinearProgress, {
   type LinearProgressProps,
 } from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
-import { CircularProgress } from '@mui/material'
+import { useState, useEffect } from 'react'
 
 function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number; progressText: string }

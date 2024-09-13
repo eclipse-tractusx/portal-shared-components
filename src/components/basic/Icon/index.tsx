@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
 import * as MUIIcons from '@mui/icons-material'
 import { type SvgIconProps } from '@mui/material/SvgIcon'
+import React from 'react'
 
 // Extend the Mui SvgIcon size props
 declare module '@mui/material/SvgIcon' {

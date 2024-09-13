@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import CXLogo from '../../../assets/logo/cx-logo.svg'
 import CXLogoShort from '../../../assets/logo/cx-logo-short.svg'
 import CXLogoText from '../../../assets/logo/cx-logo-text.svg'
+import CXLogo from '../../../assets/logo/cx-logo.svg'
 import { Image, LogoGrayData } from '../Image'
 
 interface LogoProps {

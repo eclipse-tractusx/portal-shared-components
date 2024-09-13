@@ -19,9 +19,9 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-import { Carousel as Component } from '.'
-import { theme } from '../../../theme'
 import uniqueId from 'lodash/uniqueId'
+import { theme } from '../../../theme'
+import { Carousel as Component } from '.'
 
 export default {
   title: 'Carousel',

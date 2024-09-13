@@ -18,13 +18,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, IconButton, Slide } from '@mui/material'
 import { Close } from '@mui/icons-material'
-import { type SlideProps } from '@mui/material/Slide/Slide'
-import { useCallback, useEffect, useRef, useState } from 'react'
-import Snackbar from '@mui/material/Snackbar'
 import CheckIcon from '@mui/icons-material/Check'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import { Box, IconButton, Slide } from '@mui/material'
+import { type SlideProps } from '@mui/material/Slide/Slide'
+import Snackbar from '@mui/material/Snackbar'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const AUTO_CLOSE_DELAY_MS = 3000
 

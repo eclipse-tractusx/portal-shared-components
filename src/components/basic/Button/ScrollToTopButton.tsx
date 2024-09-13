@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { IconButton } from '../IconButton'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import { useMediaQuery } from '@mui/material'
+import { IconButton } from '../IconButton'
 
 export interface ScrollToTopButtonProps {
   onButtonClick: React.MouseEventHandler

@@ -18,18 +18,18 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, Link, Typography, useTheme } from '@mui/material'
+import FavoriteIcon from '@mui/icons-material/Favorite'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
+import { Box, Link, Typography, useTheme } from '@mui/material'
 import { useEffect, useRef, useState } from 'react'
+import { Chip } from '../../basic/Chip'
+import { SortOption } from '../../basic/SortOption'
+import { Tooltips } from '../../basic/ToolTips'
 import { CardButtons, type CardButtonsProps } from './CardButtons'
 import { CardChip, type CardChipProps } from './CardChip'
 import { CardContent, type CardContentProps } from './CardContent'
 import { CardImage, type CardImageProps } from './CardImage'
-import { SortOption } from '../../basic/SortOption'
 import { type SubItems } from '.'
-import { Tooltips } from '../../basic/ToolTips'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import { Chip } from '../../basic/Chip'
 
 type Variants =
   | 'minimal'

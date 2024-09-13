@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { LinkButtonGrid as Component } from './LinkButtonGrid'
 import type { Meta, StoryObj } from '@storybook/react'
+import { LinkButtonGrid as Component } from './LinkButtonGrid'
 
 const meta: Meta<typeof Component> = {
   component: Component,

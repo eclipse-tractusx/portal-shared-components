@@ -22,7 +22,6 @@ import EditIcon from '@mui/icons-material/Edit'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import MenuItem from '@mui/material/MenuItem'
 import { type ComponentStory } from '@storybook/react'
-
 import { DropdownMenu as Component } from '.'
 
 export default {

@@ -18,12 +18,12 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import MuiChip, { type ChipProps } from '@mui/material/Chip'
+import AutorenewIcon from '@mui/icons-material/Autorenew'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff'
-import { theme } from '../../../theme'
-import AutorenewIcon from '@mui/icons-material/Autorenew'
+import MuiChip, { type ChipProps } from '@mui/material/Chip'
 import React from 'react'
+import { theme } from '../../../theme'
 
 interface ChipCustomProps extends ChipProps {
   type?: 'decline' | 'confirm' | 'plain' | 'delete' | 'progress'

@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box } from '@mui/material'
-import { type SubNavigationProps } from '.'
-import { Button } from '../Button'
 import EastIcon from '@mui/icons-material/East'
+import { Box } from '@mui/material'
+import { Button } from '../Button'
+import { type SubNavigationProps } from '.'
 
 export const SubNavigationLink = ({
   link1Label,

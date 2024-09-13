@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { GridImages as Component } from './GridImages'
 import type { Meta, StoryObj } from '@storybook/react'
+import { GridImages as Component } from './GridImages'
 
 const meta: Meta<typeof Component> = {
   component: Component,

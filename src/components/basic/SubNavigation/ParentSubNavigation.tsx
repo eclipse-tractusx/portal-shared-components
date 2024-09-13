@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Button } from '../Button'
 import EastIcon from '@mui/icons-material/East'
+import { Button } from '../Button'
 
 export interface NavigationItem {
   index: number

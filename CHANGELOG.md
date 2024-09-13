@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.5.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.5.1...v3.5.2) (2024-09-13)
+
+### Bug Fixes
+
+- **carousel:** handle infinite scroll with a single child element ([6a3a2aa](https://github.com/eclipse-tractusx/portal-shared-components/commit/6a3a2aab4a9ad6b3c09d90dc7bbf02cd2d63b73b))
+- Fix 401 Unauthorized Error on App Image Click in App Details ([3d52a38](https://github.com/eclipse-tractusx/portal-shared-components/commit/3d52a385fb2fdff3a99b0412b38233b40b686da6))
+- **new toggle switch:** default text removed and ui issue fixed ([625ce3d](https://github.com/eclipse-tractusx/portal-shared-components/commit/625ce3daae808087d789edee39afed63d08ed6f9))
+- **new toggle switch:** default text removed and ui issue fixed on hard reload ([2f0bd8f](https://github.com/eclipse-tractusx/portal-shared-components/commit/2f0bd8f922d54cd712a6d2fe99b57d26072ead9f))
+- Remove redundant else & changelog entry ([7bc47bd](https://github.com/eclipse-tractusx/portal-shared-components/commit/7bc47bdd3d65cbb155d319b711a4ada9eea401b2))
+- remove version bump and changelog messages ([115dc7a](https://github.com/eclipse-tractusx/portal-shared-components/commit/115dc7a0826c2e41cb83ab819037de8c785d1534))
+- Resolve App details image duplications ([f39c355](https://github.com/eclipse-tractusx/portal-shared-components/commit/f39c35596fcc535d3a7627bb91985a6a46e10969))
+- update useEffect dependency, handleChange ([aac007d](https://github.com/eclipse-tractusx/portal-shared-components/commit/aac007de32aa1ab58f6e3914e4cb92e006239a33))
+
 ## [3.5.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.5.0...v3.5.1) (2024-09-05)
 
 ### Bug Fixes

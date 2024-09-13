@@ -20,8 +20,8 @@
 
 import { Box } from '@mui/material'
 import { type ComponentStory } from '@storybook/react'
-import { Tooltips as Component } from '.'
 import { Button } from '../Button'
+import { Tooltips as Component } from '.'
 
 export default {
   title: 'Tooltips',

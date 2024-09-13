@@ -18,6 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import ErrorOutline from '@mui/icons-material/ErrorOutline'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import {
   TextField,
   type TextFieldProps,
@@ -27,8 +29,6 @@ import {
   Box,
   FormControl,
 } from '@mui/material'
-import ErrorOutline from '@mui/icons-material/ErrorOutline'
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import { Tooltips } from '../ToolTips'
 
 interface InputProps extends Omit<TextFieldProps, 'variant'> {

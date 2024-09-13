@@ -18,11 +18,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, useTheme } from '@mui/material'
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined'
+import { Box, useTheme } from '@mui/material'
+import React from 'react'
 import { Button, type ButtonProps } from '../Button'
 import { Typography } from '../Typography'
-import React from 'react'
 
 interface ButtonInputData {
   isIcon: boolean

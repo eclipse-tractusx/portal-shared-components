@@ -20,8 +20,8 @@
 
 import { Box } from '@mui/material'
 import { theme } from '../../../theme'
-import { SubNavigationLink } from './SubNavigationLink'
 import { SubNavigationButton } from './SubNavigationButton'
+import { SubNavigationLink } from './SubNavigationLink'
 
 export interface SubNavigationProps {
   buttonLabel?: string

@@ -18,15 +18,15 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Alert, IconButton, Collapse } from '@mui/material'
 import {
   CheckCircleOutline,
   WarningAmber,
   InfoOutlined,
   Close,
 } from '@mui/icons-material'
-import { NotificationContent } from './NotificationContent'
+import { Alert, IconButton, Collapse } from '@mui/material'
 import { theme } from '../../../../theme'
+import { NotificationContent } from './NotificationContent'
 
 export interface PageNotificationsProps {
   severity?: 'error' | 'warning' | 'info' | 'success'

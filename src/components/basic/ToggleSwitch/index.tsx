@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { Switch, Tooltip } from '@mui/material'
 import React from 'react'
 import './ToggleSwitch.scss'
-import { Switch, Tooltip } from '@mui/material'
 
 export interface ToggleSwitchProps {
   checked: boolean
@@ -34,7 +34,7 @@ export const ToggleSwitch = ({
   onChange,
   disabled = false,
   hoverEnabled = false,
-  tooltipText = 'hdhdhddh',
+  tooltipText = '',
 }: ToggleSwitchProps) => {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -64,9 +64,47 @@ export const ToggleSwitch = ({
         inputProps={{ 'aria-label': 'controlled' }}
         disabled={disabled}
         onKeyDown={handleKeyDown}
+        sx={{
+          width: '60px',
+          height: '30px',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 0,
+          '& .MuiSwitch-switchBase': {
+            top: '6px',
+            left: '7px',
+            color: '#fff',
+          },
+          '& .MuiSwitch-thumb': {
+            width: '26px',
+            height: '26px',
+            backgroundColor: '#fff',
+            position: 'absolute',
+          },
+          '& .MuiSwitch-track': {
+            borderRadius: '15px',
+            backgroundColor: checked ? '#5bb52e' : '#ff0000',
+            height: '30px',
+            opacity: 1,
+            '&::before': {
+              content: '"ON"',
+              position: 'absolute',
+              left: '5px',
+              top: '6px',
+              fontSize: '12px',
+              color: '#000',
+            },
+            '&::after': {
+              content: '"OFF"',
+              position: 'absolute',
+              right: '5px',
+              top: '6px',
+              fontSize: '12px',
+              color: '#000',
+            },
+          },
+        }}
       />
     </Tooltip>
   )
 }
-
-export default ToggleSwitch
