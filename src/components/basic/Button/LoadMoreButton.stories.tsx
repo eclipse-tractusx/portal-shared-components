@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { LoadMoreButton as Component } from './LoadMoreButton'
 
 export default {

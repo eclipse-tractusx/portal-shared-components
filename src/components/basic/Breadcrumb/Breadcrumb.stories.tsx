@@ -20,7 +20,6 @@
 
 import { Link, Typography } from '@mui/material'
 import { type StoryFn } from '@storybook/react'
-
 import { Breadcrumb as Component } from '.'
 
 export default {
