@@ -17,11 +17,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Button } from '../Button'
 import EastIcon from '@mui/icons-material/East'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import { Box, Divider } from '@mui/material'
 import { useState } from 'react'
+import { Button } from '../Button'
 import { Typography } from '../Typography'
 import './styles.scss'
 

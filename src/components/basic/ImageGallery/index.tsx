@@ -18,12 +18,12 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { useMediaQuery } from '@mui/material'
 import { useState } from 'react'
 import { Carousel } from '../Carousel'
-import { type ImageType } from './types'
-import ImageItemOverlay from './ImageItemOverlay'
 import { Image } from '../Image'
-import { useMediaQuery } from '@mui/material'
+import ImageItemOverlay from './ImageItemOverlay'
+import { type ImageType } from './types'
 
 export const ImageGallery = ({
   gallery,

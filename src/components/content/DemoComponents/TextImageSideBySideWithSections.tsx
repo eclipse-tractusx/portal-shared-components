@@ -17,18 +17,18 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import {
-  type CardDetailsProps,
-  type ProviderProps,
-} from './ContentComponentsTypes'
-import './ContentComponents.scss'
-import { Trans } from 'react-i18next'
 import { Box, useMediaQuery, useTheme } from '@mui/material'
+import { Trans } from 'react-i18next'
 import { Typography } from '../../basic/Typography'
 import { AlignedText } from './components/AlignedText'
 import { CardWithoutImage } from './components/CardWithoutImage'
 import { RenderImage } from './components/RenderImage'
 import { TitleDescriptionAndSectionlink } from './components/TitleDescriptionAndSectionlink'
+import {
+  type CardDetailsProps,
+  type ProviderProps,
+} from './ContentComponentsTypes'
+import './ContentComponents.scss'
 
 export const TextImageSideBySideWithSections = ({
   provider,

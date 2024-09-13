@@ -20,7 +20,6 @@
 import { createTheme } from '@mui/material/styles'
 // Needs to use like this to overwrite data grid styles
 // https://mui.com/components/data-grid/getting-started/#typescript
-
 import type {} from '@mui/x-data-grid/themeAugmentation'
 import createPalette from '@mui/material/styles/createPalette'
 import createTypography from '@mui/material/styles/createTypography'

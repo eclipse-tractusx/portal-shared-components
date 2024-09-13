@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useRef } from 'react'
-import { Box, useTheme } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import { Box, useTheme } from '@mui/material'
+import { useRef } from 'react'
 import { LogoGrayData } from '../../basic/Image'
 import { Typography } from '../../basic/Typography'
 import { type CardChipProps } from './CardChip'

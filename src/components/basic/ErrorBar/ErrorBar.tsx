@@ -17,11 +17,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
-import { Button } from '../Button'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import { Button } from '../Button'
 import './ErrorBar.scss'
 
 export const ErrorBar = ({

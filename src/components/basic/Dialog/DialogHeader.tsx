@@ -18,13 +18,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
+import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined'
+import CloseIcon from '@mui/icons-material/Close'
 import { Box, useTheme } from '@mui/material'
 import MuiDialogTitle from '@mui/material/DialogTitle'
-import { Typography } from '../Typography'
+import React from 'react'
 import { IconButton } from '../IconButton'
-import CloseIcon from '@mui/icons-material/Close'
-import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined'
+import { Typography } from '../Typography'
 import { CONTENT_SPACING_RIGHT_LEFT } from './index'
 
 export interface DialogHeaderProps {

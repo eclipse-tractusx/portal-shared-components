@@ -18,14 +18,14 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import MuiDialog from '@mui/material/Dialog'
-import { type ImageType } from './types'
-import { IconButton } from '../IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import { useTheme } from '@mui/material'
+import MuiDialog from '@mui/material/Dialog'
 import MuiDialogContent from '@mui/material/DialogContent'
-import { Typography } from '../Typography'
+import { IconButton } from '../IconButton'
 import { Image } from '../Image'
+import { Typography } from '../Typography'
+import { type ImageType } from './types'
 
 interface ImageItemOverlayProps {
   onClose: () => void

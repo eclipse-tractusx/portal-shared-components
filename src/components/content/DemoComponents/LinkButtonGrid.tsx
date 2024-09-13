@@ -17,9 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ProviderProps, type LinkProps } from './ContentComponentsTypes'
 import { Box } from '@mui/material'
 import { Typography } from '../../basic/Typography'
+import { type ProviderProps, type LinkProps } from './ContentComponentsTypes'
 import './ContentComponents.scss'
 
 export const LinkButtonGrid = ({

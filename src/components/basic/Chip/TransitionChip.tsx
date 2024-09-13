@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import MuiChip, { type ChipProps } from '@mui/material/Chip'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff'
+import MuiChip, { type ChipProps } from '@mui/material/Chip'
 import { useState } from 'react'
 import { theme } from '../../../theme'
 

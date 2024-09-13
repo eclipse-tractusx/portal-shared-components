@@ -18,8 +18,8 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { Typography } from '../Typography'
 import { theme } from '../../../theme'
+import { Typography } from '../Typography'
 
 interface StepperItemProps {
   color: string

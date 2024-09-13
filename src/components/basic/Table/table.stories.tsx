@@ -18,16 +18,15 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ComponentStory } from '@storybook/react'
-
-import { Table as Component } from '.'
+import Link from '@mui/material/Link'
 import type {
   GridColDef,
   GridRowsProp,
   GridRenderCellParams,
 } from '@mui/x-data-grid'
-import Link from '@mui/material/Link'
+import { type ComponentStory } from '@storybook/react'
 import TestRows from '../../../../src/assets/data/TableRows.json'
+import { Table as Component } from '.'
 
 const rows: GridRowsProp = TestRows
 

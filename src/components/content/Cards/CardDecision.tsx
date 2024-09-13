@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import ApprovalIcon from '@mui/icons-material/Approval'
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import { Box, Typography, IconButton, useTheme } from '@mui/material'
 import { CardChip, StatusVariants, type Variants } from './CardChip'
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
-import ApprovalIcon from '@mui/icons-material/Approval'
 
 export interface AppContent {
   appId?: string

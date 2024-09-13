@@ -18,8 +18,8 @@
  ********************************************************************************/
 
 import { type SubSectionsType } from '../ContentComponentsTypes'
-import '../ContentComponents.scss'
 import { TitleDescriptionAndSectionlink } from './TitleDescriptionAndSectionlink'
+import '../ContentComponents.scss'
 
 export const AlignedText = ({
   provider,

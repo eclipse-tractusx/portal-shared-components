@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type MainHeaderProps } from '../MainHeader'
 import { Typography } from '../../../Typography'
+import { type MainHeaderProps } from '../MainHeader'
 
 export const MainHeaderTitle = ({
   title,

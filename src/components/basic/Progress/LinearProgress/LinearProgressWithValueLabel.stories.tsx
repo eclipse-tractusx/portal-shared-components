@@ -18,7 +18,6 @@
  ********************************************************************************/
 
 import { type ComponentStory } from '@storybook/react'
-
 import { LinearProgressWithValueLabel as Component } from './LinearProgressWithValueLabel'
 
 export default {

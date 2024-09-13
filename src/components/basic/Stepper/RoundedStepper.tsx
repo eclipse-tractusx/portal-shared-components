@@ -18,8 +18,8 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import './RoundedStepper.scss'
 import { RoundedStepperItem } from './RoundedStepperItem'
+import './RoundedStepper.scss'
 
 export interface StepList {
   step: number

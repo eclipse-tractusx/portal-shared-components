@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useEffect, useState } from 'react'
 import { Box, Link } from '@mui/material'
-import { Typography } from '../Typography'
+import { useEffect, useState } from 'react'
 import { theme } from '../../../theme'
+import { Typography } from '../Typography'
 
 interface StepperItemProps {
   step: number

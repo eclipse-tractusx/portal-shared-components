@@ -17,10 +17,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type ProviderProps } from './ContentComponentsTypes'
-import './ContentComponents.scss'
 import ReactPlayer from 'react-player'
 import { ImageVideoWrapper } from './components/ImageVideoWrapper'
+import { type ProviderProps } from './ContentComponentsTypes'
+import './ContentComponents.scss'
 
 export const TextVideoSideBySide = ({
   provider,

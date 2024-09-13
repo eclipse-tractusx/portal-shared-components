@@ -19,11 +19,11 @@
  ********************************************************************************/
 
 import { Box, useTheme } from '@mui/material'
-import { HeaderTitle } from './Components/HeaderTitle'
+import { mainNavigationHeight } from '../../MainNavigation'
 import { HeaderSubtractOption1 } from './Components/HeaderSubtractOption1'
 import { HeaderSubtractOption2 } from './Components/HeaderSubtractOption2'
 import { HeaderSubtractOption3 } from './Components/HeaderSubtractOption3'
-import { mainNavigationHeight } from '../../MainNavigation'
+import { HeaderTitle } from './Components/HeaderTitle'
 
 export interface PageHeaderProps {
   children?: React.ReactNode
