@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { MainHeader as Component } from './MainHeader'
 
 export default {

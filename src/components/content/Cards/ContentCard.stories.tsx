@@ -18,7 +18,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { ContentCard as Component } from './ContentCard'
 
 export default {

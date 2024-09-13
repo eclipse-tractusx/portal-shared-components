@@ -19,12 +19,11 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
-import { Dialog as Component } from '.'
 import { Button } from '../Button'
 import { DialogActions } from './DialogActions'
 import { DialogContent } from './DialogContent'
 import { DialogHeader } from './DialogHeader'
+import { Dialog as Component } from '.'
 
 export default {
   title: 'Modal',

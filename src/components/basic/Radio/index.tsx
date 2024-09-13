@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import MuiRadio, { type RadioProps as MuiRadioProps } from '@mui/material/Radio'
 import FormControlLabel from '@mui/material/FormControlLabel'
+import MuiRadio, { type RadioProps as MuiRadioProps } from '@mui/material/Radio'
 
 const ariaLabel = { inputProps: { 'aria-label': 'Radio demo' } }
 

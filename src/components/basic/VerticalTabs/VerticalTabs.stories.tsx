@@ -18,9 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type StoryFn } from '@storybook/react'
 import { Box, Typography } from '@mui/material'
-
+import { type StoryFn } from '@storybook/react'
 import { type TabPanelType, VerticalTabs as Component } from '.'
 
 export default {

@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { PageNotifications as Component } from '.'
 
 export default {

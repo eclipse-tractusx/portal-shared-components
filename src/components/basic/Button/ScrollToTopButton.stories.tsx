@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { ScrollToTopButton as Component } from './ScrollToTopButton'
 
 export default {

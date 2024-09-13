@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React from 'react'
 import { type StoryFn } from '@storybook/react'
+import React from 'react'
 import { QuickLinks as Component } from './index'
 
 export default {

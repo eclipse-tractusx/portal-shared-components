@@ -19,10 +19,9 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
-import { UserMenu as Component } from '.'
 import { LanguageSwitch } from '../../basic/LanguageSwitch'
 import { UserNav } from '../UserNav'
+import { UserMenu as Component } from '.'
 
 export default {
   title: 'UserMenu',

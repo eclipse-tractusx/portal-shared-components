@@ -18,14 +18,14 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import { Box } from '@mui/material'
+import uniqueId from 'lodash/uniqueId'
 import { useState, Children, useEffect, useCallback } from 'react'
 import Slider from 'react-slick'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import { IconButton } from '../IconButton'
-import { Box } from '@mui/material'
 import { theme } from '../../../theme'
-import uniqueId from 'lodash/uniqueId'
+import { IconButton } from '../IconButton'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { type CarouselNavArrows } from './CarouselBox'
@@ -75,7 +75,7 @@ export const Carousel = ({
 }: CarouselProps) => {
   const [showArrows, setShowArrows] = useState(false)
   const onMouseEnter = () => {
-    setShowArrows(true)
+    setShowArrows(arrayChildren.length > 1)
   }
   const onMouseLeave = () => {
     setShowArrows(false)
@@ -155,7 +155,9 @@ export const Carousel = ({
 
   const settings = {
     dots,
-    infinite,
+    // @ref https://github.com/akiran/react-slick/issues/2093#issuecomment-1705213915
+    // Prevents broken UI by defaulting infinite scroll to false when only a single child element is present.
+    infinite: infinite && arrayChildren.length > 1,
     slidesToShow: responsiveSlides,
     slidesToScroll: responsiveSlides,
     swipeToSlide: false,

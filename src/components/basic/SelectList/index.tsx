@@ -20,13 +20,13 @@
 
 import { type TextFieldProps } from '@mui/material'
 import Autocomplete from '@mui/material/Autocomplete'
-import parse from 'autosuggest-highlight/parse'
 import match from 'autosuggest-highlight/match'
+import parse from 'autosuggest-highlight/parse'
+import isEqual from 'lodash/isEqual'
+import uniqueId from 'lodash/uniqueId'
+import { useEffect, useState } from 'react'
 import { SelectInput } from '../MultiSelectList/Components/SelectInput'
 import { SelectOptions } from '../MultiSelectList/Components/SelectOptions'
-import uniqueId from 'lodash/uniqueId'
-import isEqual from 'lodash/isEqual'
-import { useEffect, useState } from 'react'
 
 interface SelectListProps extends Omit<TextFieldProps, 'variant'> {
   // eslint-disable-next-line
@@ -69,7 +69,7 @@ export const SelectList = ({
 
   useEffect(() => {
     setSelected(defaultValue)
-  }, [defaultValue])
+  }, [JSON.stringify(defaultValue)])
 
   // eslint-disable-next-line
   const handleChange = (newValue: any) => {
@@ -95,7 +95,7 @@ export const SelectList = ({
       // eslint-disable-next-line
       getOptionLabel={(option) => option[keyTitle] || ''}
       onChange={(_event, nextValue) => {
-        handleChange(nextValue)
+        handleChange(nextValue ?? {})
       }}
       isOptionEqualToValue={(option, value) => isEqual(option, value)}
       renderOption={(props, option, { inputValue }) => (

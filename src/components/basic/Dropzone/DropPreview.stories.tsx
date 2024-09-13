@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { DropPreview as Component } from './components/DropPreview'
 import { UploadStatus } from './types'
 

@@ -18,7 +18,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { AboutCard as Component } from './AboutCard'
 
 export default {

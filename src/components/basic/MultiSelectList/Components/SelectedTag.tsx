@@ -19,9 +19,9 @@
  ********************************************************************************/
 
 import { Box, useTheme } from '@mui/material'
-import { Typography } from '../../Typography'
-import { type TagSizeType } from '..'
 import { useEffect, useState } from 'react'
+import { type TagSizeType } from '..'
+import { Typography } from '../../Typography'
 
 interface SelectedTagProps {
   title: string

@@ -18,11 +18,11 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import AddIcon from '@mui/icons-material/Add'
+import CheckIcon from '@mui/icons-material/Check'
 import { Box } from '@mui/material'
 import { Button } from '../../basic/Button'
 import { IconButton } from '../../basic/IconButton'
-import AddIcon from '@mui/icons-material/Add'
-import CheckIcon from '@mui/icons-material/Check'
 
 export interface CardButtonsProps {
   buttonText: string

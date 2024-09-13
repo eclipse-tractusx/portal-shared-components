@@ -18,13 +18,13 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import UploadFileIcon from '@mui/icons-material/UploadFile'
 import { Box, Link, useTheme } from '@mui/material'
 import { Fragment, type FunctionComponent, useState } from 'react'
+import { Alert } from '../../Alert'
 import { FileErrorIcon } from '../../CustomIcons/FileErrorIcon'
 import { Typography } from '../../Typography'
-import UploadFileIcon from '@mui/icons-material/UploadFile'
 import { type DropZoneDropAreaTranslations } from '../types'
-import { Alert } from '../../Alert'
 
 export interface DropAreaProps {
   translations: DropZoneDropAreaTranslations

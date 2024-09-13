@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { TextCenterAlignedBody2 as Component } from './TextCenterAlignedBody2'
 import type { Meta, StoryObj } from '@storybook/react'
+import { TextCenterAlignedBody2 as Component } from './TextCenterAlignedBody2'
 
 const meta: Meta<typeof Component> = {
   component: Component,

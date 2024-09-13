@@ -19,8 +19,8 @@
  ********************************************************************************/
 
 import { HorizontalTable } from './HorizontalTable'
-import { VerticalTable } from './VerticalTable'
 import type { TableType } from './types'
+import { VerticalTable } from './VerticalTable'
 
 export const StaticTable = ({
   data,

@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { DraggableChip as Component } from './DraggableChip'
 
 export default {

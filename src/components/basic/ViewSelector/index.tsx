@@ -19,8 +19,8 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { Button } from '../Button'
 import React from 'react'
+import { Button } from '../Button'
 
 export interface View {
   buttonText: string

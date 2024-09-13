@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-
 import { DialogHeader as Component } from './DialogHeader'
 
 export default {

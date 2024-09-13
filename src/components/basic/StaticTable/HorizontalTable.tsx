@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, Typography } from '@mui/material'
-import { type TableType } from './types'
-import { useState } from 'react'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy'
+import { Box, Typography } from '@mui/material'
+import { useState } from 'react'
+import { type TableType } from './types'
 
 export const HorizontalTable = ({ data }: { data: TableType }) => {
   const [copied, setCopied] = useState<string>('')

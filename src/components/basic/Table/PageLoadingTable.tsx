@@ -19,9 +19,9 @@
  ********************************************************************************/
 import { Box } from '@mui/material'
 import { useState, useEffect } from 'react'
-import { Table, type TableProps } from '.'
 import { LoadMoreButton } from '../Button/LoadMoreButton'
 import { hasMorePages, getMaxRows } from './components/Helper/helper'
+import { Table, type TableProps } from '.'
 
 export interface PaginFetchArgs {
   page: number

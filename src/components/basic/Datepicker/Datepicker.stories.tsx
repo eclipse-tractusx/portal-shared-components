@@ -18,9 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { type StoryFn } from '@storybook/react'
 import { Box } from '@mui/material'
-
+import { type StoryFn } from '@storybook/react'
 import { Datepicker as Component, type DateType } from '.'
 
 export default {

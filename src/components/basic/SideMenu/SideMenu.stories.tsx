@@ -20,9 +20,8 @@
 
 import { Box } from '@mui/material'
 import { type StoryFn } from '@storybook/react'
-
-import { SideMenu as Component } from '.'
 import { DraggableChip } from '../Chip/DraggableChip'
+import { SideMenu as Component } from '.'
 
 export default {
   title: 'Menus',
