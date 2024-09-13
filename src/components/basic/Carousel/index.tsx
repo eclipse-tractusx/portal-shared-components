@@ -75,7 +75,7 @@ export const Carousel = ({
 }: CarouselProps) => {
   const [showArrows, setShowArrows] = useState(false)
   const onMouseEnter = () => {
-    setShowArrows(true)
+    setShowArrows(arrayChildren.length > 1)
   }
   const onMouseLeave = () => {
     setShowArrows(false)
@@ -155,7 +155,9 @@ export const Carousel = ({
 
   const settings = {
     dots,
-    infinite,
+    // @ref https://github.com/akiran/react-slick/issues/2093#issuecomment-1705213915
+    // Prevents broken UI by defaulting infinite scroll to false when only a single child element is present.
+    infinite: infinite && arrayChildren.length > 1,
     slidesToShow: responsiveSlides,
     slidesToScroll: responsiveSlides,
     swipeToSlide: false,
