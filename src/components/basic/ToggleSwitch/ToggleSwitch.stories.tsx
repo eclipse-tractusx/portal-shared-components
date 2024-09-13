@@ -39,8 +39,8 @@ const Template: ComponentStory<typeof Component> = (
   return <Component {...args} checked={checked} onChange={handleToggleChange} />
 }
 
-export const Default = Template.bind({})
-Default.args = {
+export const ToggleSwitch = Template.bind({})
+ToggleSwitch.args = {
   disabled: false,
-  isHoverEnabled: false,
+  hoverEnabled: false,
 }
