@@ -21,7 +21,7 @@
 import EditIcon from '@mui/icons-material/Edit'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import MenuItem from '@mui/material/MenuItem'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import { DropdownMenu as Component } from '.'
 
 export default {
@@ -33,7 +33,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => (
   <Component {...args}>

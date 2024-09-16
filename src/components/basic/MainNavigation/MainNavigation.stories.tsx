@@ -20,7 +20,7 @@
 
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline'
 import { Box } from '@mui/material'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import CXLogoText from '../../../assets/logo/cx-logo-text.svg'
 import { Button } from '../Button'
 import { IconButton } from '../IconButton'
@@ -40,7 +40,7 @@ const items = [
   { href: '/partnernetwork', title: 'Partner Network' },
 ]
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => (
   <Component {...args}>

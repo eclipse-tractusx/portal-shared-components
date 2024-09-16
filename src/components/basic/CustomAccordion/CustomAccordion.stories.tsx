@@ -21,7 +21,7 @@
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import { Box, Divider, Typography } from '@mui/material'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import { Table } from '../StaticTable/StaticTable.stories'
 import { type CustomAccordionProps } from './Item'
 import { CustomAccordion as Component } from '.'
@@ -35,7 +35,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 

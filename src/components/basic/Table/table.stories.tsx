@@ -24,7 +24,7 @@ import type {
   GridRowsProp,
   GridRenderCellParams,
 } from '@mui/x-data-grid'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import TestRows from '../../../../src/assets/data/TableRows.json'
 import { Table as Component } from '.'
 
@@ -65,7 +65,7 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 

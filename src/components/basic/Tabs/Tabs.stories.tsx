@@ -21,7 +21,7 @@
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
 import { Box } from '@mui/material'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import React from 'react'
 import { Tab } from './Tab'
 import { TabPanel } from './TabPanel'
@@ -40,7 +40,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof ReactComponent> = () => {
+const Template: StoryFn<typeof ReactComponent> = () => {
   const [activeTab, setActiveTab] = React.useState(0)
 
   const handleChange = (_: unknown, newValue: number) => {

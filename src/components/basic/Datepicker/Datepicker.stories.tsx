@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import { type ComponentStory } from '@storybook/react'
+import { type StoryFn } from '@storybook/react'
 import { Datepicker as Component, type DateType } from '.'
 
 export default {
@@ -29,7 +29,7 @@ export default {
   argTypes: {},
 }
 
-const Template: ComponentStory<typeof Component> = (
+const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => (
   <Box sx={{ width: '320px' }}>
