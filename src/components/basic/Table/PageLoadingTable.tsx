@@ -17,9 +17,9 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
-import { Box } from '@mui/material'
-import { useState, useEffect } from 'react'
-import { LoadMoreButton } from '../Button/LoadMoreButton'
+import { Box, CircularProgress } from '@mui/material'
+import { useState, useEffect, useCallback } from 'react'
+import { Typography } from '../Typography'
 import { hasMorePages, getMaxRows } from './components/Helper/helper'
 import { Table, type TableProps } from '.'
 
@@ -52,7 +52,10 @@ export interface PageLoadingTableProps<Row, Args>
   fetchHookRefresh?: number
   allItems?: Row[]
   callbackToPage?: (data: PaginResult<Row>) => void
+  allItemsLoadedHint?: string
 }
+
+const scrollOffset = 350 // Adjust this value for earlier load
 
 export const PageLoadingTable = function <Row, Args>({
   loadLabel,
@@ -61,6 +64,7 @@ export const PageLoadingTable = function <Row, Args>({
   fetchHookRefresh = 0,
   allItems,
   callbackToPage,
+  allItemsLoadedHint = 'All items have been loaded.',
   ...props
 }: PageLoadingTableProps<Row, Args>) {
   const [page, setPage] = useState(0)
@@ -126,6 +130,25 @@ export const PageLoadingTable = function <Row, Args>({
     }
   }, [isSuccess, isFetching, data, clear, loaded])
 
+  const handleScroll = useCallback(() => {
+    const scrollableElement = document.documentElement
+    if (
+      scrollableElement.scrollHeight - scrollableElement.scrollTop <=
+      scrollableElement.clientHeight + scrollOffset
+    ) {
+      if (hasMore && !isFetching) {
+        nextPage()
+      }
+    }
+  }, [hasMore, isFetching])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleScroll])
+
   return (
     <>
       <Table
@@ -133,13 +156,14 @@ export const PageLoadingTable = function <Row, Args>({
         rowsCount={items.length}
         rowsCountMax={maxRows}
         hideFooter={items.length < (props.rowCount ?? 100)}
-        loading={loading}
+        loading={loading && !items.length}
         error={error}
         rows={items}
         reload={refetch}
         {...props}
       />
-      {items.length > 0 && hasMore ? (
+      {/* Display loading spinner while fetching data */}
+      {items.length > 0 && loading && (
         <Box
           className="cx-table__page-loading--loader"
           sx={{
@@ -150,10 +174,22 @@ export const PageLoadingTable = function <Row, Args>({
             alignItems: 'center',
           }}
         >
-          <LoadMoreButton label={loadLabel || 'load more'} onClick={nextPage} />
+          <CircularProgress />
         </Box>
-      ) : (
-        <></>
+      )}
+      {/* Display message when all items have been loaded */}
+      {!hasMore && !loading && items.length > 0 && (
+        <Typography
+          variant="caption3"
+          className="cx-table__page-loading--end"
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          {allItemsLoadedHint}
+        </Typography>
       )}
     </>
   )
