@@ -18,18 +18,18 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { useTheme, useMediaQuery } from '@mui/material'
+import { useTheme, useMediaQuery, type Theme } from '@mui/material'
 import MuiDialog, {
   type DialogProps as MuiDialogProps,
 } from '@mui/material/Dialog'
+import { type SystemStyleObject } from '@mui/system'
 
 export const CONTENT_SPACING_RIGHT_LEFT = 10
 const MODAL_DEFAULT_WIDTH = '1000px'
 
 interface AddtionalDialogProps {
   modalBorderRadius?: number
-  // eslint-disable-next-line
-  additionalModalRootStyles?: any
+  additionalModalRootStyles?: SystemStyleObject<Theme>
 }
 
 export type DialogProps = Pick<

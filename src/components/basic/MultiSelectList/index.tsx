@@ -38,6 +38,8 @@ export interface PartsType {
 }
 export type IHashMap<T> = Record<string, T>
 
+type Options = Array<IHashMap<string>>
+
 export interface MultiSelectListProps
   extends Omit<TextFieldProps, 'variant' | 'size'> {
   items: []
@@ -53,7 +55,7 @@ export interface MultiSelectListProps
   tagSize?: TagSizeType
   filterOptionsArgs?: IHashMap<string>
   defaultValues?: []
-  onAddItem: (items: []) => void
+  onAddItem: (items: Options) => void
 }
 
 export const MultiSelectList = ({
@@ -79,12 +81,10 @@ export const MultiSelectList = ({
 }: MultiSelectListProps) => {
   const selectHeight = popperHeight ? `${popperHeight}px` : 'auto'
   const theme = useTheme()
-  const [selected, setSelected] = useState<[]>([])
+  const [selected, setSelected] = useState<Options>([])
   const [showItems, setShowItems] = useState(false)
 
-  // Add an ESLint exception until there is a solution
-  // eslint-disable-next-line
-  const handleChange = (selectedItems: any) => {
+  const handleChange = (selectedItems: Options) => {
     onAddItem(selectedItems)
     setSelected(selectedItems)
   }
@@ -143,17 +143,11 @@ export const MultiSelectList = ({
           multiple
           disabled={disabled}
           options={items.map((item) => item)}
-          // Add an ESLint exception until there is a solution
-          // eslint-disable-next-line
-          getOptionLabel={(option: any) => option[keyTitle]}
+          getOptionLabel={(option) => option[keyTitle]}
           value={selected}
           filterOptions={filterOptions}
-          // Add an ESLint exception until there is a solution
-          // eslint-disable-next-line
-          renderTags={(selectedItems: any[], getTagProps) =>
-            // Add an ESLint exception until there is a solution
-            // eslint-disable-next-line
-            selectedItems.map((option: any, index: number) => (
+          renderTags={(selectedItems, getTagProps) =>
+            selectedItems.map((option, index: number) => (
               <Chip
                 {...getTagProps({ index })}
                 className="cx-multi-select__chip"
