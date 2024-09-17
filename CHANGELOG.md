@@ -2,16 +2,14 @@
 
 ## [3.6.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.5.2...v3.6.0) (2024-09-17)
 
-
 ### Features
 
-* infinite scroll for page loading table ([cbf91b7](https://github.com/eclipse-tractusx/portal-shared-components/commit/cbf91b7c60f97266e3932592660dac42fbce4ef1))
-
+- infinite scroll for page loading table ([cbf91b7](https://github.com/eclipse-tractusx/portal-shared-components/commit/cbf91b7c60f97266e3932592660dac42fbce4ef1))
 
 ### Bug Fixes
 
-* import order ([6263784](https://github.com/eclipse-tractusx/portal-shared-components/commit/626378421e8279182c37c7b8e8117f4422dd3d65))
-* updated deprecated type usage ([8fa97e1](https://github.com/eclipse-tractusx/portal-shared-components/commit/8fa97e16cb5d229e020b1709a77122029db21981))
+- import order ([6263784](https://github.com/eclipse-tractusx/portal-shared-components/commit/626378421e8279182c37c7b8e8117f4422dd3d65))
+- updated deprecated type usage ([8fa97e1](https://github.com/eclipse-tractusx/portal-shared-components/commit/8fa97e16cb5d229e020b1709a77122029db21981))
 
 ## [3.5.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.5.1...v3.5.2) (2024-09-13)
 
