@@ -2,11 +2,10 @@
 
 ## [3.6.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.0...v3.6.1) (2024-09-17)
 
-
 ### Bug Fixes
 
-* **new toggle switch:** export the toggle switch in index.tsx ([f191582](https://github.com/eclipse-tractusx/portal-shared-components/commit/f191582d571a034c44f850f0214b443ca0a7472d))
-* **new toggle switch:** export the toggle switch in index.tsx ([fb4f385](https://github.com/eclipse-tractusx/portal-shared-components/commit/fb4f3851836b7ef91a9213e87184786b6ed43c49))
+- **new toggle switch:** export the toggle switch in index.tsx ([f191582](https://github.com/eclipse-tractusx/portal-shared-components/commit/f191582d571a034c44f850f0214b443ca0a7472d))
+- **new toggle switch:** export the toggle switch in index.tsx ([fb4f385](https://github.com/eclipse-tractusx/portal-shared-components/commit/fb4f3851836b7ef91a9213e87184786b6ed43c49))
 
 ## [3.6.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.5.2...v3.6.0) (2024-09-17)
 
