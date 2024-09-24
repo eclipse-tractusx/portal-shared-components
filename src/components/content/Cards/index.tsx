@@ -141,7 +141,7 @@ export const Cards = ({
         <Card
           {...settings}
           {...item}
-          key={uniqueId('Cards')}
+          key={item.id}
           onClick={() => {
             onCardClick(item)
           }}
