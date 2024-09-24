@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import uniqueId from 'lodash/uniqueId'
 import { Card, type CardProps } from './Card'
 import { CardAddService } from './CardAddService'
 
