@@ -6,7 +6,6 @@
 
 - **favorite icons clicked state:** add clicked state on favorite icon in cards ([f191582](https://github.com/eclipse-tractusx/portal-shared-components/commit/f191582d571a034c44f850f0214b443ca0a7472d))
 
-
 ## [3.6.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.0...v3.6.1) (2024-09-17)
 
 ### Bug Fixes
