@@ -40,17 +40,24 @@ export const CardContent = ({
 }: CardContentProps) => {
   return (
     <Box sx={{ padding: '20px' }} className="cx-card__content">
-      <Box sx={{ height: '35px' }}>
+      <Box sx={{ height: '35px', mb: '10px' }}>
         {subtitle && (
           <Typography
             variant="label3"
-            sx={{ color: 'text.tertiary', display: 'inline-block' }}
+            sx={{
+              color: 'text.tertiary',
+              overflow: 'hidden',
+              display: '-webkit-box',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: '2',
+              lineHeight: '20px',
+            }}
           >
             {subtitle}
           </Typography>
         )}
       </Box>
-      <Box sx={{ height: '35px' }}>
+      <Box sx={{ height: '35px', mb: '10px' }}>
         <Typography
           variant="h5"
           sx={{
@@ -58,9 +65,10 @@ export const CardContent = ({
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'normal',
-            display: 'box',
-            lineClamp: '2',
-            boxOrient: 'vertical',
+            display: '-webkit-box',
+            WebkitLineClamp: '2',
+            WebkitBoxOrient: 'vertical',
+            lineHeight: '20px',
           }}
         >
           {title}

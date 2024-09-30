@@ -310,7 +310,13 @@ export const Card = ({
           )}
         </Box>
         <Box
-          sx={{ marginBottom: '20px' }}
+          sx={{
+            marginBottom: '20px',
+            overflow: 'hidden',
+            display: '-webkit-box',
+            WebkitBoxOrient: 'vertical',
+            WebkitLineClamp: '6',
+          }}
           className="cx-card__content--wrapper"
         >
           {statusText && imageSize === 'small' && showStatus && (
