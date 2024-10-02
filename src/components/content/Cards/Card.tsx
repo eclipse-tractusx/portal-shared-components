@@ -312,10 +312,6 @@ export const Card = ({
         <Box
           sx={{
             marginBottom: '20px',
-            overflow: 'hidden',
-            display: '-webkit-box',
-            WebkitBoxOrient: 'vertical',
-            WebkitLineClamp: '6',
           }}
           className="cx-card__content--wrapper"
         >

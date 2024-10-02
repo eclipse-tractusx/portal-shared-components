@@ -88,7 +88,16 @@ export const CardContent = ({
         </Box>
       )}
       {description && (
-        <Typography variant="body3" sx={{ marginTop: 1.5 }}>
+        <Typography
+          variant="body3"
+          sx={{
+            marginTop: 1.5,
+            overflow: 'hidden',
+            display: '-webkit-box',
+            WebkitBoxOrient: 'vertical',
+            WebkitLineClamp: '2',
+          }}
+        >
           {description}
         </Typography>
       )}
