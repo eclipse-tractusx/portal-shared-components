@@ -87,7 +87,6 @@ export const ToggleSwitch = ({
             height: '30px',
             opacity: 1,
             '&::before': {
-              content: '"ON"',
               position: 'absolute',
               left: '5px',
               top: '6px',
@@ -95,7 +94,6 @@ export const ToggleSwitch = ({
               color: '#000',
             },
             '&::after': {
-              content: '"OFF"',
               position: 'absolute',
               right: '5px',
               top: '6px',
