@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.6.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.1...v3.6.2) (2024-10-07)
+
+
+### Bug Fixes
+
+* **new toggle switch:** remove the on off text ([cb31a62](https://github.com/eclipse-tractusx/portal-shared-components/commit/cb31a626dc7e63c29d6578919f88aded76883437))
+* **new toggle switch:** removed the on off text from toggle switch ([c161639](https://github.com/eclipse-tractusx/portal-shared-components/commit/c16163903efc9cd12b96b9d93548b4c179c86e44))
+
 ## [3.6.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.0...v3.6.1) (2024-09-17)
 
 ### Bug Fixes
