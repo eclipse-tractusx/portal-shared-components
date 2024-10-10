@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import uniqueId from 'lodash/uniqueId'
 import { Card, type CardProps } from './Card'
 import { CardAddService } from './CardAddService'
 
@@ -141,7 +140,7 @@ export const Cards = ({
         <Card
           {...settings}
           {...item}
-          key={uniqueId('Cards')}
+          key={item.id}
           onClick={() => {
             onCardClick(item)
           }}

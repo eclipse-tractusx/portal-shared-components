@@ -248,7 +248,7 @@ export const Card = ({
       >
         {showFavIcon && (
           <Box
-            className="cx-card__icon"
+            className={`cx-card__icon ${addButtonClicked ? 'cx-card__icon--active' : 'cx-card__icon--inactive'}`}
             sx={{
               padding: '10px',
             }}
