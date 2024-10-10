@@ -38,6 +38,7 @@ declare module '@mui/material/SvgIcon' {
 }
 export interface IconProps extends SvgIconProps {
   iconName: keyof typeof MUIIcons
+  onError?: () => void
 }
 
 // Use a switch case for scalable integration of additional icon libraries.
@@ -47,11 +48,22 @@ const getIconComponent = (iconName: string) => {
   ] as React.ComponentType<SvgIconProps>
 }
 
-export const Icon: React.FC<IconProps> = ({ iconName, ...props }) => {
+// defining default error handler
+const defaultOnError = (iconName: string) => {
+  console.warn(`Icon ${iconName} does not exist in @mui/icons-material`)
+}
+
+export const Icon: React.FC<IconProps> = ({
+  iconName,
+  onError = () => {
+    defaultOnError(iconName)
+  },
+  ...props
+}) => {
   const IconComponent = iconName ? getIconComponent(iconName) : null
 
   if (!IconComponent) {
-    console.warn(`Icon ${iconName} does not exist in @mui/icons-material`)
+    onError()
     return null
   }
 
