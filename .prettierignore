@@ -3,3 +3,4 @@ storybook
 build
 dist
 public
+CHANGELOG.md

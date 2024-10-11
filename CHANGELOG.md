@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.6.3](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.2...v3.6.3) (2024-10-11)
+
+
+### Bug Fixes
+
+* **cards:** add clicked state on favorite icons ([d06b463](https://github.com/eclipse-tractusx/portal-shared-components/commit/d06b463d015732cc125930aba348416a7db859c1))
+* **prettier-check:** ignore changelog ([#344](https://github.com/eclipse-tractusx/portal-shared-components/issues/344)) ([16e9b48](https://github.com/eclipse-tractusx/portal-shared-components/commit/16e9b48fd077271e4f506fb62abe1498a2d230c5))
+
+## [3.6.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.1...v3.6.2) (2024-10-07)
+
+
+### Bug Fixes
+
+* **new toggle switch:** remove the on off text ([cb31a62](https://github.com/eclipse-tractusx/portal-shared-components/commit/cb31a626dc7e63c29d6578919f88aded76883437))
+* **new toggle switch:** removed the on off text from toggle switch ([c161639](https://github.com/eclipse-tractusx/portal-shared-components/commit/c16163903efc9cd12b96b9d93548b4c179c86e44))
+
 ## [3.6.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.0...v3.6.1) (2024-09-17)
 
 ### Bug Fixes
