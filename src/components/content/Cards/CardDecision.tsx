@@ -28,6 +28,7 @@ export interface AppContent {
   name?: string
   provider: string
   status: StatusVariants
+  statusText?: string
   id?: string
   title?: string
 }
@@ -135,7 +136,10 @@ export const CardDecision = ({
                 sx={{ marginBottom: '10px' }}
                 className="cx-card__decision--chip"
               >
-                <CardChip status={item.status} statusText={item.status} />
+                <CardChip
+                  status={item.status}
+                  statusText={item.statusText ?? item.status}
+                />
               </Box>
               {(item.status?.toLowerCase() as StatusVariants) !==
                 StatusVariants.active && (
