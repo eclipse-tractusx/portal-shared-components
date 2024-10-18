@@ -20,23 +20,29 @@
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { Box, useTheme } from '@mui/material'
-import { useRef } from 'react'
-import { LogoGrayData } from '../../basic/Image'
+import { useRef, type CSSProperties } from 'react'
+import { Image, LogoGrayData } from '../../basic/Image'
 import { Typography } from '../../basic/Typography'
 import { type CardChipProps } from './CardChip'
+
+interface ICardImage {
+  src: string
+  alt?: string
+  style?: CSSProperties
+}
 
 interface CardHorizontalProps extends CardChipProps {
   label: string
   title: string
   subTitle?: string
   borderRadius: number
-  imagePath: string
-  imageAlt?: string
   description?: string
   backgroundColor?: string
   buttonText?: string
   onBtnClick?: React.MouseEventHandler
   expandOnHover?: boolean
+  image: ICardImage
+  imageLoader?: (src: string) => Promise<ArrayBuffer>
 }
 
 export const CardHorizontal = ({
@@ -44,9 +50,6 @@ export const CardHorizontal = ({
   title,
   subTitle,
   borderRadius = 0,
-  imagePath,
-  // @ts-expect-error keep for backward compatibility
-  imageAlt,
   description,
   // @ts-expect-error keep for backward compatibility
   status,
@@ -55,6 +58,8 @@ export const CardHorizontal = ({
   buttonText,
   onBtnClick,
   backgroundColor,
+  image,
+  imageLoader,
   // @ts-expect-error keep for backward compatibility
   expandOnHover = false,
 }: CardHorizontalProps) => {
@@ -76,19 +81,14 @@ export const CardHorizontal = ({
         },
       }}
     >
-      <Box
-        className="cx-card__horizontal--left"
-        sx={{
-          flex: '0 0 33.333333%',
-          maxWidth: '33.333333%',
-          minHeight: '200px',
-          backgroundImage: `url(${imagePath || LogoGrayData})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundColor: theme.palette.accent.accent02,
-        }}
-      />
+      {image && (
+        <Image
+          src={image?.src ?? LogoGrayData}
+          alt={image?.alt}
+          loader={imageLoader}
+          style={{ ...image?.style }}
+        />
+      )}
       <Box
         className="cx-card__horizontal--right"
         sx={{
