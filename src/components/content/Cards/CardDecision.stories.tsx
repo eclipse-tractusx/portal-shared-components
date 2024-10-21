@@ -39,12 +39,14 @@ const items = [
     provider: 'Bayerische Motorenwerke AG',
     name: 'Logistics Network, Material Traceability (LBN-MT)',
     status: StatusVariants.release,
+    statusText: 'Released',
   },
   {
     appId: '123',
     provider: 'Catena-X',
     name: 'DTC-Translator',
     status: StatusVariants.active,
+    statusText: 'Active',
   },
 ]
 
