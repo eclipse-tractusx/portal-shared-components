@@ -135,7 +135,7 @@ npm/npmjs/-/dom-helpers/5.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/domexception/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/ee-first/1.1.1, MIT, approved, clearlydefined
 npm/npmjs/-/ejs/3.1.10, Apache-2.0, approved, #1373
-npm/npmjs/-/electron-to-chromium/1.5.29, ISC, approved, #16184
+npm/npmjs/-/electron-to-chromium/1.5.29, ISC, approved, #16342
 npm/npmjs/-/emittery/0.13.1, MIT, approved, clearlydefined
 npm/npmjs/-/emoji-regex/8.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/encodeurl/1.0.2, MIT, approved, clearlydefined
@@ -523,7 +523,7 @@ npm/npmjs/-/resolve/1.22.8, MIT AND ISC, approved, #15315
 npm/npmjs/-/resolve/2.0.0-next.5, MIT AND ISC, approved, #3078
 npm/npmjs/-/reusify/1.0.4, MIT, approved, clearlydefined
 npm/npmjs/-/rimraf/3.0.2, ISC, approved, clearlydefined
-npm/npmjs/-/rollup/4.22.5, MIT AND (ISC AND MIT), approved, #16397
+npm/npmjs/-/rollup/4.24.0, MIT, approved, clearlydefined
 npm/npmjs/-/run-parallel/1.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/safe-array-concat/1.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/safe-buffer/5.2.1, MIT, approved, clearlydefined
@@ -846,22 +846,22 @@ npm/npmjs/@nodelib/fs.stat/2.0.5, MIT, approved, clearlydefined
 npm/npmjs/@nodelib/fs.walk/1.2.8, MIT, approved, clearlydefined
 npm/npmjs/@popperjs/core/2.11.8, MIT, approved, clearlydefined
 npm/npmjs/@rollup/pluginutils/5.1.2, MIT, approved, #16428
-npm/npmjs/@rollup/rollup-android-arm-eabi/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-android-arm64/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-darwin-arm64/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-darwin-x64/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm-gnueabihf/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm-musleabihf/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm64-gnu/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm64-musl/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-powerpc64le-gnu/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-riscv64-gnu/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-s390x-gnu/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-x64-gnu/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-x64-musl/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-arm64-msvc/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-ia32-msvc/4.22.5, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-x64-msvc/4.22.5, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-android-arm-eabi/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-android-arm64/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-darwin-arm64/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-darwin-x64/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm-gnueabihf/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm-musleabihf/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm64-gnu/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-arm64-musl/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-powerpc64le-gnu/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-riscv64-gnu/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-s390x-gnu/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-x64-gnu/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-linux-x64-musl/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-win32-arm64-msvc/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-win32-ia32-msvc/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-win32-x64-msvc/4.24.0, MIT, approved, clearlydefined
 npm/npmjs/@rtsao/scc/1.1.0, MIT, approved, clearlydefined
 npm/npmjs/@rushstack/node-core-library/4.0.2, MIT, approved, clearlydefined
 npm/npmjs/@rushstack/rig-package/0.5.2, MIT, approved, clearlydefined
