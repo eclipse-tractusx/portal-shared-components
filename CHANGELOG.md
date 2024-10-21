@@ -113,6 +113,7 @@
 
 - simplify and automate release versioning ([3824c8c](https://github.com/eclipse-tractusx/portal-shared-components/commit/3824c8ccec94cbc5856c7094d92d7db21058f304))
 - **table:** support pagination in table component ([fc362a0](https://github.com/eclipse-tractusx/portal-shared-components/commit/fc362a08d2c881273f1cc3f9dd07cf26ad099547))
+- Horizontalcard component support image object(https://github.com/eclipse-tractusx/portal-shared-components/pull/355) 
 
 ## 3.1.2
 

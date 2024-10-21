@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: Run Trivy vulnerability scanner in repo mode
-        uses: aquasecurity/trivy-action@f781cce5aab226378ee181d764ab90ea0be3cdd8 # v0.25.0
+        uses: aquasecurity/trivy-action@5681af892cd0f4997658e2bacc62bd0a894cf564 # v0.27.0
         with:
           scan-type: 'config'
           hide-progress: false
@@ -50,7 +50,7 @@ jobs:
           vuln-type: 'os,library'
 
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@c36620d31ac7c881962c3d9dd939c40ec9434f2b # v3.26.12
+        uses: github/codeql-action/upload-sarif@f779452ac5af1c261dce0346a8f964149f49322b # v3.26.13
         if: always()
         with:
           sarif_file: 'trivy-results1.sarif'
