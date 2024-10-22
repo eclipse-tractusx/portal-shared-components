@@ -199,7 +199,7 @@ npm/npmjs/-/eslint-plugin-import/2.29.1, MIT, approved, #11187
 npm/npmjs/-/eslint-plugin-n/16.6.2, MIT, approved, #12657
 npm/npmjs/-/eslint-plugin-promise/6.1.1, ISC, approved, clearlydefined
 npm/npmjs/-/eslint-plugin-react-hooks/4.6.2, MIT, approved, clearlydefined
-npm/npmjs/-/eslint-plugin-react-refresh/0.4.11, MIT, approved, clearlydefined
+npm/npmjs/-/eslint-plugin-react-refresh/0.4.11, MIT, approved, #16852
 npm/npmjs/-/eslint-plugin-react/7.34.4, MIT, approved, #13825
 npm/npmjs/-/eslint-plugin-storybook/0.8.0, MIT, approved, clearlydefined
 npm/npmjs/-/eslint-scope/5.1.1, BSD-2-Clause, approved, clearlydefined
@@ -768,8 +768,8 @@ npm/npmjs/@ampproject/remapping/2.3.0, Apache-2.0, approved, clearlydefined
 npm/npmjs/@babel/code-frame/7.24.7, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13943
 npm/npmjs/@babel/compat-data/7.24.1, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13915
 npm/npmjs/@babel/compat-data/7.24.9, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13915
-npm/npmjs/@babel/compat-data/7.25.2, MIT, approved, clearlydefined
-npm/npmjs/@babel/core/7.25.2, MIT, approved, clearlydefined
+npm/npmjs/@babel/compat-data/7.25.2, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #16822
+npm/npmjs/@babel/core/7.25.2, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #16821
 npm/npmjs/@babel/generator/7.24.9, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #13919
 npm/npmjs/@babel/generator/7.25.0, MIT, approved, clearlydefined
 npm/npmjs/@babel/helper-annotate-as-pure/7.22.5, MIT, approved, #9009
