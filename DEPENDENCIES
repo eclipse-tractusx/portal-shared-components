@@ -174,7 +174,7 @@ npm/npmjs/-/eslint-plugin-import/2.30.0, MIT, approved, #16055
 npm/npmjs/-/eslint-plugin-n/16.6.2, MIT, approved, #12657
 npm/npmjs/-/eslint-plugin-promise/6.6.0, ISC, approved, clearlydefined
 npm/npmjs/-/eslint-plugin-react-hooks/4.6.2, MIT, approved, clearlydefined
-npm/npmjs/-/eslint-plugin-react-refresh/0.4.12, MIT, approved, clearlydefined
+npm/npmjs/-/eslint-plugin-react-refresh/0.4.13, MIT, approved, #16852
 npm/npmjs/-/eslint-plugin-react/7.37.1, MIT, approved, #16407
 npm/npmjs/-/eslint-plugin-storybook/0.8.0, MIT, approved, clearlydefined
 npm/npmjs/-/eslint-scope/5.1.1, BSD-2-Clause, approved, clearlydefined
@@ -531,7 +531,7 @@ npm/npmjs/-/safe-array-concat/1.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/safe-buffer/5.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/safe-regex-test/1.0.3, MIT, approved, clearlydefined
 npm/npmjs/-/safer-buffer/2.1.2, MIT, approved, clearlydefined
-npm/npmjs/-/sass/1.79.5, MIT AND BSD-3-Clause AND Apache-2.0, approved, #16433
+npm/npmjs/-/sass/1.79.6, MIT AND BSD-3-Clause AND Apache-2.0, approved, #16433
 npm/npmjs/-/saxes/6.0.0, ISC, approved, clearlydefined
 npm/npmjs/-/scheduler/0.23.2, MIT, approved, #14588
 npm/npmjs/-/semver/6.3.1, ISC, approved, clearlydefined
@@ -558,7 +558,7 @@ npm/npmjs/-/sprintf-js/1.0.3, BSD-3-Clause, approved, #949
 npm/npmjs/-/stack-utils/2.0.6, MIT, approved, clearlydefined
 npm/npmjs/-/statuses/2.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/stop-iteration-iterator/1.0.0, MIT, approved, clearlydefined
-npm/npmjs/-/storybook/8.3.5, MIT, approved, #16431
+npm/npmjs/-/storybook/8.3.6, MIT, approved, #16431
 npm/npmjs/-/string-argv/0.3.2, MIT, approved, clearlydefined
 npm/npmjs/-/string-convert/0.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/string-length/4.0.2, MIT, approved, clearlydefined
@@ -887,36 +887,36 @@ npm/npmjs/@rushstack/ts-command-line/4.19.1, MIT, approved, clearlydefined
 npm/npmjs/@sinclair/typebox/0.27.8, MIT, approved, clearlydefined
 npm/npmjs/@sinonjs/commons/3.0.1, BSD-3-Clause, approved, #12905
 npm/npmjs/@sinonjs/fake-timers/10.3.0, BSD-3-Clause, approved, #9214
-npm/npmjs/@storybook/addon-actions/8.3.5, MIT, approved, #16411
-npm/npmjs/@storybook/addon-backgrounds/8.3.5, MIT, approved, #16439
-npm/npmjs/@storybook/addon-controls/8.3.5, MIT, approved, #16426
-npm/npmjs/@storybook/addon-docs/8.3.5, MIT, approved, #16421
-npm/npmjs/@storybook/addon-essentials/8.3.5, MIT, approved, #16402
-npm/npmjs/@storybook/addon-highlight/8.3.5, MIT, approved, #16423
-npm/npmjs/@storybook/addon-interactions/8.3.5, MIT, approved, #16414
-npm/npmjs/@storybook/addon-links/8.3.5, MIT, approved, #16420
-npm/npmjs/@storybook/addon-measure/8.3.5, MIT, approved, #16400
-npm/npmjs/@storybook/addon-onboarding/8.3.5, MIT, approved, #16429
-npm/npmjs/@storybook/addon-outline/8.3.5, MIT, approved, #16396
-npm/npmjs/@storybook/addon-toolbars/8.3.5, MIT, approved, #16432
-npm/npmjs/@storybook/addon-viewport/8.3.5, MIT, approved, #16424
-npm/npmjs/@storybook/blocks/8.3.5, MIT, approved, #16399
-npm/npmjs/@storybook/builder-vite/8.3.5, MIT, approved, #16419
-npm/npmjs/@storybook/components/8.3.5, MIT, approved, #16435
-npm/npmjs/@storybook/core/8.3.5, MIT AND Apache-2.0, approved, #16404
-npm/npmjs/@storybook/csf-plugin/8.3.5, MIT, approved, #16413
+npm/npmjs/@storybook/addon-actions/8.3.6, MIT, approved, #16411
+npm/npmjs/@storybook/addon-backgrounds/8.3.6, MIT, approved, #16439
+npm/npmjs/@storybook/addon-controls/8.3.6, MIT, approved, #16426
+npm/npmjs/@storybook/addon-docs/8.3.6, MIT, approved, #16421
+npm/npmjs/@storybook/addon-essentials/8.3.6, MIT, approved, #16402
+npm/npmjs/@storybook/addon-highlight/8.3.6, MIT, approved, #16423
+npm/npmjs/@storybook/addon-interactions/8.3.6, MIT, approved, #16414
+npm/npmjs/@storybook/addon-links/8.3.6, MIT, approved, #16420
+npm/npmjs/@storybook/addon-measure/8.3.6, MIT, approved, #16400
+npm/npmjs/@storybook/addon-onboarding/8.3.6, MIT, approved, #16429
+npm/npmjs/@storybook/addon-outline/8.3.6, MIT, approved, #16396
+npm/npmjs/@storybook/addon-toolbars/8.3.6, MIT, approved, #16432
+npm/npmjs/@storybook/addon-viewport/8.3.6, MIT, approved, #16424
+npm/npmjs/@storybook/blocks/8.3.6, MIT, approved, #16399
+npm/npmjs/@storybook/builder-vite/8.3.6, MIT, approved, #16419
+npm/npmjs/@storybook/components/8.3.6, MIT, approved, #16435
+npm/npmjs/@storybook/core/8.3.6, MIT AND Apache-2.0, approved, #16404
+npm/npmjs/@storybook/csf-plugin/8.3.6, MIT, approved, #16413
 npm/npmjs/@storybook/csf/0.0.1, MIT, approved, clearlydefined
 npm/npmjs/@storybook/csf/0.1.11, MIT, approved, #8941
 npm/npmjs/@storybook/global/5.0.0, MIT, approved, clearlydefined
 npm/npmjs/@storybook/icons/1.2.12, MIT, approved, #14056
-npm/npmjs/@storybook/instrumenter/8.3.5, MIT, approved, #16438
-npm/npmjs/@storybook/manager-api/8.3.5, MIT, approved, #16422
-npm/npmjs/@storybook/preview-api/8.3.5, MIT, approved, #16425
-npm/npmjs/@storybook/react-dom-shim/8.3.5, MIT, approved, #16430
-npm/npmjs/@storybook/react-vite/8.3.5, MIT, approved, #16408
-npm/npmjs/@storybook/react/8.3.5, MIT, approved, #16418
-npm/npmjs/@storybook/test/8.3.5, MIT, approved, #16417
-npm/npmjs/@storybook/theming/8.3.5, MIT, approved, #16410
+npm/npmjs/@storybook/instrumenter/8.3.6, MIT, approved, #16438
+npm/npmjs/@storybook/manager-api/8.3.6, MIT, approved, #16422
+npm/npmjs/@storybook/preview-api/8.3.6, MIT, approved, #16425
+npm/npmjs/@storybook/react-dom-shim/8.3.6, MIT, approved, #16430
+npm/npmjs/@storybook/react-vite/8.3.6, MIT, approved, #16408
+npm/npmjs/@storybook/react/8.3.6, MIT, approved, #16418
+npm/npmjs/@storybook/test/8.3.6, MIT, approved, #16417
+npm/npmjs/@storybook/theming/8.3.6, MIT, approved, #16410
 npm/npmjs/@testing-library/dom/10.4.0, MIT, approved, #15966
 npm/npmjs/@testing-library/dom/9.3.4, MIT AND (MIT AND WTFPL), approved, #9038
 npm/npmjs/@testing-library/jest-dom/6.5.0, MIT, approved, clearlydefined
@@ -958,7 +958,7 @@ npm/npmjs/@types/lodash/4.17.9, MIT, approved, clearlydefined
 npm/npmjs/@types/mdx/2.0.13, MIT, approved, clearlydefined
 npm/npmjs/@types/mime/1.3.5, MIT, approved, #10834
 npm/npmjs/@types/minimatch/5.1.2, MIT, approved, clearlydefined
-npm/npmjs/@types/node/20.16.11, MIT, approved, #16051
+npm/npmjs/@types/node/20.16.13, MIT, approved, #16051
 npm/npmjs/@types/node/22.7.4, MIT, approved, #16398
 npm/npmjs/@types/parse-json/4.0.2, MIT, approved, clearlydefined
 npm/npmjs/@types/prop-types/15.7.13, MIT, approved, #16176
@@ -997,7 +997,7 @@ npm/npmjs/@typescript-eslint/visitor-keys/5.62.0, MIT, approved, clearlydefined
 npm/npmjs/@typescript-eslint/visitor-keys/6.21.0, MIT, approved, clearlydefined
 npm/npmjs/@typescript-eslint/visitor-keys/7.18.0, MIT, approved, clearlydefined
 npm/npmjs/@ungap/structured-clone/1.2.0, ISC, approved, clearlydefined
-npm/npmjs/@vitejs/plugin-react/4.3.2, MIT, approved, #14877
+npm/npmjs/@vitejs/plugin-react/4.3.3, MIT, approved, #14877
 npm/npmjs/@vitest/expect/2.0.5, MIT, approved, clearlydefined
 npm/npmjs/@vitest/pretty-format/2.0.5, MIT, approved, clearlydefined
 npm/npmjs/@vitest/pretty-format/2.1.1, MIT, approved, clearlydefined
