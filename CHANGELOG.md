@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.7.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.3...v3.7.0) (2024-10-22)
+
+
+### Features
+
+* added image object for image handling in horizontal card component ([46c74b5](https://github.com/eclipse-tractusx/portal-shared-components/commit/46c74b5ee9b21410a42dd31fad2a81016ca64d5d))
+* added image object in horizontal card component ([7ffa7c0](https://github.com/eclipse-tractusx/portal-shared-components/commit/7ffa7c0139a3ae4de94601e3156507abc213389e))
+
+
+### Bug Fixes
+
+* add statusText props in cardDecision to have proper text in chips ([986b2bf](https://github.com/eclipse-tractusx/portal-shared-components/commit/986b2bf90d72053600242346d96339d7ed1d9bf3))
+* add statusText props in cardDecision to have proper text in chips ([36c286d](https://github.com/eclipse-tractusx/portal-shared-components/commit/36c286d304fc1db96800f8b098b03df0bdeafae8))
+* convert status to lowerCase ([7f75bf4](https://github.com/eclipse-tractusx/portal-shared-components/commit/7f75bf411691ee3f8c16f5806002de687ddfb906))
+* convert status to lowerCase ([1ab91c0](https://github.com/eclipse-tractusx/portal-shared-components/commit/1ab91c0391ff53128ac06636c03a948e91005fe6))
+* **UI:** card component spaces ([72cb531](https://github.com/eclipse-tractusx/portal-shared-components/commit/72cb53143a7bccdd011239dc319c6172eb79d136))
+* update dependencies file ([5682156](https://github.com/eclipse-tractusx/portal-shared-components/commit/56821563854f17a9ab5926ec7dfcb9d7084b74e5))
+
 ## [3.6.3](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.2...v3.6.3) (2024-10-11)
 
 
