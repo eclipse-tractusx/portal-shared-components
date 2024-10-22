@@ -58,7 +58,7 @@ If the workflow is executed manually and there is no release commit but the pack
 
 ## Release Process Flow Diagram
 
-![Project Diagram](../static/release-process.png)
+![Project Diagram](../../static/release-process.png)
 
 ## Reference Documents
 

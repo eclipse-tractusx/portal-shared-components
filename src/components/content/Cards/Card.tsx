@@ -248,7 +248,7 @@ export const Card = ({
       >
         {showFavIcon && (
           <Box
-            className="cx-card__icon"
+            className={`cx-card__icon ${addButtonClicked ? 'cx-card__icon--active' : 'cx-card__icon--inactive'}`}
             sx={{
               padding: '10px',
             }}
@@ -310,7 +310,9 @@ export const Card = ({
           )}
         </Box>
         <Box
-          sx={{ marginBottom: '20px' }}
+          sx={{
+            marginBottom: '20px',
+          }}
           className="cx-card__content--wrapper"
         >
           {statusText && imageSize === 'small' && showStatus && (

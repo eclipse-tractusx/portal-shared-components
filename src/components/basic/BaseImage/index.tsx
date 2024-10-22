@@ -18,7 +18,6 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Buffer } from 'buffer'
 import { Box } from '@mui/material'
 
 interface BaseImageProps {
