@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.7.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.0...v3.7.1) (2024-10-24)
+
+
+### Bug Fixes
+
+* upgrade material ui ([ad885a9](https://github.com/eclipse-tractusx/portal-shared-components/commit/ad885a9ad95d18eb226cbaa155dafb25402fabf7))
+* upgrade material ui and typescript ([6071077](https://github.com/eclipse-tractusx/portal-shared-components/commit/607107707bbec1fd1344d7ce4779a84556d600eb))
+
 ## [3.7.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.6.3...v3.7.0) (2024-10-22)
 
 
