@@ -725,6 +725,7 @@ npm/npmjs/@babel/plugin-transform-react-jsx/7.25.2, MIT, approved, clearlydefine
 npm/npmjs/@babel/plugin-transform-react-pure-annotations/7.24.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/preset-react/7.24.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/runtime/7.25.6, MIT, approved, clearlydefined
+npm/npmjs/@babel/runtime/7.25.9, MIT, approved, clearlydefined
 npm/npmjs/@babel/template/7.25.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/traverse/7.25.7, MIT, approved, clearlydefined
 npm/npmjs/@babel/types/7.25.8, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #16040
@@ -834,15 +835,17 @@ npm/npmjs/@microsoft/api-extractor/7.43.0, MIT, approved, clearlydefined
 npm/npmjs/@microsoft/tsdoc-config/0.16.2, MIT, approved, clearlydefined
 npm/npmjs/@microsoft/tsdoc/0.14.2, MIT, approved, clearlydefined
 npm/npmjs/@mui/base/5.0.0-beta.58, MIT, approved, #2992
-npm/npmjs/@mui/core-downloads-tracker/5.16.7, MIT, approved, clearlydefined
-npm/npmjs/@mui/icons-material/5.16.7, MIT, approved, #15711
-npm/npmjs/@mui/material/5.16.7, MIT, approved, #15714
-npm/npmjs/@mui/private-theming/5.16.6, MIT, approved, #15717
-npm/npmjs/@mui/styled-engine/5.16.6, MIT, approved, #15718
-npm/npmjs/@mui/system/5.16.7, MIT, approved, #15715
+npm/npmjs/@mui/core-downloads-tracker/6.1.5, MIT, approved, clearlydefined
+npm/npmjs/@mui/icons-material/6.1.5, MIT, approved, clearlydefined
+npm/npmjs/@mui/material/6.1.5, MIT, approved, clearlydefined
+npm/npmjs/@mui/private-theming/6.1.5, MIT, approved, clearlydefined
+npm/npmjs/@mui/styled-engine/6.1.5, MIT, approved, clearlydefined
+npm/npmjs/@mui/system/6.1.5, MIT, approved, clearlydefined
 npm/npmjs/@mui/types/7.2.17, MIT, approved, #16017
+npm/npmjs/@mui/types/7.2.18, MIT, approved, #16017
 npm/npmjs/@mui/utils/5.16.6, MIT, approved, #15716
 npm/npmjs/@mui/utils/6.0.0-rc.0, MIT, approved, #16415
+npm/npmjs/@mui/utils/6.1.5, MIT, approved, clearlydefined
 npm/npmjs/@mui/x-data-grid/6.20.4, MIT AND ISC, approved, #15720
 npm/npmjs/@mui/x-date-pickers/6.20.2, MIT, approved, clearlydefined
 npm/npmjs/@nodelib/fs.scandir/2.1.5, MIT, approved, clearlydefined
