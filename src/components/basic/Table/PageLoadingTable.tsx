@@ -53,6 +53,7 @@ export interface PageLoadingTableProps<Row, Args>
   allItems?: Row[]
   callbackToPage?: (data: PaginResult<Row>) => void
   allItemsLoadedHint?: string
+  mappedTableSearchTranslation?: Record<string, string>
 }
 
 const scrollOffset = 350 // Adjust this value for earlier load
@@ -65,6 +66,8 @@ export const PageLoadingTable = function <Row, Args>({
   allItems,
   callbackToPage,
   allItemsLoadedHint = 'All items have been loaded.',
+  mappedTableSearchTranslation,
+  searchExpr,
   ...props
 }: PageLoadingTableProps<Row, Args>) {
   const [page, setPage] = useState(0)
@@ -149,6 +152,19 @@ export const PageLoadingTable = function <Row, Args>({
     }
   }, [handleScroll])
 
+  const getTranslationMessage = (key: string, defaultMessage: string) => {
+    if (mappedTableSearchTranslation && key in mappedTableSearchTranslation) {
+      return mappedTableSearchTranslation[key]
+    }
+    return defaultMessage
+  }
+
+  const noRowsMsg = !items.length
+    ? searchExpr
+      ? getTranslationMessage('noSearchItemsToDisplay', 'No results found')
+      : getTranslationMessage('noItemsToDisplay', 'No items to display')
+    : ''
+
   return (
     <>
       <Table
@@ -159,6 +175,7 @@ export const PageLoadingTable = function <Row, Args>({
         error={error}
         rows={items}
         reload={refetch}
+        noRowsMsg={noRowsMsg}
         {...props}
       />
       {/* Display loading spinner while fetching data */}
