@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.7.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.1...v3.7.2) (2024-11-05)
+
+
+### Bug Fixes
+
+* revert dependencies to 3.6.2 ([da7c1f2](https://github.com/eclipse-tractusx/portal-shared-components/commit/da7c1f2b408ac0dd7d90ebaab108b3d9e5879f59))
+* revert dependent libraries to version 3.6.2 ([02bd5ce](https://github.com/eclipse-tractusx/portal-shared-components/commit/02bd5ce99c2ecb154ff0a95a94bb6df3c7b9342a))
+
 ## [3.7.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.0...v3.7.1) (2024-10-24)
 
 
