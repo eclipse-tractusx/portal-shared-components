@@ -525,7 +525,7 @@ npm/npmjs/-/resolve/1.22.8, MIT AND ISC, approved, #15315
 npm/npmjs/-/resolve/2.0.0-next.5, MIT AND ISC, approved, #3078
 npm/npmjs/-/reusify/1.0.4, MIT, approved, clearlydefined
 npm/npmjs/-/rimraf/3.0.2, ISC, approved, clearlydefined
-npm/npmjs/-/rollup/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/-/rollup/4.24.0, MIT AND (ISC AND MIT), approved, #16917
 npm/npmjs/-/run-parallel/1.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/safe-array-concat/1.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/safe-buffer/5.2.1, MIT, approved, clearlydefined
@@ -866,22 +866,22 @@ npm/npmjs/@parcel/watcher-win32-x64/2.4.1, MIT, approved, clearlydefined
 npm/npmjs/@parcel/watcher/2.4.1, MIT, approved, clearlydefined
 npm/npmjs/@popperjs/core/2.11.8, MIT, approved, clearlydefined
 npm/npmjs/@rollup/pluginutils/5.1.2, MIT, approved, #16428
-npm/npmjs/@rollup/rollup-android-arm-eabi/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-android-arm64/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-darwin-arm64/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-darwin-x64/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm-gnueabihf/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm-musleabihf/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm64-gnu/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-arm64-musl/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-powerpc64le-gnu/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-riscv64-gnu/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-s390x-gnu/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-x64-gnu/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-linux-x64-musl/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-arm64-msvc/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-ia32-msvc/4.24.0, MIT, approved, clearlydefined
-npm/npmjs/@rollup/rollup-win32-x64-msvc/4.24.0, MIT, approved, clearlydefined
+npm/npmjs/@rollup/rollup-android-arm-eabi/4.24.0, MIT AND (ISC AND MIT), approved, #16904
+npm/npmjs/@rollup/rollup-android-arm64/4.24.0, MIT AND (ISC AND MIT), approved, #16918
+npm/npmjs/@rollup/rollup-darwin-arm64/4.24.0, MIT AND (ISC AND MIT), approved, #16908
+npm/npmjs/@rollup/rollup-darwin-x64/4.24.0, MIT AND (ISC AND MIT), approved, #16901
+npm/npmjs/@rollup/rollup-linux-arm-gnueabihf/4.24.0, MIT AND (ISC AND MIT), approved, #16906
+npm/npmjs/@rollup/rollup-linux-arm-musleabihf/4.24.0, MIT AND (ISC AND MIT), approved, #16914
+npm/npmjs/@rollup/rollup-linux-arm64-gnu/4.24.0, MIT AND (ISC AND MIT), approved, #16910
+npm/npmjs/@rollup/rollup-linux-arm64-musl/4.24.0, MIT AND (ISC AND MIT), approved, #16912
+npm/npmjs/@rollup/rollup-linux-powerpc64le-gnu/4.24.0, MIT AND (ISC AND MIT), approved, #16916
+npm/npmjs/@rollup/rollup-linux-riscv64-gnu/4.24.0, MIT AND (ISC AND MIT), approved, #16907
+npm/npmjs/@rollup/rollup-linux-s390x-gnu/4.24.0, MIT AND (ISC AND MIT), approved, #16919
+npm/npmjs/@rollup/rollup-linux-x64-gnu/4.24.0, MIT AND (ISC AND MIT), approved, #16915
+npm/npmjs/@rollup/rollup-linux-x64-musl/4.24.0, MIT AND (ISC AND MIT), approved, #16911
+npm/npmjs/@rollup/rollup-win32-arm64-msvc/4.24.0, MIT AND (ISC AND MIT), approved, #16909
+npm/npmjs/@rollup/rollup-win32-ia32-msvc/4.24.0, MIT AND (ISC AND MIT), approved, #16913
+npm/npmjs/@rollup/rollup-win32-x64-msvc/4.24.0, MIT AND (ISC AND MIT), approved, #16902
 npm/npmjs/@rtsao/scc/1.1.0, MIT, approved, clearlydefined
 npm/npmjs/@rushstack/node-core-library/4.0.2, MIT, approved, clearlydefined
 npm/npmjs/@rushstack/rig-package/0.5.2, MIT, approved, clearlydefined
