@@ -100,11 +100,13 @@
     "vite-plugin-lib-inject-css": "^2.0.0"
   },
   "resolutions": {
+    "@babel/preset-flow": "7.24.1",
     "@storybook/codemod": "8.3.6",
     "@storybook/components": "8.3.6",
     "@storybook/manager-api": "8.3.6",
     "@storybook/preview-api": "8.3.6",
-    "@storybook/theming": "8.3.6"
+    "@storybook/theming": "8.3.6",
+    "flow-parser": "0.231.0"
   },
   "scripts": {
     "build": "tsc --p ./tsconfig-build.json && vite build",
