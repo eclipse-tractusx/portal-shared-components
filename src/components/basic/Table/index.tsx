@@ -191,7 +191,7 @@ export const Table = ({
   }
 
   const renderErrorMessage = () => {
-    if (error == null) {
+    if (rowsCount === 0 || error == null) {
       return <Typography variant="body2">{noRowsMsg ?? 'No rows'}</Typography>
     }
     if (error.status >= 400 && error.status < 500) {
