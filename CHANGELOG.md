@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.3](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.2...v3.7.3) (2024-11-11)
+
+
+### Bug Fixes
+
+* **table:** fix table error message ([a164762](https://github.com/eclipse-tractusx/portal-shared-components/commit/a164762249b7fca0bdf9873f0e12202ad76f5b57))
+
 ## [3.7.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.1...v3.7.2) (2024-11-05)
 
 
