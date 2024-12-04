@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.4](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.3...v3.7.4) (2024-12-04)
+
+
+### Bug Fixes
+
+* **app & service subscription:** fix search text clearing ([#371](https://github.com/eclipse-tractusx/portal-shared-components/issues/371)) ([43e9557](https://github.com/eclipse-tractusx/portal-shared-components/commit/43e9557b5369ae16c327cd9ff9010a5d73a48d10))
+
 ## [3.7.3](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.2...v3.7.3) (2024-11-11)
 
 
