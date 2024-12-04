@@ -88,6 +88,7 @@ export interface TableProps extends DataGridProps {
   loadLabel?: string
   nextPage?: () => void
   buttons?: AdditionalButtonsType[]
+  onClearSearch?: () => void
 }
 
 export const Table = ({
@@ -132,6 +133,7 @@ export const Table = ({
   loadLabel = 'load more',
   nextPage,
   buttons,
+  onClearSearch,
   ...props
 }: TableProps) => {
   const toolbarProps = {
@@ -158,6 +160,7 @@ export const Table = ({
     onSortClick,
     autoFocus,
     buttons,
+    onClearSearch,
   }
 
   // TODO: this method contains application specific row attributes and must therefore
