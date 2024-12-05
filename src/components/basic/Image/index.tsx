@@ -47,9 +47,16 @@ interface ImageProps {
   alt?: string
   style?: React.CSSProperties
   loader?: (src: string) => Promise<ArrayBuffer>
+  onError?: (e: Error) => void
 }
 
-export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
+export const Image = ({
+  src,
+  alt,
+  style,
+  loader,
+  onError,
+}: ImageProps): JSX.Element => {
   const [data, setData] = useState(LogoGrayData)
   const [error, setError] = useState(false)
 
@@ -62,14 +69,14 @@ export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
         IMAGE_TYPES[firstByte] ?? IMAGE_TYPES[first3Bytes] ?? 'image/*'
       setData(URL.createObjectURL(new Blob([buffer], { type: imageType })))
     } catch (e) {
+      // defining default error handler
+      onError ? onError(e as Error) : console.error(e)
       setData(LogoGrayData)
     }
   }, [src, loader])
 
   useEffect(() => {
-    getData().catch((e) => {
-      console.error(e)
-    })
+    void getData()
   }, [getData])
 
   return (
