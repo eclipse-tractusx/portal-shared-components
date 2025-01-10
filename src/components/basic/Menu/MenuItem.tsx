@@ -19,14 +19,8 @@
  ********************************************************************************/
 
 import { ArrowForward } from '@mui/icons-material'
-import {
-  Box,
-  type BoxProps,
-  Divider,
-  Link,
-  ListItem,
-  useTheme,
-} from '@mui/material'
+import { type BoxProps, Divider, Link, ListItem, useTheme } from '@mui/material'
+import classNames from 'classnames'
 import { useState } from 'react'
 import { Typography } from '../Typography'
 import { type MenuType, type NotificationBadgeType } from '.'
@@ -45,6 +39,8 @@ export interface MenuItemProps extends LinkItem {
   disable?: boolean
   notificationInfo?: NotificationBadgeType
   showNotificationCount?: boolean
+  isHeader?: boolean
+  isActive?: boolean
 }
 
 export const MenuItem = ({
@@ -59,10 +55,11 @@ export const MenuItem = ({
   Menu,
   notificationInfo,
   showNotificationCount,
+  isHeader = false,
+  isActive,
   ...props
 }: MenuItemProps) => {
   const theme = useTheme()
-  const { spacing } = useTheme()
   const [open, setOpen] = useState(false)
   const notificationColor = notificationInfo?.isNotificationAlert
     ? theme.palette.danger.dangerBadge
@@ -77,11 +74,10 @@ export const MenuItem = ({
 
   return (
     <ListItem
-      className="cx-list-item"
       sx={{
         display: 'block',
         position: 'relative',
-        padding: spacing(0, 1),
+        padding: theme.spacing(0, 1),
         ...(onClick != null && { cursor: 'pointer' }),
       }}
       onMouseEnter={onMouseEnter}
@@ -89,60 +85,46 @@ export const MenuItem = ({
       onClick={(e) => {
         ;(onClick == null || disable) ?? onClick(e)
       }}
+      className={isHeader ? 'cx-menu-header-item' : 'cx-menu-item'}
     >
       <Link
-        className="cx-list-item__link"
         component={component}
+        className={classNames('cx-list-item__link', { active: isActive })}
         sx={{
           color: `${disable ? 'text.disabled' : 'text.primary'}`,
           pointerEvents: `${disable ? 'none' : 'auto'}`,
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: spacing(hint ? 1.3 : 1.5, 2),
-          borderRadius: 3,
-          typography: 'label3',
+          padding: theme.spacing(hint ? 1.3 : 1.5, 2),
+          borderRadius: theme.spacing(1),
+          typography: 'body2',
           textDecoration: 'none',
           whiteSpace: 'nowrap',
-          ':hover': {
-            backgroundColor: 'selected.hover',
-            color: 'primary.dark',
-            '.MuiSvgIcon-root': {
-              color: 'primary.dark',
-            },
+          fontWeight: 500,
+          ':hover': !isHeader
+            ? {
+                backgroundColor: 'selected.hover',
+                '.MuiSvgIcon-root': {
+                  color: 'primary.main',
+                },
+              }
+            : {},
+          '&.active': {
+            color: 'primary.main',
           },
+
+          ...(isHeader
+            ? {
+                typography: 'h6',
+                textTransform: 'uppercase',
+              }
+            : {}),
         }}
         {...props}
       >
         {title}
-        {hint && (
-          <Box
-            className="cx-list-item__hint"
-            sx={{
-              backgroundColor: '#9AA9E2',
-              borderRadius: '5px',
-              minWidth: '40px',
-              textAlign: 'center',
-              whiteSpace: 'nowrap',
-              marginLeft: '12px',
-              padding: '5px 5px',
-            }}
-          >
-            <Typography
-              className="cx-list-item__help-text"
-              variant="helper"
-              display="block"
-              sx={{
-                fontSize: '10px',
-                lineHeight: '14px',
-                fontWeight: 'bold',
-                color: '#2F6DBA',
-              }}
-            >
-              {hint}
-            </Typography>
-          </Box>
-        )}
+
         {children != null && (
           <ArrowForward
             className="cx-list-item__arrow-fwd"
@@ -154,17 +136,14 @@ export const MenuItem = ({
           notificationInfo != null &&
           notificationInfo.notificationCount > 0 && (
             <Typography
-              className="cx-list-item__notification-text"
               sx={{
                 fontWeight: '500',
-                fontSize: '0.75rem',
-                minWidth: '20px',
                 padding: '2px 6px',
-                height: '20px',
-                borderRadius: '10px',
+                borderRadius: '50px',
                 background: notificationColor,
-                color: 'white',
+                color: 'white !important',
               }}
+              className="cx-list-item__notification-text"
             >
               {notificationInfo?.notificationCount}
             </Typography>

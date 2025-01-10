@@ -43,7 +43,9 @@ export const Navigation = ({
       sx={{ display: 'flex', flexWrap: 'wrap' }}
     >
       {items?.map((link) => {
-        const isActive = link.href === active || link.to === active
+        const isActive =
+          // @ts-expect-error  We have name property
+          active === link.name || link.href === active || link.to === active
 
         return (
           <NavItem
@@ -52,7 +54,8 @@ export const Navigation = ({
             component={component}
             unstyled={unstyled}
             key={uniqueId('Navigation')}
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault()
               if (selectedItem != null) selectedItem(link.href ?? '')
             }}
           />
