@@ -18,6 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { Visibility, VisibilityOff } from '@mui/icons-material'
 import ErrorOutline from '@mui/icons-material/ErrorOutline'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import {
@@ -28,12 +29,15 @@ import {
   InputAdornment,
   Box,
   FormControl,
+  IconButton,
 } from '@mui/material'
+import { useState } from 'react'
 import { Tooltips } from '../ToolTips'
 
 interface InputProps extends Omit<TextFieldProps, 'variant'> {
   variant?: 'filled'
   tooltipMessage?: string
+  showToggle?: boolean
 }
 
 export const Input = ({
@@ -43,8 +47,14 @@ export const Input = ({
   helperText,
   error = false,
   tooltipMessage,
+  showToggle = false,
   ...props
 }: InputProps) => {
+  const [showPassword, setShowPassword] = useState(false)
+
+  const handleToggleVisibility = () => {
+    setShowPassword((prev) => !prev)
+  }
   return (
     <Box className="cx-input">
       <FormControl
@@ -89,23 +99,27 @@ export const Input = ({
           variant={variant}
           placeholder={placeholder}
           error={error}
-          InputProps={
-            error
-              ? {
-                  endAdornment: (
-                    <InputAdornment
-                      position="end"
-                      className="cx-form-control__input-adornment"
-                    >
-                      <ErrorOutline
-                        color="error"
-                        className="cx-form-control__input-adornment--error"
-                      />
-                    </InputAdornment>
-                  ),
-                }
-              : {}
-          }
+          type={showToggle ? (!showPassword ? 'password' : 'text') : 'text'}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                {showToggle ? (
+                  <IconButton
+                    onClick={handleToggleVisibility}
+                    edge="end"
+                    aria-label="toggle password visibility"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                ) : error ? (
+                  <ErrorOutline
+                    color="error"
+                    className="cx-form-control__input-adornment--error"
+                  />
+                ) : null}
+              </InputAdornment>
+            ),
+          }}
           {...props}
         />
         {error && helperText && (
