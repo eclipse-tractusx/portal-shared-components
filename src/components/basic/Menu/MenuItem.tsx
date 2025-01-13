@@ -30,6 +30,7 @@ type LinkItem = Partial<Record<'href' | 'to', string>>
 export interface MenuItemProps extends LinkItem {
   title: string
   hint?: string
+  name?: string
   children?: MenuItemProps[]
   component?: React.ElementType
   divider?: boolean
@@ -85,11 +86,11 @@ export const MenuItem = ({
       onClick={(e) => {
         ;(onClick == null || disable) ?? onClick(e)
       }}
-      className={isHeader ? 'cx-menu-header-item' : 'cx-menu-item'}
+      className={`cx-list-item ${isHeader ? 'cx-list-item-header' : 'cx-list-item-header-item'}`}
     >
       <Link
         component={component}
-        className={classNames('cx-list-item__link', { active: isActive })}
+        className={`cx-list-item__link ${classNames({ active: isActive })}`}
         sx={{
           color: `${disable ? 'text.disabled' : 'text.primary'}`,
           pointerEvents: `${disable ? 'none' : 'auto'}`,
@@ -113,7 +114,6 @@ export const MenuItem = ({
           '&.active': {
             color: 'primary.main',
           },
-
           ...(isHeader
             ? {
                 typography: 'h6',
@@ -136,6 +136,7 @@ export const MenuItem = ({
           notificationInfo != null &&
           notificationInfo.notificationCount > 0 && (
             <Typography
+              className="cx-list-item__notification-text"
               sx={{
                 fontWeight: '500',
                 padding: '2px 6px',
@@ -143,7 +144,6 @@ export const MenuItem = ({
                 background: notificationColor,
                 color: 'white !important',
               }}
-              className="cx-list-item__notification-text"
             >
               {notificationInfo?.notificationCount}
             </Typography>

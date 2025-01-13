@@ -161,9 +161,9 @@ export const paletteDefinitions = {
     accent12: '#2B4078',
   },
   selected: {
-    hover: 'rgba(15, 113, 203, 0.05)',
-    focus: 'rgba(15, 113, 203, 0.15)',
-    active: 'rgba(15, 113, 203, 0.2)',
+    hover: '#EDEDED',
+    focus: 'rgba(128, 128, 128, .2)',
+    active: 'rgba(128, 128, 128, .3)',
   },
   pending: {
     main: '#FFECBD',

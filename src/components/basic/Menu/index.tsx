@@ -19,7 +19,6 @@
  ********************************************************************************/
 
 import { Box, type BoxProps, Divider, List, useTheme } from '@mui/material'
-import uniqueId from 'lodash/uniqueId'
 import { MenuItem, type MenuItemProps } from './MenuItem'
 
 export interface NotificationBadgeType {
@@ -33,6 +32,7 @@ export interface MenuProps extends BoxProps {
   component?: React.ElementType
   divider?: boolean
   notificationInfo?: NotificationBadgeType
+  activePathname?: string
   subMenuDivider?: boolean
 }
 
@@ -42,6 +42,7 @@ export const Menu = ({
   component,
   onClick,
   notificationInfo,
+  activePathname,
   subMenuDivider,
   ...props
 }: MenuProps) => {
@@ -57,14 +58,14 @@ export const Menu = ({
               <>
                 <MenuItem
                   title={item.title}
-                  key={uniqueId('Menu')}
+                  key={`header-${index}`}
                   isHeader={true}
                   component={Box}
                 />
-                {item.children.map((childItem) => {
+                {item.children.map((childItem, childIndex) => {
                   const isActive =
-                    currentPath === childItem.to ||
-                    currentPath === childItem.href
+                    activePathname === childItem.to ||
+                    activePathname === childItem.href
                   return (
                     <MenuItem
                       {...childItem}
@@ -73,8 +74,8 @@ export const Menu = ({
                       Menu={Menu}
                       onClick={onClick}
                       isActive={isActive}
-                      key={uniqueId('Menu')}
-                      showNotificationCount={item.to === '/notifications'}
+                      key={`header-child-${childIndex}`}
+                      showNotificationCount={item.to === 'notifications'}
                       notificationInfo={notificationInfo}
                     />
                   )
@@ -95,8 +96,8 @@ export const Menu = ({
               Menu={Menu}
               isActive={isActive}
               onClick={onClick}
-              key={uniqueId('Menu')}
-              showNotificationCount={item.to === '/notifications'}
+              key={`header-${index}`}
+              showNotificationCount={item.to === 'notifications'}
               notificationInfo={notificationInfo}
             />
           )

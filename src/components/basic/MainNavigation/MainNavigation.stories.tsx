@@ -34,10 +34,48 @@ export default {
 }
 
 const items = [
-  { href: '/home', title: 'Home' },
-  { href: '/appmarktplace', title: 'App Marktplace' },
-  { href: '/datamanagement', title: 'Data Management' },
-  { href: '/partnernetwork', title: 'Partner Network' },
+  {
+    title: 'Dataspace Participate',
+    children: [
+      { title: 'Partner Network', href: '/partner-network' },
+      { title: 'Use Case Participation', href: '/use-case-participation' },
+    ],
+  },
+  {
+    title: 'Marketplace',
+    children: [
+      { title: 'App Marketplace', href: '/app-marketplace' },
+      { title: 'Service Marketplace', href: '/service-marketplace' },
+      { title: 'App & Service Subscription', href: '/company-subscription' },
+    ],
+  },
+  {
+    title: 'Marketplace Management',
+    children: [
+      {
+        title: 'App Management',
+        children: [
+          { title: 'App Overview', href: '/app-overview' },
+          { title: 'App Release Process', href: '/app-release-process' },
+          { title: 'App Subscription', href: '/app-subscription' },
+        ],
+      },
+      {
+        title: 'Service Management',
+        children: [
+          { title: 'Service Overview', href: '/service-overview' },
+          {
+            title: 'Service Release Process',
+            href: '/service-release-process',
+          },
+          { title: 'Service Subscription', href: '/service-subscription' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'CX-Operator',
+  },
 ]
 
 const Template: StoryFn<typeof Component> = (
