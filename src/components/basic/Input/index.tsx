@@ -99,11 +99,11 @@ export const Input = ({
           variant={variant}
           placeholder={placeholder}
           error={error}
-          type={showToggle ? (!showPassword ? 'password' : 'text') : 'text'}
+          type={showToggle && !showPassword ? 'password' : 'text'}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                {showToggle ? (
+                {showToggle && (
                   <IconButton
                     onClick={handleToggleVisibility}
                     edge="end"
@@ -111,12 +111,13 @@ export const Input = ({
                   >
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
-                ) : error ? (
+                )}
+                {error && (
                   <ErrorOutline
                     color="error"
                     className="cx-form-control__input-adornment--error"
                   />
-                ) : null}
+                )}
               </InputAdornment>
             ),
           }}
