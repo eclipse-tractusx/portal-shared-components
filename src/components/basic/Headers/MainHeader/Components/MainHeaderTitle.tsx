@@ -32,7 +32,6 @@ export const MainHeaderTitle = ({
     <>
       {title && (
         <Typography
-          className="cx-main-header__title"
           sx={{
             fontFamily: 'LibreFranklin-Light',
             fontWeight: 600,
@@ -46,7 +45,6 @@ export const MainHeaderTitle = ({
 
       {subTitle && (
         <Typography
-          className="cx-main-header__subtitle"
           sx={{
             fontFamily: 'LibreFranklin-Light',
             width: `${subTitleWidth}px`,

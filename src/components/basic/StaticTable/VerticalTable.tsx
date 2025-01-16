@@ -66,14 +66,8 @@ export const VerticalTable = ({
 
   const renderInputField = (row: number, column: number) => {
     return (
-      <div
-        style={{ width: '100%', display: 'flex', alignItems: 'center' }}
-        className="cx-static-table__vertical--input"
-      >
-        <div
-          style={{ width: '100%' }}
-          className="cx-static-table__vertical--input-field"
-        >
+      <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
+        <div style={{ width: '100%' }}>
           <Input
             onChange={(e) => {
               addInputValue(e.target.value, row, column)
@@ -96,13 +90,12 @@ export const VerticalTable = ({
             tooltipPlacement="bottom-start"
             tooltipText={inputErrorMessage}
           >
-            <span className="cx-static-table__vertical--input-tooltip">
+            <span>
               <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
             </span>
           </Tooltips>
         )}
         <CloseIcon
-          className="cx-static-table__vertical--input-icon"
           onClick={() => {
             setInputField(null)
           }}
@@ -116,7 +109,6 @@ export const VerticalTable = ({
 
   return (
     <table
-      className="cx-static-table__vertical"
       style={{ width: '100%', borderCollapse: 'collapse' }}
       onClick={() => {
         setInputField(null)

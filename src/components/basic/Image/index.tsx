@@ -74,7 +74,6 @@ export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
 
   return (
     <img
-      className="cx-image"
       src={(loader ?? error) ? data : src}
       alt={alt ?? 'Catena-X'}
       onError={() => {

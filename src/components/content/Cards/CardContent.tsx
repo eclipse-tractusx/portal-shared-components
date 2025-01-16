@@ -39,10 +39,7 @@ export const CardContent = ({
   description,
 }: CardContentProps) => {
   return (
-    <Box
-      sx={{ padding: '20px', overflowWrap: 'break-word' }}
-      className="cx-card__content"
-    >
+    <Box sx={{ padding: '20px', overflowWrap: 'break-word' }}>
       <Box sx={{ height: '35px', mb: '10px' }}>
         {subtitle && (
           <Typography

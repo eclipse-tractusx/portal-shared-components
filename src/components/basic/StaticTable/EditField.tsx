@@ -56,13 +56,9 @@ export const EditField = ({
 
   const renderInputField = () => {
     return (
-      <div
-        style={{ width: '100%', display: 'flex', alignItems: 'center' }}
-        className="cx-static-table__edit-field"
-      >
+      <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
           <Input
-            className="cx-static-table__edit-field--input"
             onChange={(e) => {
               addInputValue(e.target.value)
             }}
@@ -86,13 +82,12 @@ export const EditField = ({
             tooltipPlacement="bottom-start"
             tooltipText={inputErrorMessage}
           >
-            <span className="cx-static-table__edit-field--tooltop">
+            <span>
               <ErrorOutlineIcon sx={{ marginTop: '35px' }} color="error" />
             </span>
           </Tooltips>
         )}
         <CloseIcon
-          className="cx-static-table__edit-field--icon"
           onClick={() => {
             setInputField(false)
           }}
@@ -108,18 +103,11 @@ export const EditField = ({
         renderInputField()
       ) : (
         <span
-          className="cx-static-table__input-field"
           style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row' }}
         >
-          <Typography
-            className="cx-static-table__input-field--text"
-            variant="body3"
-          >
-            {value}
-          </Typography>
+          <Typography variant="body3">{value}</Typography>
           <span style={{ marginLeft: 'auto' }}>
             <EditIcon
-              className="cx-static-table__input-field--icon"
               onClick={() => {
                 handleEditFn(value as string)
               }}

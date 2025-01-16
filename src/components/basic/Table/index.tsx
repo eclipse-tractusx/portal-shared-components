@@ -226,7 +226,6 @@ export const Table = ({
   return (
     <>
       <Box
-        className="cx-table"
         sx={{
           '.MuiDataGrid-columnHeaders': {
             backgroundColor: columnHeadersBackgroundColor,
@@ -268,7 +267,6 @@ export const Table = ({
       </Box>
       {rows.length > 0 && hasMore ? (
         <Box
-          className="cx-table__page-loading--loader"
           sx={{
             width: '100%',
             height: '100px',

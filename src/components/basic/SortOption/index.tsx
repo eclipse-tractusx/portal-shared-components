@@ -52,14 +52,12 @@ export const SortOption = ({
     <>
       {show && (
         <Box
-          className="cx-sort-option"
           sx={{
             padding: '8px',
           }}
         >
           {sortOptions.map((entry: SortOptionsType) => (
             <Box
-              className="cx-sort-option__item"
               key={entry.value}
               onClick={(e) => {
                 handleSortSelection(e, entry.value)
@@ -88,7 +86,6 @@ export const SortOption = ({
               }}
             >
               <Typography
-                className="cx-sort-option__item-label"
                 variant="h1"
                 sx={{
                   fontSize: '14px',

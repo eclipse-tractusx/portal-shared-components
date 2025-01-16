@@ -56,9 +56,8 @@ export const Input = ({
     setShowPassword((prev) => !prev)
   }
   return (
-    <Box className="cx-input">
+    <Box>
       <FormControl
-        className="cx-form-control"
         sx={{
           width: '100%',
         }}
@@ -72,7 +71,6 @@ export const Input = ({
           }}
         >
           <InputLabel
-            className="cx-form-control__label"
             sx={{
               marginRight: '10px',
             }}
@@ -88,14 +86,13 @@ export const Input = ({
               tooltipPlacement="top-start"
               tooltipText={tooltipMessage}
             >
-              <span className="cx-form-control__tooltip">
+              <span>
                 <HelpOutlineIcon sx={{ color: '#B6B6B6' }} fontSize={'small'} />
               </span>
             </Tooltips>
           )}
         </Box>
         <TextField
-          className="cx-form-control__textfield"
           variant={variant}
           placeholder={placeholder}
           error={error}
@@ -112,22 +109,14 @@ export const Input = ({
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
                 )}
-                {error && (
-                  <ErrorOutline
-                    color="error"
-                    className="cx-form-control__input-adornment--error"
-                  />
-                )}
+                {error && <ErrorOutline color="error" />}
               </InputAdornment>
             ),
           }}
           {...props}
         />
         {error && helperText && (
-          <FormHelperText
-            sx={{ marginLeft: 0, marginBottom: '-23px' }}
-            className="cx-form-control__helper-text"
-          >
+          <FormHelperText sx={{ marginLeft: 0, marginBottom: '-23px' }}>
             {helperText}
           </FormHelperText>
         )}

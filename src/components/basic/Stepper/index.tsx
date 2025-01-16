@@ -49,7 +49,6 @@ export const Stepper = ({
 }: StepperProps) => {
   return (
     <Box
-      className="cx-stepper__wrapper"
       sx={{
         margin: '0px auto',
       }}
