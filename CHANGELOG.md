@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.7.5](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.4...v3.7.5) (2025-01-20)
+
+
+### Bug Fixes
+
+* **react:** replace first-child pseudo class ([e657245](https://github.com/eclipse-tractusx/portal-shared-components/commit/e657245bbb95e53d0960053fee182b763bf2c35e))
+* **react:** replace first-child pseudo class ([b14ce1f](https://github.com/eclipse-tractusx/portal-shared-components/commit/b14ce1fd3555a961717fd8abc43890c6bf5bfcfe))
+
 ## [3.7.4](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.3...v3.7.4) (2024-12-04)
 
 
