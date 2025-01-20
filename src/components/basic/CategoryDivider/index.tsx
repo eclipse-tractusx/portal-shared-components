@@ -47,7 +47,7 @@ export const CategoryDivider = ({
         display: 'flex',
         marginBottom: '52px',
         marginTop: '52px',
-        '&:first-child': {
+        '&:first-of-type': {
           marginTop: '0',
         },
       }}
