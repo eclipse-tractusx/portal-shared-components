@@ -20,6 +20,7 @@
 import { Story, Meta } from '@storybook/blocks'
 import { SharedThemeProvider } from '../SharedThemeProvider'
 import { SharedCssBaseline } from '../SharedCssBaseline'
+import { Box, Typography, Button } from '@mui/material'
 import { Table } from '.'
 import TestRows from '../../../../src/assets/data/TableRows.json'
 
@@ -133,7 +134,7 @@ Make sure that search, filter, and action buttons are accessible and labeled cor
   }]}
   rows={TestRows}
   title={'Table with toolbar'}
-  toolbarVariant={'premium'}
+  toolbarVariant={'ultimate'}
   toolbar={{
     buttonLabel: 'Add user',
     onButtonClick: () => console.log('on button click'),
@@ -153,6 +154,29 @@ Make sure that search, filter, and action buttons are accessible and labeled cor
         ],
       },
     ],
+      customToolbarContent: (
+        <Box
+  sx={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 2,
+    padding: 0,
+    margin: 0,
+    maxHeight: '50px',
+    boxSizing: 'border-box',
+    overflow: 'hidden',
+  }}
+>
+  <Button variant="contained" onClick={() => console.log('Custom filter applied')}
+  sx={{
+    lineHeight: '1',
+    fontSize: '14px',
+  }}>
+    Apply Filter
+  </Button>
+</Box>
+      ),
   }}
  />
 

@@ -33,6 +33,7 @@ export interface UltimateToolbarProps extends ToolbarProps {
   searchDebounce?: number
   searchExpr?: string
   autoFocus?: boolean
+  customToolbarContent?: React.ReactNode
 }
 
 export const UltimateToolbar = ({
@@ -46,6 +47,7 @@ export const UltimateToolbar = ({
   onClearSearch,
   searchDebounce = 500,
   autoFocus,
+  customToolbarContent,
 }: UltimateToolbarProps) => {
   const { spacing } = useTheme()
   const [searchInput, setSearchInput] = useState<string>(
@@ -111,27 +113,51 @@ export const UltimateToolbar = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        flexWrap: 'wrap',
       }}
     >
-      {onSearch != null && (
-        <Box sx={{ display: 'flex', alignItems: 'center', height: '50px' }}>
-          <SearchInput
-            autoFocus={autoFocus}
-            endAdornment={endAdornment}
-            value={searchInput}
-            onChange={onSearchChange}
-            onKeyPress={onSearchInputKeyPress}
-            placeholder={searchPlaceholder}
-            sx={{
-              '.MuiInputBase-input': {
+      {(onSearch != null || customToolbarContent) && (
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            gap: '1',
+            maxHeight: '50px',
+          }}
+        >
+          {onSearch !== null && (
+            <SearchInput
+              autoFocus={autoFocus}
+              endAdornment={endAdornment}
+              value={searchInput}
+              onChange={onSearchChange}
+              onKeyPress={onSearchInputKeyPress}
+              placeholder={searchPlaceholder}
+              sx={{
+                '.MuiInputBase-input': {
+                  padding: '4px 10px',
+                  width: '300px',
+                },
+              }}
+            />
+          )}
+          {customToolbarContent &&
+            React.cloneElement(customToolbarContent as React.ReactElement, {
+              style: {
                 padding: '4px 10px',
-                width: '300px',
+                display: 'flex',
+                maxHeight: '50px',
+                alignItems: 'center',
+                justifyContent: 'center',
               },
-            }}
-          />
+            })}
         </Box>
       )}
-      <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+
+      <Box
+        sx={{ display: 'flex', justifyContent: 'flex-end', flexWrap: 'wrap' }}
+      >
         {onFilter != null &&
           filter?.map(({ name, values }) => (
             <Box
@@ -142,7 +168,7 @@ export const UltimateToolbar = ({
               }}
             >
               {values?.map(({ value, label }) => (
-                <Box component="span" sx={{ marginLeft: 3 }} key={value}>
+                <Box component="span" key={value}>
                   <Button
                     id={`${name}${value}`}
                     name={name}
