@@ -20,19 +20,23 @@
 
 import { Box } from '@mui/material'
 import { Children } from 'react'
-import { Navigation } from '../../content/Navigation'
-import { type MenuProps } from '../Menu'
+import { type MenuProps } from '../NewMenu'
+import { NewNavigation } from '../NewNavigation'
 
 export interface MainNavigationProps extends MenuProps {
   children?: React.ReactNode
+  navigationUnstyled?: boolean
+  activePathname?: string
 }
 
 export const mainNavigationHeight = 85
 
-export const MainNavigation = ({
+export const NewMainNavigation = ({
   children,
   items,
   component,
+  navigationUnstyled,
+  activePathname,
 }: MainNavigationProps) => {
   const arrayChildren = Children.toArray(children)
 
@@ -71,10 +75,12 @@ export const MainNavigation = ({
           paddingBottom: '22px',
         }}
       >
-        <Navigation
+        <NewNavigation
           className="cx-main-navigation__instance"
           items={items}
           component={component}
+          unstyled={navigationUnstyled}
+          active={activePathname}
         />
       </Box>
 

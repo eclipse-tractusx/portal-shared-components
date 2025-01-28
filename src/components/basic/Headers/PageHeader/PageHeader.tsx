@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import { Box, useTheme } from '@mui/material'
-import { mainNavigationHeight } from '../../MainNavigation'
+import { mainNavigationHeight } from '../../NewMainNavigation'
 import { HeaderSubtractOption1 } from './Components/HeaderSubtractOption1'
 import { HeaderSubtractOption2 } from './Components/HeaderSubtractOption2'
 import { HeaderSubtractOption3 } from './Components/HeaderSubtractOption3'

@@ -21,12 +21,13 @@
 import { Box, Link, useTheme } from '@mui/material'
 import classNames from 'classnames'
 import { useState } from 'react'
-import { Menu } from '../../basic/Menu'
-import { type MenuItemProps } from '../../basic/Menu/MenuItem'
+import { NewMenu } from '../NewMenu'
+import { type MenuItemProps } from '../NewMenu/MenuItem'
 
 interface NavItemProps extends MenuItemProps {
   isActive?: boolean
   unstyled?: boolean
+  activePathname?: string
 }
 
 export const NavItem = ({
@@ -34,6 +35,7 @@ export const NavItem = ({
   children,
   component = Link,
   isActive = false,
+  activePathname = '',
   unstyled = false,
   ...props
 }: NavItemProps) => {
@@ -60,10 +62,15 @@ export const NavItem = ({
         component={component}
         sx={{
           display: 'block',
-          typography: 'body3',
-          margin: spacing(0, 1),
+          typography: 'label1',
+          margin: spacing(1, 2.25),
+          color: 'accent.accent03',
           ':hover, &.active': {
-            color: 'primary.dark',
+            color: 'primary.main',
+          },
+          '&.active': {
+            borderBottom: '2px solid',
+            paddingBottom: '7px',
           },
           ...(!unstyled && {
             typography: 'label3',
@@ -82,15 +89,17 @@ export const NavItem = ({
         {title}
       </Link>
       {children != null && open && (
-        <Menu
+        <NewMenu
           className="cx-navigation-item__menu"
           items={children}
           component={component}
+          activePathname={activePathname}
+          subMenuDivider={true}
           sx={{
             position: 'absolute',
             top: spacing(4.5),
             left: spacing(-1),
-            minWidth: 220,
+            minWidth: 300,
             padding: spacing(2, 0),
             borderRadius: 4,
             backgroundColor: 'background.background01',

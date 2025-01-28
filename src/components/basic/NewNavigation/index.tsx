@@ -19,9 +19,8 @@
  ********************************************************************************/
 
 import { Box } from '@mui/material'
-import uniqueId from 'lodash/uniqueId'
-import { type MenuProps } from '../../basic/Menu'
-import { NavItem } from './NavItem'
+import { type MenuProps } from '../NewMenu'
+import { NavItem } from './NewNavItem'
 
 export interface NavigationProps extends MenuProps {
   active?: string
@@ -29,10 +28,10 @@ export interface NavigationProps extends MenuProps {
   selectedItem?: (item: string) => void
 }
 
-export const Navigation = ({
+export const NewNavigation = ({
   items,
   component,
-  active = '',
+  activePathname = '/da',
   unstyled = false,
   selectedItem,
 }: NavigationProps): JSX.Element => {
@@ -40,10 +39,19 @@ export const Navigation = ({
     <Box
       className="cx-navigation"
       component="nav"
-      sx={{ display: 'flex', flexWrap: 'wrap' }}
+      sx={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        height: '100%',
+      }}
     >
-      {items?.map((link) => {
-        const isActive = link.href === active || link.to === active
+      {items.map((link) => {
+        if (!link.children?.length) return null
+        const isActive =
+          activePathname === link.name ||
+          link.href === activePathname ||
+          link.to === activePathname
 
         return (
           <NavItem
@@ -51,8 +59,10 @@ export const Navigation = ({
             isActive={isActive}
             component={component}
             unstyled={unstyled}
-            key={uniqueId('Navigation')}
-            onClick={() => {
+            key={link.title}
+            onClick={(e) => {
+              e.preventDefault()
+              e.preventDefault()
               if (selectedItem != null) selectedItem(link.href ?? '')
             }}
           />

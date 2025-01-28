@@ -19,10 +19,10 @@
  ********************************************************************************/
 
 import { type StoryFn } from '@storybook/react'
-import { Menu as Component } from '.'
+import { NewMenu as Component } from '.'
 
 export default {
-  title: 'Menus',
+  title: 'NewNavigation',
   component: Component,
   tags: ['autodocs'],
 }
@@ -31,8 +31,8 @@ const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 
-export const Menu = Template.bind({})
-Menu.args = {
+export const NewMenu = Template.bind({})
+NewMenu.args = {
   items: [
     {
       href: '/1',
@@ -42,13 +42,25 @@ Menu.args = {
         { href: '/1/2', title: 'Submenu Item 2' },
         {
           href: '/1/3',
-          title: 'Submenu Item 3',
+          title: 'Submenu Item 1',
           hint: 'coming soon',
           disable: true,
         },
       ],
     },
-    { href: '/2', title: 'Menu Item 2' },
-    { href: '/3', title: 'Menu Item 3' },
+    {
+      href: '/2',
+      title: 'Menu Item 2',
+      children: [
+        { href: '/1/1', title: 'Submenu Item 1' },
+        { href: '/1/2', title: 'Submenu Item 2' },
+        {
+          href: '/1/3',
+          title: 'Submenu Item 2',
+          hint: 'coming soon',
+          disable: true,
+        },
+      ],
+    },
   ],
 }
