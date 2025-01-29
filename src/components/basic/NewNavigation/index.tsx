@@ -1,6 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2023 BMW Group AG
- * Copyright (c) 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2025 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -31,7 +30,7 @@ export interface NavigationProps extends MenuProps {
 export const NewNavigation = ({
   items,
   component,
-  activePathname = '/da',
+  activePathname = '',
   unstyled = false,
   selectedItem,
 }: NavigationProps): JSX.Element => {

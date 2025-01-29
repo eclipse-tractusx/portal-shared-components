@@ -1,6 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2023 BMW Group AG
- * Copyright (c) 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2025 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -80,12 +79,12 @@ const items = [
 export const Unstyled = Template.bind({})
 Unstyled.args = {
   items,
-  active: '/home',
+  active: '/use-case-participation',
   unstyled: true,
 }
 
 export const WithDropdown = Template.bind({})
 WithDropdown.args = {
   items,
-  active: '/partner-network',
+  activePathname: '/use-case-participation',
 }
