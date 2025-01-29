@@ -79,7 +79,7 @@ const items = [
 
 export const Unstyled = Template.bind({})
 Unstyled.args = {
-  items: items,
+  items,
   active: '/home',
   unstyled: true,
 }
