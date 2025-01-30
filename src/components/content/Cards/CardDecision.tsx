@@ -26,7 +26,7 @@ import { CardChip, StatusVariants } from './CardChip'
 export interface AppContent {
   appId?: string
   name?: string
-  provider: string
+  legalShortName: string
   status: StatusVariants
   statusText?: string
   id?: string
@@ -130,7 +130,7 @@ export const CardDecision = ({
                   height: '48px',
                 }}
               >
-                {item.provider}
+                {item.legalShortName}
               </Typography>
               <Box
                 sx={{ marginBottom: '10px' }}
