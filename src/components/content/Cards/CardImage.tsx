@@ -76,7 +76,7 @@ export const CardImage = ({
   }
 
   return (
-    <Box sx={sx.container[imageSize]} className="cx-card__image">
+    <Box sx={sx.container[imageSize]}>
       {imageElement ? (
         <div style={style}>{imageElement}</div>
       ) : (

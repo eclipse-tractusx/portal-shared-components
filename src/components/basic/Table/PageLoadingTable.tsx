@@ -152,7 +152,6 @@ export const PageLoadingTable = function <Row, Args>({
   return (
     <>
       <Table
-        className="cx-table__page-loading"
         rowsCount={items.length}
         rowsCountMax={maxRows}
         hideFooter={items.length < (props.rowCount ?? 100)}
@@ -165,7 +164,6 @@ export const PageLoadingTable = function <Row, Args>({
       {/* Display loading spinner while fetching data */}
       {items.length > 0 && loading && (
         <Box
-          className="cx-table__page-loading--loader"
           sx={{
             width: '100%',
             height: '100px',
@@ -181,7 +179,6 @@ export const PageLoadingTable = function <Row, Args>({
       {!hasMore && !loading && items.length > 0 && (
         <Typography
           variant="caption3"
-          className="cx-table__page-loading--end"
           sx={{
             display: 'flex',
             justifyContent: 'center',

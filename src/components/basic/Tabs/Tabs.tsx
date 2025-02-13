@@ -26,9 +26,5 @@ interface TabsProps extends MuiTabsProps {
 }
 
 export const Tabs = ({ children, ...props }: TabsProps) => {
-  return (
-    <MuiTabs className="cx-tabs" {...props}>
-      {children}
-    </MuiTabs>
-  )
+  return <MuiTabs {...props}>{children}</MuiTabs>
 }

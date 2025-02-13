@@ -78,7 +78,6 @@ export const StepperItem = ({
             }}
           >
             <Typography
-              className="cx-stepper__item--hint-text"
               variant="body1"
               fontSize="14px"
               color="#fff"
@@ -119,7 +118,6 @@ export const StepperItem = ({
           <Box className="hintStepMobile cx-stepper__item-mobile">
             {index === activeStep && (
               <Link
-                className="cx-stepper__item-mobile--hint"
                 href={tooltipLink}
                 target="_blank"
                 sx={{
@@ -130,7 +128,6 @@ export const StepperItem = ({
                 }}
               >
                 <Typography
-                  className="cx-stepper__item-mobile--hint-helptext"
                   variant="label3"
                   fontSize="12px"
                   sx={{

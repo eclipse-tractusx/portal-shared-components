@@ -87,9 +87,8 @@ export const PageNotifications = ({
   showIcon,
 }: PageNotificationsProps) => {
   return (
-    <Collapse in={open} className="cx-page-notification">
+    <Collapse in={open}>
       <Alert
-        className="cx-page-notification__alert"
         severity={severity}
         variant="outlined"
         icon={showIcon === false ? false : titleIcon(severity)}
@@ -100,7 +99,6 @@ export const PageNotifications = ({
         }}
         action={
           <IconButton
-            className="cx-page-notification__icon-btn"
             aria-label="close"
             size="small"
             onClick={onCloseNotification}

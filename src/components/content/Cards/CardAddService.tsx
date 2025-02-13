@@ -46,7 +46,6 @@ export const CardAddService = ({
 
   return (
     <div
-      className="cx-card__instance"
       ref={boxRef}
       style={{
         padding: '0 10px',
@@ -81,7 +80,6 @@ export const CardAddService = ({
         className="card cx-card__add-service"
       >
         <Box
-          className="cx-card__add-service--icon"
           sx={{
             height: '120px',
             width: '120px',
@@ -106,7 +104,7 @@ export const CardAddService = ({
             />
           </svg>
         </Box>
-        <Box className="cx-card__add-service--title">
+        <Box>
           <Typography
             variant="h5"
             sx={{

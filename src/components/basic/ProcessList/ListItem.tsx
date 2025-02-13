@@ -42,13 +42,11 @@ export const ListItem = ({
   const borderToNextStep = !lastItem ? `2px solid ${stepsColor}` : 'none'
   return (
     <Box
-      className="cx-process-list-item"
       sx={{
         display: 'flex',
       }}
     >
       <Box
-        className="cx-process-list-item__step"
         sx={{
           width: '32px',
           height: '32px',
@@ -56,7 +54,6 @@ export const ListItem = ({
         }}
       >
         <Box
-          className="cx-process-list-item__step-outer"
           sx={{
             backgroundColor: stepsColor,
             borderRadius: '50%',
@@ -68,7 +65,6 @@ export const ListItem = ({
           }}
         >
           <Typography
-            className="cx-process-list-item__step-text"
             variant="h5"
             fontSize="16px"
             color={stepsFontColor}
@@ -84,13 +80,11 @@ export const ListItem = ({
       </Box>
 
       <Box
-        className="cx-process-list-item__content"
         sx={{
           width: '100%',
         }}
       >
         <Typography
-          className="cx-process-list-item__content-heading"
           variant="h5"
           fontSize="16px"
           sx={{
@@ -102,7 +96,6 @@ export const ListItem = ({
         </Typography>
 
         <Typography
-          className="cx-process-list-item__content-description"
           variant="body2"
           fontSize="16px"
           color={theme.palette.text.tertiary}
@@ -116,7 +109,6 @@ export const ListItem = ({
           {description}
         </Typography>
         <Box
-          className="cx-process-list-item__content-border"
           sx={{
             height: '28px',
             borderLeft: borderToNextStep,

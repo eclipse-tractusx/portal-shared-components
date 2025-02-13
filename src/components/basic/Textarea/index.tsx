@@ -41,26 +41,18 @@ export const Textarea = ({
   ...props
 }: TextareaProps) => {
   return (
-    <Box className="cx-textarea">
+    <Box>
       <FormControl
-        className="cx-form-control"
         sx={{
           width: '100%',
         }}
         error={error}
         variant="filled"
       >
-        <InputLabel className="cx-textarea__input">{label}</InputLabel>
-        <TextareaAutosize
-          className="cx-textarea__autosize"
-          placeholder={placeholder}
-          {...props}
-        />
+        <InputLabel>{label}</InputLabel>
+        <TextareaAutosize placeholder={placeholder} {...props} />
         {error && helperText && (
-          <FormHelperText
-            className="cx-textarea__helper-text"
-            sx={{ marginLeft: 0, marginBottom: '-23px' }}
-          >
+          <FormHelperText sx={{ marginLeft: 0, marginBottom: '-23px' }}>
             {helperText}
           </FormHelperText>
         )}

@@ -50,7 +50,6 @@ export const NavItem = ({
 
   return (
     <Box
-      className="cx-navigation-item"
       sx={{ position: 'relative' }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -83,7 +82,6 @@ export const NavItem = ({
       </Link>
       {children != null && open && (
         <Menu
-          className="cx-navigation-item__menu"
           items={children}
           component={component}
           sx={{

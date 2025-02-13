@@ -77,7 +77,6 @@ export const SelectList = ({
 
   return (
     <Autocomplete
-      className="cx-select-list"
       id="singleSelectList"
       sx={{ width: '100%' }}
       clearText={clearText}
@@ -106,7 +105,6 @@ export const SelectList = ({
       renderInput={(params) => {
         return (
           <SelectInput
-            className="cx-select-list__input"
             params={params}
             label={label}
             placeholder={placeholder}
