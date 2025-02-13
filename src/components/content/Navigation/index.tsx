@@ -37,11 +37,7 @@ export const Navigation = ({
   selectedItem,
 }: NavigationProps): JSX.Element => {
   return (
-    <Box
-      className="cx-navigation"
-      component="nav"
-      sx={{ display: 'flex', flexWrap: 'wrap' }}
-    >
+    <Box component="nav" sx={{ display: 'flex', flexWrap: 'wrap' }}>
       {items?.map((link) => {
         const isActive = link.href === active || link.to === active
 

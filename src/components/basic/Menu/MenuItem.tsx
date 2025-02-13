@@ -77,7 +77,6 @@ export const MenuItem = ({
 
   return (
     <ListItem
-      className="cx-list-item"
       sx={{
         display: 'block',
         position: 'relative',
@@ -91,7 +90,6 @@ export const MenuItem = ({
       }}
     >
       <Link
-        className="cx-list-item__link"
         component={component}
         sx={{
           color: `${disable ? 'text.disabled' : 'text.primary'}`,
@@ -117,7 +115,6 @@ export const MenuItem = ({
         {title}
         {hint && (
           <Box
-            className="cx-list-item__hint"
             sx={{
               backgroundColor: '#9AA9E2',
               borderRadius: '5px',
@@ -129,7 +126,6 @@ export const MenuItem = ({
             }}
           >
             <Typography
-              className="cx-list-item__help-text"
               variant="helper"
               display="block"
               sx={{
@@ -144,17 +140,12 @@ export const MenuItem = ({
           </Box>
         )}
         {children != null && (
-          <ArrowForward
-            className="cx-list-item__arrow-fwd"
-            fontSize="small"
-            sx={{ color: 'icon.icon02' }}
-          />
+          <ArrowForward fontSize="small" sx={{ color: 'icon.icon02' }} />
         )}
         {showNotificationCount &&
           notificationInfo != null &&
           notificationInfo.notificationCount > 0 && (
             <Typography
-              className="cx-list-item__notification-text"
               sx={{
                 fontWeight: '500',
                 fontSize: '0.75rem',
@@ -171,7 +162,7 @@ export const MenuItem = ({
           )}
       </Link>
       {Menu != null && children != null && open && (
-        <Menu className="cx-list-item__menu" items={children} {...menuProps} />
+        <Menu items={children} {...menuProps} />
       )}
       {divider && <Divider />}
     </ListItem>

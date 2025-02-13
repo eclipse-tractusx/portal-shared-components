@@ -35,12 +35,5 @@ export const IconButton = ({
 }: IconButtonProps) => {
   const outlinedStyle = variant === 'outlined' ? { border: '2px solid' } : {}
 
-  return (
-    <MuiIconButton
-      className="cx-icon-button"
-      size={size}
-      sx={outlinedStyle}
-      {...props}
-    />
-  )
+  return <MuiIconButton size={size} sx={outlinedStyle} {...props} />
 }

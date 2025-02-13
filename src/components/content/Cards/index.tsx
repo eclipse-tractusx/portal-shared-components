@@ -118,7 +118,6 @@ export const Cards = ({
 
   return (
     <Box
-      className="cx-card__main"
       sx={{
         display: 'flex',
         msFlexWrap: 'wrap',

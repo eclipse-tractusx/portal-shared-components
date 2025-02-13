@@ -30,16 +30,12 @@ export const CardRating = ({ rating }: CardRatingProps) => {
   const { palette } = useTheme()
 
   return (
-    <Typography variant="caption3" className="cx-card__rating">
+    <Typography variant="caption3">
       <Box
-        className="cx-card__rating--text"
         component="span"
         sx={{ display: 'inline-block', verticalAlign: 'sub', marginRight: 0.5 }}
       >
-        <StarRateIcon
-          className="cx-card__rating--icon"
-          sx={{ fill: palette.accent.accent09 }}
-        />
+        <StarRateIcon sx={{ fill: palette.accent.accent09 }} />
       </Box>
       {rating}
     </Typography>

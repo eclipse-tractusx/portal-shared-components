@@ -78,9 +78,8 @@ export const SearchInput = ({
   }
 
   return (
-    <Box className="cx-search-input">
+    <Box>
       <TextField
-        className="cx-search-input__text-field"
         sx={{
           borderColor: theme.palette.primary.main,
           width: '100%',

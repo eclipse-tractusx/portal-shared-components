@@ -23,5 +23,5 @@ import { Menu, type MenuProps } from '../../basic/Menu'
 export type UserNavProps = MenuProps
 
 export const UserNav = (props: UserNavProps) => {
-  return <Menu className="cx-user-nav" {...props} />
+  return <Menu {...props} />
 }

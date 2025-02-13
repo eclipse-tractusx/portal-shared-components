@@ -64,7 +64,6 @@ export const CircleProgress = ({
 
   return (
     <CircularProgress
-      className="cx-circular-progress"
       variant={variant}
       value={progress}
       color={colorVariant}

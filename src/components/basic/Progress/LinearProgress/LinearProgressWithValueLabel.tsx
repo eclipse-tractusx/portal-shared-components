@@ -29,12 +29,8 @@ function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number; progressText: string }
 ) {
   return (
-    <Box
-      sx={{ display: 'flex', alignItems: 'center' }}
-      className="cx-linear-progress"
-    >
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <CircularProgress
-        className="cx-linear-progress__circular"
         size={50}
         sx={{
           position: 'absolute',
@@ -44,28 +40,19 @@ function LinearProgressWithLabel(
         }}
       />
       <Box
-        className="cx-linear-progress__content"
         sx={{ minWidth: 35, position: 'absolute', zIndex: '9', left: '35%' }}
       >
-        <Typography
-          variant="body2"
-          color="#ffffff"
-          className="cx-linear-progress__content--text"
-        >
+        <Typography variant="body2" color="#ffffff">
           {props.progressText}
         </Typography>
       </Box>
-      <Box sx={{ width: '100%', mr: 1 }} className="cx-linear-progress__status">
+      <Box sx={{ width: '100%', mr: 1 }}>
         <LinearProgress variant="determinate" {...props} />
       </Box>
-      <Box
-        sx={{ minWidth: 35, position: 'absolute', right: '25%' }}
-        className="cx-linear-progress__status--number"
-      >
+      <Box sx={{ minWidth: 35, position: 'absolute', right: '25%' }}>
         <Typography
           variant="body2"
           color="#ffffff"
-          className="cx-linear-progress__status--text"
         >{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>

@@ -31,13 +31,10 @@ interface RadioProps extends Omit<MuiRadioProps, 'size'> {
 export const Radio = ({ size = 'medium', label, ...props }: RadioProps) => {
   return label ? (
     <FormControlLabel
-      className="cx-form-label__radio"
-      control={
-        <MuiRadio className="cx-radio" size={size} {...props} {...ariaLabel} />
-      }
+      control={<MuiRadio size={size} {...props} {...ariaLabel} />}
       label={label}
     />
   ) : (
-    <MuiRadio className="cx-radio" size={size} {...props} {...ariaLabel} />
+    <MuiRadio size={size} {...props} {...ariaLabel} />
   )
 }

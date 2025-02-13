@@ -124,20 +124,15 @@ export const MultiSelectList = ({
   }, [error])
 
   return (
-    <Box className="cx-multi-select__list">
+    <Box>
       {!showItems ? (
         <Autocomplete
-          className="cx-multi-select__autocomplete"
           id="selectList"
           sx={{ width: '100%' }}
           clearText={clearText}
           noOptionsText={noOptionsText}
           PopperComponent={({ style, ...props }) => (
-            <Popper
-              className="cx-multi-select__popper"
-              {...props}
-              style={{ ...style, height: 0 }}
-            />
+            <Popper {...props} style={{ ...style, height: 0 }} />
           )}
           ListboxProps={{ style: { maxHeight: selectHeight } }}
           multiple
@@ -150,7 +145,6 @@ export const MultiSelectList = ({
             selectedItems.map((option, index: number) => (
               <Chip
                 {...getTagProps({ index })}
-                className="cx-multi-select__chip"
                 key={option[keyTitle]}
                 variant="filled"
                 label={option[keyTitle]}
@@ -180,7 +174,6 @@ export const MultiSelectList = ({
           }
           renderInput={(param: AutocompleteRenderInputParams) => (
             <SelectInput
-              className="cx-multi-select__select-input"
               params={param}
               label={label}
               placeholder={placeholder}

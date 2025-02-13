@@ -24,7 +24,6 @@ import { Typography } from '../../basic/Typography'
 function LinkText(props: Readonly<LinkType>) {
   return (
     <Box
-      className="cx-card__about--heading"
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -35,9 +34,7 @@ function LinkText(props: Readonly<LinkType>) {
       }}
       onClick={() => window.open(props.url, '_blank')}
     >
-      <Typography className="cx-card__about--heading-text">
-        {props.text}
-      </Typography>
+      <Typography>{props.text}</Typography>
       <OpenInNewIcon />
     </Box>
   )
@@ -46,7 +43,6 @@ function LinkText(props: Readonly<LinkType>) {
 function TitleText(props: Readonly<LinkType>) {
   return (
     <Box
-      className="cx-card__about--title"
       sx={{
         display: 'flex',
         justifyContent: 'flex-start',
@@ -58,13 +54,12 @@ function TitleText(props: Readonly<LinkType>) {
       onClick={() => window.open(props.url, '_blank')}
     >
       <Typography
-        className="cx-card__about--title-text"
         variant="h3"
         sx={{ paddingRight: '10px', textTransform: 'uppercase' }}
       >
         {props.text}
       </Typography>
-      <OpenInNewIcon className="cx-card__about--title-icon" />
+      <OpenInNewIcon />
     </Box>
   )
 }
@@ -85,7 +80,6 @@ export const AboutCard = (props: {
 }) => {
   return (
     <Box
-      className="cx-card__about--item"
       sx={{
         display: 'flex',
         justifyContent: 'center',
@@ -94,7 +88,6 @@ export const AboutCard = (props: {
       }}
     >
       <Box
-        className="cx-card__about--item-wrap"
         sx={{
           background: '#FFFFFF',
           boxShadow: '0px 5px 10px rgba(80, 80, 80, 0.3)',
@@ -102,7 +95,7 @@ export const AboutCard = (props: {
           width: '100%',
         }}
       >
-        <Box className="cx-card__about--item-title">
+        <Box>
           <TitleText text={props.name} url={props.repositoryPath} />
           {props.license && props.licensePath && (
             <LinkText
@@ -117,7 +110,7 @@ export const AboutCard = (props: {
             <LinkText text="Source" url={props.sourcePath} />
           )}
           {props.commitId && (
-            <Box className="cx-card__about--item-commit">
+            <Box>
               <Typography
                 sx={{
                   padding: '20px 20px',

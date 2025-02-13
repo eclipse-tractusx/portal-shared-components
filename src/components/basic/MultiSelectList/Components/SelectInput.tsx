@@ -48,7 +48,6 @@ export const SelectInput = ({
   autoFocus,
 }: SelectInputProps) => (
   <Box
-    className="cx-multi-select__select-input"
     sx={{
       '.MuiFilledInput-root': {
         paddingTop: '0px !important',
@@ -57,7 +56,6 @@ export const SelectInput = ({
     }}
   >
     <Input
-      className="cx-multi-select__input"
       fullWidth={params.fullWidth}
       InputProps={params.InputProps}
       inputProps={params.inputProps}

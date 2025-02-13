@@ -53,7 +53,6 @@ function TabPanel(props: Readonly<TabPanelProps>) {
 
   return (
     <div
-      className="cx-tabs__vertical--panel"
       role="tabpanel"
       hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
@@ -74,14 +73,12 @@ export const VerticalTabs = ({ items }: VerticalTabsProps) => {
 
   return (
     <Box
-      className="cx-tabs__vertical"
       sx={{
         flexGrow: 1,
         display: 'flex',
       }}
     >
       <Tabs
-        className="cx-tabs__vertical__tabs"
         orientation="vertical"
         value={value}
         onChange={handleChange}
@@ -98,7 +95,6 @@ export const VerticalTabs = ({ items }: VerticalTabsProps) => {
       >
         {items.map((item: TabPanelType) => (
           <Tab
-            className="cx-tabs__vertical__tab"
             {...a11yProps(item.id)}
             label={item.label}
             key={uniqueId('vertical-tabs-tab-item')}

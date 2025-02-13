@@ -43,15 +43,11 @@ export interface VerticalTableType {
 
 export const VerticalTableNew = ({ data }: { data: VerticalTableType }) => {
   return (
-    <table
-      style={{ borderCollapse: 'collapse', width: '100%' }}
-      className="cx-static-table__vertical-new"
-    >
-      <thead className="cx-static-table__vertical-new--thead">
-        <tr className="cx-static-table__vertical-new--tr">
+    <table style={{ borderCollapse: 'collapse', width: '100%' }}>
+      <thead>
+        <tr>
           {data.head.map((col, c) => (
             <th
-              className="cx-static-table__vertical-new--th"
               style={{
                 backgroundColor: '#ecf0f4',
                 padding: '10px 15px',
@@ -59,25 +55,16 @@ export const VerticalTableNew = ({ data }: { data: VerticalTableType }) => {
               }}
               key={JSON.stringify(c)}
             >
-              <Typography
-                variant="label3"
-                className="cx-static-table__vertical-new--col"
-              >
-                {col}
-              </Typography>
+              <Typography variant="label3">{col}</Typography>
             </th>
           ))}
         </tr>
       </thead>
-      <tbody className="cx-static-table__vertical-new--tbody">
+      <tbody>
         {data.body.map((row, rIndex) => (
-          <tr
-            key={JSON.stringify(rIndex)}
-            className="cx-static-table__vertical-new--tr"
-          >
+          <tr key={JSON.stringify(rIndex)}>
             {row.map((col, cindex) => (
               <td
-                className="cx-static-table__vertical-new--td"
                 key={JSON.stringify(cindex)}
                 style={{
                   width: '50%',

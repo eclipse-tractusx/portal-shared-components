@@ -47,14 +47,12 @@ export const QuickLinks = ({
 }: QuickLinksProps) => {
   return (
     <Box
-      className="cx-quick-links"
       sx={{
         width: '100%',
       }}
     >
       {headerTitle && <Typography variant="h4">{headerTitle}</Typography>}
       <Box
-        className="cx-quick-links__buttons"
         sx={{
           textAlign: alignButtons,
           padding: '10px',
@@ -64,7 +62,6 @@ export const QuickLinks = ({
         {items.map((data: QuickLinksItems) => {
           return (
             <MuiButton
-              className="cx-quick-links__button"
               {...props}
               key={data.title}
               onClick={() => window.open(data.navigate, '_blank')}
