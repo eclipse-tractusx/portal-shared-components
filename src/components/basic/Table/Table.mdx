@@ -154,29 +154,30 @@ Make sure that search, filter, and action buttons are accessible and labeled cor
         ],
       },
     ],
-      customToolbarContent: (
-        <Box
-  sx={{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 2,
-    padding: 0,
-    margin: 0,
-    maxHeight: '50px',
-    boxSizing: 'border-box',
-    overflow: 'hidden',
-  }}
->
-  <Button variant="contained" onClick={() => console.log('Custom filter applied')}
-  sx={{
-    lineHeight: '1',
-    fontSize: '14px',
-  }}>
-    Apply Filter
-  </Button>
-</Box>
-      ),
+    customToolbarContent: (
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 2,
+          padding: 0,
+          margin: 0,
+          maxHeight: '50px',
+          boxSizing: 'border-box',
+          overflow: 'hidden',
+        }}
+      >
+        <Button variant="contained" onClick={() => console.log('Custom filter applied')}
+          sx={{
+            lineHeight: '1',
+            fontSize: '14px',
+          }}
+        >
+          Apply Filter
+        </Button>
+      </Box>
+    ),
   }}
  />
 
