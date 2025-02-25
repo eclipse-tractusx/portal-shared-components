@@ -42,7 +42,7 @@ function LinearProgressWithLabel(
       <Box
         sx={{ minWidth: 35, position: 'absolute', zIndex: '9', left: '35%' }}
       >
-        <Typography variant="body2" color="#ffffff">
+        <Typography variant="body2" sx={{ color: '#ffffff' }}>
           {props.progressText}
         </Typography>
       </Box>
@@ -52,7 +52,7 @@ function LinearProgressWithLabel(
       <Box sx={{ minWidth: 35, position: 'absolute', right: '25%' }}>
         <Typography
           variant="body2"
-          color="#ffffff"
+          sx={{ color: '#ffffff' }}
         >{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>

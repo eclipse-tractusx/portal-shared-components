@@ -80,7 +80,6 @@ export const StepperItem = ({
             <Typography
               variant="body1"
               fontSize="14px"
-              color="#fff"
               sx={{
                 backgroundColor: `${backgroundColor}`,
                 borderRadius: `${text ? '20px' : '50%'}`,
