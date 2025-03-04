@@ -54,7 +54,6 @@ jobs:
       - name: Generate Dependencies file
         run: java -jar ./org.eclipse.dash.licenses.jar yarn.lock -project automotive.tractusx -summary DEPENDENCIES || true
 
-
       - name: Check for restricted dependencies
         run: |
           restricted=$(grep ' restricted,' DEPENDENCIES || true)
