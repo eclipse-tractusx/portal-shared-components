@@ -240,6 +240,7 @@ export const Table = ({
         <DataGrid
           sx={{
             '&.MuiDataGrid-root .MuiDataGrid-cell': {
+              display: 'flex',
               alignItems: alignCell,
               fontSize: fontSizeCell,
             },
