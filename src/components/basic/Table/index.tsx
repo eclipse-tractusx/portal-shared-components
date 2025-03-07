@@ -168,7 +168,7 @@ export const Table = ({
   const handleOnCellClick = useCallback(
     (selectedIds: GridRowSelectionModel) => {
       const idsArr: string[] = []
-      rows.map((row) => {
+      rows?.map((row) => {
         return selectedIds.map(
           (selectedId: GridRowId) =>
             selectedId.toString().includes(row.companyUserId) &&
@@ -249,9 +249,9 @@ export const Table = ({
               },
           }}
           getRowId={(row) => row.id as GridRowId}
-          components={{
-            Toolbar: () => toolbarView(),
-            NoRowsOverlay,
+          slots={{
+            toolbar: () => toolbarView(),
+            noRowsOverlay: NoRowsOverlay,
           }}
           onRowSelectionModelChange={handleOnCellClick}
           {...{
@@ -265,7 +265,7 @@ export const Table = ({
           {...props}
         />
       </Box>
-      {rows.length > 0 && hasMore ? (
+      {rows && rows.length > 0 && hasMore ? (
         <Box
           sx={{
             width: '100%',
