@@ -1,4 +1,4 @@
-**Cosumption guide of shared components**
+# Cosumption guide of shared components
 
 # Upgrade to MUI v6
 
@@ -60,7 +60,7 @@
         -groupingValueGetter: (params) => params.value.name,
         +groupingValueGetter: (value: { name: string }, row, column, apiRef) => value.name
 
-# Upgrade to Date Pickers v7\*\*
+# Upgrade to Date Pickers v7
 
 ## The following packages were updated in the process:
 
