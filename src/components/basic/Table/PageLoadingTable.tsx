@@ -53,6 +53,8 @@ export interface PageLoadingTableProps<Row, Args>
   allItems?: Row[]
   callbackToPage?: (data: PaginResult<Row>) => void
   allItemsLoadedHint?: string
+  emptyDataMsg: string
+  noSearchResultsMsg: string
 }
 
 const scrollOffset = 350 // Adjust this value for earlier load
@@ -65,6 +67,8 @@ export const PageLoadingTable = function <Row, Args>({
   allItems,
   callbackToPage,
   allItemsLoadedHint = 'All items have been loaded.',
+  emptyDataMsg,
+  noSearchResultsMsg,
   ...props
 }: PageLoadingTableProps<Row, Args>) {
   const [page, setPage] = useState(0)
@@ -79,12 +83,14 @@ export const PageLoadingTable = function <Row, Args>({
     },
   })
   const [loading, setLoading] = useState(true)
+  const [noRowsMsg, setNoRowsMsg] = useState('')
 
   function nextPage() {
     setPage(page + 1)
   }
   const hasMore = data ? hasMorePages(data) : false
   const maxRows = data ? getMaxRows(data) : 0
+  const { searchExpr } = props
 
   useEffect(() => {
     if (!allItems) {
@@ -130,6 +136,16 @@ export const PageLoadingTable = function <Row, Args>({
     }
   }, [isSuccess, isFetching, data, clear, loaded])
 
+  useEffect(() => {
+    if (data) {
+      if (!searchExpr && data.content.length === 0) {
+        setNoRowsMsg(emptyDataMsg)
+      } else if (searchExpr && data.content.length === 0) {
+        setNoRowsMsg(noSearchResultsMsg)
+      }
+    }
+  }, [data, searchExpr])
+
   const handleScroll = useCallback(() => {
     const scrollableElement = document.documentElement
     if (
@@ -159,6 +175,7 @@ export const PageLoadingTable = function <Row, Args>({
         error={error}
         rows={items}
         reload={refetch}
+        noRowsMsg={noRowsMsg}
         {...props}
       />
       {/* Display loading spinner while fetching data */}
