@@ -53,8 +53,8 @@ export interface PageLoadingTableProps<Row, Args>
   allItems?: Row[]
   callbackToPage?: (data: PaginResult<Row>) => void
   allItemsLoadedHint?: string
-  emptyDataMsg: string
-  noSearchResultsMsg: string
+  emptyDataMsg?: string
+  noSearchResultsMsg?: string
 }
 
 const scrollOffset = 350 // Adjust this value for earlier load
@@ -67,8 +67,8 @@ export const PageLoadingTable = function <Row, Args>({
   allItems,
   callbackToPage,
   allItemsLoadedHint = 'All items have been loaded.',
-  emptyDataMsg,
-  noSearchResultsMsg,
+  emptyDataMsg = 'No data found',
+  noSearchResultsMsg = 'No search results found',
   ...props
 }: PageLoadingTableProps<Row, Args>) {
   const [page, setPage] = useState(0)
