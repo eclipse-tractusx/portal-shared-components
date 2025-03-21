@@ -131,10 +131,6 @@ export const MultiSelectList = ({
           sx={{ width: '100%' }}
           clearText={clearText}
           noOptionsText={noOptionsText}
-          PopperComponent={({ style, ...props }) => (
-            <Popper {...props} style={{ ...style, height: 0 }} />
-          )}
-          ListboxProps={{ style: { maxHeight: selectHeight } }}
           multiple
           disabled={disabled}
           options={items.map((item) => item)}
@@ -205,6 +201,14 @@ export const MultiSelectList = ({
             error ? setShowItems(false) : setShowItems(true)
           }}
           defaultValue={defaultValues}
+          slots={{
+            popper: ({ style, ...props }) => (
+              <Popper {...props} style={{ ...style, height: 0 }} />
+            ),
+          }}
+          slotProps={{
+            listbox: { style: { maxHeight: selectHeight } },
+          }}
         />
       ) : (
         <SelectAddMore
