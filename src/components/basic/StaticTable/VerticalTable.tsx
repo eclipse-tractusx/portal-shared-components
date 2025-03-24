@@ -26,7 +26,12 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import { Typography, Link, Box } from '@mui/material'
-import { useState } from 'react'
+import {
+  type ComponentType,
+  type ReactElement,
+  type ReactNode,
+  useState,
+} from 'react'
 import { Input } from '../Input'
 import { Tooltips } from '../ToolTips'
 import type { TableType } from './types'
@@ -110,6 +115,23 @@ export const VerticalTable = ({
 
   const renderTextvalue = (text: string | undefined) => text ?? ''
 
+  const renderCustomComponent = (
+    data: TableType,
+    r: number,
+    c: number,
+    CustomComp: string | ComponentType | ReactElement
+  ): ReactNode => {
+    if (data?.edit?.[r]?.[c].copyValue && hideSecret) {
+      return String(CustomComp).replace(/./g, '*')
+    }
+
+    if (typeof CustomComp === 'function') {
+      return <CustomComp />
+    }
+
+    return CustomComp
+  }
+
   return (
     <table
       style={{ width: '100%', borderCollapse: 'collapse' }}
@@ -140,7 +162,6 @@ export const VerticalTable = ({
         {data.body.map((row, r) => (
           <tr key={JSON.stringify(r)}>
             {row.map((CustomComp, c) => {
-              const isStringTypeProp = typeof CustomComp === 'string'
               return (
                 <td
                   key={JSON.stringify(c)}
@@ -174,13 +195,7 @@ export const VerticalTable = ({
                               data?.edit?.[r]?.[c]?.clickableLink && 'pointer',
                           }}
                         >
-                          {data?.edit?.[r]?.[c].copyValue && hideSecret ? (
-                            CustomComp.toString().replace(/./g, '*')
-                          ) : isStringTypeProp ? (
-                            CustomComp
-                          ) : (
-                            <CustomComp />
-                          )}
+                          {renderCustomComponent(data, r, c, CustomComp)}
                         </Typography>
                       </Link>
                     )}
