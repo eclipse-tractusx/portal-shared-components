@@ -23,6 +23,8 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 import EditIcon from '@mui/icons-material/Edit'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
+import VisibilityIcon from '@mui/icons-material/Visibility'
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 import { Typography, Link, Box } from '@mui/material'
 import { useState } from 'react'
 import { Input } from '../Input'
@@ -37,6 +39,7 @@ export const VerticalTable = ({
   handleEdit?: (inputValue: string) => void
 }) => {
   const [copied, setCopied] = useState<string>('')
+  const [hideSecret, setHideSecret] = useState(true)
   const [inputField, setInputField] = useState<{
     row: unknown
     column: unknown
@@ -171,45 +174,81 @@ export const VerticalTable = ({
                               data?.edit?.[r]?.[c]?.clickableLink && 'pointer',
                           }}
                         >
-                          {isStringTypeProp ? CustomComp : <CustomComp />}
+                          {data?.edit?.[r]?.[c].copyValue && hideSecret ? (
+                            CustomComp.toString().replace(/./g, '*')
+                          ) : isStringTypeProp ? (
+                            CustomComp
+                          ) : (
+                            <CustomComp />
+                          )}
                         </Typography>
                       </Link>
                     )}
                     {data?.edit?.[r]?.[c].copyValue && c !== 0 && (
                       <Box
-                        sx={{
-                          cursor: 'pointer',
-                          display: 'flex',
-                          color:
-                            copied === data?.edit?.[r]?.[c].copyValue
-                              ? '#00cc00'
-                              : '#888888',
-                          ':hover': {
+                        sx={{ display: 'inline-flex', alignItems: 'center' }}
+                      >
+                        <Box
+                          sx={{
+                            cursor: 'pointer',
+                            display: 'flex',
                             color:
                               copied === data?.edit?.[r]?.[c].copyValue
                                 ? '#00cc00'
-                                : '#0088CC',
-                          },
-                        }}
-                        onClick={() => {
-                          void (async () => {
-                            const value = renderTextvalue(
-                              data?.edit?.[r]?.[c].copyValue?.toString()
-                            )
-                            await navigator.clipboard.writeText(value)
-                            setCopied(value)
-                            setTimeout(() => {
-                              setCopied('')
-                            }, 1000)
-                          })()
-                        }}
-                      >
-                        <ContentCopyIcon
-                          sx={{
-                            fontSize: '18px',
-                            marginLeft: '10px',
+                                : '#888888',
+                            ':hover': {
+                              color:
+                                copied === data?.edit?.[r]?.[c].copyValue
+                                  ? '#00cc00'
+                                  : '#0088CC',
+                            },
                           }}
-                        />
+                          onClick={() => {
+                            void (async () => {
+                              const value = renderTextvalue(
+                                data?.edit?.[r]?.[c].copyValue?.toString()
+                              )
+                              await navigator.clipboard.writeText(value)
+                              setCopied(value)
+                              setTimeout(() => {
+                                setCopied('')
+                              }, 1000)
+                            })()
+                          }}
+                        >
+                          <ContentCopyIcon
+                            sx={{
+                              fontSize: '18px',
+                              marginLeft: '10px',
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          sx={{
+                            cursor: 'pointer',
+                            display: 'flex',
+                            color: '#888888',
+                          }}
+                          onClick={() => {
+                            setHideSecret(!hideSecret)
+                          }}
+                        >
+                          {hideSecret ? (
+                            <VisibilityOffIcon
+                              sx={{
+                                fontSize: '18px',
+                                marginLeft: '10px',
+                              }}
+                            />
+                          ) : (
+                            <VisibilityIcon
+                              sx={{
+                                fontSize: '18px',
+                                marginLeft: '10px',
+                              }}
+                            />
+                          )}
+                        </Box>
                       </Box>
                     )}
                     {data?.edit?.[r]?.[c].icon &&
