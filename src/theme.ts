@@ -46,7 +46,7 @@ const breakpoints = {
 }
 
 export function pxToRem(px: number) {
-  return `${px / 16}rem` // Assuming 1rem = 16px as a base font size
+  return `${px / 16}rem`
 }
 
 export const paletteDefinitions = {
