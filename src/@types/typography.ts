@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import '@mui/material/Typography'
+import '@mui/material/styles'
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {

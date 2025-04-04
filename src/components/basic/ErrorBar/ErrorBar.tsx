@@ -41,7 +41,7 @@ export const ErrorBar = ({
         <ReportProblemIcon className="errorIcon cx-error-bar__icon" />
         <Typography
           variant="body2"
-          color="#D91E18"
+          sx={{ color: '#D91E18' }}
           className={'cx-error-bar__text'}
         >
           {errorText}

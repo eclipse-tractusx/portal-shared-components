@@ -83,7 +83,6 @@ export const SelectList = ({
       defaultValue={defaultValue}
       disableClearable={disableClearable}
       noOptionsText={noOptionsText}
-      ListboxProps={{ style: { maxHeight: selectHeight } }}
       disabled={disabled}
       options={items.map((item) => item)}
       getOptionLabel={(option: Option) => (option[keyTitle] as string) || ''}
@@ -117,6 +116,9 @@ export const SelectList = ({
             keyTitle={keyTitle}
           />
         )
+      }}
+      slotProps={{
+        listbox: { style: { maxHeight: selectHeight } },
       }}
     />
   )

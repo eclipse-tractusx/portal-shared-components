@@ -86,12 +86,16 @@ export const SearchInput = ({
         }}
         variant={variant}
         type={props.type ?? 'search'}
-        InputProps={{
-          startAdornment: <SearchIcon sx={{ color: icon01, marginRight: 2 }} />,
-          endAdornment: endAdornment ?? null,
-        }}
         {...props}
         onChange={handleChange}
+        slotProps={{
+          input: {
+            startAdornment: (
+              <SearchIcon sx={{ color: icon01, marginRight: 2 }} />
+            ),
+            endAdornment: endAdornment ?? null,
+          },
+        }}
       />
     </Box>
   )

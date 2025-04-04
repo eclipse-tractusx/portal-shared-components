@@ -22,7 +22,7 @@ import { Close } from '@mui/icons-material'
 import CheckIcon from '@mui/icons-material/Check'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import { Box, IconButton, Slide } from '@mui/material'
-import { type SlideProps } from '@mui/material/Slide/Slide'
+import { type SlideProps } from '@mui/material/Slide'
 import Snackbar from '@mui/material/Snackbar'
 import { useCallback, useEffect, useRef, useState } from 'react'
 

@@ -67,11 +67,11 @@ export const ListItem = ({
           <Typography
             variant="h5"
             fontSize="16px"
-            color={stepsFontColor}
             sx={{
               margin: 'auto',
               paddingTop: '4px',
               width: 'fit-content',
+              color: stepsFontColor,
             }}
           >
             {step}
@@ -98,12 +98,12 @@ export const ListItem = ({
         <Typography
           variant="body2"
           fontSize="16px"
-          color={theme.palette.text.tertiary}
           sx={{
             width: 'fit-content',
             borderLeft: borderToNextStep,
             paddingLeft: '30px',
             marginLeft: '-17px',
+            color: theme.palette.text.tertiary,
           }}
         >
           {description}

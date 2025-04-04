@@ -18,7 +18,7 @@
  ********************************************************************************/
 
 import { ReactElement } from 'react'
-import { screen, fireEvent } from '@testing-library/react'
+import { screen, fireEvent, act } from '@testing-library/react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { Info } from '@mui/icons-material'
 import { Hyperlink } from '.'
@@ -104,11 +104,11 @@ describe('Hyperlink Component', () => {
     expect(linkElement.closest('a')).toHaveClass('cx-hyperlink__small')
   })
 
-  test('applies hover style correctly', () => {
+  test('applies hover style correctly', async () => {
     renderWithTheme(<Hyperlink href={href} text={text} underline />)
 
     const linkElement = screen.getByText(text)
-    fireEvent.mouseOver(linkElement)
+    await act(async () => fireEvent.mouseOver(linkElement))
 
     expect(linkElement.closest('a')).toHaveStyle(
       `color: ${theme.palette.primary.dark}`

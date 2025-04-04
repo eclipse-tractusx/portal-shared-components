@@ -55,6 +55,7 @@ export const Input = ({
   const handleToggleVisibility = () => {
     setShowPassword((prev) => !prev)
   }
+
   return (
     <Box>
       <FormControl
@@ -97,21 +98,17 @@ export const Input = ({
           placeholder={placeholder}
           error={error}
           type={showToggle && !showPassword ? 'password' : 'text'}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                {showToggle && (
-                  <IconButton
-                    onClick={handleToggleVisibility}
-                    edge="end"
-                    aria-label="toggle password visibility"
-                  >
+          slotProps={{
+            input: {
+              endAdornment: showToggle && (
+                <InputAdornment position="end">
+                  <IconButton onClick={handleToggleVisibility} edge="end">
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
-                )}
-                {error && <ErrorOutline color="error" />}
-              </InputAdornment>
-            ),
+                  {error && <ErrorOutline color="error" />}
+                </InputAdornment>
+              ),
+            },
           }}
           {...props}
         />
