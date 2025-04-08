@@ -1,10 +1,15 @@
-# Consumption guide of shared components
+# Migration guide of shared components
 
-## Breaking changes
+## Breaking changes MUI v7
 
 ### The following Shared components may be affected by the update:
 
     - Typography
+
+## Breaking changes MUI DataGrid v7
+
+### The following Shared components may be affected by the update:
+
     - PageLoadingTable
     - Table
 
