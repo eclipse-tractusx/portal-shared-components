@@ -18,3 +18,11 @@
     - MUI: https://mui.com/material-ui/migration/upgrade-to-v6
     - MUI: https://mui.com/material-ui/migration/upgrade-to-v7
     - MUI DataGrid: https://mui.com/x/migration/migration-data-grid-v6/
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2025 Contributors
+- Source URL: https://github.com/eclipse-tractusx/portal-shared-components
