@@ -1,12 +1,12 @@
 # Migration guide of shared components
 
-## Breaking changes MUI v7
+## Breaking changes MUI v5 -> v7
 
 ### The following Shared components may be affected by the update:
 
     - Typography
 
-## Breaking changes MUI DataGrid v7
+## Breaking changes MUI DataGrid v6 -> v7
 
 ### The following Shared components may be affected by the update:
 
