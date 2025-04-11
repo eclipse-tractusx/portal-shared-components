@@ -156,7 +156,7 @@ adds a new card for that number and you can filter the cards by various criteria
 
 ## Developer documentation
 
-### Migration doumentation
+### Upgrade documentation
 
 Please check [migration guide](/docs/admin/migration/migration.md) for information about library version upgrades.
 
