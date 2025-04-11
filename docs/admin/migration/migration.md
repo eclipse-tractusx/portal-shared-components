@@ -15,11 +15,11 @@ Please refer to the [MUI upgrade to v6 documentation](https://mui.com/material-u
 
 ### The following Shared components may be affected by the update:
 
-    Overriding these shared component directly in the target project may cause issues.
-    Please referer to the MUI documentaiton: https://mui.com/x/migration/migration-data-grid-v6/ and make the recommended changes.
+Overriding these shared component directly in the target project may cause issues.
+Please refer to the [MUI migration data-grid v6 documentation](https://mui.com/x/migration/migration-data-grid-v6) and make the recommended changes.
 
-    - PageLoadingTable (Uses MUI DataGrid)
-    - Table (Uses MUI DataGrid)
+- PageLoadingTable (Uses MUI DataGrid)
+- Table (Uses MUI DataGrid)
 
 ### MUI migration documention:
 
