@@ -23,9 +23,9 @@ Please refer to the [MUI migration data-grid v6 documentation](https://mui.com/x
 
 ### MUI migration documention:
 
-    - MUI: https://mui.com/material-ui/migration/upgrade-to-v6
-    - MUI: https://mui.com/material-ui/migration/upgrade-to-v7
-    - MUI DataGrid: https://mui.com/x/migration/migration-data-grid-v6/
+- MUI: <https://mui.com/material-ui/migration/upgrade-to-v6>
+- MUI: <https://mui.com/material-ui/migration/upgrade-to-v7>
+- MUI DataGrid: <https://mui.com/x/migration/migration-data-grid-v6>
 
 ## NOTICE
 
