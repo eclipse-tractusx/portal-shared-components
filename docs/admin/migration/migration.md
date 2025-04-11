@@ -9,7 +9,7 @@ When consuming the Shared components from release version 4.0.0, overriding some
 Overriding this shared component directly in the target project may cause issues.
 Please refer to the [MUI upgrade to v6 documentation](https://mui.com/material-ui/migration/upgrade-to-v6) and make the recommended changes.
 
-  - Typography (Uses MUI Typography)
+- Typography (Uses MUI Typography)
 
 ## Breaking changes MUI DataGrid v6 -> v7
 
