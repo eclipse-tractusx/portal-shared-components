@@ -1,19 +1,27 @@
-# Migration guide of shared components
+# Migration guide of shared components version 4.0.0
 
-## Breaking changes MUI v5 -> v7
+## Breaking changes of upgrade MUI v5 -> v7
+
+    When consuming the Shared components from release version 4.0.0, overriding some component props will no longer work as a result of the MUI upgrade.
 
 ### The following Shared components may be affected by the update:
 
-    - Typography
+    Overriding this shared component directly in the target project may cause issues.
+    Please referer to the MUI documentaion https://mui.com/material-ui/migration/upgrade-to-v6 and make the recommended changes.
+
+    - Typography (Uses MUI Typography)
 
 ## Breaking changes MUI DataGrid v6 -> v7
 
 ### The following Shared components may be affected by the update:
 
-    - PageLoadingTable
-    - Table
+    Overriding these shared component directly in the target project may cause issues.
+    Please referer to the MUI documentaiton: https://mui.com/x/migration/migration-data-grid-v6/ and make the recommended changes.
 
-### If any of the mentioned components are not functioning correctly, please refer to the following MUI documentation to make the necessary adjustments:
+    - PageLoadingTable (Uses MUI DataGrid)
+    - Table (Uses MUI DataGrid)
+
+### MUI migration documention:
 
     - MUI: https://mui.com/material-ui/migration/upgrade-to-v6
     - MUI: https://mui.com/material-ui/migration/upgrade-to-v7
