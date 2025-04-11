@@ -158,7 +158,7 @@ adds a new card for that number and you can filter the cards by various criteria
 
 ### Migration doumentation
 
-    Please check docs/admin/migration for information of library version migrations.
+Please check [migration guide](/docs/admin/migration/migration.md) for information about library version upgrades.
 
 ### Steps to run local storybook and dev server
 
