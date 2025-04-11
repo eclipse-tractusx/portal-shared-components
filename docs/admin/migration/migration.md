@@ -1,4 +1,4 @@
-# Migration guide of shared components version 4.0.0
+# Migration guide of shared components
 
 ## Breaking changes of upgrade from version 3.0.0 to 4.0.0 (MUI v5 -> v7)
 
