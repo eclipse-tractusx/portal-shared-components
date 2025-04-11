@@ -60,7 +60,7 @@ export const Tooltips = ({
       title={tooltipText}
       placement={tooltipPlacement}
       arrow={tooltipArrow}
-      componentsProps={{
+      slotProps={{
         tooltip: {
           sx: {
             color: color === 'dark' ? 'common.white' : 'text.primary',

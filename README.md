@@ -156,6 +156,10 @@ adds a new card for that number and you can filter the cards by various criteria
 
 ## Developer documentation
 
+### Upgrade documentation
+
+Please check [migration guide](/docs/admin/migration/migration.md) for information about library version upgrades.
+
 ### Steps to run local storybook and dev server
 
     yarn

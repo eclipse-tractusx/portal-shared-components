@@ -52,7 +52,7 @@ const breadcrumbs = [
   >
     Breadcrumb 1
   </Link>,
-  <Typography key="3" color="text.primary">
+  <Typography key="3" sx={{ color: 'text.primary' }}>
     Breadcrumb 2
   </Typography>,
 ]

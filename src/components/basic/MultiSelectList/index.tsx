@@ -18,7 +18,14 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { Box, Chip, Popper, type TextFieldProps, useTheme } from '@mui/material'
+import {
+  Box,
+  Chip,
+  Popper,
+  type TextFieldProps,
+  useTheme,
+  type PopperProps,
+} from '@mui/material'
 import Autocomplete, {
   type AutocompleteRenderInputParams,
   createFilterOptions,
@@ -123,6 +130,10 @@ export const MultiSelectList = ({
     }
   }, [error])
 
+  const popperComponent = ({ style, ...props }: PopperProps) => (
+    <Popper {...props} style={{ ...style, height: 0 }} />
+  )
+
   return (
     <Box>
       {!showItems ? (
@@ -131,10 +142,6 @@ export const MultiSelectList = ({
           sx={{ width: '100%' }}
           clearText={clearText}
           noOptionsText={noOptionsText}
-          PopperComponent={({ style, ...props }) => (
-            <Popper {...props} style={{ ...style, height: 0 }} />
-          )}
-          ListboxProps={{ style: { maxHeight: selectHeight } }}
           multiple
           disabled={disabled}
           options={items.map((item) => item)}
@@ -205,6 +212,12 @@ export const MultiSelectList = ({
             error ? setShowItems(false) : setShowItems(true)
           }}
           defaultValue={defaultValues}
+          slots={{
+            popper: popperComponent,
+          }}
+          slotProps={{
+            listbox: { style: { maxHeight: selectHeight } },
+          }}
         />
       ) : (
         <SelectAddMore

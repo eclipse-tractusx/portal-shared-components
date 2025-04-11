@@ -18,7 +18,7 @@
  ********************************************************************************/
 
 import { useState } from 'react'
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import { SearchInput } from '.'
 import { render } from '../../../test/testUtils'
 
@@ -56,8 +56,10 @@ describe('SearchInput', () => {
   test('should call search function after specified debounce timeout', async () => {
     render(<UncontrolledSearchInput />)
     const input = screen.getByPlaceholderText('Search')
-    fireEvent.change(input, { target: { value: 'te' } })
-    fireEvent.change(input, { target: { value: 'testing...' } })
+    await act(async () => fireEvent.change(input, { target: { value: 'te' } }))
+    await act(async () =>
+      fireEvent.change(input, { target: { value: 'testing...' } })
+    )
     expect(onSearch).not.toHaveBeenCalled()
     expect(onChange).toHaveBeenCalledTimes(2)
 
@@ -66,15 +68,17 @@ describe('SearchInput', () => {
     expect(onSearch).toHaveBeenCalledTimes(1)
   })
 
-  test('should call onChange handler when input value changes', () => {
+  test('should call onChange handler when input value changes', async () => {
     render(<UncontrolledSearchInput />)
 
     const input = screen.getByPlaceholderText('Search')
-    fireEvent.change(input, { target: { value: 't' } })
+    await act(async () => fireEvent.change(input, { target: { value: 't' } }))
     expect(onChange).toHaveBeenCalledTimes(1)
-    fireEvent.change(input, { target: { value: 'te' } })
+    await act(async () => fireEvent.change(input, { target: { value: 'te' } }))
     expect(onChange).toHaveBeenCalledTimes(2)
-    fireEvent.change(input, { target: { value: 'test' } })
+    await act(async () =>
+      fireEvent.change(input, { target: { value: 'test' } })
+    )
     expect(onChange).toHaveBeenCalledTimes(3)
   })
 
@@ -82,12 +86,14 @@ describe('SearchInput', () => {
     render(<ControlledSearchInput />)
 
     const input = screen.getByPlaceholderText('Search')
-    fireEvent.change(input, { target: { value: 'test' } })
+    await act(async () =>
+      fireEvent.change(input, { target: { value: 'test' } })
+    )
 
     jest.advanceTimersByTime(debounceTimeout)
     await waitFor(() => expect(onSearch).toHaveBeenCalledWith('test'))
 
-    fireEvent.change(input, { target: { value: '' } })
+    await act(async () => fireEvent.change(input, { target: { value: '' } }))
 
     jest.advanceTimersByTime(debounceTimeout)
     await waitFor(() => expect(onSearch).toHaveBeenCalledWith(''))
