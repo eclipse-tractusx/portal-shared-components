@@ -1,6 +1,6 @@
 # Migration guide of shared components version 4.0.0
 
-## Breaking changes of upgrade MUI v5 -> v7
+## Breaking changes of upgrade from version 3.0.0 to 4.0.0 (MUI v5 -> v7)
 
 When consuming the Shared components from release version 4.0.0, overriding some component props will no longer work as a result of the MUI upgrade.
 
