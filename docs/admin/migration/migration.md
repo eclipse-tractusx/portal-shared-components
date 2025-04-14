@@ -6,7 +6,7 @@
 
 When consuming the Shared components from release version 4.0.0, overriding some component props will no longer work as a result of the MUI upgrade.
 
-### The following Shared components may be affected by the update:
+#### The following Shared components may be affected by the update:
 
 Overriding this shared component directly in the target project may cause issues.
 Please refer to the [MUI upgrade to v6 documentation](https://mui.com/material-ui/migration/upgrade-to-v6) and make the recommended changes.
