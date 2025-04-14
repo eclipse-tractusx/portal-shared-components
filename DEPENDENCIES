@@ -188,7 +188,7 @@ npm/npmjs/-/flow-parser/0.231.0, MIT, approved, #14007
 npm/npmjs/-/for-each/0.3.3, MIT, approved, clearlydefined
 npm/npmjs/-/form-data/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/fs-extra/7.0.1, MIT, approved, CQ20011
-npm/npmjs/-/fs.realpath/1.0.0, ISC, approved, clearlydefined
+npm/npmjs/-/fs.realpath/1.0.0, ISC AND MIT, approved, clearlydefined
 npm/npmjs/-/fsevents/2.3.3, MIT, approved, #15309
 npm/npmjs/-/function-bind/1.1.2, MIT, approved, #11063
 npm/npmjs/-/function.prototype.name/1.1.6, MIT, approved, #10255
