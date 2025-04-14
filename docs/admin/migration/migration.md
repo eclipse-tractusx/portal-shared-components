@@ -15,7 +15,7 @@ Please refer to the [MUI upgrade to v6 documentation](https://mui.com/material-u
 
 ### Breaking changes MUI DataGrid v6 -> v7
 
-### The following Shared components may be affected by the update:
+#### The following Shared components may be affected by the update:
 
 Overriding these shared component directly in the target project may cause issues.
 Please refer to the [MUI migration data-grid v6 documentation](https://mui.com/x/migration/migration-data-grid-v6) and make the recommended changes.
