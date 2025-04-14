@@ -1,8 +1,8 @@
 {
   "name": "@catena-x/portal-shared-components",
   "version": "3.7.6",
-  "description": "Catena-X Portal Shared Components",
-  "author": "Catena-X Contributors",
+  "description": "Eclipse Tractus-X Portal Shared Components",
+  "author": "Eclipse Tractus-X Contributors",
   "license": "Apache-2.0",
   "type": "module",
   "main": "dist/portal-shared-components.js",
