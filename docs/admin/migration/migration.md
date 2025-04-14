@@ -23,7 +23,7 @@ Please refer to the [MUI migration data-grid v6 documentation](https://mui.com/x
 - PageLoadingTable (Uses MUI DataGrid)
 - Table (Uses MUI DataGrid)
 
-### MUI migration documention:
+#### MUI migration documentation
 
 - MUI: <https://mui.com/material-ui/migration/upgrade-to-v6>
 - MUI: <https://mui.com/material-ui/migration/upgrade-to-v7>
