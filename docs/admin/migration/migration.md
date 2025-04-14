@@ -13,7 +13,7 @@ Please refer to the [MUI upgrade to v6 documentation](https://mui.com/material-u
 
 - Typography (Uses MUI Typography)
 
-## Breaking changes MUI DataGrid v6 -> v7
+### Breaking changes MUI DataGrid v6 -> v7
 
 ### The following Shared components may be affected by the update:
 
