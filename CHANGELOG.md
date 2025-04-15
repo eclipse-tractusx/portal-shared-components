@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.0.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.6...v4.0.0) (2025-04-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade MUI library to v7 ([#439](https://github.com/eclipse-tractusx/portal-shared-components/issues/439))
+
+### Features
+
+* add custom toolbar element to ultimate table toolbar ([#414](https://github.com/eclipse-tractusx/portal-shared-components/issues/414)) ([d33f8df](https://github.com/eclipse-tractusx/portal-shared-components/commit/d33f8df615938897c2092fe161489dbe6b9fb3f1))
+* upgrade MUI library to v7 ([#439](https://github.com/eclipse-tractusx/portal-shared-components/issues/439)) ([0b709ca](https://github.com/eclipse-tractusx/portal-shared-components/commit/0b709ca6b94f90e8005bc51823e970415423bd1f))
+
+
+### Bug Fixes
+
+* **react:** remove illegal className props ([59eb30e](https://github.com/eclipse-tractusx/portal-shared-components/commit/59eb30e475b31146daf7c92fbe8b445fefddc3ce))
+
 ## [3.7.6](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.5...v3.7.6) (2025-02-13)
 
 
