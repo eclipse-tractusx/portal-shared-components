@@ -57,8 +57,14 @@ export const SelectInput = ({
   >
     <Input
       fullWidth={params.fullWidth}
-      InputProps={params.InputProps}
-      inputProps={params.inputProps}
+      slotProps={{
+        input: {
+          ...params.InputProps,
+        },
+        htmlInput: {
+          ...params.inputProps,
+        },
+      }}
       id={params.id}
       size={params.size}
       label={label}

@@ -19,7 +19,7 @@
  ********************************************************************************/
 
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
-import { type ButtonProps as MuiButtonProps } from '@mui/material/Button/Button'
+import { type ButtonProps as MuiButtonProps } from '@mui/material/Button'
 import { Button } from '.'
 
 export interface LoadMoreButtonProps
