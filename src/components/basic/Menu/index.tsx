@@ -19,12 +19,12 @@
  ********************************************************************************/
 
 import { Box, type BoxProps, Divider, List, useTheme } from '@mui/material'
-import uniqueId from 'lodash/uniqueId'
 import { MenuItem, type MenuItemProps } from './MenuItem'
 
 export interface NotificationBadgeType {
   notificationCount: number
   isNotificationAlert: boolean
+  notificationColor?: string
 }
 
 export interface MenuProps extends BoxProps {
@@ -32,6 +32,8 @@ export interface MenuProps extends BoxProps {
   component?: React.ElementType
   divider?: boolean
   notificationInfo?: NotificationBadgeType
+  activePathname?: string
+  subMenuDivider?: boolean
 }
 
 export const Menu = ({
@@ -40,25 +42,66 @@ export const Menu = ({
   component,
   onClick,
   notificationInfo,
+  activePathname,
+  subMenuDivider,
   ...props
 }: MenuProps) => {
   const { spacing } = useTheme()
+  const currentPath = window.location.pathname
 
   return (
     <Box {...props} className="cx-menu">
       <List sx={{ padding: 0 }} className="cx-menu__list">
-        {items?.map((item) => (
-          <MenuItem
-            {...item}
-            component={component}
-            menuProps={props}
-            Menu={Menu}
-            onClick={onClick}
-            key={uniqueId('Menu')}
-            showNotificationCount={item.to === 'notifications'}
-            notificationInfo={notificationInfo}
-          />
-        ))}
+        {items?.map((item, index) => {
+          if (item.children) {
+            return (
+              <>
+                <MenuItem
+                  title={item.title}
+                  key={`header-${index}`}
+                  isHeader={true}
+                  component={Box}
+                />
+                {item.children.map((childItem, childIndex) => {
+                  const isActive =
+                    activePathname === childItem.to ||
+                    activePathname === childItem.href
+                  return (
+                    <MenuItem
+                      {...childItem}
+                      component={component}
+                      menuProps={props}
+                      Menu={Menu}
+                      onClick={onClick}
+                      isActive={isActive}
+                      key={`header-child-${childIndex}`}
+                      showNotificationCount={item.to === 'notifications'}
+                      notificationInfo={notificationInfo}
+                    />
+                  )
+                })}
+                {subMenuDivider && index + 1 !== items.length && (
+                  <Divider sx={{ margin: spacing(1, 1) }} />
+                )}
+              </>
+            )
+          }
+          const isActive = currentPath === item.to || currentPath === item.href
+          return (
+            <MenuItem
+              {...item}
+              title={item.title}
+              component={component}
+              menuProps={props}
+              Menu={Menu}
+              isActive={isActive}
+              onClick={onClick}
+              key={`header-${index}`}
+              showNotificationCount={item.to === 'notifications'}
+              notificationInfo={notificationInfo}
+            />
+          )
+        })}
       </List>
       {divider && (
         <Divider className="cx-menu__divider" sx={{ margin: spacing(0, 1) }} />

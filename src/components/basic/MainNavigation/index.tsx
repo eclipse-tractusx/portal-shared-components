@@ -25,6 +25,8 @@ import { type MenuProps } from '../Menu'
 
 export interface MainNavigationProps extends MenuProps {
   children?: React.ReactNode
+  navigationUnstyled?: boolean
+  activePathname?: string
 }
 
 export const mainNavigationHeight = 85
@@ -33,6 +35,8 @@ export const MainNavigation = ({
   children,
   items,
   component,
+  navigationUnstyled,
+  activePathname,
 }: MainNavigationProps) => {
   const arrayChildren = Children.toArray(children)
 
@@ -75,6 +79,8 @@ export const MainNavigation = ({
           className="cx-main-navigation__instance"
           items={items}
           component={component}
+          unstyled={navigationUnstyled}
+          active={activePathname}
         />
       </Box>
 

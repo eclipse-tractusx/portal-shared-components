@@ -34,45 +34,58 @@ const Template: StoryFn<typeof Component> = (
 
 const items = [
   {
-    href: '/home',
-    title: 'home',
+    title: 'Dataspace Participate',
     children: [
-      { href: '/home-1', title: 'home 1' },
+      { title: 'Partner Network', href: '/partner-network' },
+      { title: 'Use Case Participation', href: '/use-case-participation' },
+    ],
+  },
+  {
+    title: 'Marketplace',
+    children: [
+      { title: 'App Marketplace', href: '/app-marketplace' },
+      { title: 'Service Marketplace', href: '/service-marketplace' },
+      { title: 'App & Service Subscription', href: '/company-subscription' },
+    ],
+  },
+  {
+    title: 'Marketplace Management',
+    children: [
       {
-        href: '/home-2',
-        title: 'home 2',
+        title: 'App Management',
         children: [
+          { title: 'App Overview', href: '/app-overview' },
+          { title: 'App Release Process', href: '/app-release-process' },
+          { title: 'App Subscription', href: '/app-subscription' },
+        ],
+      },
+      {
+        title: 'Service Management',
+        children: [
+          { title: 'Service Overview', href: '/service-overview' },
           {
-            href: '/home-2/1',
-            title: 'Submenu 1 ',
-            children: [{ href: '/', title: 'Sub-Submenu' }],
+            title: 'Service Release Process',
+            href: '/service-release-process',
           },
-          { href: '/home-2/2', title: 'Submenu 2 ' },
+          { title: 'Service Subscription', href: '/service-subscription' },
         ],
       },
     ],
   },
-  { href: '/appstore', title: 'App Store' },
-  { href: '/data-catalog', title: 'Data Catalog' },
+  {
+    title: 'CX-Operator',
+  },
 ]
-
-const itemsFirstLevel = items.map(({ href, title }) => ({ href, title }))
 
 export const Unstyled = Template.bind({})
 Unstyled.args = {
-  items: itemsFirstLevel,
-  active: '/home',
+  items,
+  active: '/use-case-participation',
   unstyled: true,
-}
-
-export const Simple = Template.bind({})
-Simple.args = {
-  items: itemsFirstLevel,
-  active: '/home',
 }
 
 export const WithDropdown = Template.bind({})
 WithDropdown.args = {
   items,
-  active: '/home',
+  activePathname: '/use-case-participation',
 }
