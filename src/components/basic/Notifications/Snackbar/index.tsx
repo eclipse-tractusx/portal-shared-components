@@ -22,7 +22,7 @@ import { Close } from '@mui/icons-material'
 import CheckIcon from '@mui/icons-material/Check'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import { Box, IconButton, Slide } from '@mui/material'
-import { type SlideProps } from '@mui/material/Slide/Slide'
+import { type SlideProps } from '@mui/material/Slide'
 import Snackbar from '@mui/material/Snackbar'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
@@ -92,7 +92,6 @@ export const PageSnackbar = ({
 
   return (
     <Snackbar
-      className="cx-snackbar__wrapper"
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isOpen}
       key={'bottom right'}
@@ -101,10 +100,7 @@ export const PageSnackbar = ({
       onMouseEnter={cancelAutoClose}
       onMouseLeave={handleAutoClose}
       message={
-        <Box
-          sx={{ display: 'flex', width: '100%', alignItems: 'flex-start' }}
-          className="cx-snackbar"
-        >
+        <Box sx={{ display: 'flex', width: '100%', alignItems: 'flex-start' }}>
           {showIcon && (
             <Box
               sx={{
@@ -117,10 +113,7 @@ export const PageSnackbar = ({
               {renderIcon()}
             </Box>
           )}
-          <Box
-            sx={{ flex: '1 1 auto', alignSelf: 'center' }}
-            className="cx-snackbar__title"
-          >
+          <Box sx={{ flex: '1 1 auto', alignSelf: 'center' }}>
             {title && (
               <Box
                 component="span"
@@ -132,7 +125,6 @@ export const PageSnackbar = ({
             {description}
           </Box>
           <Box
-            className="cx-snackbar__icon"
             sx={{
               flex: '0 0 auto',
               marginLeft: 1.5,

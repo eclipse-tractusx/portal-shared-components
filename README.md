@@ -1,6 +1,6 @@
-# Catena-X Portal Shared UI Components
+# Portal Shared UI Components
 
-Contains the Shared UI Components that are used to build the [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend) and other applications in the Catena-X ecosystem.
+Contains the Shared UI Components that are used to build the [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend) and other applications in the Eclipse Tractus-X ecosystem.
 
 - Source Code: https://github.com/eclipse-tractusx/portal-shared-components
 - NPM Library: https://npmjs.com/package/@catena-x/portal-shared-components
@@ -155,6 +155,10 @@ This example shows several components working together. Every button click
 adds a new card for that number and you can filter the cards by various criteria.
 
 ## Developer documentation
+
+### Upgrade documentation
+
+Please check [migration guide](/docs/admin/migration/migration.md) for information about library version upgrades.
 
 ### Steps to run local storybook and dev server
 

@@ -21,8 +21,6 @@ import { createTheme } from '@mui/material/styles'
 // Needs to use like this to overwrite data grid styles
 // https://mui.com/components/data-grid/getting-started/#typescript
 import type {} from '@mui/x-data-grid/themeAugmentation'
-import createPalette from '@mui/material/styles/createPalette'
-import createTypography from '@mui/material/styles/createTypography'
 
 const getFontFamily = (name: string): string =>
   [
@@ -45,6 +43,10 @@ const breakpoints = {
   md: 627,
   lg: 1056,
   xl: 1312,
+}
+
+export function pxToRem(px: number) {
+  return `${px / 16}rem`
 }
 
 export const paletteDefinitions = {
@@ -201,11 +203,12 @@ export const paletteDefinitions = {
   },
 }
 
-const palette = createPalette(paletteDefinitions)
+const palette = paletteDefinitions
 
 export const typographyDefinitions = {
   fontFamily: getFontFamily('LibreFranklin'),
   htmlFontSize: 16,
+  pxToRem: (px: number) => `${px / 16}rem`,
   allVariants: {
     color: palette.text.primary,
   },
@@ -322,7 +325,7 @@ export const typographyDefinitions = {
   },
 }
 
-const typography = createTypography(palette, typographyDefinitions)
+const typography = typographyDefinitions
 
 export const theme = createTheme({
   breakpoints: {

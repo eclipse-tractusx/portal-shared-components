@@ -31,7 +31,6 @@ export const SubNavigationLink = ({
 }: SubNavigationProps) => {
   return (
     <Box
-      className="cx-subnavigation__link"
       sx={{
         display: 'flex',
         height: 'fit-content',

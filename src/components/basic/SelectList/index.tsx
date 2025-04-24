@@ -77,14 +77,12 @@ export const SelectList = ({
 
   return (
     <Autocomplete
-      className="cx-select-list"
       id="singleSelectList"
       sx={{ width: '100%' }}
       clearText={clearText}
       defaultValue={defaultValue}
       disableClearable={disableClearable}
       noOptionsText={noOptionsText}
-      ListboxProps={{ style: { maxHeight: selectHeight } }}
       disabled={disabled}
       options={items.map((item) => item)}
       getOptionLabel={(option: Option) => (option[keyTitle] as string) || ''}
@@ -106,7 +104,6 @@ export const SelectList = ({
       renderInput={(params) => {
         return (
           <SelectInput
-            className="cx-select-list__input"
             params={params}
             label={label}
             placeholder={placeholder}
@@ -119,6 +116,9 @@ export const SelectList = ({
             keyTitle={keyTitle}
           />
         )
+      }}
+      slotProps={{
+        listbox: { style: { maxHeight: selectHeight } },
       }}
     />
   )

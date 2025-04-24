@@ -37,7 +37,6 @@ export const ContentCard = ({
 
   return (
     <Box
-      className="cx-card__content--wrapper"
       key={title}
       sx={{
         width: '270px',
@@ -48,7 +47,6 @@ export const ContentCard = ({
       }}
     >
       <Box
-        className="cx-card__content"
         sx={{
           height: '200px',
           width: 'auto',
@@ -69,11 +67,10 @@ export const ContentCard = ({
           },
         }}
       >
-        <Box sx={{ marginBottom: '20px' }} className="cx-card__content--chip">
+        <Box sx={{ marginBottom: '20px' }}>
           <CardChip status={StatusVariants.enabled} statusText={chipText} />
         </Box>
         <Typography
-          className="cx-card__content--heading"
           variant="h4"
           sx={{
             height: '60px',
@@ -90,10 +87,7 @@ export const ContentCard = ({
           {title}
         </Typography>
         {detail && (
-          <Box
-            sx={{ lineHeight: 'normal' }}
-            className="cx-card__content--heading-detail"
-          >
+          <Box sx={{ lineHeight: 'normal' }}>
             <Typography
               variant="body3"
               sx={{
@@ -104,7 +98,6 @@ export const ContentCard = ({
               {heading}
             </Typography>
             <Typography
-              className="cx-card__content--heading"
               variant="body3"
               sx={{
                 fontSize: '12px',

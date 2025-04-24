@@ -168,7 +168,7 @@ export const Table = ({
   const handleOnCellClick = useCallback(
     (selectedIds: GridRowSelectionModel) => {
       const idsArr: string[] = []
-      rows.map((row) => {
+      rows?.map((row) => {
         return selectedIds.map(
           (selectedId: GridRowId) =>
             selectedId.toString().includes(row.companyUserId) &&
@@ -226,7 +226,6 @@ export const Table = ({
   return (
     <>
       <Box
-        className="cx-table"
         sx={{
           '.MuiDataGrid-columnHeaders': {
             backgroundColor: columnHeadersBackgroundColor,
@@ -241,6 +240,7 @@ export const Table = ({
         <DataGrid
           sx={{
             '&.MuiDataGrid-root .MuiDataGrid-cell': {
+              display: 'flex',
               alignItems: alignCell,
               fontSize: fontSizeCell,
             },
@@ -250,9 +250,9 @@ export const Table = ({
               },
           }}
           getRowId={(row) => row.id as GridRowId}
-          components={{
-            Toolbar: () => toolbarView(),
-            NoRowsOverlay,
+          slots={{
+            toolbar: () => toolbarView(),
+            noRowsOverlay: NoRowsOverlay,
           }}
           onRowSelectionModelChange={handleOnCellClick}
           {...{
@@ -266,9 +266,8 @@ export const Table = ({
           {...props}
         />
       </Box>
-      {rows.length > 0 && hasMore ? (
+      {rows && rows.length > 0 && hasMore ? (
         <Box
-          className="cx-table__page-loading--loader"
           sx={{
             width: '100%',
             height: '100px',

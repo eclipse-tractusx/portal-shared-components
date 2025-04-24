@@ -126,17 +126,12 @@ export const MenuItem = ({
         {title}
 
         {children != null && (
-          <ArrowForward
-            className="cx-list-item__arrow-fwd"
-            fontSize="small"
-            sx={{ color: 'icon.icon02' }}
-          />
+          <ArrowForward fontSize="small" sx={{ color: 'icon.icon02' }} />
         )}
         {showNotificationCount &&
           notificationInfo != null &&
           notificationInfo.notificationCount > 0 && (
             <Typography
-              className="cx-list-item__notification-text"
               sx={{
                 fontWeight: '500',
                 padding: '2px 6px',
@@ -150,7 +145,7 @@ export const MenuItem = ({
           )}
       </Link>
       {Menu != null && children != null && open && (
-        <Menu className="cx-list-item__menu" items={children} {...menuProps} />
+        <Menu items={children} {...menuProps} />
       )}
       {divider && <Divider />}
     </ListItem>

@@ -48,9 +48,9 @@ export const RoundedStepperItem = ({
         <Typography
           variant="body1"
           fontSize="14px"
-          color="#fff"
           sx={{
             backgroundColor: getBackgroundColor(),
+            color: '#fff',
           }}
         ></Typography>
       </Box>

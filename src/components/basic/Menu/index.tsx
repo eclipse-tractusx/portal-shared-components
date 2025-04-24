@@ -103,9 +103,7 @@ export const Menu = ({
           )
         })}
       </List>
-      {divider && (
-        <Divider className="cx-menu__divider" sx={{ margin: spacing(0, 1) }} />
-      )}
+      {divider && <Divider sx={{ margin: spacing(0, 1) }} />}
     </Box>
   )
 }

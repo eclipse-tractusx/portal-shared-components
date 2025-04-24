@@ -117,7 +117,6 @@ export const Hyperlink = ({
             color: theme.palette.primary.dark,
           },
         }}
-        className="cx-hyperlink__text"
       >
         {text}
       </Typography>

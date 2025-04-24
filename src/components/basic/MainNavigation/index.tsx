@@ -42,7 +42,6 @@ export const MainNavigation = ({
 
   return (
     <Box
-      className="cx-main-navigation__wrapper"
       sx={{
         height: `${mainNavigationHeight}px`,
         display: 'flex',
@@ -55,7 +54,6 @@ export const MainNavigation = ({
     >
       {arrayChildren.length > 0 && (
         <Box
-          className="cx-main-navigation__children-top"
           sx={{
             width: '170px',
             paddingTop: '22px',
@@ -67,7 +65,6 @@ export const MainNavigation = ({
       )}
 
       <Box
-        className="cx-main-navigation"
         sx={{
           marginRight: 'auto',
           marginLeft: 'auto',
@@ -83,10 +80,9 @@ export const MainNavigation = ({
           active={activePathname}
         />
       </Box>
-
+      
       {arrayChildren.length > 0 && (
         <Box
-          className="cx-main-navigation__children-bottom"
           sx={{
             width: '122px',
             paddingTop: '22px',

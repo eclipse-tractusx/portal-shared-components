@@ -78,7 +78,6 @@ export const CardChip = ({ status, statusText }: CardChipProps) => {
 
   return (
     <MuiChip
-      className="cx-card__chip"
       label={statusText}
       variant="outlined"
       sx={{

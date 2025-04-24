@@ -30,13 +30,11 @@ export const Rating = ({ defaultRating }: RatingContentProps) => {
   const [value, setValue] = React.useState<number | null>(defaultRating)
   return (
     <Box
-      className="cx-rating"
       sx={{
         '& > legend': { mt: defaultRating },
       }}
     >
       <RatingUI
-        className="cx-rating__instance"
         name="half-rating"
         precision={0.5}
         value={value}

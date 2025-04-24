@@ -24,7 +24,6 @@ import { type PropsWithChildren } from 'react'
 export const PageSnackbarStack = ({ children }: PropsWithChildren<unknown>) => {
   return (
     <Box
-      className="cx-snackbar__children"
       sx={{
         position: 'fixed',
         top: 0,

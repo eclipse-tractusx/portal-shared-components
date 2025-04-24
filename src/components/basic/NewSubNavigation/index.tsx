@@ -54,7 +54,6 @@ export const NewSubNavigation = ({
   const [highlight, setHighlight] = useState('')
   return (
     <Box
-      className="cx-new-subnavigation"
       onMouseOver={() => {
         setShow(true)
       }}
@@ -70,7 +69,6 @@ export const NewSubNavigation = ({
             <Box className="cx-new-subnavigation__instance--container navigationOverlayContainer">
               <MoreVertIcon />
               <Typography
-                className="cx-new-subnavigation__instance--header"
                 variant="h4"
                 sx={{
                   marginLeft: '10px',
@@ -119,7 +117,6 @@ export const NewSubNavigation = ({
                           }}
                         />
                         <Typography
-                          className="cx-new-subnavigation__overlay--link-title"
                           variant="h4"
                           sx={{
                             color:
@@ -170,7 +167,6 @@ export const NewSubNavigation = ({
             </Box>
             {buttonArray?.length === 1 && (
               <Button
-                className="cx-new-subnavigation__instance--btn"
                 onClick={(e) => {
                   buttonArray[0].onButtonClick(e)
                   setShow(!show)

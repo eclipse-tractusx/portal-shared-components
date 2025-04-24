@@ -87,7 +87,6 @@ export const PageHeader = ({
 
   return (
     <Box
-      className="cx-page-header"
       sx={{
         width: '100%',
         height: `${height}px`,
@@ -100,7 +99,6 @@ export const PageHeader = ({
     >
       {children && (
         <Box
-          className="cx-page-header__children-wrapper"
           sx={{
             display: 'flex',
             alignItems: 'center',
@@ -111,7 +109,6 @@ export const PageHeader = ({
           }}
         >
           <Box
-            className="cx-page-header__children"
             sx={{
               maxWidth: '1200px',
               width: '100%',
@@ -124,7 +121,6 @@ export const PageHeader = ({
         </Box>
       )}
       <Box
-        className="cx-page-header__title"
         sx={{
           maxWidth: '1200px',
           padding: '0px 20px',

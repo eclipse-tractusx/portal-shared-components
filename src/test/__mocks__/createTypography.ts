@@ -16,14 +16,12 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
-
-import { type Palette } from '@mui/material'
-import { type TypographyOptions } from '@mui/material/styles/createTypography'
+import { type Palette, type TypographyVariantsOptions } from '@mui/material'
 
 const createTypography: (
   palette: Palette,
-  typography: TypographyOptions
-) => TypographyOptions = (palette, typography) => ({
+  typography: TypographyVariantsOptions
+) => TypographyVariantsOptions = (palette, typography) => ({
   ...palette,
   ...typography,
   pxToRem: jest.fn,

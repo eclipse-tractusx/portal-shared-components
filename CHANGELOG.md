@@ -1,5 +1,41 @@
 # Changelog
 
+## [4.0.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.6...v4.0.0) (2025-04-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade MUI library to v7 ([#439](https://github.com/eclipse-tractusx/portal-shared-components/issues/439))
+
+### Features
+
+* add custom toolbar element to ultimate table toolbar ([#414](https://github.com/eclipse-tractusx/portal-shared-components/issues/414)) ([d33f8df](https://github.com/eclipse-tractusx/portal-shared-components/commit/d33f8df615938897c2092fe161489dbe6b9fb3f1))
+* upgrade MUI library to v7 ([#439](https://github.com/eclipse-tractusx/portal-shared-components/issues/439)) ([0b709ca](https://github.com/eclipse-tractusx/portal-shared-components/commit/0b709ca6b94f90e8005bc51823e970415423bd1f))
+
+
+### Bug Fixes
+
+* **react:** remove illegal className props ([59eb30e](https://github.com/eclipse-tractusx/portal-shared-components/commit/59eb30e475b31146daf7c92fbe8b445fefddc3ce))
+
+## [3.7.6](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.5...v3.7.6) (2025-02-13)
+
+
+### Bug Fixes
+
+* upgrade storybook to version 8.5.3 ([4f4df10](https://github.com/eclipse-tractusx/portal-shared-components/commit/4f4df107bf6ca02ca959660c121f4dc18ac7b10a))
+* upgrade storybook to version 8.5.3 ([f8e2203](https://github.com/eclipse-tractusx/portal-shared-components/commit/f8e2203c4a4c16fc54a8444ca81461670faa36f1))
+* upgrade storybook to version 8.5.3 ([2855fc6](https://github.com/eclipse-tractusx/portal-shared-components/commit/2855fc6e2f197b3b609db30e91d37cb4e10d5837))
+* upgrade storybook to version 8.5.3 ([b47c4e4](https://github.com/eclipse-tractusx/portal-shared-components/commit/b47c4e48ac439650c8fb26c2f77f3119e811251b))
+* upgrade storybook to version 8.5.3 ([6cccaec](https://github.com/eclipse-tractusx/portal-shared-components/commit/6cccaec07fd20259fc9568ffc1e4a430203200e9))
+
+## [3.7.5](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.4...v3.7.5) (2025-01-20)
+
+
+### Bug Fixes
+
+* **react:** replace first-child pseudo class ([e657245](https://github.com/eclipse-tractusx/portal-shared-components/commit/e657245bbb95e53d0960053fee182b763bf2c35e))
+* **react:** replace first-child pseudo class ([b14ce1f](https://github.com/eclipse-tractusx/portal-shared-components/commit/b14ce1fd3555a961717fd8abc43890c6bf5bfcfe))
+
 ## [3.7.4](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.3...v3.7.4) (2024-12-04)
 
 

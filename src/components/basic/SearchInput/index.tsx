@@ -78,21 +78,24 @@ export const SearchInput = ({
   }
 
   return (
-    <Box className="cx-search-input">
+    <Box>
       <TextField
-        className="cx-search-input__text-field"
         sx={{
           borderColor: theme.palette.primary.main,
           width: '100%',
         }}
         variant={variant}
         type={props.type ?? 'search'}
-        InputProps={{
-          startAdornment: <SearchIcon sx={{ color: icon01, marginRight: 2 }} />,
-          endAdornment: endAdornment ?? null,
-        }}
         {...props}
         onChange={handleChange}
+        slotProps={{
+          input: {
+            startAdornment: (
+              <SearchIcon sx={{ color: icon01, marginRight: 2 }} />
+            ),
+            endAdornment: endAdornment ?? null,
+          },
+        }}
       />
     </Box>
   )

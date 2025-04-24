@@ -32,7 +32,6 @@ export const TabPanel = (props: TabPanelProps) => {
 
   return (
     <div
-      className="cx-tab-panel"
       role="tabpanel"
       hidden={value !== index}
       id={`basic-tabpanel-${index}`}

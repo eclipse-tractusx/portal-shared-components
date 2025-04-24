@@ -28,7 +28,6 @@ export const SubNavigationButton = ({
 }: SubNavigationProps) => {
   return (
     <Box
-      className="cx-subnavigation__button--wrap"
       sx={{
         height: 'fit-content',
         margin: '32px 0px',
@@ -37,7 +36,6 @@ export const SubNavigationButton = ({
     >
       {buttonLabel && onButtonClick != null && (
         <Button
-          className="cx-subnavigation__button"
           onClick={onButtonClick}
           color="secondary"
           variant="outlined"
