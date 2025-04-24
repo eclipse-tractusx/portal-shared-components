@@ -32,7 +32,7 @@ const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 
-const items = [
+export const items = [
   {
     title: 'Dataspace Participate',
     children: [
