@@ -80,7 +80,7 @@ export const MainNavigation = ({
           active={activePathname}
         />
       </Box>
-      
+
       {arrayChildren.length > 0 && (
         <Box
           sx={{
