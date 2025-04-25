@@ -22,7 +22,6 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline'
 import { Box } from '@mui/material'
 import { type StoryFn } from '@storybook/react'
 import CXLogoText from '../../../assets/logo/cx-logo-text.svg'
-import { items } from '../../content/Navigation/Navigation.stories'
 import { Button } from '../Button'
 import { IconButton } from '../IconButton'
 import { MainNavigation as Component } from '.'
@@ -33,6 +32,51 @@ export default {
   tags: ['autodocs'],
   argTypes: {},
 }
+
+const items = [
+  {
+    title: 'Dataspace Participate',
+    children: [
+      { title: 'Partner Network', href: '/partner-network' },
+      { title: 'Use Case Participation', href: '/use-case-participation' },
+    ],
+  },
+  {
+    title: 'Marketplace',
+    children: [
+      { title: 'App Marketplace', href: '/app-marketplace' },
+      { title: 'Service Marketplace', href: '/service-marketplace' },
+      { title: 'App & Service Subscription', href: '/company-subscription' },
+    ],
+  },
+  {
+    title: 'Marketplace Management',
+    children: [
+      {
+        title: 'App Management',
+        children: [
+          { title: 'App Overview', href: '/app-overview' },
+          { title: 'App Release Process', href: '/app-release-process' },
+          { title: 'App Subscription', href: '/app-subscription' },
+        ],
+      },
+      {
+        title: 'Service Management',
+        children: [
+          { title: 'Service Overview', href: '/service-overview' },
+          {
+            title: 'Service Release Process',
+            href: '/service-release-process',
+          },
+          { title: 'Service Subscription', href: '/service-subscription' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'CX-Operator',
+  },
+]
 
 const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>

@@ -32,42 +32,39 @@ const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 
-export const items = [
+const items = [
   {
-    title: 'Dataspace Participate',
+    title: 'Navigation Item1',
     children: [
-      { title: 'Partner Network', href: '/partner-network' },
-      { title: 'Use Case Participation', href: '/use-case-participation' },
+      { title: 'Submenu Item1', href: '/submenu-item1' },
+      { title: 'Submenu Item2', href: '/submenu-item2' },
     ],
   },
   {
-    title: 'Marketplace',
+    title: 'Navigation Item2',
     children: [
-      { title: 'App Marketplace', href: '/app-marketplace' },
-      { title: 'Service Marketplace', href: '/service-marketplace' },
-      { title: 'App & Service Subscription', href: '/company-subscription' },
+      { title: 'Submenu Item1', href: '/submenu-item1' },
+      { title: 'Submenu Item2', href: '/submenu-item2' },
+      { title: 'Submenu Item3', href: '/submenu-item3' },
     ],
   },
   {
-    title: 'Marketplace Management',
+    title: 'Navigation Item3',
     children: [
       {
-        title: 'App Management',
+        title: 'Menu-item1',
         children: [
-          { title: 'App Overview', href: '/app-overview' },
-          { title: 'App Release Process', href: '/app-release-process' },
-          { title: 'App Subscription', href: '/app-subscription' },
+          { title: 'Submenu Item1', href: '/submenu-item1' },
+          { title: 'Submenu Item2', href: '/submenu-item2' },
+          { title: 'Submenu Item3', href: '/submenu-item3' },
         ],
       },
       {
-        title: 'Service Management',
+        title: 'Menu-item2',
         children: [
-          { title: 'Service Overview', href: '/service-overview' },
-          {
-            title: 'Service Release Process',
-            href: '/service-release-process',
-          },
-          { title: 'Service Subscription', href: '/service-subscription' },
+          { title: 'Submenu Item1', href: '/submenu-item1' },
+          { title: 'Submenu Item2', href: '/submenu-item2' },
+          { title: 'Submenu Item3', href: '/submenu-item3' },
         ],
       },
     ],
@@ -87,5 +84,5 @@ Unstyled.args = {
 export const WithDropdown = Template.bind({})
 WithDropdown.args = {
   items,
-  activePathname: '/use-case-participation',
+  activePathname: '/navigation-child1',
 }
