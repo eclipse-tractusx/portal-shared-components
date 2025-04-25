@@ -34,18 +34,18 @@ const Template: StoryFn<typeof Component> = (
 
 const items = [
   {
-    title: 'Navigation Item1',
+    title: 'Navigation-Item1',
     children: [
-      { title: 'Submenu Item1', href: '/submenu-item1' },
-      { title: 'Submenu Item2', href: '/submenu-item2' },
+      { title: 'Sub-menu1 Item1', href: '/sub-menu-item1-n1' },
+      { title: 'Sub-menu1 Item2', href: '/sub-menu-item2-n1' },
     ],
   },
   {
     title: 'Navigation Item2',
     children: [
-      { title: 'Submenu Item1', href: '/submenu-item1' },
-      { title: 'Submenu Item2', href: '/submenu-item2' },
-      { title: 'Submenu Item3', href: '/submenu-item3' },
+      { title: 'Sub-menu2 Item1', href: '/sub-menu-item1-n2' },
+      { title: 'Sub-menu2 Item2', href: '/sub-menu-item2-n2' },
+      { title: 'Sub-menu2 Item3', href: '/sub-menu-item3-n2' },
     ],
   },
   {
@@ -54,17 +54,17 @@ const items = [
       {
         title: 'Menu-item1',
         children: [
-          { title: 'Submenu Item1', href: '/submenu-item1' },
-          { title: 'Submenu Item2', href: '/submenu-item2' },
-          { title: 'Submenu Item3', href: '/submenu-item3' },
+          { title: 'Sub-menu Item1', href: '/sub-menu-item1-m1' },
+          { title: 'Sub-menu Item2', href: '/sub-menu-item2-m1' },
+          { title: 'Sub-menu Item3', href: '/sub-menu-item3-m1' },
         ],
       },
       {
         title: 'Menu-item2',
         children: [
-          { title: 'Submenu Item1', href: '/submenu-item1' },
-          { title: 'Submenu Item2', href: '/submenu-item2' },
-          { title: 'Submenu Item3', href: '/submenu-item3' },
+          { title: 'Sub-menu Item1', href: '/sub-menu-item1-m2' },
+          { title: 'Sub-menu Item2', href: '/sub-menu-item2-m2' },
+          { title: 'Sub-menu Item3', href: '/sub-menu-item3-m2' },
         ],
       },
     ],
@@ -77,12 +77,12 @@ const items = [
 export const Unstyled = Template.bind({})
 Unstyled.args = {
   items,
-  active: '/use-case-participation',
+  active: '/sub-menu-item1-n2',
   unstyled: true,
 }
 
 export const WithDropdown = Template.bind({})
 WithDropdown.args = {
   items,
-  activePathname: '/navigation-child1',
+  activePathname: '/sub-menu-item1-n1',
 }
