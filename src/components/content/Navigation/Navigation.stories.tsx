@@ -32,40 +32,31 @@ const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 
+const children = [
+  { title: 'Sub menu1', href: '/sub-menu-item1' },
+  { title: 'Sub menu2', href: '/sub-menu-item2' },
+  { title: 'Sub menu3', href: '/sub-menu-item2' },
+]
+
 const items = [
   {
-    title: 'Navigation-Item1',
-    children: [
-      { title: 'Sub-menu1 Item1', href: '/sub-menu-item1-n1' },
-      { title: 'Sub-menu1 Item2', href: '/sub-menu-item2-n1' },
-    ],
+    title: 'Navigation Item1',
+    children: children,
   },
   {
     title: 'Navigation Item2',
-    children: [
-      { title: 'Sub-menu2 Item1', href: '/sub-menu-item1-n2' },
-      { title: 'Sub-menu2 Item2', href: '/sub-menu-item2-n2' },
-      { title: 'Sub-menu2 Item3', href: '/sub-menu-item3-n2' },
-    ],
+    children: children,
   },
   {
     title: 'Navigation Item3',
     children: [
       {
         title: 'Menu-item1',
-        children: [
-          { title: 'Sub-menu Item1', href: '/sub-menu-item1-m1' },
-          { title: 'Sub-menu Item2', href: '/sub-menu-item2-m1' },
-          { title: 'Sub-menu Item3', href: '/sub-menu-item3-m1' },
-        ],
+        children: children,
       },
       {
         title: 'Menu-item2',
-        children: [
-          { title: 'Sub-menu Item1', href: '/sub-menu-item1-m2' },
-          { title: 'Sub-menu Item2', href: '/sub-menu-item2-m2' },
-          { title: 'Sub-menu Item3', href: '/sub-menu-item3-m2' },
-        ],
+        children: children,
       },
     ],
   },
@@ -77,12 +68,12 @@ const items = [
 export const Unstyled = Template.bind({})
 Unstyled.args = {
   items,
-  active: '/sub-menu-item1-n2',
+  active: '/sub-menu-item1',
   unstyled: true,
 }
 
 export const WithDropdown = Template.bind({})
 WithDropdown.args = {
   items,
-  activePathname: '/sub-menu-item1-n1',
+  activePathname: '/sub-menu-item2',
 }
