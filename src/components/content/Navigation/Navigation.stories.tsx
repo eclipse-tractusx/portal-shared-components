@@ -32,7 +32,7 @@ const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 
-const children = [
+const childrenItems = [
   { title: 'Sub menu1', href: '/sub-menu-item1' },
   { title: 'Sub menu2', href: '/sub-menu-item2' },
   { title: 'Sub menu3', href: '/sub-menu-item2' },
@@ -41,22 +41,22 @@ const children = [
 const items = [
   {
     title: 'Navigation Item1',
-    children: children,
+    children: childrenItems,
   },
   {
     title: 'Navigation Item2',
-    children: children,
+    children: childrenItems,
   },
   {
     title: 'Navigation Item3',
     children: [
       {
         title: 'Menu-item1',
-        children: children,
+        children: childrenItems,
       },
       {
         title: 'Menu-item2',
-        children: children,
+        children: childrenItems,
       },
     ],
   },
