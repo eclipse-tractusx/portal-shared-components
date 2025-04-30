@@ -47,12 +47,10 @@ export const Navigation = ({
       }}
     >
       {items.map((link) => {
-        if (!link.children?.length) return null
         const isActive =
           activePathname === link.name ||
           link.href === activePathname ||
           link.to === activePathname
-
         return (
           <NavItem
             {...link}
@@ -60,9 +58,7 @@ export const Navigation = ({
             component={component}
             unstyled={unstyled}
             key={link.title}
-            onClick={(e) => {
-              e.preventDefault()
-              e.preventDefault()
+            onClick={() => {
               if (selectedItem != null) selectedItem(link.href ?? '')
             }}
           />

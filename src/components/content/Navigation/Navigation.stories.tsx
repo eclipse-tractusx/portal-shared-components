@@ -40,6 +40,10 @@ const childrenItems = [
 
 const items = [
   {
+    title: 'Navigation Item without children',
+    href: '/navigation-item1',
+  },
+  {
     title: 'Navigation Item1',
     children: childrenItems,
   },

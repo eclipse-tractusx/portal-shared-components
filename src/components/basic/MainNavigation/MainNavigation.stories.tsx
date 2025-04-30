@@ -35,6 +35,10 @@ export default {
 
 const items = [
   {
+    title: 'Home',
+    href: '/home',
+  },
+  {
     title: 'Dataspace Participate',
     children: [
       { title: 'Partner Network', href: '/partner-network' },
