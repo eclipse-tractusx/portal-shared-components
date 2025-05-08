@@ -32,47 +32,52 @@ const Template: StoryFn<typeof Component> = (
   args: React.ComponentProps<typeof Component>
 ) => <Component {...args} />
 
+const childrenItems = [
+  { title: 'Sub menu1', href: '/sub-menu-item1' },
+  { title: 'Sub menu2', href: '/sub-menu-item2' },
+  { title: 'Sub menu3', href: '/sub-menu-item2' },
+]
+
 const items = [
   {
-    href: '/home',
-    title: 'home',
+    title: 'Navigation Item without children',
+    href: '/navigation-item1',
+  },
+  {
+    title: 'Navigation Item1',
+    children: childrenItems,
+  },
+  {
+    title: 'Navigation Item2',
+    children: childrenItems,
+  },
+  {
+    title: 'Navigation Item3',
     children: [
-      { href: '/home-1', title: 'home 1' },
       {
-        href: '/home-2',
-        title: 'home 2',
-        children: [
-          {
-            href: '/home-2/1',
-            title: 'Submenu 1 ',
-            children: [{ href: '/', title: 'Sub-Submenu' }],
-          },
-          { href: '/home-2/2', title: 'Submenu 2 ' },
-        ],
+        title: 'Menu-item1',
+        children: childrenItems,
+      },
+      {
+        title: 'Menu-item2',
+        children: childrenItems,
       },
     ],
   },
-  { href: '/appstore', title: 'App Store' },
-  { href: '/data-catalog', title: 'Data Catalog' },
+  {
+    title: 'CX-Operator',
+  },
 ]
-
-const itemsFirstLevel = items.map(({ href, title }) => ({ href, title }))
 
 export const Unstyled = Template.bind({})
 Unstyled.args = {
-  items: itemsFirstLevel,
-  active: '/home',
+  items,
+  active: '/sub-menu-item1',
   unstyled: true,
-}
-
-export const Simple = Template.bind({})
-Simple.args = {
-  items: itemsFirstLevel,
-  active: '/home',
 }
 
 export const WithDropdown = Template.bind({})
 WithDropdown.args = {
   items,
-  active: '/home',
+  activePathname: '/sub-menu-item2',
 }

@@ -42,13 +42,25 @@ Menu.args = {
         { href: '/1/2', title: 'Submenu Item 2' },
         {
           href: '/1/3',
-          title: 'Submenu Item 3',
+          title: 'Submenu Item 1',
           hint: 'coming soon',
           disable: true,
         },
       ],
     },
-    { href: '/2', title: 'Menu Item 2' },
-    { href: '/3', title: 'Menu Item 3' },
+    {
+      href: '/2',
+      title: 'Menu Item 2',
+      children: [
+        { href: '/1/1', title: 'Submenu Item 1' },
+        { href: '/1/2', title: 'Submenu Item 2' },
+        {
+          href: '/1/3',
+          title: 'Submenu Item 2',
+          hint: 'coming soon',
+          disable: true,
+        },
+      ],
+    },
   ],
 }
