@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v4.0.0...v4.0.1) (2025-05-07)
+
+
+### Bug Fixes
+
+* upgrade app dependencies ([508df29](https://github.com/eclipse-tractusx/portal-shared-components/commit/508df296bde4c225ac0f580aad476cde8c120a20))
+
 ## [4.0.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.6...v4.0.0) (2025-04-15)
 
 
