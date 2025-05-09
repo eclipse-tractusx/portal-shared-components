@@ -159,11 +159,20 @@ export const PageLoadingTable = function <Row, Args>({
     return defaultMessage
   }
 
-  const noRowsMsg = !items.length
-    ? searchExpr
-      ? getTranslationMessage('noSearchItemsToDisplay', 'No results found')
-      : getTranslationMessage('noItemsToDisplay', 'No items to display')
-    : ''
+  let noRowsMsg = ''
+  if (!items.length) {
+    if (searchExpr) {
+      noRowsMsg = getTranslationMessage(
+        'noSearchItemsToDisplay',
+        'No results found'
+      )
+    } else {
+      noRowsMsg = getTranslationMessage(
+        'noItemsToDisplay',
+        'No items to display'
+      )
+    }
+  }
 
   return (
     <>
