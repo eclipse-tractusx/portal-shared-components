@@ -39,7 +39,7 @@ const items = [
     href: '/home',
   },
   {
-    title: 'Dataspace Participate',
+    title: 'Dataspace Participation',
     children: [
       { title: 'Partner Network', href: '/partner-network' },
       { title: 'Use Case Participation', href: '/use-case-participation' },
