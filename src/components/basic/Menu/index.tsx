@@ -58,11 +58,11 @@ export const Menu = ({
               <>
                 <MenuItem
                   title={item.title}
-                  key={`header-${index}`}
+                  key={item.to ?? item.href ?? `menu-${item.title}`}
                   isHeader={true}
                   component={Box}
                 />
-                {item.children.map((childItem, childIndex) => {
+                {item.children.map((childItem) => {
                   const isActive =
                     activePathname === childItem.to ||
                     activePathname === childItem.href
@@ -74,7 +74,7 @@ export const Menu = ({
                       Menu={Menu}
                       onClick={onClick}
                       isActive={isActive}
-                      key={`header-child-${childIndex}`}
+                      key={item.to ?? item.href ?? `menu-${item.title}`}
                       showNotificationCount={item.to === 'notifications'}
                       notificationInfo={notificationInfo}
                     />
@@ -96,7 +96,7 @@ export const Menu = ({
               Menu={Menu}
               isActive={isActive}
               onClick={onClick}
-              key={`header-${index}`}
+              key={item.to ?? item.href ?? `menu-${item.title}`}
               showNotificationCount={item.to === 'notifications'}
               notificationInfo={notificationInfo}
             />
