@@ -40,8 +40,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
+      # Install Dependencies
+      # Using --frozen-lockfile first to fail fast if yarn.lock is out of sync
+      # Run a second time since yarn v1 frozen-lockfile does not notice removed dependencies
       - name: Install Dependencies
-        run: yarn --frozen-lockfile
+        run: |
+          yarn --frozen-lockfile
+          yarn
+
+      - name: Check for uncommitted files in working directory
+        run: |
+          git_status=$(git status --porcelain)
+          if [ -n "$git_status" ]; then
+            echo "Please commit changed files before running checks."
+            exit 1
+          else
+            echo "No modified files found."
+          fi
 
       - name: Prettier Checks
         run: yarn pretty:check
