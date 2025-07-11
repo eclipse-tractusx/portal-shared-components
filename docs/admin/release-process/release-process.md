@@ -15,6 +15,7 @@ The release process is divided into several steps, which ensure that the version
 
 - [Manual Workflow Execution](#manual-workflow-execution)
 - [Release Process Flow Diagram](#release-process-flow-diagram)
+- [NPM_PUBLISH Token Configuration](#npm_publish-token-configuration)
 
 This process is designed to minimize errors and automate as much of the release process as possible.
 
@@ -44,7 +45,7 @@ After the `release-please` PR is merged:
 
 1. A release and tag are created with the version specified in `package.json`.
 2. The `release-please` PR label is changed to `autorelease:tagged`.
-3. The package is published to npm.
+3. The package is published to npm to the [@catena-x/portal-shared-components library](https://npmjs.com/package/@catena-x/portal-shared-components)
 
 This structured process ensures consistency in versioning and changelog updates, while also automating the release and publishing steps to reduce manual intervention.
 
@@ -59,6 +60,30 @@ If the workflow is executed manually and there is no release commit but the pack
 ## Release Process Flow Diagram
 
 ![Project Diagram](../../static/release-process.png)
+
+## NPM_PUBLISH Token Configuration
+
+The automated release process requires a valid NPM authentication token stored as a GitHub secret named `NPM_PUBLISH`. This token enables the workflow to publish packages to the [@catena-x/portal-shared-components library](https://npmjs.com/package/@catena-x/portal-shared-components) on npm.
+
+If needed, the token should be updated in the following manner:
+
+### How to Update the NPM_PUBLISH Token
+
+1. **Generate a new NPM token**:
+   - Log in to [npmjs.com](https://www.npmjs.com/) with an account that has publish permissions for the `@catena-x/portal-shared-components` package
+   - Go to your profile settings and navigate to "Access Tokens"
+   - Create a new token with "Automation" type (recommended for CI/CD)
+   - Copy the generated token immediately (it won't be shown again)
+
+2. **Update the GitHub secret**:
+   - Create a Helpdesk ticket to the Eclipse Foundation at [gitlab.eclipse.org/eclipsefdn/helpdesk](https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues)
+   - Request an update to the `NPM_PUBLISH` secret for the portal-shared-components repository
+   - **Do not include the token directly in the ticket** - instead, indicate that you have a new token ready to provide
+   - Coordinate with the Eclipse Foundation supporter to share the token securely via:
+     - Direct 1-to-1 chat/message
+     - Secure email to the assigned supporter
+     - Other secure communication method as directed by the supporter
+   - Reference the original secret creation ticket if needed (e.g., [issue #3270](https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/3270))
 
 ## Reference Documents
 
