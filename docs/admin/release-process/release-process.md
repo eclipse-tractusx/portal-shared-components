@@ -70,6 +70,7 @@ If needed, the token should be updated in the following manner:
 ### How to Update the NPM_PUBLISH Token
 
 1. **Generate a new NPM token**:
+
    - Log in to [npmjs.com](https://www.npmjs.com/) with an account that has publish permissions for the `@catena-x/portal-shared-components` package
    - Go to your profile settings and navigate to "Access Tokens"
    - Create a new token with "Automation" type (recommended for CI/CD)
