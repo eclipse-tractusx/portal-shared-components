@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v4.0.1...v4.0.2) (2025-07-29)
+
+
+### Bug Fixes
+
+* add error handler prop to components ([#277](https://github.com/eclipse-tractusx/portal-shared-components/issues/277)) ([af8f151](https://github.com/eclipse-tractusx/portal-shared-components/commit/af8f15150e2abd881d6ff4fdbe663b8749309025))
+
 ## [4.0.1](https://github.com/eclipse-tractusx/portal-shared-components/compare/v4.0.0...v4.0.1) (2025-05-07)
 
 
