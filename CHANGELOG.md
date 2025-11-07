@@ -44,7 +44,7 @@
 * upgrade storybook to version 8.5.3 ([6cccaec](https://github.com/eclipse-tractusx/portal-shared-components/commit/6cccaec07fd20259fc9568ffc1e4a430203200e9))
 
 ## [3.7.5](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.4...v3.7.5) (2025-01-20)
-- **Technical User** [4.0.2]
+- **Technical User** [4.0.4]
   - Hide/show user's sensitive details [#448](https://github.com/eclipse-tractusx/portal-shared-components/pull/448)
 
 
