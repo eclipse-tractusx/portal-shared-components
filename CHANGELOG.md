@@ -34,6 +34,7 @@
 ## [3.7.6](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.5...v3.7.6) (2025-02-13)
 
 
+
 ### Bug Fixes
 
 * upgrade storybook to version 8.5.3 ([4f4df10](https://github.com/eclipse-tractusx/portal-shared-components/commit/4f4df107bf6ca02ca959660c121f4dc18ac7b10a))
@@ -43,6 +44,9 @@
 * upgrade storybook to version 8.5.3 ([6cccaec](https://github.com/eclipse-tractusx/portal-shared-components/commit/6cccaec07fd20259fc9568ffc1e4a430203200e9))
 
 ## [3.7.5](https://github.com/eclipse-tractusx/portal-shared-components/compare/v3.7.4...v3.7.5) (2025-01-20)
+- **Technical User** [4.0.2]
+  - Hide/show user's sensitive details [#448](https://github.com/eclipse-tractusx/portal-shared-components/pull/448)
+
 
 
 ### Bug Fixes
