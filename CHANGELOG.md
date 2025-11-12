@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/eclipse-tractusx/portal-shared-components/compare/v4.0.2...v4.1.0) (2025-11-12)
+
+
+### Features
+
+* empty table messages ([#446](https://github.com/eclipse-tractusx/portal-shared-components/issues/446)) ([58f72c4](https://github.com/eclipse-tractusx/portal-shared-components/commit/58f72c4daf25c1d4cd097e633c14ba05177bb6f1))
+
 ## [4.0.2](https://github.com/eclipse-tractusx/portal-shared-components/compare/v4.0.1...v4.0.2) (2025-07-29)
 
 
