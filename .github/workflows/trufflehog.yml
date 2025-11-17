@@ -42,13 +42,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           fetch-depth: 0 # Ensure full clone for pull request workflows
 
       - name: TruffleHog OSS
         id: trufflehog
-        uses: trufflesecurity/trufflehog@a05cf0859455b5b16317ee22d809887a4043cdf0 #v3.90.2
+        uses: trufflesecurity/trufflehog@cb6aeefd6e2498240d0418e63f69684d28337e7b #v3.91.0
         continue-on-error: true
         with:
           path: ./ # Scan the entire repository

@@ -40,13 +40,13 @@ jobs:
 
     steps:
       - name: Set up JDK 17
-        uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4.7.1
+        uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165 # v5.0.0
         with:
           distribution: 'temurin'
           java-version: '17'
 
       - name: Checkout repository
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
 
       - name: Download Eclipse Dash Tool
         run: curl -L --output ./org.eclipse.dash.licenses.jar 'https://repo.eclipse.org/service/local/artifact/maven/redirect?r=dash-licenses&g=org.eclipse.dash&a=org.eclipse.dash.licenses&v=LATEST'
@@ -75,7 +75,7 @@ jobs:
           fi
 
       - name: Upload DEPENDENCIES file
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         with:
           path: DEPENDENCIES
         if: steps.dependencies-changed.outputs.changed == 'true'
