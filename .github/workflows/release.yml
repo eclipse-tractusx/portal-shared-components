@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
       - name: Get latest git tag
         id: git-tag-latest
@@ -72,7 +72,7 @@ jobs:
       - name: Check if version is bumped
         id: version-check
         run: |
-          if [[ "${{ env.GIT_VERSION }}" == "${{ steps.npm-version.outputs.current-version }}" ]]; then
+          if [["${{ env.GIT_VERSION }}" == "${{ steps.npm-version.outputs.current-version }}" ]]; then
             echo "Versions match. Skipping publish."
             echo "bumped=false" >> $GITHUB_OUTPUT
           else
